@@ -1,1 +1,200 @@
+name: Validate assessment content
 
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install validation package
+        run: python -m pip install --upgrade jsonschema
+
+      - name: Validate assessment content
+        shell: bash
+        run: |
+          python <<'PY'
+          import hashlib
+          import json
+          import sys
+          from pathlib import Path
+
+          from jsonschema import Draft202012Validator, FormatChecker
+
+          root = Path('.')
+          manifest_path = root / 'manifest.json'
+          schema_path = root / 'schema' / 'assessment-schema.json'
+          references_path = root / 'references' / 'references.json'
+
+          errors = []
+
+          def load_json(path: Path):
+              try:
+                  with path.open('r', encoding='utf-8') as handle:
+                      return json.load(handle)
+              except FileNotFoundError:
+                  errors.append(f'Missing required file: {path}')
+              except json.JSONDecodeError as exc:
+                  errors.append(
+                      f'Invalid JSON in {path}: line {exc.lineno}, '
+                      f'column {exc.colno}: {exc.msg}'
+                  )
+              return None
+
+          manifest = load_json(manifest_path)
+          schema = load_json(schema_path)
+          references_document = load_json(references_path)
+
+          if manifest is None or schema is None or references_document is None:
+              for error in errors:
+                  print(f'ERROR: {error}')
+              sys.exit(1)
+
+          reference_items = references_document.get('references', [])
+          reference_ids = {
+              item.get('id')
+              for item in reference_items
+              if isinstance(item, dict) and isinstance(item.get('id'), str)
+          }
+
+          if len(reference_ids) != len(reference_items):
+              errors.append(
+                  'Reference IDs are missing or duplicated in '
+                  'references/references.json.'
+              )
+
+          manifest_assessments = manifest.get('assessments', [])
+          manifest_ids = []
+
+          validator = Draft202012Validator(
+              schema,
+              format_checker=FormatChecker(),
+          )
+
+          for entry in manifest_assessments:
+              assessment_id = entry.get('id')
+              assessment_file_value = entry.get('file')
+              schema_file_value = entry.get('schema')
+
+              if not isinstance(assessment_id, str):
+                  errors.append('A manifest assessment is missing a valid id.')
+                  continue
+
+              manifest_ids.append(assessment_id)
+
+              if not isinstance(assessment_file_value, str):
+                  errors.append(
+                      f'Manifest entry {assessment_id} is missing a file path.'
+                  )
+                  continue
+
+              assessment_path = root / assessment_file_value
+
+              if schema_file_value != 'schema/assessment-schema.json':
+                  errors.append(
+                      f'{assessment_id}: unexpected schema path '
+                      f'{schema_file_value!r}.'
+                  )
+
+              assessment = load_json(assessment_path)
+              if assessment is None:
+                  continue
+
+              if assessment.get('id') != assessment_id:
+                  errors.append(
+                      f'{assessment_path}: id does not match manifest id '
+                      f'{assessment_id!r}.'
+                  )
+
+              if assessment.get('title') != entry.get('title'):
+                  errors.append(
+                      f'{assessment_path}: title does not match manifest title.'
+                  )
+
+              if assessment.get('version') != entry.get('version'):
+                  errors.append(
+                      f'{assessment_path}: version does not match manifest version.'
+                  )
+
+              for validation_error in sorted(
+                  validator.iter_errors(assessment),
+                  key=lambda item: list(item.absolute_path),
+              ):
+                  location = '.'.join(
+                      str(part) for part in validation_error.absolute_path
+                  )
+                  errors.append(
+                      f'{assessment_path}'
+                      f'{":" + location if location else ""}: '
+                      f'{validation_error.message}'
+                  )
+
+              used_reference_ids = set(assessment.get('references', []))
+
+              for section in assessment.get('sections', []):
+                  for item in section.get('items', []):
+                      used_reference_ids.update(item.get('references', []))
+
+                      imaging = item.get('imagingGuidance')
+                      if isinstance(imaging, dict):
+                          used_reference_ids.update(
+                              imaging.get('references', [])
+                          )
+
+              missing_references = sorted(
+                  used_reference_ids - reference_ids
+              )
+
+              if missing_references:
+                  errors.append(
+                      f'{assessment_path}: unknown reference IDs: '
+                      f'{", ".join(missing_references)}'
+                  )
+
+              digest = hashlib.sha256(assessment_path.read_bytes()).hexdigest()
+              print(f'SHA-256 {assessment_file_value}: {digest}')
+
+          if len(manifest_ids) != len(set(manifest_ids)):
+              errors.append('Duplicate assessment IDs exist in manifest.json.')
+
+          manifest_reference_file = (
+              manifest.get('references', {}).get('file')
+              if isinstance(manifest.get('references'), dict)
+              else None
+          )
+
+          if manifest_reference_file != 'references/references.json':
+              errors.append(
+                  'manifest.json must reference '
+                  'references/references.json.'
+              )
+
+          schema_digest = hashlib.sha256(schema_path.read_bytes()).hexdigest()
+          references_digest = hashlib.sha256(
+              references_path.read_bytes()
+          ).hexdigest()
+
+          print(f'SHA-256 schema/assessment-schema.json: {schema_digest}')
+          print(f'SHA-256 references/references.json: {references_digest}')
+
+          if errors:
+              print('\nValidation failed:')
+              for error in errors:
+                  print(f'- {error}')
+              sys.exit(1)
+
+          print('\nAssessment content validation passed.')
+          PY
