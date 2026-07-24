@@ -3,5 +3,16 @@
   "contentVersion": "1.0.0",
   "updatedAt": "2026-07-24T00:00:00Z",
   "minimumAppVersion": "0.10.1",
-  "assessments": []
+  "references": {
+    "file": "references/references.json"
+  },
+  "assessments": [
+    {
+      "id": "back-pain",
+      "title": "Back Pain Assessment",
+      "version": "1.0.0",
+      "file": "assessments/back-pain.json",
+      "schema": "schema/assessment-schema.json"
+    }
+  ]
 }
