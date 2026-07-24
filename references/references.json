@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "lastChecked": "2026-07-24",
+  "references": [
+    {
+      "id": "NICE-NG59",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Low back pain and sciatica in over 16s: assessment and management",
+      "referenceNumber": "NG59",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng59",
+      "published": "2016-11-30",
+      "lastUpdated": "2020-12-11",
+      "accessed": "2026-07-24",
+      "relevantTopics": [
+        "low back pain",
+        "sciatica",
+        "serious pathology",
+        "imaging",
+        "management"
+      ]
+    },
+    {
+      "id": "NICE-NG127",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Suspected neurological conditions: recognition and referral",
+      "referenceNumber": "NG127",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng127",
+      "published": "2019-05-01",
+      "lastUpdated": "2023-10-02",
+      "accessed": "2026-07-24",
+      "relevantTopics": [
+        "cauda equina syndrome",
+        "lumbar radiculopathy",
+        "neurological weakness",
+        "urgent referral"
+      ]
+    },
+    {
+      "id": "NICE-NG41",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Spinal injury: assessment and initial management",
+      "referenceNumber": "NG41",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng41",
+      "published": "2016-02-17",
+      "lastUpdated": null,
+      "accessed": "2026-07-24",
+      "relevantTopics": [
+        "spinal trauma",
+        "spinal fracture",
+        "prehospital assessment",
+        "CT",
+        "MRI"
+      ]
+    },
+    {
+      "id": "NICE-NG234",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Spinal metastases and metastatic spinal cord compression",
+      "referenceNumber": "NG234",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng234",
+      "published": "2023-09-06",
+      "lastReviewed": "2026-03-19",
+      "accessed": "2026-07-24",
+      "relevantTopics": [
+        "spinal metastases",
+        "metastatic spinal cord compression",
+        "cancer",
+        "MRI",
+        "oncological emergency"
+      ]
+    }
+  ]
+}
