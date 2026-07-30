@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "contentVersion": "1.1.0",
-  "updatedAt": "2026-07-30T13:36:18Z",
+  "updatedAt": "2026-07-30T13:38:59Z",
   "minimumAppVersion": "0.11.0",
   "references": {
     "file": "references/references.json",
@@ -14,7 +14,7 @@
       "version": "1.1.2",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "7e88f7c75181ac4b3671d204667167884112d5b2301f6b631dda437e092acadc",
+      "sha256": "78a07c8dcd9eaf04a367768195af75282738e83d67a96d7424e8732447bf44e8",
       "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
     }
   ]
