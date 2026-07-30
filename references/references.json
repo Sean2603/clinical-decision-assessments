@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "lastChecked": "2026-07-27",
+  "schemaVersion": 2,
+  "lastChecked": "2026-07-30",
   "references": [
     {
       "id": "NICE-NG59",
@@ -18,7 +18,14 @@
         "sciatica",
         "imaging",
         "management"
-      ]
+      ],
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": null
     },
     {
       "id": "NICE-NG127",
@@ -35,7 +42,14 @@
         "cauda equina syndrome",
         "lumbar radiculopathy",
         "urgent referral"
-      ]
+      ],
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": null
     },
     {
       "id": "NICE-NG41",
@@ -52,7 +66,15 @@
         "fracture",
         "CT",
         "MRI"
-      ]
+      ],
+      "lastUpdated": null,
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": null
     },
     {
       "id": "NICE-NG234",
@@ -69,7 +91,14 @@
         "spinal metastases",
         "metastatic spinal cord compression",
         "MRI"
-      ]
+      ],
+      "lastUpdated": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": null
     }
   ]
 }
