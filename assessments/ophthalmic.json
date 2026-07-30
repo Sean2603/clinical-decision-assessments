@@ -1,0 +1,24 @@
+{
+  "id": "ophthalmic",
+  "title": "Ophthalmic Assessment",
+  "version": "1.0.0",
+  "summary": "Development placeholder for the ophthalmic assessment. Clinical assessment content has not yet been authored or approved.",
+  "lastReviewed": "2026-07-30",
+  "sections": [
+    {
+      "id": "development-placeholder",
+      "title": "Development placeholder",
+      "type": "prompt-list",
+      "intro": "This entry exists to test assessment discovery, download, manifest generation and application rendering.",
+      "items": [
+        {
+          "id": "content-pending",
+          "title": "Clinical content pending",
+          "summary": "No clinical assessment guidance is provided in this placeholder version.",
+          "importantLimitation": "Do not use this placeholder to support patient assessment, clinical decision-making, treatment or disposition."
+        }
+      ]
+    }
+  ],
+  "references": []
+}
