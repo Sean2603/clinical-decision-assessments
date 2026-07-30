@@ -1,7 +1,7 @@
 {
   "id": "back-pain",
   "title": "Back Pain Assessment",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "A clinician-facing prompt for assessing back pain, recognising serious pathology, performing focused examination and interpreting common examination patterns.",
   "lastReviewed": "2026-07-30",
   "sections": [
@@ -834,5 +834,12 @@
     "NICE-NG127",
     "NICE-NG41",
     "NICE-NG234"
-  ]
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null
+  }
 }
