@@ -11,7 +11,7 @@
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
-      "version": "1.1.0",
+      "version": "1.1.2",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
       "sha256": "7e88f7c75181ac4b3671d204667167884112d5b2301f6b631dda437e092acadc",
