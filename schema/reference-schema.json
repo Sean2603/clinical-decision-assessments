@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Assessment reference document",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "lastChecked",
+    "references"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "lastChecked": {
+      "type": "string",
+      "format": "date"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/reference"
+      }
+    }
+  },
+  "$defs": {
+    "nullableNonEmptyString": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "organisation",
+        "shortOrganisation",
+        "title",
+        "referenceNumber",
+        "type",
+        "url",
+        "published",
+        "lastUpdated",
+        "accessed",
+        "lastReviewed",
+        "reviewStatus",
+        "reviewedBy",
+        "reviewerRole",
+        "nextReviewDue",
+        "supersededBy",
+        "notes",
+        "relevantTopics"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "organisation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "shortOrganisation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "referenceNumber": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "guideline",
+            "local-guidance",
+            "policy",
+            "systematic-review",
+            "research-paper",
+            "professional-statement",
+            "textbook",
+            "web-resource",
+            "other"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "published": {
+          "type": "string",
+          "format": "date"
+        },
+        "lastUpdated": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "accessed": {
+          "type": "string",
+          "format": "date"
+        },
+        "lastReviewed": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewStatus": {
+          "type": "string",
+          "enum": [
+            "current",
+            "review-due",
+            "superseded",
+            "withdrawn",
+            "unavailable",
+            "unverified"
+          ]
+        },
+        "reviewedBy": {
+          "$ref": "#/$defs/nullableNonEmptyString"
+        },
+        "reviewerRole": {
+          "$ref": "#/$defs/nullableNonEmptyString"
+        },
+        "nextReviewDue": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "supersededBy": {
+          "$ref": "#/$defs/nullableNonEmptyString"
+        },
+        "notes": {
+          "$ref": "#/$defs/nullableNonEmptyString"
+        },
+        "relevantTopics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

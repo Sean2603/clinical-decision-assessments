@@ -15,6 +15,9 @@ name: Validate and publish assessments
       - "tool/**"
       - ".github/workflows/assessments.yml"
 
+  schedule:
+    - cron: "17 6 * * 1"
+
   workflow_dispatch: {}
 
 permissions:
@@ -22,7 +25,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validate assessment content
+    name: Validate assessment and reference content
     runs-on: ubuntu-latest
 
     steps:
@@ -43,13 +46,40 @@ jobs:
         if: github.event_name == 'pull_request'
         run: git fetch origin main:refs/remotes/origin/main
 
-      - name: Validate pull request
+      - name: Validate pull request assessment changes
         if: github.event_name == 'pull_request'
         run: python tool/validate_content.py --base-ref origin/main
 
-      - name: Validate main branch
+      - name: Validate repository assessment content
         if: github.event_name != 'pull_request'
         run: python tool/validate_content.py
+
+      - name: Validate reference structure
+        run: python tool/validate_references.py
+
+      - name: Enforce current cited references
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        run: python tool/validate_references.py --strict
+
+  weekly-reference-audit:
+    name: Weekly reference audit
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v5
+
+      - name: Install Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install validation package
+        run: python -m pip install --upgrade jsonschema
+
+      - name: Audit review dates and statuses
+        run: python tool/validate_references.py --strict
 
   publish:
     name: Publish assessment manifest
@@ -94,7 +124,8 @@ jobs:
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email             "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add manifest.json
           git commit -m "chore: publish assessment content"
