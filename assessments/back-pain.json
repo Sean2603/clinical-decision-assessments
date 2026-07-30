@@ -836,10 +836,10 @@
     "NICE-NG234"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
+    "validated": "true",
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "30/07/2026",
+    "reviewerRole": "tAPUC",
     "reviewNotes": null
   }
 }
