@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "1.1.6",
-  "updatedAt": "2026-07-30T14:28:12Z",
+  "contentVersion": "1.1.7",
+  "updatedAt": "2026-07-30T14:44:05Z",
   "minimumAppVersion": "0.11.0",
   "references": {
     "file": "references/references.json",
@@ -11,10 +11,10 @@
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
-      "version": "0.1.2",
+      "version": "1.0.0",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "17c948047729b18131b0896bc238c66579df7e1f39f10233e8e7e7eeae69f3d4",
+      "sha256": "7a9496e6da2311c0a4bdbdbc92dc3b852c1bfad214a1bc4939a40d25f768706c",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {
