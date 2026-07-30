@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schemas/assessment-schema.json",
+  "$id": "https://raw.githubusercontent.com/Sean2603/clinical-decision-assessments/main/schema/assessment-schema.json",
   "title": "Clinical Assessment Guide",
   "type": "object",
   "additionalProperties": false,
@@ -111,63 +111,31 @@
           "type": "string"
         },
         "howToTest": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "normal": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "abnormal": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "implications": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "mustConfirmOrExclude": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "commonFindings": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "imagingGuidance": {
           "$ref": "#/$defs/imagingGuidance"
         },
         "urgentFeatures": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "safetyNetting": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "references": {
           "type": "array",
@@ -185,9 +153,24 @@
         }
       }
     },
+    "stringArray": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "imagingGuidance": {
       "type": "object",
       "additionalProperties": false,
+      "required": [
+        "routineImaging",
+        "preferredImaging",
+        "urgency",
+        "keyTriggers",
+        "guidance",
+        "references"
+      ],
       "properties": {
         "routineImaging": {
           "type": "string",
@@ -198,11 +181,7 @@
           ]
         },
         "preferredImaging": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "urgency": {
           "type": "string",
@@ -214,18 +193,10 @@
           ]
         },
         "keyTriggers": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "guidance": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1
-          }
+          "$ref": "#/$defs/stringArray"
         },
         "references": {
           "type": "array",

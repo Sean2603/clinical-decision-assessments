@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastChecked": "2026-07-24",
+  "lastChecked": "2026-07-27",
   "references": [
     {
       "id": "NICE-NG59",
@@ -12,11 +12,10 @@
       "url": "https://www.nice.org.uk/guidance/ng59",
       "published": "2016-11-30",
       "lastUpdated": "2020-12-11",
-      "accessed": "2026-07-24",
+      "accessed": "2026-07-27",
       "relevantTopics": [
         "low back pain",
         "sciatica",
-        "serious pathology",
         "imaging",
         "management"
       ]
@@ -31,11 +30,10 @@
       "url": "https://www.nice.org.uk/guidance/ng127",
       "published": "2019-05-01",
       "lastUpdated": "2023-10-02",
-      "accessed": "2026-07-24",
+      "accessed": "2026-07-27",
       "relevantTopics": [
         "cauda equina syndrome",
         "lumbar radiculopathy",
-        "neurological weakness",
         "urgent referral"
       ]
     },
@@ -48,12 +46,10 @@
       "type": "guideline",
       "url": "https://www.nice.org.uk/guidance/ng41",
       "published": "2016-02-17",
-      "lastUpdated": null,
-      "accessed": "2026-07-24",
+      "accessed": "2026-07-27",
       "relevantTopics": [
         "spinal trauma",
-        "spinal fracture",
-        "prehospital assessment",
+        "fracture",
         "CT",
         "MRI"
       ]
@@ -68,13 +64,11 @@
       "url": "https://www.nice.org.uk/guidance/ng234",
       "published": "2023-09-06",
       "lastReviewed": "2026-03-19",
-      "accessed": "2026-07-24",
+      "accessed": "2026-07-27",
       "relevantTopics": [
         "spinal metastases",
         "metastatic spinal cord compression",
-        "cancer",
-        "MRI",
-        "oncological emergency"
+        "MRI"
       ]
     }
   ]
