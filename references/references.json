@@ -11,21 +11,21 @@
       "type": "guideline",
       "url": "https://www.nice.org.uk/guidance/ng59",
       "published": "2016-11-30",
-      "lastUpdated": "2020-12-11",
-      "accessed": "2026-07-27",
+      "lastUpdated": "2026-07-29",
+      "accessed": "2026-07-30",
+      "lastReviewed": "2026-07-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2026-10-30",
+      "supersededBy": null,
+      "notes": "Official NICE reference URL checked. The landing page shows Published 30 November 2016 and Last updated 29 July 2026. The Update information section states that in July 2026 NICE withdrew the recommendations on psychological therapy for low back pain or sciatica. Earlier recorded updates include the December 2020 review of opioid recommendations for non-cancer pain.",
       "relevantTopics": [
         "low back pain",
         "sciatica",
         "imaging",
         "management"
-      ],
-      "lastReviewed": null,
-      "reviewStatus": "unverified",
-      "reviewedBy": null,
-      "reviewerRole": null,
-      "nextReviewDue": null,
-      "supersededBy": null,
-      "notes": null
+      ]
     },
     {
       "id": "NICE-NG127",
@@ -37,19 +37,19 @@
       "url": "https://www.nice.org.uk/guidance/ng127",
       "published": "2019-05-01",
       "lastUpdated": "2023-10-02",
-      "accessed": "2026-07-27",
+      "accessed": "2026-07-30",
+      "lastReviewed": "2026-07-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2026-10-30",
+      "supersededBy": null,
+      "notes": "Official NICE reference URL checked. The landing page shows Published 1 May 2019 and Last updated 2 October 2023. The Update information section states that in October 2023 recommendations 1.3.1, 1.4.2 and 1.7.4 were updated in line with NHS England's standard on faster diagnosis of cancer.",
       "relevantTopics": [
         "cauda equina syndrome",
         "lumbar radiculopathy",
         "urgent referral"
-      ],
-      "lastReviewed": null,
-      "reviewStatus": "unverified",
-      "reviewedBy": null,
-      "reviewerRole": null,
-      "nextReviewDue": null,
-      "supersededBy": null,
-      "notes": null
+      ]
     },
     {
       "id": "NICE-NG41",
@@ -60,21 +60,21 @@
       "type": "guideline",
       "url": "https://www.nice.org.uk/guidance/ng41",
       "published": "2016-02-17",
-      "accessed": "2026-07-27",
+      "lastUpdated": null,
+      "accessed": "2026-07-30",
+      "lastReviewed": "2026-07-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2026-10-30",
+      "supersededBy": null,
+      "notes": "Official NICE reference URL checked. The landing page shows Published 17 February 2016 and does not display a separate Last updated date. The Update information section records a May 2021 clarification to recommendation 1.5.7: MRI should always be performed after CT when there is a neurological abnormality that could be attributable to spinal cord injury.",
       "relevantTopics": [
         "spinal trauma",
         "fracture",
         "CT",
         "MRI"
-      ],
-      "lastUpdated": null,
-      "lastReviewed": null,
-      "reviewStatus": "unverified",
-      "reviewedBy": null,
-      "reviewerRole": null,
-      "nextReviewDue": null,
-      "supersededBy": null,
-      "notes": null
+      ]
     },
     {
       "id": "NICE-NG234",
@@ -85,20 +85,20 @@
       "type": "guideline",
       "url": "https://www.nice.org.uk/guidance/ng234",
       "published": "2023-09-06",
-      "lastReviewed": "2026-03-19",
-      "accessed": "2026-07-27",
+      "lastUpdated": null,
+      "accessed": "2026-07-30",
+      "lastReviewed": "2026-07-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2026-10-30",
+      "supersededBy": null,
+      "notes": "Official NICE reference URL checked. The landing page shows Published 6 September 2023 and does not display a separate Last updated date. The Update information section states that the September 2023 guideline updates and replaces NICE guideline CG75 from November 2008. NICE also records minor changes since publication.",
       "relevantTopics": [
         "spinal metastases",
         "metastatic spinal cord compression",
         "MRI"
-      ],
-      "lastUpdated": null,
-      "reviewStatus": "unverified",
-      "reviewedBy": null,
-      "reviewerRole": null,
-      "nextReviewDue": null,
-      "supersededBy": null,
-      "notes": null
+      ]
     }
   ]
 }
