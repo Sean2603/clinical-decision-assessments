@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "1.1.7",
-  "updatedAt": "2026-07-30T14:44:05Z",
+  "contentVersion": "1.1.8",
+  "updatedAt": "2026-07-30T16:06:58Z",
   "minimumAppVersion": "0.11.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "09200aaff94eac2a53de8ddacbbc677e19124cc5cc77d244eed4b4000f204350"
+    "sha256": "2f3f7338853dd26ec268e47527e3c8d43c2660e2bad3322eeee666cef5acf834"
   },
   "assessments": [
     {
