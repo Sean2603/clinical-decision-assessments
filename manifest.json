@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "contentVersion": "1.1.3",
-  "updatedAt": "2026-07-30T14:03:13Z",
+  "contentVersion": "1.1.4",
+  "updatedAt": "2026-07-30T14:09:27Z",
   "minimumAppVersion": "0.11.0",
   "references": {
     "file": "references/references.json",
@@ -15,6 +15,150 @@
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
       "sha256": "73d394a645f40a6cd72c914e427f34ec524ddc712ef54090b8718917cc7c6ac1",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "cardiovascular",
+      "title": "Cardiovascular Assessment",
+      "version": "1.0.0",
+      "file": "assessments/cardiovascular.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "06e394abc66b9bcf7f26bb663ff60cb2e6e85fabd67d084c7afba8ae278d8e16",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "dermatological",
+      "title": "Dermatological Assessment",
+      "version": "1.0.0",
+      "file": "assessments/dermatological.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "0cef3c8abdc795e2fdde226b883203ff2ba3098bc839d2a6d37e3cbe431e95e9",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "ear-nose-throat",
+      "title": "Ear, Nose and Throat Assessment",
+      "version": "1.0.0",
+      "file": "assessments/ear-nose-throat.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "9f5532bbc1acc91b550eb3186d1dc5871000c61228a1ec6477e22e6f7a5ca1af",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "endocrine-metabolic",
+      "title": "Endocrine and Metabolic Assessment",
+      "version": "1.0.0",
+      "file": "assessments/endocrine-metabolic.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "0032b17fe579bf4407f3b4d4478e38e71d549a8a595b5c6a2b913f6aaaa81dbb",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "gastrointestinal",
+      "title": "Gastrointestinal Assessment",
+      "version": "1.0.0",
+      "file": "assessments/gastrointestinal.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "5ea0bc167342346caabcd7a493f1ea570db2a890ed504effcc9c97408661e140",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "genitourinary",
+      "title": "Genitourinary Assessment",
+      "version": "1.0.0",
+      "file": "assessments/genitourinary.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "030524f156d41ef64c8345e9d7bf3094aac33629cb9976855b824cbdb7f1ae57",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "haematological",
+      "title": "Haematological Assessment",
+      "version": "1.0.0",
+      "file": "assessments/haematological.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "ac37f723b77983647ce16b93e41d6839363259d54bf2c87833cb8602ec0f5bf5",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "infectious-systemic",
+      "title": "Infectious and Systemic Illness Assessment",
+      "version": "1.0.0",
+      "file": "assessments/infectious-systemic.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "f108a82fe58ed491771bb68d75ef8ab53965723088a472f6382f26d30ed85083",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "mental-health",
+      "title": "Mental Health Assessment",
+      "version": "1.0.0",
+      "file": "assessments/mental-health.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "7065747c9161f9f31de9f28340f88f08cc0126f5278afc2f9ae2fba171a209c2",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "musculoskeletal",
+      "title": "Musculoskeletal Assessment",
+      "version": "1.0.0",
+      "file": "assessments/musculoskeletal.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "bac83dbc89e264f8ca692d626b6c4361daaebe97ba3e74ae32de009650d05f28",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "neurological",
+      "title": "Neurological Assessment",
+      "version": "1.0.0",
+      "file": "assessments/neurological.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "80cdd47343483c3b1ef23fa22594ef151b6e5881c3343761dc3a4cb388f5a47b",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "obstetric-gynaecological",
+      "title": "Obstetric and Gynaecological Assessment",
+      "version": "1.0.0",
+      "file": "assessments/obstetric-gynaecological.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "de4d940b3f94db59ade0fee7eb5d71f4d2009ff1eda7783d257691da05fe8af6",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "ophthalmic",
+      "title": "Ophthalmic Assessment",
+      "version": "1.0.0",
+      "file": "assessments/ophthalmic.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "74cd4416a563878450e9076ab7bc7354166370b1fa941ea96e569e8b376d561a",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "paediatric",
+      "title": "Paediatric Assessment",
+      "version": "1.0.0",
+      "file": "assessments/paediatric.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "67682732df611705754dfc3380d61d5756438acd08239af02f70fa2c6621d3b0",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "renal",
+      "title": "Renal Assessment",
+      "version": "1.0.0",
+      "file": "assessments/renal.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "d076134cf578e035618c55acddc75edc16220f3e98649c3a662564c0ef70e878",
+      "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
+    },
+    {
+      "id": "respiratory",
+      "title": "Respiratory Assessment",
+      "version": "1.0.0",
+      "file": "assessments/respiratory.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "e3081d5c0fc915fe6f6d504b5494e1c446360dae948a57eb18750a5005edc114",
       "schemaSha256": "2a5e2c75392c4b68e248b0fe4540ea6a611d9fbd7cf9dda382cc676413a8a488"
     }
   ]
