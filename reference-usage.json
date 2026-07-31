@@ -1,0 +1,135 @@
+{
+  "generated": true,
+  "references": [
+    {
+      "referenceId": "NICE-NG106",
+      "usedBy": [
+        {
+          "type": "blood-panel",
+          "id": "bnp-and-nt-probnp",
+          "title": "BNP and NT-proBNP"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG127",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG148",
+      "usedBy": [
+        {
+          "type": "blood-panel",
+          "id": "urea-and-electrolytes",
+          "title": "Urea and electrolytes"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG158",
+      "usedBy": [
+        {
+          "type": "scoring-tool",
+          "id": "perc-rule",
+          "title": "PERC rule"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "two-level-pe-wells",
+          "title": "Two-level PE Wells"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "two-level-dvt-wells",
+          "title": "Two-level DVT Wells"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG185",
+      "usedBy": [
+        {
+          "type": "blood-panel",
+          "id": "troponin",
+          "title": "Troponin"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG232",
+      "usedBy": [
+        {
+          "type": "scoring-tool",
+          "id": "nice-head-injury-pathway",
+          "title": "NICE head-injury pathway"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG234",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG250",
+      "usedBy": [
+        {
+          "type": "scoring-tool",
+          "id": "crb-65",
+          "title": "CRB-65"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "curb-65",
+          "title": "CURB-65"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG41",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG59",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG84",
+      "usedBy": [
+        {
+          "type": "scoring-tool",
+          "id": "feverpain",
+          "title": "FeverPAIN"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "centor-criteria",
+          "title": "Centor criteria"
+        }
+      ]
+    }
+  ]
+}

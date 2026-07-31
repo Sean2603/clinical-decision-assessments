@@ -24,3 +24,8 @@ Version-controlled clinical assessment guidance for the Clinical Decision Suppor
 
 The app checks the raw GitHub manifest in the background no more than once every
 24 hours. Manual checks are available in Settings.
+
+
+## Shared references
+
+`references/references.json` is the authoritative registry for assessments, scoring tools and blood panels. `clinical_reliability/clinical-reliability.json` stores clinical review metadata and stable `referenceIds`; it does not duplicate source records.

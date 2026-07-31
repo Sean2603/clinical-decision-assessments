@@ -5,187 +5,57 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST_PATH = ROOT / "manifest.json"
-ASSESSMENTS_DIRECTORY = ROOT / "assessments"
-REFERENCES_PATH = ROOT / "references" / "references.json"
-SCHEMA_PATH = ROOT / "schema" / "assessment-schema.json"
+MANIFEST_PATH = ROOT / 'manifest.json'
+ASSESSMENTS_DIRECTORY = ROOT / 'assessments'
+REFERENCES_PATH = ROOT / 'references' / 'references.json'
+ASSESSMENT_SCHEMA_PATH = ROOT / 'schema' / 'assessment-schema.json'
+RELIABILITY_PATH = ROOT / 'clinical_reliability' / 'clinical-reliability.json'
+RELIABILITY_SCHEMA_PATH = ROOT / 'schema' / 'clinical-reliability-schema.json'
+SEMVER_PATTERN = re.compile(r'^\d+\.\d+\.\d+$')
 
-SEMVER_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
+def load_json(path): return json.loads(path.read_text(encoding='utf-8'))
+def write_json(path, value): path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+def sha256(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def parts(value):
+    if not SEMVER_PATTERN.fullmatch(value): raise SystemExit(f'Invalid semantic version: {value!r}')
+    return tuple(map(int, value.split('.')))
+def bump(value):
+    a,b,c=parts(value); return f'{a}.{b}.{c+1}'
+def max_version(values): return max(values, key=parts)
 
+def main():
+    previous = load_json(MANIFEST_PATH)
+    existing = {e.get('id'): e for e in previous.get('assessments', []) if isinstance(e, dict)}
+    entries=[]; versions=[]
+    for p in sorted(ASSESSMENTS_DIRECTORY.glob('*.json')):
+        doc=load_json(p); aid=doc.get('id'); title=doc.get('title'); version=doc.get('version')
+        if not all(isinstance(x,str) and x for x in (aid,title,version)): raise SystemExit(f'Invalid assessment metadata: {p}')
+        parts(version); versions.append(version)
+        prior=existing.get(aid,{})
+        entry={'id':aid,'title':title,'version':version,'file':p.relative_to(ROOT).as_posix(),'schema':'schema/assessment-schema.json','sha256':sha256(p),'schemaSha256':sha256(ASSESSMENT_SCHEMA_PATH)}
+        entry.update({k:v for k,v in prior.items() if k not in entry})
+        entries.append(entry)
 
-def load_json(path: Path) -> dict:
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except FileNotFoundError as exc:
-        raise SystemExit(f"Missing required file: {path}") from exc
-    except json.JSONDecodeError as exc:
-        raise SystemExit(
-            f"Invalid JSON in {path}: line {exc.lineno}, "
-            f"column {exc.colno}: {exc.msg}"
-        ) from exc
-
-
-def write_json(path: Path, value: dict) -> None:
-    path.write_text(
-        json.dumps(value, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
-
-
-def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
-def semver_parts(value: str) -> tuple[int, int, int]:
-    if not SEMVER_PATTERN.fullmatch(value):
-        raise SystemExit(f"Invalid semantic version: {value!r}")
-    major, minor, patch = value.split(".")
-    return int(major), int(minor), int(patch)
-
-
-def bump_patch(value: str) -> str:
-    major, minor, patch = semver_parts(value)
-    return f"{major}.{minor}.{patch + 1}"
-
-
-def max_version(values: list[str]) -> str:
-    if not values:
-        raise SystemExit("No assessment versions were found.")
-    return max(values, key=semver_parts)
-
-
-def main() -> None:
-    manifest = load_json(MANIFEST_PATH)
-    references = load_json(REFERENCES_PATH)
-    schema = load_json(SCHEMA_PATH)
-
-    if not isinstance(references.get("references"), list):
-        raise SystemExit(
-            "references/references.json must contain a references array."
-        )
-
-    if not isinstance(schema, dict):
-        raise SystemExit("schema/assessment-schema.json must be an object.")
-
-    existing_entries = {
-        entry.get("id"): entry
-        for entry in manifest.get("assessments", [])
-        if isinstance(entry, dict) and isinstance(entry.get("id"), str)
+    generated_without_version={
+        'schemaVersion': 2,
+        'minimumAppVersion': previous.get('minimumAppVersion','0.16.0'),
+        'references': {'file':'references/references.json','sha256':sha256(REFERENCES_PATH)},
+        'clinicalReliability': {'file':'clinical_reliability/clinical-reliability.json','schema':'schema/clinical-reliability-schema.json','sha256':sha256(RELIABILITY_PATH),'schemaSha256':sha256(RELIABILITY_SCHEMA_PATH)},
+        'assessments': entries,
     }
-
-    generated_entries: list[dict] = []
-    assessment_versions: list[str] = []
-
-    assessment_paths = sorted(ASSESSMENTS_DIRECTORY.glob("*.json"))
-    if not assessment_paths:
-        raise SystemExit("No assessment JSON files were found.")
-
-    for assessment_path in assessment_paths:
-        assessment = load_json(assessment_path)
-
-        assessment_id = assessment.get("id")
-        title = assessment.get("title")
-        version = assessment.get("version")
-
-        if not isinstance(assessment_id, str) or not assessment_id:
-            raise SystemExit(f"{assessment_path} has no valid id.")
-        if not isinstance(title, str) or not title:
-            raise SystemExit(f"{assessment_path} has no valid title.")
-        if not isinstance(version, str):
-            raise SystemExit(f"{assessment_path} has no valid version.")
-
-        semver_parts(version)
-        assessment_versions.append(version)
-
-        relative_assessment_path = assessment_path.relative_to(ROOT).as_posix()
-        previous_entry = existing_entries.get(assessment_id, {})
-
-        generated_entries.append(
-            {
-                "id": assessment_id,
-                "title": title,
-                "version": version,
-                "file": relative_assessment_path,
-                "schema": "schema/assessment-schema.json",
-                "sha256": sha256(assessment_path),
-                "schemaSha256": sha256(SCHEMA_PATH),
-                **{
-                    key: value
-                    for key, value in previous_entry.items()
-                    if key
-                    not in {
-                        "id",
-                        "title",
-                        "version",
-                        "file",
-                        "schema",
-                        "sha256",
-                        "schemaSha256",
-                    }
-                },
-            }
-        )
-
-    highest_assessment_version = max_version(assessment_versions)
-    previous_content_version = manifest.get("contentVersion", "0.0.0")
-    semver_parts(previous_content_version)
-
-    previous_manifest_without_generated = {
-        key: value
-        for key, value in manifest.items()
-        if key not in {"updatedAt", "references", "assessments"}
-    }
-
-    generated_manifest_core = {
-        **previous_manifest_without_generated,
-        "contentVersion": highest_assessment_version,
-        "minimumAppVersion": manifest.get("minimumAppVersion", "0.11.0"),
-        "references": {
-            "file": "references/references.json",
-            "sha256": sha256(REFERENCES_PATH),
-        },
-        "assessments": generated_entries,
-    }
-
-    # If only references/schema changed and no assessment version increased,
-    # ensure the pack version still advances.
-    previous_core = {
-        key: value
-        for key, value in manifest.items()
-        if key != "updatedAt"
-    }
-
-    if generated_manifest_core != previous_core:
-        if semver_parts(highest_assessment_version) <= semver_parts(
-            previous_content_version
-        ):
-            generated_manifest_core["contentVersion"] = bump_patch(
-                previous_content_version
-            )
-
-    generated_manifest = {
-        "schemaVersion": manifest.get("schemaVersion", 1),
-        "contentVersion": generated_manifest_core["contentVersion"],
-        "updatedAt": (
-            datetime.now(timezone.utc)
-            .replace(microsecond=0)
-            .isoformat()
-            .replace("+00:00", "Z")
-        ),
-        "minimumAppVersion": generated_manifest_core["minimumAppVersion"],
-        "references": generated_manifest_core["references"],
-        "assessments": generated_manifest_core["assessments"],
-    }
-
-    write_json(MANIFEST_PATH, generated_manifest)
-
-    print(
-        "manifest.json synchronised: "
-        f"contentVersion={generated_manifest['contentVersion']}"
-    )
-
-
-if __name__ == "__main__":
-    main()
+    previous_without_version={k:v for k,v in previous.items() if k not in {'updatedAt','contentVersion'}}
+    previous_version=previous.get('contentVersion','0.0.0'); parts(previous_version)
+    highest=max_version(versions)
+    changed=generated_without_version != previous_without_version
+    if changed:
+        base = previous_version if parts(previous_version) >= parts(highest) else highest
+        version=bump(base)
+        updated=datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
+    else:
+        version=previous_version
+        updated=previous.get('updatedAt') or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
+    result={'schemaVersion':generated_without_version['schemaVersion'],'contentVersion':version,'updatedAt':updated,'minimumAppVersion':generated_without_version['minimumAppVersion'],'references':generated_without_version['references'],'clinicalReliability':generated_without_version['clinicalReliability'],'assessments':entries}
+    write_json(MANIFEST_PATH,result)
+    print(f'manifest.json synchronised: contentVersion={version}, changed={str(changed).lower()}')
+if __name__ == '__main__': main()

@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clinical reliability document",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "contentVersion",
+    "updatedAt",
+    "items"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "contentVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/item"
+      }
+    }
+  },
+  "$defs": {
+    "nullableString": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "displayName",
+        "category",
+        "contentVersion",
+        "reviewStatus",
+        "reviewedBy",
+        "reviewerRole",
+        "lastReviewed",
+        "nextReviewDue",
+        "reviewNotes",
+        "referenceIds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "scoring-tool",
+            "blood-panel"
+          ]
+        },
+        "contentVersion": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        },
+        "reviewStatus": {
+          "type": "string",
+          "enum": [
+            "unverified",
+            "current",
+            "review-due",
+            "withdrawn"
+          ]
+        },
+        "reviewedBy": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "reviewerRole": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "lastReviewed": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "nextReviewDue": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewNotes": {
+          "$ref": "#/$defs/nullableString"
+        },
+        "referenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

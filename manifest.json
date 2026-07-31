@@ -1,11 +1,17 @@
 {
-  "schemaVersion": 1,
-  "contentVersion": "1.1.8",
-  "updatedAt": "2026-07-30T16:06:58Z",
-  "minimumAppVersion": "0.11.0",
+  "schemaVersion": 2,
+  "contentVersion": "1.1.13",
+  "updatedAt": "2026-07-31T11:39:18Z",
+  "minimumAppVersion": "0.16.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "2f3f7338853dd26ec268e47527e3c8d43c2660e2bad3322eeee666cef5acf834"
+    "sha256": "36bec8c823b0182b79bdf2ee040d53cf0f74eae201b309a4eb88046f421ffc83"
+  },
+  "clinicalReliability": {
+    "file": "clinical_reliability/clinical-reliability.json",
+    "schema": "schema/clinical-reliability-schema.json",
+    "sha256": "0c1e84eb7abe3f79173667c6e1c6f740e28bf66ad56727c36219ff305f6a3c10",
+    "schemaSha256": "70ed85658e274ab2dfbbd09163ab3500fba561c971d2bf131954f7e7b0879062"
   },
   "assessments": [
     {

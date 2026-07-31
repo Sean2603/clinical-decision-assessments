@@ -1,0 +1,510 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": "1.0.0",
+  "updatedAt": "2026-07-31T11:30:00Z",
+  "items": [
+    {
+      "id": "perc-rule",
+      "displayName": "PERC rule",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG158"
+      ]
+    },
+    {
+      "id": "ottawa-ankle-and-foot-rules",
+      "displayName": "Ottawa ankle and foot rules",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "ottawa-knee-rule",
+      "displayName": "Ottawa knee rule",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "canadian-c-spine-rule",
+      "displayName": "Canadian C-spine rule",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "nice-head-injury-pathway",
+      "displayName": "NICE head-injury pathway",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG232"
+      ]
+    },
+    {
+      "id": "pecarn",
+      "displayName": "PECARN",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "feverpain",
+      "displayName": "FeverPAIN",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG84"
+      ]
+    },
+    {
+      "id": "centor-criteria",
+      "displayName": "Centor criteria",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG84"
+      ]
+    },
+    {
+      "id": "crb-65",
+      "displayName": "CRB-65",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG250"
+      ]
+    },
+    {
+      "id": "glasgow-coma-scale",
+      "displayName": "Glasgow Coma Scale",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "4at-delirium-screen",
+      "displayName": "4AT delirium screen",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "news2",
+      "displayName": "NEWS2",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "two-level-pe-wells",
+      "displayName": "Two-level PE Wells",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG158"
+      ]
+    },
+    {
+      "id": "two-level-dvt-wells",
+      "displayName": "Two-level DVT Wells",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG158"
+      ]
+    },
+    {
+      "id": "add-rs",
+      "displayName": "ADD-RS",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "canadian-ct-head-rule",
+      "displayName": "Canadian CT Head Rule",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "heart-score",
+      "displayName": "HEART score",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "edacs",
+      "displayName": "EDACS",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "glasgow-blatchford",
+      "displayName": "Glasgow–Blatchford",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "canadian-syncope-risk-score",
+      "displayName": "Canadian Syncope Risk Score",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "curb-65",
+      "displayName": "CURB-65",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG250"
+      ]
+    },
+    {
+      "id": "decaf",
+      "displayName": "DECAF",
+      "category": "scoring-tool",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "full-blood-count",
+      "displayName": "Full blood count",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "urea-and-electrolytes",
+      "displayName": "Urea and electrolytes",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG148"
+      ]
+    },
+    {
+      "id": "c-reactive-protein",
+      "displayName": "C-reactive protein",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "liver-blood-tests",
+      "displayName": "Liver blood tests",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "abg-and-vbg",
+      "displayName": "ABG and VBG",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "glucose-ketones-and-lactate",
+      "displayName": "Glucose, ketones and lactate",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "calcium-magnesium-and-phosphate",
+      "displayName": "Calcium, magnesium and phosphate",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "coagulation",
+      "displayName": "Coagulation",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "troponin",
+      "displayName": "Troponin",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG185"
+      ]
+    },
+    {
+      "id": "serum-osmolality",
+      "displayName": "Serum osmolality",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "creatine-kinase",
+      "displayName": "Creatine kinase",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "lipase-and-amylase",
+      "displayName": "Lipase and amylase",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "bnp-and-nt-probnp",
+      "displayName": "BNP and NT-proBNP",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": [
+        "NICE-NG106"
+      ]
+    },
+    {
+      "id": "thyroid-function",
+      "displayName": "Thyroid function",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    },
+    {
+      "id": "haematinics",
+      "displayName": "Haematinics",
+      "category": "blood-panel",
+      "contentVersion": "1.0.0",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "lastReviewed": null,
+      "nextReviewDue": null,
+      "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+      "referenceIds": []
+    }
+  ]
+}

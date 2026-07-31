@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-07-30",
+  "lastChecked": "2026-07-31",
   "references": [
     {
       "id": "NICE-NG59",
@@ -98,6 +98,180 @@
         "spinal metastases",
         "metastatic spinal cord compression",
         "MRI"
+      ]
+    },
+    {
+      "id": "NICE-NG158",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Venous thromboembolic diseases: diagnosis, management and thrombophilia testing",
+      "referenceNumber": "NG158",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng158",
+      "published": "2020-03-26",
+      "lastUpdated": "2023-08-02",
+      "accessed": "2026-07-31",
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": "Shared candidate source for the two-level PE Wells score, two-level DVT Wells score and PERC-related pathway content. Publication metadata was populated from the official NICE page, but clinical applicability and app implementation have not yet been formally reviewed.",
+      "relevantTopics": [
+        "deep vein thrombosis",
+        "pulmonary embolism",
+        "Wells score",
+        "PERC"
+      ]
+    },
+    {
+      "id": "NICE-NG232",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Head injury: assessment and early management",
+      "referenceNumber": "NG232",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng232",
+      "published": "2023-05-18",
+      "lastUpdated": null,
+      "accessed": "2026-07-31",
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": "Shared candidate source for the NICE head-injury pathway. Publication metadata was populated from the official NICE page, but the app content and implementation have not yet been formally reviewed.",
+      "relevantTopics": [
+        "head injury",
+        "CT",
+        "observation",
+        "discharge"
+      ]
+    },
+    {
+      "id": "NICE-NG84",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Sore throat (acute): antimicrobial prescribing",
+      "referenceNumber": "NG84",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng84",
+      "published": "2018-01-26",
+      "lastUpdated": "2018-01-26",
+      "accessed": "2026-07-31",
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": "Shared candidate source for FeverPAIN and Centor criteria. Publication metadata was populated from the official NICE listing, but the score implementation has not yet been formally reviewed.",
+      "relevantTopics": [
+        "sore throat",
+        "FeverPAIN",
+        "Centor",
+        "antimicrobial prescribing"
+      ]
+    },
+    {
+      "id": "NICE-NG250",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Pneumonia: diagnosis and management",
+      "referenceNumber": "NG250",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng250",
+      "published": "2025-09-02",
+      "lastUpdated": "2025-09-02",
+      "accessed": "2026-07-31",
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": "Shared candidate source for CRB-65 and CURB-65. Publication metadata was populated from the official NICE page, but score implementation and wording have not yet been formally reviewed.",
+      "relevantTopics": [
+        "pneumonia",
+        "CRB-65",
+        "CURB-65",
+        "severity"
+      ]
+    },
+    {
+      "id": "NICE-NG148",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Acute kidney injury: prevention, detection and management",
+      "referenceNumber": "NG148",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng148",
+      "published": "2019-12-18",
+      "lastUpdated": "2024-10-16",
+      "accessed": "2026-07-31",
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": "Shared candidate source for urea, creatinine, eGFR and acute kidney injury interpretation. Publication metadata was populated from the official NICE page, but the blood-panel wording and thresholds have not yet been formally reviewed.",
+      "relevantTopics": [
+        "acute kidney injury",
+        "creatinine",
+        "eGFR",
+        "urea and electrolytes"
+      ]
+    },
+    {
+      "id": "NICE-NG106",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Chronic heart failure in adults: diagnosis and management",
+      "referenceNumber": "NG106",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng106",
+      "published": "2018-09-12",
+      "lastUpdated": "2025-09-03",
+      "accessed": "2026-07-31",
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": "Shared candidate source for BNP and NT-proBNP interpretation and referral thresholds. Publication metadata was populated from the official NICE page, but the blood-panel implementation has not yet been formally reviewed.",
+      "relevantTopics": [
+        "heart failure",
+        "BNP",
+        "NT-proBNP",
+        "referral"
+      ]
+    },
+    {
+      "id": "NICE-NG185",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Acute coronary syndromes",
+      "referenceNumber": "NG185",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng185",
+      "published": "2020-11-18",
+      "lastUpdated": null,
+      "accessed": "2026-07-31",
+      "lastReviewed": null,
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": "Shared candidate source for troponin use in acute coronary syndrome pathways. Publication metadata was populated from the official NICE page, but assay-specific interpretation and app wording have not yet been formally reviewed.",
+      "relevantTopics": [
+        "acute coronary syndrome",
+        "troponin",
+        "myocardial injury"
       ]
     }
   ]
