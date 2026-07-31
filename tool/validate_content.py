@@ -91,12 +91,16 @@ def main() -> int:
         ROOT / "schema" / "assessment-schema.json",
         errors,
     )
+    guideline_schema = load_json(
+        ROOT / "schema" / "guideline-schema.json",
+        errors,
+    )
     references_document = load_json(
         ROOT / "references" / "references.json",
         errors,
     )
 
-    if schema is None or references_document is None:
+    if schema is None or guideline_schema is None or references_document is None:
         for error in errors:
             print(f"ERROR: {error}")
         return 1
@@ -167,14 +171,67 @@ def main() -> int:
                 f"{', '.join(missing_references)}."
             )
 
+
+    guideline_validator = Draft202012Validator(
+        guideline_schema,
+        format_checker=FormatChecker(),
+    )
+    guideline_paths = sorted((ROOT / "guidelines").glob("*.json"))
+    if not guideline_paths:
+        errors.append("No guideline JSON files were found.")
+
+    current_guidelines: dict[str, dict] = {}
+    for guideline_path in guideline_paths:
+        guideline = load_json(guideline_path, errors)
+        if guideline is None:
+            continue
+        guideline_id = guideline.get("id")
+        if not isinstance(guideline_id, str) or not guideline_id:
+            errors.append(f"{guideline_path}: missing valid id.")
+            continue
+        if guideline_id in current_guidelines:
+            errors.append(f"Duplicate guideline id: {guideline_id}.")
+        current_guidelines[guideline_id] = guideline
+
+        try:
+            version_parts(guideline["contentVersion"])
+        except (KeyError, ValueError) as exc:
+            errors.append(f"{guideline_path}: {exc}")
+
+        for validation_error in sorted(
+            guideline_validator.iter_errors(guideline),
+            key=lambda item: [str(part) for part in item.absolute_path],
+        ):
+            location = ".".join(
+                str(part) for part in validation_error.absolute_path
+            )
+            suffix = f":{location}" if location else ""
+            errors.append(
+                f"{guideline_path}{suffix}: {validation_error.message}"
+            )
+
+        missing_references = sorted(
+            set(guideline.get("references", [])) - known_reference_ids
+        )
+        if missing_references:
+            errors.append(
+                f"{guideline_path}: unknown reference IDs: "
+                f"{', '.join(missing_references)}."
+            )
+
     if args.base_ref:
         changed = changed_files(args.base_ref)
 
         for relative_path in sorted(changed):
-            if not (
+            is_assessment = (
                 relative_path.startswith("assessments/")
                 and relative_path.endswith(".json")
-            ):
+            )
+            is_guideline = (
+                relative_path.startswith("guidelines/")
+                and relative_path.endswith(".json")
+            )
+            if not (is_assessment or is_guideline):
                 continue
 
             current_path = ROOT / relative_path
@@ -188,13 +245,14 @@ def main() -> int:
                 continue
 
             try:
-                if version_parts(current["version"]) <= version_parts(
-                    previous["version"]
+                version_key = "version" if is_assessment else "contentVersion"
+                if version_parts(current[version_key]) <= version_parts(
+                    previous[version_key]
                 ):
                     errors.append(
-                        f"{relative_path} changed, but its version was not "
-                        f"increased ({previous['version']} -> "
-                        f"{current['version']})."
+                        f"{relative_path} changed, but its {version_key} was "
+                        f"not increased ({previous[version_key]} -> "
+                        f"{current[version_key]})."
                     )
             except (KeyError, ValueError) as exc:
                 errors.append(f"{relative_path}: {exc}")
@@ -205,7 +263,7 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print("Assessment content validation passed.")
+    print("Assessment and guideline content validation passed.")
     return 0
 
 

@@ -29,3 +29,20 @@ The app checks the raw GitHub manifest in the background no more than once every
 ## Shared references
 
 `references/references.json` is the authoritative registry for assessments, scoring tools and blood panels. `clinical_reliability/clinical-reliability.json` stores clinical review metadata and stable `referenceIds`; it does not duplicate source records.
+
+
+## Clinical guidelines
+
+Guidelines are stored in `guidelines/*.json`, validated against
+`schema/guideline-schema.json`, and published through the same `manifest.json`
+as assessments, references and clinical-reliability metadata.
+
+Run before committing:
+
+```powershell
+python tool/validate_content.py
+python tool/validate_clinical_reliability.py
+python tool/validate_references.py
+python tool/generate_reference_usage.py
+python tool/sync_manifest.py
+```

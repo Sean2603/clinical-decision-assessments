@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "contentVersion": "1.1.13",
-  "updatedAt": "2026-07-31T11:39:18Z",
-  "minimumAppVersion": "0.16.0",
+  "contentVersion": "1.1.14",
+  "updatedAt": "2026-07-31T12:22:44Z",
+  "minimumAppVersion": "0.17.0",
   "references": {
     "file": "references/references.json",
     "sha256": "36bec8c823b0182b79bdf2ee040d53cf0f74eae201b309a4eb88046f421ffc83"
@@ -166,6 +166,17 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "a8df46654daae4caaaa93faea6ff4ef98cbd1b311f28ff10c97c85376cd3775e",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
+    }
+  ],
+  "guidelines": [
+    {
+      "id": "pulmonary_embolism",
+      "title": "Pulmonary embolism",
+      "version": "0.1.0",
+      "file": "guidelines/pulmonary_embolism.json",
+      "schema": "schema/guideline-schema.json",
+      "sha256": "0761883859a965aa496b8cef0877db6bee9c0999ba53d50ee9ef5aeb8d5653c6",
+      "schemaSha256": "2ca173fd08c179110f2c5e58778e90cd4c7a871821a1eccf9be047c6bc2f4411"
     }
   ]
 }

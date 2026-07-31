@@ -1,4 +1,4 @@
-name: Validate and publish assessments
+name: Validate and publish clinical content
 
 "on":
   pull_request:
@@ -10,6 +10,7 @@ name: Validate and publish assessments
       - main
     paths:
       - "assessments/**"
+      - "guidelines/**"
       - "references/**"
       - "clinical_reliability/**"
       - "schema/**"
@@ -26,7 +27,7 @@ permissions:
 
 jobs:
   validate:
-    name: Validate assessment and reference content
+    name: Validate clinical and reference content
     runs-on: ubuntu-latest
 
     steps:
@@ -86,7 +87,7 @@ jobs:
         run: python tool/validate_references.py --strict
 
   publish:
-    name: Publish assessment manifest
+    name: Publish clinical content manifest
     needs: validate
 
     if: >
