@@ -1,11 +1,11 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.1.17",
-  "updatedAt": "2026-08-01T15:58:21Z",
+  "contentVersion": "1.1.18",
+  "updatedAt": "2026-08-01T16:56:16Z",
   "minimumAppVersion": "0.18.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "a1ae0c9b9d25b68f3ce582519ab748f951c1279c07f43ceddd40d00fa338256b"
+    "sha256": "f2758ba8c14237fdf96fbd9af79eade9a161f5fb92123cd17810fb092c64843d"
   },
   "clinicalReliability": {
     "file": "clinical_reliability/clinical-reliability.json",
@@ -14,6 +14,15 @@
     "schemaSha256": "70ed85658e274ab2dfbbd09163ab3500fba561c971d2bf131954f7e7b0879062"
   },
   "assessments": [
+    {
+      "id": "acute-kidney-injury-assessment",
+      "title": "Acute Kidney Injury Assessment",
+      "version": "0.1.0",
+      "file": "assessments/acute-kidney-injury-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "e0cf54edc75f47a0c22762d41f0e7d25dbe2cf087575a9766629ed14ec00f29a",
+      "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
+    },
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
@@ -33,12 +42,30 @@
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {
+      "id": "dehydration-assessment",
+      "title": "Dehydration Assessment",
+      "version": "0.1.0",
+      "file": "assessments/dehydration-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "3ecf524029cb3c58fc89cbfed8484bce8a7419b023bb2b432873caa0315c1c0b",
+      "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
+    },
+    {
       "id": "dermatological",
       "title": "Dermatological Assessment",
       "version": "1.0.1",
       "file": "assessments/dermatological.json",
       "schema": "schema/assessment-schema.json",
       "sha256": "82e42c8b147af8cd4d5329907e72ab6f25b68a5fc8b4cc27f8e6ac671be226f2",
+      "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
+    },
+    {
+      "id": "dizziness-vertigo-assessment",
+      "title": "Dizziness and Vertigo Assessment",
+      "version": "0.1.0",
+      "file": "assessments/dizziness-vertigo-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "da02f19a9398551c88e2bfec4028975cc9d89f9a453d9d4947a575905ffc6a5c",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {
@@ -57,6 +84,15 @@
       "file": "assessments/endocrine-metabolic.json",
       "schema": "schema/assessment-schema.json",
       "sha256": "0b49b2234cf9fc3aee94897d22678a0b11e36489bb82c91570a1fa2596ec5f72",
+      "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
+    },
+    {
+      "id": "frailty-assessment",
+      "title": "Frailty Assessment",
+      "version": "0.1.0",
+      "file": "assessments/frailty-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "42fd94071d73665c18b6af470c6319ca8a0707d7ae3002c0dbeb4c69815d8640",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {

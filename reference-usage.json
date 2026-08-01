@@ -2,6 +2,21 @@
   "generated": true,
   "references": [
     {
+      "referenceId": "NICE-CG103",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-CG147",
       "usedBy": [
         {
@@ -12,8 +27,33 @@
       ]
     },
     {
+      "referenceId": "NICE-CG174",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG106",
       "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
         {
           "type": "blood-panel",
           "id": "bnp-and-nt-probnp",
@@ -33,6 +73,46 @@
           "type": "assessment",
           "id": "back-pain",
           "title": "Back Pain Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG128",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG136",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
         }
       ]
     },
@@ -49,6 +129,21 @@
     {
       "referenceId": "NICE-NG148",
       "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        },
         {
           "type": "blood-panel",
           "id": "urea-and-electrolytes",
@@ -145,6 +240,11 @@
       "referenceId": "NICE-NG232",
       "usedBy": [
         {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        },
+        {
           "type": "scoring-tool",
           "id": "nice-head-injury-pathway",
           "title": "NICE head-injury pathway"
@@ -163,6 +263,21 @@
           "type": "assessment",
           "id": "back-pain",
           "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG249",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
         }
       ]
     },
@@ -198,6 +313,21 @@
           "type": "assessment",
           "id": "back-pain",
           "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG56",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
         }
       ]
     },
