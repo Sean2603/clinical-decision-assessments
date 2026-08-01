@@ -1,0 +1,619 @@
+{
+  "id": "frailty-assessment",
+  "title": "Frailty Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing an older person living with frailty, distinguishing baseline vulnerability from acute illness, identifying delirium and functional decline, and coordinating proportionate treatment, support and follow-up.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Frailty describes vulnerability, not the explanation for a new deterioration. Establish the person’s baseline and identify the acute or reversible problem.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "The person’s usual cognition, mobility, continence, nutrition, self-care and support before the current illness.",
+            "The exact acute change and whether it developed over hours, days or weeks.",
+            "Delirium, infection, pain, injury, medication toxicity, dehydration, acute kidney injury, constipation, urinary retention or another reversible precipitant.",
+            "Current ability to stand, transfer, walk, toilet, eat, drink and take medicines safely.",
+            "Falls, loss of consciousness, prolonged time on the floor or new fear of falling.",
+            "Carer availability, home safety, safeguarding concerns and whether essential needs can be met immediately.",
+            "The patient’s goals, capacity, treatment escalation plan, advance decisions and preferred place of care."
+          ],
+          "references": [
+            "NICE-NG56",
+            "NICE-CG103",
+            "NICE-NG249"
+          ],
+          "importantLimitation": "Do not attribute acute confusion, weakness or immobility to age or frailty without assessing for an acute illness. Frailty scoring during acute illness may overestimate baseline frailty."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "History prompts",
+      "type": "prompt-list",
+      "intro": "Obtain collateral history early. Compare the current state with the person’s usual function rather than with an age-based expectation.",
+      "items": [
+        {
+          "id": "baseline-and-current-change",
+          "title": "Baseline function and acute change",
+          "mustConfirmOrExclude": [
+            "Usual mobility indoors and outdoors, walking aid, transfer ability and stair use.",
+            "Usual personal and instrumental activities of daily living, including washing, dressing, toileting, meals, shopping and medicines.",
+            "Usual cognition, communication, mood, sleep and behaviour.",
+            "When the change began, how rapidly it progressed and the last known baseline.",
+            "What the patient, family or carers identify as the most important new difference."
+          ],
+          "references": [
+            "NICE-NG56"
+          ]
+        },
+        {
+          "id": "acute-illness-screen",
+          "title": "Acute illness and reversible causes",
+          "mustConfirmOrExclude": [
+            "Fever, respiratory symptoms, urinary symptoms, abdominal symptoms, wounds or other infection features.",
+            "Pain, recent fall, head injury or occult trauma.",
+            "Reduced intake, vomiting, diarrhoea, constipation, urinary retention or incontinence change.",
+            "Breathlessness, oedema, chest symptoms, dizziness, syncope or focal neurological symptoms.",
+            "Recent blood results, including renal function, glucose and inflammatory markers where available."
+          ],
+          "references": [
+            "NICE-CG103",
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "delirium-and-cognition-history",
+          "title": "Delirium and cognition",
+          "mustConfirmOrExclude": [
+            "Recent change or fluctuation in concentration, responses, orientation or memory.",
+            "New hallucinations, agitation, sleep reversal, withdrawal or reduced interaction.",
+            "Hypoactive features such as unusual quietness, slow responses, reduced movement or poor appetite.",
+            "Known dementia, cognitive impairment, learning disability or previous delirium.",
+            "Collateral account from someone who knows the patient’s normal behaviour."
+          ],
+          "references": [
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "falls-and-mobility-history",
+          "title": "Falls, mobility and fear of falling",
+          "mustConfirmOrExclude": [
+            "Any fall in the previous year, including frequency, circumstances and injury.",
+            "Loss of consciousness, presyncope, dizziness or inability to get up independently.",
+            "Time spent on the floor and possible pressure, dehydration or muscle injury consequences.",
+            "New gait change, weakness, pain or reduced confidence.",
+            "Walking aids, footwear, home hazards and whether usual equipment is available and used."
+          ],
+          "references": [
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "nutrition-hydration-and-continence",
+          "title": "Nutrition, hydration and continence",
+          "mustConfirmOrExclude": [
+            "Weight loss, reduced appetite, swallowing difficulty, dentition or inability to prepare meals.",
+            "Usual and current fluid intake and access to drinks.",
+            "Vomiting, diarrhoea, high-output stoma or other losses.",
+            "Urinary frequency, retention, new incontinence, constipation or faecal impaction.",
+            "Who provides food, fluids and toileting support and whether this remains reliable."
+          ],
+          "references": [
+            "NICE-NG56",
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "medicines-and-treatment-burden",
+          "title": "Medicines and treatment burden",
+          "mustConfirmOrExclude": [
+            "Full medicines reconciliation, adherence and recent changes.",
+            "Sedatives, psychotropics, opioids, anticholinergics, antihypertensives, diuretics, glucose-lowering medicines and anticoagulants.",
+            "Adverse effects including falls, postural hypotension, constipation, confusion, bleeding or acute kidney injury.",
+            "Whether the person can organise and take medicines correctly.",
+            "Treatments or appointments that create disproportionate burden or conflict with current goals."
+          ],
+          "references": [
+            "NICE-NG56",
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "social-support-and-goals",
+          "title": "Support, safeguarding and goals of care",
+          "mustConfirmOrExclude": [
+            "Living arrangement, formal care package, family support and overnight availability.",
+            "Carer strain, breakdown, missed visits or inability to meet essential needs.",
+            "Home heating, food, fluids, phone access, mobility equipment and environmental hazards.",
+            "Safeguarding concerns, neglect, coercion or unexplained injuries.",
+            "Capacity for the current decision and any lasting power of attorney or nominated decision-maker.",
+            "Advance care plan, treatment escalation plan, resuscitation decision and preferred place of care."
+          ],
+          "references": [
+            "NICE-NG56"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Acute deterioration and safeguarding screen",
+      "type": "prompt-list",
+      "intro": "Frailty increases vulnerability to harm from apparently minor illness. Escalate the acute cause, not the frailty score alone.",
+      "items": [
+        {
+          "id": "delirium-red-flags",
+          "title": "New delirium",
+          "urgentFeatures": [
+            "Acute or fluctuating confusion, inattention, hallucinations, agitation or altered consciousness.",
+            "Hypoactive change with unusual withdrawal, slow responses, reduced mobility or poor intake.",
+            "A positive 4AT or strong collateral concern about acute cognitive change."
+          ],
+          "implications": [
+            "Identify and manage the underlying cause or combination of causes; delirium is a medical syndrome, not a normal consequence of frailty."
+          ],
+          "references": [
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "rapid-functional-decline",
+          "title": "Rapid functional decline",
+          "urgentFeatures": [
+            "New inability to stand, transfer, walk, toilet, eat, drink or take essential medicines.",
+            "Rapid decline over hours or days without an established benign explanation.",
+            "Unsafe return to the current environment."
+          ],
+          "implications": [
+            "Requires acute medical assessment and a function-led disposition plan, even when observations are not markedly abnormal."
+          ]
+        },
+        {
+          "id": "fall-or-injury",
+          "title": "Fall, injury or prolonged lie",
+          "urgentFeatures": [
+            "Head injury, anticoagulant use, focal pain, deformity or inability to weight-bear.",
+            "Loss of consciousness or unexplained fall.",
+            "Unable to get up independently or prolonged time on the floor.",
+            "New neurological deficit or persistent severe pain."
+          ],
+          "implications": [
+            "Use the appropriate head-injury, trauma, syncope or falls pathway and assess complications of the prolonged lie."
+          ],
+          "references": [
+            "NICE-NG249",
+            "NICE-NG232"
+          ]
+        },
+        {
+          "id": "unmet-basic-needs",
+          "title": "Unmet essential care needs",
+          "urgentFeatures": [
+            "No reliable access to food, fluids, medicines, toileting, repositioning or urgent help.",
+            "Carer breakdown or unsafe environment.",
+            "Pressure injury, severe self-neglect or repeated missed care."
+          ],
+          "implications": [
+            "A medically stable patient may still require urgent admission, crisis care or safeguarding action when essential needs cannot be met."
+          ]
+        },
+        {
+          "id": "safeguarding",
+          "title": "Safeguarding concern",
+          "urgentFeatures": [
+            "Unexplained injuries, fearfulness, coercion, neglect, financial exploitation or inconsistent accounts.",
+            "Concern that a dependent adult is being left without essential care.",
+            "Immediate danger in the current environment."
+          ],
+          "implications": [
+            "Follow the local adult-safeguarding pathway and document the concern, capacity, immediate protection plan and people informed."
+          ]
+        },
+        {
+          "id": "end-of-life-deterioration",
+          "title": "Possible end-of-life deterioration",
+          "urgentFeatures": [
+            "Progressive decline with reduced intake, increasing sleep, worsening function and advanced life-limiting illness.",
+            "Symptoms not controlled by the current anticipatory plan.",
+            "Uncertainty about whether an acute reversible cause should be treated or whether transfer matches the patient’s goals."
+          ],
+          "implications": [
+            "Clarify goals, capacity, advance plans and senior clinical responsibility; arrange urgent palliative or medical support rather than assuming deterioration is inevitable."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine for acute illness while also assessing cognition, function, nutrition, skin and the practical safety of the care environment.",
+      "items": [
+        {
+          "id": "general-and-observations",
+          "title": "General assessment and observations",
+          "howToTest": [
+            "Assess appearance, distress, interaction and evidence of acute illness.",
+            "Record temperature, heart rate, blood pressure, respiratory rate, oxygen saturation and early warning score.",
+            "Review trends and compare with known baseline.",
+            "Assess pain using a method the person can understand."
+          ],
+          "normal": [
+            "Physiologically stable, comfortable and interacting at baseline."
+          ],
+          "abnormal": [
+            "Abnormal physiology, pain, altered consciousness or reduced engagement.",
+            "A normal early warning score with substantial new functional decline."
+          ],
+          "implications": [
+            "Physiology should be interpreted alongside function and collateral history; older people may have serious illness without fever or marked tachycardia."
+          ]
+        },
+        {
+          "id": "delirium-assessment",
+          "title": "Delirium assessment",
+          "howToTest": [
+            "Ask a collateral source about acute change or fluctuation.",
+            "Assess alertness, attention, orientation and acute change using the 4AT when competent to do so.",
+            "Look specifically for hypoactive delirium.",
+            "Identify possible causes including infection, pain, retention, constipation, hypoxia, metabolic disturbance and medicines."
+          ],
+          "normal": [
+            "No acute or fluctuating cognitive or behavioural change and 4AT does not indicate delirium."
+          ],
+          "abnormal": [
+            "Acute change, fluctuation, inattention, altered alertness or a 4AT indicating possible delirium."
+          ],
+          "implications": [
+            "A competent practitioner should use the 4AT when delirium indicators are present; the final diagnosis requires appropriate clinical expertise."
+          ],
+          "references": [
+            "NICE-CG103"
+          ],
+          "importantLimitation": "A known dementia diagnosis does not explain a sudden change. When delirium and dementia are difficult to distinguish, manage delirium first."
+        },
+        {
+          "id": "mobility-and-transfers",
+          "title": "Mobility, transfers and gait",
+          "howToTest": [
+            "Observe bed or chair mobility, sit-to-stand, transfers and walking using the usual aid where safe.",
+            "Assess balance, lower-limb strength, pain and confidence.",
+            "Compare with usual mobility from collateral history.",
+            "Do not force performance testing in an acutely unwell person."
+          ],
+          "normal": [
+            "Function is close to baseline and mobility is safe with usual support."
+          ],
+          "abnormal": [
+            "New assistance requirement, inability to stand, unsafe gait, focal weakness or marked deconditioning."
+          ],
+          "implications": [
+            "New mobility loss changes disposition and requires assessment for acute illness, injury and rehabilitation needs."
+          ],
+          "references": [
+            "NICE-NG56",
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "frailty-and-baseline-vulnerability",
+          "title": "Baseline frailty and vulnerability",
+          "howToTest": [
+            "Describe baseline independence, mobility, cognition and support before the acute illness.",
+            "Use a locally approved validated frailty tool where required.",
+            "Base any frailty score on the usual pre-illness state rather than the current acute deterioration.",
+            "Document the source of collateral information and uncertainty."
+          ],
+          "normal": [
+            "Independent baseline with preserved reserve and little assistance."
+          ],
+          "abnormal": [
+            "Dependence in daily activities, reduced mobility, cognitive impairment, recurrent falls or high treatment burden."
+          ],
+          "implications": [
+            "Frailty should prompt comprehensive, proportionate care planning but must not be used alone to limit treatment."
+          ],
+          "references": [
+            "NICE-NG56"
+          ],
+          "importantLimitation": "NICE advises caution when assessing frailty during acute illness and advises against physical performance tools in an acutely unwell person."
+        },
+        {
+          "id": "falls-assessment",
+          "title": "Falls-focused examination",
+          "howToTest": [
+            "Assess injuries, footwear, feet, vision, hearing and neurological status.",
+            "Measure lying and standing blood pressure when safe.",
+            "Assess gait, balance, mobility and muscle strength.",
+            "Review medicines and environmental hazards.",
+            "Assess whether the person can get up or summon help after a fall."
+          ],
+          "normal": [
+            "No injury, unexplained loss of consciousness or new gait and balance impairment."
+          ],
+          "abnormal": [
+            "Injury, recurrent falls, postural hypotension, unsafe gait, visual or sensory impairment or inability to get up."
+          ],
+          "implications": [
+            "People living with frailty who have fallen generally require comprehensive falls assessment and tailored management."
+          ],
+          "references": [
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "nutrition-and-hydration",
+          "title": "Nutrition and hydration",
+          "howToTest": [
+            "Review weight trend, appetite, intake, swallowing, dentition and ability to feed independently.",
+            "Assess hydration, urine output and ongoing losses.",
+            "Observe a drink or meal only when safe and clinically appropriate.",
+            "Identify who provides meals and fluids."
+          ],
+          "normal": [
+            "Weight, intake and swallowing are stable and support is adequate."
+          ],
+          "abnormal": [
+            "Weight loss, poor intake, dysphagia, dehydration, acute kidney injury or inability to access food and fluids."
+          ],
+          "implications": [
+            "Nutritional or fluid deficits may cause delirium and functional decline and will recur unless the practical cause is corrected."
+          ]
+        },
+        {
+          "id": "medication-and-postural-assessment",
+          "title": "Medication and postural assessment",
+          "howToTest": [
+            "Reconcile all medicines and recent changes.",
+            "Assess for sedation, anticholinergic effects, constipation, bleeding, hypoglycaemia and renal accumulation.",
+            "Measure lying and standing blood pressure when symptoms or falls suggest postural hypotension.",
+            "Confirm how medicines are organised and administered."
+          ],
+          "normal": [
+            "Medicines are appropriate, correctly taken and not causing obvious harm."
+          ],
+          "abnormal": [
+            "Sedation, hypotension, falls, confusion, hypoglycaemia, bleeding, constipation or acute kidney injury linked to treatment."
+          ],
+          "implications": [
+            "Structured medication review may identify modifiable causes of deterioration and treatment burden."
+          ],
+          "references": [
+            "NICE-NG56",
+            "NICE-NG249",
+            "NICE-NG136"
+          ]
+        },
+        {
+          "id": "skin-continence-and-personal-care",
+          "title": "Skin, continence and personal care",
+          "howToTest": [
+            "Inspect pressure areas, wounds, bruising and skin infection where consent and circumstances allow.",
+            "Assess continence change, retention, constipation and toileting ability.",
+            "Assess hygiene, clothing and evidence that personal care needs are being met."
+          ],
+          "normal": [
+            "Skin intact, continence needs managed and personal care adequate."
+          ],
+          "abnormal": [
+            "Pressure injury, wounds, unexplained bruising, retention, impaction or unmet hygiene and toileting needs."
+          ],
+          "implications": [
+            "May identify infection, pain, neglect, immobility complications or the need for increased care support."
+          ]
+        },
+        {
+          "id": "home-and-support-assessment",
+          "title": "Environment and support",
+          "howToTest": [
+            "Confirm who is present, when carers next attend and how urgent help is obtained.",
+            "Assess immediate access to food, fluids, heating, lighting, phone, toilet and mobility equipment.",
+            "Identify hazards, stairs and whether the person can enter or leave the property safely.",
+            "Confirm the receiving service has accepted responsibility before leaving."
+          ],
+          "normal": [
+            "Essential needs can be met reliably and the environment supports the agreed plan."
+          ],
+          "abnormal": [
+            "Carer breakdown, absent essential supplies, unsafe environment, no emergency access or unclear clinical responsibility."
+          ],
+          "implications": [
+            "Social and environmental failure can make home management unsafe even when the medical condition appears stable."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-examination-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "These patterns organise disposition and care planning. They do not replace diagnosis of the acute problem.",
+      "items": [
+        {
+          "id": "stable-frailty-pattern",
+          "title": "Stable frailty without acute deterioration",
+          "commonFindings": [
+            "Function, cognition, intake and mobility are at usual baseline.",
+            "No new symptoms, injury, delirium or physiological deterioration.",
+            "Current care package and medicines remain workable."
+          ],
+          "implications": [
+            "Address preventive care, falls risk, treatment burden and advance planning through routine or proactive services rather than an acute pathway."
+          ],
+          "references": [
+            "NICE-NG56"
+          ]
+        },
+        {
+          "id": "acute-illness-on-frailty-pattern",
+          "title": "Acute illness superimposed on frailty",
+          "commonFindings": [
+            "New functional or cognitive decline with symptoms or signs of infection, pain, metabolic disturbance or organ dysfunction.",
+            "The presenting complaint may be nonspecific, such as weakness, a fall or reduced intake.",
+            "Reduced physiological reserve increases the risk of rapid deterioration."
+          ],
+          "implications": [
+            "Treat and monitor the acute diagnosis while preserving mobility, cognition, nutrition and the patient’s goals of care."
+          ]
+        },
+        {
+          "id": "delirium-pattern",
+          "title": "Delirium",
+          "commonFindings": [
+            "Acute onset or fluctuation over hours or days.",
+            "Inattention, altered alertness, hallucinations, agitation or hypoactive withdrawal.",
+            "Collateral history confirms a change from baseline."
+          ],
+          "implications": [
+            "Identify and treat the underlying cause, provide reorientation and involve family or carers."
+          ],
+          "references": [
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "deconditioning-pattern",
+          "title": "Deconditioning after illness or inactivity",
+          "commonFindings": [
+            "Reduced strength, endurance and confidence after bed rest, hospital admission or illness.",
+            "No focal neurological deficit or acute injury explaining the whole decline.",
+            "Function improves with assistance but remains below baseline."
+          ],
+          "implications": [
+            "Requires rehabilitation, graded activity and support planning while continuing to exclude active medical causes."
+          ]
+        },
+        {
+          "id": "medication-related-pattern",
+          "title": "Medication-related deterioration",
+          "commonFindings": [
+            "Temporal relationship to a new medicine, dose change or accumulation during renal impairment.",
+            "Sedation, postural hypotension, falls, constipation, confusion, bleeding or hypoglycaemia.",
+            "Complex regimen or administration errors."
+          ],
+          "implications": [
+            "Arrange structured medication review and document changes, monitoring and responsibility for follow-up."
+          ],
+          "references": [
+            "NICE-NG56",
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "falls-syndrome-pattern",
+          "title": "Frailty with recurrent falls",
+          "commonFindings": [
+            "Fall in the previous year with frailty, injury, loss of consciousness, inability to get up or two or more falls.",
+            "Gait, balance, postural blood pressure, medicines, vision or environmental risks may contribute."
+          ],
+          "implications": [
+            "Offer or refer for comprehensive falls assessment and tailored management."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Imaging directed by the suspected injury or acute diagnosis."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Head injury, focal bony pain, deformity, inability to weight-bear or new neurological deficit."
+            ],
+            "guidance": [
+              "Do not image frailty itself. Use the relevant head-injury or trauma pathway when clinical features indicate injury."
+            ],
+            "references": [
+              "NICE-NG249",
+              "NICE-NG232"
+            ]
+          },
+          "references": [
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "nutrition-and-fluid-deficit-pattern",
+          "title": "Malnutrition or fluid deficit contributing to decline",
+          "commonFindings": [
+            "Weight loss, reduced intake, swallowing or dental problems, dehydration or acute kidney injury.",
+            "Reduced strength, delirium or falls.",
+            "Practical barriers or inadequate support."
+          ],
+          "implications": [
+            "Treat metabolic complications and correct the food, fluid, swallowing and support problem that caused the deficit."
+          ]
+        },
+        {
+          "id": "carer-breakdown-pattern",
+          "title": "Carer breakdown or social crisis",
+          "commonFindings": [
+            "Medical condition may be stable but essential care cannot be delivered.",
+            "Exhausted or unavailable carers, missed visits, unsafe housing or absent equipment.",
+            "Patient cannot manage food, fluids, toileting, medicines or emergency access independently."
+          ],
+          "implications": [
+            "Requires urgent coordinated health and social-care planning; admission may be necessary when essential needs cannot be met safely."
+          ]
+        },
+        {
+          "id": "end-of-life-pattern",
+          "title": "Advanced frailty and possible end-of-life decline",
+          "commonFindings": [
+            "Progressive loss of function, reduced intake and increased sleep in advanced irreversible illness.",
+            "Existing advance plan or preference to remain at home.",
+            "Potential reversible causes and symptom burden have been considered."
+          ],
+          "implications": [
+            "Provide proportionate treatment aligned with the patient’s goals and ensure anticipatory medication, carer support and out-of-hours responsibility are explicit."
+          ],
+          "importantLimitation": "Frailty or age alone must not be used to assume that an acute condition is untreatable or that hospital care is inappropriate."
+        },
+        {
+          "id": "supported-home-management-pattern",
+          "title": "Potentially suitable for supported home management",
+          "commonFindings": [
+            "Acute diagnosis is identified, stable and manageable in the available service.",
+            "Cognition and function are at baseline or can be safely supported.",
+            "Food, fluids, medicines, toileting and mobility needs can be met immediately.",
+            "A named clinician or team has accepted follow-up responsibility.",
+            "The patient’s capacity, preferences and escalation plan are documented."
+          ],
+          "implications": [
+            "Home management is a coordinated care plan, not simply the absence of a hospital indication."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "intro": "Provide advice to the patient and the people delivering care. State who will review and how deterioration will be recognised.",
+      "items": [
+        {
+          "id": "frailty-safety-netting",
+          "title": "Frailty and functional deterioration",
+          "safetyNetting": [
+            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
+            "Seek urgent reassessment for new or worsening confusion; inability to stand, walk, eat, drink, pass urine or take essential medicines; a further fall or injury; fever or rigors; uncontrolled pain; marked drowsiness; or any situation in which essential care can no longer be provided safely.",
+            "Follow the agreed review plan and contact the named service if function, intake or cognition has not returned towards baseline within the expected timeframe."
+          ],
+          "importantLimitation": "Safety-netting is ineffective unless the person or carer can recognise deterioration, contact the service and obtain a timely response."
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null
+  }
+}

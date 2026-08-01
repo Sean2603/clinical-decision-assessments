@@ -1,0 +1,626 @@
+{
+  "id": "dizziness-vertigo-assessment",
+  "title": "Dizziness and Vertigo Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for classifying dizziness by timing and triggers, recognising central and cardiovascular causes, performing focused vestibular, neurological and postural examination, and selecting an appropriate referral or community pathway.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "First define the syndrome: continuous acute vestibular symptoms, brief triggered episodes, spontaneous episodes, presyncope or nonspecific imbalance. Do not use the word dizziness as a diagnosis.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Exact timing, duration, frequency and triggers rather than relying only on the patient’s descriptive word.",
+            "Sudden-onset acute vestibular syndrome: continuous vertigo or dizziness with nausea or vomiting, spontaneous nystagmus and gait unsteadiness.",
+            "Focal neurological symptoms, severe gait or truncal ataxia, new headache or neck pain, or other features of posterior circulation stroke.",
+            "Presyncope, syncope, arrhythmia, bleeding, hypoglycaemia, postural hypotension or medication effect.",
+            "Hearing loss, tinnitus, ear pain or neurological symptoms that change the differential and urgency.",
+            "Whether HINTS or positional testing is appropriate, safe and within the clinician’s training and governance.",
+            "Baseline gait, current ability to stand and walk, and whether discharge is functionally safe."
+          ],
+          "references": [
+            "NICE-NG127",
+            "NICE-NG128",
+            "NICE-NG136"
+          ],
+          "importantLimitation": "Normal FAST findings do not exclude posterior circulation stroke. HINTS should not be used for intermittent dizziness, isolated presyncope, a patient without spontaneous nystagmus, or by an untrained clinician."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "History prompts",
+      "type": "prompt-list",
+      "intro": "Classify the presentation using timing, triggers and targeted associated symptoms.",
+      "items": [
+        {
+          "id": "timing-and-triggers",
+          "title": "Timing and triggers",
+          "mustConfirmOrExclude": [
+            "Sudden or gradual onset and exact time last known well.",
+            "Continuous symptoms lasting hours or days versus discrete episodes with complete or partial recovery.",
+            "Episode duration: seconds, minutes, hours or longer.",
+            "Triggered by rolling in bed, looking up, bending, standing or exertion, or occurring spontaneously.",
+            "Whether movement triggers a new brief episode or merely worsens continuous symptoms already present.",
+            "First episode or recurrent stereotyped episodes."
+          ],
+          "references": [
+            "NICE-NG127"
+          ]
+        },
+        {
+          "id": "symptom-character",
+          "title": "What the patient experiences",
+          "mustConfirmOrExclude": [
+            "Illusion of movement or spinning, light-headedness, impending faint, imbalance, visual motion or nonspecific weakness.",
+            "Nausea, vomiting and ability to retain fluids.",
+            "Oscillopsia or blurred vision during head movement.",
+            "Severity at rest and with movement.",
+            "Effect on standing, walking, transfers, driving and self-care."
+          ]
+        },
+        {
+          "id": "neurological-history",
+          "title": "Neurological and central-cause screen",
+          "mustConfirmOrExclude": [
+            "Diplopia, dysarthria, dysphagia, facial weakness or numbness.",
+            "Limb weakness, numbness, incoordination or new clumsiness.",
+            "Severe gait or truncal unsteadiness, falls or inability to stand unaided.",
+            "New severe headache, occipital headache or neck pain.",
+            "Reduced consciousness, seizure or recent head and neck trauma.",
+            "Previous stroke or TIA and vascular risk factors."
+          ],
+          "references": [
+            "NICE-NG127",
+            "NICE-NG128"
+          ]
+        },
+        {
+          "id": "ear-and-hearing-history",
+          "title": "Ear and hearing symptoms",
+          "mustConfirmOrExclude": [
+            "New unilateral or bilateral hearing loss.",
+            "Tinnitus, aural fullness, ear pain or discharge.",
+            "Recent viral illness or otological procedure.",
+            "Recurrent episodes associated with fluctuating hearing symptoms.",
+            "Use of hearing aids and baseline hearing impairment."
+          ]
+        },
+        {
+          "id": "cardiovascular-and-postural-history",
+          "title": "Presyncope, cardiac and postural symptoms",
+          "mustConfirmOrExclude": [
+            "Symptoms occurring on standing, after prolonged standing, after meals or with dehydration.",
+            "Palpitations, chest pain, breathlessness, exertional symptoms or true loss of consciousness.",
+            "Bleeding, vomiting, diarrhoea, poor intake or recent illness.",
+            "Known arrhythmia, structural heart disease or family history of sudden cardiac death.",
+            "Falls with uncertain loss of consciousness."
+          ],
+          "references": [
+            "NICE-NG136"
+          ]
+        },
+        {
+          "id": "migraine-and-recurrent-episodes",
+          "title": "Migraine and recurrent episodic symptoms",
+          "mustConfirmOrExclude": [
+            "Current or previous migraine, photophobia, phonophobia, aura or headache.",
+            "Recurrent stereotyped vertigo lasting minutes to hours.",
+            "Motion sensitivity and visual triggers.",
+            "Neurological symptoms that might represent TIA rather than migraine.",
+            "Whether the pattern has changed from previous episodes."
+          ]
+        },
+        {
+          "id": "medicines-and-substances",
+          "title": "Medicines and substances",
+          "mustConfirmOrExclude": [
+            "Recent start or dose change of antihypertensives, diuretics, sedatives, anticonvulsants, antidepressants or ototoxic medicines.",
+            "Alcohol, recreational drugs or possible overdose.",
+            "Hypoglycaemic medicines and timing of food intake.",
+            "Polypharmacy, renal impairment and risk of medicine accumulation.",
+            "Recent medication non-adherence or abrupt withdrawal."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Central, cardiovascular and urgent-cause screen",
+      "type": "prompt-list",
+      "intro": "Use JRCALC and local emergency pathways when a time-critical cause is suspected. This guide supports recognition and disposition rather than duplicating emergency treatment.",
+      "items": [
+        {
+          "id": "posterior-circulation-stroke",
+          "title": "Posterior circulation stroke",
+          "urgentFeatures": [
+            "Sudden-onset acute vestibular syndrome not explained by benign positional vertigo or postural hypotension.",
+            "Normal head impulse, direction-changing nystagmus or skew deviation on a correctly performed HINTS examination.",
+            "New focal neurological deficit, severe gait or truncal ataxia, inability to stand, dysarthria, diplopia or dysphagia.",
+            "New severe headache or neck pain, especially with neurological symptoms."
+          ],
+          "implications": [
+            "Immediate referral through the local stroke pathway."
+          ],
+          "references": [
+            "NICE-NG127",
+            "NICE-NG128"
+          ],
+          "importantLimitation": "A patient can have posterior circulation stroke without facial weakness, arm weakness or speech disturbance."
+        },
+        {
+          "id": "acute-vestibular-without-trained-hints",
+          "title": "Acute vestibular syndrome without trained HINTS assessment",
+          "urgentFeatures": [
+            "Continuous sudden-onset vertigo or dizziness with nausea or vomiting and gait unsteadiness.",
+            "No clear benign positional or postural explanation.",
+            "No clinician with training and experience in HINTS is available."
+          ],
+          "implications": [
+            "Refer immediately in line with the local stroke pathway."
+          ],
+          "references": [
+            "NICE-NG127"
+          ]
+        },
+        {
+          "id": "syncope-or-arrhythmia",
+          "title": "Syncope, arrhythmia or haemodynamic cause",
+          "urgentFeatures": [
+            "True loss of consciousness, exertional presyncope, chest pain or palpitations.",
+            "Persistent hypotension, significant bradycardia or tachyarrhythmia.",
+            "Abnormal ECG, active bleeding or severe volume depletion.",
+            "Family history of sudden death or known high-risk structural heart disease."
+          ],
+          "implications": [
+            "Use the syncope or cardiac pathway rather than diagnosing peripheral vertigo."
+          ]
+        },
+        {
+          "id": "acute-hearing-loss",
+          "title": "Acute hearing loss with vertigo",
+          "urgentFeatures": [
+            "Sudden new hearing loss, particularly unilateral, with vertigo or neurological symptoms.",
+            "Ear symptoms do not fully explain severe gait or neurological abnormality."
+          ],
+          "implications": [
+            "Requires urgent specialist assessment; new hearing loss does not automatically establish a benign peripheral cause."
+          ]
+        },
+        {
+          "id": "unsafe-mobility-or-vomiting",
+          "title": "Unsafe mobility or uncontrolled symptoms",
+          "urgentFeatures": [
+            "Unable to stand, walk or transfer safely.",
+            "Persistent vomiting with inability to retain fluids or medicines.",
+            "Repeated falls, injury or no safe supervision at home."
+          ],
+          "implications": [
+            "Disposition must address function, hydration and support even if a peripheral vestibular diagnosis appears likely."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Select tests according to the syndrome. Do not perform every vestibular manoeuvre on every patient.",
+      "items": [
+        {
+          "id": "general-and-observations",
+          "title": "General assessment and observations",
+          "howToTest": [
+            "Assess appearance, distress, hydration and ability to engage.",
+            "Record temperature, pulse, blood pressure, respiratory rate, oxygen saturation and glucose.",
+            "Review symptom onset and any change during observation.",
+            "Assess vomiting and ability to retain oral fluids."
+          ],
+          "normal": [
+            "Physiologically stable with normal glucose and controlled symptoms."
+          ],
+          "abnormal": [
+            "Hypotension, arrhythmia, fever, hypoxia, hypoglycaemia or persistent vomiting."
+          ],
+          "implications": [
+            "May identify a metabolic, infectious, cardiovascular or volume-related cause rather than a primary vestibular disorder."
+          ]
+        },
+        {
+          "id": "eye-movements-and-nystagmus",
+          "title": "Eye movements and spontaneous nystagmus",
+          "howToTest": [
+            "Inspect primary gaze and gaze to each side without asking the patient to fix on a near target.",
+            "Assess whether nystagmus is unidirectional or changes direction with gaze.",
+            "Assess ocular alignment and full eye movements.",
+            "Look for new diplopia, gaze palsy or vertical nystagmus."
+          ],
+          "normal": [
+            "Full conjugate eye movements and no spontaneous nystagmus."
+          ],
+          "abnormal": [
+            "Direction-changing, vertical or pure torsional nystagmus.",
+            "Skew deviation, gaze palsy or new diplopia.",
+            "Unidirectional horizontal-torsional nystagmus in an appropriate acute vestibular syndrome."
+          ],
+          "implications": [
+            "Direction-changing nystagmus, skew or other ocular motor abnormality raises concern for a central cause."
+          ],
+          "references": [
+            "NICE-NG127"
+          ]
+        },
+        {
+          "id": "hints-examination",
+          "title": "HINTS examination in acute vestibular syndrome",
+          "summary": "Use only for continuous acute vestibular syndrome with spontaneous nystagmus, and only when trained and experienced.",
+          "howToTest": [
+            "Head impulse: assess the vestibulo-ocular reflex with small rapid head turns while the patient fixes on a target.",
+            "Nystagmus: determine whether it remains unidirectional or changes direction with gaze.",
+            "Test of skew: perform alternate cover testing and observe for vertical corrective movement.",
+            "Interpret the three components together and document each component, not simply HINTS negative or positive."
+          ],
+          "normal": [
+            "A peripheral pattern may include an abnormal unilateral head impulse, unidirectional nystagmus and no skew."
+          ],
+          "abnormal": [
+            "Normal head impulse, direction-changing nystagmus or skew deviation indicates a central pattern."
+          ],
+          "implications": [
+            "A central HINTS pattern requires immediate neuroimaging and stroke referral.",
+            "When trained HINTS assessment is unavailable and benign positional vertigo or postural hypotension does not explain acute vestibular syndrome, refer immediately."
+          ],
+          "urgentFeatures": [
+            "Normal head impulse in acute vestibular syndrome.",
+            "Direction-changing nystagmus.",
+            "Skew deviation."
+          ],
+          "references": [
+            "NICE-NG127"
+          ],
+          "importantLimitation": "Do not use HINTS in brief triggered episodes, isolated imbalance, presyncope, a patient without spontaneous nystagmus or a patient whose symptoms have resolved."
+        },
+        {
+          "id": "dix-hallpike",
+          "title": "Dix-Hallpike positional test",
+          "howToTest": [
+            "Use when the history suggests brief rotational vertigo triggered by head position and there is no contraindication to the manoeuvre.",
+            "Explain the test and obtain consent.",
+            "Turn the head approximately 45 degrees and move the patient rapidly from sitting to a head-hanging position with support.",
+            "Observe the eyes and ask whether familiar vertigo is reproduced.",
+            "Test the other side after symptoms settle."
+          ],
+          "normal": [
+            "No familiar vertigo and no characteristic positional nystagmus."
+          ],
+          "abnormal": [
+            "Brief latency followed by transient positional vertigo with a characteristic torsional up-beating nystagmus for posterior canal benign paroxysmal positional vertigo."
+          ],
+          "implications": [
+            "A compatible history and characteristic positional response support benign paroxysmal positional vertigo."
+          ],
+          "references": [
+            "NICE-NG127",
+            "NICE-NG249"
+          ],
+          "importantLimitation": "Avoid or modify the test when neck movement is unsafe. Persistent, atypical or purely vertical nystagmus should prompt reconsideration of a central cause."
+        },
+        {
+          "id": "neurological-and-cerebellar",
+          "title": "Neurological and cerebellar examination",
+          "howToTest": [
+            "Assess speech, facial movement, limb power and sensation.",
+            "Assess finger-nose testing, heel-shin testing and rapid alternating movements.",
+            "Assess visual fields and cranial nerves where indicated.",
+            "Look for limb dysmetria, truncal ataxia or a focal deficit."
+          ],
+          "normal": [
+            "No focal neurological deficit or limb incoordination."
+          ],
+          "abnormal": [
+            "Dysarthria, cranial nerve abnormality, weakness, sensory loss, dysmetria or truncal ataxia."
+          ],
+          "implications": [
+            "Any new focal or cerebellar finding increases concern for central pathology and requires urgent stroke assessment."
+          ],
+          "references": [
+            "NICE-NG127",
+            "NICE-NG128"
+          ]
+        },
+        {
+          "id": "gait-and-truncal-stability",
+          "title": "Gait and truncal stability",
+          "howToTest": [
+            "Observe sitting balance before standing.",
+            "Assess standing with support available and walk using the usual aid when safe.",
+            "Look for veering, broad-based gait, inability to take steps or severe truncal instability.",
+            "Compare with baseline gait and repeat after symptom treatment where appropriate."
+          ],
+          "normal": [
+            "Able to sit, stand and walk close to baseline."
+          ],
+          "abnormal": [
+            "Unable to sit unsupported, stand or walk; severe new veering; broad-based or markedly ataxic gait."
+          ],
+          "implications": [
+            "Severe gait or truncal ataxia is concerning for a central cause and makes discharge unsafe even without another focal sign."
+          ]
+        },
+        {
+          "id": "postural-blood-pressure",
+          "title": "Lying and standing blood pressure",
+          "howToTest": [
+            "Measure blood pressure lying down or seated if necessary.",
+            "Repeat after standing for at least 1 minute when safe.",
+            "Record symptoms, pulse response and the numerical change.",
+            "Repeat from lying if a seated baseline is inconclusive and symptoms remain suggestive."
+          ],
+          "normal": [
+            "No significant fall and no postural symptoms."
+          ],
+          "abnormal": [
+            "Systolic fall of at least 20 mmHg or diastolic fall of at least 10 mmHg after standing.",
+            "Reproduction of presyncope or postural dizziness."
+          ],
+          "implications": [
+            "Review volume status, medications, autonomic causes and falls risk."
+          ],
+          "references": [
+            "NICE-NG136"
+          ],
+          "importantLimitation": "A postural blood pressure fall does not exclude a simultaneous vestibular or neurological cause."
+        },
+        {
+          "id": "cardiovascular-and-ecg",
+          "title": "Cardiovascular examination and ECG",
+          "howToTest": [
+            "Assess pulse rate and regularity and perform cardiovascular examination as indicated.",
+            "Obtain a 12-lead ECG when presyncope, syncope, palpitations, exertional symptoms or cardiac risk is present.",
+            "Assess for bleeding, dehydration and medicine-related hypotension."
+          ],
+          "normal": [
+            "Regular pulse, stable blood pressure and no concerning ECG or cardiac symptoms."
+          ],
+          "abnormal": [
+            "Arrhythmia, conduction abnormality, persistent hypotension, exertional symptoms or true loss of consciousness."
+          ],
+          "implications": [
+            "Use the cardiac or syncope pathway rather than attributing symptoms to vertigo."
+          ]
+        },
+        {
+          "id": "hearing-and-ear-examination",
+          "title": "Hearing and ear examination",
+          "howToTest": [
+            "Ask about and compare hearing between ears.",
+            "Use a simple bedside hearing comparison and otoscopy where appropriate and within scope.",
+            "Assess for ear pain, discharge, vesicles or mastoid features.",
+            "Document whether hearing loss is new or baseline."
+          ],
+          "normal": [
+            "No new hearing asymmetry or acute ear findings."
+          ],
+          "abnormal": [
+            "New unilateral hearing loss, ear vesicles, significant otalgia, discharge or mastoid signs."
+          ],
+          "implications": [
+            "New hearing loss changes the differential and may require urgent ENT or stroke assessment depending on associated findings."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-examination-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Patterns should emerge from timing, triggers and examination together. A symptom label alone is insufficient.",
+      "items": [
+        {
+          "id": "posterior-canal-bppv-pattern",
+          "title": "Posterior canal benign paroxysmal positional vertigo",
+          "commonFindings": [
+            "Brief episodes, usually seconds, triggered by rolling in bed, looking up or another head-position change.",
+            "The patient is usually relatively well between episodes, although mild disequilibrium may persist.",
+            "Dix-Hallpike reproduces familiar vertigo with characteristic transient torsional up-beating nystagmus.",
+            "Neurological examination and gait are otherwise reassuring."
+          ],
+          "implications": [
+            "Supports BPPV and a locally governed canalith-repositioning and follow-up pathway."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "none",
+            "keyTriggers": [
+              "Image only when the history or examination is atypical or a central cause is suspected."
+            ],
+            "guidance": [
+              "Do not routinely arrange neuroimaging for a characteristic BPPV presentation without central features."
+            ],
+            "references": [
+              "NICE-NG127"
+            ]
+          },
+          "references": [
+            "NICE-NG127"
+          ],
+          "importantLimitation": "Head movement also worsens many central and peripheral vestibular disorders; the brief triggered pattern and characteristic positional nystagmus are important."
+        },
+        {
+          "id": "vestibular-neuritis-pattern",
+          "title": "Likely vestibular neuritis",
+          "commonFindings": [
+            "Continuous acute vestibular syndrome lasting hours to days.",
+            "Nausea, vomiting, unidirectional horizontal-torsional nystagmus and gait unsteadiness.",
+            "No new hearing loss or focal neurological deficit.",
+            "A trained HINTS examination shows a peripheral pattern."
+          ],
+          "implications": [
+            "Supports a peripheral vestibular cause only after central features have been actively assessed."
+          ],
+          "references": [
+            "NICE-NG127"
+          ],
+          "importantLimitation": "Do not diagnose vestibular neuritis solely because the patient has vertigo and vomiting."
+        },
+        {
+          "id": "labyrinthitis-pattern",
+          "title": "Peripheral vestibular syndrome with hearing symptoms",
+          "commonFindings": [
+            "Acute continuous vertigo with new hearing loss or tinnitus.",
+            "No focal neurological deficit and no central HINTS pattern when assessed by a trained clinician.",
+            "Possible recent viral illness."
+          ],
+          "implications": [
+            "Consider labyrinthitis or another audiovestibular disorder, but arrange urgent assessment for sudden hearing loss and reconsider stroke when central features are present."
+          ]
+        },
+        {
+          "id": "meniere-pattern",
+          "title": "Recurrent episodic vertigo with auditory symptoms",
+          "commonFindings": [
+            "Recurrent spontaneous episodes lasting minutes to hours.",
+            "Fluctuating hearing loss, tinnitus or aural fullness.",
+            "Neurological examination is normal between attacks."
+          ],
+          "implications": [
+            "Supports an audiovestibular referral pathway after urgent neurological and cardiac causes have been excluded."
+          ]
+        },
+        {
+          "id": "vestibular-migraine-pattern",
+          "title": "Possible vestibular migraine",
+          "commonFindings": [
+            "Recurrent episodes with migraine history, photophobia, phonophobia, aura or migrainous headache.",
+            "Symptoms may be spontaneous or visually triggered.",
+            "No persistent focal neurological deficit."
+          ],
+          "implications": [
+            "Consider after excluding stroke or TIA in a new, atypical or high-risk presentation."
+          ],
+          "importantLimitation": "A history of migraine does not protect against stroke."
+        },
+        {
+          "id": "postural-hypotension-pattern",
+          "title": "Postural dizziness or presyncope",
+          "commonFindings": [
+            "Light-headedness or impending faint on standing rather than a clear illusion of movement.",
+            "Systolic blood pressure fall of at least 20 mmHg or diastolic fall of at least 10 mmHg after standing.",
+            "Medication, volume loss, autonomic dysfunction or deconditioning may contribute."
+          ],
+          "implications": [
+            "Review causes, medication and falls risk; use standing blood pressure for subsequent management where relevant."
+          ],
+          "references": [
+            "NICE-NG136"
+          ]
+        },
+        {
+          "id": "cardiac-presyncope-pattern",
+          "title": "Possible cardiac presyncope or syncope",
+          "commonFindings": [
+            "Impending faint, true loss of consciousness, palpitations or exertional symptoms.",
+            "Abnormal pulse, ECG or structural cardiac history.",
+            "No characteristic positional vertigo or vestibular examination pattern."
+          ],
+          "implications": [
+            "Use the cardiac or transient-loss-of-consciousness pathway."
+          ]
+        },
+        {
+          "id": "central-vestibular-pattern",
+          "title": "Possible central vestibular syndrome",
+          "commonFindings": [
+            "Sudden continuous vestibular symptoms with severe gait or truncal ataxia.",
+            "Normal head impulse, direction-changing nystagmus or skew on trained HINTS assessment.",
+            "Focal neurological signs, new severe headache or neck pain may be present but can be absent."
+          ],
+          "implications": [
+            "Immediate stroke referral and neuroimaging through the receiving-hospital pathway."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "yes",
+            "preferredImaging": [
+              "Urgent brain and vascular imaging through the local stroke pathway."
+            ],
+            "urgency": "immediate",
+            "keyTriggers": [
+              "Central HINTS feature.",
+              "New focal neurological deficit.",
+              "Severe gait or truncal ataxia.",
+              "Acute vestibular syndrome without a trained HINTS assessor and no benign positional or postural explanation."
+            ],
+            "guidance": [
+              "Refer immediately through the local stroke pathway; do not delay referral for routine community imaging."
+            ],
+            "references": [
+              "NICE-NG127",
+              "NICE-NG128"
+            ]
+          },
+          "references": [
+            "NICE-NG127",
+            "NICE-NG128"
+          ]
+        },
+        {
+          "id": "medication-or-metabolic-pattern",
+          "title": "Medication or metabolic dizziness",
+          "commonFindings": [
+            "Temporal relationship to a medicine change, polypharmacy, renal impairment, alcohol or another substance.",
+            "Sedation, postural hypotension, hypoglycaemia or diffuse imbalance without a focal vestibular pattern.",
+            "Symptoms improve when the cause is corrected."
+          ],
+          "implications": [
+            "Treat the metabolic cause and arrange medication review, while excluding simultaneous neurological or cardiovascular disease."
+          ]
+        },
+        {
+          "id": "safe-community-pattern",
+          "title": "Potentially suitable for community management",
+          "commonFindings": [
+            "A coherent benign diagnosis supported by the timing, triggers and examination.",
+            "No central, cardiac or serious metabolic features.",
+            "Symptoms are controlled and the person can stand, walk, eat, drink and self-care safely.",
+            "Reliable supervision, follow-up and return precautions are available."
+          ],
+          "implications": [
+            "Document why central and cardiovascular alternatives are less likely, the functional assessment, treatment response and follow-up plan."
+          ],
+          "importantLimitation": "A benign diagnostic label does not make discharge safe when the patient remains unable to walk or retain fluids."
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "intro": "Provide advice matching the suspected syndrome and functional risk.",
+      "items": [
+        {
+          "id": "dizziness-vertigo-safety-netting",
+          "title": "Dizziness or vertigo",
+          "safetyNetting": [
+            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
+            "Seek urgent reassessment for new weakness or numbness; facial droop; speech, swallowing or vision change; a new severe headache or neck pain; inability to stand or walk; repeated vomiting or inability to drink; new hearing loss; fainting or palpitations; or symptoms that become continuous, markedly worse or different from the assessed pattern.",
+            "Avoid driving, working at height or operating machinery while symptoms could impair balance or concentration. Follow the agreed review and vestibular, falls, cardiac or stroke pathway."
+          ],
+          "importantLimitation": "Safety-netting does not make discharge appropriate when posterior circulation stroke, arrhythmia or unsafe mobility has not been adequately addressed."
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null
+  }
+}
