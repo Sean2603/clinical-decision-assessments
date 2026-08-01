@@ -18,6 +18,11 @@
           "type": "blood-panel",
           "id": "bnp-and-nt-probnp",
           "title": "BNP and NT-proBNP"
+        },
+        {
+          "type": "blood-panel-reliability",
+          "id": "bnp-and-nt-probnp",
+          "title": "BNP and NT-proBNP"
         }
       ]
     },
@@ -48,6 +53,11 @@
           "type": "blood-panel",
           "id": "urea-and-electrolytes",
           "title": "Urea and electrolytes"
+        },
+        {
+          "type": "blood-panel-reliability",
+          "id": "urea-and-electrolytes",
+          "title": "Urea and electrolytes"
         }
       ]
     },
@@ -60,9 +70,19 @@
           "title": "Red or Swollen Leg Assessment"
         },
         {
+          "type": "guideline",
+          "id": "pulmonary_embolism",
+          "title": "Pulmonary embolism"
+        },
+        {
           "type": "scoring-tool",
           "id": "perc-rule",
           "title": "PERC rule"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "two-level-dvt-wells",
+          "title": "Two-level DVT Wells"
         },
         {
           "type": "scoring-tool",
@@ -70,7 +90,17 @@
           "title": "Two-level PE Wells"
         },
         {
-          "type": "scoring-tool",
+          "type": "scoring-tool-reliability",
+          "id": "perc-rule",
+          "title": "PERC rule"
+        },
+        {
+          "type": "scoring-tool-reliability",
+          "id": "two-level-pe-wells",
+          "title": "Two-level PE Wells"
+        },
+        {
+          "type": "scoring-tool-reliability",
           "id": "two-level-dvt-wells",
           "title": "Two-level DVT Wells"
         }
@@ -81,6 +111,11 @@
       "usedBy": [
         {
           "type": "blood-panel",
+          "id": "troponin",
+          "title": "Troponin"
+        },
+        {
+          "type": "blood-panel-reliability",
           "id": "troponin",
           "title": "Troponin"
         }
@@ -113,6 +148,11 @@
           "type": "scoring-tool",
           "id": "nice-head-injury-pathway",
           "title": "NICE head-injury pathway"
+        },
+        {
+          "type": "scoring-tool-reliability",
+          "id": "nice-head-injury-pathway",
+          "title": "NICE head-injury pathway"
         }
       ]
     },
@@ -136,6 +176,16 @@
         },
         {
           "type": "scoring-tool",
+          "id": "curb-65",
+          "title": "CURB-65"
+        },
+        {
+          "type": "scoring-tool-reliability",
+          "id": "crb-65",
+          "title": "CRB-65"
+        },
+        {
+          "type": "scoring-tool-reliability",
           "id": "curb-65",
           "title": "CURB-65"
         }
@@ -166,11 +216,21 @@
       "usedBy": [
         {
           "type": "scoring-tool",
+          "id": "centor-criteria",
+          "title": "Centor criteria"
+        },
+        {
+          "type": "scoring-tool",
           "id": "feverpain",
           "title": "FeverPAIN"
         },
         {
-          "type": "scoring-tool",
+          "type": "scoring-tool-reliability",
+          "id": "feverpain",
+          "title": "FeverPAIN"
+        },
+        {
+          "type": "scoring-tool-reliability",
           "id": "centor-criteria",
           "title": "Centor criteria"
         }
