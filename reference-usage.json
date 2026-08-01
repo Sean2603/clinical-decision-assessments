@@ -2,6 +2,16 @@
   "generated": true,
   "references": [
     {
+      "referenceId": "NICE-CG147",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG106",
       "usedBy": [
         {
@@ -22,6 +32,16 @@
       ]
     },
     {
+      "referenceId": "NICE-NG141",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG148",
       "usedBy": [
         {
@@ -34,6 +54,11 @@
     {
       "referenceId": "NICE-NG158",
       "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        },
         {
           "type": "scoring-tool",
           "id": "perc-rule",
@@ -58,6 +83,26 @@
           "type": "blood-panel",
           "id": "troponin",
           "title": "Troponin"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG19",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG219",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
         }
       ]
     },

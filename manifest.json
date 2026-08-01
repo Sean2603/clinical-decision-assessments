@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "contentVersion": "1.1.15",
-  "updatedAt": "2026-07-31T12:26:30Z",
+  "contentVersion": "1.1.16",
+  "updatedAt": "2026-08-01T15:39:18Z",
   "minimumAppVersion": "0.17.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "36bec8c823b0182b79bdf2ee040d53cf0f74eae201b309a4eb88046f421ffc83"
+    "sha256": "a1ae0c9b9d25b68f3ce582519ab748f951c1279c07f43ceddd40d00fa338256b"
   },
   "clinicalReliability": {
     "file": "clinical_reliability/clinical-reliability.json",
@@ -147,6 +147,15 @@
       "file": "assessments/paediatric.json",
       "schema": "schema/assessment-schema.json",
       "sha256": "d53bbe7b435dcac21fdcd4e298d603749c0dc0bf81bdab6bb0ac337837f75fcc",
+      "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
+    },
+    {
+      "id": "red-leg-assessment",
+      "title": "Red or Swollen Leg Assessment",
+      "version": "0.1.0",
+      "file": "assessments/red-leg-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "ef0360f02ebde14941cc71fd319f2b3b4a2dc2b21ff827e774dfb8575fe3ca54",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {
