@@ -901,7 +901,7 @@
           "imagingGuidance": {
             "routineImaging": "no",
             "preferredImaging": [],
-            "urgency": "conditional",
+            "urgency": "urgent",
             "keyTriggers": [
               "Clinical features suggesting acute heart failure, renal deterioration, DVT or another acute cause."
             ],
