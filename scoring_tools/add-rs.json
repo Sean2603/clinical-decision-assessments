@@ -1,0 +1,101 @@
+{
+  "id": "add-rs",
+  "title": "ADD-RS",
+  "subtitle": "Acute aortic syndrome risk categories",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Risk stratification — suspected acute aortic syndrome",
+  "summary": "ADD-RS counts high-risk condition, pain and examination categories in suspected acute aortic syndrome.",
+  "population": [
+    "People with suspected acute aortic syndrome."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "high-risk-condition",
+      "label": "High-risk condition: Marfan or other connective-tissue disease, family history of aortic disease, known aortic valve disease, recent aortic manipulation, or known thoracic aortic aneurysm",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "high-risk-pain",
+      "label": "High-risk pain: abrupt onset, severe intensity, or ripping/tearing quality",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "high-risk-examination",
+      "label": "High-risk examination: pulse deficit or systolic BP differential, focal neurological deficit with pain, new aortic regurgitation murmur, or hypotension/shock",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "zero",
+      "minimumScore": 0,
+      "maximumScore": 0,
+      "label": "No risk category identified",
+      "interpretation": [
+        "Acute aortic syndrome is not excluded when clinical suspicion persists."
+      ],
+      "actions": []
+    },
+    {
+      "id": "one",
+      "minimumScore": 1,
+      "maximumScore": 1,
+      "label": "One risk category",
+      "interpretation": [
+        "Follow an acute aortic syndrome investigation pathway."
+      ],
+      "actions": []
+    },
+    {
+      "id": "multiple",
+      "minimumScore": 2,
+      "maximumScore": 3,
+      "label": "Multiple risk categories",
+      "interpretation": [
+        "Urgent emergency assessment and definitive imaging are required."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Do not delay emergency conveyance or CT angiography where clinical concern remains."
+  ],
+  "limitations": [
+    "This tool does not independently rule out dissection."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "AddRsScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

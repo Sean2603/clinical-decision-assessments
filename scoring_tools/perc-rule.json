@@ -1,0 +1,180 @@
+{
+  "id": "perc-rule",
+  "title": "PERC rule",
+  "subtitle": "PE rule-out in selected very-low-risk adults",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Pulmonary embolism rule-out criterion",
+  "summary": "PERC is used only after pulmonary embolism has already been judged clinically very unlikely and a credible alternative diagnosis is more likely.",
+  "population": [
+    "Adults with an estimated PE pre-test probability below about 15%.",
+    "A credible alternative diagnosis is more likely than PE."
+  ],
+  "exclusions": [
+    "Do not apply when PE remains a realistic diagnosis.",
+    "Do not use to assess other causes of chest pain or dyspnoea."
+  ],
+  "criteria": [
+    {
+      "id": "low-clinical-probability",
+      "label": "PE is already judged clinically very unlikely",
+      "description": "Estimated pre-test probability below about 15%, with no unresolved features making PE a realistic diagnosis.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "alternative-diagnosis-more-likely",
+      "label": "A credible alternative diagnosis is more likely",
+      "description": "For example chest-wall pain reproduced by focal palpation or movement, without unexplained dyspnoea, syncope, hypoxia or unilateral leg findings.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "age-50-or-older",
+      "label": "Age 50 years or older",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "pulse-100-or-higher",
+      "label": "Pulse 100/min or higher",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "oxygen-saturation-below-95",
+      "label": "Oxygen saturation below 95%",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "unilateral-leg-swelling",
+      "label": "Unilateral leg swelling",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "haemoptysis",
+      "label": "Haemoptysis",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "recent-surgery-or-trauma",
+      "label": "Recent surgery or trauma requiring hospitalisation",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "previous-dvt-or-pe",
+      "label": "Previous DVT or PE",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "exogenous-oestrogen",
+      "label": "Exogenous oestrogen use",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "not-applicable",
+      "minimumScore": -99,
+      "maximumScore": -1,
+      "label": "PERC not yet applicable",
+      "interpretation": [
+        "Confirm that PE is already clinically very unlikely and that a credible alternative diagnosis is more likely."
+      ],
+      "actions": []
+    },
+    {
+      "id": "negative",
+      "minimumScore": 0,
+      "maximumScore": 0,
+      "label": "PERC negative",
+      "interpretation": [
+        "Within a correctly selected low-risk population, PE is sufficiently unlikely that further PE testing is generally not required. PE is not impossible, and overall disposition must consider other diagnoses."
+      ],
+      "actions": []
+    },
+    {
+      "id": "positive",
+      "minimumScore": 1,
+      "maximumScore": 8,
+      "label": "PERC positive",
+      "interpretation": [
+        "PE cannot be ruled out using PERC. This does not diagnose PE; continue through the appropriate PE assessment pathway."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "PERC addresses pulmonary embolism only.",
+    "A normal ECG does not rule out NSTEMI.",
+    "Other serious causes of chest pain must be assessed separately."
+  ],
+  "limitations": [
+    "Eligibility is a prerequisite and is not part of the numerical score.",
+    "All eight PERC criteria must be negative for a negative result."
+  ],
+  "calculationStrategy": "custom",
+  "referenceIds": [
+    "NICE-NG158"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/perc_screen.dart",
+    "currentScreen": "PercScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

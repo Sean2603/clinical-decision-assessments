@@ -1,0 +1,41 @@
+{
+  "id": "canadian-syncope-risk-score",
+  "title": "Canadian Syncope Risk Score",
+  "subtitle": "30-day serious outcome risk after ED assessment",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "pathway-reference",
+  "typeLabel": "Hospital or imaging pathway",
+  "summary": "The final ED diagnosis and troponin are part of the validated score, so a complete prehospital calculation is not possible.",
+  "population": [
+    "Clinical features, systolic BP, ECG axis/QRS/QTc measurements, troponin and the final ED diagnostic impression."
+  ],
+  "exclusions": [
+    "Do not enter assumed normal results."
+  ],
+  "criteria": [],
+  "results": [],
+  "overrides": [
+    "Follow the applicable NICE, local emergency department or specialty pathway."
+  ],
+  "limitations": [
+    "The final ED diagnosis and troponin are part of the validated score, so a complete prehospital calculation is not possible."
+  ],
+  "calculationStrategy": "none",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "HospitalToolReferenceScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

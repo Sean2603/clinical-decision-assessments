@@ -1,0 +1,134 @@
+{
+  "id": "ottawa-ankle-and-foot-rules",
+  "title": "Ottawa ankle and foot rules",
+  "subtitle": "Need for radiography after ankle or midfoot injury",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Imaging decision rule",
+  "summary": "Determines whether ankle or foot radiography is indicated after an acute ankle or midfoot injury.",
+  "population": [
+    "People over 5 years with acute ankle or midfoot injury when fracture is being considered."
+  ],
+  "exclusions": [
+    "Does not assess soft-tissue injury or safe mobility.",
+    "Use clinical judgement where examination is unreliable."
+  ],
+  "criteria": [
+    {
+      "id": "pain-malleolar-zone",
+      "label": "Pain in the malleolar zone",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "lateral-malleolus-tenderness",
+      "label": "Tenderness at posterior edge or tip of lateral malleolus",
+      "description": "Palpate the distal 6 cm, not only the anterior ligament area.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "medial-malleolus-tenderness",
+      "label": "Tenderness at posterior edge or tip of medial malleolus",
+      "description": "Palpate the distal 6 cm.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "pain-midfoot-zone",
+      "label": "Pain in the midfoot zone",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "fifth-metatarsal-tenderness",
+      "label": "Tenderness at base of fifth metatarsal",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "navicular-tenderness",
+      "label": "Navicular tenderness",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "unable-four-steps",
+      "label": "Unable to take 4 steps immediately after injury and during assessment",
+      "description": "Four weight-bearing steps are required, even if limping.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "no-xray",
+      "minimumScore": 0,
+      "maximumScore": 0,
+      "label": "No radiograph indicated",
+      "interpretation": [
+        "No ankle or foot X-ray is indicated by the rule when the relevant zone and tenderness/weight-bearing combinations are absent."
+      ],
+      "actions": []
+    },
+    {
+      "id": "xray-indicated",
+      "minimumScore": 1,
+      "maximumScore": 2,
+      "label": "Radiograph indicated",
+      "interpretation": [
+        "An ankle X-ray and/or foot X-ray is indicated according to the zone-specific criteria."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Escalate for deformity, open injury, absent or reduced distal pulses, new sensory or motor deficit, threatened skin, suspected Achilles rupture, suspected syndesmotic injury, or inability to mobilise safely."
+  ],
+  "limitations": [
+    "The ankle and foot pathways are calculated separately using zone-specific logic."
+  ],
+  "calculationStrategy": "custom",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "OttawaAnkleScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

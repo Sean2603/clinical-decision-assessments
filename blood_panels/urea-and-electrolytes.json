@@ -1,0 +1,175 @@
+{
+  "id": "urea-and-electrolytes",
+  "title": "Urea and electrolytes",
+  "subtitle": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
+  "introduction": "Interpret electrolytes with symptoms, fluid status, medication, urine output and previous results. Creatinine and eGFR must be interpreted against baseline; eGFR is unreliable during rapidly changing kidney function.",
+  "sections": [
+    {
+      "id": "electrolytes",
+      "title": "Electrolytes",
+      "rows": [
+        {
+          "id": "sodium",
+          "name": "Sodium",
+          "unit": "",
+          "referenceRange": "Approx. 133–146 mmol/L",
+          "lowInterpretation": [
+            "Hyponatraemia. Confirm chronicity and assess volume status, glucose, serum osmolality, medication, heart/liver/renal disease and SIADH causes."
+          ],
+          "highInterpretation": [
+            "Usually free-water deficit from reduced intake or excess loss; less commonly sodium gain."
+          ],
+          "notes": []
+        },
+        {
+          "id": "potassium",
+          "name": "Potassium",
+          "unit": "",
+          "referenceRange": "Approx. 3.5–5.3 mmol/L",
+          "lowInterpretation": [
+            "GI or renal losses, diuretics, insulin or intracellular shift. Can cause weakness and arrhythmia."
+          ],
+          "highInterpretation": [
+            "AKI/CKD, ACE inhibitor or ARB, potassium-sparing diuretic, trimethoprim, tissue breakdown or acidosis. Exclude haemolysed sample where appropriate."
+          ],
+          "notes": []
+        },
+        {
+          "id": "bicarbonate",
+          "name": "Bicarbonate",
+          "unit": "",
+          "referenceRange": "Approx. 22–29 mmol/L",
+          "lowInterpretation": [
+            "Metabolic acidosis or respiratory alkalosis. Consider sepsis, renal failure, DKA, diarrhoea, lactate or toxins."
+          ],
+          "highInterpretation": [
+            "Metabolic alkalosis or compensation for chronic respiratory acidosis; consider vomiting, diuretics or chronic hypercapnia."
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "id": "renal-markers",
+      "title": "Renal markers",
+      "rows": [
+        {
+          "id": "urea",
+          "name": "Urea",
+          "unit": "",
+          "referenceRange": "Approx. 2.5–7.8 mmol/L",
+          "lowInterpretation": [
+            "Low protein intake, liver dysfunction, pregnancy or excess fluid."
+          ],
+          "highInterpretation": [
+            "Reduced renal clearance, dehydration, GI bleeding, catabolism, corticosteroids or high protein intake. Interpret beside creatinine."
+          ],
+          "notes": []
+        },
+        {
+          "id": "creatinine",
+          "name": "Creatinine",
+          "unit": "",
+          "referenceRange": "Depends on age, sex and muscle mass",
+          "lowInterpretation": [
+            "Often low muscle mass; usually not kidney failure."
+          ],
+          "highInterpretation": [
+            "Reduced filtration, but assess change from baseline. AKI can occur with a creatinine still inside the stated reference range."
+          ],
+          "notes": []
+        },
+        {
+          "id": "egfr",
+          "name": "eGFR",
+          "unit": "",
+          "referenceRange": "≥90 mL/min/1.73 m² is G1 when no other kidney-damage marker exists",
+          "lowInterpretation": [
+            "May reflect CKD or AKI. CKD requires persistence for at least 3 months or another marker of kidney damage. Do not stage an acute change using eGFR alone."
+          ],
+          "highInterpretation": [
+            "Usually reported as ≥90; a high estimate can be misleading in low muscle mass."
+          ],
+          "notes": []
+        }
+      ]
+    },
+    {
+      "id": "aki-detection-from-creatinine",
+      "title": "AKI detection from creatinine",
+      "rows": [
+        {
+          "id": "stage-1",
+          "name": "Stage 1",
+          "unit": "",
+          "referenceRange": "Rise ≥26 micromol/L within 48 h, or 1.5–1.9 × baseline within 7 days",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Treat as clinically important AKI and identify cause, medication risks, fluid status and complications."
+          ],
+          "notes": []
+        },
+        {
+          "id": "stage-2",
+          "name": "Stage 2",
+          "unit": "",
+          "referenceRange": "Creatinine 2.0–2.9 × baseline",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "More substantial AKI; usually requires urgent clinical assessment and close monitoring."
+          ],
+          "notes": []
+        },
+        {
+          "id": "stage-3",
+          "name": "Stage 3",
+          "unit": "",
+          "referenceRange": "Creatinine ≥3 × baseline, or ≥354 micromol/L with acute rise ≥44 micromol/L, or renal replacement therapy",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Severe AKI requiring urgent hospital-level assessment."
+          ],
+          "notes": []
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Potassium ≥6.0 mmol/L, rapidly rising potassium, ECG change, weakness, bradycardia or arrhythmia. Local thresholds may mandate emergency treatment at a lower result.",
+    "Sodium <125 mmol/L with confusion, seizure, reduced consciousness, severe headache or vomiting; or a rapid recent fall.",
+    "Sodium ≥160 mmol/L, neurological symptoms, marked dehydration or inability to access water.",
+    "AKI with oliguria (urine output <0.5 mL/kg/hour), pulmonary oedema (orthopnoea, bibasal crackles, hypoxia), hypotension, sepsis, severe acidosis or uraemic symptoms.",
+    "Creatinine rise ≥26 micromol/L within 48 hours or ≥50% above baseline within 7 days meets AKI criteria even if eGFR is still displayed."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [
+    "NICE-NG148"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/blood_interpretation_screen.dart",
+    "currentScreen": "Urea and electrolytes",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

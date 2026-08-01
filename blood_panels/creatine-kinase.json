@@ -1,0 +1,64 @@
+{
+  "id": "creatine-kinase",
+  "title": "Creatine kinase",
+  "subtitle": "Muscle injury, rhabdomyolysis and renal-risk features",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Muscle injury, rhabdomyolysis and renal-risk features",
+  "introduction": "Interpret CK against the laboratory upper limit, muscle mass, exercise, trauma, seizure, medication and renal function. CK can continue rising for hours after injury; repeat testing may be necessary.",
+  "sections": [
+    {
+      "id": "interpretation",
+      "title": "Interpretation",
+      "rows": [
+        {
+          "id": "raised-ck",
+          "name": "Raised CK",
+          "unit": "",
+          "referenceRange": "Rhabdomyolysis often defined as >5 × upper limit of normal or >1,000 U/L",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Causes include prolonged immobilisation, crush injury, seizure, hyperthermia, extreme exercise, ischaemia, infection, inflammatory myopathy, statins or toxins. Risk depends on CK trend, creatinine, potassium, phosphate, calcium, hydration and urine output."
+          ]
+        },
+        {
+          "id": "marked-elevation",
+          "name": "Marked elevation",
+          "unit": "",
+          "referenceRange": "CK >5,000 U/L often indicates higher AKI risk",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "This is not an absolute treatment threshold. AKI and dangerous hyperkalaemia can occur at lower values, particularly with dehydration, sepsis or baseline renal disease."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Dark urine, oliguria, severe muscle pain/swelling, profound weakness or compartment-type pain.",
+    "Raised CK with potassium elevation, creatinine rise, metabolic acidosis or ECG changes.",
+    "Hyperthermia, prolonged seizure, crush injury or prolonged immobilisation with systemic illness."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Creatine kinase",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "id": "heart-score",
+  "title": "HEART score",
+  "subtitle": "ED ACS risk score requiring troponin",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "ED chest-pain risk score — requires troponin",
+  "summary": "HEART combines history, ECG, age, risk factors and troponin within an emergency-department chest-pain pathway.",
+  "population": [
+    "Patients undergoing a validated ED chest-pain and troponin pathway."
+  ],
+  "exclusions": [
+    "Do not calculate without a valid troponin result."
+  ],
+  "criteria": [
+    {
+      "id": "history",
+      "label": "History",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "slightly-suspicious",
+          "label": "Slightly suspicious",
+          "score": 0
+        },
+        {
+          "id": "moderately-suspicious",
+          "label": "Moderately suspicious",
+          "score": 1
+        },
+        {
+          "id": "highly-suspicious",
+          "label": "Highly suspicious",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "ecg",
+      "label": "ECG",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "normal",
+          "label": "Normal",
+          "score": 0
+        },
+        {
+          "id": "non-specific-repolarisation-disturbance",
+          "label": "Non-specific repolarisation disturbance",
+          "score": 1
+        },
+        {
+          "id": "significant-st-segment-depression",
+          "label": "Significant ST-segment depression",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "under-45-years",
+          "label": "Under 45 years",
+          "score": 0
+        },
+        {
+          "id": "45-64-years",
+          "label": "45–64 years",
+          "score": 1
+        },
+        {
+          "id": "65-years-or-older",
+          "label": "65 years or older",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "risk-factors",
+      "label": "Risk factors",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "no-recognised-risk-factors",
+          "label": "No recognised risk factors",
+          "score": 0
+        },
+        {
+          "id": "1-2-risk-factors",
+          "label": "1–2 risk factors",
+          "score": 1
+        },
+        {
+          "id": "at-least-3-risk-factors-or-known-atherosclerotic-disease",
+          "label": "At least 3 risk factors or known atherosclerotic disease",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "troponin",
+      "label": "Troponin relative to assay upper reference limit",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "at-or-below-normal-limit",
+          "label": "At or below normal limit",
+          "score": 0
+        },
+        {
+          "id": "1-3-times-normal-limit",
+          "label": "1–3 times normal limit",
+          "score": 1
+        },
+        {
+          "id": "more-than-3-times-normal-limit",
+          "label": "More than 3 times normal limit",
+          "score": 2
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "low",
+      "minimumScore": 0,
+      "maximumScore": 3,
+      "label": "Conventionally low risk",
+      "interpretation": [
+        "This applies only within an ED troponin pathway and is not automatic authority for prehospital discharge."
+      ],
+      "actions": []
+    },
+    {
+      "id": "intermediate",
+      "minimumScore": 4,
+      "maximumScore": 6,
+      "label": "Intermediate risk",
+      "interpretation": [
+        "Further hospital assessment is required."
+      ],
+      "actions": []
+    },
+    {
+      "id": "high",
+      "minimumScore": 7,
+      "maximumScore": 10,
+      "label": "High risk",
+      "interpretation": [
+        "Urgent hospital management is required."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "A normal ECG and low clinical impression do not substitute for troponin."
+  ],
+  "limitations": [
+    "Not validated as a prehospital discharge score."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "HeartScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

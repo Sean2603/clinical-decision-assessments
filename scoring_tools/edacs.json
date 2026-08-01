@@ -1,0 +1,41 @@
+{
+  "id": "edacs",
+  "title": "EDACS",
+  "subtitle": "ED accelerated chest-pain pathway",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "pathway-reference",
+  "typeLabel": "Hospital or imaging pathway",
+  "summary": "EDACS is not valid from history and ECG alone. The app will not output a discharge interpretation without the complete local troponin pathway.",
+  "population": [
+    "Age, sex, coronary risk factors, symptom characteristics, ECG and serial troponin results within a validated EDACS accelerated diagnostic pathway."
+  ],
+  "exclusions": [
+    "Do not enter assumed normal results."
+  ],
+  "criteria": [],
+  "results": [],
+  "overrides": [
+    "Follow the applicable NICE, local emergency department or specialty pathway."
+  ],
+  "limitations": [
+    "EDACS is not valid from history and ECG alone. The app will not output a discharge interpretation without the complete local troponin pathway."
+  ],
+  "calculationStrategy": "none",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "HospitalToolReferenceScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

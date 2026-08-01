@@ -1,0 +1,110 @@
+{
+  "id": "glucose-ketones-and-lactate",
+  "title": "Glucose, ketones and lactate",
+  "subtitle": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
+  "introduction": "Interpret glucose with symptoms, diabetes type, medication, food intake, illness and ketones. SGLT2 inhibitors can produce euglycaemic DKA: ketoacidosis with glucose that is normal or only mildly raised.",
+  "sections": [
+    {
+      "id": "glucose",
+      "title": "Glucose",
+      "rows": [
+        {
+          "id": "hypoglycaemia",
+          "name": "Hypoglycaemia",
+          "unit": "",
+          "referenceRange": "Usually glucose <4.0 mmol/L",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Treat promptly when symptomatic or below 4.0 mmol/L. Examples include sweating, tremor, palpitations, hunger, behavioural change, confusion, seizure or reduced consciousness. Recheck after treatment and identify the cause."
+          ]
+        },
+        {
+          "id": "marked-hyperglycaemia",
+          "name": "Marked hyperglycaemia",
+          "unit": "",
+          "referenceRange": "No single value diagnoses DKA or HHS",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Assess ketones, pH/bicarbonate, osmolality, hydration, cognition and precipitating illness. Polyuria, polydipsia, vomiting, abdominal pain, deep breathing, drowsiness or shock require urgent assessment."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ketones-and-hyperglycaemic-emergencies",
+      "title": "Ketones and hyperglycaemic emergencies",
+      "rows": [
+        {
+          "id": "blood-ketones",
+          "name": "Blood ketones",
+          "unit": "",
+          "referenceRange": "<0.6 normal; 0.6–1.5 raised; 1.6–2.9 high; ≥3.0 mmol/L strongly concerning for DKA",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "DKA is supported by ketonaemia ≥3.0 mmol/L with acidosis (venous pH <7.3 or bicarbonate <15 mmol/L) and diabetes/hyperglycaemia. Do not dismiss DKA because glucose is below 11 mmol/L, particularly with SGLT2 inhibitor use, pregnancy or reduced food intake."
+          ]
+        },
+        {
+          "id": "possible-hhs",
+          "name": "Possible HHS",
+          "unit": "",
+          "referenceRange": "Often glucose ≥30 mmol/L and calculated osmolality ≥320 mOsm/kg",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Look for profound dehydration, reduced cognition, focal neurology, seizures, hypotension and minimal ketonaemia. Mixed DKA/HHS can occur."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lactate",
+      "title": "Lactate",
+      "rows": [
+        {
+          "id": "raised-lactate",
+          "name": "Raised lactate",
+          "unit": "",
+          "referenceRange": "2.0–3.9 mmol/L is abnormal; ≥4.0 mmol/L is a major abnormality",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider hypoperfusion, sepsis, seizure, severe work of breathing, beta-agonists, liver dysfunction, metformin accumulation, toxins or sampling delay. A normal lactate does not exclude sepsis or shock."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Glucose below 4.0 mmol/L with confusion, seizure, reduced consciousness or failure to respond to treatment.",
+    "Ketones ≥3.0 mmol/L, or ketones ≥1.5 mmol/L with vomiting, abdominal pain, deep breathing, drowsiness or clinical dehydration.",
+    "Suspected euglycaemic DKA in an unwell patient taking an SGLT2 inhibitor, even when glucose is not markedly raised.",
+    "Lactate ≥4.0 mmol/L, a rising lactate, hypotension, mottled skin, reduced urine output or new confusion."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Glucose, ketones and lactate",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

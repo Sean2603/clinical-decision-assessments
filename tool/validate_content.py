@@ -8,9 +8,31 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-
 ROOT = Path(__file__).resolve().parent.parent
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
+
+COLLECTIONS = {
+    "assessment": {
+        "directory": ROOT / "assessments",
+        "schema": ROOT / "schema" / "assessment-schema.json",
+        "versionField": "version",
+    },
+    "guideline": {
+        "directory": ROOT / "guidelines",
+        "schema": ROOT / "schema" / "guideline-schema.json",
+        "versionField": "contentVersion",
+    },
+    "scoring-tool": {
+        "directory": ROOT / "scoring_tools",
+        "schema": ROOT / "schema" / "scoring-tool-schema.json",
+        "versionField": "version",
+    },
+    "blood-panel": {
+        "directory": ROOT / "blood_panels",
+        "schema": ROOT / "schema" / "blood-panel-schema.json",
+        "versionField": "version",
+    },
+}
 
 
 def load_json(path: Path, errors: list[str]) -> dict | None:
@@ -29,8 +51,7 @@ def load_json(path: Path, errors: list[str]) -> dict | None:
 def version_parts(value: str) -> tuple[int, int, int]:
     if not SEMVER.fullmatch(value):
         raise ValueError(f"Invalid semantic version: {value!r}")
-    major, minor, patch = value.split(".")
-    return int(major), int(minor), int(patch)
+    return tuple(int(part) for part in value.split("."))
 
 
 def git_output(*args: str) -> str:
@@ -64,206 +85,228 @@ def load_json_from_git(ref: str, relative_path: str) -> dict | None:
         return None
 
 
-def collect_reference_ids(assessment: dict) -> set[str]:
-    reference_ids = set(assessment.get("references", []))
-
-    for section in assessment.get("sections", []):
+def assessment_reference_ids(value: dict) -> set[str]:
+    reference_ids = set(value.get("references", []))
+    for section in value.get("sections", []):
         for item in section.get("items", []):
             reference_ids.update(item.get("references", []))
             imaging = item.get("imagingGuidance")
             if isinstance(imaging, dict):
                 reference_ids.update(imaging.get("references", []))
-
     return reference_ids
+
+
+def document_reference_ids(kind: str, value: dict) -> set[str]:
+    if kind == "assessment":
+        return assessment_reference_ids(value)
+    if kind == "guideline":
+        return set(value.get("references", []))
+    return set(value.get("referenceIds", []))
+
+
+def validate_collection(
+    kind: str,
+    settings: dict,
+    known_reference_ids: set[str],
+    reliability_by_category: dict[str, dict[str, dict]],
+    errors: list[str],
+) -> dict[str, dict]:
+    schema = load_json(settings["schema"], errors)
+    if schema is None:
+        return {}
+
+    validator = Draft202012Validator(
+        schema,
+        format_checker=FormatChecker(),
+    )
+    paths = sorted(settings["directory"].glob("*.json"))
+    if not paths:
+        errors.append(
+            f"No JSON files found in {settings['directory'].relative_to(ROOT)}."
+        )
+        return {}
+
+    documents: dict[str, dict] = {}
+    for path in paths:
+        value = load_json(path, errors)
+        if value is None:
+            continue
+
+        item_id = value.get("id")
+        if not isinstance(item_id, str) or not item_id:
+            errors.append(f"{path}: missing valid id.")
+            continue
+        if item_id in documents:
+            errors.append(f"Duplicate {kind} id: {item_id}.")
+        documents[item_id] = value
+
+        for validation_error in sorted(
+            validator.iter_errors(value),
+            key=lambda item: [str(part) for part in item.absolute_path],
+        ):
+            location = ".".join(
+                str(part) for part in validation_error.absolute_path
+            )
+            suffix = f":{location}" if location else ""
+            errors.append(f"{path}{suffix}: {validation_error.message}")
+
+        missing = sorted(
+            document_reference_ids(kind, value) - known_reference_ids
+        )
+        if missing:
+            errors.append(
+                f"{path}: unknown reference IDs: {', '.join(missing)}."
+            )
+
+        if kind in {"scoring-tool", "blood-panel"}:
+            reliability = reliability_by_category[kind].get(item_id)
+            if reliability is None:
+                errors.append(
+                    f"{path}: no matching clinical reliability item."
+                )
+            elif reliability.get("displayName") != value.get("title"):
+                errors.append(
+                    f"{path}: title does not match reliability displayName "
+                    f"({value.get('title')!r} != "
+                    f"{reliability.get('displayName')!r})."
+                )
+            else:
+                if reliability.get("contentVersion") != value.get("version"):
+                    errors.append(
+                        f"{path}: version does not match reliability "
+                        f"contentVersion ({value.get('version')!r} != "
+                        f"{reliability.get('contentVersion')!r})."
+                    )
+                definition_references = set(value.get("referenceIds", []))
+                reliability_references = set(
+                    reliability.get("referenceIds", [])
+                )
+                if definition_references != reliability_references:
+                    errors.append(
+                        f"{path}: referenceIds do not match clinical "
+                        "reliability metadata."
+                    )
+
+    return documents
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--base-ref",
-        help="Base Git ref used to enforce assessment version increases.",
+        help="Base Git ref used to enforce content version increases.",
     )
     args = parser.parse_args()
-
     errors: list[str] = []
 
-    schema = load_json(
-        ROOT / "schema" / "assessment-schema.json",
-        errors,
-    )
-    guideline_schema = load_json(
-        ROOT / "schema" / "guideline-schema.json",
-        errors,
-    )
     references_document = load_json(
         ROOT / "references" / "references.json",
         errors,
     )
-
-    if schema is None or guideline_schema is None or references_document is None:
+    reliability_document = load_json(
+        ROOT / "clinical_reliability" / "clinical-reliability.json",
+        errors,
+    )
+    if references_document is None or reliability_document is None:
         for error in errors:
             print(f"ERROR: {error}")
         return 1
 
-    reference_items = references_document.get("references", [])
     reference_ids = [
         item.get("id")
-        for item in reference_items
+        for item in references_document.get("references", [])
         if isinstance(item, dict)
     ]
-
     if any(not isinstance(item, str) or not item for item in reference_ids):
         errors.append("Every reference must have a non-empty string id.")
-
     if len(reference_ids) != len(set(reference_ids)):
         errors.append("Duplicate reference IDs exist.")
+    known_reference_ids = {
+        item for item in reference_ids if isinstance(item, str) and item
+    }
 
-    known_reference_ids = set(reference_ids)
-    validator = Draft202012Validator(
-        schema,
-        format_checker=FormatChecker(),
-    )
-
-    assessment_paths = sorted((ROOT / "assessments").glob("*.json"))
-    if not assessment_paths:
-        errors.append("No assessment JSON files were found.")
-
-    current_assessments: dict[str, dict] = {}
-
-    for assessment_path in assessment_paths:
-        assessment = load_json(assessment_path, errors)
-        if assessment is None:
+    reliability_by_category = {
+        "scoring-tool": {},
+        "blood-panel": {},
+    }
+    for item in reliability_document.get("items", []):
+        if not isinstance(item, dict):
             continue
-
-        assessment_id = assessment.get("id")
-        if not isinstance(assessment_id, str) or not assessment_id:
-            errors.append(f"{assessment_path}: missing valid id.")
-            continue
-
-        if assessment_id in current_assessments:
-            errors.append(f"Duplicate assessment id: {assessment_id}.")
-        current_assessments[assessment_id] = assessment
-
-        try:
-            version_parts(assessment["version"])
-        except (KeyError, ValueError) as exc:
-            errors.append(f"{assessment_path}: {exc}")
-
-        for validation_error in sorted(
-            validator.iter_errors(assessment),
-            key=lambda item: [str(part) for part in item.absolute_path],
+        category = item.get("category")
+        item_id = item.get("id")
+        if (
+            category in reliability_by_category
+            and isinstance(item_id, str)
         ):
-            location = ".".join(
-                str(part) for part in validation_error.absolute_path
-            )
-            suffix = f":{location}" if location else ""
-            errors.append(
-                f"{assessment_path}{suffix}: "
-                f"{validation_error.message}"
-            )
+            reliability_by_category[category][item_id] = item
 
-        missing_references = sorted(
-            collect_reference_ids(assessment) - known_reference_ids
+    documents_by_kind: dict[str, dict[str, dict]] = {}
+    for kind, settings in COLLECTIONS.items():
+        documents_by_kind[kind] = validate_collection(
+            kind,
+            settings,
+            known_reference_ids,
+            reliability_by_category,
+            errors,
         )
-        if missing_references:
-            errors.append(
-                f"{assessment_path}: unknown reference IDs: "
-                f"{', '.join(missing_references)}."
-            )
 
-
-    guideline_validator = Draft202012Validator(
-        guideline_schema,
-        format_checker=FormatChecker(),
-    )
-    guideline_paths = sorted((ROOT / "guidelines").glob("*.json"))
-    if not guideline_paths:
-        errors.append("No guideline JSON files were found.")
-
-    current_guidelines: dict[str, dict] = {}
-    for guideline_path in guideline_paths:
-        guideline = load_json(guideline_path, errors)
-        if guideline is None:
-            continue
-        guideline_id = guideline.get("id")
-        if not isinstance(guideline_id, str) or not guideline_id:
-            errors.append(f"{guideline_path}: missing valid id.")
-            continue
-        if guideline_id in current_guidelines:
-            errors.append(f"Duplicate guideline id: {guideline_id}.")
-        current_guidelines[guideline_id] = guideline
-
-        try:
-            version_parts(guideline["contentVersion"])
-        except (KeyError, ValueError) as exc:
-            errors.append(f"{guideline_path}: {exc}")
-
-        for validation_error in sorted(
-            guideline_validator.iter_errors(guideline),
-            key=lambda item: [str(part) for part in item.absolute_path],
-        ):
-            location = ".".join(
-                str(part) for part in validation_error.absolute_path
-            )
-            suffix = f":{location}" if location else ""
-            errors.append(
-                f"{guideline_path}{suffix}: {validation_error.message}"
-            )
-
-        missing_references = sorted(
-            set(guideline.get("references", [])) - known_reference_ids
+    for category in ("scoring-tool", "blood-panel"):
+        missing_definitions = sorted(
+            set(reliability_by_category[category])
+            - set(documents_by_kind[category])
         )
-        if missing_references:
+        if missing_definitions:
             errors.append(
-                f"{guideline_path}: unknown reference IDs: "
-                f"{', '.join(missing_references)}."
+                f"{category} reliability items without definitions: "
+                f"{', '.join(missing_definitions)}."
             )
 
     if args.base_ref:
         changed = changed_files(args.base_ref)
-
+        folder_to_kind = {
+            "assessments": "assessment",
+            "guidelines": "guideline",
+            "scoring_tools": "scoring-tool",
+            "blood_panels": "blood-panel",
+        }
         for relative_path in sorted(changed):
-            is_assessment = (
-                relative_path.startswith("assessments/")
-                and relative_path.endswith(".json")
-            )
-            is_guideline = (
-                relative_path.startswith("guidelines/")
-                and relative_path.endswith(".json")
-            )
-            if not (is_assessment or is_guideline):
+            folder = relative_path.split("/", 1)[0]
+            kind = folder_to_kind.get(folder)
+            if kind is None or not relative_path.endswith(".json"):
                 continue
-
             current_path = ROOT / relative_path
             if not current_path.exists():
                 continue
-
             current = load_json(current_path, errors)
             previous = load_json_from_git(args.base_ref, relative_path)
-
             if current is None or previous is None:
                 continue
-
+            version_field = COLLECTIONS[kind]["versionField"]
             try:
-                version_key = "version" if is_assessment else "contentVersion"
-                if version_parts(current[version_key]) <= version_parts(
-                    previous[version_key]
+                if version_parts(current[version_field]) <= version_parts(
+                    previous[version_field]
                 ):
                     errors.append(
-                        f"{relative_path} changed, but its {version_key} was "
-                        f"not increased ({previous[version_key]} -> "
-                        f"{current[version_key]})."
+                        f"{relative_path} changed, but {version_field} was "
+                        f"not increased ({previous[version_field]} -> "
+                        f"{current[version_field]})."
                     )
             except (KeyError, ValueError) as exc:
                 errors.append(f"{relative_path}: {exc}")
 
     if errors:
-        print("\nValidation failed:")
+        print("\nClinical content validation failed:")
         for error in errors:
             print(f"- {error}")
         return 1
 
-    print("Assessment and guideline content validation passed.")
+    print(
+        "Clinical content validation passed: "
+        f"{len(documents_by_kind['assessment'])} assessments, "
+        f"{len(documents_by_kind['guideline'])} guidelines, "
+        f"{len(documents_by_kind['scoring-tool'])} scoring tools, "
+        f"{len(documents_by_kind['blood-panel'])} blood panels."
+    )
     return 0
 
 

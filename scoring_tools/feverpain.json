@@ -1,0 +1,124 @@
+{
+  "id": "feverpain",
+  "title": "FeverPAIN",
+  "subtitle": "Acute sore-throat antibiotic decision support",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Antibiotic decision support",
+  "summary": "FeverPAIN supports antibiotic decisions in acute sore throat alongside assessment for airway compromise, deep-neck infection and sepsis.",
+  "population": [
+    "People with acute sore throat."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "fever",
+      "label": "Fever during the previous 24 hours",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "purulence",
+      "label": "Purulence: tonsillar or pharyngeal exudate",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "attend-rapidly",
+      "label": "Attend rapidly: symptoms began within the previous 3 days",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "inflamed-tonsils",
+      "label": "Severely inflamed tonsils",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "no-cough-coryza",
+      "label": "No cough or coryza",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "low",
+      "minimumScore": 0,
+      "maximumScore": 1,
+      "label": "Antibiotics generally not indicated",
+      "interpretation": [
+        "Antibiotics are generally not indicated."
+      ],
+      "actions": []
+    },
+    {
+      "id": "intermediate",
+      "minimumScore": 2,
+      "maximumScore": 3,
+      "label": "Consider no or back-up antibiotic",
+      "interpretation": [
+        "Consider no antibiotic or a back-up prescription according to the clinical picture and local antimicrobial guidance."
+      ],
+      "actions": []
+    },
+    {
+      "id": "high",
+      "minimumScore": 4,
+      "maximumScore": 5,
+      "label": "Consider antibiotic",
+      "interpretation": [
+        "Consider an immediate or back-up antibiotic according to the clinical picture and local antimicrobial guidance."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Escalate for stridor, drooling, inability to swallow fluids, trismus, unilateral palatal swelling, uvular deviation, neck swelling, respiratory distress, hypotension, altered mental state or rapidly progressive symptoms.",
+    "Follow the Northern Ireland Primary Care Antimicrobial MicroGuide."
+  ],
+  "limitations": [
+    "The score does not exclude epiglottitis, peritonsillar abscess, retropharyngeal infection or sepsis."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [
+    "NICE-NG84"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "FeverPainScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

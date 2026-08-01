@@ -1,0 +1,92 @@
+{
+  "id": "serum-osmolality",
+  "title": "Serum osmolality",
+  "subtitle": "Calculated osmolality, tonicity and osmolal gap",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Calculated osmolality, tonicity and osmolal gap",
+  "introduction": "Calculated osmolality is an estimate. Use measured serum osmolality when evaluating unexplained hyponatraemia, suspected toxic alcohol ingestion or a possible osmolal gap.",
+  "sections": [
+    {
+      "id": "interpretation",
+      "title": "Interpretation",
+      "rows": [
+        {
+          "id": "typical-measured-range",
+          "name": "Typical measured range",
+          "unit": "",
+          "referenceRange": "Approx. 275–295 mOsm/kg",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Low measured osmolality with hyponatraemia confirms hypotonic hyponatraemia. Normal/high osmolality suggests glucose, mannitol or another effective osmole, or pseudohyponatraemia."
+          ]
+        },
+        {
+          "id": "osmolal-gap",
+          "name": "Osmolal gap",
+          "unit": "",
+          "referenceRange": "Usually <10 mOsm/kg, formula/laboratory dependent",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "A raised gap can occur with toxic alcohols, ethanol, ketones, lactate, renal failure or laboratory/formula variation. A normal gap does not exclude late toxic alcohol poisoning."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "calculated-osmolality",
+      "title": "Calculated serum osmolality",
+      "formula": "2 * sodium + glucose + urea",
+      "inputLabels": [
+        "Sodium (mmol/L)",
+        "Glucose (mmol/L)",
+        "Urea (mmol/L)"
+      ],
+      "outputUnit": "mOsm/kg",
+      "interpretation": [
+        "Calculated osmolality is an estimate."
+      ]
+    },
+    {
+      "id": "osmolal-gap",
+      "title": "Osmolal gap",
+      "formula": "measuredOsmolality - calculatedOsmolality",
+      "inputLabels": [
+        "Measured osmolality (mOsm/kg)",
+        "Calculated osmolality (mOsm/kg)"
+      ],
+      "outputUnit": "mOsm/kg",
+      "interpretation": [
+        "A raised gap can occur with toxic alcohols, ethanol, ketones, lactate, renal failure or formula/laboratory variation."
+      ]
+    }
+  ],
+  "urgentFindings": [
+    "Hyponatraemia with seizure, reduced consciousness, severe confusion or persistent vomiting.",
+    "Measured/calculated osmolality ≥320 mOsm/kg with profound dehydration or altered cognition: consider HHS.",
+    "Raised osmolal gap with visual symptoms, severe metabolic acidosis, renal injury or suspected methanol/ethylene glycol ingestion."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Serum osmolality",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "id": "decaf",
+  "title": "DECAF",
+  "subtitle": "Hospital COPD exacerbation mortality score",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Hospital mortality score for acute COPD exacerbation",
+  "summary": "DECAF estimates in-hospital mortality risk in confirmed acute COPD exacerbation using dyspnoea, eosinophils, consolidation, acidaemia and atrial fibrillation.",
+  "population": [
+    "People with a confirmed acute COPD exacerbation and required investigations."
+  ],
+  "exclusions": [
+    "Do not calculate from assumed or missing blood tests, blood gas, ECG or chest radiograph."
+  ],
+  "criteria": [
+    {
+      "id": "emrcd-5",
+      "label": "Extended MRC dyspnoea grade 5a or 5b",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "eosinopenia",
+      "label": "Eosinopenia: eosinophils below 0.05 × 10⁹/L",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "consolidation",
+      "label": "Consolidation on chest radiograph",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "acidaemia",
+      "label": "Acidaemia: arterial pH below 7.30",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "atrial-fibrillation",
+      "label": "Atrial fibrillation on ECG",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "decaf",
+      "minimumScore": 0,
+      "maximumScore": 5,
+      "label": "DECAF score",
+      "interpretation": [
+        "Higher scores indicate increasing in-hospital mortality risk."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Use only with the required confirmed investigation results."
+  ],
+  "limitations": [
+    "DECAF is not a prehospital discharge score."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "DecafScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

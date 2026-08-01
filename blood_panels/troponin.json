@@ -1,0 +1,77 @@
+{
+  "id": "troponin",
+  "title": "Troponin",
+  "subtitle": "Myocardial injury, serial change and assay limitations",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Myocardial injury, serial change and assay limitations",
+  "introduction": "Use the assay-specific 99th-centile upper reference limit and the validated local 0/1-hour, 0/2-hour or other pathway. Troponin indicates myocardial injury; myocardial infarction requires a compatible rise/fall plus clinical evidence of ischaemia.",
+  "sections": [
+    {
+      "id": "interpretation",
+      "title": "Interpretation",
+      "rows": [
+        {
+          "id": "below-assay-cut-off",
+          "name": "Below assay cut-off",
+          "unit": "",
+          "referenceRange": "Assay and pathway dependent",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "A single low result only rules out MI when the validated pathway permits it, taking account of symptom onset and sampling time. It does not rule out unstable angina, PE, aortic disease or other causes of chest pain."
+          ]
+        },
+        {
+          "id": "above-99th-centile",
+          "name": "Above 99th centile",
+          "unit": "",
+          "referenceRange": "Myocardial injury",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Possible causes include type 1 MI, supply–demand mismatch, tachyarrhythmia, heart failure, myocarditis, PE, sepsis, renal disease, stroke, trauma or strenuous exercise."
+          ]
+        },
+        {
+          "id": "rise-or-fall",
+          "name": "Rise or fall",
+          "unit": "",
+          "referenceRange": "Use the local assay’s absolute delta threshold",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Dynamic change supports acute injury. Chronic stable elevation is common in CKD and structural heart disease, but a new rise/fall can still represent acute MI."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Ongoing or recurrent ischaemic-type pain (central pressure/tightness, exertional pain, sweating, vomiting or radiation), regardless of an initial troponin.",
+    "ST elevation/depression, dynamic T-wave change, ventricular arrhythmia, syncope, hypotension or acute heart-failure signs.",
+    "A rising troponin above the assay threshold with symptoms or ECG evidence of ischaemia."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [
+    "NICE-NG185"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Troponin",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

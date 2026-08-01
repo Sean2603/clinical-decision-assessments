@@ -1,0 +1,327 @@
+{
+  "id": "news2",
+  "title": "NEWS2",
+  "subtitle": "Select observation ranges; component scores calculated automatically",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Physiological deterioration score",
+  "summary": "NEWS2 assigns component scores to measured observations and identifies aggregate or single-parameter deterioration.",
+  "population": [
+    "Adults being monitored for acute physiological deterioration."
+  ],
+  "exclusions": [
+    "SpO₂ Scale 2 should be used only when a qualified clinician has documented hypercapnic respiratory failure and a target saturation of 88–92%."
+  ],
+  "criteria": [
+    {
+      "id": "respiratory-rate",
+      "label": "Respiratory rate",
+      "description": "",
+      "inputType": "choice",
+      "unit": "breaths/min",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "8",
+          "label": "≤8",
+          "score": 3
+        },
+        {
+          "id": "9-11",
+          "label": "9–11",
+          "score": 1
+        },
+        {
+          "id": "12-20",
+          "label": "12–20",
+          "score": 0
+        },
+        {
+          "id": "21-24",
+          "label": "21–24",
+          "score": 2
+        },
+        {
+          "id": "25",
+          "label": "≥25",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "id": "spo2-scale-1",
+      "label": "Oxygen saturation — Scale 1",
+      "description": "",
+      "inputType": "choice",
+      "unit": "%",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "91",
+          "label": "≤91%",
+          "score": 3
+        },
+        {
+          "id": "92-93",
+          "label": "92–93%",
+          "score": 2
+        },
+        {
+          "id": "94-95",
+          "label": "94–95%",
+          "score": 1
+        },
+        {
+          "id": "96",
+          "label": "≥96%",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "spo2-scale-2",
+      "label": "Oxygen saturation — Scale 2",
+      "description": "",
+      "inputType": "choice",
+      "unit": "%",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "83-or-97-while-receiving-supplemental-oxygen",
+          "label": "≤83%, or ≥97% while receiving supplemental oxygen",
+          "score": 3
+        },
+        {
+          "id": "84-85-or-95-96-while-receiving-supplemental-oxygen",
+          "label": "84–85%, or 95–96% while receiving supplemental oxygen",
+          "score": 2
+        },
+        {
+          "id": "86-87-or-93-94-while-receiving-supplemental-oxygen",
+          "label": "86–87%, or 93–94% while receiving supplemental oxygen",
+          "score": 1
+        },
+        {
+          "id": "88-92-or-93-while-breathing-room-air",
+          "label": "88–92%, or ≥93% while breathing room air",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "supplemental-oxygen",
+      "label": "Supplemental oxygen",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "breathing-room-air",
+          "label": "Breathing room air",
+          "score": 0
+        },
+        {
+          "id": "receiving-supplemental-oxygen",
+          "label": "Receiving supplemental oxygen",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "temperature",
+      "label": "Temperature",
+      "description": "",
+      "inputType": "choice",
+      "unit": "°C",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "35-0",
+          "label": "≤35.0",
+          "score": 3
+        },
+        {
+          "id": "35-1-36-0",
+          "label": "35.1–36.0",
+          "score": 1
+        },
+        {
+          "id": "36-1-38-0",
+          "label": "36.1–38.0",
+          "score": 0
+        },
+        {
+          "id": "38-1-39-0",
+          "label": "38.1–39.0",
+          "score": 1
+        },
+        {
+          "id": "39-1",
+          "label": "≥39.1",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "systolic-bp",
+      "label": "Systolic blood pressure",
+      "description": "",
+      "inputType": "choice",
+      "unit": "mmHg",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "90",
+          "label": "≤90",
+          "score": 3
+        },
+        {
+          "id": "91-100",
+          "label": "91–100",
+          "score": 2
+        },
+        {
+          "id": "101-110",
+          "label": "101–110",
+          "score": 1
+        },
+        {
+          "id": "111-219",
+          "label": "111–219",
+          "score": 0
+        },
+        {
+          "id": "220",
+          "label": "≥220",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "id": "pulse",
+      "label": "Pulse",
+      "description": "",
+      "inputType": "choice",
+      "unit": "beats/min",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "40",
+          "label": "≤40",
+          "score": 3
+        },
+        {
+          "id": "41-50",
+          "label": "41–50",
+          "score": 1
+        },
+        {
+          "id": "51-90",
+          "label": "51–90",
+          "score": 0
+        },
+        {
+          "id": "91-110",
+          "label": "91–110",
+          "score": 1
+        },
+        {
+          "id": "111-130",
+          "label": "111–130",
+          "score": 2
+        },
+        {
+          "id": "131",
+          "label": "≥131",
+          "score": 3
+        }
+      ]
+    },
+    {
+      "id": "consciousness",
+      "label": "Consciousness",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "alert-and-no-new-confusion",
+          "label": "Alert and no new confusion",
+          "score": 0
+        },
+        {
+          "id": "new-confusion-responds-to-voice-pain-or-unresponsive",
+          "label": "New confusion, responds to voice/pain, or unresponsive",
+          "score": 3
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "low",
+      "minimumScore": 0,
+      "maximumScore": 4,
+      "label": "Low aggregate score",
+      "interpretation": [
+        "This does not exclude serious or time-critical disease."
+      ],
+      "actions": []
+    },
+    {
+      "id": "medium",
+      "minimumScore": 5,
+      "maximumScore": 6,
+      "label": "Medium aggregate score",
+      "interpretation": [
+        "Urgent clinical review is generally required."
+      ],
+      "actions": []
+    },
+    {
+      "id": "high",
+      "minimumScore": 7,
+      "maximumScore": 20,
+      "label": "High aggregate score",
+      "interpretation": [
+        "An emergency clinical response is generally required."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Any individual parameter scoring 3 generally requires urgent clinical review.",
+    "Compare observations with baseline and repeat them to identify deterioration."
+  ],
+  "limitations": [
+    "NEWS2 does not rule out acute coronary syndrome, pulmonary embolism, stroke, aortic dissection, early sepsis or other time-critical disease."
+  ],
+  "calculationStrategy": "custom",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "News2Screen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

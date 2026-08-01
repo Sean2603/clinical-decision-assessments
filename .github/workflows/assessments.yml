@@ -11,6 +11,8 @@ name: Validate and publish clinical content
     paths:
       - "assessments/**"
       - "guidelines/**"
+      - "scoring_tools/**"
+      - "blood_panels/**"
       - "references/**"
       - "clinical_reliability/**"
       - "schema/**"
@@ -48,11 +50,11 @@ jobs:
         if: github.event_name == 'pull_request'
         run: git fetch origin main:refs/remotes/origin/main
 
-      - name: Validate pull request assessment changes
+      - name: Validate pull request clinical content changes
         if: github.event_name == 'pull_request'
         run: python tool/validate_content.py --base-ref origin/main
 
-      - name: Validate repository assessment content
+      - name: Validate repository clinical content
         if: github.event_name != 'pull_request'
         run: python tool/validate_content.py
 

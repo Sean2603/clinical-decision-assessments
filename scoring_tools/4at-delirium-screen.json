@@ -1,0 +1,165 @@
+{
+  "id": "4at-delirium-screen",
+  "title": "4AT delirium screen",
+  "subtitle": "Delirium and cognitive impairment screen",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Delirium and cognitive impairment screening",
+  "summary": "The 4AT screens for possible delirium and cognitive impairment.",
+  "population": [
+    "Adults where delirium or cognitive impairment is suspected."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "alertness",
+      "label": "1. Alertness",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "normal-fully-alert",
+          "label": "Normal; fully alert",
+          "score": 0
+        },
+        {
+          "id": "clearly-abnormal-markedly-drowsy-or-agitated",
+          "label": "Clearly abnormal: markedly drowsy or agitated",
+          "score": 4
+        }
+      ]
+    },
+    {
+      "id": "amt4",
+      "label": "2. AMT4",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "no-mistakes",
+          "label": "No mistakes",
+          "score": 0
+        },
+        {
+          "id": "one-mistake",
+          "label": "One mistake",
+          "score": 1
+        },
+        {
+          "id": "two-or-more-mistakes-or-untestable",
+          "label": "Two or more mistakes or untestable",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "attention",
+      "label": "3. Attention: months backwards",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "seven-months-or-more-correctly",
+          "label": "Seven months or more correctly",
+          "score": 0
+        },
+        {
+          "id": "starts-but-scores-fewer-than-seven-months-or-refuses",
+          "label": "Starts but scores fewer than seven months or refuses",
+          "score": 1
+        },
+        {
+          "id": "untestable",
+          "label": "Untestable",
+          "score": 2
+        }
+      ]
+    },
+    {
+      "id": "acute-change",
+      "label": "4. Acute change or fluctuating course",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "no",
+          "label": "No",
+          "score": 0
+        },
+        {
+          "id": "yes-change-in-cognition-alertness-or-mental-function-within-about-2-weeks-and-still-evident-in-the-last-24-hours",
+          "label": "Yes: change in cognition, alertness or mental function within about 2 weeks and still evident in the last 24 hours",
+          "score": 4
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "zero",
+      "minimumScore": 0,
+      "maximumScore": 0,
+      "label": "Delirium less likely",
+      "interpretation": [
+        "Delirium or severe cognitive impairment is less likely, but not excluded."
+      ],
+      "actions": []
+    },
+    {
+      "id": "one-three",
+      "minimumScore": 1,
+      "maximumScore": 3,
+      "label": "Possible cognitive impairment",
+      "interpretation": [
+        "Possible cognitive impairment; delirium is not excluded."
+      ],
+      "actions": []
+    },
+    {
+      "id": "four-plus",
+      "minimumScore": 4,
+      "maximumScore": 12,
+      "label": "Possible delirium",
+      "interpretation": [
+        "Possible delirium, with or without cognitive impairment. Assess cause urgently."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Hypoglycaemia, hypoxia, stroke, sepsis, head injury, drug toxicity, withdrawal and other causes of altered mental state require separate assessment."
+  ],
+  "limitations": [
+    "A 4AT score is not a capacity assessment."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "FourAtScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

@@ -6,6 +6,8 @@ Version-controlled clinical assessment guidance for the Clinical Decision Suppor
 
 - `assessments/` — individual assessment guides
 - `references/` — shared guideline references
+- `scoring_tools/` — remote scoring-tool shadow definitions
+- `blood_panels/` — remote blood-panel shadow definitions
 - `schema/` — JSON schema
 - `manifest.json` — published pack metadata and checksums
 - `tool/build_manifest.py` — rebuilds checksums and publication date
@@ -46,3 +48,30 @@ python tool/validate_references.py
 python tool/generate_reference_usage.py
 python tool/sync_manifest.py
 ```
+
+
+## Remote scoring tools and blood panels
+
+`scoring_tools/*.json` and `blood_panels/*.json` now contain shadow copies of
+the clinical definitions currently implemented in Flutter. The app downloads,
+checksums, parses and caches these files as part of the same atomic content
+pack, but version `0.18.0` continues to render the existing Dart screens.
+
+Each migrated definition includes a `migration` block:
+
+```json
+{
+  "state": "shadow",
+  "sourceFile": "lib/screens/phase_one_tools.dart",
+  "currentScreen": "Crb65Screen",
+  "parityStatus": "pending",
+  "migratedOn": "2026-08-01"
+}
+```
+
+Do not mark `parityStatus` as `matched` until the remote definition has been
+compared with the current Dart implementation and its tests.
+
+The shared reference registry and clinical reliability file remain
+authoritative. Every scoring-tool and blood-panel definition must have a
+matching reliability item with the same stable ID and display title.

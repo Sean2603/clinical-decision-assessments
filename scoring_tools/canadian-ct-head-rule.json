@@ -1,0 +1,41 @@
+{
+  "id": "canadian-ct-head-rule",
+  "title": "Canadian CT Head Rule",
+  "subtitle": "CT after selected minor head injury",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "pathway-reference",
+  "typeLabel": "Hospital or imaging pathway",
+  "summary": "It is not interchangeable with NICE head-injury guidance and is invalid in several groups, including some anticoagulated patients and patients without the qualifying minor-head-injury syndrome.",
+  "population": [
+    "Confirmed minor head injury with loss of consciousness, amnesia or disorientation; GCS 13–15; exact inclusion and exclusion criteria; five high/medium-risk CT criteria."
+  ],
+  "exclusions": [
+    "Do not enter assumed normal results."
+  ],
+  "criteria": [],
+  "results": [],
+  "overrides": [
+    "Follow the applicable NICE, local emergency department or specialty pathway."
+  ],
+  "limitations": [
+    "It is not interchangeable with NICE head-injury guidance and is invalid in several groups, including some anticoagulated patients and patients without the qualifying minor-head-injury syndrome."
+  ],
+  "calculationStrategy": "none",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "HospitalToolReferenceScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

@@ -7,13 +7,31 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = ROOT / "manifest.json"
-ASSESSMENTS_DIRECTORY = ROOT / "assessments"
-GUIDELINES_DIRECTORY = ROOT / "guidelines"
 REFERENCES_PATH = ROOT / "references" / "references.json"
-ASSESSMENT_SCHEMA_PATH = ROOT / "schema" / "assessment-schema.json"
-GUIDELINE_SCHEMA_PATH = ROOT / "schema" / "guideline-schema.json"
 RELIABILITY_PATH = ROOT / "clinical_reliability" / "clinical-reliability.json"
-RELIABILITY_SCHEMA_PATH = ROOT / "schema" / "clinical-reliability-schema.json"
+
+COLLECTIONS = {
+    "assessments": {
+        "directory": ROOT / "assessments",
+        "schema": ROOT / "schema" / "assessment-schema.json",
+        "versionField": "version",
+    },
+    "guidelines": {
+        "directory": ROOT / "guidelines",
+        "schema": ROOT / "schema" / "guideline-schema.json",
+        "versionField": "contentVersion",
+    },
+    "scoringTools": {
+        "directory": ROOT / "scoring_tools",
+        "schema": ROOT / "schema" / "scoring-tool-schema.json",
+        "versionField": "version",
+    },
+    "bloodPanels": {
+        "directory": ROOT / "blood_panels",
+        "schema": ROOT / "schema" / "blood-panel-schema.json",
+        "versionField": "version",
+    },
+}
 
 SEMVER_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
 
@@ -54,16 +72,15 @@ def bump_patch(value: str) -> str:
 
 def build_entries(
     directory: Path,
-    existing_entries: dict[str, dict],
     schema_path: Path,
     version_field: str,
-) -> tuple[list[dict], list[str]]:
-    entries = []
-    versions = []
+    existing_entries: dict[str, dict],
+) -> list[dict]:
     paths = sorted(directory.glob("*.json"))
     if not paths:
         raise SystemExit(f"No JSON files found in {directory.relative_to(ROOT)}.")
 
+    entries: list[dict] = []
     for item_path in paths:
         item = load_json(item_path)
         item_id = item.get("id")
@@ -76,7 +93,7 @@ def build_entries(
         if not isinstance(version, str):
             raise SystemExit(f"{item_path} has no valid {version_field}.")
         semver_parts(version)
-        versions.append(version)
+
         previous = existing_entries.get(item_id, {})
         entries.append({
             "id": item_id,
@@ -91,56 +108,41 @@ def build_entries(
                 for key, value in previous.items()
                 if key not in {
                     "id", "title", "version", "file", "schema",
-                    "sha256", "schemaSha256"
+                    "sha256", "schemaSha256",
                 }
             },
         })
-    return entries, versions
+    return entries
 
 
 def main() -> None:
     manifest = load_json(MANIFEST_PATH)
     load_json(REFERENCES_PATH)
-    load_json(ASSESSMENT_SCHEMA_PATH)
-    load_json(GUIDELINE_SCHEMA_PATH)
     load_json(RELIABILITY_PATH)
-    load_json(RELIABILITY_SCHEMA_PATH)
 
-    existing_assessments = {
-        entry.get("id"): entry
-        for entry in manifest.get("assessments", [])
-        if isinstance(entry, dict) and isinstance(entry.get("id"), str)
-    }
-    existing_guidelines = {
-        entry.get("id"): entry
-        for entry in manifest.get("guidelines", [])
-        if isinstance(entry, dict) and isinstance(entry.get("id"), str)
-    }
-
-    assessments, assessment_versions = build_entries(
-        ASSESSMENTS_DIRECTORY,
-        existing_assessments,
-        ASSESSMENT_SCHEMA_PATH,
-        "version",
-    )
-    guidelines, guideline_versions = build_entries(
-        GUIDELINES_DIRECTORY,
-        existing_guidelines,
-        GUIDELINE_SCHEMA_PATH,
-        "contentVersion",
-    )
+    generated_collections: dict[str, list[dict]] = {}
+    for key, settings in COLLECTIONS.items():
+        schema_path = settings["schema"]
+        load_json(schema_path)
+        existing = {
+            entry.get("id"): entry
+            for entry in manifest.get(key, [])
+            if isinstance(entry, dict) and isinstance(entry.get("id"), str)
+        }
+        generated_collections[key] = build_entries(
+            settings["directory"],
+            schema_path,
+            settings["versionField"],
+            existing,
+        )
 
     previous_version = manifest.get("contentVersion", "0.0.0")
     semver_parts(previous_version)
-    highest_item_version = max(
-        assessment_versions + guideline_versions,
-        key=semver_parts,
-    )
 
     generated_core = {
-        "schemaVersion": manifest.get("schemaVersion", 1),
-        "contentVersion": highest_item_version,
-        "minimumAppVersion": "0.17.0",
+        "schemaVersion": 3,
+        "contentVersion": previous_version,
+        "minimumAppVersion": "0.18.0",
         "references": {
             "file": "references/references.json",
             "sha256": sha256(REFERENCES_PATH),
@@ -149,42 +151,42 @@ def main() -> None:
             "file": "clinical_reliability/clinical-reliability.json",
             "schema": "schema/clinical-reliability-schema.json",
             "sha256": sha256(RELIABILITY_PATH),
-            "schemaSha256": sha256(RELIABILITY_SCHEMA_PATH),
+            "schemaSha256": sha256(
+                ROOT / "schema" / "clinical-reliability-schema.json"
+            ),
         },
-        "assessments": assessments,
-        "guidelines": guidelines,
+        **generated_collections,
     }
 
     previous_core = {
         key: value for key, value in manifest.items() if key != "updatedAt"
     }
     if generated_core != previous_core:
-        if semver_parts(highest_item_version) <= semver_parts(previous_version):
-            generated_core["contentVersion"] = bump_patch(previous_version)
+        generated_core["contentVersion"] = bump_patch(previous_version)
 
     generated = {
-        **generated_core,
+        "schemaVersion": generated_core["schemaVersion"],
+        "contentVersion": generated_core["contentVersion"],
         "updatedAt": datetime.now(timezone.utc)
         .replace(microsecond=0)
         .isoformat()
         .replace("+00:00", "Z"),
-    }
-    # Preserve stable key order.
-    generated = {
-        "schemaVersion": generated["schemaVersion"],
-        "contentVersion": generated["contentVersion"],
-        "updatedAt": generated["updatedAt"],
-        "minimumAppVersion": generated["minimumAppVersion"],
-        "references": generated["references"],
-        "clinicalReliability": generated["clinicalReliability"],
-        "assessments": generated["assessments"],
-        "guidelines": generated["guidelines"],
+        "minimumAppVersion": generated_core["minimumAppVersion"],
+        "references": generated_core["references"],
+        "clinicalReliability": generated_core["clinicalReliability"],
+        "assessments": generated_core["assessments"],
+        "guidelines": generated_core["guidelines"],
+        "scoringTools": generated_core["scoringTools"],
+        "bloodPanels": generated_core["bloodPanels"],
     }
     write_json(MANIFEST_PATH, generated)
     print(
         "manifest.json synchronised: "
         f"contentVersion={generated['contentVersion']}, "
-        f"assessments={len(assessments)}, guidelines={len(guidelines)}"
+        f"assessments={len(generated['assessments'])}, "
+        f"guidelines={len(generated['guidelines'])}, "
+        f"scoringTools={len(generated['scoringTools'])}, "
+        f"bloodPanels={len(generated['bloodPanels'])}"
     )
 
 

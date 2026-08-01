@@ -1,0 +1,92 @@
+{
+  "id": "haematinics",
+  "title": "Haematinics",
+  "subtitle": "Ferritin, transferrin saturation, B12 and folate",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Ferritin, transferrin saturation, B12 and folate",
+  "introduction": "Interpret ferritin, transferrin saturation, B12 and folate with FBC indices, CRP/inflammation, renal/liver disease, diet, bleeding history and neurological symptoms.",
+  "sections": [
+    {
+      "id": "iron-studies",
+      "title": "Iron studies",
+      "rows": [
+        {
+          "id": "ferritin",
+          "name": "Ferritin",
+          "unit": "",
+          "referenceRange": "Low ferritin strongly supports iron deficiency; exact cut-off laboratory/context dependent",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Ferritin is an acute-phase protein and may be normal or raised despite iron deficiency during infection, inflammation, liver disease or malignancy."
+          ]
+        },
+        {
+          "id": "transferrin-saturation",
+          "name": "Transferrin saturation",
+          "unit": "",
+          "referenceRange": "<20% commonly supports restricted iron availability",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Low saturation with low ferritin supports absolute iron deficiency. Low saturation with normal/high ferritin may reflect inflammation, CKD or mixed deficiency."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b12-and-folate",
+      "title": "B12 and folate",
+      "rows": [
+        {
+          "id": "vitamin-b12",
+          "name": "Vitamin B12",
+          "unit": "",
+          "referenceRange": "Laboratory dependent",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Deficiency can produce macrocytosis, glossitis, paraesthesia, impaired vibration/proprioception, gait disturbance, cognitive change or pancytopenia. Neurological deficiency can occur without anaemia or macrocytosis."
+          ]
+        },
+        {
+          "id": "folate",
+          "name": "Folate",
+          "unit": "",
+          "referenceRange": "Laboratory dependent",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Low folate can cause macrocytic anaemia. Replace B12 deficiency first or concurrently; folate alone can improve anaemia while neurological B12 injury progresses."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Anaemia with chest pain, syncope, breathlessness at rest, hypotension or active bleeding.",
+    "New gait disturbance, objective sensory loss, weakness, cognitive change or bladder/bowel symptoms with possible B12 deficiency.",
+    "Pancytopenia, rapidly falling haemoglobin or platelets, or haemolysis features (jaundice, dark urine, raised bilirubin/LDH)."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Haematinics",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

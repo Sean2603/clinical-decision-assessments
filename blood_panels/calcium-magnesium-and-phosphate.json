@@ -1,0 +1,108 @@
+{
+  "id": "calcium-magnesium-and-phosphate",
+  "title": "Calcium, magnesium and phosphate",
+  "subtitle": "Corrected calcium, arrhythmia risk and refeeding patterns",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Corrected calcium, arrhythmia risk and refeeding patterns",
+  "introduction": "Use the reporting laboratory range. Corrected calcium formulas are approximations and become unreliable in critical illness, major acid–base disturbance, severe hypoalbuminaemia and renal failure; ionised calcium is preferable in these settings.",
+  "sections": [
+    {
+      "id": "calcium",
+      "title": "Calcium",
+      "rows": [
+        {
+          "id": "hypocalcaemia",
+          "name": "Hypocalcaemia",
+          "unit": "",
+          "referenceRange": "Typical corrected calcium <2.20 mmol/L",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider vitamin D deficiency, hypoparathyroidism, renal failure, pancreatitis, sepsis, low magnesium or massive transfusion. Symptoms include perioral tingling, carpopedal spasm, tetany, seizure and prolonged QT."
+          ]
+        },
+        {
+          "id": "hypercalcaemia",
+          "name": "Hypercalcaemia",
+          "unit": "",
+          "referenceRange": "Typical corrected calcium >2.60 mmol/L; ≥3.0 mmol/L is marked",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider malignancy, primary hyperparathyroidism, medication or granulomatous disease. Look for dehydration, constipation, vomiting, polyuria, confusion, weakness and shortened QT."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "magnesium-and-phosphate",
+      "title": "Magnesium and phosphate",
+      "rows": [
+        {
+          "id": "magnesium",
+          "name": "Magnesium",
+          "unit": "",
+          "referenceRange": "Approx. 0.7–1.0 mmol/L",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Low magnesium can cause tremor, weakness, seizures, hypokalaemia that is difficult to correct and ventricular arrhythmias including torsades. High magnesium can cause hyporeflexia, bradycardia, hypotension and respiratory depression."
+          ]
+        },
+        {
+          "id": "phosphate",
+          "name": "Phosphate",
+          "unit": "",
+          "referenceRange": "Approx. 0.8–1.5 mmol/L",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Low phosphate can cause weakness, respiratory muscle failure, rhabdomyolysis and haemolysis. A rapid fall after nutrition in a malnourished patient suggests refeeding syndrome, often with low potassium and magnesium."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "corrected-calcium",
+      "title": "Approximate corrected calcium",
+      "formula": "measuredCalcium + 0.02 * (40 - albumin)",
+      "inputLabels": [
+        "Measured calcium (mmol/L)",
+        "Albumin (g/L)"
+      ],
+      "outputUnit": "mmol/L",
+      "interpretation": [
+        "Corrected calcium formulas are approximations.",
+        "They become unreliable in critical illness, major acid–base disturbance, severe hypoalbuminaemia and renal failure; ionised calcium is preferable in these settings."
+      ]
+    }
+  ],
+  "urgentFindings": [
+    "Tetany, seizure, stridor, prolonged QT or arrhythmia with suspected hypocalcaemia.",
+    "Corrected calcium around ≥3.0 mmol/L with dehydration, vomiting, confusion, weakness or ECG change.",
+    "Severe hypomagnesaemia with ventricular arrhythmia, seizure or persistent hypokalaemia.",
+    "Low phosphate with respiratory weakness, profound generalised weakness, rhabdomyolysis or suspected refeeding syndrome."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Calcium, magnesium and phosphate",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

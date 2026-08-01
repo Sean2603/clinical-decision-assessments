@@ -1,0 +1,41 @@
+{
+  "id": "glasgow-blatchford",
+  "title": "Glasgow–Blatchford",
+  "subtitle": "Upper GI bleed intervention risk",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "pathway-reference",
+  "typeLabel": "Hospital or imaging pathway",
+  "summary": "The weighted score depends on exact laboratory ranges. It must not be calculated from assumed values or used as a stand-alone prehospital discharge score.",
+  "population": [
+    "Blood urea, haemoglobin adjusted for sex, systolic BP, pulse, melaena, syncope, hepatic disease and cardiac failure."
+  ],
+  "exclusions": [
+    "Do not enter assumed normal results."
+  ],
+  "criteria": [],
+  "results": [],
+  "overrides": [
+    "Follow the applicable NICE, local emergency department or specialty pathway."
+  ],
+  "limitations": [
+    "The weighted score depends on exact laboratory ranges. It must not be calculated from assumed values or used as a stand-alone prehospital discharge score."
+  ],
+  "calculationStrategy": "none",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "HospitalToolReferenceScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

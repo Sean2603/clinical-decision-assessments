@@ -1,0 +1,155 @@
+{
+  "id": "canadian-c-spine-rule",
+  "title": "Canadian C-spine rule",
+  "subtitle": "Cervical-spine imaging after blunt trauma",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Cervical-spine imaging decision rule",
+  "summary": "Uses high-risk factors, low-risk factors and active neck rotation to determine whether cervical-spine imaging is indicated.",
+  "population": [
+    "Alert, stable patients after blunt trauma where cervical-spine injury is being considered."
+  ],
+  "exclusions": [
+    "Use only within local trauma and spinal-motion-restriction policy.",
+    "Do not force movement.",
+    "May be inappropriate with altered mental state, unreliable intoxication assessment, neurological deficit, haemodynamic instability, penetrating trauma, communication barriers or significant spinal disease."
+  ],
+  "criteria": [
+    {
+      "id": "age-65-or-older",
+      "label": "Age 65 years or older",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "dangerous-mechanism",
+      "label": "Dangerous mechanism",
+      "description": "Examples: fall over 1 metre or 5 stairs; axial load to head; high-speed collision, rollover or ejection; motorised recreational vehicle; bicycle collision.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "paraesthesia",
+      "label": "Paraesthesia in the upper or lower limbs",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "simple-rear-end",
+      "label": "Simple rear-end collision",
+      "description": "Not pushed into traffic, hit by a bus/large vehicle, rollover, or hit by a high-speed vehicle.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "comfortable-sitting",
+      "label": "Comfortable in a sitting position",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "ambulatory",
+      "label": "Ambulatory at any time since injury",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "delayed-neck-pain",
+      "label": "Delayed onset of neck pain",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "no-midline-tenderness",
+      "label": "No midline cervical-spine tenderness",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "rotates-45-degrees",
+      "label": "Actively rotates neck 45° left and 45° right",
+      "description": "Only assess after no high-risk factor and at least one low-risk factor.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "imaging-not-indicated",
+      "minimumScore": 0,
+      "maximumScore": 0,
+      "label": "Imaging not indicated",
+      "interpretation": [
+        "Able to rotate 45° left and right after meeting low-risk criteria: imaging is not indicated by the Canadian C-spine rule."
+      ],
+      "actions": []
+    },
+    {
+      "id": "imaging-indicated",
+      "minimumScore": 1,
+      "maximumScore": 2,
+      "label": "Imaging indicated",
+      "interpretation": [
+        "A high-risk factor, absence of a low-risk factor, or inability to rotate 45° indicates imaging."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Stop range-of-motion assessment if pain, neurological symptoms or clinician concern develops."
+  ],
+  "limitations": [
+    "This is a branching decision rule rather than a simple summed score."
+  ],
+  "calculationStrategy": "custom",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "CanadianCSpineScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

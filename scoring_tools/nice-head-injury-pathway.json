@@ -1,0 +1,43 @@
+{
+  "id": "nice-head-injury-pathway",
+  "title": "NICE head-injury pathway",
+  "subtitle": "CT and observation criteria",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "pathway-reference",
+  "typeLabel": "Hospital or imaging pathway",
+  "summary": "This is a branching CT and observation pathway rather than a summed score. It requires exact age-specific NICE criteria and local conveyance policy.",
+  "population": [
+    "Age-specific history, examination, anticoagulant/antiplatelet status, loss of consciousness or amnesia, neurological findings, vomiting, seizure and mechanism."
+  ],
+  "exclusions": [
+    "Do not enter assumed normal results."
+  ],
+  "criteria": [],
+  "results": [],
+  "overrides": [
+    "Follow the applicable NICE, local emergency department or specialty pathway."
+  ],
+  "limitations": [
+    "This is a branching CT and observation pathway rather than a summed score. It requires exact age-specific NICE criteria and local conveyance policy."
+  ],
+  "calculationStrategy": "none",
+  "referenceIds": [
+    "NICE-NG232"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "HospitalToolReferenceScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

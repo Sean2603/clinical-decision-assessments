@@ -1,0 +1,113 @@
+{
+  "id": "crb-65",
+  "title": "CRB-65",
+  "subtitle": "Community-acquired pneumonia risk",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Mortality risk stratification",
+  "summary": "CRB-65 estimates mortality risk in adults with clinically suspected community-acquired pneumonia when blood urea is unavailable.",
+  "population": [
+    "Adults with clinically suspected community-acquired pneumonia when blood urea is unavailable."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "confusion",
+      "label": "New confusion",
+      "description": "New disorientation to person, place or time, or an AMTS of 8 or less where used.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "respiratory-rate",
+      "label": "Respiratory rate 30/min or higher",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "low-blood-pressure",
+      "label": "Low blood pressure",
+      "description": "Systolic below 90 mmHg or diastolic 60 mmHg or lower.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "age-65",
+      "label": "Age 65 years or older",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "score-0",
+      "minimumScore": 0,
+      "maximumScore": 0,
+      "label": "Low predicted mortality risk",
+      "interpretation": [
+        "Home treatment may be suitable only if no other clinical or social concern exists."
+      ],
+      "actions": []
+    },
+    {
+      "id": "score-1-2",
+      "minimumScore": 1,
+      "maximumScore": 2,
+      "label": "Increased risk",
+      "interpretation": [
+        "Consider hospital assessment, especially at score 2."
+      ],
+      "actions": []
+    },
+    {
+      "id": "score-3-4",
+      "minimumScore": 3,
+      "maximumScore": 4,
+      "label": "High risk",
+      "interpretation": [
+        "Urgent hospital assessment is usually required."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Hypoxia, respiratory distress, inability to speak full sentences, cyanosis, new confusion, systolic BP below 90 mmHg, rapidly worsening symptoms, inability to maintain oral intake or major comorbidity can override a low score."
+  ],
+  "limitations": [
+    "CRB-65 does not detect sepsis, pulmonary embolism, acute heart failure or inability to cope at home."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [
+    "NICE-NG250"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "Crb65Screen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

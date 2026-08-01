@@ -1,0 +1,97 @@
+{
+  "id": "thyroid-function",
+  "title": "Thyroid function",
+  "subtitle": "TSH and free T4 pattern recognition",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "TSH and free T4 pattern recognition",
+  "introduction": "Use laboratory-specific TSH and free T4 ranges. Acute illness, pregnancy, amiodarone, lithium, steroids, biotin and pituitary disease can alter interpretation.",
+  "sections": [
+    {
+      "id": "common-patterns",
+      "title": "Common patterns",
+      "rows": [
+        {
+          "id": "high-tsh-low-free-t4",
+          "name": "High TSH + low free T4",
+          "unit": "",
+          "referenceRange": "Primary hypothyroidism",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider autoimmune thyroid disease, post-treatment disease or medication effects. Assess severity and symptoms rather than TSH alone."
+          ]
+        },
+        {
+          "id": "low-tsh-high-free-t4-t3",
+          "name": "Low TSH + high free T4/T3",
+          "unit": "",
+          "referenceRange": "Primary hyperthyroidism",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider Graves disease, toxic nodules, thyroiditis or excessive replacement. Check pulse/rhythm, temperature, hydration and cardiovascular symptoms."
+          ]
+        },
+        {
+          "id": "high-tsh-normal-free-t4",
+          "name": "High TSH + normal free T4",
+          "unit": "",
+          "referenceRange": "Subclinical hypothyroidism",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Repeat and interpret with symptoms, thyroid antibodies, pregnancy plans and degree/persistence of TSH elevation."
+          ]
+        },
+        {
+          "id": "low-tsh-normal-free-t4-t3",
+          "name": "Low TSH + normal free T4/T3",
+          "unit": "",
+          "referenceRange": "Subclinical hyperthyroidism or transient suppression",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider medication, acute illness, pregnancy and early thyroid disease."
+          ]
+        },
+        {
+          "id": "low-normal-tsh-low-free-t4",
+          "name": "Low/normal TSH + low free T4",
+          "unit": "",
+          "referenceRange": "Possible central hypothyroidism or non-thyroidal illness",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Do not label as primary hypothyroidism without considering pituitary disease, severe illness and medication effects."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Possible thyroid storm: fever, marked tachycardia/AF, agitation/delirium, vomiting/diarrhoea, heart failure or shock.",
+    "Possible myxoedema coma: hypothermia, bradycardia, hypotension, hypoventilation, hyponatraemia, hypoglycaemia or reduced consciousness.",
+    "New AF, chest pain, syncope or heart-failure features with biochemical hyperthyroidism."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Thyroid function",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

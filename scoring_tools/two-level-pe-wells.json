@@ -1,0 +1,133 @@
+{
+  "id": "two-level-pe-wells",
+  "title": "Two-level PE Wells",
+  "subtitle": "PE likelihood and investigation pathway",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Investigation pathway — not a rule-out score",
+  "summary": "Two-level PE Wells categorises suspected pulmonary embolism as likely or unlikely and directs the required investigation pathway.",
+  "population": [
+    "People in whom pulmonary embolism remains clinically suspected."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "clinical-signs-dvt",
+      "label": "Clinical signs and symptoms of DVT",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 3.0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "alternative-less-likely",
+      "label": "An alternative diagnosis is less likely than PE",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 3.0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "heart-rate-over-100",
+      "label": "Heart rate above 100/min",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.5,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "immobilisation-surgery",
+      "label": "Immobilisation for at least 3 days or surgery in previous 4 weeks",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.5,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "previous-dvt-pe",
+      "label": "Previous DVT or PE",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.5,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "haemoptysis",
+      "label": "Haemoptysis",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.0,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "malignancy",
+      "label": "Malignancy: treatment within 6 months or palliative",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.0,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "pe-unlikely",
+      "minimumScore": -10,
+      "maximumScore": 4,
+      "label": "PE unlikely",
+      "interpretation": [
+        "D-dimer is generally required unless PERC has already validly ruled out PE."
+      ],
+      "actions": []
+    },
+    {
+      "id": "pe-likely",
+      "minimumScore": 4.000001,
+      "maximumScore": 20,
+      "label": "PE likely",
+      "interpretation": [
+        "Arrange the immediate imaging pathway."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Both categories require the appropriate D-dimer or imaging pathway."
+  ],
+  "limitations": [
+    "The Wells score does not exclude PE by itself. Do not use it to justify scene discharge without completing the required pathway."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [
+    "NICE-NG158"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "PeWellsScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "id": "abg-and-vbg",
+  "title": "ABG and VBG",
+  "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Acid–base status, ventilation, oxygenation and lactate",
+  "introduction": "Use the analyser and local laboratory ranges. A VBG can support assessment of pH, bicarbonate and trends in carbon dioxide, but venous pO₂ must not be used to assess oxygenation. Record the oxygen device and flow or FiO₂ at the time of sampling.",
+  "sections": [
+    {
+      "id": "acid-base-reference",
+      "title": "Typical adult reference guide",
+      "rows": [
+        {
+          "id": "ph",
+          "name": "pH",
+          "unit": "",
+          "referenceRange": "ABG 7.35–7.45",
+          "lowInterpretation": [
+            "Acidaemia."
+          ],
+          "highInterpretation": [
+            "Alkalaemia."
+          ],
+          "notes": [
+            "VBG pH is normally slightly lower than arterial pH."
+          ]
+        },
+        {
+          "id": "pco2",
+          "name": "pCO₂",
+          "unit": "kPa",
+          "referenceRange": "PaCO₂ approximately 4.7–6.0 kPa",
+          "lowInterpretation": [
+            "Supports respiratory alkalosis or respiratory compensation when interpreted with pH and bicarbonate."
+          ],
+          "highInterpretation": [
+            "Supports respiratory acidosis or respiratory compensation when interpreted with pH and bicarbonate."
+          ],
+          "notes": [
+            "PvCO₂ is normally slightly higher than arterial pCO₂."
+          ]
+        },
+        {
+          "id": "bicarbonate",
+          "name": "Bicarbonate",
+          "unit": "mmol/L",
+          "referenceRange": "Approximately 22–26 mmol/L",
+          "lowInterpretation": [
+            "Supports metabolic acidosis or renal compensation for respiratory alkalosis."
+          ],
+          "highInterpretation": [
+            "Supports metabolic alkalosis or renal compensation for respiratory acidosis."
+          ],
+          "notes": []
+        },
+        {
+          "id": "base-excess",
+          "name": "Base excess",
+          "unit": "mmol/L",
+          "referenceRange": "Approximately −2 to +2 mmol/L",
+          "lowInterpretation": [
+            "A negative value supports a metabolic acid load."
+          ],
+          "highInterpretation": [
+            "A positive value supports metabolic alkalosis or chronic compensation."
+          ],
+          "notes": []
+        },
+        {
+          "id": "po2",
+          "name": "pO₂",
+          "unit": "kPa",
+          "referenceRange": "Interpret with age, inspired oxygen and clinical context",
+          "lowInterpretation": [
+            "PaO₂ below 8.0 kPa suggests hypoxaemic respiratory failure; confirm inspired oxygen and SpO₂."
+          ],
+          "highInterpretation": [],
+          "notes": [
+            "Do not use venous pO₂ to assess arterial oxygenation."
+          ]
+        },
+        {
+          "id": "lactate",
+          "name": "Lactate",
+          "unit": "mmol/L",
+          "referenceRange": "Below 2.0 mmol/L often considered normal",
+          "lowInterpretation": [],
+          "highInterpretation": [
+            "2.0–3.9 mmol/L is abnormal; at least 4.0 mmol/L is a major abnormality requiring urgent assessment of the cause."
+          ],
+          "notes": [
+            "A normal lactate does not exclude sepsis, shock or another serious illness."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acid-base-patterns",
+      "title": "Acid–base patterns",
+      "rows": [
+        {
+          "id": "respiratory-acidosis",
+          "name": "Respiratory acidosis",
+          "unit": "",
+          "referenceRange": "Low pH with raised pCO₂",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider hypoventilation, COPD/asthma fatigue, sedative/opioid effect, neuromuscular weakness or severe obesity hypoventilation. Raised bicarbonate may indicate chronic compensation or acute-on-chronic respiratory acidosis."
+          ]
+        },
+        {
+          "id": "metabolic-acidosis",
+          "name": "Metabolic acidosis",
+          "unit": "",
+          "referenceRange": "Low pH with low bicarbonate",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider lactate, ketones, renal failure, diarrhoea, toxins and the anion gap. Low pCO₂ may indicate respiratory compensation."
+          ]
+        },
+        {
+          "id": "mixed-acidosis",
+          "name": "Mixed respiratory and metabolic acidosis",
+          "unit": "",
+          "referenceRange": "Low pH with raised pCO₂ and low bicarbonate",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "High-risk pattern requiring urgent assessment."
+          ]
+        },
+        {
+          "id": "respiratory-alkalosis",
+          "name": "Respiratory alkalosis",
+          "unit": "",
+          "referenceRange": "High pH with low pCO₂",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider pain/anxiety only after excluding hypoxia, PE, sepsis, pregnancy, liver disease and salicylates."
+          ]
+        },
+        {
+          "id": "metabolic-alkalosis",
+          "name": "Metabolic alkalosis",
+          "unit": "",
+          "referenceRange": "High pH with raised bicarbonate",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Consider vomiting, gastric losses, diuretics, hypokalaemia, mineralocorticoid excess or alkali administration."
+          ]
+        },
+        {
+          "id": "mixed-alkalosis",
+          "name": "Mixed respiratory and metabolic alkalosis",
+          "unit": "",
+          "referenceRange": "High pH with low pCO₂ and raised bicarbonate",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Both low pCO₂ and raised bicarbonate are driving the pH up."
+          ]
+        }
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "acid-base-pattern",
+      "title": "Basic acid–base pattern",
+      "formula": "rule-based interpretation of pH, pCO2 and bicarbonate",
+      "inputLabels": [
+        "pH",
+        "pCO₂ (kPa)",
+        "Bicarbonate (mmol/L)"
+      ],
+      "outputUnit": "text",
+      "interpretation": [
+        "This is a basic pattern recognition aid and does not calculate expected compensation.",
+        "Review base excess, anion gap, sample quality and the clinical picture; consider mixed disorders."
+      ]
+    }
+  ],
+  "urgentFindings": [
+    "pH below 7.25 or a falling pH.",
+    "pH below 7.35 with raised pCO₂ and drowsiness or exhaustion.",
+    "Mixed respiratory and metabolic acidosis.",
+    "PaO₂ below the expected range despite oxygen.",
+    "Lactate at least 4 mmol/L."
+  ],
+  "overrides": [
+    "Escalate based on the patient and trajectory rather than a single threshold.",
+    "Always review potassium, glucose, ketones, lactate, haemoglobin and carboxyhaemoglobin/methemoglobin when clinically relevant."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/abg_vbg_interpretation_screen.dart",
+    "currentScreen": "AbgVbgInterpretationScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  }
+}
