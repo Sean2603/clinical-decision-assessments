@@ -159,5 +159,61 @@
     "currentScreen": "DvtWellsScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-dvt-unlikely",
+      "description": "Executable case for result band: DVT unlikely.",
+      "inputs": {
+        "active-cancer": false,
+        "paralysis-immobilisation": false,
+        "bedridden-surgery": false,
+        "deep-venous-tenderness": false,
+        "entire-leg-swollen": false,
+        "calf-swelling": false,
+        "pitting-oedema": false,
+        "collateral-veins": false,
+        "previous-dvt": false,
+        "alternative-diagnosis": true
+      },
+      "expectedScore": -2.0,
+      "expectedResultId": "dvt-unlikely"
+    },
+    {
+      "id": "result-dvt-likely",
+      "description": "Executable case for result band: DVT likely.",
+      "inputs": {
+        "active-cancer": false,
+        "paralysis-immobilisation": false,
+        "bedridden-surgery": false,
+        "deep-venous-tenderness": false,
+        "entire-leg-swollen": false,
+        "calf-swelling": false,
+        "pitting-oedema": false,
+        "collateral-veins": true,
+        "previous-dvt": true,
+        "alternative-diagnosis": false
+      },
+      "expectedScore": 2.0,
+      "expectedResultId": "dvt-likely"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "active-cancer": true,
+        "paralysis-immobilisation": true,
+        "bedridden-surgery": true,
+        "deep-venous-tenderness": true,
+        "entire-leg-swollen": true,
+        "calf-swelling": true,
+        "pitting-oedema": true,
+        "collateral-veins": true,
+        "previous-dvt": true,
+        "alternative-diagnosis": false
+      },
+      "expectedScore": 9.0,
+      "expectedResultId": "dvt-likely"
+    }
+  ]
 }

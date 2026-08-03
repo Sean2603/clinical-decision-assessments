@@ -151,5 +151,75 @@
     "currentScreen": "CanadianCSpineScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "high-risk",
+      "description": "A high-risk factor mandates imaging.",
+      "inputs": {
+        "age-65-or-older": true,
+        "dangerous-mechanism": false,
+        "paraesthesia": false,
+        "simple-rear-end": false,
+        "comfortable-sitting": false,
+        "ambulatory": false,
+        "delayed-neck-pain": false,
+        "no-midline-tenderness": false,
+        "rotates-45-degrees": false
+      },
+      "expectedScore": 1,
+      "expectedResultId": "imaging-indicated"
+    },
+    {
+      "id": "no-low-risk-factor",
+      "description": "No low-risk factor is present.",
+      "inputs": {
+        "age-65-or-older": false,
+        "dangerous-mechanism": false,
+        "paraesthesia": false,
+        "simple-rear-end": false,
+        "comfortable-sitting": false,
+        "ambulatory": false,
+        "delayed-neck-pain": false,
+        "no-midline-tenderness": false,
+        "rotates-45-degrees": true
+      },
+      "expectedScore": 1,
+      "expectedResultId": "imaging-indicated"
+    },
+    {
+      "id": "cannot-rotate",
+      "description": "A low-risk factor is present but rotation is not possible.",
+      "inputs": {
+        "age-65-or-older": false,
+        "dangerous-mechanism": false,
+        "paraesthesia": false,
+        "simple-rear-end": false,
+        "comfortable-sitting": true,
+        "ambulatory": false,
+        "delayed-neck-pain": false,
+        "no-midline-tenderness": false,
+        "rotates-45-degrees": false
+      },
+      "expectedScore": 1,
+      "expectedResultId": "imaging-indicated"
+    },
+    {
+      "id": "rotation-clear",
+      "description": "Low-risk factor present and 45-degree rotation is possible.",
+      "inputs": {
+        "age-65-or-older": false,
+        "dangerous-mechanism": false,
+        "paraesthesia": false,
+        "simple-rear-end": false,
+        "comfortable-sitting": true,
+        "ambulatory": false,
+        "delayed-neck-pain": false,
+        "no-midline-tenderness": false,
+        "rotates-45-degrees": true
+      },
+      "expectedScore": 0,
+      "expectedResultId": "imaging-not-indicated"
+    }
+  ]
 }

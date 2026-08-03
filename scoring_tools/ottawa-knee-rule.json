@@ -107,5 +107,46 @@
     "currentScreen": "OttawaKneeScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-negative",
+      "description": "Executable case for result band: No X-ray indicated.",
+      "inputs": {
+        "age-55-or-older": false,
+        "isolated-patellar-tenderness": false,
+        "fibular-head-tenderness": false,
+        "unable-flex-90": false,
+        "unable-four-steps": false
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "negative"
+    },
+    {
+      "id": "result-positive",
+      "description": "Executable case for result band: X-ray indicated.",
+      "inputs": {
+        "age-55-or-older": false,
+        "isolated-patellar-tenderness": false,
+        "fibular-head-tenderness": false,
+        "unable-flex-90": false,
+        "unable-four-steps": true
+      },
+      "expectedScore": 1.0,
+      "expectedResultId": "positive"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "age-55-or-older": true,
+        "isolated-patellar-tenderness": true,
+        "fibular-head-tenderness": true,
+        "unable-flex-90": true,
+        "unable-four-steps": true
+      },
+      "expectedScore": 5.0,
+      "expectedResultId": "positive"
+    }
+  ]
 }

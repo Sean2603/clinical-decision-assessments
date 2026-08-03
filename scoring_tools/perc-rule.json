@@ -176,5 +176,61 @@
     "currentScreen": "PercScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "not-applicable",
+      "description": "PERC prerequisites are not confirmed.",
+      "inputs": {
+        "low-clinical-probability": false,
+        "alternative-diagnosis-more-likely": false,
+        "age-50-or-older": false,
+        "pulse-100-or-higher": false,
+        "oxygen-saturation-below-95": false,
+        "unilateral-leg-swelling": false,
+        "haemoptysis": false,
+        "recent-surgery-or-trauma": false,
+        "previous-dvt-or-pe": false,
+        "exogenous-oestrogen": false
+      },
+      "expectedScore": -1,
+      "expectedResultId": "not-applicable"
+    },
+    {
+      "id": "perc-negative",
+      "description": "Prerequisites confirmed and all eight PERC criteria negative.",
+      "inputs": {
+        "low-clinical-probability": true,
+        "alternative-diagnosis-more-likely": true,
+        "age-50-or-older": false,
+        "pulse-100-or-higher": false,
+        "oxygen-saturation-below-95": false,
+        "unilateral-leg-swelling": false,
+        "haemoptysis": false,
+        "recent-surgery-or-trauma": false,
+        "previous-dvt-or-pe": false,
+        "exogenous-oestrogen": false
+      },
+      "expectedScore": 0,
+      "expectedResultId": "negative"
+    },
+    {
+      "id": "perc-positive",
+      "description": "Prerequisites confirmed with one positive PERC criterion.",
+      "inputs": {
+        "low-clinical-probability": true,
+        "alternative-diagnosis-more-likely": true,
+        "age-50-or-older": true,
+        "pulse-100-or-higher": false,
+        "oxygen-saturation-below-95": false,
+        "unilateral-leg-swelling": false,
+        "haemoptysis": false,
+        "recent-surgery-or-trauma": false,
+        "previous-dvt-or-pe": false,
+        "exogenous-oestrogen": false
+      },
+      "expectedScore": 1,
+      "expectedResultId": "positive"
+    }
+  ]
 }

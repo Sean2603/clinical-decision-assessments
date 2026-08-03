@@ -183,6 +183,74 @@
       "interpretation": [
         "This is a basic pattern recognition aid and does not calculate expected compensation.",
         "Review base excess, anion gap, sample quality and the clinical picture; consider mixed disorders."
+      ],
+      "parityCases": [
+        {
+          "id": "normal",
+          "description": "Values within usual ranges.",
+          "inputs": {
+            "ph": 7.4,
+            "pco2": 5.3,
+            "bicarbonate": 24
+          },
+          "expectedNumber": null,
+          "expectedText": "No primary acid–base abnormality identified by this basic rule set"
+        },
+        {
+          "id": "respiratory-acidosis",
+          "description": "Low pH with raised pCO₂ and normal bicarbonate.",
+          "inputs": {
+            "ph": 7.25,
+            "pco2": 7.0,
+            "bicarbonate": 24
+          },
+          "expectedNumber": null,
+          "expectedText": "Primary respiratory acidosis pattern"
+        },
+        {
+          "id": "metabolic-acidosis",
+          "description": "Low pH and bicarbonate with pCO₂ not raised.",
+          "inputs": {
+            "ph": 7.25,
+            "pco2": 5.0,
+            "bicarbonate": 16
+          },
+          "expectedNumber": null,
+          "expectedText": "Primary metabolic acidosis pattern"
+        },
+        {
+          "id": "mixed-acidosis",
+          "description": "Low pH, raised pCO₂ and low bicarbonate.",
+          "inputs": {
+            "ph": 7.1,
+            "pco2": 8.0,
+            "bicarbonate": 15
+          },
+          "expectedNumber": null,
+          "expectedText": "Mixed respiratory and metabolic acidosis pattern"
+        },
+        {
+          "id": "respiratory-alkalosis",
+          "description": "High pH with low pCO₂.",
+          "inputs": {
+            "ph": 7.5,
+            "pco2": 3.5,
+            "bicarbonate": 24
+          },
+          "expectedNumber": null,
+          "expectedText": "Primary respiratory alkalosis pattern"
+        },
+        {
+          "id": "metabolic-alkalosis",
+          "description": "High pH and bicarbonate with pCO₂ not low.",
+          "inputs": {
+            "ph": 7.5,
+            "pco2": 5.5,
+            "bicarbonate": 32
+          },
+          "expectedNumber": null,
+          "expectedText": "Primary metabolic alkalosis pattern"
+        }
       ]
     }
   ],

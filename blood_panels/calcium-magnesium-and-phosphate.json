@@ -78,6 +78,28 @@
       "interpretation": [
         "Corrected calcium formulas are approximations.",
         "They become unreliable in critical illness, major acid–base disturbance, severe hypoalbuminaemia and renal failure; ionised calcium is preferable in these settings."
+      ],
+      "parityCases": [
+        {
+          "id": "normal-albumin",
+          "description": "Albumin 40 g/L leaves measured calcium unchanged.",
+          "inputs": {
+            "measuredCalcium": 2.2,
+            "albumin": 40
+          },
+          "expectedNumber": 2.2,
+          "expectedText": null
+        },
+        {
+          "id": "low-albumin",
+          "description": "Low albumin increases corrected calcium.",
+          "inputs": {
+            "measuredCalcium": 2.0,
+            "albumin": 30
+          },
+          "expectedNumber": 2.2,
+          "expectedText": null
+        }
       ]
     }
   ],

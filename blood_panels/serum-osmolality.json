@@ -50,6 +50,30 @@
       "outputUnit": "mOsm/kg",
       "interpretation": [
         "Calculated osmolality is an estimate."
+      ],
+      "parityCases": [
+        {
+          "id": "standard",
+          "description": "Representative calculated serum osmolality.",
+          "inputs": {
+            "sodium": 140,
+            "glucose": 5,
+            "urea": 5
+          },
+          "expectedNumber": 290,
+          "expectedText": null
+        },
+        {
+          "id": "hyperglycaemia",
+          "description": "Hyperglycaemia increases calculated osmolality.",
+          "inputs": {
+            "sodium": 135,
+            "glucose": 30,
+            "urea": 10
+          },
+          "expectedNumber": 310,
+          "expectedText": null
+        }
       ]
     },
     {
@@ -63,6 +87,28 @@
       "outputUnit": "mOsm/kg",
       "interpretation": [
         "A raised gap can occur with toxic alcohols, ethanol, ketones, lactate, renal failure or formula/laboratory variation."
+      ],
+      "parityCases": [
+        {
+          "id": "normal-gap",
+          "description": "Small osmolal gap.",
+          "inputs": {
+            "measuredOsmolality": 295,
+            "calculatedOsmolality": 290
+          },
+          "expectedNumber": 5,
+          "expectedText": null
+        },
+        {
+          "id": "raised-gap",
+          "description": "Raised osmolal gap.",
+          "inputs": {
+            "measuredOsmolality": 320,
+            "calculatedOsmolality": 290
+          },
+          "expectedNumber": 30,
+          "expectedText": null
+        }
       ]
     }
   ],
