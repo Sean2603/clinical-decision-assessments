@@ -100,5 +100,43 @@
     "currentScreen": "CentorScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-low",
+      "description": "Executable case for result band: Antibiotics generally not indicated.",
+      "inputs": {
+        "tonsillar-exudate": false,
+        "tender-anterior-cervical-nodes": false,
+        "fever-history": false,
+        "absence-cough": false
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "low"
+    },
+    {
+      "id": "result-higher",
+      "description": "Executable case for result band: More likely to benefit.",
+      "inputs": {
+        "tonsillar-exudate": false,
+        "tender-anterior-cervical-nodes": true,
+        "fever-history": true,
+        "absence-cough": true
+      },
+      "expectedScore": 3.0,
+      "expectedResultId": "higher"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "tonsillar-exudate": true,
+        "tender-anterior-cervical-nodes": true,
+        "fever-history": true,
+        "absence-cough": true
+      },
+      "expectedScore": 4.0,
+      "expectedResultId": "higher"
+    }
+  ]
 }

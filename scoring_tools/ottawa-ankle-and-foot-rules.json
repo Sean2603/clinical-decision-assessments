@@ -130,5 +130,52 @@
     "currentScreen": "OttawaAnkleScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "no-radiograph",
+      "description": "No zone-specific radiograph indication.",
+      "inputs": {
+        "pain-malleolar-zone": false,
+        "lateral-malleolus-tenderness": false,
+        "medial-malleolus-tenderness": false,
+        "pain-midfoot-zone": false,
+        "fifth-metatarsal-tenderness": false,
+        "navicular-tenderness": false,
+        "unable-four-steps": false
+      },
+      "expectedScore": 0,
+      "expectedResultId": "no-xray"
+    },
+    {
+      "id": "ankle-radiograph",
+      "description": "Malleolar-zone pain with lateral malleolar tenderness.",
+      "inputs": {
+        "pain-malleolar-zone": true,
+        "lateral-malleolus-tenderness": true,
+        "medial-malleolus-tenderness": false,
+        "pain-midfoot-zone": false,
+        "fifth-metatarsal-tenderness": false,
+        "navicular-tenderness": false,
+        "unable-four-steps": false
+      },
+      "expectedScore": 1,
+      "expectedResultId": "xray-indicated"
+    },
+    {
+      "id": "ankle-and-foot-radiographs",
+      "description": "Both ankle and foot zone groups are positive.",
+      "inputs": {
+        "pain-malleolar-zone": true,
+        "lateral-malleolus-tenderness": true,
+        "medial-malleolus-tenderness": false,
+        "pain-midfoot-zone": true,
+        "fifth-metatarsal-tenderness": false,
+        "navicular-tenderness": true,
+        "unable-four-steps": false
+      },
+      "expectedScore": 2,
+      "expectedResultId": "xray-indicated"
+    }
+  ]
 }

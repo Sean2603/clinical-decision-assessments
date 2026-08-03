@@ -155,5 +155,29 @@
     "currentScreen": "GcsScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-gcs",
+      "description": "Executable case for result band: GCS total.",
+      "inputs": {
+        "eye-response": "none",
+        "verbal-response": "none",
+        "motor-response": "none"
+      },
+      "expectedScore": 3.0,
+      "expectedResultId": "gcs"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "eye-response": "spontaneous",
+        "verbal-response": "orientated",
+        "motor-response": "obeys-commands"
+      },
+      "expectedScore": 15.0,
+      "expectedResultId": "gcs"
+    }
+  ]
 }

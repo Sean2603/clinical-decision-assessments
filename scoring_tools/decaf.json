@@ -99,5 +99,33 @@
     "currentScreen": "DecafScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-decaf",
+      "description": "Executable case for result band: DECAF score.",
+      "inputs": {
+        "emrcd-5": false,
+        "eosinopenia": false,
+        "consolidation": false,
+        "acidaemia": false,
+        "atrial-fibrillation": false
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "decaf"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "emrcd-5": true,
+        "eosinopenia": true,
+        "consolidation": true,
+        "acidaemia": true,
+        "atrial-fibrillation": true
+      },
+      "expectedScore": 5.0,
+      "expectedResultId": "decaf"
+    }
+  ]
 }

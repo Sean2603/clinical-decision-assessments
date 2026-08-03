@@ -39,5 +39,6 @@
     "currentScreen": "HospitalToolReferenceScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": []
 }

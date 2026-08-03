@@ -109,5 +109,55 @@
     "currentScreen": "Crb65Screen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-score-0",
+      "description": "Executable case for result band: Low predicted mortality risk.",
+      "inputs": {
+        "confusion": false,
+        "respiratory-rate": false,
+        "low-blood-pressure": false,
+        "age-65": false
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "score-0"
+    },
+    {
+      "id": "result-score-1-2",
+      "description": "Executable case for result band: Increased risk.",
+      "inputs": {
+        "confusion": false,
+        "respiratory-rate": false,
+        "low-blood-pressure": false,
+        "age-65": true
+      },
+      "expectedScore": 1.0,
+      "expectedResultId": "score-1-2"
+    },
+    {
+      "id": "result-score-3-4",
+      "description": "Executable case for result band: High risk.",
+      "inputs": {
+        "confusion": false,
+        "respiratory-rate": true,
+        "low-blood-pressure": true,
+        "age-65": true
+      },
+      "expectedScore": 3.0,
+      "expectedResultId": "score-3-4"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "confusion": true,
+        "respiratory-rate": true,
+        "low-blood-pressure": true,
+        "age-65": true
+      },
+      "expectedScore": 4.0,
+      "expectedResultId": "score-3-4"
+    }
+  ]
 }

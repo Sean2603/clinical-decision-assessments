@@ -199,5 +199,59 @@
     "currentScreen": "HeartScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-low",
+      "description": "Executable case for result band: Conventionally low risk.",
+      "inputs": {
+        "history": "slightly-suspicious",
+        "ecg": "normal",
+        "age": "under-45-years",
+        "risk-factors": "no-recognised-risk-factors",
+        "troponin": "at-or-below-normal-limit"
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "low"
+    },
+    {
+      "id": "result-intermediate",
+      "description": "Executable case for result band: Intermediate risk.",
+      "inputs": {
+        "history": "slightly-suspicious",
+        "ecg": "normal",
+        "age": "under-45-years",
+        "risk-factors": "at-least-3-risk-factors-or-known-atherosclerotic-disease",
+        "troponin": "more-than-3-times-normal-limit"
+      },
+      "expectedScore": 4.0,
+      "expectedResultId": "intermediate"
+    },
+    {
+      "id": "result-high",
+      "description": "Executable case for result band: High risk.",
+      "inputs": {
+        "history": "slightly-suspicious",
+        "ecg": "non-specific-repolarisation-disturbance",
+        "age": "65-years-or-older",
+        "risk-factors": "at-least-3-risk-factors-or-known-atherosclerotic-disease",
+        "troponin": "more-than-3-times-normal-limit"
+      },
+      "expectedScore": 7.0,
+      "expectedResultId": "high"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "history": "highly-suspicious",
+        "ecg": "significant-st-segment-depression",
+        "age": "65-years-or-older",
+        "risk-factors": "at-least-3-risk-factors-or-known-atherosclerotic-disease",
+        "troponin": "more-than-3-times-normal-limit"
+      },
+      "expectedScore": 10.0,
+      "expectedResultId": "high"
+    }
+  ]
 }

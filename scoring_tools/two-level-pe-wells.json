@@ -129,5 +129,52 @@
     "currentScreen": "PeWellsScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-pe-unlikely",
+      "description": "Executable case for result band: PE unlikely.",
+      "inputs": {
+        "clinical-signs-dvt": false,
+        "alternative-less-likely": false,
+        "heart-rate-over-100": false,
+        "immobilisation-surgery": false,
+        "previous-dvt-pe": false,
+        "haemoptysis": false,
+        "malignancy": false
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "pe-unlikely"
+    },
+    {
+      "id": "result-pe-likely",
+      "description": "Executable case for result band: PE likely.",
+      "inputs": {
+        "clinical-signs-dvt": false,
+        "alternative-less-likely": false,
+        "heart-rate-over-100": true,
+        "immobilisation-surgery": true,
+        "previous-dvt-pe": true,
+        "haemoptysis": false,
+        "malignancy": false
+      },
+      "expectedScore": 4.5,
+      "expectedResultId": "pe-likely"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "clinical-signs-dvt": true,
+        "alternative-less-likely": true,
+        "heart-rate-over-100": true,
+        "immobilisation-surgery": true,
+        "previous-dvt-pe": true,
+        "haemoptysis": true,
+        "malignancy": true
+      },
+      "expectedScore": 12.5,
+      "expectedResultId": "pe-likely"
+    }
+  ]
 }

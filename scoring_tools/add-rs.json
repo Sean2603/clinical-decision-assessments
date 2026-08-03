@@ -97,5 +97,51 @@
     "currentScreen": "AddRsScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-zero",
+      "description": "Executable case for result band: No risk category identified.",
+      "inputs": {
+        "high-risk-condition": false,
+        "high-risk-pain": false,
+        "high-risk-examination": false
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "zero"
+    },
+    {
+      "id": "result-one",
+      "description": "Executable case for result band: One risk category.",
+      "inputs": {
+        "high-risk-condition": false,
+        "high-risk-pain": false,
+        "high-risk-examination": true
+      },
+      "expectedScore": 1.0,
+      "expectedResultId": "one"
+    },
+    {
+      "id": "result-multiple",
+      "description": "Executable case for result band: Multiple risk categories.",
+      "inputs": {
+        "high-risk-condition": false,
+        "high-risk-pain": true,
+        "high-risk-examination": true
+      },
+      "expectedScore": 2.0,
+      "expectedResultId": "multiple"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "high-risk-condition": true,
+        "high-risk-pain": true,
+        "high-risk-examination": true
+      },
+      "expectedScore": 3.0,
+      "expectedResultId": "multiple"
+    }
+  ]
 }

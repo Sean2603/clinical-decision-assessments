@@ -119,5 +119,59 @@
     "currentScreen": "Curb65Screen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-lower",
+      "description": "Executable case for result band: Lower mortality-risk category.",
+      "inputs": {
+        "confusion": false,
+        "urea": false,
+        "respiratory-rate": false,
+        "blood-pressure": false,
+        "age": false
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "lower"
+    },
+    {
+      "id": "result-intermediate",
+      "description": "Executable case for result band: Intermediate risk.",
+      "inputs": {
+        "confusion": false,
+        "urea": false,
+        "respiratory-rate": false,
+        "blood-pressure": true,
+        "age": true
+      },
+      "expectedScore": 2.0,
+      "expectedResultId": "intermediate"
+    },
+    {
+      "id": "result-high",
+      "description": "Executable case for result band: High risk.",
+      "inputs": {
+        "confusion": false,
+        "urea": false,
+        "respiratory-rate": true,
+        "blood-pressure": true,
+        "age": true
+      },
+      "expectedScore": 3.0,
+      "expectedResultId": "high"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "confusion": true,
+        "urea": true,
+        "respiratory-rate": true,
+        "blood-pressure": true,
+        "age": true
+      },
+      "expectedScore": 5.0,
+      "expectedResultId": "high"
+    }
+  ]
 }

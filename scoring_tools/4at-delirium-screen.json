@@ -161,5 +161,55 @@
     "currentScreen": "FourAtScreen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-zero",
+      "description": "Executable case for result band: Delirium less likely.",
+      "inputs": {
+        "alertness": "normal-fully-alert",
+        "amt4": "no-mistakes",
+        "attention": "seven-months-or-more-correctly",
+        "acute-change": "no"
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "zero"
+    },
+    {
+      "id": "result-one-three",
+      "description": "Executable case for result band: Possible cognitive impairment.",
+      "inputs": {
+        "alertness": "normal-fully-alert",
+        "amt4": "no-mistakes",
+        "attention": "starts-but-scores-fewer-than-seven-months-or-refuses",
+        "acute-change": "no"
+      },
+      "expectedScore": 1.0,
+      "expectedResultId": "one-three"
+    },
+    {
+      "id": "result-four-plus",
+      "description": "Executable case for result band: Possible delirium.",
+      "inputs": {
+        "alertness": "normal-fully-alert",
+        "amt4": "no-mistakes",
+        "attention": "seven-months-or-more-correctly",
+        "acute-change": "yes-change-in-cognition-alertness-or-mental-function-within-about-2-weeks-and-still-evident-in-the-last-24-hours"
+      },
+      "expectedScore": 4.0,
+      "expectedResultId": "four-plus"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "alertness": "clearly-abnormal-markedly-drowsy-or-agitated",
+        "amt4": "two-or-more-mistakes-or-untestable",
+        "attention": "untestable",
+        "acute-change": "yes-change-in-cognition-alertness-or-mental-function-within-about-2-weeks-and-still-evident-in-the-last-24-hours"
+      },
+      "expectedScore": 12.0,
+      "expectedResultId": "four-plus"
+    }
+  ]
 }

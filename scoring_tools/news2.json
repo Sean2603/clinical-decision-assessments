@@ -323,5 +323,55 @@
     "currentScreen": "News2Screen",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "parityCases": [
+    {
+      "id": "result-low",
+      "description": "Executable case for result band: Low aggregate score.",
+      "inputs": {
+        "respiratory-rate": "12-20",
+        "spo2-scale-1": "96",
+        "spo2-scale-2": "88-92-or-93-while-breathing-room-air",
+        "supplemental-oxygen": "breathing-room-air",
+        "temperature": "36-1-38-0",
+        "systolic-bp": "111-219",
+        "pulse": "51-90",
+        "consciousness": "alert-and-no-new-confusion"
+      },
+      "expectedScore": 0.0,
+      "expectedResultId": "low"
+    },
+    {
+      "id": "result-medium",
+      "description": "Executable case for result band: Medium aggregate score.",
+      "inputs": {
+        "respiratory-rate": "8",
+        "spo2-scale-1": "92-93",
+        "spo2-scale-2": "88-92-or-93-while-breathing-room-air",
+        "supplemental-oxygen": "breathing-room-air",
+        "temperature": "36-1-38-0",
+        "systolic-bp": "111-219",
+        "pulse": "51-90",
+        "consciousness": "alert-and-no-new-confusion"
+      },
+      "expectedScore": 5.0,
+      "expectedResultId": "medium"
+    },
+    {
+      "id": "result-high",
+      "description": "Executable case for result band: High aggregate score.",
+      "inputs": {
+        "respiratory-rate": "8",
+        "spo2-scale-1": "91",
+        "spo2-scale-2": "86-87-or-93-94-while-receiving-supplemental-oxygen",
+        "supplemental-oxygen": "breathing-room-air",
+        "temperature": "36-1-38-0",
+        "systolic-bp": "111-219",
+        "pulse": "51-90",
+        "consciousness": "alert-and-no-new-confusion"
+      },
+      "expectedScore": 7.0,
+      "expectedResultId": "high"
+    }
+  ]
 }
