@@ -23,7 +23,9 @@
     "calculationStrategy",
     "referenceIds",
     "clinicalValidation",
-    "migration"
+    "migration",
+    "evaluation",
+    "parityCases"
   ],
   "properties": {
     "id": {
@@ -195,6 +197,43 @@
         "migratedOn": {
           "type": "string",
           "format": "date"
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object"
+    },
+    "parityCases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "description",
+          "inputs",
+          "expectedScore",
+          "expectedResultId"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inputs": {
+            "type": "object"
+          },
+          "expectedScore": {
+            "type": "number"
+          },
+          "expectedResultId": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     }

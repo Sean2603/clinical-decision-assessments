@@ -184,6 +184,27 @@
         "This is a basic pattern recognition aid and does not calculate expected compensation.",
         "Review base excess, anion gap, sample quality and the clinical picture; consider mixed disorders."
       ],
+      "engine": {
+        "kind": "acid-base-basic",
+        "expression": null,
+        "precision": null,
+        "parameters": {
+          "lowPh": 7.35,
+          "highPh": 7.45,
+          "lowPco2": 4.7,
+          "highPco2": 6.0,
+          "lowBicarbonate": 22,
+          "highBicarbonate": 26
+        },
+        "textResults": {
+          "normal": "No primary acid–base abnormality identified by this basic rule set",
+          "primary-respiratory-acidosis": "Primary respiratory acidosis pattern",
+          "primary-metabolic-acidosis": "Primary metabolic acidosis pattern",
+          "mixed-respiratory-metabolic-acidosis": "Mixed respiratory and metabolic acidosis pattern",
+          "primary-respiratory-alkalosis": "Primary respiratory alkalosis pattern",
+          "primary-metabolic-alkalosis": "Primary metabolic alkalosis pattern"
+        }
+      },
       "parityCases": [
         {
           "id": "normal",

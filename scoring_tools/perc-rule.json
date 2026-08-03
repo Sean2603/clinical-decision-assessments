@@ -177,6 +177,27 @@
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
   },
+  "evaluation": {
+    "kind": "required-sum",
+    "scoreCriteria": [
+      "age-50-or-older",
+      "pulse-100-or-higher",
+      "oxygen-saturation-below-95",
+      "unilateral-leg-swelling",
+      "haemoptysis",
+      "recent-surgery-or-trauma",
+      "previous-dvt-or-pe",
+      "exogenous-oestrogen"
+    ],
+    "requiredTrue": [
+      "low-clinical-probability",
+      "alternative-diagnosis-more-likely"
+    ],
+    "failureScore": -1,
+    "failureResultId": "not-applicable",
+    "groups": [],
+    "decisionRules": []
+  },
   "parityCases": [
     {
       "id": "not-applicable",

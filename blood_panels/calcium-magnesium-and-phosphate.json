@@ -79,6 +79,13 @@
         "Corrected calcium formulas are approximations.",
         "They become unreliable in critical illness, major acid–base disturbance, severe hypoalbuminaemia and renal failure; ionised calcium is preferable in these settings."
       ],
+      "engine": {
+        "kind": "expression",
+        "expression": "measuredCalcium + 0.02 * (40 - albumin)",
+        "precision": 2,
+        "parameters": {},
+        "textResults": {}
+      },
       "parityCases": [
         {
           "id": "normal-albumin",

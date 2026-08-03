@@ -51,6 +51,13 @@
       "interpretation": [
         "Calculated osmolality is an estimate."
       ],
+      "engine": {
+        "kind": "expression",
+        "expression": "2 * sodium + glucose + urea",
+        "precision": 1,
+        "parameters": {},
+        "textResults": {}
+      },
       "parityCases": [
         {
           "id": "standard",
@@ -88,6 +95,13 @@
       "interpretation": [
         "A raised gap can occur with toxic alcohols, ethanol, ketones, lactate, renal failure or formula/laboratory variation."
       ],
+      "engine": {
+        "kind": "expression",
+        "expression": "measuredOsmolality - calculatedOsmolality",
+        "precision": 1,
+        "parameters": {},
+        "textResults": {}
+      },
       "parityCases": [
         {
           "id": "normal-gap",

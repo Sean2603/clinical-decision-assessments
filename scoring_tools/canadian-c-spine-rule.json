@@ -152,6 +152,72 @@
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
   },
+  "evaluation": {
+    "kind": "decision",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": [
+      {
+        "id": "high-risk",
+        "anyTrue": [
+          "age-65-or-older",
+          "dangerous-mechanism",
+          "paraesthesia"
+        ],
+        "allTrue": [],
+        "noneTrue": [],
+        "falseCriterion": null,
+        "always": false,
+        "score": 1,
+        "resultId": "imaging-indicated"
+      },
+      {
+        "id": "no-low-risk",
+        "anyTrue": [],
+        "allTrue": [],
+        "noneTrue": [
+          "simple-rear-end",
+          "comfortable-sitting",
+          "ambulatory",
+          "delayed-neck-pain",
+          "no-midline-tenderness"
+        ],
+        "falseCriterion": null,
+        "always": false,
+        "score": 1,
+        "resultId": "imaging-indicated"
+      },
+      {
+        "id": "cannot-rotate",
+        "anyTrue": [
+          "simple-rear-end",
+          "comfortable-sitting",
+          "ambulatory",
+          "delayed-neck-pain",
+          "no-midline-tenderness"
+        ],
+        "allTrue": [],
+        "noneTrue": [],
+        "falseCriterion": "rotates-45-degrees",
+        "always": false,
+        "score": 1,
+        "resultId": "imaging-indicated"
+      },
+      {
+        "id": "clear",
+        "anyTrue": [],
+        "allTrue": [],
+        "noneTrue": [],
+        "falseCriterion": null,
+        "always": true,
+        "score": 0,
+        "resultId": "imaging-not-indicated"
+      }
+    ]
+  },
   "parityCases": [
     {
       "id": "high-risk",

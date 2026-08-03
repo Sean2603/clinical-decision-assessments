@@ -256,7 +256,9 @@
         "formula",
         "inputLabels",
         "outputUnit",
-        "interpretation"
+        "interpretation",
+        "engine",
+        "parityCases"
       ],
       "properties": {
         "id": {
@@ -288,6 +290,48 @@
           "items": {
             "type": "string",
             "minLength": 1
+          }
+        },
+        "engine": {
+          "type": "object"
+        },
+        "parityCases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "description",
+              "inputs",
+              "expectedNumber",
+              "expectedText"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "inputs": {
+                "type": "object"
+              },
+              "expectedNumber": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "expectedText": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
           }
         }
       }

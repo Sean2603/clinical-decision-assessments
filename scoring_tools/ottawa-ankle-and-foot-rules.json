@@ -131,6 +131,38 @@
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
   },
+  "evaluation": {
+    "kind": "group-count",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "decisionRules": [],
+    "groups": [
+      {
+        "id": "ankle",
+        "allTrue": [
+          "pain-malleolar-zone"
+        ],
+        "anyTrue": [
+          "lateral-malleolus-tenderness",
+          "medial-malleolus-tenderness",
+          "unable-four-steps"
+        ]
+      },
+      {
+        "id": "foot",
+        "allTrue": [
+          "pain-midfoot-zone"
+        ],
+        "anyTrue": [
+          "fifth-metatarsal-tenderness",
+          "navicular-tenderness",
+          "unable-four-steps"
+        ]
+      }
+    ]
+  },
   "parityCases": [
     {
       "id": "no-radiograph",

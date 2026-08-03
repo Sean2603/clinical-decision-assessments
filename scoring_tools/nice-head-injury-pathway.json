@@ -40,5 +40,14 @@
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
   },
+  "evaluation": {
+    "kind": "none",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
   "parityCases": []
 }

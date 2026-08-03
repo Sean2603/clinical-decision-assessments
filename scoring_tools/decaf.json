@@ -100,6 +100,15 @@
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
   },
+  "evaluation": {
+    "kind": "sum",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
   "parityCases": [
     {
       "id": "result-decaf",
