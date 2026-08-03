@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.1.21",
-  "updatedAt": "2026-08-03T20:16:24Z",
+  "contentVersion": "1.1.22",
+  "updatedAt": "2026-08-03T20:23:21Z",
   "minimumAppVersion": "0.18.0",
   "references": {
     "file": "references/references.json",
@@ -17,10 +17,10 @@
     {
       "id": "acute-kidney-injury-assessment",
       "title": "Acute Kidney Injury Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "e0cf54edc75f47a0c22762d41f0e7d25dbe2cf087575a9766629ed14ec00f29a",
+      "sha256": "3a826c5aa6810414cfff5332e5f1d90dd32f25e530ccade482acf68cab6fb0fb",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {
@@ -44,10 +44,10 @@
     {
       "id": "dehydration-assessment",
       "title": "Dehydration Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/dehydration-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "3ecf524029cb3c58fc89cbfed8484bce8a7419b023bb2b432873caa0315c1c0b",
+      "sha256": "bda1630bf5948e14137b8c9ea26b1e6678ecc413f6d9942072ff527cf0c1ed05",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {
@@ -62,10 +62,10 @@
     {
       "id": "dizziness-vertigo-assessment",
       "title": "Dizziness and Vertigo Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "da02f19a9398551c88e2bfec4028975cc9d89f9a453d9d4947a575905ffc6a5c",
+      "sha256": "69427ed0ecf01dc0cc78554a97f3fd47d7f6dfe600d950701ec5394b6c60056a",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {
@@ -89,10 +89,10 @@
     {
       "id": "frailty-assessment",
       "title": "Frailty Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/frailty-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "42fd94071d73665c18b6af470c6319ca8a0707d7ae3002c0dbeb4c69815d8640",
+      "sha256": "3d09e49bc81b37339d80bd7bc649a9c79f7ee95c53e121e2856ba07ac4100374",
       "schemaSha256": "9a4c47fbd2ffed0497ff8d9e6a1ef3ff40daf9985719c3579060515efa3c905a"
     },
     {

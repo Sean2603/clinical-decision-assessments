@@ -75,3 +75,7 @@ compared with the current Dart implementation and its tests.
 The shared reference registry and clinical reliability file remain
 authoritative. Every scoring-tool and blood-panel definition must have a
 matching reliability item with the same stable ID and display title.
+
+### Review-due references
+
+A cited reference with `reviewStatus: review-due` no longer blocks publication. During publishing, `tool/mark_review_due_content.py` marks each affected assessment, scoring tool, or blood panel with `clinicalValidation.validated: false`, clears previous reviewer metadata, records the affected reference IDs in `reviewNotes`, and bumps the item patch version. Superseded, withdrawn, unavailable, and unverified cited references still block publication.

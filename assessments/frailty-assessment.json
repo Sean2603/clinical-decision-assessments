@@ -1,7 +1,7 @@
 {
   "id": "frailty-assessment",
   "title": "Frailty Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing an older person living with frailty, distinguishing baseline vulnerability from acute illness, identifying delirium and functional decline, and coordinating proportionate treatment, support and follow-up.",
   "sections": [
     {
@@ -614,6 +614,6 @@
     "reviewedBy": null,
     "reviewedOn": null,
     "reviewerRole": null,
-    "reviewNotes": null
+    "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG136, NICE-NG249."
   }
 }

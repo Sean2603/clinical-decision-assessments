@@ -14,7 +14,6 @@ ASSESSMENTS_DIR = ROOT / "assessments"
 CLINICAL_RELIABILITY_PATH = ROOT / "clinical_reliability" / "clinical-reliability.json"
 
 NON_CURRENT = {
-    "review-due",
     "superseded",
     "withdrawn",
     "unavailable",
@@ -161,14 +160,22 @@ def main() -> int:
             status = reference.get("reviewStatus")
             due = parse_date(reference.get("nextReviewDue"))
 
-            if status in NON_CURRENT:
+            if status == "review-due":
+                warnings.append(
+                    f"{reference_id}: cited reference review is due; "
+                    "publication is allowed but affected content must be "
+                    "marked as requiring clinical validation."
+                )
+            elif status in NON_CURRENT:
                 errors.append(
                     f"{reference_id}: cited reference status is {status!r}; "
-                    "only current references may be published."
+                    "only current or review-due references may be published."
                 )
             elif due is not None and due < today:
-                errors.append(
-                    f"{reference_id}: cited reference review is overdue."
+                warnings.append(
+                    f"{reference_id}: cited reference review is overdue; "
+                    "publication is allowed but affected content must be "
+                    "marked as requiring clinical validation."
                 )
 
     for warning in warnings:

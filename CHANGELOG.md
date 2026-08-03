@@ -23,3 +23,10 @@
 - Added common examination patterns and NICE-linked imaging guidance.
 - Added focused Back Pain safety-netting.
 - Added shared references, schema validation and manifest checksums.
+
+## Reference review-due publication handling
+
+- Allow cited references with `reviewStatus: review-due` to publish with warnings.
+- Continue blocking cited references that are superseded, withdrawn, unavailable, or unverified.
+- Automatically mark affected assessments, scoring tools, and blood panels as clinically unvalidated before publication.
+- Clear prior reviewer metadata, add a review-due note, and bump the affected content item version.
