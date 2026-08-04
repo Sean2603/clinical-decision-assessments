@@ -1,8 +1,8 @@
 {
   "id": "frailty-assessment",
   "title": "Frailty Assessment",
-  "version": "0.1.1",
-  "summary": "A clinician-facing prompt for assessing an older person living with frailty, distinguishing baseline vulnerability from acute illness, identifying delirium and functional decline, and coordinating proportionate treatment, support and follow-up.",
+  "version": "0.2.0",
+  "summary": "The umbrella guide for the Frailty clinical package: establish baseline vulnerability, identify acute illness and functional decline, and link to focused guides for falls, delirium, CGA and medicines-related harm.",
   "sections": [
     {
       "id": "assessment-priorities",
@@ -599,7 +599,7 @@
           "id": "frailty-safety-netting",
           "title": "Frailty and functional deterioration",
           "safetyNetting": [
-            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
+            "Any significant deterioration in breathing, chest pain or collapse – call 999.",
             "Seek urgent reassessment for new or worsening confusion; inability to stand, walk, eat, drink, pass urine or take essential medicines; a further fall or injury; fever or rigors; uncontrolled pain; marked drowsiness; or any situation in which essential care can no longer be provided safely.",
             "Follow the agreed review plan and contact the named service if function, intake or cognition has not returned towards baseline within the expected timeframe."
           ],

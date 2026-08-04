@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-01",
+  "lastChecked": "2026-08-04",
   "references": [
     {
       "id": "NICE-NG59",
@@ -559,6 +559,58 @@
         "dizziness",
         "vertigo",
         "neuroimaging"
+      ]
+    },
+    {
+      "id": "NICE-NG5",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Medicines optimisation: the safe and effective use of medicines to enable the best possible outcomes",
+      "referenceNumber": "NG5",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng5",
+      "published": "2015-03-04",
+      "lastUpdated": null,
+      "accessed": "2026-08-04",
+      "lastReviewed": "2026-08-04",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2026-11-04",
+      "supersededBy": null,
+      "notes": "Official NICE guidance checked on 4 August 2026. It covers medicines reconciliation, medication review, communication at transitions of care and person-centred medicines optimisation.",
+      "relevantTopics": [
+        "medicines optimisation",
+        "medicines reconciliation",
+        "medication review",
+        "polypharmacy",
+        "transitions of care"
+      ]
+    },
+    {
+      "id": "BGS-CGA",
+      "organisation": "British Geriatrics Society",
+      "shortOrganisation": "BGS",
+      "title": "Comprehensive Geriatric Assessment Hub",
+      "referenceNumber": "CGA Hub",
+      "type": "professional-statement",
+      "url": "https://www.bgs.org.uk/CGA",
+      "published": "2019-01-28",
+      "lastUpdated": "2024-11-14",
+      "accessed": "2026-08-04",
+      "lastReviewed": "2026-08-04",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2026-11-04",
+      "supersededBy": null,
+      "notes": "BGS CGA resources checked on 4 August 2026. They describe CGA as a multidimensional, interdisciplinary process covering physical, functional, psychological, social and environmental needs and producing a coordinated care plan.",
+      "relevantTopics": [
+        "comprehensive geriatric assessment",
+        "frailty",
+        "multidisciplinary care",
+        "function",
+        "care planning"
       ]
     }
   ]
