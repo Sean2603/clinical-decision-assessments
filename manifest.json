@@ -1,11 +1,11 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.1.24",
-  "updatedAt": "2026-08-04T21:29:38Z",
+  "contentVersion": "1.1.25",
+  "updatedAt": "2026-08-04T21:35:24Z",
   "minimumAppVersion": "0.18.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "c72f4213b478c1ae9a6327ae141d8e3ac317e76b795029ebf9bd2f9ad8e01091"
+    "sha256": "d6e6a1c5dd48a9c307a3a7edd956ea2b07958f66e931a20c39ec1de746a772d8"
   },
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
@@ -35,6 +35,18 @@
   },
   "assessments": [
     {
+      "id": "acute-confusion-and-delirium",
+      "title": "Acute Confusion and Delirium",
+      "version": "0.1.0",
+      "file": "assessments/acute-confusion-and-delirium.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "7775bd22e9fbd9dd0591a5dbc3cfdb5855bacad54c6d9d9344912dd7fca4e366",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
+      "categoryIds": [
+        "frailty"
+      ]
+    },
+    {
       "id": "acute-kidney-injury-assessment",
       "title": "Acute Kidney Injury Assessment",
       "version": "0.1.1",
@@ -56,6 +68,18 @@
       "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "uncategorised"
+      ]
+    },
+    {
+      "id": "comprehensive-geriatric-assessment",
+      "title": "Comprehensive Geriatric Assessment",
+      "version": "0.1.0",
+      "file": "assessments/comprehensive-geriatric-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "2cc23e3a7f211542dcfd30813b010f87b2e7fcbee774cc3bf5466bbfc2c012d4",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
+      "categoryIds": [
+        "frailty"
       ]
     },
     {
@@ -83,12 +107,36 @@
       ]
     },
     {
+      "id": "falls-in-older-adults",
+      "title": "Falls in Older Adults",
+      "version": "0.1.1",
+      "file": "assessments/falls-in-older-adults.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "23e1ac75c703f201b386eab498dd99cc19c565b18684d1b4f05590d40f61f153",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
+      "categoryIds": [
+        "frailty"
+      ]
+    },
+    {
       "id": "frailty-assessment",
       "title": "Frailty Assessment",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "assessments/frailty-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "df72bc36b041688a0551e9df14e6fe2975c8e55bbd7a560afb3119c5245c2bf3",
+      "sha256": "37ac8d4740353a91800c7d21fb669042ded31babbdaf42d0f73979fa9d5f7b19",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
+      "categoryIds": [
+        "frailty"
+      ]
+    },
+    {
+      "id": "polypharmacy-and-medicines-related-harm",
+      "title": "Polypharmacy and Medicines-Related Harm",
+      "version": "0.1.1",
+      "file": "assessments/polypharmacy-and-medicines-related-harm.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "561d504fcd699669fc1212b90f36ef4e734b9a18a3aa322e4abb765b488060b1",
       "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "frailty"

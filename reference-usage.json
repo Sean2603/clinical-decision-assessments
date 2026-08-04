@@ -2,8 +2,28 @@
   "generated": true,
   "references": [
     {
+      "referenceId": "BGS-CGA",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-CG103",
       "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-confusion-and-delirium",
+          "title": "Acute Confusion and Delirium"
+        },
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        },
         {
           "type": "assessment",
           "id": "dehydration-assessment",
@@ -11,8 +31,18 @@
         },
         {
           "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
           "id": "frailty-assessment",
           "title": "Frailty Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
         }
       ]
     },
@@ -241,6 +271,11 @@
       "usedBy": [
         {
           "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
           "id": "frailty-assessment",
           "title": "Frailty Assessment"
         },
@@ -276,8 +311,18 @@
         },
         {
           "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
           "id": "frailty-assessment",
           "title": "Frailty Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
         }
       ]
     },
@@ -317,8 +362,38 @@
       ]
     },
     {
+      "referenceId": "NICE-NG5",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-confusion-and-delirium",
+          "title": "Acute Confusion and Delirium"
+        },
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG56",
       "usedBy": [
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        },
         {
           "type": "assessment",
           "id": "dehydration-assessment",
@@ -326,8 +401,18 @@
         },
         {
           "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
           "id": "frailty-assessment",
           "title": "Frailty Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
         }
       ]
     },

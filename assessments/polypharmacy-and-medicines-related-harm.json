@@ -1,7 +1,7 @@
 {
   "id": "polypharmacy-and-medicines-related-harm",
   "title": "Polypharmacy and Medicines-Related Harm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing guide for recognising medicines-related deterioration in an older person, reconciling treatment, identifying high-risk medicines and arranging safe prescriber-led review.",
   "sections": [
     {
@@ -239,7 +239,7 @@
     "reviewedBy": null,
     "reviewedOn": null,
     "reviewerRole": null,
-    "reviewNotes": "Clinical validation required before publication. Core sources: NICE NG5, NICE NG56, NICE NG249 and NICE CG103."
+    "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG249."
   },
   "categoryIds": [
     "frailty"

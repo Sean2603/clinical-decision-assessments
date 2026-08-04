@@ -1,7 +1,7 @@
 {
   "id": "falls-in-older-adults",
   "title": "Falls in Older Adults",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing guide for assessing an older adult after a fall, identifying injury and acute illness, comparing current function with baseline, and determining whether safe supported management is possible.",
   "sections": [
     {
@@ -313,7 +313,7 @@
     "reviewedBy": null,
     "reviewedOn": null,
     "reviewerRole": null,
-    "reviewNotes": "Clinical validation required before publication. Core sources: NICE NG249, NICE NG232, NICE CG103, NICE NG56 and NICE NG5."
+    "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG249."
   },
   "categoryIds": [
     "frailty"
