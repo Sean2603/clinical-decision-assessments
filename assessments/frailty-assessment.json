@@ -615,5 +615,8 @@
     "reviewedOn": null,
     "reviewerRole": null,
     "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG136, NICE-NG249."
-  }
+  },
+  "categoryIds": [
+    "frailty"
+  ]
 }

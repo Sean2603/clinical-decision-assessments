@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = ROOT / "manifest.json"
 REFERENCES_PATH = ROOT / "references" / "references.json"
 RELIABILITY_PATH = ROOT / "clinical_reliability" / "clinical-reliability.json"
+CATEGORIES_PATH = ROOT / "categories" / "assessment-categories.json"
+CATEGORIES_SCHEMA_PATH = ROOT / "schema" / "assessment-categories-schema.json"
 
 COLLECTIONS = {
     "assessments": {
@@ -95,6 +97,9 @@ def build_entries(
         semver_parts(version)
 
         previous = existing_entries.get(item_id, {})
+        generated_metadata = {}
+        if directory.name == "assessments":
+            generated_metadata["categoryIds"] = item.get("categoryIds", ["uncategorised"])
         entries.append({
             "id": item_id,
             "title": title,
@@ -103,12 +108,13 @@ def build_entries(
             "schema": schema_path.relative_to(ROOT).as_posix(),
             "sha256": sha256(item_path),
             "schemaSha256": sha256(schema_path),
+            **generated_metadata,
             **{
                 key: value
                 for key, value in previous.items()
                 if key not in {
                     "id", "title", "version", "file", "schema",
-                    "sha256", "schemaSha256",
+                    "sha256", "schemaSha256", "categoryIds",
                 }
             },
         })
@@ -119,6 +125,8 @@ def main() -> None:
     manifest = load_json(MANIFEST_PATH)
     load_json(REFERENCES_PATH)
     load_json(RELIABILITY_PATH)
+    categories = load_json(CATEGORIES_PATH)
+    load_json(CATEGORIES_SCHEMA_PATH)
 
     generated_collections: dict[str, list[dict]] = {}
     for key, settings in COLLECTIONS.items():
@@ -147,6 +155,13 @@ def main() -> None:
             "file": "references/references.json",
             "sha256": sha256(REFERENCES_PATH),
         },
+        "assessmentCategories": {
+            "file": "categories/assessment-categories.json",
+            "schema": "schema/assessment-categories-schema.json",
+            "sha256": sha256(CATEGORIES_PATH),
+            "schemaSha256": sha256(CATEGORIES_SCHEMA_PATH),
+            "items": categories["categories"],
+        },
         "clinicalReliability": {
             "file": "clinical_reliability/clinical-reliability.json",
             "schema": "schema/clinical-reliability-schema.json",
@@ -173,6 +188,7 @@ def main() -> None:
         .replace("+00:00", "Z"),
         "minimumAppVersion": generated_core["minimumAppVersion"],
         "references": generated_core["references"],
+        "assessmentCategories": generated_core["assessmentCategories"],
         "clinicalReliability": generated_core["clinicalReliability"],
         "assessments": generated_core["assessments"],
         "guidelines": generated_core["guidelines"],

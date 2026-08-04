@@ -1,3 +1,9 @@
+## 1.1.23 - 2026-08-04
+
+- Added assessment category schema and manifest metadata.
+- Assigned Frailty Assessment to the Frailty subsection.
+- Added validation for category identifiers and an Uncategorised fallback.
+
 # Changelog
 
 ## 1.1.15 — 2026-08-01

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "frailty",
+      "title": "Frailty",
+      "description": "Assessment of older adults with frailty syndromes, functional decline and medicines-related risk.",
+      "order": 10
+    },
+    {
+      "id": "uncategorised",
+      "title": "Uncategorised",
+      "description": "Assessment guides not yet assigned to a clinical subsection.",
+      "order": 9999
+    }
+  ]
+}

@@ -109,6 +109,7 @@ def validate_collection(
     settings: dict,
     known_reference_ids: set[str],
     reliability_by_category: dict[str, dict[str, dict]],
+    known_category_ids: set[str],
     errors: list[str],
 ) -> dict[str, dict]:
     schema = load_json(settings["schema"], errors)
@@ -150,6 +151,12 @@ def validate_collection(
             suffix = f":{location}" if location else ""
             errors.append(f"{path}{suffix}: {validation_error.message}")
 
+        if kind == "assessment":
+            category_ids = value.get("categoryIds", ["uncategorised"])
+            unknown_categories = sorted(set(category_ids) - known_category_ids)
+            if unknown_categories:
+                errors.append(f"{path}: unknown category IDs: {', '.join(unknown_categories)}.")
+
         missing = sorted(
             document_reference_ids(kind, value) - known_reference_ids
         )
@@ -190,6 +197,22 @@ def validate_collection(
     return documents
 
 
+
+def validate_assessment_categories(errors: list[str]) -> set[str]:
+    document = load_json(ROOT / "categories" / "assessment-categories.json", errors)
+    schema = load_json(ROOT / "schema" / "assessment-categories-schema.json", errors)
+    if document is None or schema is None:
+        return set()
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    for validation_error in validator.iter_errors(document):
+        errors.append(f"assessment categories: {validation_error.message}")
+    ids = [item.get("id") for item in document.get("categories", []) if isinstance(item, dict)]
+    if len(ids) != len(set(ids)):
+        errors.append("Duplicate assessment category IDs exist.")
+    if "uncategorised" not in ids:
+        errors.append("Assessment categories must include uncategorised.")
+    return {item for item in ids if isinstance(item, str)}
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -198,6 +221,7 @@ def main() -> int:
     )
     args = parser.parse_args()
     errors: list[str] = []
+    known_category_ids = validate_assessment_categories(errors)
 
     references_document = load_json(
         ROOT / "references" / "references.json",
@@ -247,6 +271,7 @@ def main() -> int:
             settings,
             known_reference_ids,
             reliability_by_category,
+            known_category_ids,
             errors,
         )
 
