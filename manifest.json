@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.1.31",
-  "updatedAt": "2026-08-05T15:49:43Z",
+  "contentVersion": "1.1.32",
+  "updatedAt": "2026-08-05T15:51:45Z",
   "minimumAppVersion": "0.18.0",
   "references": {
     "file": "references/references.json",
@@ -10,8 +10,8 @@
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
-    "sha256": "578c3231e45957e7641195e901c44a7a3712be4e78cfe4744be0937ffc1e08be",
-    "schemaSha256": "f4d5e1e5962912c9204015c490f38bd57334c94ea53409ab3a230ea4355fce89",
+    "sha256": "43e11020d1f4934c14668493aa656fbdfcbb776ff4e6b1c20f87349882c9da5f",
+    "schemaSha256": "c5b872cb65edc518ddcc6a83e13db0e6dee4af4340d87e9703640a72a335ebeb",
     "items": [
       {
         "id": "frailty",
@@ -40,8 +40,8 @@
       "version": "0.2.0",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "0f2bd3ab03ba497e1630a5c58b89e53d334b4ef6fcbec8e16afe6c1f6afb77d3",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "6a3a926a2dfab47e4bd489b11c5466c74f5b6d6643227bdb320dae4562e0a09b",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "frailty"
       ]
@@ -52,8 +52,8 @@
       "version": "0.1.3",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "cd6c32cd09e764f6ce5ff157c251c32ddc89eb0b257aeebeeb0946600bb40b6a",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "d3c304122b12b3342a83834d8a28e5126d15e64f816103bb5387e351a27f4d51",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "uncategorised"
       ]
@@ -65,7 +65,7 @@
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
       "sha256": "7a9496e6da2311c0a4bdbdbc92dc3b852c1bfad214a1bc4939a40d25f768706c",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "uncategorised"
       ]
@@ -76,8 +76,8 @@
       "version": "0.2.0",
       "file": "assessments/comprehensive-geriatric-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "a9baddf8a3086ccca65595945a8493e9c576992eab56b51f058dcfacf1f8623b",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "951018fcb92cb9183e044bf5a1a71af7aa5b9f53ef33f800fe25a43a833ce760",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "frailty"
       ]
@@ -88,8 +88,8 @@
       "version": "0.1.1",
       "file": "assessments/dehydration-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "febda019cd25db78021d0e3525f51d3c8ab16b0b47decadde6da524386a04f95",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "bda1630bf5948e14137b8c9ea26b1e6678ecc413f6d9942072ff527cf0c1ed05",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "uncategorised"
       ]
@@ -100,8 +100,8 @@
       "version": "0.1.1",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "14a0a9d6cc9f9f3953e7c12b6dcedac623067590e75b082e38781fd54d534bfa",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "69427ed0ecf01dc0cc78554a97f3fd47d7f6dfe600d950701ec5394b6c60056a",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "uncategorised"
       ]
@@ -112,8 +112,8 @@
       "version": "0.2.1",
       "file": "assessments/falls-in-older-adults.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "ee8c998e118f48fee9012ddc3c3acf1a0f5f57f44e07dde332b3409157d5289a",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "b71f15102c6548f344895224a249a3dbd53043398c85ba13b1ff4d65f22fc83b",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "frailty"
       ]
@@ -124,8 +124,8 @@
       "version": "0.3.0",
       "file": "assessments/frailty-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "1d6ea7c8a34c7bb058e928917c4523fe60bb28d8f6665d656ce18bf18c7e642d",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "fd1aad32a3710e56fcb219dcf6e95211847a9c6d688a88df5570b7af81e33680",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "frailty"
       ]
@@ -136,8 +136,8 @@
       "version": "0.2.1",
       "file": "assessments/polypharmacy-and-medicines-related-harm.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "4552240a98452f21bd0fdf973f3525a0f135c706bdd4a22b40f8017866195933",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "sha256": "b5d7048253a8c9cac030289a7f26134e24a7c5cc36a64ed1b33f914c34d5d83b",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "frailty"
       ]
@@ -149,7 +149,7 @@
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
       "sha256": "ef0360f02ebde14941cc71fd319f2b3b4a2dc2b21ff827e774dfb8575fe3ca54",
-      "schemaSha256": "354af9e5dac37031d20fc97083380fc526629b900dd2c095fa6909e322404ab3",
+      "schemaSha256": "f30c4c1d2ac3646c4e6a102b85f733eb473e5a21e2bad95de26910173d62cd8d",
       "categoryIds": [
         "uncategorised"
       ]
@@ -173,8 +173,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/4at-delirium-screen.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "7320f1f87f85c79abaf584a43f054a835323a08a14ab2940506ad7de7bb4c607",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "0145d2248a05fe67f07a5ba21bea958fe9cc6ff2e0430f0dc6ea5fbdeb5b98f2",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "add-rs",
@@ -182,8 +182,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/add-rs.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "42bbd2aa72bbe25b3d330860ce0c49931f281733d29d795b91111d41d6b0ddfb",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "ff17b3e62a880de3f2c66af2eecebdc1d6cc0421c7e67c3fb8eda1cb334ebbe1",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "canadian-c-spine-rule",
@@ -191,8 +191,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/canadian-c-spine-rule.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "d7942513686909a4ffe2e3aa91ec37fef962109352b6d174550a6af87b56604a",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "1fd9b0587a342693ae5d68c4a414f3470ac880acdbffaa437bb1b796f7d21907",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "canadian-ct-head-rule",
@@ -200,8 +200,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/canadian-ct-head-rule.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "335cf4a04069136f3ef60362be915764ea80f0f6c0589a63be24a35fde2f62d7",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "6d74f261ff3be1a81c2750b0f4769849eebb40daf67b83d3764e334afbe058f5",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "canadian-syncope-risk-score",
@@ -209,8 +209,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/canadian-syncope-risk-score.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "0510a13b0a55a4f1fe9448a91c722a62e3014c3a5334ab87f4499fa20d55fc67",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "9e61fbf45126270dc34bf033b16a9c0784cd413e1ce16d129427242a7ca1e5be",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "centor-criteria",
@@ -218,8 +218,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/centor-criteria.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "f26f8f9115bee4f6ac7595c51ff57b6c58b05bff1a78740f93cdec55c5d5691e",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "f972d9284d27d8bb98e2b93189cd1457fc41380ad556d85e3f6877593e6c7e6b",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "crb-65",
@@ -227,8 +227,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/crb-65.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "70df41e11b18eeaa737e89000c745a4b4cf28a19d95fb6df0a24fa13cfbfeb1a",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "481424564abaee8ca7296199f243ed97bfc13b38006892aad5d8a6d922e6ea6d",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "curb-65",
@@ -236,8 +236,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/curb-65.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "e75f08e3c6176fc134ad1ccd768fe88a7023fdd98b9acb844e1a72769d097e4a",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "be6002a9bf26d70ed3ea9252a40c7dca4b85b37a0666220ec2ea9ee202c4c4ad",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "decaf",
@@ -245,8 +245,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/decaf.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "125d8f66bdd790b7f361ea41389497672229189aad44324a036a9c8e50fe005a",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "5bd3b0b1154dfd55aa60bb0532e9f02a4c9d07440bd9cd490101f923f77e7887",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "edacs",
@@ -254,8 +254,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/edacs.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "d7b0ec78d9b82a8d3f99aed5bed4e4e47208e3468d77217fe18603ae7869c407",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "5d9740636ac2079c019f62628dae585041fbed950f4ebb86e57a369d544bd7ed",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "feverpain",
@@ -263,8 +263,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/feverpain.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "c07a5182965ecbaf3db4eeac75cccc686c831a25a74be31e2993b1bd1b27171f",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "dda7cba1a36939b30177e3a33889f4c31aed4a57f281a3d4823af8e7b3e45ebd",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "glasgow-blatchford",
@@ -272,8 +272,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/glasgow-blatchford.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "e7be1dfa8abc21707011f15651212b41093bcab97e6ad6275f6c3548f8358310",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "78591b8485bc6fffa939c7aa324be1c87e8160a81cd2364fa6459cfbcc3d8652",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "glasgow-coma-scale",
@@ -281,8 +281,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/glasgow-coma-scale.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "2362703db4321c740f44c6fff0be5ee0979b2939ba6565c3bcc9849c8c9f62e3",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "efaaafb1f0a2c99e8818c040e01aa09dd273bcac1b38311e748f9644d7591e7f",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "heart-score",
@@ -290,8 +290,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/heart-score.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "6d2a3f2b96d8b627a91c2a374572ecdeb8e62df061c26ba1c78e167a78236ea4",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "919f41b8339bf6cfdbd9fa3427f19ab9b88c84e4fac3c58a68ce231c917d6469",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "news2",
@@ -299,8 +299,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/news2.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "ec882c38d190874a95d6123bcaeb0bc85d2dd59041de0396ca93bb4041ccdbf4",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "c8a543b23f781fd92a37e8ed3e8d5be0b0a9e828f3acab5acd819c827a9a0468",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "nice-head-injury-pathway",
@@ -308,8 +308,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/nice-head-injury-pathway.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "bf4cc63e536d683762abe0d6ef50ba4ae95cc6d3e2a55805a2d3eab8f21a6bc5",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "6d85e12cf1c75606d04ec20aad977621d35ddac87adc4a9c5f38c8c561a054b6",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "ottawa-ankle-and-foot-rules",
@@ -317,8 +317,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/ottawa-ankle-and-foot-rules.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "d98e0f508745daf54d19d860e6514b0d76ebb24ef408f227c5f5402cd29e5f67",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "97dc75b81c45b9263d7cd17e88b6985d9b2c365677e7b40f15007c60f23e4a90",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "ottawa-knee-rule",
@@ -326,8 +326,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/ottawa-knee-rule.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "bea5230cae2990765b32870898df3337ec72c10d56b1fbfbd42fed9705e107a8",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "e806c59e80b5caac9f2c585b23294945b59da485d34d6d0253d4f03dd63d6478",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "pecarn",
@@ -335,8 +335,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/pecarn.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "1b884f2f8c4ee034ecea390f95332ca58dd00c1969584899ddc6bc0e298a8241",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "a0f6707b36f50612f31b5524c210a20e764d5ad3b2036dba9e964d043c74139d",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "perc-rule",
@@ -344,8 +344,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/perc-rule.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "e102793a13965085b2dd9eca59c461d1078248917cddad2c835730f19b4d0ed5",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "a0aedbecb3e41888421f3846f6f3470d80a7ffc79793f5f53d7cffb353ea978a",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "two-level-dvt-wells",
@@ -353,8 +353,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/two-level-dvt-wells.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "96fd8584b2b7de52cb947a2af971c697fe6f3472d4772ec391bd16542358b5de",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "91c0f6f89fcc8e0e67aba1ac4b84ae32c6ed95893a728f61a4a972f120f24e57",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     },
     {
       "id": "two-level-pe-wells",
@@ -362,8 +362,8 @@
       "version": "1.0.0",
       "file": "scoring_tools/two-level-pe-wells.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "e2eedfa514417d788622e6abde249cac88a7b82685ced39fbde874b9d1d36d2a",
-      "schemaSha256": "2749c7b252236c525c632094abc2fb73037d44074ea87675ba86c9f5a4766014"
+      "sha256": "6c7489d06b209cce5a58eea43e71d2902cde8c438ddcfbe853d790e1719f6f34",
+      "schemaSha256": "bb8abcf44e230584335f35e27a4eb4098d88024bac9255e62e77bb59ae0fea45"
     }
   ],
   "bloodPanels": [
@@ -373,8 +373,8 @@
       "version": "1.0.0",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "a09e587c7fc6ce24531eafb2b406847393554046b5ab98feea427d17d4c306ac",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "sha256": "dfe66d480a8ee0bf3bd7a960bede60b0671b1a61c6c0f3fd738b2cf988d91e94",
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "bnp-and-nt-probnp",
@@ -383,7 +383,7 @@
       "file": "blood_panels/bnp-and-nt-probnp.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "9574a02caa776a6711a1b1ba182ce29b6db315333298d4fbbae1edcff354dbbe",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "c-reactive-protein",
@@ -392,7 +392,7 @@
       "file": "blood_panels/c-reactive-protein.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "ca3c1f17bf3a3f82044ddec3d4110694d1e028f2c3fcdbef3ff09ff4754d1474",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "calcium-magnesium-and-phosphate",
@@ -400,8 +400,8 @@
       "version": "1.0.0",
       "file": "blood_panels/calcium-magnesium-and-phosphate.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "ac50c56d06859bfd37fafa8c46fdd6f1f282f8f64f528fb22de12b865f50b655",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "sha256": "8f3b1781f5f031f3b5fcb80f481aeddaf1d1415acf2cbceb93f9ed73150ee46f",
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "coagulation",
@@ -410,7 +410,7 @@
       "file": "blood_panels/coagulation.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "681d25ee674fcc60bf195581d4f50919fd3648db686d0c7a2f7a210bc7e8004f",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "creatine-kinase",
@@ -419,7 +419,7 @@
       "file": "blood_panels/creatine-kinase.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "4f050d750bf07885b65df6b0289cca9d55e0d08d09638668e717aa7b7b31e63e",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "full-blood-count",
@@ -428,7 +428,7 @@
       "file": "blood_panels/full-blood-count.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "c22fdf06d0a0143f7bf8a42fe9ec821a0498bd1847a482bf93c3613744c182bc",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "glucose-ketones-and-lactate",
@@ -437,7 +437,7 @@
       "file": "blood_panels/glucose-ketones-and-lactate.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "93c4dcee46b4f63e99e7a741bdd6e198c636a11c0dfaa697e47818d42dd672b0",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "haematinics",
@@ -446,7 +446,7 @@
       "file": "blood_panels/haematinics.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "9cd50a3477b69389853e137e2648595889242d6cdb5514893c8590a3a4b35d1c",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "lipase-and-amylase",
@@ -455,7 +455,7 @@
       "file": "blood_panels/lipase-and-amylase.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "8fd686ba305a23e41d44d4b7bf042138641fbd66ec5f0061df03a5e9b99947b0",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "liver-blood-tests",
@@ -464,7 +464,7 @@
       "file": "blood_panels/liver-blood-tests.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "bf138cdd838978c75643306c1e120a93eb96d760c33fcdbff6add2d80b20e7de",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "serum-osmolality",
@@ -472,8 +472,8 @@
       "version": "1.0.0",
       "file": "blood_panels/serum-osmolality.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "8a250a37f2d468aac12addf86d862930dfce1f4915295541a22566e0a6a7857a",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "sha256": "d53ee43d5e63e64c927b41ff1504648437130d234e9f4211201e14882c0ca030",
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "thyroid-function",
@@ -482,7 +482,7 @@
       "file": "blood_panels/thyroid-function.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "8ebf7063b86d781f6a511e312570ac224b70043470cceebbd12974b25a4b4d86",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "troponin",
@@ -491,7 +491,7 @@
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "3aa01f476f7a96981c4f12107525c1e1f223db3b1bbde090cea6ffc47e96299e",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     },
     {
       "id": "urea-and-electrolytes",
@@ -500,7 +500,7 @@
       "file": "blood_panels/urea-and-electrolytes.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "dfd890d0edd3fac7b9bed32bfda491d17566dd6cb66bb2fd0e6a5aee3e9f1d3f",
-      "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
+      "schemaSha256": "08ce27c793c9644cca2d44647aba8888f004e1f6f782bb08e767310b580cee50"
     }
   ]
 }
