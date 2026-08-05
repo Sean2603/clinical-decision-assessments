@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.1",
-  "updatedAt": "2026-08-05T16:36:15Z",
+  "contentVersion": "1.2.3",
+  "updatedAt": "2026-08-05T20:07:12Z",
   "minimumAppVersion": "0.31.0",
   "references": {
     "file": "references/references.json",
@@ -31,10 +31,10 @@
     {
       "id": "acute-confusion-and-delirium",
       "title": "Acute Confusion and Delirium",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "1c707806b7208956a67271d2a4dd110be1dd5f31c0b113e00db8b4184d4d0100",
+      "sha256": "2e00334abc521b91925eb52665c0dc03ad9febc7c3afa71f0fd1478bb06d3614",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "frailty"
@@ -43,10 +43,10 @@
     {
       "id": "acute-kidney-injury-assessment",
       "title": "Acute Kidney Injury Assessment",
-      "version": "0.1.3",
+      "version": "0.1.5",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "bf19fef5961b34418453d86a932c3ab29be8e96a262fd5f96ea85f844d766b05",
+      "sha256": "9ad6ad5775b7264c72c47e2f01244208c9e53574cd63332d193f7dcd2d7e14bd",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -91,10 +91,10 @@
     {
       "id": "dizziness-vertigo-assessment",
       "title": "Dizziness and Vertigo Assessment",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "f9ae441b1a215779e8191c605dee814064e58189dbd4f017f635f23b13350e5f",
+      "sha256": "87c2524f369ea10fe9142a77dcfd35817a3d78ccd3093f19949363f870ad4e5f",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -139,10 +139,10 @@
     {
       "id": "red-leg-assessment",
       "title": "Red or Swollen Leg Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "b73c651a3b8cfeae079191387bfc7c852e3d6b54aed9e8fa83b7493d6ad45c4e",
+      "sha256": "226bbd3fef1551c5a1d638b4760e5755c2aab26c643ea6227cd163c8bdaea03f",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -484,7 +484,7 @@
       "version": "1.0.1",
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "c3af7704f687fb3b41e6a52532e335fb90855f2ea01cd630672d9a70efb68f03",
+      "sha256": "ac8fae7929456d311f0c07e928f7e18687cb36c48494734e80c85f84eb4c325b",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {

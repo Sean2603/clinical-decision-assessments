@@ -1,7 +1,7 @@
 {
   "id": "acute-confusion-and-delirium",
   "title": "Acute Confusion and Delirium",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "summary": "A clinician-facing guide for recognising delirium, distinguishing it from baseline cognitive impairment, identifying reversible causes and arranging safe treatment and disposition.",
   "sections": [
     {
@@ -275,14 +275,15 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Clinical validation required before publication. Core sources: NICE CG103, NICE NG5 and NICE NG56."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-05",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-05"
   },
   "categoryIds": [
     "frailty"
-  ]
+  ],
+  "lastReviewed": "2026-08-05"
 }

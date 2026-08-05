@@ -1,8 +1,8 @@
 {
   "id": "dizziness-vertigo-assessment",
   "title": "Dizziness and Vertigo Assessment",
-  "version": "0.1.1",
-  "summary": "A clinician-facing prompt for classifying dizziness by timing and triggers, recognising central and cardiovascular causes, performing focused vestibular, neurological and postural examination, and selecting an appropriate referral or community pathway.",
+  "version": "0.2.0",
+  "summary": "A clinician-facing prompt for classifying dizziness by timing and triggers, recognising central and cardiovascular causes, performing focused vestibular, neurological and postural examination, and selecting an appropriate referral or community pathway. ",
   "sections": [
     {
       "id": "assessment-priorities",
@@ -617,11 +617,12 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG128, NICE-NG136, NICE-NG249."
-  }
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-05",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Validation",
+    "nextReviewDue": "2028-08-05"
+  },
+  "lastReviewed": "2026-08-05"
 }
