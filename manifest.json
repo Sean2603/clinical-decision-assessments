@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "contentVersion": "1.2.4",
-  "updatedAt": "2026-08-05T20:09:43Z",
+  "updatedAt": "2026-08-05T20:19:38Z",
   "minimumAppVersion": "0.31.0",
   "references": {
     "file": "references/references.json",
@@ -34,7 +34,7 @@
       "version": "0.2.1",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "2e00334abc521b91925eb52665c0dc03ad9febc7c3afa71f0fd1478bb06d3614",
+      "sha256": "ad1c21f758c689991280f968e19b43857762adb229256f28339298abf48fadfa",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "frailty"
@@ -46,7 +46,7 @@
       "version": "0.1.5",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "9ad6ad5775b7264c72c47e2f01244208c9e53574cd63332d193f7dcd2d7e14bd",
+      "sha256": "aa48110aa9132dd5727cd6972351f4ad47386a625127ba4f3313fd12a3cdd384",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -94,7 +94,7 @@
       "version": "0.2.0",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "87c2524f369ea10fe9142a77dcfd35817a3d78ccd3093f19949363f870ad4e5f",
+      "sha256": "b7c63ef6c4410b07fa2f90be6e104c0e27a0c3df4effeaf4e4bc2b75a10d41c8",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -364,10 +364,10 @@
     {
       "id": "abg-and-vbg",
       "title": "ABG and VBG",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "b07f840b504e584e65150a8b03f3767387089131db1d34b05b1535f6b571d186",
+      "sha256": "c9a684be4f798f14dea79e0ad45a2f06aeb0586076b5890293940defe7bf807b",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
@@ -484,7 +484,7 @@
       "version": "1.0.1",
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "ac8fae7929456d311f0c07e928f7e18687cb36c48494734e80c85f84eb4c325b",
+      "sha256": "e31a85f27ae726bdde842f6a756d2818611bf89f172298353c6f1f2c3669cfac",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
