@@ -65,8 +65,8 @@
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-08-05",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-05",
-    "reviewNotes": null
+    "reviewNotes": null,
+    "nextReviewDue": "2028-08-05"
   },
   "migration": {
     "state": "shadow",
