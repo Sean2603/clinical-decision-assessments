@@ -415,7 +415,7 @@
       "id": "troponin",
       "displayName": "Troponin",
       "category": "blood-panel",
-      "contentVersion": "1.0.0",
+      "contentVersion": "1.0.1",
       "reviewStatus": "unverified",
       "reviewedBy": null,
       "reviewerRole": null,

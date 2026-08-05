@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.1.30",
-  "updatedAt": "2026-08-05T15:48:30Z",
+  "contentVersion": "1.1.31",
+  "updatedAt": "2026-08-05T15:49:43Z",
   "minimumAppVersion": "0.18.0",
   "references": {
     "file": "references/references.json",
@@ -30,7 +30,7 @@
   "clinicalReliability": {
     "file": "clinical_reliability/clinical-reliability.json",
     "schema": "schema/clinical-reliability-schema.json",
-    "sha256": "4bb694b7ec066399c13894046696e030843abaa35a3a2b44f02738bfda05542f",
+    "sha256": "7b6283f9e680c75e3d293a48a91734341e651c5feeeb2957892c58add1845122",
     "schemaSha256": "70ed85658e274ab2dfbbd09163ab3500fba561c971d2bf131954f7e7b0879062"
   },
   "assessments": [
@@ -487,10 +487,10 @@
     {
       "id": "troponin",
       "title": "Troponin",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "3cb316c56cce36002bdea01e9d96fe1c9b71a738db000b75b32d2c5b19e3c8a4",
+      "sha256": "3aa01f476f7a96981c4f12107525c1e1f223db3b1bbde090cea6ffc47e96299e",
       "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
     },
     {

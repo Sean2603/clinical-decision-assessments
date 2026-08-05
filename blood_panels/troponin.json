@@ -2,7 +2,7 @@
   "id": "troponin",
   "title": "Troponin",
   "subtitle": "Myocardial injury, serial change and assay limitations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Myocardial injury, serial change and assay limitations",
@@ -61,11 +61,11 @@
     "NICE-NG185"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-05",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
