@@ -54,15 +54,6 @@ for folder, content_type in (
                 "title": document["title"],
             })
 
-for item in load(
-    ROOT / "clinical_reliability" / "clinical-reliability.json"
-)["items"]:
-    for reference_id in item.get("referenceIds", []):
-        usage.setdefault(reference_id, []).append({
-            "type": f"{item['category']}-reliability",
-            "id": item["id"],
-            "title": item["displayName"],
-        })
 
 output = {
     "generated": True,

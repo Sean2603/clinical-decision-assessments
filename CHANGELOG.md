@@ -1,3 +1,11 @@
+## 1.2.1
+
+- Removed the duplicate `clinical_reliability/clinical-reliability.json` catalogue and schema.
+- Made embedded `clinicalValidation` authoritative for every clinical content type.
+- Added `nextReviewDue` to clinical-validation metadata.
+- Set review intervals to one year for guidelines and two years for assessments, scoring tools and blood panels.
+- Raised the minimum compatible app version to 0.31.0.
+
 ## 1.1.26 - 2026-08-05
 
 ### Changed

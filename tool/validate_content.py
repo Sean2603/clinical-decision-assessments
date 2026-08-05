@@ -108,7 +108,6 @@ def validate_collection(
     kind: str,
     settings: dict,
     known_reference_ids: set[str],
-    reliability_by_category: dict[str, dict[str, dict]],
     known_category_ids: set[str],
     errors: list[str],
 ) -> dict[str, dict]:
@@ -165,35 +164,6 @@ def validate_collection(
                 f"{path}: unknown reference IDs: {', '.join(missing)}."
             )
 
-        if kind in {"scoring-tool", "blood-panel"}:
-            reliability = reliability_by_category[kind].get(item_id)
-            if reliability is None:
-                errors.append(
-                    f"{path}: no matching clinical reliability item."
-                )
-            elif reliability.get("displayName") != value.get("title"):
-                errors.append(
-                    f"{path}: title does not match reliability displayName "
-                    f"({value.get('title')!r} != "
-                    f"{reliability.get('displayName')!r})."
-                )
-            else:
-                if reliability.get("contentVersion") != value.get("version"):
-                    errors.append(
-                        f"{path}: version does not match reliability "
-                        f"contentVersion ({value.get('version')!r} != "
-                        f"{reliability.get('contentVersion')!r})."
-                    )
-                definition_references = set(value.get("referenceIds", []))
-                reliability_references = set(
-                    reliability.get("referenceIds", [])
-                )
-                if definition_references != reliability_references:
-                    errors.append(
-                        f"{path}: referenceIds do not match clinical "
-                        "reliability metadata."
-                    )
-
     return documents
 
 
@@ -227,11 +197,7 @@ def main() -> int:
         ROOT / "references" / "references.json",
         errors,
     )
-    reliability_document = load_json(
-        ROOT / "clinical_reliability" / "clinical-reliability.json",
-        errors,
-    )
-    if references_document is None or reliability_document is None:
+    if references_document is None:
         for error in errors:
             print(f"ERROR: {error}")
         return 1
@@ -249,42 +215,15 @@ def main() -> int:
         item for item in reference_ids if isinstance(item, str) and item
     }
 
-    reliability_by_category = {
-        "scoring-tool": {},
-        "blood-panel": {},
-    }
-    for item in reliability_document.get("items", []):
-        if not isinstance(item, dict):
-            continue
-        category = item.get("category")
-        item_id = item.get("id")
-        if (
-            category in reliability_by_category
-            and isinstance(item_id, str)
-        ):
-            reliability_by_category[category][item_id] = item
-
     documents_by_kind: dict[str, dict[str, dict]] = {}
     for kind, settings in COLLECTIONS.items():
         documents_by_kind[kind] = validate_collection(
             kind,
             settings,
             known_reference_ids,
-            reliability_by_category,
             known_category_ids,
             errors,
         )
-
-    for category in ("scoring-tool", "blood-panel"):
-        missing_definitions = sorted(
-            set(reliability_by_category[category])
-            - set(documents_by_kind[category])
-        )
-        if missing_definitions:
-            errors.append(
-                f"{category} reliability items without definitions: "
-                f"{', '.join(missing_definitions)}."
-            )
 
     if args.base_ref:
         changed = changed_files(args.base_ref)

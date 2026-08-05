@@ -82,5 +82,13 @@
   ],
   "references": [
     "NICE-NG158"
-  ]
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": "2026-07-22",
+    "reviewerRole": null,
+    "nextReviewDue": "2027-07-22",
+    "reviewNotes": null
+  }
 }

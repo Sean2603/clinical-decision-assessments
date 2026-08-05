@@ -10,8 +10,6 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT = Path(__file__).resolve().parent.parent
 REFERENCES_PATH = ROOT / "references" / "references.json"
 SCHEMA_PATH = ROOT / "schema" / "reference-schema.json"
-ASSESSMENTS_DIR = ROOT / "assessments"
-CLINICAL_RELIABILITY_PATH = ROOT / "clinical_reliability" / "clinical-reliability.json"
 
 NON_CURRENT = {
     "superseded",
@@ -134,17 +132,13 @@ def main() -> int:
 
     cited_ids = set()
     strict_cited_ids = set()
-    for assessment_path in sorted(ASSESSMENTS_DIR.glob("*.json")):
-        assessment_ids = collect_reference_ids(load_json(assessment_path))
-        cited_ids.update(assessment_ids)
-        strict_cited_ids.update(assessment_ids)
-
-    if CLINICAL_RELIABILITY_PATH.exists():
-        reliability = load_json(CLINICAL_RELIABILITY_PATH)
-        for item in reliability.get('items', []):
-            item_ids = set(item.get('referenceIds', []))
+    for folder in ("assessments", "guidelines", "scoring_tools", "blood_panels"):
+        for content_path in sorted((ROOT / folder).glob("*.json")):
+            document = load_json(content_path)
+            item_ids = collect_reference_ids(document)
             cited_ids.update(item_ids)
-            if item.get('reviewStatus') == 'current':
+            validation = document.get("clinicalValidation", {})
+            if validation.get("validated") is True:
                 strict_cited_ids.update(item_ids)
 
     missing = sorted(cited_ids - set(by_id))

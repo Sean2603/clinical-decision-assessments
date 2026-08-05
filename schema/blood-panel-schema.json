@@ -100,6 +100,7 @@
         "reviewedBy",
         "reviewedOn",
         "reviewerRole",
+        "nextReviewDue",
         "reviewNotes"
       ],
       "properties": {
@@ -124,6 +125,13 @@
             "string",
             "null"
           ]
+        },
+        "nextReviewDue": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
         },
         "reviewNotes": {
           "type": [

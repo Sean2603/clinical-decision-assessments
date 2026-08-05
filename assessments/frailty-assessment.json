@@ -615,6 +615,7 @@
     "reviewedBy": null,
     "reviewedOn": null,
     "reviewerRole": null,
+    "nextReviewDue": null,
     "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG136, NICE-NG249."
   },
   "categoryIds": [

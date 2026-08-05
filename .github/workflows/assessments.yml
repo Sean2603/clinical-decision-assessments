@@ -14,7 +14,6 @@ name: Validate and publish clinical content
       - "scoring_tools/**"
       - "blood_panels/**"
       - "references/**"
-      - "clinical_reliability/**"
       - "schema/**"
       - "tool/**"
       - ".github/workflows/assessments.yml"

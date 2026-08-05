@@ -1,26 +1,51 @@
 #!/usr/bin/env python3
-import json, sys
+"""Validate embedded clinicalValidation metadata across all clinical content."""
+import json
+from datetime import date
 from pathlib import Path
-from jsonschema import Draft202012Validator, FormatChecker
-ROOT=Path(__file__).resolve().parent.parent
-DOC=ROOT/'clinical_reliability'/'clinical-reliability.json'
-SCHEMA=ROOT/'schema'/'clinical-reliability-schema.json'
-REFS=ROOT/'references'/'references.json'
+
+ROOT = Path(__file__).resolve().parent.parent
+COLLECTIONS = {
+    "assessments": ("assessment", "version"),
+    "guidelines": ("guideline", "contentVersion"),
+    "scoring_tools": ("scoring-tool", "version"),
+    "blood_panels": ("blood-panel", "version"),
+}
+
+def load(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
 def main():
- d=json.loads(DOC.read_text()); s=json.loads(SCHEMA.read_text()); errors=[]
- for e in Draft202012Validator(s,format_checker=FormatChecker()).iter_errors(d): errors.append(f"{'.'.join(map(str,e.absolute_path))}: {e.message}")
- refs={r['id'] for r in json.loads(REFS.read_text())['references']}; seen=set()
- for item in d.get('items',[]):
-  key=(item.get('category'),item.get('id'))
-  if key in seen: errors.append(f'duplicate reliability item: {key}')
-  seen.add(key)
-  missing=set(item.get('referenceIds',[]))-refs
-  if missing: errors.append(f"{item.get('id')}: unknown reference IDs: {', '.join(sorted(missing))}")
-  if item.get('reviewStatus')=='current':
-   for f in ('reviewedBy','reviewerRole','lastReviewed','nextReviewDue'):
-    if not item.get(f): errors.append(f"{item.get('id')}: current item requires {f}")
- if errors:
-  print('Clinical reliability validation failed:'); [print('-',x) for x in errors]; return 1
- print(f"Clinical reliability validation passed: {len(d.get('items',[]))} item(s).")
- return 0
-if __name__=='__main__': sys.exit(main())
+    errors=[]; warnings=[]; count=0
+    for folder,(kind,version_field) in COLLECTIONS.items():
+        for path in sorted((ROOT/folder).glob("*.json")):
+            count += 1
+            doc=load(path); cv=doc.get("clinicalValidation")
+            label=f"{folder}/{path.name}"
+            if not isinstance(cv,dict):
+                errors.append(f"{label}: clinicalValidation is required."); continue
+            required=("validated","reviewedBy","reviewedOn","reviewerRole","nextReviewDue","reviewNotes")
+            missing=[x for x in required if x not in cv]
+            if missing: errors.append(f"{label}: missing clinicalValidation fields: {', '.join(missing)}")
+            if cv.get("validated") is True:
+                for field in ("reviewedBy","reviewedOn","reviewerRole","nextReviewDue"):
+                    if cv.get(field) in (None,""):
+                        errors.append(f"{label}: validated content requires {field}.")
+                try:
+                    reviewed=date.fromisoformat(cv["reviewedOn"]); due=date.fromisoformat(cv["nextReviewDue"])
+                    if due <= reviewed: errors.append(f"{label}: nextReviewDue must be after reviewedOn.")
+                    if due < date.today(): warnings.append(f"{label}: clinical review overdue since {due.isoformat()}.")
+                except (TypeError,ValueError,KeyError):
+                    errors.append(f"{label}: review dates must use YYYY-MM-DD.")
+            if not isinstance(doc.get(version_field),str):
+                errors.append(f"{label}: missing {version_field}.")
+    if warnings:
+        print("Clinical validation warnings:")
+        for item in warnings: print(f"- {item}")
+    if errors:
+        print("Clinical validation failed:")
+        for item in errors: print(f"- {item}")
+        raise SystemExit(1)
+    print(f"Clinical validation passed: {count} embedded content record(s).")
+
+if __name__ == "__main__": main()

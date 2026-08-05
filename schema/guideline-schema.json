@@ -16,7 +16,8 @@
     "minimumAppVersion",
     "status",
     "sections",
-    "references"
+    "references",
+    "clinicalValidation"
   ],
   "properties": {
     "id": {
@@ -101,6 +102,55 @@
               "minLength": 1
             }
           }
+        }
+      }
+    },
+    "clinicalValidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validated",
+        "reviewedBy",
+        "reviewedOn",
+        "reviewerRole",
+        "nextReviewDue",
+        "reviewNotes"
+      ],
+      "properties": {
+        "validated": {
+          "type": "boolean"
+        },
+        "reviewedBy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewedOn": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewerRole": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nextReviewDue": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewNotes": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       }
     }

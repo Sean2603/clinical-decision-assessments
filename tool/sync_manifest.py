@@ -8,7 +8,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = ROOT / "manifest.json"
 REFERENCES_PATH = ROOT / "references" / "references.json"
-RELIABILITY_PATH = ROOT / "clinical_reliability" / "clinical-reliability.json"
 CATEGORIES_PATH = ROOT / "categories" / "assessment-categories.json"
 CATEGORIES_SCHEMA_PATH = ROOT / "schema" / "assessment-categories-schema.json"
 
@@ -124,7 +123,6 @@ def build_entries(
 def main() -> None:
     manifest = load_json(MANIFEST_PATH)
     load_json(REFERENCES_PATH)
-    load_json(RELIABILITY_PATH)
     categories = load_json(CATEGORIES_PATH)
     load_json(CATEGORIES_SCHEMA_PATH)
 
@@ -150,7 +148,7 @@ def main() -> None:
     generated_core = {
         "schemaVersion": 3,
         "contentVersion": previous_version,
-        "minimumAppVersion": "0.18.0",
+        "minimumAppVersion": "0.31.0",
         "references": {
             "file": "references/references.json",
             "sha256": sha256(REFERENCES_PATH),
@@ -161,14 +159,6 @@ def main() -> None:
             "sha256": sha256(CATEGORIES_PATH),
             "schemaSha256": sha256(CATEGORIES_SCHEMA_PATH),
             "items": categories["categories"],
-        },
-        "clinicalReliability": {
-            "file": "clinical_reliability/clinical-reliability.json",
-            "schema": "schema/clinical-reliability-schema.json",
-            "sha256": sha256(RELIABILITY_PATH),
-            "schemaSha256": sha256(
-                ROOT / "schema" / "clinical-reliability-schema.json"
-            ),
         },
         **generated_collections,
     }
@@ -189,7 +179,6 @@ def main() -> None:
         "minimumAppVersion": generated_core["minimumAppVersion"],
         "references": generated_core["references"],
         "assessmentCategories": generated_core["assessmentCategories"],
-        "clinicalReliability": generated_core["clinicalReliability"],
         "assessments": generated_core["assessments"],
         "guidelines": generated_core["guidelines"],
         "scoringTools": generated_core["scoringTools"],
