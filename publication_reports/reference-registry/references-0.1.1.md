@@ -4,7 +4,7 @@
 - **Content type:** reference-registry
 - **Previous published version:** 0.1.0
 - **Published version:** 0.1.1
-- **Generated:** 2026-08-02T06:27:02.643Z
+- **Generated:** 2026-08-05T15:46:26.267Z
 
 ## Change control
 
@@ -18,9 +18,9 @@
 ## Clinical review
 
 - **Status:** approved
-- **Reviewer:** Sean
+- **Reviewer:** Sean McGrory
 - **Reviewer role:** tAPUC
-- **Reviewed at:** 2026-08-02T06:27:01.516Z
+- **Reviewed at:** 2026-08-05T15:46:22.217Z
 - **Notes:** Not recorded
 
 ## Validation

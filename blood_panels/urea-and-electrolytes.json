@@ -2,7 +2,7 @@
   "id": "urea-and-electrolytes",
   "title": "Urea and electrolytes",
   "subtitle": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
@@ -159,11 +159,11 @@
     "NICE-NG148"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-05",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
