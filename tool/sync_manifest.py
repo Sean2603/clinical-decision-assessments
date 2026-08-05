@@ -163,13 +163,22 @@ def main() -> None:
         **generated_collections,
     }
 
+    generated_keys = set(generated_core)
     previous_core = {
-        key: value for key, value in manifest.items() if key != "updatedAt"
+        key: value
+        for key, value in manifest.items()
+        if key in generated_keys and key != "updatedAt"
     }
     if generated_core != previous_core:
         generated_core["contentVersion"] = bump_patch(previous_version)
 
+    preserved_top_level = {
+        key: value
+        for key, value in manifest.items()
+        if key not in generated_keys and key != "updatedAt"
+    }
     generated = {
+        **preserved_top_level,
         "schemaVersion": generated_core["schemaVersion"],
         "contentVersion": generated_core["contentVersion"],
         "updatedAt": datetime.now(timezone.utc)
