@@ -1,7 +1,7 @@
 {
   "id": "acute-kidney-injury-assessment",
   "title": "Acute Kidney Injury Assessment",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "A clinician-facing prompt for recognising acute kidney injury, comparing renal function with baseline, identifying the likely cause, assessing fluid status and complications, and selecting an appropriate monitoring or referral pathway.",
   "sections": [
     {
@@ -637,10 +637,11 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG136."
-  }
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-05",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": null
+  },
+  "lastReviewed": "2026-08-05"
 }
