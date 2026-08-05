@@ -1,3 +1,17 @@
+## Frailty package layout
+
+All Frailty assessments use the same section order as the established assessment guides:
+
+1. Assessment priorities
+2. History prompts
+3. Acute deterioration and red-flag screen
+4. Focused examination
+5. Common clinical patterns
+6. Management and disposition
+7. Focused safety-netting
+
+This keeps the Frailty subsection visually and structurally consistent with Back Pain and other mature assessment content.
+
 # Clinical Decision Assessments
 
 Version-controlled clinical assessment guidance for the Clinical Decision Support app.
@@ -84,3 +98,16 @@ A cited reference with `reviewStatus: review-due` no longer blocks publication. 
 ## Assessment subsections
 
 Assessment guides can declare one or more `categoryIds`. The generated manifest publishes ordered category metadata, and assessments without category metadata are placed in `uncategorised`. The initial configured subsection is `Frailty`.
+
+## Frailty clinical package
+
+The `frailty` assessment category is a coordinated package rather than a single guide. It currently contains:
+
+- Frailty Assessment (umbrella guide)
+- Falls in Older Adults
+- Acute Confusion and Delirium
+- Comprehensive Geriatric Assessment
+- Polypharmacy and Medicines-Related Harm
+
+The focused guides share terminology, baseline-versus-current-function prompts, concise safety-netting and linked NICE/BGS references. New package content remains marked as not clinically validated until formal review.
+

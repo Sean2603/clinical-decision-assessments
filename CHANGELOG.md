@@ -1,4 +1,27 @@
+## 1.1.26 - 2026-08-05
+
+### Changed
+- Standardised all five Frailty guides to the established assessment layout.
+- Separated history prompts, acute deterioration and red flags, focused examination, common clinical patterns, management and disposition, and focused safety-netting.
+- Removed standalone documentation sections from the main visual flow and incorporated documentation prompts into management and disposition.
+- Updated Frailty Assessment to version 0.3.0 and the four focused Frailty guides to version 0.2.0.
+
 ## 1.1.23 - 2026-08-04
+
+
+## 1.1.24 - 2026-08-04
+
+### Added
+- Added the first complete Frailty clinical package.
+- Added Falls in Older Adults.
+- Added Acute Confusion and Delirium.
+- Added Comprehensive Geriatric Assessment.
+- Added Polypharmacy and Medicines-Related Harm.
+- Added NICE NG5 and British Geriatrics Society CGA references.
+
+### Changed
+- Updated the umbrella Frailty Assessment to version 0.2.0 and aligned its emergency safety-netting wording.
+- Marked all new Frailty package guides as requiring clinical validation.
 
 - Added assessment category schema and manifest metadata.
 - Assigned Frailty Assessment to the Frailty subsection.
