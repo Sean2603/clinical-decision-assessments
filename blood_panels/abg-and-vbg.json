@@ -2,9 +2,9 @@
   "id": "abg-and-vbg",
   "title": "ABG and VBG",
   "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
-  "status": "active",
+  "status": "withdrawn",
   "summary": "Acid–base status, ventilation, oxygenation and lactate",
   "introduction": "Use the analyser and local laboratory ranges. A VBG can support assessment of pH, bicarbonate and trends in carbon dioxide, but venous pO₂ must not be used to assess oxygenation. Record the oxygen device and flow or FiO₂ at the time of sampling.",
   "sections": [
@@ -192,7 +192,7 @@
           "lowPh": 7.35,
           "highPh": 7.45,
           "lowPco2": 4.7,
-          "highPco2": 6.0,
+          "highPco2": 6,
           "lowBicarbonate": 22,
           "highBicarbonate": 26
         },
@@ -222,7 +222,7 @@
           "description": "Low pH with raised pCO₂ and normal bicarbonate.",
           "inputs": {
             "ph": 7.25,
-            "pco2": 7.0,
+            "pco2": 7,
             "bicarbonate": 24
           },
           "expectedNumber": null,
@@ -233,7 +233,7 @@
           "description": "Low pH and bicarbonate with pCO₂ not raised.",
           "inputs": {
             "ph": 7.25,
-            "pco2": 5.0,
+            "pco2": 5,
             "bicarbonate": 16
           },
           "expectedNumber": null,
@@ -244,7 +244,7 @@
           "description": "Low pH, raised pCO₂ and low bicarbonate.",
           "inputs": {
             "ph": 7.1,
-            "pco2": 8.0,
+            "pco2": 8,
             "bicarbonate": 15
           },
           "expectedNumber": null,
@@ -288,12 +288,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-05",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-05"
   },
   "migration": {
     "state": "shadow",
