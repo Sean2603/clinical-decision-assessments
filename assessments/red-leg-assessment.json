@@ -1,7 +1,7 @@
 {
   "id": "red-leg-assessment",
   "title": "Red or Swollen Leg Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing an acutely red or swollen leg, distinguishing infection from vascular, venous, lymphatic, joint and traumatic causes, and supporting safe investigation, referral and follow-up.",
   "sections": [
     {
@@ -977,11 +977,12 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
-  }
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-05",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-05"
+  },
+  "lastReviewed": "2026-08-05"
 }

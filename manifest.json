@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.1",
-  "updatedAt": "2026-08-05T16:36:15Z",
+  "contentVersion": "1.2.2",
+  "updatedAt": "2026-08-05T17:04:23Z",
   "minimumAppVersion": "0.31.0",
   "references": {
     "file": "references/references.json",
@@ -139,10 +139,10 @@
     {
       "id": "red-leg-assessment",
       "title": "Red or Swollen Leg Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "b73c651a3b8cfeae079191387bfc7c852e3d6b54aed9e8fa83b7493d6ad45c4e",
+      "sha256": "35dc06cc24ac61b77614014c2efbbb801f9f1b08a747b025dd596f50eceb85c5",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
