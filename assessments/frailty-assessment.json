@@ -1,14 +1,13 @@
 {
   "id": "frailty-assessment",
   "title": "Frailty Assessment",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "The umbrella guide for the Frailty clinical package: establish baseline vulnerability, identify acute illness and functional decline, and link to focused guides for falls, delirium, CGA and medicines-related harm.",
   "sections": [
     {
       "id": "assessment-priorities",
       "title": "Assessment priorities",
       "type": "prompt-list",
-      "intro": "Frailty describes vulnerability, not the explanation for a new deterioration. Establish the person’s baseline and identify the acute or reversible problem.",
       "items": [
         {
           "id": "must-confirm-or-exclude",
@@ -35,7 +34,6 @@
       "id": "history-prompts",
       "title": "History prompts",
       "type": "prompt-list",
-      "intro": "Obtain collateral history early. Compare the current state with the person’s usual function rather than with an age-based expectation.",
       "items": [
         {
           "id": "baseline-and-current-change",
@@ -142,10 +140,9 @@
       ]
     },
     {
-      "id": "serious-pathology-screen",
-      "title": "Acute deterioration and safeguarding screen",
+      "id": "acute-deterioration-red-flags",
+      "title": "Acute deterioration and red-flag screen",
       "type": "prompt-list",
-      "intro": "Frailty increases vulnerability to harm from apparently minor illness. Escalate the acute cause, not the frailty score alone.",
       "items": [
         {
           "id": "delirium-red-flags",
@@ -233,7 +230,6 @@
       "id": "focused-examination",
       "title": "Focused examination",
       "type": "examination-guide",
-      "intro": "Examine for acute illness while also assessing cognition, function, nutrition, skin and the practical safety of the care environment.",
       "items": [
         {
           "id": "general-and-observations",
@@ -430,10 +426,9 @@
       ]
     },
     {
-      "id": "common-examination-patterns",
+      "id": "common-clinical-patterns",
       "title": "Common clinical patterns",
       "type": "common-findings",
-      "intro": "These patterns organise disposition and care planning. They do not replace diagnosis of the acute problem.",
       "items": [
         {
           "id": "stable-frailty-pattern",
@@ -547,7 +542,14 @@
           "implications": [
             "Treat metabolic complications and correct the food, fluid, swallowing and support problem that caused the deficit."
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "items": [
         {
           "id": "carer-breakdown-pattern",
           "title": "Carer breakdown or social crisis",
@@ -593,7 +595,6 @@
       "id": "safety-netting",
       "title": "Focused safety-netting",
       "type": "safety-netting",
-      "intro": "Provide advice to the patient and the people delivering care. State who will review and how deterioration will be recognised.",
       "items": [
         {
           "id": "frailty-safety-netting",

@@ -1,11 +1,11 @@
 {
   "id": "polypharmacy-and-medicines-related-harm",
   "title": "Polypharmacy and Medicines-Related Harm",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "summary": "A clinician-facing guide for recognising medicines-related deterioration in an older person, reconciling treatment, identifying high-risk medicines and arranging safe prescriber-led review.",
   "sections": [
     {
-      "id": "priorities",
+      "id": "assessment-priorities",
       "title": "Assessment priorities",
       "type": "prompt-list",
       "items": [
@@ -29,8 +29,8 @@
       ]
     },
     {
-      "id": "reconciliation",
-      "title": "Medicines reconciliation",
+      "id": "history-prompts",
+      "title": "History prompts",
       "type": "prompt-list",
       "items": [
         {
@@ -60,8 +60,48 @@
       ]
     },
     {
-      "id": "harm-patterns",
-      "title": "High-yield harm patterns",
+      "id": "acute-deterioration-red-flags",
+      "title": "Acute deterioration and red-flag screen",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "urgent",
+          "title": "Urgent or emergency assessment",
+          "urgentFeatures": [
+            "Suspected overdose, severe sedation, respiratory depression, seizure or reduced consciousness.",
+            "Significant bleeding, head injury while anticoagulated, severe hypoglycaemia or serious arrhythmia.",
+            "Severe dehydration, acute kidney injury, dangerous electrolyte abnormality or inability to take essential medicines.",
+            "No safe person or system available to administer medicines."
+          ],
+          "implications": [
+            "Treat immediate threats and contact the appropriate emergency, toxicology or prescriber service."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "items": [
+        {
+          "id": "physiology-and-targeted-examination",
+          "title": "Physiology and targeted examination",
+          "mustConfirmOrExclude": [
+            "Full observations, glucose and hydration/perfusion assessment where clinically relevant.",
+            "Pulse rhythm, lying and standing blood pressure, neurological state, gait and falls risk when medicines may be contributing.",
+            "Evidence of bleeding, infection, fluid overload, urinary retention, constipation, oversedation or other suspected adverse effects.",
+            "Relevant blood tests, ECG or medicine-level monitoring when available and indicated."
+          ],
+          "references": [
+            "NICE-NG5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-clinical-patterns",
+      "title": "Common clinical patterns",
       "type": "common-findings",
       "items": [
         {
@@ -128,8 +168,8 @@
       ]
     },
     {
-      "id": "structured-review",
-      "title": "Structured medication review",
+      "id": "management-disposition",
+      "title": "Management and disposition",
       "type": "prompt-list",
       "items": [
         {
@@ -175,34 +215,7 @@
             "NICE-NG5",
             "NICE-NG56"
           ]
-        }
-      ]
-    },
-    {
-      "id": "escalation",
-      "title": "Urgent escalation",
-      "type": "prompt-list",
-      "items": [
-        {
-          "id": "urgent",
-          "title": "Urgent or emergency assessment",
-          "urgentFeatures": [
-            "Suspected overdose, severe sedation, respiratory depression, seizure or reduced consciousness.",
-            "Significant bleeding, head injury while anticoagulated, severe hypoglycaemia or serious arrhythmia.",
-            "Severe dehydration, acute kidney injury, dangerous electrolyte abnormality or inability to take essential medicines.",
-            "No safe person or system available to administer medicines."
-          ],
-          "implications": [
-            "Treat immediate threats and contact the appropriate emergency, toxicology or prescriber service."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "documentation",
-      "title": "Documentation prompts",
-      "type": "prompt-list",
-      "items": [
+        },
         {
           "id": "record",
           "title": "Record explicitly",
@@ -218,7 +231,7 @@
       ]
     },
     {
-      "id": "safety",
+      "id": "safety-netting",
       "title": "Focused safety-netting",
       "type": "safety-netting",
       "items": [
@@ -239,7 +252,7 @@
     "reviewedBy": null,
     "reviewedOn": null,
     "reviewerRole": null,
-    "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG249."
+    "reviewNotes": "Clinical validation required before publication. Core sources: NICE NG5, NICE NG56, NICE NG249 and NICE CG103."
   },
   "categoryIds": [
     "frailty"

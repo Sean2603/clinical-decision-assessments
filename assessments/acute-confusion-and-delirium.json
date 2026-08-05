@@ -1,11 +1,11 @@
 {
   "id": "acute-confusion-and-delirium",
   "title": "Acute Confusion and Delirium",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A clinician-facing guide for recognising delirium, distinguishing it from baseline cognitive impairment, identifying reversible causes and arranging safe treatment and disposition.",
   "sections": [
     {
-      "id": "priorities",
+      "id": "assessment-priorities",
       "title": "Assessment priorities",
       "type": "prompt-list",
       "items": [
@@ -28,8 +28,8 @@
       ]
     },
     {
-      "id": "history",
-      "title": "History and collateral account",
+      "id": "history-prompts",
+      "title": "History prompts",
       "type": "prompt-list",
       "items": [
         {
@@ -68,7 +68,39 @@
       ]
     },
     {
-      "id": "examination",
+      "id": "acute-deterioration-red-flags",
+      "title": "Acute deterioration and red-flag screen",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "critical-physiology-neurology",
+          "title": "Critical physiological or neurological abnormality",
+          "mustConfirmOrExclude": [
+            "Airway, breathing or circulatory compromise; hypoxia; hypoglycaemia; severe temperature abnormality; or persistent haemodynamic instability.",
+            "New focal neurological deficit, seizure, meningism, severe headache, reduced consciousness or recent head injury.",
+            "Agitation, aggression, wandering or reduced arousal creating immediate risk that cannot be managed safely."
+          ],
+          "references": [
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "serious-reversible-cause",
+          "title": "Serious reversible cause",
+          "mustConfirmOrExclude": [
+            "Sepsis or significant infection, acute kidney injury, electrolyte disturbance, urinary retention, faecal impaction or uncontrolled pain.",
+            "Medicine toxicity, withdrawal, overdose, missed essential treatment or substance-related cause.",
+            "No safe supervision, inability to meet essential needs or concern for neglect or safeguarding."
+          ],
+          "references": [
+            "NICE-CG103",
+            "NICE-NG5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
       "title": "Focused examination",
       "type": "examination-guide",
       "items": [
@@ -113,8 +145,8 @@
       ]
     },
     {
-      "id": "causes",
-      "title": "Common causes and contributors",
+      "id": "common-clinical-patterns",
+      "title": "Common clinical patterns",
       "type": "common-findings",
       "items": [
         {
@@ -176,7 +208,7 @@
       ]
     },
     {
-      "id": "management",
+      "id": "management-disposition",
       "title": "Management and disposition",
       "type": "prompt-list",
       "items": [
@@ -194,6 +226,13 @@
           ]
         },
         {
+          "id": "hospital-assessment",
+          "title": "Hospital or urgent same-day assessment",
+          "mustConfirmOrExclude": [
+            "Unclear cause, abnormal physiology, focal deficit, reduced consciousness, significant injury, inability to maintain intake or essential care, severe behavioural risk, carer breakdown or no reliable follow-up."
+          ]
+        },
+        {
           "id": "home-management",
           "title": "Home or community management",
           "mustConfirmOrExclude": [
@@ -204,20 +243,6 @@
             "A specific review time and escalation route."
           ]
         },
-        {
-          "id": "hospital-assessment",
-          "title": "Hospital or urgent same-day assessment",
-          "mustConfirmOrExclude": [
-            "Unclear cause, abnormal physiology, focal deficit, reduced consciousness, significant injury, inability to maintain intake or essential care, severe behavioural risk, carer breakdown or no reliable follow-up."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "documentation",
-      "title": "Documentation prompts",
-      "type": "prompt-list",
-      "items": [
         {
           "id": "record",
           "title": "Record explicitly",
@@ -233,7 +258,7 @@
       ]
     },
     {
-      "id": "safety",
+      "id": "safety-netting",
       "title": "Focused safety-netting",
       "type": "safety-netting",
       "items": [

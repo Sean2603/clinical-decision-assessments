@@ -1,14 +1,13 @@
 {
   "id": "falls-in-older-adults",
   "title": "Falls in Older Adults",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "summary": "A clinician-facing guide for assessing an older adult after a fall, identifying injury and acute illness, comparing current function with baseline, and determining whether safe supported management is possible.",
   "sections": [
     {
       "id": "assessment-priorities",
       "title": "Assessment priorities",
       "type": "prompt-list",
-      "intro": "Establish what happened, why it happened, what harm occurred and whether the person has returned to their usual safe level of function.",
       "items": [
         {
           "id": "must-confirm-or-exclude",
@@ -31,9 +30,10 @@
       ]
     },
     {
-      "id": "history",
-      "title": "History of the fall",
+      "id": "history-prompts",
+      "title": "History prompts",
       "type": "prompt-list",
+      "intro": "Establish the mechanism, symptoms, baseline function and factors that may have contributed to the fall.",
       "items": [
         {
           "id": "circumstances",
@@ -94,7 +94,52 @@
       ]
     },
     {
-      "id": "examination",
+      "id": "acute-deterioration-red-flags",
+      "title": "Acute deterioration and red-flag screen",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "significant-injury",
+          "title": "Significant injury or head injury",
+          "mustConfirmOrExclude": [
+            "Suspected head, cervical-spine, hip, pelvic, spinal or other significant injury.",
+            "Anticoagulant or antiplatelet use with a head strike or possible head injury.",
+            "New inability to weight-bear, severe pain, deformity or distal neurovascular compromise."
+          ],
+          "references": [
+            "NICE-NG232",
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "medical-neurological-cause",
+          "title": "Acute medical, cardiac or neurological cause",
+          "mustConfirmOrExclude": [
+            "Unexplained collapse, loss of consciousness, exertional or supine event, palpitations or persistent cardiovascular abnormality.",
+            "New focal neurological deficit, seizure features, severe headache or persistent altered consciousness.",
+            "Delirium, infection, hypoglycaemia, dehydration or another acute illness that may have precipitated the fall."
+          ],
+          "references": [
+            "NICE-NG249",
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "prolonged-lie-functional-risk",
+          "title": "Prolonged lie or unsafe function",
+          "mustConfirmOrExclude": [
+            "Prolonged time on the floor with hypothermia, pressure injury, dehydration, muscle injury or possible acute kidney injury.",
+            "New inability to sit, transfer, stand, walk or complete essential activities at the usual level.",
+            "Unsafe home circumstances or no reliable support for immediate care and reassessment."
+          ],
+          "references": [
+            "NICE-NG249"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
       "title": "Focused examination",
       "type": "examination-guide",
       "items": [
@@ -201,8 +246,8 @@
       ]
     },
     {
-      "id": "clinical-patterns",
-      "title": "Clinical patterns and disposition",
+      "id": "common-clinical-patterns",
+      "title": "Common clinical patterns",
       "type": "common-findings",
       "items": [
         {
@@ -247,6 +292,23 @@
           "implications": [
             "Assess temperature, hydration, renal function, creatine kinase and complications according to duration and clinical findings."
           ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "urgent-escalation",
+          "title": "Hospital or urgent same-day assessment",
+          "commonFindings": [
+            "Suspected significant injury, head-injury indication, focal neurological deficit, concerning syncope, persistent physiological abnormality, delirium without a safe pathway, prolonged-lie complication, uncontrolled pain, new inability to mobilise or unsafe care circumstances."
+          ],
+          "implications": [
+            "Escalate according to the dominant acute problem; frailty should influence support and proportionality but not justify under-investigation."
+          ]
         },
         {
           "id": "home-management",
@@ -258,23 +320,6 @@
             "Document the observed functional assessment, support plan, referrals and reasons the chosen disposition is safe."
           ]
         },
-        {
-          "id": "urgent-escalation",
-          "title": "Hospital or urgent same-day assessment",
-          "commonFindings": [
-            "Suspected significant injury, head-injury indication, focal neurological deficit, concerning syncope, persistent physiological abnormality, delirium without a safe pathway, prolonged-lie complication, uncontrolled pain, new inability to mobilise or unsafe care circumstances."
-          ],
-          "implications": [
-            "Escalate according to the dominant acute problem; frailty should influence support and proportionality but not justify under-investigation."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "documentation",
-      "title": "Documentation prompts",
-      "type": "prompt-list",
-      "items": [
         {
           "id": "record",
           "title": "Record explicitly",
@@ -313,7 +358,7 @@
     "reviewedBy": null,
     "reviewedOn": null,
     "reviewerRole": null,
-    "reviewNotes": "Clinical validation required: cited reference review is due: NICE-NG249."
+    "reviewNotes": "Clinical validation required before publication. Core sources: NICE NG249, NICE NG232, NICE CG103, NICE NG56 and NICE NG5."
   },
   "categoryIds": [
     "frailty"

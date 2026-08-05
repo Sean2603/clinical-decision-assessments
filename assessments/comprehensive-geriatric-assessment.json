@@ -1,12 +1,12 @@
 {
   "id": "comprehensive-geriatric-assessment",
   "title": "Comprehensive Geriatric Assessment",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "summary": "A clinician-facing framework for a multidimensional assessment of an older person living with frailty, integrating medical, functional, cognitive, psychological, social and environmental needs into a coordinated plan.",
   "sections": [
     {
-      "id": "scope",
-      "title": "Purpose and scope",
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
       "type": "prompt-list",
       "items": [
         {
@@ -38,9 +38,10 @@
       ]
     },
     {
-      "id": "domains",
-      "title": "Core CGA domains",
+      "id": "history-prompts",
+      "title": "History prompts",
       "type": "prompt-list",
+      "intro": "Build a multidimensional account of current problems, baseline function, supports and what matters to the person.",
       "items": [
         {
           "id": "medical",
@@ -96,8 +97,33 @@
       ]
     },
     {
-      "id": "bedside-assessment",
-      "title": "Practical bedside assessment",
+      "id": "acute-deterioration-red-flags",
+      "title": "Acute deterioration and red-flag screen",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "acute-illness-or-injury",
+          "title": "Acute illness or injury",
+          "mustConfirmOrExclude": [
+            "New physiological abnormality, delirium, focal neurological deficit, significant pain or suspected injury.",
+            "Rapid decline in mobility, transfers, oral intake, continence or ability to meet basic needs.",
+            "Medication-related harm, dehydration, acute kidney injury or other reversible deterioration."
+          ]
+        },
+        {
+          "id": "unsafe-care-environment",
+          "title": "Unsafe care environment",
+          "mustConfirmOrExclude": [
+            "Carer breakdown, absent essential support, unsafe accommodation or inability to access food, fluids, medication or toileting.",
+            "Safeguarding concern, neglect, coercion or unexplained injury.",
+            "Possible end-of-life deterioration without an agreed plan or adequate symptom control."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
       "type": "examination-guide",
       "items": [
         {
@@ -157,8 +183,36 @@
       ]
     },
     {
-      "id": "plan",
-      "title": "Coordinated plan",
+      "id": "common-clinical-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "items": [
+        {
+          "id": "acute-illness-on-frailty",
+          "title": "Acute illness superimposed on frailty",
+          "mustConfirmOrExclude": [
+            "A new medical problem is producing disproportionate functional or cognitive decline against a vulnerable baseline."
+          ]
+        },
+        {
+          "id": "multidomain-decline",
+          "title": "Multidomain deterioration",
+          "mustConfirmOrExclude": [
+            "Problems span medical, functional, cognitive, medicines, social or environmental domains and cannot be addressed safely as a single isolated issue."
+          ]
+        },
+        {
+          "id": "stable-complex-needs",
+          "title": "Stable but complex needs",
+          "mustConfirmOrExclude": [
+            "No immediate emergency is identified, but coordinated multidisciplinary review is required to reduce risk and treatment burden."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
       "type": "prompt-list",
       "items": [
         {
@@ -194,14 +248,7 @@
             "NICE-NG56",
             "NICE-NG5"
           ]
-        }
-      ]
-    },
-    {
-      "id": "documentation",
-      "title": "Documentation prompts",
-      "type": "prompt-list",
-      "items": [
+        },
         {
           "id": "record",
           "title": "Record explicitly",
@@ -217,7 +264,7 @@
       ]
     },
     {
-      "id": "safety",
+      "id": "safety-netting",
       "title": "Focused safety-netting",
       "type": "safety-netting",
       "items": [
