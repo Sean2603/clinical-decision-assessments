@@ -2,9 +2,9 @@
   "id": "troponin",
   "title": "Troponin",
   "subtitle": "Myocardial injury, serial change and assay limitations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "minimumAppVersion": "0.18.0",
-  "status": "active",
+  "status": "withdrawn",
   "summary": "Myocardial injury, serial change and assay limitations",
   "introduction": "Use the assay-specific 99th-centile upper reference limit and the validated local 0/1-hour, 0/2-hour or other pathway. Troponin indicates myocardial injury; myocardial infarction requires a compatible rise/fall plus clinical evidence of ischaemia.",
   "sections": [
@@ -65,7 +65,7 @@
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-08-05",
     "reviewerRole": "tAPUC",
-    "reviewNotes": null,
+    "reviewNotes": "Withdrawn from clinical use: Not working",
     "nextReviewDue": "2028-08-05"
   },
   "migration": {
