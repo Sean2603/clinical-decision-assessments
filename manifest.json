@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.3",
-  "updatedAt": "2026-08-05T20:07:12Z",
+  "contentVersion": "1.2.4",
+  "updatedAt": "2026-08-05T20:09:43Z",
   "minimumAppVersion": "0.31.0",
   "references": {
     "file": "references/references.json",
@@ -142,7 +142,7 @@
       "version": "0.1.1",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "226bbd3fef1551c5a1d638b4760e5755c2aab26c643ea6227cd163c8bdaea03f",
+      "sha256": "35dc06cc24ac61b77614014c2efbbb801f9f1b08a747b025dd596f50eceb85c5",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
