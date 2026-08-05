@@ -322,7 +322,7 @@
       "id": "urea-and-electrolytes",
       "displayName": "Urea and electrolytes",
       "category": "blood-panel",
-      "contentVersion": "1.0.0",
+      "contentVersion": "1.0.1",
       "reviewStatus": "unverified",
       "reviewedBy": null,
       "reviewerRole": null,

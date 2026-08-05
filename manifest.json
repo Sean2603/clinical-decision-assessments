@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.1.29",
-  "updatedAt": "2026-08-05T15:46:30Z",
+  "contentVersion": "1.1.30",
+  "updatedAt": "2026-08-05T15:48:30Z",
   "minimumAppVersion": "0.18.0",
   "references": {
     "file": "references/references.json",
@@ -30,7 +30,7 @@
   "clinicalReliability": {
     "file": "clinical_reliability/clinical-reliability.json",
     "schema": "schema/clinical-reliability-schema.json",
-    "sha256": "0c1e84eb7abe3f79173667c6e1c6f740e28bf66ad56727c36219ff305f6a3c10",
+    "sha256": "4bb694b7ec066399c13894046696e030843abaa35a3a2b44f02738bfda05542f",
     "schemaSha256": "70ed85658e274ab2dfbbd09163ab3500fba561c971d2bf131954f7e7b0879062"
   },
   "assessments": [
@@ -496,10 +496,10 @@
     {
       "id": "urea-and-electrolytes",
       "title": "Urea and electrolytes",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/urea-and-electrolytes.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "d3e09fb66d7f96a6a690357e1eb75fc88894e227f621592bc7f08160460203b1",
+      "sha256": "dfd890d0edd3fac7b9bed32bfda491d17566dd6cb66bb2fd0e6a5aee3e9f1d3f",
       "schemaSha256": "d4b636ac31daace26fb87baf7ed3644823230ec6557f753de521219341a37505"
     }
   ]
