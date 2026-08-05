@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "contentVersion": "1.2.1",
-  "updatedAt": "2026-08-05T16:24:34Z",
+  "updatedAt": "2026-08-05T16:36:15Z",
   "minimumAppVersion": "0.31.0",
   "references": {
     "file": "references/references.json",
