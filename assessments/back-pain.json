@@ -1,7 +1,7 @@
 {
   "id": "back-pain",
   "title": "Back Pain Assessment",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "summary": "A clinician-facing prompt for assessing back pain, recognising serious pathology, performing focused examination and interpreting common examination patterns.",
   "lastReviewed": "2026-08-08",
   "sections": [
