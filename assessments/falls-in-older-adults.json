@@ -1,7 +1,7 @@
 {
   "id": "falls-in-older-adults",
   "title": "Falls in Older Adults",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "summary": "A clinician-facing guide for assessing an older adult after a fall, identifying injury and acute illness, comparing current function with baseline, and determining whether safe supported management is possible.",
   "sections": [
     {
