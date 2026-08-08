@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.16",
-  "updatedAt": "2026-08-08T15:41:56Z",
+  "contentVersion": "1.2.17",
+  "updatedAt": "2026-08-08T15:51:15Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -386,73 +386,73 @@
     {
       "id": "bnp-and-nt-probnp",
       "title": "BNP and NT-proBNP",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/bnp-and-nt-probnp.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "f3c1948066fd20432906a9c762907eadecd9de491d30dced474ff6e3b76744d6",
+      "sha256": "c61297520bca85251162c3db87177edd0294ad2a197f089f25ff891ed6f1a8d4",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "c-reactive-protein",
       "title": "C-reactive protein",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/c-reactive-protein.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "d91347a5d4be7a1da84b9bbc51cf140e8f63391100dd2f648e60433bb709dba4",
+      "sha256": "2aa2321f4a8e29293ca85dfe242ea64888577d338451dd1df461e31c6a833818",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "calcium-magnesium-and-phosphate",
       "title": "Calcium, magnesium and phosphate",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/calcium-magnesium-and-phosphate.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "58048f0906bb7bf8560c53fbf7836e129d5b9882a0b603944e8e0d639c51abf1",
+      "sha256": "9711bd88b88ee71da6698215943b62d63c7660e1f02701e5cae0722bdcfb182b",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "coagulation",
       "title": "Coagulation",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/coagulation.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "13d425795866dfb64aa21d231e572bef6203a3c40e9edd0455cb3b132e39c284",
+      "sha256": "f0bbcaca34ed71fdca70de1ca75c665d1ace49978ea8bf0b141d1cb58541c4af",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "creatine-kinase",
       "title": "Creatine kinase",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/creatine-kinase.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "7cd55a96bb967b9b654f4b5d5ff3337ebdf5801e1081735c28e34de48232de70",
+      "sha256": "3d551809bdf3975259312b722009e6c09e0525a49c995ebe311f66bb29118914",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "full-blood-count",
       "title": "Full blood count",
-      "version": "1.0.0",
+      "version": "1.0.2",
       "file": "blood_panels/full-blood-count.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "9d15ab8a26d89126ed00a7d9f3fbab80186d474444abec03a32904e07e838957",
+      "sha256": "14d9236f6eba2d457a358c4ee5feb23395a4b59fa202d8ee1c6ebaf35bfd3ba3",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "glucose-ketones-and-lactate",
       "title": "Glucose, ketones and lactate",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/glucose-ketones-and-lactate.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "3aded1ff88728498f0961e439076ea61622103c473f6daa733bfa9944e872c21",
+      "sha256": "3a239cad96137ae8a6e3f887e90ca9e3981d1036aa0a9219179cac20bea306e0",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "haematinics",
       "title": "Haematinics",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/haematinics.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "c6a56ab75256dd9fc82c006daa3661a37c1b2d7bf2429e61c0fafbb5eefc84c4",
+      "sha256": "f88d4a082a4a05fc2761948f34559888ffac3eaec1b7f36cbd51bb78509d4419",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
@@ -494,10 +494,10 @@
     {
       "id": "troponin",
       "title": "Troponin",
-      "version": "1.0.2",
+      "version": "1.0.4",
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "5986a0423662e9f9baf94abcb75fd517eba5000db46c8037f79685833df8ddf5",
+      "sha256": "58a3e3d9158a2fef31ac592913f77e78f85e0bd714836799e24eda8255de5617",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
