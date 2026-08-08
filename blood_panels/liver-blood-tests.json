@@ -2,7 +2,7 @@
   "id": "liver-blood-tests",
   "title": "Liver blood tests",
   "subtitle": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
@@ -23,7 +23,8 @@
           "highInterpretation": [
             "Hepatocellular injury. Causes include fatty liver disease, viral hepatitis, alcohol-related injury, medicines, ischaemia and autoimmune hepatitis."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "alp",
@@ -36,7 +37,8 @@
           "highInterpretation": [
             "Cholestasis or biliary obstruction, but also bone disease, healing fracture, pregnancy and growth. Use GGT to support hepatic origin."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "ggt",
@@ -49,7 +51,8 @@
           "highInterpretation": [
             "Supports hepatic origin of raised ALP. Can rise with alcohol, cholestasis, fatty liver and enzyme-inducing medicines; it is non-specific."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "bilirubin",
@@ -62,7 +65,8 @@
           "highInterpretation": [
             "Pre-hepatic haemolysis, hepatocellular dysfunction or biliary obstruction. Visible jaundice often appears around 40–60 micromol/L but varies."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "albumin",
@@ -75,7 +79,8 @@
           "highInterpretation": [
             "Usually haemoconcentration from reduced plasma volume."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "inr-prothrombin-time",
@@ -88,7 +93,8 @@
           "highInterpretation": [
             "Can indicate reduced hepatic synthesis, vitamin K deficiency, anticoagulant effect or DIC. In acute liver injury, a rising INR is an important marker of failure."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     },
@@ -107,7 +113,8 @@
           "highInterpretation": [
             "Consider viral, metabolic, autoimmune, drug-induced or ischaemic hepatocyte injury."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "cholestatic-pattern",
@@ -120,7 +127,8 @@
           "highInterpretation": [
             "Consider gallstone obstruction, biliary infection, pancreatic/biliary malignancy, drug-induced cholestasis or infiltrative disease."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "mixed-pattern",
@@ -133,7 +141,8 @@
           "highInterpretation": [
             "Consider drug injury, infection, obstruction with hepatocyte injury or another mixed hepatic process."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "isolated-bilirubin-rise",
@@ -146,7 +155,8 @@
           "highInterpretation": [
             "Consider Gilbert syndrome, haemolysis or an early/partial obstructive process; assess conjugated fraction where available."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     }
@@ -164,12 +174,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.17",
-  "updatedAt": "2026-08-08T15:51:15Z",
+  "contentVersion": "1.2.18",
+  "updatedAt": "2026-08-08T15:57:50Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -177,19 +177,19 @@
     {
       "id": "4at-delirium-screen",
       "title": "4AT delirium screen",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "scoring_tools/4at-delirium-screen.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "1f86d3658c6ef2e0b75559686f814adc026da981927a812307f8bad20e2a13aa",
+      "sha256": "d308b22677e16b251e806209dc49bbfd017137f5c3fd5879338998917c3f46ab",
       "schemaSha256": "52e7d5e1c0c68cfa293ed9a2427e0f4db96ffd998447eecdae83d7d5465f8550"
     },
     {
       "id": "add-rs",
       "title": "ADD-RS",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "scoring_tools/add-rs.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "7b5864fd05c9f3d7eafc56f9dc8db0cc1aaf7eeecdc567f86890c383a5f8295e",
+      "sha256": "9a711b9ac9e90437f446938afe6be2f470db17477df81306a1ee3af3c8db0534",
       "schemaSha256": "52e7d5e1c0c68cfa293ed9a2427e0f4db96ffd998447eecdae83d7d5465f8550"
     },
     {
@@ -458,37 +458,37 @@
     {
       "id": "lipase-and-amylase",
       "title": "Lipase and amylase",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/lipase-and-amylase.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "85260d51e1cf56bb8eefdd7fc6d02a105bb2c84ab6a60aa33c9c19df3250f99a",
+      "sha256": "758218642b3ec9d980e2453956b6bb81e6309cad253a63d2e488584ca8f13fd1",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "liver-blood-tests",
       "title": "Liver blood tests",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/liver-blood-tests.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "a55aa70bad674563661707ac34a512ecb2668875a438af335847d365de613cc8",
+      "sha256": "e34151421e4278155f0926e4e90b0bc088ad4225ca8e3e08c8fa2530b41f50de",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "serum-osmolality",
       "title": "Serum osmolality",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/serum-osmolality.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "0a7e0c232f1b0a64c661c79daf084873a22f64aa5187bcab36eb59b93e3de9a5",
+      "sha256": "6c6abcbed7b907f6845b560b43b2b8fa4c2c1bea2b03dfdb5e91a5ba8534f768",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
       "id": "thyroid-function",
       "title": "Thyroid function",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/thyroid-function.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "6bb578b596a587a7d13b7d3f5838f87247e06cc495e58f0487fd150df7f3b2b9",
+      "sha256": "5b832f1afc56fb9053f02c3b3f4ff0b8afcad55f8ff2eff296259f9bc7774802",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
