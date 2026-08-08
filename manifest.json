@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.11",
-  "updatedAt": "2026-08-08T14:42:57Z",
+  "contentVersion": "1.2.12",
+  "updatedAt": "2026-08-08T14:56:36Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -44,10 +44,10 @@
     {
       "id": "acute-confusion-and-delirium",
       "title": "Acute Confusion and Delirium",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "2e00334abc521b91925eb52665c0dc03ad9febc7c3afa71f0fd1478bb06d3614",
+      "sha256": "af0e191216835724ef6af12d86167b4036e0ced940312515c8100e69513e5936",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "frailty"
@@ -56,10 +56,10 @@
     {
       "id": "acute-kidney-injury-assessment",
       "title": "Acute Kidney Injury Assessment",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "9ad6ad5775b7264c72c47e2f01244208c9e53574cd63332d193f7dcd2d7e14bd",
+      "sha256": "d653c75e8eefc4a764c54a11af22158d9c12f0b3421ecf65e35511f5c2e75243",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -68,10 +68,10 @@
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "20dc478477a2242dc41837533246d7621d307d9169dbd07f7f33cc7c166de726",
+      "sha256": "5bc26f579e64f0e83ee3484138f1d61b15ee34fbaccb5e0971fbd7d89f74c677",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
