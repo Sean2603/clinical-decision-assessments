@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.14",
-  "updatedAt": "2026-08-08T15:29:12Z",
+  "contentVersion": "1.2.15",
+  "updatedAt": "2026-08-08T15:39:12Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -44,10 +44,10 @@
     {
       "id": "acute-confusion-and-delirium",
       "title": "Acute Confusion and Delirium",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "334f1ee24e416ad66a6cfdbdf201641ef40ffe3524488db63f0f707e7d883e86",
+      "sha256": "1a1b3e3243e67db677055347d4e0e75ba37addd1d2e70fa42ded8518b338cc0d",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "frailty"
@@ -56,10 +56,10 @@
     {
       "id": "acute-kidney-injury-assessment",
       "title": "Acute Kidney Injury Assessment",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "30214ff078471ce11c20a81a0478317aee3d1c36ff7c8d77a66ae7602b4413c6",
+      "sha256": "5007b3bd3bae81497d61032fc171ce63606448cfc1ef7f6347d9644e703a144a",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "uncategorised"
@@ -80,10 +80,10 @@
     {
       "id": "comprehensive-geriatric-assessment",
       "title": "Comprehensive Geriatric Assessment",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "file": "assessments/comprehensive-geriatric-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "3cd7b9d75cef9addba8a1f189b51ccddeeb7a4ba80d384bf565136cc7dceb9d5",
+      "sha256": "a0688d3e7c8a4dc9373885305d1c8a1c0472690aa083829aa5d9942b6b0021ff",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "frailty"
@@ -92,10 +92,10 @@
     {
       "id": "dehydration-assessment",
       "title": "Dehydration Assessment",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "assessments/dehydration-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "ce03970ee5c54f6fe1bd6691482a70633f6bbe785cae79e8d4e58969bd2b8e8a",
+      "sha256": "faed048d1d1efe9bd67f4e43485e66474f3f2c978e2c05bc665e88418dd35302",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "uncategorised"
@@ -104,10 +104,10 @@
     {
       "id": "dizziness-vertigo-assessment",
       "title": "Dizziness and Vertigo Assessment",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "57a5582582942fe5e98dd085dc9783c40f49a2d8c7ea69694b9ca96b330f2a48",
+      "sha256": "56b05cdad8247a46276fe48edec1fa8f30d183939531494b4d4915017ef4b092",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "uncategorised"
@@ -116,10 +116,10 @@
     {
       "id": "falls-in-older-adults",
       "title": "Falls in Older Adults",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "file": "assessments/falls-in-older-adults.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "262528d32b18394e09c5152a1c5659b8d4a6bc30f0a9da08e5795396a5254b0b",
+      "sha256": "904be67a592c5e128cf293bf70c55e653c9950685b35fde1a9b137ed9e8276b6",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "frailty"
@@ -128,10 +128,10 @@
     {
       "id": "frailty-assessment",
       "title": "Frailty Assessment",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "file": "assessments/frailty-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "53ecc7e6bc2fbba8f6e67641091fb0d3550174d4fa6c2b45e0f813a28ff55b9f",
+      "sha256": "e2d8aa8db77e8def0b2a38447edc80501624d6328b70a6651cc9a243bff1ef5e",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "frailty"
@@ -140,10 +140,10 @@
     {
       "id": "polypharmacy-and-medicines-related-harm",
       "title": "Polypharmacy and Medicines-Related Harm",
-      "version": "0.2.5",
+      "version": "0.2.6",
       "file": "assessments/polypharmacy-and-medicines-related-harm.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "087f15fed3bdaffeea30e1635a04aba01793bb718131641b4afd60e1d5a4d78f",
+      "sha256": "0f5d9692084971933ef067c60d25dadf86a814538bc80b3acd227dfdd2b3f475",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "frailty"
@@ -152,10 +152,10 @@
     {
       "id": "red-leg-assessment",
       "title": "Red or Swollen Leg Assessment",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "5efdf2f4f79336a9d35e06928b76b27f49afbeb6b82435ea7c9b86f639cedb46",
+      "sha256": "8d03902b995c2edf3d211ce5e5e07e198ff3496e9268506e3dffe672be3bf329",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "uncategorised"
@@ -377,10 +377,10 @@
     {
       "id": "abg-and-vbg",
       "title": "ABG and VBG",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "d30d806e7968bc26af76ab5505e041d71dcbc246ddd4bc42fd2863d926eedfc4",
+      "sha256": "01892cab062a05c6fd9862ff07662107875eec8b98cac0b66cffa92b884c0904",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     },
     {
