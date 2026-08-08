@@ -2,9 +2,9 @@
   "id": "troponin",
   "title": "Troponin",
   "subtitle": "Myocardial injury, serial change and assay limitations",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "minimumAppVersion": "0.18.0",
-  "status": "withdrawn",
+  "status": "active",
   "summary": "Myocardial injury, serial change and assay limitations",
   "introduction": "Use the assay-specific 99th-centile upper reference limit and the validated local 0/1-hour, 0/2-hour or other pathway. Troponin indicates myocardial injury; myocardial infarction requires a compatible rise/fall plus clinical evidence of ischaemia.",
   "sections": [
@@ -21,7 +21,8 @@
           "highInterpretation": [],
           "notes": [
             "A single low result only rules out MI when the validated pathway permits it, taking account of symptom onset and sampling time. It does not rule out unstable angina, PE, aortic disease or other causes of chest pain."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "above-99th-centile",
@@ -32,7 +33,8 @@
           "highInterpretation": [],
           "notes": [
             "Possible causes include type 1 MI, supply–demand mismatch, tachyarrhythmia, heart failure, myocarditis, PE, sepsis, renal disease, stroke, trauma or strenuous exercise."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "rise-or-fall",
@@ -43,7 +45,8 @@
           "highInterpretation": [],
           "notes": [
             "Dynamic change supports acute injury. Chronic stable elevation is common in CKD and structural heart disease, but a new rise/fall can still represent acute MI."
-          ]
+          ],
+          "unitless": true
         }
       ]
     }
@@ -63,10 +66,10 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-05",
+    "reviewedOn": "2026-08-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Withdrawn from clinical use: Not working",
-    "nextReviewDue": "2028-08-05"
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",
