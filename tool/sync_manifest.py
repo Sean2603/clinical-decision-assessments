@@ -63,8 +63,21 @@ def write_json_if_changed(path: Path, value: dict) -> bool:
     return True
 
 
+def canonical_text_bytes(path: Path) -> bytes:
+    """Return the bytes GitHub raw serves for repository text files.
+
+    Git may check text files out as CRLF on Windows while repository blobs and
+    GitHub raw responses use LF. Manifest hashes must therefore be calculated
+    from a platform-independent LF representation rather than working-tree
+    bytes, otherwise the Flutter client correctly rejects the download.
+    """
+    text = path.read_text(encoding="utf-8")
+    normalized = text.replace("\r\n", "\n").replace("\r", "\n")
+    return normalized.encode("utf-8")
+
+
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_text_bytes(path)).hexdigest()
 
 
 def semver_parts(value: str) -> tuple[int, int, int]:

@@ -35,10 +35,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download repository
+      - name: Download exact branch/PR head
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+
+      - name: Show validated commit
+        shell: bash
+        run: |
+          echo "Validating commit $(git rev-parse HEAD)"
+          echo "Branch/ref: $GITHUB_REF"
 
       - name: Install Python
         uses: actions/setup-python@v6
