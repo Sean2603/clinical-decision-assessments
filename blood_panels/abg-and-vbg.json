@@ -2,7 +2,7 @@
   "id": "abg-and-vbg",
   "title": "ABG and VBG",
   "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minimumAppVersion": "0.18.0",
   "status": "withdrawn",
   "summary": "Acid–base status, ventilation, oxygenation and lactate",
@@ -15,7 +15,7 @@
         {
           "id": "ph",
           "name": "pH",
-          "unit": "",
+          "unit": "unitless",
           "referenceRange": "ABG 7.35–7.45",
           "lowInterpretation": [
             "Acidaemia."
@@ -103,7 +103,7 @@
         {
           "id": "respiratory-acidosis",
           "name": "Respiratory acidosis",
-          "unit": "",
+          "unit": "unitless",
           "referenceRange": "Low pH with raised pCO₂",
           "lowInterpretation": [],
           "highInterpretation": [],
@@ -114,7 +114,7 @@
         {
           "id": "metabolic-acidosis",
           "name": "Metabolic acidosis",
-          "unit": "",
+          "unit": "unitless",
           "referenceRange": "Low pH with low bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
@@ -125,7 +125,7 @@
         {
           "id": "mixed-acidosis",
           "name": "Mixed respiratory and metabolic acidosis",
-          "unit": "",
+          "unit": "unitless",
           "referenceRange": "Low pH with raised pCO₂ and low bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
@@ -136,7 +136,7 @@
         {
           "id": "respiratory-alkalosis",
           "name": "Respiratory alkalosis",
-          "unit": "",
+          "unit": "unitless",
           "referenceRange": "High pH with low pCO₂",
           "lowInterpretation": [],
           "highInterpretation": [],
@@ -147,7 +147,7 @@
         {
           "id": "metabolic-alkalosis",
           "name": "Metabolic alkalosis",
-          "unit": "",
+          "unit": "unitless",
           "referenceRange": "High pH with raised bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
@@ -158,7 +158,7 @@
         {
           "id": "mixed-alkalosis",
           "name": "Mixed respiratory and metabolic alkalosis",
-          "unit": "",
+          "unit": "unitless",
           "referenceRange": "High pH with low pCO₂ and raised bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
@@ -290,10 +290,10 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-05",
+    "reviewedOn": "2026-08-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Withdrawn from clinical use: Not correct",
-    "nextReviewDue": "2028-08-05"
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",

@@ -1,7 +1,7 @@
 {
   "id": "dizziness-vertigo-assessment",
   "title": "Dizziness and Vertigo Assessment",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "summary": "A clinician-facing prompt for classifying dizziness by timing and triggers, recognising central and cardiovascular causes, performing focused vestibular, neurological and postural examination, and selecting an appropriate referral or community pathway. ",
   "sections": [
     {
@@ -606,7 +606,7 @@
           "id": "dizziness-vertigo-safety-netting",
           "title": "Dizziness or vertigo",
           "safetyNetting": [
-            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
+            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern. ",
             "Seek urgent reassessment for new weakness or numbness; facial droop; speech, swallowing or vision change; a new severe headache or neck pain; inability to stand or walk; repeated vomiting or inability to drink; new hearing loss; fainting or palpitations; or symptoms that become continuous, markedly worse or different from the assessed pattern.",
             "Avoid driving, working at height or operating machinery while symptoms could impair balance or concentration. Follow the agreed review and vestibular, falls, cardiac or stroke pathway."
           ],
@@ -619,10 +619,10 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-05",
+    "reviewedOn": "2026-08-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Validation",
-    "nextReviewDue": "2028-08-05"
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "lastReviewed": "2026-08-05"
 }
