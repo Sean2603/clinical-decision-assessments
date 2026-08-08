@@ -1,7 +1,7 @@
 {
   "id": "back-pain",
   "title": "Back Pain Assessment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "summary": "A clinician-facing prompt for assessing back pain, recognising serious pathology, performing focused examination and interpreting common examination patterns.",
   "lastReviewed": "2026-07-30",
   "sections": [
@@ -803,7 +803,7 @@
             ],
             "urgency": "immediate",
             "keyTriggers": [
-              "Collapse, haemodynamic compromise, pulsatile mass or limb ischaemia."
+              "Collapse, haemodynamic compromise, pulsatile mass or limb ischaemia. "
             ],
             "guidance": [],
             "references": []
@@ -838,9 +838,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-07-30",
+    "reviewedOn": "2026-08-05",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-07-30",
-    "reviewNotes": null
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-05"
   }
 }

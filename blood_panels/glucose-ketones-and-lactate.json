@@ -98,8 +98,8 @@
     "reviewedBy": null,
     "reviewedOn": null,
     "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source.",
+    "nextReviewDue": null
   },
   "migration": {
     "state": "shadow",

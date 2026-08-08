@@ -1,7 +1,8 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.7",
-  "updatedAt": "2026-08-05T21:09:57Z",
+  "contentVersion": "1.2.8",
+  "updatedAt": "2026-08-08T12:23:04Z",
+  "emergencyRevocations": [],
   "minimumAppVersion": "0.31.0",
   "references": {
     "file": "references/references.json",
@@ -34,7 +35,7 @@
       "version": "0.2.1",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "2e00334abc521b91925eb52665c0dc03ad9febc7c3afa71f0fd1478bb06d3614",
+      "sha256": "ad1c21f758c689991280f968e19b43857762adb229256f28339298abf48fadfa",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "frailty"
@@ -46,7 +47,7 @@
       "version": "0.1.5",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "9ad6ad5775b7264c72c47e2f01244208c9e53574cd63332d193f7dcd2d7e14bd",
+      "sha256": "aa48110aa9132dd5727cd6972351f4ad47386a625127ba4f3313fd12a3cdd384",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -55,10 +56,10 @@
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "0d391bfa1901fb12550af21ce7f8bb6f5157533e121b1f5fd2b32a8ca19e251b",
+      "sha256": "20dc478477a2242dc41837533246d7621d307d9169dbd07f7f33cc7c166de726",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -94,7 +95,7 @@
       "version": "0.2.0",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "87c2524f369ea10fe9142a77dcfd35817a3d78ccd3093f19949363f870ad4e5f",
+      "sha256": "b7c63ef6c4410b07fa2f90be6e104c0e27a0c3df4effeaf4e4bc2b75a10d41c8",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -130,7 +131,7 @@
       "version": "0.2.5",
       "file": "assessments/polypharmacy-and-medicines-related-harm.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "7dd0ecc5b65a7d2db15a415c9c0749ff2cb98c3a2cd7e12e51d900cdab17b656",
+      "sha256": "d446b925969a0a0a81dfce1064da26fdbd22d7c94d8b54694a41069368355fcd",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "frailty"
@@ -142,7 +143,7 @@
       "version": "0.1.3",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "32fbacd60936ce12502322c512a3421d53a6c49a7d86069ffbcc16a3d361f0c2",
+      "sha256": "0879bcd22046bd147975773037b40ee5d74e6ffff0d07ecc1396818d9372e5d0",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -367,7 +368,7 @@
       "version": "1.0.2",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "cc0a4fe09251d7fb77fdc0be25dfa0a59f74231b3f76f68649a3a09111631e1d",
+      "sha256": "c75892c2463384e7ef237a672c13ba200acdbadac67d24275f829561606766e8",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
@@ -430,7 +431,7 @@
       "version": "1.0.0",
       "file": "blood_panels/glucose-ketones-and-lactate.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "1296374399cfb8cdea841bbd049aec94d5d3bc1f159af7ebbe0ec54315c63da0",
+      "sha256": "3aded1ff88728498f0961e439076ea61622103c473f6daa733bfa9944e872c21",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
@@ -484,7 +485,7 @@
       "version": "1.0.2",
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "5986a0423662e9f9baf94abcb75fd517eba5000db46c8037f79685833df8ddf5",
+      "sha256": "8705a7ecfcb1a1d9e73019a24282531785dcc97d96edcc4959f310f4006f8822",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
