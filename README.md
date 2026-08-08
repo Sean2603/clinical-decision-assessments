@@ -111,3 +111,15 @@ The `frailty` assessment category is a coordinated package rather than a single 
 
 The focused guides share terminology, baseline-versus-current-function prompts, concise safety-netting and linked NICE/BGS references. New package content remains marked as not clinically validated until formal review.
 
+
+## Manifest ownership
+
+`manifest.json` is generated during the final CDM Content Manager review-batch publication. It is not manually maintained and GitHub Actions does not rewrite or commit it.
+
+Normal validation is read-only:
+
+```powershell
+python tool/sync_manifest.py --check
+```
+
+The controlled Content Manager transaction uses `--write` after all staged JSON has been written, then validates the repository and commits the content and generated artefacts together. GitHub Actions regenerates/checks derived data only to detect drift and fails rather than creating a bot commit.

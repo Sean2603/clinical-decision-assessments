@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import argparse
 import hashlib
 import json
 import re
@@ -49,11 +50,17 @@ def load_json(path: Path) -> dict:
         ) from exc
 
 
-def write_json(path: Path, value: dict) -> None:
-    path.write_text(
-        json.dumps(value, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
+def render_json(value: dict) -> str:
+    return json.dumps(value, indent=2, ensure_ascii=False) + "\n"
+
+
+def write_json_if_changed(path: Path, value: dict) -> bool:
+    rendered = render_json(value)
+    current = path.read_text(encoding="utf-8") if path.exists() else None
+    if current == rendered:
+        return False
+    path.write_text(rendered, encoding="utf-8")
+    return True
 
 
 def sha256(path: Path) -> str:
@@ -71,13 +78,34 @@ def bump_patch(value: str) -> str:
     return f"{major}.{minor}.{patch + 1}"
 
 
+def canonical_revocations(value: object) -> object:
+    if not isinstance(value, list):
+        return value
+
+    def key(entry: object) -> tuple[str, str, str, str, str, str]:
+        if not isinstance(entry, dict):
+            return ("", "", "", "", "", json.dumps(entry, sort_keys=True))
+        affected = entry.get("affectedVersions")
+        affected = affected if isinstance(affected, dict) else {}
+        return (
+            str(entry.get("contentType", "")),
+            str(entry.get("contentId", "")),
+            str(entry.get("action", "")),
+            str(affected.get("minimum", "")),
+            str(affected.get("maximum", "")),
+            str(entry.get("reason", "")),
+        )
+
+    return sorted(value, key=key)
+
+
 def build_entries(
     directory: Path,
     schema_path: Path,
     version_field: str,
     existing_entries: dict[str, dict],
 ) -> list[dict]:
-    paths = sorted(directory.glob("*.json"))
+    paths = sorted(directory.glob("*.json"), key=lambda item: item.name.casefold())
     if not paths:
         raise SystemExit(f"No JSON files found in {directory.relative_to(ROOT)}.")
 
@@ -120,8 +148,7 @@ def build_entries(
     return entries
 
 
-def main() -> None:
-    manifest = load_json(MANIFEST_PATH)
+def build_manifest(current: dict) -> tuple[dict, bool]:
     load_json(REFERENCES_PATH)
     categories = load_json(CATEGORIES_PATH)
     load_json(CATEGORIES_SCHEMA_PATH)
@@ -132,7 +159,7 @@ def main() -> None:
         load_json(schema_path)
         existing = {
             entry.get("id"): entry
-            for entry in manifest.get(key, [])
+            for entry in current.get(key, [])
             if isinstance(entry, dict) and isinstance(entry.get("id"), str)
         }
         generated_collections[key] = build_entries(
@@ -142,10 +169,26 @@ def main() -> None:
             existing,
         )
 
-    previous_version = manifest.get("contentVersion", "0.0.0")
+    previous_version = current.get("contentVersion", "0.0.0")
     semver_parts(previous_version)
 
-    generated_core = {
+    generated_keys = {
+        "schemaVersion", "contentVersion", "minimumAppVersion", "references",
+        "assessmentCategories", "assessments", "guidelines", "scoringTools",
+        "bloodPanels",
+    }
+    preserved = {
+        key: value
+        for key, value in current.items()
+        if key not in generated_keys and key != "updatedAt"
+    }
+    if "emergencyRevocations" in preserved:
+        preserved["emergencyRevocations"] = canonical_revocations(
+            preserved["emergencyRevocations"]
+        )
+
+    candidate = {
+        **preserved,
         "schemaVersion": 3,
         "contentVersion": previous_version,
         "minimumAppVersion": "0.31.0",
@@ -160,43 +203,96 @@ def main() -> None:
             "schemaSha256": sha256(CATEGORIES_SCHEMA_PATH),
             "items": categories["categories"],
         },
-        **generated_collections,
+        "assessments": generated_collections["assessments"],
+        "guidelines": generated_collections["guidelines"],
+        "scoringTools": generated_collections["scoringTools"],
+        "bloodPanels": generated_collections["bloodPanels"],
     }
 
-    generated_keys = set(generated_core)
-    previous_core = {
+    current_semantic = {
         key: value
-        for key, value in manifest.items()
-        if key in generated_keys and key != "updatedAt"
+        for key, value in current.items()
+        if key not in {"contentVersion", "updatedAt"}
     }
-    if generated_core != previous_core:
-        generated_core["contentVersion"] = bump_patch(previous_version)
+    candidate_semantic = {
+        key: value
+        for key, value in candidate.items()
+        if key != "contentVersion"
+    }
+    semantic_changed = candidate_semantic != current_semantic
 
-    preserved_top_level = {
-        key: value
-        for key, value in manifest.items()
-        if key not in generated_keys and key != "updatedAt"
-    }
+    if semantic_changed:
+        candidate["contentVersion"] = bump_patch(previous_version)
+        updated_at = (
+            datetime.now(timezone.utc)
+            .replace(microsecond=0)
+            .isoformat()
+            .replace("+00:00", "Z")
+        )
+    else:
+        updated_at = current.get("updatedAt")
+        if not isinstance(updated_at, str) or not updated_at:
+            updated_at = (
+                datetime.now(timezone.utc)
+                .replace(microsecond=0)
+                .isoformat()
+                .replace("+00:00", "Z")
+            )
+
     generated = {
-        **preserved_top_level,
-        "schemaVersion": generated_core["schemaVersion"],
-        "contentVersion": generated_core["contentVersion"],
-        "updatedAt": datetime.now(timezone.utc)
-        .replace(microsecond=0)
-        .isoformat()
-        .replace("+00:00", "Z"),
-        "minimumAppVersion": generated_core["minimumAppVersion"],
-        "references": generated_core["references"],
-        "assessmentCategories": generated_core["assessmentCategories"],
-        "assessments": generated_core["assessments"],
-        "guidelines": generated_core["guidelines"],
-        "scoringTools": generated_core["scoringTools"],
-        "bloodPanels": generated_core["bloodPanels"],
+        "schemaVersion": candidate["schemaVersion"],
+        "contentVersion": candidate["contentVersion"],
+        "updatedAt": updated_at,
+        **{
+            key: value
+            for key, value in candidate.items()
+            if key not in {"schemaVersion", "contentVersion"}
+        },
     }
-    write_json(MANIFEST_PATH, generated)
+    return generated, semantic_changed
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Deterministically generate or verify manifest.json."
+    )
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--write",
+        action="store_true",
+        help="Write manifest.json. Intended for the CDM Content Manager batch publisher.",
+    )
+    mode.add_argument(
+        "--check",
+        action="store_true",
+        help="Verify manifest.json is already synchronised without writing it.",
+    )
+    args = parser.parse_args()
+
+    current = load_json(MANIFEST_PATH)
+    generated, semantic_changed = build_manifest(current)
+    expected = render_json(generated)
+    actual = MANIFEST_PATH.read_text(encoding="utf-8")
+
+    # Default to read-only verification. A write must be explicitly requested.
+    if not args.write:
+        if actual != expected:
+            raise SystemExit(
+                "manifest.json is not synchronised. Publish through the CDM Content "
+                "Manager so the manifest is generated once in the controlled batch."
+            )
+        print(
+            "manifest.json verified: deterministic and synchronised; "
+            f"contentVersion={generated['contentVersion']}"
+        )
+        return
+
+    changed = write_json_if_changed(MANIFEST_PATH, generated)
     print(
-        "manifest.json synchronised: "
+        "manifest.json synchronised by controlled writer: "
         f"contentVersion={generated['contentVersion']}, "
+        f"semanticChanged={str(semantic_changed).lower()}, "
+        f"fileChanged={str(changed).lower()}, "
         f"assessments={len(generated['assessments'])}, "
         f"guidelines={len(generated['guidelines'])}, "
         f"scoringTools={len(generated['scoringTools'])}, "
