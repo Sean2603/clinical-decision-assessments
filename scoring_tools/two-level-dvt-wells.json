@@ -2,7 +2,7 @@
   "id": "two-level-dvt-wells",
   "title": "Two-level DVT Wells",
   "subtitle": "DVT likelihood and investigation pathway",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -147,12 +147,12 @@
     "NICE-NG158"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",
@@ -186,7 +186,7 @@
         "previous-dvt": false,
         "alternative-diagnosis": true
       },
-      "expectedScore": -2.0,
+      "expectedScore": -2,
       "expectedResultId": "dvt-unlikely"
     },
     {
@@ -204,7 +204,7 @@
         "previous-dvt": true,
         "alternative-diagnosis": false
       },
-      "expectedScore": 2.0,
+      "expectedScore": 2,
       "expectedResultId": "dvt-likely"
     },
     {
@@ -222,7 +222,7 @@
         "previous-dvt": true,
         "alternative-diagnosis": false
       },
-      "expectedScore": 9.0,
+      "expectedScore": 9,
       "expectedResultId": "dvt-likely"
     }
   ]
