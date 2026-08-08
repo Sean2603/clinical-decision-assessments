@@ -1,7 +1,7 @@
 {
   "id": "frailty-assessment",
   "title": "Frailty Assessment",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "summary": "The umbrella guide for the Frailty clinical package: establish baseline vulnerability, identify acute illness and functional decline, and link to focused guides for falls, delirium, CGA and medicines-related harm.",
   "sections": [
     {
@@ -620,5 +620,6 @@
   },
   "categoryIds": [
     "frailty"
-  ]
+  ],
+  "status": "active"
 }
