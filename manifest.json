@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.15",
-  "updatedAt": "2026-08-08T15:39:12Z",
+  "contentVersion": "1.2.16",
+  "updatedAt": "2026-08-08T15:41:56Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -68,10 +68,10 @@
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "cf46ad0615c88c53e11e42d97214a6e2744eac81313af4b224e2ee6e0055fede",
+      "sha256": "e9cc1d1000b9b914f2c17783f0274fddf5bd7c9bae2decea922e673a72cc3b10",
       "schemaSha256": "da5a1f35e441c92cbfd58cb908f360b3760572625afd2c751f83c556ab8c3574",
       "categoryIds": [
         "uncategorised"
