@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.12",
-  "updatedAt": "2026-08-08T14:56:36Z",
+  "contentVersion": "1.2.13",
+  "updatedAt": "2026-08-08T15:07:16Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -357,19 +357,19 @@
     {
       "id": "two-level-dvt-wells",
       "title": "Two-level DVT Wells",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "scoring_tools/two-level-dvt-wells.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "72792651dbb1822761d5b3335f75a91cde44b71670607282eb34d848c93c13d6",
+      "sha256": "7f42a3e0768c14552298b3de584d6f2743a38f487e3e0ea7518c8e3c81529445",
       "schemaSha256": "52e7d5e1c0c68cfa293ed9a2427e0f4db96ffd998447eecdae83d7d5465f8550"
     },
     {
       "id": "two-level-pe-wells",
       "title": "Two-level PE Wells",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "scoring_tools/two-level-pe-wells.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "ed8213e68b32f869b4d4aee86bdf84b3044bb8325b8a4b3e9f3d5d669d53948a",
+      "sha256": "4e2e11563e098d65754c905db530ed00deb961013f444c43fd92a6f7c316fadc",
       "schemaSha256": "52e7d5e1c0c68cfa293ed9a2427e0f4db96ffd998447eecdae83d7d5465f8550"
     }
   ],
