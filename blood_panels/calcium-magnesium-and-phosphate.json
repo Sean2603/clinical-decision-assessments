@@ -2,7 +2,7 @@
   "id": "calcium-magnesium-and-phosphate",
   "title": "Calcium, magnesium and phosphate",
   "subtitle": "Corrected calcium, arrhythmia risk and refeeding patterns",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Corrected calcium, arrhythmia risk and refeeding patterns",
@@ -21,7 +21,8 @@
           "highInterpretation": [],
           "notes": [
             "Consider vitamin D deficiency, hypoparathyroidism, renal failure, pancreatitis, sepsis, low magnesium or massive transfusion. Symptoms include perioral tingling, carpopedal spasm, tetany, seizure and prolonged QT."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "hypercalcaemia",
@@ -32,7 +33,8 @@
           "highInterpretation": [],
           "notes": [
             "Consider malignancy, primary hyperparathyroidism, medication or granulomatous disease. Look for dehydration, constipation, vomiting, polyuria, confusion, weakness and shortened QT."
-          ]
+          ],
+          "unitless": true
         }
       ]
     },
@@ -49,7 +51,8 @@
           "highInterpretation": [],
           "notes": [
             "Low magnesium can cause tremor, weakness, seizures, hypokalaemia that is difficult to correct and ventricular arrhythmias including torsades. High magnesium can cause hyporeflexia, bradycardia, hypotension and respiratory depression."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "phosphate",
@@ -60,7 +63,8 @@
           "highInterpretation": [],
           "notes": [
             "Low phosphate can cause weakness, respiratory muscle failure, rhabdomyolysis and haemolysis. A rapid fall after nutrition in a malnourished patient suggests refeeding syndrome, often with low potassium and magnesium."
-          ]
+          ],
+          "unitless": true
         }
       ]
     }
@@ -101,7 +105,7 @@
           "id": "low-albumin",
           "description": "Low albumin increases corrected calcium.",
           "inputs": {
-            "measuredCalcium": 2.0,
+            "measuredCalcium": 2,
             "albumin": 30
           },
           "expectedNumber": 2.2,
@@ -121,12 +125,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",

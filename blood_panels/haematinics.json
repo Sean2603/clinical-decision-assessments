@@ -2,7 +2,7 @@
   "id": "haematinics",
   "title": "Haematinics",
   "subtitle": "Ferritin, transferrin saturation, B12 and folate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Ferritin, transferrin saturation, B12 and folate",
@@ -21,7 +21,8 @@
           "highInterpretation": [],
           "notes": [
             "Ferritin is an acute-phase protein and may be normal or raised despite iron deficiency during infection, inflammation, liver disease or malignancy."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "transferrin-saturation",
@@ -32,7 +33,8 @@
           "highInterpretation": [],
           "notes": [
             "Low saturation with low ferritin supports absolute iron deficiency. Low saturation with normal/high ferritin may reflect inflammation, CKD or mixed deficiency."
-          ]
+          ],
+          "unitless": true
         }
       ]
     },
@@ -49,7 +51,8 @@
           "highInterpretation": [],
           "notes": [
             "Deficiency can produce macrocytosis, glossitis, paraesthesia, impaired vibration/proprioception, gait disturbance, cognitive change or pancytopenia. Neurological deficiency can occur without anaemia or macrocytosis."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "folate",
@@ -60,7 +63,8 @@
           "highInterpretation": [],
           "notes": [
             "Low folate can cause macrocytic anaemia. Replace B12 deficiency first or concurrently; folate alone can improve anaemia while neurological B12 injury progresses."
-          ]
+          ],
+          "unitless": true
         }
       ]
     }
@@ -76,12 +80,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",

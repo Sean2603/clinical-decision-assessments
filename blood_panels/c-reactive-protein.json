@@ -2,7 +2,7 @@
   "id": "c-reactive-protein",
   "title": "C-reactive protein",
   "subtitle": "Inflammatory marker interpreted with timing and clinical context",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Inflammatory marker interpreted with timing and clinical context",
@@ -23,7 +23,8 @@
           "highInterpretation": [
             "Not applicable."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "mild-elevation",
@@ -36,7 +37,8 @@
           "highInterpretation": [
             "Can occur with mild inflammation, early infection, viral illness, tissue injury, obesity or chronic inflammatory disease."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "moderate-elevation",
@@ -49,7 +51,8 @@
           "highInterpretation": [
             "Supports clinically important inflammation or infection but is not diagnostic of bacterial infection."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "marked-elevation",
@@ -62,7 +65,8 @@
           "highInterpretation": [
             "Raises concern for substantial bacterial infection, major inflammation, tissue injury or other serious pathology; interpret with the patient rather than the number alone."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     },
@@ -81,7 +85,8 @@
           "highInterpretation": [
             "May indicate evolving inflammation, inadequate source control or expected delayed peak. A rising result is not automatically treatment failure without clinical context."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "falling-crp",
@@ -94,7 +99,8 @@
           "highInterpretation": [
             "A falling CRP does not override deterioration, new hypoxia, hypotension, confusion or another new clinical concern."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     }
@@ -111,12 +117,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",

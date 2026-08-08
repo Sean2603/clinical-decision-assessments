@@ -2,7 +2,7 @@
   "id": "full-blood-count",
   "title": "Full blood count",
   "subtitle": "Haemoglobin, indices, white cells, differential and platelets",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Haemoglobin, indices, white cells, differential and platelets",
@@ -23,7 +23,8 @@
           "highInterpretation": [
             "Haemoconcentration from reduced plasma volume, smoking or chronic hypoxia; less commonly a primary erythrocytosis."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "mcv",
@@ -36,7 +37,8 @@
           "highInterpretation": [
             "Macrocytosis: vitamin B12 or folate deficiency, alcohol, liver disease, hypothyroidism, reticulocytosis or medication effects."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "mch-mchc",
@@ -49,7 +51,8 @@
           "highInterpretation": [
             "MCH may rise with macrocytosis. A markedly raised MCHC can reflect spherocytosis, cold agglutinins or analytical interference."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "rdw",
@@ -62,7 +65,8 @@
           "highInterpretation": [
             "Greater variation in red-cell size; may support evolving iron, B12 or folate deficiency, mixed deficiencies or recent transfusion."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     },
@@ -81,7 +85,8 @@
           "highInterpretation": [
             "Infection, inflammation, corticosteroids, physiological stress, smoking or haematological disease."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "neutrophils",
@@ -94,7 +99,8 @@
           "highInterpretation": [
             "Common with bacterial infection, inflammation, corticosteroids, tissue injury or physiological stress."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "lymphocytes",
@@ -107,7 +113,8 @@
           "highInterpretation": [
             "Often viral infection; persistent or marked elevation may require assessment for lymphoproliferative disease."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "eosinophils",
@@ -120,7 +127,8 @@
           "highInterpretation": [
             "Allergy, asthma, parasitic infection, drug reaction, eosinophilic disease or adrenal insufficiency."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     },
@@ -139,7 +147,8 @@
           "highInterpretation": [
             "Reactive inflammation, infection, iron deficiency, recent surgery or splenectomy; persistent unexplained elevation may reflect a myeloproliferative disorder."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     }
@@ -157,12 +166,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",
