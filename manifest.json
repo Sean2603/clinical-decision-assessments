@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.8",
-  "updatedAt": "2026-08-08T12:23:04Z",
+  "contentVersion": "1.2.9",
+  "updatedAt": "2026-08-08T12:39:33Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.31.0",
   "references": {
@@ -59,7 +59,7 @@
       "version": "1.0.1",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "20dc478477a2242dc41837533246d7621d307d9169dbd07f7f33cc7c166de726",
+      "sha256": "baf339fcdc8ac37321a1adbcdc3dce6146feee5554a43e6e317e4f32e83fccf8",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -431,7 +431,7 @@
       "version": "1.0.0",
       "file": "blood_panels/glucose-ketones-and-lactate.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "3aded1ff88728498f0961e439076ea61622103c473f6daa733bfa9944e872c21",
+      "sha256": "c212a48aa015336d9ea3d886c0664b066918bfb5814903efdd2d81a837df5ece",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
