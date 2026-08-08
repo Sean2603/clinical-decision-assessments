@@ -204,7 +204,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         **preserved,
         "schemaVersion": 3,
         "contentVersion": previous_version,
-        "minimumAppVersion": "0.31.0",
+        "minimumAppVersion": "0.32.0",
         "references": {
             "file": "references/references.json",
             "sha256": sha256(REFERENCES_PATH),

@@ -1,11 +1,11 @@
-## 1.2.1
 
-- Removed the duplicate `clinical_reliability/clinical-reliability.json` catalogue and schema.
-- Made embedded `clinicalValidation` authoritative for every clinical content type.
-- Added `nextReviewDue` to clinical-validation metadata.
-- Set review intervals to one year for guidelines and two years for assessments, scoring tools and blood panels.
-- Raised the minimum compatible app version to 0.31.0.
+## Lifecycle schema migration - 2026-08-08
 
+- Add explicit `status` lifecycle support to assessments so normal withdrawal no longer depends on `emergencyRevocations`.
+- Add optional `unitless` metadata to blood-panel rows; unitless rows retain a blank `unit` string.
+- Add `tool/migrate_content_lifecycle_v2.py` to migrate existing assessment status, legacy unitless rows, duplicate withdrawal revocations and minimum app compatibility without overwriting unrelated schema fields.
+- Require app 0.32.0 or later for packs using assessment lifecycle status.
+- Keep GitHub Actions read-only: the exact PR head is validated before merge and `main` is validated again after publication.
 ## 1.1.26 - 2026-08-05
 
 ### Changed

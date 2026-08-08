@@ -15,7 +15,7 @@
         {
           "id": "ph",
           "name": "pH",
-          "unit": "unitless",
+          "unit": "",
           "referenceRange": "ABG 7.35–7.45",
           "lowInterpretation": [
             "Acidaemia."
@@ -25,7 +25,8 @@
           ],
           "notes": [
             "VBG pH is normally slightly lower than arterial pH."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "pco2",
@@ -103,68 +104,74 @@
         {
           "id": "respiratory-acidosis",
           "name": "Respiratory acidosis",
-          "unit": "unitless",
+          "unit": "",
           "referenceRange": "Low pH with raised pCO₂",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
             "Consider hypoventilation, COPD/asthma fatigue, sedative/opioid effect, neuromuscular weakness or severe obesity hypoventilation. Raised bicarbonate may indicate chronic compensation or acute-on-chronic respiratory acidosis."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "metabolic-acidosis",
           "name": "Metabolic acidosis",
-          "unit": "unitless",
+          "unit": "",
           "referenceRange": "Low pH with low bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
             "Consider lactate, ketones, renal failure, diarrhoea, toxins and the anion gap. Low pCO₂ may indicate respiratory compensation."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "mixed-acidosis",
           "name": "Mixed respiratory and metabolic acidosis",
-          "unit": "unitless",
+          "unit": "",
           "referenceRange": "Low pH with raised pCO₂ and low bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
             "High-risk pattern requiring urgent assessment."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "respiratory-alkalosis",
           "name": "Respiratory alkalosis",
-          "unit": "unitless",
+          "unit": "",
           "referenceRange": "High pH with low pCO₂",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
             "Consider pain/anxiety only after excluding hypoxia, PE, sepsis, pregnancy, liver disease and salicylates."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "metabolic-alkalosis",
           "name": "Metabolic alkalosis",
-          "unit": "unitless",
+          "unit": "",
           "referenceRange": "High pH with raised bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
             "Consider vomiting, gastric losses, diuretics, hypokalaemia, mineralocorticoid excess or alkali administration."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "mixed-alkalosis",
           "name": "Mixed respiratory and metabolic alkalosis",
-          "unit": "unitless",
+          "unit": "",
           "referenceRange": "High pH with low pCO₂ and raised bicarbonate",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
             "Both low pCO₂ and raised bicarbonate are driving the pH up."
-          ]
+          ],
+          "unitless": true
         }
       ]
     }

@@ -285,5 +285,6 @@
   "categoryIds": [
     "frailty"
   ],
-  "lastReviewed": "2026-08-08"
+  "lastReviewed": "2026-08-08",
+  "status": "active"
 }

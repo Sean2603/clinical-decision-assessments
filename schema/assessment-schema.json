@@ -9,6 +9,7 @@
     "title",
     "version",
     "summary",
+    "status",
     "clinicalValidation",
     "sections",
     "references"
@@ -106,6 +107,14 @@
         "type": "string",
         "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
       }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "withdrawn",
+        "superseded"
+      ]
     }
   },
   "$defs": {

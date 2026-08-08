@@ -363,5 +363,6 @@
   },
   "categoryIds": [
     "frailty"
-  ]
+  ],
+  "status": "active"
 }

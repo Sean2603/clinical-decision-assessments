@@ -44,14 +44,14 @@ The app checks the raw GitHub manifest in the background no more than once every
 
 ## Shared references
 
-`references/references.json` is the authoritative evidence registry. Each assessment, guideline, scoring tool and blood panel stores its own authoritative `clinicalValidation` record; there is no separate clinical-reliability registry.
+`references/references.json` is the authoritative registry for assessments, scoring tools and blood panels. `clinical_reliability/clinical-reliability.json` stores clinical review metadata and stable `referenceIds`; it does not duplicate source records.
 
 
 ## Clinical guidelines
 
 Guidelines are stored in `guidelines/*.json`, validated against
 `schema/guideline-schema.json`, and published through the same `manifest.json`
-as assessments, references and embedded clinical-validation metadata.
+as assessments, references and clinical-reliability metadata.
 
 Run before committing:
 
@@ -112,14 +112,6 @@ The `frailty` assessment category is a coordinated package rather than a single 
 The focused guides share terminology, baseline-versus-current-function prompts, concise safety-netting and linked NICE/BGS references. New package content remains marked as not clinically validated until formal review.
 
 
-## Manifest ownership
+## Assessment lifecycle / unitless migration
 
-`manifest.json` is generated during the final CDM Content Manager review-batch publication. It is not manually maintained and GitHub Actions does not rewrite or commit it.
-
-Normal validation is read-only:
-
-```powershell
-python tool/sync_manifest.py --check
-```
-
-The controlled Content Manager transaction uses `--write` after all staged JSON has been written, then validates the repository and commits the content and generated artefacts together. GitHub Actions regenerates/checks derived data only to detect drift and fails rather than creating a bot commit.
+Run `python tool/migrate_content_lifecycle_v2.py` once on `content-review/clinical-review` after applying this release. It preserves unrelated schema fields, adds explicit assessment lifecycle status, converts legacy blood `unit: "unitless"` values to blank-unit + `unitless: true`, removes only assessment emergency revocations that duplicate a normal withdrawn state, and raises the content pack minimum app version to 0.32.0. Then use CDM **Prepare for publication** to regenerate the final manifest and derived artefacts once.
