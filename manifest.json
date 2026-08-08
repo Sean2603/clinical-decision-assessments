@@ -1,8 +1,20 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.9",
-  "updatedAt": "2026-08-08T12:39:33Z",
-  "emergencyRevocations": [],
+  "contentVersion": "1.2.10",
+  "updatedAt": "2026-08-08T13:54:12Z",
+  "emergencyRevocations": [
+    {
+      "contentType": "assessment",
+      "contentId": "red-leg-assessment",
+      "action": "disable",
+      "reason": "Clinically unsafe",
+      "affectedVersions": {
+        "minimum": null,
+        "maximum": "0.1.3"
+      },
+      "effectiveFrom": "2026-08-05T00:00:00Z"
+    }
+  ],
   "minimumAppVersion": "0.31.0",
   "references": {
     "file": "references/references.json",
@@ -92,10 +104,10 @@
     {
       "id": "dizziness-vertigo-assessment",
       "title": "Dizziness and Vertigo Assessment",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "b7c63ef6c4410b07fa2f90be6e104c0e27a0c3df4effeaf4e4bc2b75a10d41c8",
+      "sha256": "7ac7fffba4caa066ce2193b60b9e7304a7d256b585d2f65816a5a60d992c993a",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -365,10 +377,10 @@
     {
       "id": "abg-and-vbg",
       "title": "ABG and VBG",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "c75892c2463384e7ef237a672c13ba200acdbadac67d24275f829561606766e8",
+      "sha256": "94bd3a7065af44bb590034dbdd1ed363618536ca1008d84a1edb2f5170b73c69",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
