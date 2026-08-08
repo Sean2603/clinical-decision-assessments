@@ -2,7 +2,7 @@
   "id": "thyroid-function",
   "title": "Thyroid function",
   "subtitle": "TSH and free T4 pattern recognition",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "TSH and free T4 pattern recognition",
@@ -21,7 +21,8 @@
           "highInterpretation": [],
           "notes": [
             "Consider autoimmune thyroid disease, post-treatment disease or medication effects. Assess severity and symptoms rather than TSH alone."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "low-tsh-high-free-t4-t3",
@@ -32,7 +33,8 @@
           "highInterpretation": [],
           "notes": [
             "Consider Graves disease, toxic nodules, thyroiditis or excessive replacement. Check pulse/rhythm, temperature, hydration and cardiovascular symptoms."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "high-tsh-normal-free-t4",
@@ -43,7 +45,8 @@
           "highInterpretation": [],
           "notes": [
             "Repeat and interpret with symptoms, thyroid antibodies, pregnancy plans and degree/persistence of TSH elevation."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "low-tsh-normal-free-t4-t3",
@@ -54,7 +57,8 @@
           "highInterpretation": [],
           "notes": [
             "Consider medication, acute illness, pregnancy and early thyroid disease."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "low-normal-tsh-low-free-t4",
@@ -65,7 +69,8 @@
           "highInterpretation": [],
           "notes": [
             "Do not label as primary hypothyroidism without considering pituitary disease, severe illness and medication effects."
-          ]
+          ],
+          "unitless": true
         }
       ]
     }
@@ -81,12 +86,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",

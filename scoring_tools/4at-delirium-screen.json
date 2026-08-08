@@ -2,7 +2,7 @@
   "id": "4at-delirium-screen",
   "title": "4AT delirium screen",
   "subtitle": "Delirium and cognitive impairment screen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -149,12 +149,12 @@
   "calculationStrategy": "sum",
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",
@@ -182,7 +182,7 @@
         "attention": "seven-months-or-more-correctly",
         "acute-change": "no"
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "zero"
     },
     {
@@ -194,7 +194,7 @@
         "attention": "starts-but-scores-fewer-than-seven-months-or-refuses",
         "acute-change": "no"
       },
-      "expectedScore": 1.0,
+      "expectedScore": 1,
       "expectedResultId": "one-three"
     },
     {
@@ -206,7 +206,7 @@
         "attention": "seven-months-or-more-correctly",
         "acute-change": "yes-change-in-cognition-alertness-or-mental-function-within-about-2-weeks-and-still-evident-in-the-last-24-hours"
       },
-      "expectedScore": 4.0,
+      "expectedScore": 4,
       "expectedResultId": "four-plus"
     },
     {
@@ -218,7 +218,7 @@
         "attention": "untestable",
         "acute-change": "yes-change-in-cognition-alertness-or-mental-function-within-about-2-weeks-and-still-evident-in-the-last-24-hours"
       },
-      "expectedScore": 12.0,
+      "expectedScore": 12,
       "expectedResultId": "four-plus"
     }
   ]

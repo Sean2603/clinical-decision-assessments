@@ -2,7 +2,7 @@
   "id": "add-rs",
   "title": "ADD-RS",
   "subtitle": "Acute aortic syndrome risk categories",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -85,12 +85,12 @@
   "calculationStrategy": "sum",
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",
@@ -117,7 +117,7 @@
         "high-risk-pain": false,
         "high-risk-examination": false
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "zero"
     },
     {
@@ -128,7 +128,7 @@
         "high-risk-pain": false,
         "high-risk-examination": true
       },
-      "expectedScore": 1.0,
+      "expectedScore": 1,
       "expectedResultId": "one"
     },
     {
@@ -139,7 +139,7 @@
         "high-risk-pain": true,
         "high-risk-examination": true
       },
-      "expectedScore": 2.0,
+      "expectedScore": 2,
       "expectedResultId": "multiple"
     },
     {
@@ -150,7 +150,7 @@
         "high-risk-pain": true,
         "high-risk-examination": true
       },
-      "expectedScore": 3.0,
+      "expectedScore": 3,
       "expectedResultId": "multiple"
     }
   ]

@@ -2,7 +2,7 @@
   "id": "serum-osmolality",
   "title": "Serum osmolality",
   "subtitle": "Calculated osmolality, tonicity and osmolal gap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Calculated osmolality, tonicity and osmolal gap",
@@ -21,7 +21,8 @@
           "highInterpretation": [],
           "notes": [
             "Low measured osmolality with hyponatraemia confirms hypotonic hyponatraemia. Normal/high osmolality suggests glucose, mannitol or another effective osmole, or pseudohyponatraemia."
-          ]
+          ],
+          "unitless": true
         },
         {
           "id": "osmolal-gap",
@@ -32,7 +33,8 @@
           "highInterpretation": [],
           "notes": [
             "A raised gap can occur with toxic alcohols, ethanol, ketones, lactate, renal failure or laboratory/formula variation. A normal gap does not exclude late toxic alcohol poisoning."
-          ]
+          ],
+          "unitless": true
         }
       ]
     }
@@ -136,12 +138,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "nextReviewDue": "2028-08-08"
   },
   "migration": {
     "state": "shadow",
