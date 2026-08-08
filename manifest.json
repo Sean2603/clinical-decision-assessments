@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.10",
-  "updatedAt": "2026-08-08T13:54:12Z",
+  "contentVersion": "1.2.11",
+  "updatedAt": "2026-08-08T14:42:57Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -47,7 +47,7 @@
       "version": "0.2.1",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "ad1c21f758c689991280f968e19b43857762adb229256f28339298abf48fadfa",
+      "sha256": "2e00334abc521b91925eb52665c0dc03ad9febc7c3afa71f0fd1478bb06d3614",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "frailty"
@@ -59,7 +59,7 @@
       "version": "0.1.5",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "aa48110aa9132dd5727cd6972351f4ad47386a625127ba4f3313fd12a3cdd384",
+      "sha256": "9ad6ad5775b7264c72c47e2f01244208c9e53574cd63332d193f7dcd2d7e14bd",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -71,7 +71,7 @@
       "version": "1.0.1",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "baf339fcdc8ac37321a1adbcdc3dce6146feee5554a43e6e317e4f32e83fccf8",
+      "sha256": "20dc478477a2242dc41837533246d7621d307d9169dbd07f7f33cc7c166de726",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -107,7 +107,7 @@
       "version": "0.2.1",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "7ac7fffba4caa066ce2193b60b9e7304a7d256b585d2f65816a5a60d992c993a",
+      "sha256": "bbf130088b3ecc39c001944714cfac58ef263dc6a67390772d02d640e26df2f2",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -143,7 +143,7 @@
       "version": "0.2.5",
       "file": "assessments/polypharmacy-and-medicines-related-harm.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "d446b925969a0a0a81dfce1064da26fdbd22d7c94d8b54694a41069368355fcd",
+      "sha256": "7dd0ecc5b65a7d2db15a415c9c0749ff2cb98c3a2cd7e12e51d900cdab17b656",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "frailty"
@@ -155,7 +155,7 @@
       "version": "0.1.3",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "0879bcd22046bd147975773037b40ee5d74e6ffff0d07ecc1396818d9372e5d0",
+      "sha256": "32fbacd60936ce12502322c512a3421d53a6c49a7d86069ffbcc16a3d361f0c2",
       "schemaSha256": "3bd1934075706d810012a2cce6eb62350608ab83161fd0184fcd9d7fc3a796aa",
       "categoryIds": [
         "uncategorised"
@@ -380,7 +380,7 @@
       "version": "1.0.3",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "94bd3a7065af44bb590034dbdd1ed363618536ca1008d84a1edb2f5170b73c69",
+      "sha256": "1ad1d8a83b9a1265c140982ea310c8726e105e56e638cd53690c77999e70ab1f",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
@@ -443,7 +443,7 @@
       "version": "1.0.0",
       "file": "blood_panels/glucose-ketones-and-lactate.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "c212a48aa015336d9ea3d886c0664b066918bfb5814903efdd2d81a837df5ece",
+      "sha256": "3aded1ff88728498f0961e439076ea61622103c473f6daa733bfa9944e872c21",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
@@ -497,7 +497,7 @@
       "version": "1.0.2",
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "8705a7ecfcb1a1d9e73019a24282531785dcc97d96edcc4959f310f4006f8822",
+      "sha256": "5986a0423662e9f9baf94abcb75fd517eba5000db46c8037f79685833df8ddf5",
       "schemaSha256": "b8fb3893209fcf9d703b6b30b0126f0f6b5c1ca5a57f2f1d323afc999d304a8a"
     },
     {
