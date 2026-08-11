@@ -2,7 +2,7 @@
   "id": "curb-65",
   "title": "CURB-65",
   "subtitle": "Pneumonia severity with blood urea",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -107,12 +107,12 @@
     "NICE-NG250"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-08",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-08",
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
@@ -141,7 +141,7 @@
         "blood-pressure": false,
         "age": false
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "lower"
     },
     {
@@ -154,7 +154,7 @@
         "blood-pressure": true,
         "age": true
       },
-      "expectedScore": 2.0,
+      "expectedScore": 2,
       "expectedResultId": "intermediate"
     },
     {
@@ -167,7 +167,7 @@
         "blood-pressure": true,
         "age": true
       },
-      "expectedScore": 3.0,
+      "expectedScore": 3,
       "expectedResultId": "high"
     },
     {
@@ -180,7 +180,7 @@
         "blood-pressure": true,
         "age": true
       },
-      "expectedScore": 5.0,
+      "expectedScore": 5,
       "expectedResultId": "high"
     }
   ]

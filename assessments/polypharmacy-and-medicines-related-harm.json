@@ -250,14 +250,14 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-05",
+    "reviewedOn": "2026-08-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
-    "nextReviewDue": "2028-08-05"
+    "reviewNotes": null,
+    "nextReviewDue": "2028-08-08"
   },
   "categoryIds": [
     "frailty"
   ],
-  "lastReviewed": "2026-08-05",
-  "status": "active"
+  "status": "active",
+  "lastReviewed": "2026-08-08"
 }
