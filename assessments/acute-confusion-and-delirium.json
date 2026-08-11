@@ -230,7 +230,8 @@
           "title": "Hospital or urgent same-day assessment",
           "mustConfirmOrExclude": [
             "Unclear cause, abnormal physiology, focal deficit, reduced consciousness, significant injury, inability to maintain intake or essential care, severe behavioural risk, carer breakdown or no reliable follow-up."
-          ]
+          ],
+          "references": []
         },
         {
           "id": "home-management",
@@ -279,7 +280,7 @@
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-08-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
+    "reviewNotes": null,
     "nextReviewDue": "2028-08-08"
   },
   "categoryIds": [
