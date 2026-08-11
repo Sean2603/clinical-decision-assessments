@@ -2,7 +2,7 @@
   "id": "canadian-c-spine-rule",
   "title": "Canadian C-spine rule",
   "subtitle": "Cervical-spine imaging after blunt trauma",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -139,12 +139,12 @@
   "calculationStrategy": "custom",
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-11",
-    "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-11",
-    "reviewNotes": null
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
   },
   "migration": {
     "state": "shadow",
