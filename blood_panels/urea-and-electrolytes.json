@@ -2,7 +2,7 @@
   "id": "urea-and-electrolytes",
   "title": "Urea and electrolytes",
   "subtitle": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
@@ -23,7 +23,8 @@
           "highInterpretation": [
             "Usually free-water deficit from reduced intake or excess loss; less commonly sodium gain."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "potassium",
@@ -36,7 +37,8 @@
           "highInterpretation": [
             "AKI/CKD, ACE inhibitor or ARB, potassium-sparing diuretic, trimethoprim, tissue breakdown or acidosis. Exclude haemolysed sample where appropriate."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "bicarbonate",
@@ -49,7 +51,8 @@
           "highInterpretation": [
             "Metabolic alkalosis or compensation for chronic respiratory acidosis; consider vomiting, diuretics or chronic hypercapnia."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     },
@@ -68,7 +71,8 @@
           "highInterpretation": [
             "Reduced renal clearance, dehydration, GI bleeding, catabolism, corticosteroids or high protein intake. Interpret beside creatinine."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "creatinine",
@@ -81,7 +85,8 @@
           "highInterpretation": [
             "Reduced filtration, but assess change from baseline. AKI can occur with a creatinine still inside the stated reference range."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "egfr",
@@ -94,7 +99,8 @@
           "highInterpretation": [
             "Usually reported as ≥90; a high estimate can be misleading in low muscle mass."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     },
@@ -113,7 +119,8 @@
           "highInterpretation": [
             "Treat as clinically important AKI and identify cause, medication risks, fluid status and complications."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "stage-2",
@@ -126,7 +133,8 @@
           "highInterpretation": [
             "More substantial AKI; usually requires urgent clinical assessment and close monitoring."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         },
         {
           "id": "stage-3",
@@ -139,7 +147,8 @@
           "highInterpretation": [
             "Severe AKI requiring urgent hospital-level assessment."
           ],
-          "notes": []
+          "notes": [],
+          "unitless": true
         }
       ]
     }
@@ -161,10 +170,10 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-05",
+    "reviewedOn": "2026-08-11",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-05",
-    "reviewNotes": null
+    "nextReviewDue": "2028-08-11",
+    "reviewNotes": "Review completed. No substantive clinical change identified."
   },
   "migration": {
     "state": "shadow",
