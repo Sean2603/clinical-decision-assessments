@@ -1,3 +1,8 @@
+## 2026-08-11 – Medication / prescribing split
+- Split medicine monographs into `medications/` and reserved `prescribing/` for condition-based treatment pathways.
+- Added separate JSON schemas and manifest collections for both content types.
+- Prescribing regimens can reference medication monographs by stable medication ID.
+
 # Changelog
 
 ## 1.2.22 — 2026-08-11

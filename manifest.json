@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.23",
-  "updatedAt": "2026-08-11T19:45:39Z",
+  "contentVersion": "1.2.24",
+  "updatedAt": "2026-08-11T20:22:32Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -35,7 +35,7 @@
       }
     }
   ],
-  "minimumAppVersion": "0.33.0",
+  "minimumAppVersion": "0.34.0",
   "references": {
     "file": "references/references.json",
     "sha256": "2f8c312f73a8cd77796f9260d45b72040a958d18801b46a0578a3f90cf5449b7"
@@ -530,15 +530,16 @@
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     }
   ],
-  "prescribing": [
+  "medications": [
     {
       "id": "co-codamol",
       "title": "Co-codamol",
       "version": "0.1.1",
-      "file": "prescribing/co-codamol.json",
-      "schema": "schema/prescribing-schema.json",
+      "file": "medications/co-codamol.json",
+      "schema": "schema/medication-schema.json",
       "sha256": "afc51f6d2d6b40a150a6a75378ebd212b42933c98075f60a81af845b9b5937f9",
-      "schemaSha256": "38fcf9a72bb6c874b2141050bf3351f484e1137355306a5dc1203e083fbea4b6"
+      "schemaSha256": "fdc6e0718db9c59da901eae5b49cee3d64389d3c000c73c10d4b2693f8036039"
     }
-  ]
+  ],
+  "prescribing": []
 }

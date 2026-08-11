@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schema/prescribing-schema.json",
-  "title": "Remote condition-based prescribing pathway definition",
+  "$id": "https://example.invalid/schema/medication-schema.json",
+  "title": "Remote medication monograph definition",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -9,12 +9,18 @@
     "title",
     "version",
     "status",
-    "category",
+    "formularyGroup",
+    "medicineType",
+    "drugClass",
     "summary",
-    "clinicalNotes",
+    "indications",
+    "contraindications",
     "cautions",
-    "regimens",
-    "specialConsiderations",
+    "interactions",
+    "renalConsiderations",
+    "hepaticConsiderations",
+    "pregnancyBreastfeeding",
+    "practicalPoints",
     "references",
     "clinicalValidation"
   ],
@@ -38,28 +44,48 @@
         "superseded"
       ]
     },
-    "category": {
+    "formularyGroup": {
+      "type": "string",
+      "minLength": 1
+    },
+    "medicineType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "drugClass": {
       "type": "string",
       "minLength": 1
     },
     "summary": {
       "type": "string"
     },
-    "clinicalNotes": {
+    "indications": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/indication"
+      }
+    },
+    "contraindications": {
       "$ref": "#/$defs/stringList"
     },
     "cautions": {
       "$ref": "#/$defs/stringList"
     },
-    "regimens": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/$defs/regimen"
-      }
+    "interactions": {
+      "$ref": "#/$defs/stringList"
     },
-    "specialConsiderations": {
-      "$ref": "#/$defs/sectionList"
+    "renalConsiderations": {
+      "$ref": "#/$defs/stringList"
+    },
+    "hepaticConsiderations": {
+      "$ref": "#/$defs/stringList"
+    },
+    "pregnancyBreastfeeding": {
+      "$ref": "#/$defs/stringList"
+    },
+    "practicalPoints": {
+      "$ref": "#/$defs/stringList"
     },
     "references": {
       "allOf": [
@@ -83,52 +109,28 @@
         "minLength": 1
       }
     },
-    "regimen": {
+    "indication": {
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "rank",
-        "label",
-        "medicationId",
-        "displayName",
+        "title",
+        "population",
         "dose",
-        "route",
-        "frequency",
         "duration",
-        "restrictions",
         "notes"
       ],
       "properties": {
-        "rank": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "label": {
+        "title": {
           "type": "string",
           "minLength": 1
         },
-        "medicationId": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "pattern": "^[a-z0-9_-]+$"
-        },
-        "displayName": {
-          "type": "string",
-          "minLength": 1
-        },
-        "dose": {
-          "type": "string",
-          "minLength": 1
-        },
-        "route": {
+        "population": {
           "type": [
             "string",
             "null"
           ]
         },
-        "frequency": {
+        "dose": {
           "type": [
             "string",
             "null"
@@ -140,31 +142,8 @@
             "null"
           ]
         },
-        "restrictions": {
-          "$ref": "#/$defs/stringList"
-        },
         "notes": {
           "$ref": "#/$defs/stringList"
-        }
-      }
-    },
-    "sectionList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "items"
-        ],
-        "properties": {
-          "title": {
-            "type": "string",
-            "minLength": 1
-          },
-          "items": {
-            "$ref": "#/$defs/stringList"
-          }
         }
       }
     },

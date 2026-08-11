@@ -33,6 +33,12 @@ COLLECTIONS = {
         "schema": ROOT / "schema" / "blood-panel-schema.json",
         "versionField": "version",
     },
+    "medications": {
+        "directory": ROOT / "medications",
+        "schema": ROOT / "schema" / "medication-schema.json",
+        "versionField": "version",
+        "allowEmpty": True,
+    },
     "prescribing": {
         "directory": ROOT / "prescribing",
         "schema": ROOT / "schema" / "prescribing-schema.json",
@@ -204,7 +210,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
     generated_keys = {
         "schemaVersion", "contentVersion", "minimumAppVersion", "references",
         "assessmentCategories", "assessments", "guidelines", "scoringTools",
-        "bloodPanels", "prescribing",
+        "bloodPanels", "medications", "prescribing",
     }
     preserved = {
         key: value
@@ -222,7 +228,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "contentVersion": previous_version,
         "minimumAppVersion": max_semver(
             str(current.get("minimumAppVersion", "0.32.0")),
-            "0.33.0" if generated_collections["prescribing"] else "0.32.0",
+            "0.34.0" if (generated_collections["medications"] or generated_collections["prescribing"]) else "0.32.0",
         ),
         "references": {
             "file": "references/references.json",
@@ -239,6 +245,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "guidelines": generated_collections["guidelines"],
         "scoringTools": generated_collections["scoringTools"],
         "bloodPanels": generated_collections["bloodPanels"],
+        "medications": generated_collections["medications"],
         "prescribing": generated_collections["prescribing"],
     }
 
@@ -330,6 +337,7 @@ def main() -> None:
         f"guidelines={len(generated['guidelines'])}, "
         f"scoringTools={len(generated['scoringTools'])}, "
         f"bloodPanels={len(generated['bloodPanels'])}, "
+        f"medications={len(generated['medications'])}, "
         f"prescribing={len(generated['prescribing'])}"
     )
 

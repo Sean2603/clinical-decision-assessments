@@ -22,7 +22,7 @@ Version-controlled clinical assessment guidance for the Clinical Decision Suppor
 - `references/` — shared guideline references
 - `scoring_tools/` — remote scoring-tool shadow definitions
 - `blood_panels/` — remote blood-panel shadow definitions
-- `prescribing/` — APUC prescribing medicine monographs
+- `medications/ and prescribing/` — APUC prescribing medicine monographs
 - `schema/` — JSON schema
 - `manifest.json` — published pack metadata and checksums
 - `tool/build_manifest.py` — rebuilds checksums and publication date
@@ -67,7 +67,7 @@ python tool/sync_manifest.py
 
 ## Prescribing content
 
-`prescribing/*.json` contains versioned APUC medicine monographs authored and
+`medications/ and prescribing/*.json` contains versioned APUC medicine monographs authored and
 governed through CDM. Each medicine stores indication-specific population, dose
 and duration alongside contraindications, cautions, important interactions,
 renal/hepatic considerations, pregnancy/breastfeeding information, practical
@@ -134,3 +134,7 @@ The focused guides share terminology, baseline-versus-current-function prompts, 
 ## Assessment lifecycle / unitless migration
 
 Run `python tool/migrate_content_lifecycle_v2.py` once on `content-review/clinical-review` after applying this release. It preserves unrelated schema fields, adds explicit assessment lifecycle status, converts legacy blood `unit: "unitless"` values to blank-unit + `unitless: true`, removes only assessment emergency revocations that duplicate a normal withdrawn state, and raises the content pack minimum app version to 0.32.0. Then use CDM **Prepare for publication** to regenerate the final manifest and derived artefacts once.
+
+
+## Medications and prescribing
+Medication monographs are stored in `medications/`. Condition-based prescribing pathways are stored separately in `prescribing/` and may reference medication monographs by stable `medicationId`.

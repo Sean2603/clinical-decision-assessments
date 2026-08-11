@@ -32,6 +32,12 @@ COLLECTIONS = {
         "schema": ROOT / "schema" / "blood-panel-schema.json",
         "versionField": "version",
     },
+    "medication": {
+        "directory": ROOT / "medications",
+        "schema": ROOT / "schema" / "medication-schema.json",
+        "versionField": "version",
+        "allowEmpty": True,
+    },
     "prescribing": {
         "directory": ROOT / "prescribing",
         "schema": ROOT / "schema" / "prescribing-schema.json",
@@ -105,7 +111,7 @@ def assessment_reference_ids(value: dict) -> set[str]:
 def document_reference_ids(kind: str, value: dict) -> set[str]:
     if kind == "assessment":
         return assessment_reference_ids(value)
-    if kind in {"guideline", "prescribing"}:
+    if kind in {"guideline", "medication", "prescribing"}:
         return set(value.get("references", []))
     return set(value.get("referenceIds", []))
 
@@ -240,6 +246,7 @@ def main() -> int:
             "guidelines": "guideline",
             "scoring_tools": "scoring-tool",
             "blood_panels": "blood-panel",
+            "medications": "medication",
             "prescribing": "prescribing",
         }
         for relative_path in sorted(changed):
@@ -279,7 +286,8 @@ def main() -> int:
         f"{len(documents_by_kind['guideline'])} guidelines, "
         f"{len(documents_by_kind['scoring-tool'])} scoring tools, "
         f"{len(documents_by_kind['blood-panel'])} blood panels, "
-        f"{len(documents_by_kind['prescribing'])} prescribing medicines."
+        f"{len(documents_by_kind['medication'])} medications, "
+        f"{len(documents_by_kind['prescribing'])} prescribing pathways."
     )
     return 0
 
