@@ -2,7 +2,7 @@
   "id": "crb-65",
   "title": "CRB-65",
   "subtitle": "Community-acquired pneumonia risk",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -97,12 +97,12 @@
     "NICE-NG250"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-11",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-11",
+    "reviewNotes": "Review completed. No substantive clinical change identified."
   },
   "migration": {
     "state": "shadow",
@@ -130,7 +130,7 @@
         "low-blood-pressure": false,
         "age-65": false
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "score-0"
     },
     {
@@ -142,7 +142,7 @@
         "low-blood-pressure": false,
         "age-65": true
       },
-      "expectedScore": 1.0,
+      "expectedScore": 1,
       "expectedResultId": "score-1-2"
     },
     {
@@ -154,7 +154,7 @@
         "low-blood-pressure": true,
         "age-65": true
       },
-      "expectedScore": 3.0,
+      "expectedScore": 3,
       "expectedResultId": "score-3-4"
     },
     {
@@ -166,7 +166,7 @@
         "low-blood-pressure": true,
         "age-65": true
       },
-      "expectedScore": 4.0,
+      "expectedScore": 4,
       "expectedResultId": "score-3-4"
     }
   ]
