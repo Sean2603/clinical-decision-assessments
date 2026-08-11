@@ -55,6 +55,15 @@ for folder, content_type in (
             })
 
 
+for path in sorted((ROOT / "prescribing").glob("*.json")):
+    document = load(path)
+    for reference_id in document.get("references", []):
+        usage.setdefault(reference_id, []).append({
+            "type": "prescribing",
+            "id": document["id"],
+            "title": document["title"],
+        })
+
 output = {
     "generated": True,
     "references": [

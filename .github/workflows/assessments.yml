@@ -13,6 +13,7 @@ name: Validate clinical content
       - "guidelines/**"
       - "scoring_tools/**"
       - "blood_panels/**"
+      - "prescribing/**"
       - "references/**"
       - "categories/**"
       - "schema/**"
@@ -95,7 +96,7 @@ jobs:
       - name: Confirm validation did not modify source-controlled content
         shell: bash
         run: |
-          if ! git diff --exit-code -- manifest.json assessments guidelines scoring_tools blood_panels references categories schema; then
+          if ! git diff --exit-code -- manifest.json assessments guidelines scoring_tools blood_panels prescribing references categories schema; then
             echo "Validation changed source-controlled clinical content. GitHub Actions is read-only; publish through the CDM Content Manager."
             exit 1
           fi

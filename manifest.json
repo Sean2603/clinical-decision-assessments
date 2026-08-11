@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.21",
-  "updatedAt": "2026-08-11T14:57:12Z",
+  "contentVersion": "1.2.22",
+  "updatedAt": "2026-08-11T19:12:33Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -529,5 +529,6 @@
       "sha256": "5ab0b94b99433837a8e25d08f9672749a13edc77aa29cb0eceab065656ffbc67",
       "schemaSha256": "49d14b3ebe950655017758e53eccdb1ee440ae61a170ab71a6c92c40d17ba706"
     }
-  ]
+  ],
+  "prescribing": []
 }

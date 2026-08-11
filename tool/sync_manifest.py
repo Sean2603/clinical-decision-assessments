@@ -33,6 +33,12 @@ COLLECTIONS = {
         "schema": ROOT / "schema" / "blood-panel-schema.json",
         "versionField": "version",
     },
+    "prescribing": {
+        "directory": ROOT / "prescribing",
+        "schema": ROOT / "schema" / "prescribing-schema.json",
+        "versionField": "version",
+        "allowEmpty": True,
+    },
 }
 
 SEMVER_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
@@ -91,6 +97,12 @@ def bump_patch(value: str) -> str:
     return f"{major}.{minor}.{patch + 1}"
 
 
+def max_semver(*values: str) -> str:
+    for value in values:
+        semver_parts(value)
+    return max(values, key=semver_parts)
+
+
 def canonical_revocations(value: object) -> object:
     if not isinstance(value, list):
         return value
@@ -117,9 +129,12 @@ def build_entries(
     schema_path: Path,
     version_field: str,
     existing_entries: dict[str, dict],
+    allow_empty: bool = False,
 ) -> list[dict]:
     paths = sorted(directory.glob("*.json"), key=lambda item: item.name.casefold())
     if not paths:
+        if allow_empty:
+            return []
         raise SystemExit(f"No JSON files found in {directory.relative_to(ROOT)}.")
 
     entries: list[dict] = []
@@ -180,6 +195,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
             schema_path,
             settings["versionField"],
             existing,
+            bool(settings.get("allowEmpty", False)),
         )
 
     previous_version = current.get("contentVersion", "0.0.0")
@@ -188,7 +204,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
     generated_keys = {
         "schemaVersion", "contentVersion", "minimumAppVersion", "references",
         "assessmentCategories", "assessments", "guidelines", "scoringTools",
-        "bloodPanels",
+        "bloodPanels", "prescribing",
     }
     preserved = {
         key: value
@@ -204,7 +220,10 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         **preserved,
         "schemaVersion": 3,
         "contentVersion": previous_version,
-        "minimumAppVersion": "0.32.0",
+        "minimumAppVersion": max_semver(
+            str(current.get("minimumAppVersion", "0.32.0")),
+            "0.33.0" if generated_collections["prescribing"] else "0.32.0",
+        ),
         "references": {
             "file": "references/references.json",
             "sha256": sha256(REFERENCES_PATH),
@@ -220,6 +239,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "guidelines": generated_collections["guidelines"],
         "scoringTools": generated_collections["scoringTools"],
         "bloodPanels": generated_collections["bloodPanels"],
+        "prescribing": generated_collections["prescribing"],
     }
 
     current_semantic = {
@@ -309,7 +329,8 @@ def main() -> None:
         f"assessments={len(generated['assessments'])}, "
         f"guidelines={len(generated['guidelines'])}, "
         f"scoringTools={len(generated['scoringTools'])}, "
-        f"bloodPanels={len(generated['bloodPanels'])}"
+        f"bloodPanels={len(generated['bloodPanels'])}, "
+        f"prescribing={len(generated['prescribing'])}"
     )
 
 

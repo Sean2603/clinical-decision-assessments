@@ -1,3 +1,18 @@
+# Changelog
+
+## 1.2.22 — 2026-08-11
+
+### Added
+- Added first-class `prescribing/` repository support for APUC medicine monographs.
+- Added `schema/prescribing-schema.json` aligned with app 0.33.0 and CDM prescribing content.
+- Extended manifest generation, content validation, embedded clinical-validation checks, reference validation and reference-usage generation to prescribing content.
+- Added prescribing files to GitHub Actions validation and read-only source-integrity checks.
+- Added review-due reference handling for prescribing medicine monographs.
+
+### Changed
+- Manifest generation now emits a deterministic `prescribing` collection.
+- `minimumAppVersion` rises to at least `0.33.0` only when one or more prescribing monographs are actually published, and the generator will never lower an existing higher minimum app version.
+
 
 ## Lifecycle schema migration - 2026-08-08
 

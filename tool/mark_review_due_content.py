@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 REFERENCES_PATH = ROOT / "references" / "references.json"
-CONTENT_FOLDERS = ("assessments", "scoring_tools", "blood_panels")
+CONTENT_FOLDERS = ("assessments", "scoring_tools", "blood_panels", "prescribing")
 NOTE_PREFIX = "Clinical validation required: cited reference review is due"
 
 

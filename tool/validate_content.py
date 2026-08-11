@@ -32,6 +32,12 @@ COLLECTIONS = {
         "schema": ROOT / "schema" / "blood-panel-schema.json",
         "versionField": "version",
     },
+    "prescribing": {
+        "directory": ROOT / "prescribing",
+        "schema": ROOT / "schema" / "prescribing-schema.json",
+        "versionField": "version",
+        "allowEmpty": True,
+    },
 }
 
 
@@ -99,7 +105,7 @@ def assessment_reference_ids(value: dict) -> set[str]:
 def document_reference_ids(kind: str, value: dict) -> set[str]:
     if kind == "assessment":
         return assessment_reference_ids(value)
-    if kind == "guideline":
+    if kind in {"guideline", "prescribing"}:
         return set(value.get("references", []))
     return set(value.get("referenceIds", []))
 
@@ -121,6 +127,8 @@ def validate_collection(
     )
     paths = sorted(settings["directory"].glob("*.json"))
     if not paths:
+        if settings.get("allowEmpty", False):
+            return {}
         errors.append(
             f"No JSON files found in {settings['directory'].relative_to(ROOT)}."
         )
@@ -232,6 +240,7 @@ def main() -> int:
             "guidelines": "guideline",
             "scoring_tools": "scoring-tool",
             "blood_panels": "blood-panel",
+            "prescribing": "prescribing",
         }
         for relative_path in sorted(changed):
             folder = relative_path.split("/", 1)[0]
@@ -269,7 +278,8 @@ def main() -> int:
         f"{len(documents_by_kind['assessment'])} assessments, "
         f"{len(documents_by_kind['guideline'])} guidelines, "
         f"{len(documents_by_kind['scoring-tool'])} scoring tools, "
-        f"{len(documents_by_kind['blood-panel'])} blood panels."
+        f"{len(documents_by_kind['blood-panel'])} blood panels, "
+        f"{len(documents_by_kind['prescribing'])} prescribing medicines."
     )
     return 0
 

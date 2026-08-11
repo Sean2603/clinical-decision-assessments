@@ -10,6 +10,7 @@ COLLECTIONS = {
     "guidelines": ("guideline", "contentVersion"),
     "scoring_tools": ("scoring-tool", "version"),
     "blood_panels": ("blood-panel", "version"),
+    "prescribing": ("prescribing", "version"),
 }
 
 def load(path):

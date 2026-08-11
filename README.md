@@ -22,6 +22,7 @@ Version-controlled clinical assessment guidance for the Clinical Decision Suppor
 - `references/` — shared guideline references
 - `scoring_tools/` — remote scoring-tool shadow definitions
 - `blood_panels/` — remote blood-panel shadow definitions
+- `prescribing/` — APUC prescribing medicine monographs
 - `schema/` — JSON schema
 - `manifest.json` — published pack metadata and checksums
 - `tool/build_manifest.py` — rebuilds checksums and publication date
@@ -44,7 +45,7 @@ The app checks the raw GitHub manifest in the background no more than once every
 
 ## Shared references
 
-`references/references.json` is the authoritative registry for assessments, scoring tools and blood panels. `clinical_reliability/clinical-reliability.json` stores clinical review metadata and stable `referenceIds`; it does not duplicate source records.
+`references/references.json` is the authoritative registry for assessments, scoring tools, blood panels and prescribing medicines. `clinical_reliability/clinical-reliability.json` stores clinical review metadata and stable `referenceIds`; it does not duplicate source records.
 
 
 ## Clinical guidelines
@@ -63,6 +64,24 @@ python tool/generate_reference_usage.py
 python tool/sync_manifest.py
 ```
 
+
+## Prescribing content
+
+`prescribing/*.json` contains versioned APUC medicine monographs authored and
+governed through CDM. Each medicine stores indication-specific population, dose
+and duration alongside contraindications, cautions, important interactions,
+renal/hepatic considerations, pregnancy/breastfeeding information, practical
+points, shared reference IDs and embedded clinical-validation metadata.
+
+The `prescribing` manifest collection may remain empty while the capability is
+installed. `minimumAppVersion` remains at its existing requirement until at
+least one prescribing medicine is published; once prescribing content exists,
+the generated manifest requires app `0.33.0` or later.
+
+Prescribing lifecycle values are `active`, `withdrawn` and `superseded`. CDM
+workflow states such as Draft or Submitted for review are governance metadata
+and must never be written into clinical JSON. Emergency disable remains a
+separate manifest safety override.
 
 ## Remote scoring tools and blood panels
 
@@ -92,7 +111,7 @@ matching reliability item with the same stable ID and display title.
 
 ### Review-due references
 
-A cited reference with `reviewStatus: review-due` no longer blocks publication. During publishing, `tool/mark_review_due_content.py` marks each affected assessment, scoring tool, or blood panel with `clinicalValidation.validated: false`, clears previous reviewer metadata, records the affected reference IDs in `reviewNotes`, and bumps the item patch version. Superseded, withdrawn, unavailable, and unverified cited references still block publication.
+A cited reference with `reviewStatus: review-due` no longer blocks publication. During publishing, `tool/mark_review_due_content.py` marks each affected assessment, scoring tool, blood panel, or prescribing medicine with `clinicalValidation.validated: false`, clears previous reviewer metadata, records the affected reference IDs in `reviewNotes`, and bumps the item patch version. Superseded, withdrawn, unavailable, and unverified cited references still block publication.
 
 
 ## Assessment subsections
