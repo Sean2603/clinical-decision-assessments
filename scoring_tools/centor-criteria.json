@@ -2,7 +2,7 @@
   "id": "centor-criteria",
   "title": "Centor criteria",
   "subtitle": "Alternative acute sore-throat score",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -88,12 +88,12 @@
     "NICE-NG84"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-11",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-11",
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
@@ -121,7 +121,7 @@
         "fever-history": false,
         "absence-cough": false
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "low"
     },
     {
@@ -133,7 +133,7 @@
         "fever-history": true,
         "absence-cough": true
       },
-      "expectedScore": 3.0,
+      "expectedScore": 3,
       "expectedResultId": "higher"
     },
     {
@@ -145,7 +145,7 @@
         "fever-history": true,
         "absence-cough": true
       },
-      "expectedScore": 4.0,
+      "expectedScore": 4,
       "expectedResultId": "higher"
     }
   ]

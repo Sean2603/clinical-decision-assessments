@@ -1,7 +1,7 @@
 {
   "id": "pulmonary_embolism",
   "title": "Pulmonary embolism",
-  "contentVersion": "0.1.0",
+  "contentVersion": "0.1.2",
   "source": "NICE Clinical Knowledge Summaries",
   "sourceReference": "Pulmonary embolism",
   "sourceUrl": "https://cks.nice.org.uk/topics/pulmonary-embolism/",
@@ -77,18 +77,19 @@
       "title": "Safety-netting",
       "body": [
         "PLACEHOLDER: Add concrete return precautions, follow-up timeframe and actions if symptoms recur or worsen."
-      ]
+      ],
+      "warning": true
     }
   ],
   "references": [
     "NICE-NG158"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": "2026-07-22",
-    "reviewerRole": null,
-    "nextReviewDue": "2027-07-22",
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-11",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2027-08-11",
     "reviewNotes": null
   }
 }
