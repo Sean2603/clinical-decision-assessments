@@ -1,0 +1,37 @@
+{
+  "id": "co-codamol",
+  "title": "Co-codamol",
+  "version": "0.1.1",
+  "status": "active",
+  "formularyGroup": "Analgesia",
+  "medicineType": "Combination analgesic",
+  "drugClass": "Paracetamol + opioid",
+  "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
+  "indications": [
+    {
+      "title": "Analgesia",
+      "population": "Adult >18years old",
+      "dose": "8/500 x2",
+      "duration": "Every 4-6hours",
+      "notes": []
+    }
+  ],
+  "contraindications": [],
+  "cautions": [],
+  "interactions": [],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [],
+  "pregnancyBreastfeeding": [],
+  "practicalPoints": [
+    "Ensure no other Paracetamol containing medication taken in the last 4 hours"
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-11",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-11",
+    "reviewNotes": "Review completed. No substantive clinical change identified."
+  }
+}
