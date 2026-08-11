@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.24",
-  "updatedAt": "2026-08-11T20:22:32Z",
+  "contentVersion": "1.2.25",
+  "updatedAt": "2026-08-11T20:56:01Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -541,5 +541,15 @@
       "schemaSha256": "fdc6e0718db9c59da901eae5b49cee3d64389d3c000c73c10d4b2693f8036039"
     }
   ],
-  "prescribing": []
+  "prescribing": [
+    {
+      "id": "lower-uti-in-pregnancy-asymptomatic",
+      "title": "Lower UTI in Pregnancy - Asymptomatic",
+      "version": "0.2.0",
+      "file": "prescribing/lower-uti-in-pregnancy-asymptomatic.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "d9da87bebfa9dcb47c8d0004948e0065cf781c2e93eac63ab855cf26d2119c91",
+      "schemaSha256": "d136e5234574ed138ba3ba04df3e7c535468cf545084d96d3fe5129f08ffeb8e"
+    }
+  ]
 }
