@@ -1,3 +1,9 @@
+## Attachment model cleanup
+
+- Retired the legacy `images` schema field and image-specific attachment definitions.
+- Generic `attachments` is now the only clinical attachment field.
+- Removed legacy image validation while retaining generic attachment path/hash/governance validation.
+
 ## Inline attachment references
 
 - Added repository validation for `{{attachment:id}}` and `{{attachment:id|Custom label}}`.
