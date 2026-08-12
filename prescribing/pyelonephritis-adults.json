@@ -5,11 +5,11 @@
     "pyelonephritis",
     "upper UTI"
   ],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
-  "summary": "NICE Visual Summary available here",
+  "summary": "{{attachment:pyelonephritis-visual-summary|View original prescribing pathway}}\n",
   "updatedOn": "2026-08-12",
   "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
   "effectiveFrom": null,
@@ -87,7 +87,7 @@
     "reviewedOn": "2026-08-12",
     "reviewerRole": "tAPUC",
     "nextReviewDue": "2028-08-12",
-    "reviewNotes": "Review completed. No substantive clinical change identified."
+    "reviewNotes": "Added prescribing pathway"
   },
   "attachments": [
     {

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.28",
-  "updatedAt": "2026-08-12T15:00:32Z",
+  "contentVersion": "1.2.29",
+  "updatedAt": "2026-08-12T16:39:49Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -653,10 +653,10 @@
     {
       "id": "pyelonephritis-adults",
       "title": "Pyelonephritis – Adults",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "e70f56ce54afe4ad84db6ed3f2857c050c4b22ee7797f9e2e6a9cd1a06349d7d",
+      "sha256": "81e3f9a2a74726073c7948792d8cf5e45f64245ce1f65c4ae6dc1df1126bedc4",
       "schemaSha256": "b393d26f8e6eec9e4550a6a77867384056c7ed42c15364139e4506814604288c"
     }
   ]
