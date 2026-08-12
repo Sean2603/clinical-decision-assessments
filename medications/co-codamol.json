@@ -33,5 +33,9 @@
     "reviewerRole": "tAPUC",
     "nextReviewDue": "2028-08-11",
     "reviewNotes": "Review completed. No substantive clinical change identified."
-  }
+  },
+  "aliases": [],
+  "updatedOn": null,
+  "changeSummary": "Legacy medication metadata normalised for the current schema.",
+  "effectiveFrom": null
 }

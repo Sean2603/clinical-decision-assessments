@@ -84,5 +84,13 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": "Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."
-  }
+  },
+  "aliases": [
+    "UTI",
+    "lower UTI"
+  ],
+  "system": "Genitourinary",
+  "updatedOn": null,
+  "changeSummary": "Legacy prescribing pathway metadata normalised for the current schema.",
+  "effectiveFrom": null
 }

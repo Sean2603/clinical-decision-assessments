@@ -57,5 +57,13 @@
     "reviewerRole": "tAPUC",
     "nextReviewDue": "2028-08-11",
     "reviewNotes": "1st Draft"
-  }
+  },
+  "aliases": [
+    "UTI",
+    "lower UTI"
+  ],
+  "system": "Genitourinary",
+  "updatedOn": null,
+  "changeSummary": "Legacy prescribing pathway metadata normalised for the current schema.",
+  "effectiveFrom": null
 }
