@@ -227,65 +227,6 @@ def _validate_attachment_tokens(value: dict, source_path: Path, errors: list[str
     walk(value, "content")
 
 
-def _validate_image_attachments(kind: str, value: dict, source_path: Path, known_reference_ids: set[str], errors: list[str]) -> None:
-    images = value.get("images", [])
-    if not isinstance(images, list):
-        return
-    expected_folder = IMAGE_KIND_FOLDERS.get(kind)
-    seen_ids: set[str] = set()
-    for index, image in enumerate(images):
-        prefix = f"{source_path}:images[{index}]"
-        if not isinstance(image, dict):
-            continue
-        image_id = image.get("id")
-        if isinstance(image_id, str):
-            if image_id in seen_ids:
-                errors.append(f"{prefix}: duplicate image id {image_id}.")
-            seen_ids.add(image_id)
-        rel = image.get("path")
-        if not isinstance(rel, str):
-            continue
-        normalized = rel.replace("\\", "/")
-        if normalized.startswith("/") or ".." in Path(normalized).parts:
-            errors.append(f"{prefix}: image path must stay inside the repository images directory.")
-            continue
-        parts = normalized.split("/")
-        if len(parts) < 3 or parts[0] != "images":
-            errors.append(f"{prefix}: image path must start with images/.")
-            continue
-        if expected_folder and parts[1] != expected_folder:
-            errors.append(f"{prefix}: image path must use images/{expected_folder}/ for {kind} content.")
-        image_path = ROOT / normalized
-        if not image_path.exists():
-            errors.append(f"{prefix}: referenced image does not exist: {normalized}.")
-        elif not image_path.is_file():
-            errors.append(f"{prefix}: referenced image is not a file: {normalized}.")
-        else:
-            expected_hash = image.get("sha256")
-            if isinstance(expected_hash, str) and _binary_sha256(image_path) != expected_hash.lower():
-                errors.append(f"{prefix}: sha256 does not match {normalized}.")
-        reference_id = image.get("referenceId")
-        if isinstance(reference_id, str) and reference_id and reference_id not in known_reference_ids:
-            errors.append(f"{prefix}: unknown referenceId {reference_id}.")
-        governance = image.get("replacementGovernance")
-        if isinstance(governance, dict):
-            previous_path = governance.get("previousPath")
-            if previous_path == rel:
-                errors.append(f"{prefix}: a replacement must use a new versioned image path; previousPath cannot equal path.")
-            if isinstance(previous_path, str):
-                previous_file = ROOT / previous_path
-                if not previous_file.exists():
-                    errors.append(f"{prefix}: previous image must remain in the repository: {previous_path}.")
-                elif isinstance(governance.get("previousSha256"), str) and _binary_sha256(previous_file) != governance["previousSha256"].lower():
-                    errors.append(f"{prefix}: previousSha256 does not match {previous_path}.")
-            if governance.get("clinicalMeaningChanged") is True and governance.get("requiresRevalidation") is not True:
-                errors.append(f"{prefix}: clinicalMeaningChanged=true requires requiresRevalidation=true.")
-            if governance.get("sourceChecked") is not True:
-                errors.append(f"{prefix}: replacement source/reference must be confirmed with sourceChecked=true.")
-            validation = value.get("clinicalValidation")
-            if governance.get("clinicalMeaningChanged") is True and isinstance(validation, dict) and validation.get("validated") is True:
-                errors.append(f"{prefix}: clinically meaningful image replacement requires parent content to return to unvalidated status before publication.")
-
 def validate_collection(
     kind: str,
     settings: dict,
@@ -341,7 +282,6 @@ def validate_collection(
                 errors.append(f"{path}: unknown category IDs: {', '.join(unknown_categories)}.")
 
         _validate_attachments(kind, value, path, known_reference_ids, errors)
-        _validate_image_attachments(kind, value, path, known_reference_ids, errors)
         _validate_attachment_tokens(value, path, errors)
 
         missing = sorted(
@@ -471,7 +411,14 @@ def main() -> int:
                 errors.append(f"{notices_path}{suffix}: {validation_error.message}")
             for notice in notices_document.get("notices", []):
                 if isinstance(notice, dict):
-                    _validate_image_attachments("clinical-notice", notice, notices_path, known_reference_ids, errors)
+                    _validate_attachments(
+                        "clinical-notice",
+                        notice,
+                        notices_path,
+                        known_reference_ids,
+                        errors,
+                    )
+                    _validate_attachment_tokens(notice, notices_path, errors)
 
     # Prescribing medication links must resolve when a medicationId is supplied.
     medication_ids = set(documents_by_kind["medication"].keys())
