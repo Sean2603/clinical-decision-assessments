@@ -1,0 +1,46 @@
+{
+  "id": "trimethoprim",
+  "title": "Trimethoprim",
+  "aliases": [],
+  "version": "0.1.1",
+  "status": "active",
+  "formularyGroup": "Antimicrobials",
+  "medicineType": "Antibacterial",
+  "drugClass": "Folate antagonist",
+  "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
+  "updatedOn": null,
+  "changeSummary": "Added to the APUC medication formulary.",
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "LUTI second line (women)",
+      "population": null,
+      "dose": null,
+      "duration": null,
+      "notes": []
+    },
+    {
+      "title": "LUTI first line (men)",
+      "population": null,
+      "dose": null,
+      "duration": null,
+      "notes": []
+    }
+  ],
+  "contraindications": [],
+  "cautions": [],
+  "interactions": [],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [],
+  "pregnancyBreastfeeding": [],
+  "practicalPoints": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  }
+}
