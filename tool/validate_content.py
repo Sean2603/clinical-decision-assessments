@@ -198,6 +198,35 @@ def _validate_attachments(kind: str, value: dict, source_path: Path, known_refer
             if governance.get("clinicalMeaningChanged") is True and isinstance(validation, dict) and validation.get("validated") is True:
                 errors.append(f"{prefix}: clinically meaningful attachment replacement requires parent content to return to unvalidated status.")
 
+ATTACHMENT_TOKEN_RE = re.compile(r"\{\{attachment:([^}|]+)(?:\|([^}]+))?\}\}")
+
+
+def _validate_attachment_tokens(value: dict, source_path: Path, errors: list[str]) -> None:
+    attachment_ids = {
+        item.get("id") for item in value.get("attachments", [])
+        if isinstance(item, dict) and isinstance(item.get("id"), str)
+    }
+
+    def walk(item, item_path: str) -> None:
+        if isinstance(item, str):
+            for match in ATTACHMENT_TOKEN_RE.finditer(item):
+                attachment_id = match.group(1).strip()
+                if attachment_id not in attachment_ids:
+                    errors.append(
+                        f"{source_path}:{item_path}: attachment token '{attachment_id}' "
+                        "does not resolve to an attachment on this content item."
+                    )
+        elif isinstance(item, list):
+            for index, child in enumerate(item):
+                walk(child, f"{item_path}[{index}]")
+        elif isinstance(item, dict):
+            for key, child in item.items():
+                if key not in {"attachments", "images"}:
+                    walk(child, f"{item_path}.{key}")
+
+    walk(value, "content")
+
+
 def _validate_image_attachments(kind: str, value: dict, source_path: Path, known_reference_ids: set[str], errors: list[str]) -> None:
     images = value.get("images", [])
     if not isinstance(images, list):
@@ -313,6 +342,7 @@ def validate_collection(
 
         _validate_attachments(kind, value, path, known_reference_ids, errors)
         _validate_image_attachments(kind, value, path, known_reference_ids, errors)
+        _validate_attachment_tokens(value, path, errors)
 
         missing = sorted(
             document_reference_ids(kind, value) - known_reference_ids

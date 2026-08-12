@@ -1,3 +1,8 @@
+## Inline attachment references
+
+- Added repository validation for `{{attachment:id}}` and `{{attachment:id|Custom label}}`.
+- Publication fails if an inline token does not resolve to an attachment on the same content item.
+
 ## Clinical Attachments v2
 
 - Added governed `attachments` metadata for images, PDF, DOCX, XLSX, CSV, PPTX, TXT and Markdown files.
