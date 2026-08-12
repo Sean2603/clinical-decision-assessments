@@ -44,6 +44,195 @@
           }
         }
       }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/clinicalAttachment"
+      },
+      "default": []
+    }
+  },
+  "$defs": {
+    "clinicalAttachmentReplacementGovernance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "replacedOn",
+        "replacedBy",
+        "replacementReason",
+        "changeSummary",
+        "clinicalMeaningChanged",
+        "requiresRevalidation",
+        "sourceChecked",
+        "previousPath",
+        "previousVersion",
+        "previousSha256"
+      ],
+      "properties": {
+        "replacedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "replacedBy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replacementReason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "changeSummary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clinicalMeaningChanged": {
+          "type": "boolean"
+        },
+        "requiresRevalidation": {
+          "type": "boolean"
+        },
+        "sourceChecked": {
+          "type": "boolean"
+        },
+        "previousPath": {
+          "type": "string",
+          "pattern": "^attachments/"
+        },
+        "previousVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "previousSha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      }
+    },
+    "clinicalAttachment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "title",
+        "label",
+        "path",
+        "caption",
+        "source",
+        "referenceId",
+        "version",
+        "sha256",
+        "mediaType",
+        "originalFileName",
+        "fileSize",
+        "width",
+        "height",
+        "uploadedOn",
+        "uploadedBy",
+        "replacementGovernance"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "image",
+            "pdf",
+            "document",
+            "spreadsheet",
+            "presentation",
+            "text"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^attachments/"
+        },
+        "caption": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "referenceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "mediaType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "originalFileName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fileSize": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "uploadedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "uploadedBy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replacementGovernance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/clinicalAttachmentReplacementGovernance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import hashlib
 import json
 import re
 import subprocess
@@ -116,6 +117,146 @@ def document_reference_ids(kind: str, value: dict) -> set[str]:
     return set(value.get("referenceIds", []))
 
 
+
+
+IMAGE_KIND_FOLDERS = {
+    "assessment": "assessments",
+    "guideline": "guidelines",
+    "scoring-tool": "scoring_tools",
+    "blood-panel": "blood_panels",
+    "medication": "medications",
+    "prescribing": "prescribing",
+    "clinical-notice": "clinical_notices",
+}
+
+def _binary_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+def _validate_attachments(kind: str, value: dict, source_path: Path, known_reference_ids: set[str], errors: list[str]) -> None:
+    attachments = value.get("attachments", [])
+    if not isinstance(attachments, list):
+        return
+    expected_folder = IMAGE_KIND_FOLDERS.get(kind)
+    seen_ids: set[str] = set()
+    allowed_extensions = {".png", ".jpg", ".jpeg", ".webp", ".pdf", ".docx", ".xlsx", ".csv", ".pptx", ".txt", ".md"}
+    for index, attachment in enumerate(attachments):
+        prefix = f"{source_path}:attachments[{index}]"
+        if not isinstance(attachment, dict):
+            continue
+        attachment_id = attachment.get("id")
+        if isinstance(attachment_id, str):
+            if attachment_id in seen_ids:
+                errors.append(f"{prefix}: duplicate attachment id {attachment_id}.")
+            seen_ids.add(attachment_id)
+        rel = attachment.get("path")
+        if not isinstance(rel, str):
+            continue
+        normalized = rel.replace("\\\\", "/")
+        if normalized.startswith("/") or ".." in Path(normalized).parts:
+            errors.append(f"{prefix}: attachment path must stay inside the repository attachments directory.")
+            continue
+        parts = normalized.split("/")
+        if len(parts) < 3 or parts[0] != "attachments":
+            errors.append(f"{prefix}: attachment path must start with attachments/.")
+            continue
+        if expected_folder and parts[1] != expected_folder:
+            errors.append(f"{prefix}: attachment path must use attachments/{expected_folder}/ for {kind} content.")
+        attachment_path = ROOT / normalized
+        if attachment_path.suffix.lower() not in allowed_extensions:
+            errors.append(f"{prefix}: unsupported attachment extension {attachment_path.suffix}.")
+        if not attachment_path.exists():
+            errors.append(f"{prefix}: referenced attachment does not exist: {normalized}.")
+        elif not attachment_path.is_file():
+            errors.append(f"{prefix}: referenced attachment is not a file: {normalized}.")
+        else:
+            expected_hash = attachment.get("sha256")
+            if isinstance(expected_hash, str) and _binary_sha256(attachment_path) != expected_hash.lower():
+                errors.append(f"{prefix}: sha256 does not match {normalized}.")
+        reference_id = attachment.get("referenceId")
+        if isinstance(reference_id, str) and reference_id and reference_id not in known_reference_ids:
+            errors.append(f"{prefix}: unknown referenceId {reference_id}.")
+        governance = attachment.get("replacementGovernance")
+        if isinstance(governance, dict):
+            previous_path = governance.get("previousPath")
+            if previous_path == rel:
+                errors.append(f"{prefix}: replacement must use a new versioned attachment path.")
+            if isinstance(previous_path, str):
+                previous_file = ROOT / previous_path
+                if not previous_file.exists():
+                    errors.append(f"{prefix}: previous attachment must remain in the repository: {previous_path}.")
+                elif isinstance(governance.get("previousSha256"), str) and _binary_sha256(previous_file) != governance["previousSha256"].lower():
+                    errors.append(f"{prefix}: previousSha256 does not match {previous_path}.")
+            if governance.get("clinicalMeaningChanged") is True and governance.get("requiresRevalidation") is not True:
+                errors.append(f"{prefix}: clinicalMeaningChanged=true requires requiresRevalidation=true.")
+            if governance.get("sourceChecked") is not True:
+                errors.append(f"{prefix}: replacement source/reference must be confirmed.")
+            validation = value.get("clinicalValidation")
+            if governance.get("clinicalMeaningChanged") is True and isinstance(validation, dict) and validation.get("validated") is True:
+                errors.append(f"{prefix}: clinically meaningful attachment replacement requires parent content to return to unvalidated status.")
+
+def _validate_image_attachments(kind: str, value: dict, source_path: Path, known_reference_ids: set[str], errors: list[str]) -> None:
+    images = value.get("images", [])
+    if not isinstance(images, list):
+        return
+    expected_folder = IMAGE_KIND_FOLDERS.get(kind)
+    seen_ids: set[str] = set()
+    for index, image in enumerate(images):
+        prefix = f"{source_path}:images[{index}]"
+        if not isinstance(image, dict):
+            continue
+        image_id = image.get("id")
+        if isinstance(image_id, str):
+            if image_id in seen_ids:
+                errors.append(f"{prefix}: duplicate image id {image_id}.")
+            seen_ids.add(image_id)
+        rel = image.get("path")
+        if not isinstance(rel, str):
+            continue
+        normalized = rel.replace("\\", "/")
+        if normalized.startswith("/") or ".." in Path(normalized).parts:
+            errors.append(f"{prefix}: image path must stay inside the repository images directory.")
+            continue
+        parts = normalized.split("/")
+        if len(parts) < 3 or parts[0] != "images":
+            errors.append(f"{prefix}: image path must start with images/.")
+            continue
+        if expected_folder and parts[1] != expected_folder:
+            errors.append(f"{prefix}: image path must use images/{expected_folder}/ for {kind} content.")
+        image_path = ROOT / normalized
+        if not image_path.exists():
+            errors.append(f"{prefix}: referenced image does not exist: {normalized}.")
+        elif not image_path.is_file():
+            errors.append(f"{prefix}: referenced image is not a file: {normalized}.")
+        else:
+            expected_hash = image.get("sha256")
+            if isinstance(expected_hash, str) and _binary_sha256(image_path) != expected_hash.lower():
+                errors.append(f"{prefix}: sha256 does not match {normalized}.")
+        reference_id = image.get("referenceId")
+        if isinstance(reference_id, str) and reference_id and reference_id not in known_reference_ids:
+            errors.append(f"{prefix}: unknown referenceId {reference_id}.")
+        governance = image.get("replacementGovernance")
+        if isinstance(governance, dict):
+            previous_path = governance.get("previousPath")
+            if previous_path == rel:
+                errors.append(f"{prefix}: a replacement must use a new versioned image path; previousPath cannot equal path.")
+            if isinstance(previous_path, str):
+                previous_file = ROOT / previous_path
+                if not previous_file.exists():
+                    errors.append(f"{prefix}: previous image must remain in the repository: {previous_path}.")
+                elif isinstance(governance.get("previousSha256"), str) and _binary_sha256(previous_file) != governance["previousSha256"].lower():
+                    errors.append(f"{prefix}: previousSha256 does not match {previous_path}.")
+            if governance.get("clinicalMeaningChanged") is True and governance.get("requiresRevalidation") is not True:
+                errors.append(f"{prefix}: clinicalMeaningChanged=true requires requiresRevalidation=true.")
+            if governance.get("sourceChecked") is not True:
+                errors.append(f"{prefix}: replacement source/reference must be confirmed with sourceChecked=true.")
+            validation = value.get("clinicalValidation")
+            if governance.get("clinicalMeaningChanged") is True and isinstance(validation, dict) and validation.get("validated") is True:
+                errors.append(f"{prefix}: clinically meaningful image replacement requires parent content to return to unvalidated status before publication.")
+
 def validate_collection(
     kind: str,
     settings: dict,
@@ -169,6 +310,9 @@ def validate_collection(
             unknown_categories = sorted(set(category_ids) - known_category_ids)
             if unknown_categories:
                 errors.append(f"{path}: unknown category IDs: {', '.join(unknown_categories)}.")
+
+        _validate_attachments(kind, value, path, known_reference_ids, errors)
+        _validate_image_attachments(kind, value, path, known_reference_ids, errors)
 
         missing = sorted(
             document_reference_ids(kind, value) - known_reference_ids
@@ -274,6 +418,40 @@ def main() -> int:
             except (KeyError, ValueError) as exc:
                 errors.append(f"{relative_path}: {exc}")
 
+    if errors:
+        print("\nClinical content validation failed:")
+        for error in errors:
+            print(f"- {error}")
+        return 1
+
+    # Validate centrally managed clinical notices.
+    notices_path = ROOT / "clinical_notices" / "clinical-notices.json"
+    notices_schema_path = ROOT / "schema" / "clinical-notices-schema.json"
+    if notices_path.exists() and notices_schema_path.exists():
+        notices_document = load_json(notices_path, errors)
+        notices_schema = load_json(notices_schema_path, errors)
+        if notices_document is not None and notices_schema is not None:
+            validator = Draft202012Validator(notices_schema, format_checker=FormatChecker())
+            for validation_error in sorted(
+                validator.iter_errors(notices_document),
+                key=lambda item: [str(part) for part in item.absolute_path],
+            ):
+                location = ".".join(str(part) for part in validation_error.absolute_path)
+                suffix = f":{location}" if location else ""
+                errors.append(f"{notices_path}{suffix}: {validation_error.message}")
+            for notice in notices_document.get("notices", []):
+                if isinstance(notice, dict):
+                    _validate_image_attachments("clinical-notice", notice, notices_path, known_reference_ids, errors)
+
+    # Prescribing medication links must resolve when a medicationId is supplied.
+    medication_ids = set(documents_by_kind["medication"].keys())
+    for pathway_id, pathway in documents_by_kind["prescribing"].items():
+        for regimen in pathway.get("regimens", []):
+            medication_id = regimen.get("medicationId")
+            if medication_id and medication_id not in medication_ids:
+                errors.append(
+                    f"prescribing/{pathway_id}: regimen medicationId {medication_id!r} does not resolve to medications/{medication_id}.json"
+                )
     if errors:
         print("\nClinical content validation failed:")
         for error in errors:

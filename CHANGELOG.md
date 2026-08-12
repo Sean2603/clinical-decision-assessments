@@ -1,3 +1,17 @@
+## Clinical Attachments v2
+
+- Added governed `attachments` metadata for images, PDF, DOCX, XLSX, CSV, PPTX, TXT and Markdown files.
+- Added attachment path/hash/reference/replacement-governance validation.
+- Retained legacy `images` support during migration.
+
+## Clinical image attachments v1
+
+- Added optional governed image attachments to assessments, guidelines, scoring tools, blood panels, medications, prescribing pathways and clinical notices.
+- Added versioned image metadata including SHA-256, MIME type, dimensions, source/reference linkage and upload attribution.
+- Added replacement-governance metadata and validation.
+- Clinically meaningful replacements now require revalidation and cannot be published while the parent content remains validated.
+- Image replacements must use a new path and retain the previous image in the repository.
+
 ## 2026-08-11 – Medication / prescribing split
 - Split medicine monographs into `medications/` and reserved `prescribing/` for condition-based treatment pathways.
 - Added separate JSON schemas and manifest collections for both content types.
@@ -87,3 +101,9 @@
 - Continue blocking cited references that are superseded, withdrawn, unavailable, or unverified.
 - Automatically mark affected assessments, scoring tools, and blood panels as clinically unvalidated before publication.
 - Clear prior reviewer metadata, add a review-due note, and bump the affected content item version.
+
+## Medication, prescribing and notice metadata (2026-08-12)
+- Medication monographs now support aliases and update metadata for search and Updates & Notices.
+- Prescribing pathways now declare a clinical system separately from the condition/category and can cross-link regimen medication IDs.
+- Clinical notices are managed in `clinical_notices/clinical-notices.json` and are included in the generated manifest.
+- The APUC 17-medicine starter formulary is present as clinically unvalidated medication content where a validated monograph has not yet been completed.

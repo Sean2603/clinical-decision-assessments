@@ -138,3 +138,13 @@ Run `python tool/migrate_content_lifecycle_v2.py` once on `content-review/clinic
 
 ## Medications and prescribing
 Medication monographs are stored in `medications/`. Condition-based prescribing pathways are stored separately in `prescribing/` and may reference medication monographs by stable `medicationId`.
+
+## Medication, prescribing and notice metadata (2026-08-12)
+- Medication monographs now support aliases and update metadata for search and Updates & Notices.
+- Prescribing pathways now declare a clinical system separately from the condition/category and can cross-link regimen medication IDs.
+- Clinical notices are managed in `clinical_notices/clinical-notices.json` and are included in the generated manifest.
+- The APUC 17-medicine starter formulary is present as clinically unvalidated medication content where a validated monograph has not yet been completed.
+
+## Clinical image attachments
+
+All managed clinical content types can optionally include an `images` array. Images live under the repository `images/` tree and are linked from structured content by versioned repository path and SHA-256 hash. Replacing a published image must use a new versioned path and include replacement governance metadata; the previous image remains in Git/repository history and, where a clinical meaning change is declared, the parent content must return to unvalidated status before publication.
