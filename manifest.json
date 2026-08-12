@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.27",
-  "updatedAt": "2026-08-12T14:56:59Z",
+  "contentVersion": "1.2.28",
+  "updatedAt": "2026-08-12T15:00:32Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -543,37 +543,37 @@
     {
       "id": "cefalexin",
       "title": "Cefalexin",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "88d390d31c2302db8637b80ff2276f066d41364bab9463446b859acc8a48cd8c",
+      "sha256": "2cd1b02c20e0cf0b81f6f2424eec73025fd00632bd6bcd729519cd9752a77b4a",
       "schemaSha256": "c9d97b8b05d95516819adc7b16b3d78083ba46fe7d234cef56641005d9c607b2"
     },
     {
       "id": "co-codamol",
       "title": "Co-codamol",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "medications/co-codamol.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "acc410134d68d0777e16d9ac9263b152bf2779c23801339336027dad55d79382",
+      "sha256": "f3039f0da84bdabdc27b4c8af44a96724d0710c75fb5186dd930bf6c8411a172",
       "schemaSha256": "c9d97b8b05d95516819adc7b16b3d78083ba46fe7d234cef56641005d9c607b2"
     },
     {
       "id": "nitrofurantoin",
       "title": "Nitrofurantoin",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/nitrofurantoin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "293f1db6a7fa05b0722e05f12b19da44353eb1b5ffac3030ca0985126e8b7468",
+      "sha256": "e7c4051875d99864b40a60d6b786a3121ebbf1402051c13d046e9a575bc32acb",
       "schemaSha256": "c9d97b8b05d95516819adc7b16b3d78083ba46fe7d234cef56641005d9c607b2"
     },
     {
       "id": "trimethoprim",
       "title": "Trimethoprim",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "b7320597a9b80e939559e71d5ee8f9b2d87d749a16888947cc090b591da606f9",
+      "sha256": "c19d71da51e14e68a2b1594a3d38896612543f4f3f955254acbd91b768471132",
       "schemaSha256": "c9d97b8b05d95516819adc7b16b3d78083ba46fe7d234cef56641005d9c607b2"
     }
   ],
@@ -617,10 +617,10 @@
     {
       "id": "lower-uti-in-pregnancy-asymptomatic",
       "title": "Lower UTI in Pregnancy - Asymptomatic",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "file": "prescribing/lower-uti-in-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "e5813b935dfd3e43b565508a6ec9fec3b24408321d3bed03f044c5409cdf72f2",
+      "sha256": "baa7da2088cca8adb58b8abb42b87b4d97bfcd3b8d1bc8f7ab7b848947af5430",
       "schemaSha256": "b393d26f8e6eec9e4550a6a77867384056c7ed42c15364139e4506814604288c"
     },
     {
@@ -635,19 +635,19 @@
     {
       "id": "lower-uti-non-pregnant-women-16-and-over",
       "title": "Lower UTI Non-pregnant women aged 16 years and over",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "prescribing/lower-uti-non-pregnant-women-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "0dc67feec33cd620853a99cd8c5673ec41934a8decc3cebdadefb8ef66c03b57",
+      "sha256": "c7c6bb11df3865e51571aa7bfebc1e6b813baf7c1c14c3202f4f42702194c193",
       "schemaSha256": "b393d26f8e6eec9e4550a6a77867384056c7ed42c15364139e4506814604288c"
     },
     {
       "id": "lower-uti-pregnancy-asymptomatic",
       "title": "Lower UTI in Pregnancy - Asymptomatic",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "prescribing/lower-uti-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "0d087dea802152fb5245b6ae1622e88e4631c21927c42db38727364247ed5997",
+      "sha256": "4ad71daa78c50f8d06ad054972fc7b8e26dd3d1896235316fdc64758b62f4fe6",
       "schemaSha256": "b393d26f8e6eec9e4550a6a77867384056c7ed42c15364139e4506814604288c"
     },
     {
