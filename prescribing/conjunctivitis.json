@@ -1,0 +1,29 @@
+{
+  "id": "conjunctivitis",
+  "title": "Conjunctivitis",
+  "aliases": ["infective conjunctivitis", "eye infection"],
+  "version": "1.0.0",
+  "status": "active",
+  "system": "Eye",
+  "category": "Eye infections",
+  "summary": "See NICE CKS Conjunctivitis - infective for full guidance.",
+  "updatedOn": "2026-08-12",
+  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Treat only if severe, as most infections are viral or self-limiting. A delayed treatment strategy may be appropriate if symptoms have not improved in 3 days.",
+    "Bacterial conjunctivitis is characterised by red eye with mucopurulent, not watery, discharge. It is usually bilateral (one eye may be affected before the other by one or two days) and often resolves in 5-7 days without treatment.",
+    "Antibiotics are not recommended if there is watering or discharge from an eye, without conjunctival erythema.",
+    "Ointment stays in the eye longer and therefore is a good night-time treatment option, however due to blurring of vision, drops may be more acceptable to some patients during the day.",
+    "See also The College of Optometrists for information on appropriate pharmacological and non-pharmacological management options and advice for contact lens wearers."
+  ],
+  "cautions": [],
+  "regimens": [
+    {"rank":1,"label":"Adults & children >1 month 1st line","medicationId":null,"displayName":"Chloramphenicol eye drops","dose":"Apply 1 drop every 2 hours for 2 days, then reduce frequency depending on severity of infection","route":null,"frequency":null,"duration":"Continue use until 48 hours after infection has cleared (typically 5-10 days)","restrictions":[],"notes":[]},
+    {"rank":1,"label":"Adults & children >1 month 1st line","medicationId":null,"displayName":"Chloramphenicol eye ointment","dose":"Apply 3-4 times daily","route":null,"frequency":null,"duration":"Continue use until 48 hours after infection has cleared (typically 5-10 days)","restrictions":[],"notes":[]},
+    {"rank":2,"label":"Adults & children >1 month 2nd line","medicationId":null,"displayName":"Fusidic acid 1% modified-release eye drops","dose":"Apply 1 drop twice daily","route":null,"frequency":null,"duration":"Continue use until 48 hours after infection has cleared (typically 5-10 days)","restrictions":[],"notes":[]}
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {"validated":false,"reviewedBy":null,"reviewedOn":null,"reviewerRole":null,"nextReviewDue":null,"reviewNotes":"Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."}
+}

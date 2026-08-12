@@ -1,0 +1,32 @@
+{
+  "id": "bites-animal",
+  "title": "Bites - Animal",
+  "aliases": ["animal bite", "dog bite", "cat bite"],
+  "version": "1.0.0",
+  "status": "active",
+  "system": "Skin & Soft Tissue",
+  "category": "Bites",
+  "summary": "NICE visual summary and full guidance",
+  "updatedOn": "2026-08-12",
+  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Surgical toilet is most important. Assess tetanus and rabies risk.",
+    "Antibiotic prophylaxis advised for cat bites that have broken the skin and drawn blood or broken the skin and not drawn blood if the wound could be deep.",
+    "Antibiotic prophylaxis is not required for bites from a dog or other traditional pet (excluding cat bites) that have not broken the skin or have broken the skin but not drawn blood. Antibiotic prophylaxis advised for bites if: it has penetrated bone, joint, tendon, ligament or vascular structures; it is deep, is a puncture or crush wound, or has caused significant tissue damage; it involves high risk area such as hand, foot, face, genitals, skin overlying cartilaginous structures or an area of poor circulation; it is visibly contaminated (e.g. if there is dirt or a tooth in the wound); the person is at risk of a serious wound infection because of a comorbidity, e.g. immunocompromised, diabetes, elderly, cirrhotic or asplenic patients, decompensated liver disease, presence of prosthetic valve or prosthetic joint.",
+    "Review at 24 and 48 hours.",
+    "For people with an insect bite or sting who have symptoms or signs of an infection, see the recommendations on choice of antibiotic in Cellulitis & Erysipelas.",
+    "Seek specialist advice if person is pregnant."
+  ],
+  "cautions": [],
+  "regimens": [
+    {"rank":1,"label":"Adult 1st line","medicationId":null,"displayName":"Co-amoxiclav tablets","dose":"250/125mg or 500/125mg","route":null,"frequency":"three times a day","duration":"Treatment course: 5 days; Prophylaxis course: 3 days","restrictions":[],"notes":[]},
+    {"rank":2,"label":"Adult penicillin allergic / 2nd line","medicationId":null,"displayName":"Metronidazole tablets PLUS Doxycycline capsules","dose":"Metronidazole 400mg; Doxycycline 200mg on first day, then 100mg or 200mg daily","route":null,"frequency":"Metronidazole three times a day","duration":"Treatment course: 5 days; Prophylaxis course: 3 days","restrictions":[],"notes":[]},
+    {"rank":1,"label":"Child 1st line","medicationId":null,"displayName":"Co-amoxiclav oral","dose":"1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets","route":null,"frequency":"three times a day","duration":"Treatment course: 5 days; Prophylaxis course: 3 days","restrictions":["< 1 month refer for specialist advice"],"notes":["Co-amoxiclav 400/57 suspension may also be considered to allow for twice-daily dosing."]},
+    {"rank":2,"label":"Child penicillin allergic / 2nd line-under 12 years of age","medicationId":null,"displayName":"Co-trimoxazole (off-label use)","dose":"6 weeks – 5 months: 120mg or 24mg/kg twice daily; 6 months – 5 years: 240mg or 24mg/kg twice daily; 6 years – 11 years: 480mg or 24mg/kg twice daily","route":null,"frequency":null,"duration":"Treatment course: 5 days; Prophylaxis course: 3 days","restrictions":["< 6 weeks refer for specialist advice"],"notes":["See the BNF for Children for information on monitoring"]},
+    {"rank":2,"label":"Child penicillin allergic / 2nd line-aged 12-17 years","medicationId":null,"displayName":"Doxycycline PLUS Metronidazole","dose":"Doxycycline 200mg on first day, then 100mg or 200mg daily; Metronidazole 400mg","route":null,"frequency":"Metronidazole three times a day","duration":"Treatment course: 5 days; Prophylaxis course: 3 days","restrictions":[],"notes":["A 5-day course is appropriate for treating most human or animal bites, but course length can be increased to 7 days (with review) based on clinical assessment of the wound, for example, if there is significant tissue destruction or it has penetrated bone, joint, tendon or vascular structures.","See the BNF, BNF for Children, and summary of product characteristics for appropriate use and dosing in specific populations, for example, for people with hepatic or renal impairment, in pregnancy and breastfeeding, and when administering intravenous (or, if appropriate, intramuscular) antibiotics."]}
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {"validated":false,"reviewedBy":null,"reviewedOn":null,"reviewerRole":null,"nextReviewDue":null,"reviewNotes":"Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."}
+}

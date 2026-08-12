@@ -1,0 +1,31 @@
+{
+  "id": "pyelonephritis-adults",
+  "title": "Pyelonephritis – Adults",
+  "aliases": ["pyelonephritis", "upper UTI"],
+  "version": "1.0.0",
+  "status": "active",
+  "system": "Genitourinary",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available here",
+  "updatedOn": "2026-08-12",
+  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis, acute renal failure).",
+    "If no response within 24 hours or symptoms worsen at any time admit to secondary care.",
+    "Refer to NICE NG111: Pyelonephritis (acute): antimicrobial prescribing",
+    "If admission not needed, send MSU for culture and start empiric antibiotics. When results of urine culture are available review choice of antibiotic and change the antibiotic if necessary according to susceptibility",
+    "In pregnancy refer to NICE Pyelonephritis (acute): antimicrobial prescribing",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions"
+  ],
+  "cautions": [],
+  "regimens": [
+    {"rank":1,"label":"1st choice","medicationId":"cefalexin","displayName":"Cefalexin capsules","dose":"500mg BD to TDS (up to 1-1.5g TDS to QDS for severe infections)","route":null,"frequency":null,"duration":"7 - 10 days","restrictions":[],"notes":[]},
+    {"rank":1,"label":"If lab report shows sensitive","medicationId":"trimethoprim","displayName":"Trimethoprim tablets","dose":"200mg BD","route":null,"frequency":null,"duration":"14 days","restrictions":["(only if sensitivities are known)"],"notes":[]},
+    {"rank":1,"label":"If lab report shows sensitive","medicationId":null,"displayName":"Co-amoxiclav tablets","dose":"500/125mg TDS","route":null,"frequency":null,"duration":"7 to 10 days","restrictions":["(only if sensitivities are known)"],"notes":[]},
+    {"rank":1,"label":"Only if other first-choice antibiotics are unsuitable","medicationId":null,"displayName":"Ciprofloxacin tablets","dose":"500mg BD","route":null,"frequency":null,"duration":"7 days","restrictions":[],"notes":["A patient information sheet should be given to all patients who receive a fluoroquinolone.","Refer to MHRA drug safety update Fluoroquinolone antibiotics: must now only be prescribed when other commonly recommended antibiotics are inappropriate."]}
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {"validated":false,"reviewedBy":null,"reviewedOn":null,"reviewerRole":null,"nextReviewDue":null,"reviewNotes":"Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."}
+}
