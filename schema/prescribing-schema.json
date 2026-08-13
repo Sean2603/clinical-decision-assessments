@@ -57,6 +57,12 @@
     "summary": {
       "type": "string"
     },
+    "niceVisualSummary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "updatedOn": {
       "type": [
         "string",
