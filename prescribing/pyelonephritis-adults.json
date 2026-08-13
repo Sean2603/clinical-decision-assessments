@@ -5,18 +5,18 @@
     "pyelonephritis",
     "upper UTI"
   ],
-  "version": "1.2.0",
+  "version": "1.3.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
-  "summary": "{{attachment:pyelonephritis-visual-summary|View original prescribing pathway}}\n",
-  "updatedOn": "2026-08-12",
+  "summary": "\n",
+  "updatedOn": "2026-08-13",
   "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
   "effectiveFrom": null,
   "clinicalNotes": [
     "- Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis, acute renal failure).",
     "- If no response within 24 hours or symptoms worsen at any time admit to secondary care.",
-    "- Refer to NICE NG111: Pyelonephritis (acute): antimicrobial prescribing",
+    "- Refer to NICE NG111: Pyelonephritis (acute): antimicrobial prescribing****",
     "- If admission not needed, send MSU for culture and start empiric antibiotics. When results of urine culture are available review choice of antibiotic and change the antibiotic if necessary according to susceptibility",
     "- In pregnancy refer to NICE Pyelonephritis (acute): antimicrobial prescribing",
     "- See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions"
@@ -84,10 +84,10 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-12",
+    "reviewedOn": "2026-08-13",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-12",
-    "reviewNotes": "Edits"
+    "nextReviewDue": "2028-08-13",
+    "reviewNotes": "Edited"
   },
   "attachments": [
     {
@@ -110,5 +110,6 @@
       "uploadedOn": "2026-08-12T14:43:51.030Z",
       "uploadedBy": "Sean McGrory"
     }
-  ]
+  ],
+  "niceVisualSummary": "{{attachment:pyelonephritis-visual-summary|View NICE Visual Summary}}"
 }
