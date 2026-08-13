@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.31",
-  "updatedAt": "2026-08-13T10:25:11Z",
+  "contentVersion": "1.2.32",
+  "updatedAt": "2026-08-13T20:45:15Z",
   "emergencyRevocations": [
     {
       "contentType": "assessment",
@@ -585,7 +585,7 @@
       "file": "prescribing/bites-animal.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "32e6edeb42e7484972dc5271e204416cbf5d453509aac2cc986ec3e18785dc6f",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "bites-human",
@@ -594,7 +594,7 @@
       "file": "prescribing/bites-human.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "1e8267cf6abc9f9b0c53014283159af1724503162248587d6e8c6c00610df18c",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "conjunctivitis",
@@ -603,7 +603,7 @@
       "file": "prescribing/conjunctivitis.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "7f3a1d05e76fd47a16f75165518278dda2a562960bd2fd3c867b5e6cc78a9af5",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "dental-abscess-urgent-treatment",
@@ -612,7 +612,7 @@
       "file": "prescribing/dental-abscess-urgent-treatment.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "aeaa56cb3e16689ab77e6f3f96b9b4b4233b9d053987afd1301a4fb6bb20de7a",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "lower-uti-in-pregnancy-asymptomatic",
@@ -621,7 +621,7 @@
       "file": "prescribing/lower-uti-in-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "baa7da2088cca8adb58b8abb42b87b4d97bfcd3b8d1bc8f7ab7b848947af5430",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "lower-uti-men-16-and-over",
@@ -630,7 +630,7 @@
       "file": "prescribing/lower-uti-men-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "bf1c7e1dc63b5ad475484ba853fb1a9edeef047eba09d228f037587a19cd7bb2",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "lower-uti-non-pregnant-women-16-and-over",
@@ -639,7 +639,7 @@
       "file": "prescribing/lower-uti-non-pregnant-women-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "c7c6bb11df3865e51571aa7bfebc1e6b813baf7c1c14c3202f4f42702194c193",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "lower-uti-pregnancy-asymptomatic",
@@ -648,7 +648,7 @@
       "file": "prescribing/lower-uti-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "4ad71daa78c50f8d06ad054972fc7b8e26dd3d1896235316fdc64758b62f4fe6",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "pyelonephritis-adults",
@@ -657,7 +657,7 @@
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "dbefa3792d4ea8511276311b730a5a53bbabfa6488b2f241106d94c29aa03c09",
-      "schemaSha256": "695951ff484ab9531ac9c0b05d09a78987548be047f1286cc1f507df0ff7147b"
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     }
   ]
 }
