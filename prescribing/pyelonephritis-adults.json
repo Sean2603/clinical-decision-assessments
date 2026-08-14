@@ -5,12 +5,12 @@
     "pyelonephritis",
     "upper UTI"
   ],
-  "version": "1.3.0",
+  "version": "1.5.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
-  "summary": "\n",
-  "updatedOn": "2026-08-13",
+  "summary": "This guideline sets out an antimicrobial prescribing strategy for acute pyelonephritis (upper urinary tract infection) in children, young people and adults who do not have a catheter. It aims to optimise antibiotic use and reduce antibiotic resistance.\n",
+  "updatedOn": "2026-08-14",
   "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
   "effectiveFrom": null,
   "clinicalNotes": [
@@ -80,14 +80,16 @@
     }
   ],
   "specialConsiderations": [],
-  "references": [],
+  "references": [
+    "NICE-NG111"
+  ],
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-13",
+    "reviewedOn": "2026-08-14",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-13",
-    "reviewNotes": "Edited"
+    "nextReviewDue": "2028-08-14",
+    "reviewNotes": "Added referencing"
   },
   "attachments": [
     {
@@ -95,8 +97,8 @@
       "title": "Pyelonephritis Visual Summary",
       "label": "NG111 - Guideline",
       "caption": "NICE visual summary of the guideline - PDF format",
-      "source": null,
-      "referenceId": null,
+      "source": "https://www.nice.org.uk/guidance/ng111/resources/visual-summary-pdf-6544161037",
+      "referenceId": "NICE-NG111",
       "replacementGovernance": null,
       "path": "attachments/prescribing/pyelonephritis-adults/pyelonephritis-visual-summary-v1.0.0.pdf",
       "type": "pdf",
