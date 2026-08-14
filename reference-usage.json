@@ -12,6 +12,21 @@
       ]
     },
     {
+      "referenceId": "NICE-BITES-HUMAN-ANIMAL",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "bites-animal",
+          "title": "Bites - Animal"
+        },
+        {
+          "type": "prescribing",
+          "id": "bites-human",
+          "title": "Bites - Human"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-CG103",
       "usedBy": [
         {
@@ -93,7 +108,13 @@
     },
     {
       "referenceId": "NICE-NG111",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "pyelonephritis-adults",
+          "title": "Pyelonephritis – Adults"
+        }
+      ]
     },
     {
       "referenceId": "NICE-NG127",
