@@ -635,8 +635,8 @@
     },
     {
       "id": "NICE-BITES-HUMAN-ANIMAL",
-      "organisation": "National Institute for Health and Care Excellence",
-      "shortOrganisation": "NICE",
+      "organisation": "NICE Clinical Knowledge Summaries",
+      "shortOrganisation": "NICE-CKS",
       "title": "Bites - human and animal",
       "referenceNumber": "Bites Human Animal",
       "type": "other",
