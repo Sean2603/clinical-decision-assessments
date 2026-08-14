@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.37",
-  "updatedAt": "2026-08-14T18:01:51Z",
+  "contentVersion": "1.2.38",
+  "updatedAt": "2026-08-14T20:01:25Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "430103c6d1365b0b2d6325c254e34cb833c4efd6ed44d250cb825d1a924a9aae"
+    "sha256": "4d3c68ddfe430cea370a32df3513254d6d6267b3a37580752c3f14637871d862"
   },
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
@@ -621,10 +621,10 @@
     {
       "id": "pyelonephritis-adults",
       "title": "Pyelonephritis – Adults",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "8359991f9803b2a68032003198f2735e905258d2ebca63d897d57bc06bb9fa13",
+      "sha256": "c9cc78e22e7877a99a38d07f34d82b46265f4b3dab2d554f27af29d8b31ac4c4",
       "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     }
   ]
