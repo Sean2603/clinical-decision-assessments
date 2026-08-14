@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-04",
+  "lastChecked": "2026-08-14",
   "references": [
     {
       "id": "NICE-NG59",
@@ -612,6 +612,26 @@
         "function",
         "care planning"
       ]
+    },
+    {
+      "id": "NICE-NG111",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Pyelonephritis (acute): antimicrobial prescribing",
+      "referenceNumber": "NG111",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng111/",
+      "published": "2018-10-31",
+      "lastUpdated": "2024-09-01",
+      "accessed": "2026-08-14",
+      "lastReviewed": "2026-08-14",
+      "reviewStatus": "unverified",
+      "reviewedBy": null,
+      "reviewerRole": null,
+      "nextReviewDue": null,
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": []
     }
   ]
 }
