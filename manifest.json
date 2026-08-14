@@ -1,40 +1,8 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.36",
-  "updatedAt": "2026-08-14T15:54:17Z",
-  "emergencyRevocations": [
-    {
-      "contentType": "assessment",
-      "contentId": "acute-confusion-and-delirium",
-      "action": "disable",
-      "reason": "Unsafe",
-      "affectedVersions": {
-        "minimum": null,
-        "maximum": "0.2.3"
-      }
-    },
-    {
-      "contentType": "assessment",
-      "contentId": "red-leg-assessment",
-      "action": "disable",
-      "reason": "Clinically unsafe",
-      "affectedVersions": {
-        "minimum": null,
-        "maximum": "0.1.3"
-      },
-      "effectiveFrom": "2026-08-05T00:00:00Z"
-    },
-    {
-      "contentType": "blood-panel",
-      "contentId": "abg-and-vbg",
-      "action": "disable",
-      "reason": "Items not working correctly",
-      "affectedVersions": {
-        "minimum": null,
-        "maximum": "1.0.4"
-      }
-    }
-  ],
+  "contentVersion": "1.2.37",
+  "updatedAt": "2026-08-14T18:01:51Z",
+  "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
     "file": "references/references.json",
@@ -64,10 +32,10 @@
     {
       "id": "acute-confusion-and-delirium",
       "title": "Acute Confusion and Delirium",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "7843ea0efde6b559a18ac1de2023a904f83d10997c7858137a827a58e7a1c511",
+      "sha256": "91f7f1ac3131304d50b12ca8edfbb6ca26bcb518706008fc9fe8165dab9beddb",
       "schemaSha256": "a084cdf05d07ada459aa82b0c5cc64f68fed3935ec13666a7860d706d03b4729",
       "categoryIds": [
         "frailty"
@@ -397,10 +365,10 @@
     {
       "id": "abg-and-vbg",
       "title": "ABG and VBG",
-      "version": "1.0.4",
+      "version": "1.1.0",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "01892cab062a05c6fd9862ff07662107875eec8b98cac0b66cffa92b884c0904",
+      "sha256": "d3b391e05aa9f23adf5d390e35c6bf5da6cccb41e83b9ab1788f21cd408345c4",
       "schemaSha256": "07b6949f022245438cf74a8f7b1b24d15708ed898f91d81a3038aa03f591b297"
     },
     {
