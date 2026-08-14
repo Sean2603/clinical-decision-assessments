@@ -632,6 +632,26 @@
       "supersededBy": null,
       "notes": null,
       "relevantTopics": []
+    },
+    {
+      "id": "NICE-BITES-HUMAN-ANIMAL",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Bites - human and animal",
+      "referenceNumber": "Bites Human Animal",
+      "type": "other",
+      "url": "https://cks.nice.org.uk/topics/bites-human-animal/",
+      "published": "2024-08-01",
+      "lastUpdated": null,
+      "accessed": "2026-08-14",
+      "lastReviewed": "2026-08-14",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-14",
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": []
     }
   ]
 }

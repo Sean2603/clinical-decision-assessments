@@ -4,12 +4,12 @@
   "aliases": [
     "human bite"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "active",
   "system": "Skin & Soft Tissue",
   "category": "Bites",
   "summary": "NICE visual summary and full guidance",
-  "updatedOn": "2026-08-12",
+  "updatedOn": "2026-08-14",
   "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
   "effectiveFrom": null,
   "clinicalNotes": [
@@ -94,13 +94,38 @@
     }
   ],
   "specialConsiderations": [],
-  "references": [],
+  "references": [
+    "NICE-BITES-HUMAN-ANIMAL"
+  ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."
-  }
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-14",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-14",
+    "reviewNotes": "Add NICE visual summary and referencing"
+  },
+  "attachments": [
+    {
+      "id": "human-and-animal-bites-antimicrobial-prescribing",
+      "title": "Human and animal bites: antimicrobial prescribing",
+      "label": "View attachment",
+      "caption": null,
+      "source": "https://www.nice.org.uk/guidance/ng184/resources/visual-summary-pdf-8897023117",
+      "referenceId": "NICE-BITES-HUMAN-ANIMAL",
+      "replacementGovernance": null,
+      "path": "attachments/prescribing/bites-human/human-and-animal-bites-antimicrobial-prescribing-v1.0.0.pdf",
+      "type": "pdf",
+      "version": "1.0.0",
+      "sha256": "20473ce528a2c213ae1a1034b9cff19494cb893c221cf60f9e09bec8b7671dec",
+      "mediaType": "application/pdf",
+      "originalFileName": "Human and animal bites - antimicrobial prescribing.pdf",
+      "fileSize": 226581,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-08-14T15:17:18.097Z",
+      "uploadedBy": "Sean McGrory"
+    }
+  ],
+  "niceVisualSummary": "{{attachment:human-and-animal-bites-antimicrobial-prescribing|View NICE Visual Summary}}"
 }
