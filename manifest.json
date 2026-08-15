@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.38",
-  "updatedAt": "2026-08-14T20:01:25Z",
+  "contentVersion": "1.2.39",
+  "updatedAt": "2026-08-15T12:47:22Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
@@ -580,15 +580,6 @@
       "file": "prescribing/dental-abscess-urgent-treatment.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "aeaa56cb3e16689ab77e6f3f96b9b4b4233b9d053987afd1301a4fb6bb20de7a",
-      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
-    },
-    {
-      "id": "lower-uti-in-pregnancy-asymptomatic",
-      "title": "Lower UTI in Pregnancy - Asymptomatic",
-      "version": "0.2.1",
-      "file": "prescribing/lower-uti-in-pregnancy-asymptomatic.json",
-      "schema": "schema/prescribing-schema.json",
-      "sha256": "baa7da2088cca8adb58b8abb42b87b4d97bfcd3b8d1bc8f7ab7b848947af5430",
       "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
