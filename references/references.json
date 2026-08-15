@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-14",
+  "lastChecked": "2026-08-15",
   "references": [
     {
       "id": "NICE-NG59",
@@ -649,6 +649,26 @@
       "reviewedBy": "Sean McGrory",
       "reviewerRole": "tAPUC",
       "nextReviewDue": "2027-08-14",
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": []
+    },
+    {
+      "id": "NICE-NG91",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Otitis media (acute): antimicrobial prescribing",
+      "referenceNumber": "NG91",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng91/",
+      "published": "2018-03-28",
+      "lastUpdated": "2022-03-11",
+      "accessed": "2026-08-15",
+      "lastReviewed": "2026-08-15",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-15",
       "supersededBy": null,
       "notes": null,
       "relevantTopics": []
