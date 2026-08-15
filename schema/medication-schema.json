@@ -47,9 +47,12 @@
     "status": {
       "enum": [
         "active",
-        "withdrawn",
-        "superseded"
+        "withdrawn"
       ]
+    },
+    "isPenicillin": {
+      "type": "boolean",
+      "default": false
     },
     "formularyGroup": {
       "type": "string",
