@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.39",
-  "updatedAt": "2026-08-15T12:47:22Z",
+  "contentVersion": "1.2.40",
+  "updatedAt": "2026-08-15T16:03:46Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "4d3c68ddfe430cea370a32df3513254d6d6267b3a37580752c3f14637871d862"
+    "sha256": "877a8595b0ddad233ac87f77087d91ecf6f490f8b0c0021cf487f368ba73c88d"
   },
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
@@ -506,7 +506,7 @@
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "b3dc90ca3b277a3215a503bb0be0ffafc3c31d063455da0ecf563397a50c5378",
-      "schemaSha256": "e0eba27bb8ebddb47bd12ae348922825435991eee1f440aafc12e22e18a7b3db"
+      "schemaSha256": "d3f30e19948531bb0ce3d0f60fcdaf5ae83908734f124e484695e66f74952dbc"
     },
     {
       "id": "cefalexin",
@@ -515,7 +515,7 @@
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "2cd1b02c20e0cf0b81f6f2424eec73025fd00632bd6bcd729519cd9752a77b4a",
-      "schemaSha256": "e0eba27bb8ebddb47bd12ae348922825435991eee1f440aafc12e22e18a7b3db"
+      "schemaSha256": "d3f30e19948531bb0ce3d0f60fcdaf5ae83908734f124e484695e66f74952dbc"
     },
     {
       "id": "co-codamol",
@@ -524,7 +524,7 @@
       "file": "medications/co-codamol.json",
       "schema": "schema/medication-schema.json",
       "sha256": "f3039f0da84bdabdc27b4c8af44a96724d0710c75fb5186dd930bf6c8411a172",
-      "schemaSha256": "e0eba27bb8ebddb47bd12ae348922825435991eee1f440aafc12e22e18a7b3db"
+      "schemaSha256": "d3f30e19948531bb0ce3d0f60fcdaf5ae83908734f124e484695e66f74952dbc"
     },
     {
       "id": "nitrofurantoin",
@@ -533,7 +533,7 @@
       "file": "medications/nitrofurantoin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "e7c4051875d99864b40a60d6b786a3121ebbf1402051c13d046e9a575bc32acb",
-      "schemaSha256": "e0eba27bb8ebddb47bd12ae348922825435991eee1f440aafc12e22e18a7b3db"
+      "schemaSha256": "d3f30e19948531bb0ce3d0f60fcdaf5ae83908734f124e484695e66f74952dbc"
     },
     {
       "id": "trimethoprim",
@@ -542,7 +542,7 @@
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
       "sha256": "c19d71da51e14e68a2b1594a3d38896612543f4f3f955254acbd91b768471132",
-      "schemaSha256": "e0eba27bb8ebddb47bd12ae348922825435991eee1f440aafc12e22e18a7b3db"
+      "schemaSha256": "d3f30e19948531bb0ce3d0f60fcdaf5ae83908734f124e484695e66f74952dbc"
     }
   ],
   "prescribing": [
