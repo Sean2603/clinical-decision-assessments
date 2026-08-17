@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-15",
+  "lastChecked": "2026-08-17",
   "references": [
     {
       "id": "NICE-NG59",
@@ -669,6 +669,26 @@
       "reviewedBy": "Sean McGrory",
       "reviewerRole": "tAPUC",
       "nextReviewDue": "2027-08-15",
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": []
+    },
+    {
+      "id": "NICE-CKS-SHINGLES",
+      "organisation": "NICE Clinical Knowledge Summaries",
+      "shortOrganisation": "NICE-CKS",
+      "title": "Shingles",
+      "referenceNumber": "Shingles",
+      "type": "guideline",
+      "url": "https://cks.nice.org.uk/topics/shingles/",
+      "published": "2026-08-17",
+      "lastUpdated": "2026-02-01",
+      "accessed": "2026-08-17",
+      "lastReviewed": "2026-08-17",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-17",
       "supersededBy": null,
       "notes": null,
       "relevantTopics": []

@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.40",
-  "updatedAt": "2026-08-15T16:03:46Z",
+  "contentVersion": "1.2.41",
+  "updatedAt": "2026-08-17T18:44:16Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "877a8595b0ddad233ac87f77087d91ecf6f490f8b0c0021cf487f368ba73c88d"
+    "sha256": "cc79f17a3e904fcc6ef715031586c1d2c7c05677d37cd018f2eba90ac1034f32"
   },
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
@@ -607,6 +607,15 @@
       "file": "prescribing/lower-uti-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "4ad71daa78c50f8d06ad054972fc7b8e26dd3d1896235316fdc64758b62f4fe6",
+      "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
+    },
+    {
+      "id": "otitis-media-acute",
+      "title": "Otitis Media (Acute)",
+      "version": "0.2.0",
+      "file": "prescribing/otitis-media-acute.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "10996ccb539ab2511cd0131d170633f2ae9d071a885fc4450407719d98f8a9af",
       "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
