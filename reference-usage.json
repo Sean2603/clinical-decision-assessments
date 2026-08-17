@@ -87,6 +87,10 @@
       ]
     },
     {
+      "referenceId": "NICE-CKS-SHINGLES",
+      "usedBy": []
+    },
+    {
       "referenceId": "NICE-NG106",
       "usedBy": [
         {
@@ -423,7 +427,13 @@
     },
     {
       "referenceId": "NICE-NG91",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "otitis-media-acute",
+          "title": "Otitis Media (Acute)"
+        }
+      ]
     }
   ]
 }
