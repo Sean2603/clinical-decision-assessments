@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.42",
-  "updatedAt": "2026-08-18T09:26:55Z",
+  "contentVersion": "1.2.43",
+  "updatedAt": "2026-08-18T13:14:57Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
     "file": "references/references.json",
-    "sha256": "be377ad9e965481248b6a8c47f69428eb3058ed5c58ed932da5af89d9f81b556"
+    "sha256": "0120ca0c652606b331b30fb3603d2906836721393c836752c81c6d3a83033625"
   },
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
@@ -32,10 +32,10 @@
     {
       "id": "acute-confusion-and-delirium",
       "title": "Acute Confusion and Delirium",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "d4e68db5a3bf428ca77223fade0028969024a8995c68fec7fb0aee281f79cd27",
+      "sha256": "c2b138bd6e8335d86cbc4783c6d0188810995a3541832c2420cbe159c526737f",
       "schemaSha256": "a084cdf05d07ada459aa82b0c5cc64f68fed3935ec13666a7860d706d03b4729",
       "categoryIds": [
         "frailty"
@@ -56,10 +56,10 @@
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "135af8a0d9c2429a4598aef24ba0450d1e88b7cc0f6232c43eddbd61feb627f4",
+      "sha256": "de5ae77bb8aacff93bce2183c93ecfe9edfdccc96ffff88b148a5b13d990228a",
       "schemaSha256": "a084cdf05d07ada459aa82b0c5cc64f68fed3935ec13666a7860d706d03b4729",
       "categoryIds": [
         "uncategorised"
@@ -140,10 +140,10 @@
     {
       "id": "red-leg-assessment",
       "title": "Red or Swollen Leg Assessment",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "f5445f01c2b6afdb3afee9f326a5e31dbafcf8d926da8cda9e8f34f24b7776ab",
+      "sha256": "bbffb5f0e243141df7c310e05cc287a6cb4d5dda83e7ffd8b79384f77159da2f",
       "schemaSha256": "a084cdf05d07ada459aa82b0c5cc64f68fed3935ec13666a7860d706d03b4729",
       "categoryIds": [
         "uncategorised"

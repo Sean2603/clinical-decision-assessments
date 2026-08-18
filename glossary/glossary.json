@@ -1,0 +1,50 @@
+{
+  "id": "glossary",
+  "title": "Shared glossary",
+  "version": "0.2.0",
+  "entries": [
+    {
+      "id": "immunocompromised",
+      "term": "immunocompromised",
+      "aliases": [
+        "Immunocompromised, Immunodeficient, Reduced/impaired immune function, Low immunity, Weakened immune system"
+      ],
+      "plainDefinition": "",
+      "clinicalDefinition": "a state of reduced immune system function, either from disease (e.g., HIV, cancer, primary immunodeficiency) or from treatment (e.g., chemotherapy, corticosteroids, transplant immunosuppressants, biologics), leaving the patient less able to fight infection.",
+      "examples": [
+        "- Blunted signs – may have serious infection/sepsis with minimal fever, low WCC, or vague symptoms rather than classic red flags\n- Low threshold for concern – \"soft\" symptoms (fatigue, mild confusion, feeling generally unwell) can indicate significant sepsis\n- Atypical/opportunistic infections – consider organisms not usually seen in immunocompetent patients\n- Rapid deterioration risk – lower reserve to compensate, so escalate/treat early rather than \"wait and see\"\n- Medication history – ask specifically about steroids, chemo, biologics, transplant drugs, and recent doses/timing"
+      ],
+      "relatedTerms": [],
+      "referenceIds": []
+    },
+    {
+      "id": "asplenic",
+      "term": "asplenic",
+      "aliases": [],
+      "plainDefinition": "",
+      "clinicalDefinition": "Without a spleen",
+      "examples": [],
+      "relatedTerms": [],
+      "referenceIds": []
+    },
+    {
+      "id": "prosthetic-valve",
+      "term": "prosthetic valve",
+      "aliases": [],
+      "plainDefinition": "",
+      "clinicalDefinition": "An artificial device surgically implanted to replace a damaged or diseased heart valve (commonly aortic or mitral), restoring normal one-way blood flow through the heart.",
+      "examples": [],
+      "relatedTerms": [],
+      "referenceIds": []
+    }
+  ],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-18",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-18",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  },
+  "status": "active"
+}
