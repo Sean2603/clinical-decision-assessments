@@ -1,8 +1,10 @@
 {
   "id": "dental-abscess-urgent-treatment",
   "title": "Dental Abscess requiring urgent treatment",
-  "aliases": ["dental abscess"],
-  "version": "1.0.0",
+  "aliases": [
+    "dental abscess"
+  ],
+  "version": "0.1.0",
   "status": "active",
   "system": "Dental",
   "category": "Dental infections in general practice",
@@ -18,11 +20,53 @@
   ],
   "cautions": [],
   "regimens": [
-    {"rank":1,"label":"Adult 1st line","medicationId":null,"displayName":"Phenoxymethylpenicillin tablets","dose":"500mg to 1000mg","route":null,"frequency":"four times a day","duration":"5 days (review after 3 days)","restrictions":[],"notes":[]},
-    {"rank":1,"label":"Adult 1st line","medicationId":"amoxicillin","displayName":"Amoxicillin capsules","dose":"500mg to 1000mg","route":null,"frequency":"three times a day","duration":"5 days (review after 3 days)","restrictions":[],"notes":[]},
-    {"rank":1,"label":"Adult 1st line Penicillin Allergy","medicationId":null,"displayName":"Metronidazole tablets","dose":"400mg","route":null,"frequency":"three times a day","duration":"5 days (review after 3 days)","restrictions":[],"notes":[]}
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "medicationId": null,
+      "displayName": "Phenoxymethylpenicillin tablets",
+      "dose": "500mg to 1000mg",
+      "route": null,
+      "frequency": "four times a day",
+      "duration": "5 days (review after 3 days)",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "medicationId": "amoxicillin",
+      "displayName": "Amoxicillin capsules",
+      "dose": "500mg to 1000mg",
+      "route": null,
+      "frequency": "three times a day",
+      "duration": "5 days (review after 3 days)",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "Adult 1st line Penicillin Allergy",
+      "medicationId": null,
+      "displayName": "Metronidazole tablets",
+      "dose": "400mg",
+      "route": null,
+      "frequency": "three times a day",
+      "duration": "5 days (review after 3 days)",
+      "restrictions": [],
+      "notes": []
+    }
   ],
   "specialConsiderations": [],
   "references": [],
-  "clinicalValidation": {"validated":false,"reviewedBy":null,"reviewedOn":null,"reviewerRole":null,"nextReviewDue":null,"reviewNotes":"Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."}
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "attachments": [],
+  "niceVisualSummary": null
 }

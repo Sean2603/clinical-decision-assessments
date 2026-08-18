@@ -6,7 +6,7 @@
     "dog bite",
     "cat bite"
   ],
-  "version": "1.1.0",
+  "version": "0.1.0",
   "status": "active",
   "system": "Skin & Soft Tissue",
   "category": "Bites",
@@ -101,12 +101,12 @@
     "NICE-BITES-HUMAN-ANIMAL"
   ],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-14",
-    "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-14",
-    "reviewNotes": "Nice summary"
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
   },
   "attachments": [
     {

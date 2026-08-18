@@ -1,8 +1,11 @@
 {
   "id": "lower-uti-men-16-and-over",
   "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)",
-  "aliases": ["UTI men", "lower UTI men"],
-  "version": "1.0.0",
+  "aliases": [
+    "UTI men",
+    "lower UTI men"
+  ],
+  "version": "0.1.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
@@ -23,11 +26,63 @@
   ],
   "cautions": [],
   "regimens": [
-    {"rank":1,"label":"1st choice empiric treatment (whilst waiting sensitivities as per MSU)","medicationId":"trimethoprim","displayName":"Trimethoprim tablets","dose":"200mg BD","route":null,"frequency":null,"duration":"7 days","restrictions":[],"notes":["A lower risk of resistance to trimethoprim may be more likely if not used in the past 3 months, previous urine culture suggests susceptibility (but this was not used), and in younger people."]},
-    {"rank":1,"label":"1st choice empiric treatment (whilst waiting sensitivities as per MSU)","medicationId":"nitrofurantoin","displayName":"Nitrofurantoin capsules","dose":"100mg M/R BD","route":null,"frequency":null,"duration":"7 days","restrictions":["Normally avoid if eGFR < 45 ml/min.","If eGFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative; otherwise it is contraindicated in this group."],"notes":[]},
-    {"rank":2,"label":"2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable","medicationId":null,"displayName":"Pivmecillinam tablets","dose":"400mg stat then 200mg TDS","route":null,"frequency":null,"duration":"7 days","restrictions":["(contraindicated in penicillin hypersensitivity)"],"notes":["A higher risk of resistance may be more likely with recent use, older people, people in residential facilities, recent foreign travel or recent hospitalisation.","If resistance risk is higher (e.g. recent use, older patients, patients in residential facilities, recent foreign travel or recent hospitalisation or chronic/recurrent symptomatic bacteriuria) use 400mg TID for full 7 day course, if previously sensitive."]}
+    {
+      "rank": 1,
+      "label": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)",
+      "medicationId": "trimethoprim",
+      "displayName": "Trimethoprim tablets",
+      "dose": "200mg BD",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [],
+      "notes": [
+        "A lower risk of resistance to trimethoprim may be more likely if not used in the past 3 months, previous urine culture suggests susceptibility (but this was not used), and in younger people."
+      ]
+    },
+    {
+      "rank": 1,
+      "label": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)",
+      "medicationId": "nitrofurantoin",
+      "displayName": "Nitrofurantoin capsules",
+      "dose": "100mg M/R BD",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [
+        "Normally avoid if eGFR < 45 ml/min.",
+        "If eGFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative; otherwise it is contraindicated in this group."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable",
+      "medicationId": null,
+      "displayName": "Pivmecillinam tablets",
+      "dose": "400mg stat then 200mg TDS",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [
+        "(contraindicated in penicillin hypersensitivity)"
+      ],
+      "notes": [
+        "A higher risk of resistance may be more likely with recent use, older people, people in residential facilities, recent foreign travel or recent hospitalisation.",
+        "If resistance risk is higher (e.g. recent use, older patients, patients in residential facilities, recent foreign travel or recent hospitalisation or chronic/recurrent symptomatic bacteriuria) use 400mg TID for full 7 day course, if previously sensitive."
+      ]
+    }
   ],
   "specialConsiderations": [],
   "references": [],
-  "clinicalValidation": {"validated":false,"reviewedBy":null,"reviewedOn":null,"reviewerRole":null,"nextReviewDue":null,"reviewNotes":"Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."}
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "attachments": [],
+  "niceVisualSummary": null
 }

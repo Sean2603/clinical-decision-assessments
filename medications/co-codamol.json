@@ -1,7 +1,7 @@
 {
   "id": "co-codamol",
   "title": "Co-codamol",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "status": "active",
   "formularyGroup": "Analgesia",
   "medicineType": "Combination analgesic",
@@ -27,15 +27,17 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-11",
-    "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-11",
-    "reviewNotes": "Review completed. No substantive clinical change identified."
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
   },
   "aliases": [],
   "updatedOn": null,
   "changeSummary": "Legacy medication metadata normalised for the current schema.",
-  "effectiveFrom": null
+  "effectiveFrom": null,
+  "isPenicillin": false,
+  "attachments": []
 }

@@ -1,9 +1,8 @@
 {
   "id": "back-pain",
   "title": "Back Pain Assessment",
-  "version": "1.0.3",
+  "version": "0.1.0",
   "summary": "A clinician-facing prompt for assessing back pain, recognising serious pathology, performing focused examination and interpreting common examination patterns.",
-  "lastReviewed": "2026-08-08",
   "sections": [
     {
       "id": "assessment-priorities",
@@ -836,12 +835,13 @@
     "NICE-NG234"
   ],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-08",
-    "reviewerRole": "tAPUC",
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
     "reviewNotes": null,
-    "nextReviewDue": "2028-08-08"
+    "nextReviewDue": null
   },
-  "status": "active"
+  "status": "active",
+  "attachments": []
 }

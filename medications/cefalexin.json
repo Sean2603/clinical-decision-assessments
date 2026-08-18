@@ -2,7 +2,7 @@
   "id": "cefalexin",
   "title": "Cefalexin",
   "aliases": [],
-  "version": "0.1.1",
+  "version": "0.1.0",
   "status": "active",
   "formularyGroup": "Antimicrobials",
   "medicineType": "Antibacterial",
@@ -35,5 +35,7 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": null
-  }
+  },
+  "isPenicillin": false,
+  "attachments": []
 }

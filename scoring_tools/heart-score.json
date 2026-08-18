@@ -2,7 +2,7 @@
   "id": "heart-score",
   "title": "HEART score",
   "subtitle": "ED ACS risk score requiring troponin",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -192,7 +192,7 @@
     "reviewedOn": null,
     "reviewerRole": null,
     "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
@@ -221,7 +221,7 @@
         "risk-factors": "no-recognised-risk-factors",
         "troponin": "at-or-below-normal-limit"
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "low"
     },
     {
@@ -234,7 +234,7 @@
         "risk-factors": "at-least-3-risk-factors-or-known-atherosclerotic-disease",
         "troponin": "more-than-3-times-normal-limit"
       },
-      "expectedScore": 4.0,
+      "expectedScore": 4,
       "expectedResultId": "intermediate"
     },
     {
@@ -247,7 +247,7 @@
         "risk-factors": "at-least-3-risk-factors-or-known-atherosclerotic-disease",
         "troponin": "more-than-3-times-normal-limit"
       },
-      "expectedScore": 7.0,
+      "expectedScore": 7,
       "expectedResultId": "high"
     },
     {
@@ -260,8 +260,9 @@
         "risk-factors": "at-least-3-risk-factors-or-known-atherosclerotic-disease",
         "troponin": "more-than-3-times-normal-limit"
       },
-      "expectedScore": 10.0,
+      "expectedScore": 10,
       "expectedResultId": "high"
     }
-  ]
+  ],
+  "attachments": []
 }

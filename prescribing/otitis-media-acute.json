@@ -2,7 +2,7 @@
   "id": "otitis-media-acute",
   "title": "Otitis Media (Acute)",
   "aliases": [],
-  "version": "0.2.0",
+  "version": "0.1.0",
   "status": "active",
   "system": "Upper Respiratory Tract Infections",
   "category": "Ears",
@@ -69,11 +69,11 @@
     }
   ],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-16",
-    "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-16",
-    "reviewNotes": "Audit"
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
   }
 }

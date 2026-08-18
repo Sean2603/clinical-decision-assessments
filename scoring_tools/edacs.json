@@ -2,7 +2,7 @@
   "id": "edacs",
   "title": "EDACS",
   "subtitle": "ED accelerated chest-pain pathway",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "pathway-reference",
@@ -30,7 +30,7 @@
     "reviewedOn": null,
     "reviewerRole": null,
     "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
@@ -48,5 +48,6 @@
     "groups": [],
     "decisionRules": []
   },
-  "parityCases": []
+  "parityCases": [],
+  "attachments": []
 }

@@ -2,7 +2,7 @@
   "id": "two-level-dvt-wells",
   "title": "Two-level DVT Wells",
   "subtitle": "DVT likelihood and investigation pathway",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -147,12 +147,12 @@
     "NICE-NG158"
   ],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-08",
-    "reviewerRole": "tAPUC",
-    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
-    "nextReviewDue": "2028-08-08"
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
   },
   "migration": {
     "state": "shadow",
@@ -225,5 +225,6 @@
       "expectedScore": 9,
       "expectedResultId": "dvt-likely"
     }
-  ]
+  ],
+  "attachments": []
 }

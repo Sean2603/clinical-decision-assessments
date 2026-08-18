@@ -2,7 +2,7 @@
   "id": "abg-and-vbg",
   "title": "ABG and VBG",
   "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
-  "version": "1.1.0",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Acid–base status, ventilation, oxygenation and lactate ",
@@ -295,12 +295,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-14",
-    "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-14",
-    "reviewNotes": "Updated"
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",

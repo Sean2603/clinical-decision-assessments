@@ -2,7 +2,7 @@
   "id": "full-blood-count",
   "title": "Full blood count",
   "subtitle": "Haemoglobin, indices, white cells, differential and platelets",
-  "version": "1.0.2",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Haemoglobin, indices, white cells, differential and platelets",
@@ -166,12 +166,12 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-08",
-    "reviewerRole": "tAPUC",
-    "reviewNotes": "Minor editorial change clinically reviewed and validated. No change to clinical meaning, thresholds, calculations, management, disposition or safety-netting.",
-    "nextReviewDue": "2028-08-08"
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
   },
   "migration": {
     "state": "shadow",
@@ -179,5 +179,6 @@
     "currentScreen": "Full blood count",
     "parityStatus": "pending",
     "migratedOn": "2026-08-01"
-  }
+  },
+  "attachments": []
 }

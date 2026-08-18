@@ -56,5 +56,7 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": null
-  }
+  },
+  "isPenicillin": false,
+  "attachments": []
 }

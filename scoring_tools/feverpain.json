@@ -2,7 +2,7 @@
   "id": "feverpain",
   "title": "FeverPAIN",
   "subtitle": "Acute sore-throat antibiotic decision support",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -113,7 +113,7 @@
     "reviewedOn": null,
     "reviewerRole": null,
     "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
@@ -142,7 +142,7 @@
         "inflamed-tonsils": false,
         "no-cough-coryza": false
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "low"
     },
     {
@@ -155,7 +155,7 @@
         "inflamed-tonsils": true,
         "no-cough-coryza": true
       },
-      "expectedScore": 2.0,
+      "expectedScore": 2,
       "expectedResultId": "intermediate"
     },
     {
@@ -168,7 +168,7 @@
         "inflamed-tonsils": true,
         "no-cough-coryza": true
       },
-      "expectedScore": 4.0,
+      "expectedScore": 4,
       "expectedResultId": "high"
     },
     {
@@ -181,8 +181,9 @@
         "inflamed-tonsils": true,
         "no-cough-coryza": true
       },
-      "expectedScore": 5.0,
+      "expectedScore": 5,
       "expectedResultId": "high"
     }
-  ]
+  ],
+  "attachments": []
 }

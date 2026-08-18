@@ -2,7 +2,7 @@
   "id": "perc-rule",
   "title": "PERC rule",
   "subtitle": "PE rule-out in selected very-low-risk adults",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -164,11 +164,11 @@
     "NICE-NG158"
   ],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-08",
-    "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-08",
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
     "reviewNotes": null
   },
   "migration": {
@@ -254,5 +254,6 @@
       "expectedScore": 1,
       "expectedResultId": "positive"
     }
-  ]
+  ],
+  "attachments": []
 }

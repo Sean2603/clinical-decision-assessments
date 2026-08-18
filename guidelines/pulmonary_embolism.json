@@ -86,9 +86,10 @@
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
-    "reviewedOn": "2026-07-22",
+    "reviewedOn": null,
     "reviewerRole": null,
-    "nextReviewDue": "2027-07-22",
+    "nextReviewDue": null,
     "reviewNotes": null
-  }
+  },
+  "attachments": []
 }

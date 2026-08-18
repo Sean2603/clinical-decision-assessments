@@ -1,7 +1,7 @@
 {
   "id": "lower-uti-non-pregnant-women-16-and-over",
   "title": "Lower UTI Non-pregnant women aged 16 years and over",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "status": "active",
   "category": "Urinary tract infection",
   "summary": "NICE Visual Summary available here",
@@ -83,7 +83,7 @@
     "reviewedOn": null,
     "reviewerRole": null,
     "nextReviewDue": null,
-    "reviewNotes": "Transcribed verbatim from the supplied prescribing pathway screenshot; clinical validation required before publication."
+    "reviewNotes": null
   },
   "aliases": [
     "UTI",
@@ -92,5 +92,7 @@
   "system": "Genitourinary",
   "updatedOn": null,
   "changeSummary": "Legacy prescribing pathway metadata normalised for the current schema.",
-  "effectiveFrom": null
+  "effectiveFrom": null,
+  "attachments": [],
+  "niceVisualSummary": null
 }

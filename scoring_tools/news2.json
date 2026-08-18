@@ -2,7 +2,7 @@
   "id": "news2",
   "title": "NEWS2",
   "subtitle": "Select observation ranges; component scores calculated automatically",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -316,7 +316,7 @@
     "reviewedOn": null,
     "reviewerRole": null,
     "nextReviewDue": null,
-    "reviewNotes": "Formal clinical verification has not yet been recorded. Population, exclusions, thresholds, calculations, wording and implementation tests must be checked against the cited source."
+    "reviewNotes": null
   },
   "migration": {
     "state": "shadow",
@@ -348,7 +348,7 @@
         "pulse": "51-90",
         "consciousness": "alert-and-no-new-confusion"
       },
-      "expectedScore": 0.0,
+      "expectedScore": 0,
       "expectedResultId": "low"
     },
     {
@@ -364,7 +364,7 @@
         "pulse": "51-90",
         "consciousness": "alert-and-no-new-confusion"
       },
-      "expectedScore": 5.0,
+      "expectedScore": 5,
       "expectedResultId": "medium"
     },
     {
@@ -380,8 +380,9 @@
         "pulse": "51-90",
         "consciousness": "alert-and-no-new-confusion"
       },
-      "expectedScore": 7.0,
+      "expectedScore": 7,
       "expectedResultId": "high"
     }
-  ]
+  ],
+  "attachments": []
 }

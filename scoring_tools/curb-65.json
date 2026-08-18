@@ -2,7 +2,7 @@
   "id": "curb-65",
   "title": "CURB-65",
   "subtitle": "Pneumonia severity with blood urea",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -107,11 +107,11 @@
     "NICE-NG250"
   ],
   "clinicalValidation": {
-    "validated": true,
-    "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-08",
-    "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-08",
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
     "reviewNotes": null
   },
   "migration": {
@@ -183,5 +183,6 @@
       "expectedScore": 5,
       "expectedResultId": "high"
     }
-  ]
+  ],
+  "attachments": []
 }
