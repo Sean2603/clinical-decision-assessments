@@ -276,12 +276,12 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "reviewNotes": null,
-    "nextReviewDue": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-18",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "nextReviewDue": "2028-08-18"
   },
   "categoryIds": [
     "frailty"
