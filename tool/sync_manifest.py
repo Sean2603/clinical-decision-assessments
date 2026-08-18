@@ -17,21 +17,25 @@ COLLECTIONS = {
         "directory": ROOT / "assessments",
         "schema": ROOT / "schema" / "assessment-schema.json",
         "versionField": "version",
+        "allowEmpty": True,
     },
     "guidelines": {
         "directory": ROOT / "guidelines",
         "schema": ROOT / "schema" / "guideline-schema.json",
         "versionField": "contentVersion",
+        "allowEmpty": True,
     },
     "scoringTools": {
         "directory": ROOT / "scoring_tools",
         "schema": ROOT / "schema" / "scoring-tool-schema.json",
         "versionField": "version",
+        "allowEmpty": True,
     },
     "bloodPanels": {
         "directory": ROOT / "blood_panels",
         "schema": ROOT / "schema" / "blood-panel-schema.json",
         "versionField": "version",
+        "allowEmpty": True,
     },
     "medications": {
         "directory": ROOT / "medications",
