@@ -1,150 +1,306 @@
-## Frailty package layout
-
-All Frailty assessments use the same section order as the established assessment guides:
-
-1. Assessment priorities
-2. History prompts
-3. Acute deterioration and red-flag screen
-4. Focused examination
-5. Common clinical patterns
-6. Management and disposition
-7. Focused safety-netting
-
-This keeps the Frailty subsection visually and structurally consistent with Back Pain and other mature assessment content.
-
 # Clinical Decision Assessments
 
-Version-controlled clinical assessment guidance for the Clinical Decision Support app.
+Governed clinical-content repository for the **Clinical Decision Support** platform.
 
-## Structure
+This repository is the source-controlled publication target for clinical content managed through the **CDM Content Manager**. It contains the structured JSON delivered to the clinical application, the schemas used to validate that content, the shared reference registry, generated publication metadata, and repository-level validation tooling.
 
-- `assessments/` — individual assessment guides
-- `references/` — shared guideline references
-- `scoring_tools/` — remote scoring-tool shadow definitions
-- `blood_panels/` — remote blood-panel shadow definitions
-- `medications/ and prescribing/` — APUC prescribing medicine monographs
-- `schema/` — JSON schema
-- `manifest.json` — published pack metadata and checksums
-- `tool/build_manifest.py` — rebuilds checksums and publication date
-- `.github/workflows/` — validation and manifest publication
+> **Clinical content should normally be authored, reviewed, validated and prepared for publication through CDM.** Direct repository editing is reserved for repository maintenance, tooling, schema changes, recovery, or exceptional administrative work.
 
-## Editing workflow
+## Repository role
 
-1. Create a branch.
-2. Edit the relevant assessment JSON.
-3. Increase the assessment version and pack `contentVersion`.
-4. Open a pull request.
-5. Confirm the validation workflow passes.
-6. Complete clinical review.
-7. Merge to `main`.
-8. The manifest workflow recalculates checksums.
+The repository has two distinct responsibilities:
 
-The app checks the raw GitHub manifest in the background no more than once every
-24 hours. Manual checks are available in Settings.
+1. **Clinical source of truth** — version-controlled clinical content and references.
+2. **Publication boundary** — the Git state used to determine whether a governed item is actually published.
 
+CDM owns the governance workflow. GitHub provides source control, review history, branch protection and the final repository-confirmed publication state.
+
+An item is not considered **Published** merely because CDM has created an internal publication snapshot. It becomes Published when the exact governed version is present on the protected `main` branch.
+
+## Branch model
+
+### `main`
+
+`main` is the authoritative governed publication branch.
+
+Normal clinical editing should not occur directly on `main`.
+
+### `content-review/clinical-review`
+
+CDM uses a reusable review branch:
+
+```text
+content-review/clinical-review
+```
+
+Typical publication flow:
+
+```text
+CDM governed content
+        ↓
+Ready to publish
+        ↓
+Prepare review branch
+        ↓
+content-review/clinical-review
+        ↓
+Repository validation
+        ↓
+Pull request / controlled merge
+        ↓
+main
+        ↓
+Repository-confirmed Published
+```
+
+## CDM governance workflow
+
+The active workflow is:
+
+```text
+Draft
+  ↓
+Awaiting review
+  ↓
+Awaiting clinical validation
+  ↓
+Ready to publish
+  ↓
+Repository publication preparation
+  ↓
+Repository-confirmed Published
+```
+
+### Draft
+
+Content can be created or revised by an authorised author/editor.
+
+### Awaiting review
+
+An independent reviewer assesses the content and either progresses it or requests field-specific changes. Requested changes must be actioned before resubmission.
+
+### Awaiting clinical validation
+
+Clinical validation confirms that the content is clinically suitable for publication. The current validation state is stored with each item using embedded `clinicalValidation` metadata. The former standalone Clinical Reliability registry is no longer part of the active governance model.
+
+### Ready to publish
+
+The item has completed internal governance but is not yet considered live.
+
+### Published
+
+Published means the exact governed content version is present on `main`. Internal CDM snapshots, local commits, review branches or open pull requests are intermediate states only.
+
+## Separation of duties
+
+The intended governance model separates:
+
+- **Author** — creates the original content;
+- **Revision author** — intentionally starts a substantive new revision cycle;
+- **Editor** — changes content within an active cycle;
+- **Reviewer** — independently reviews content;
+- **Clinical validator** — provides clinical validation;
+- **Publisher/governance authority** — performs repository publication actions.
+
+The original author remains part of the permanent content history. Professional role is captured separately from application permissions so historical actions retain the role held at the time.
+
+## Content versioning
+
+Individual governed content uses semantic versions:
+
+```text
+major.minor.patch
+```
+
+Patch increments represent iterative review/edit rounds within a cycle, minor increments represent normal post-publication revision cycles, and major increments are used for major rewrites or explicitly promoted final-major publications.
+
+Examples:
+
+```text
+0.1.0 → 0.1.1 → 0.1.2
+0.1.x → 0.2.0
+0.4.13 → 1.0.0
+```
+
+## Repository structure
+
+```text
+assessments/        Clinical assessment guides
+attachments/        Governed clinical attachments
+blood_panels/       Blood-test interpretation content
+categories/         Assessment category definitions
+glossary/           Shared governed clinical glossary
+guidelines/         Clinical guideline content
+medications/        Medication monographs
+prescribing/        Condition-based prescribing pathways
+references/         Shared reference registry
+scoring_tools/      Structured clinical scoring tools
+schema/             JSON schemas
+tool/               Repository validation/generation tools
+manifest.json       Generated content-pack manifest
+reference-usage.json
+                    Generated reverse-reference index
+```
+
+Managed content collections may legitimately contain zero items.
 
 ## Shared references
 
-`references/references.json` is the authoritative registry for assessments, scoring tools, blood panels and prescribing medicines. `clinical_reliability/clinical-reliability.json` stores clinical review metadata and stable `referenceIds`; it does not duplicate source records.
+The authoritative reference registry is:
 
-
-## Clinical guidelines
-
-Guidelines are stored in `guidelines/*.json`, validated against
-`schema/guideline-schema.json`, and published through the same `manifest.json`
-as assessments, references and clinical-reliability metadata.
-
-Run before committing:
-
-```powershell
-python tool/validate_content.py
-python tool/validate_clinical_reliability.py
-python tool/validate_references.py
-python tool/generate_reference_usage.py
-python tool/sync_manifest.py
+```text
+references/references.json
 ```
 
+Clinical content references sources using stable reference IDs. The generated reverse-reference index is:
 
-## Prescribing content
-
-`medications/ and prescribing/*.json` contains versioned APUC medicine monographs authored and
-governed through CDM. Each medicine stores indication-specific population, dose
-and duration alongside contraindications, cautions, important interactions,
-renal/hepatic considerations, pregnancy/breastfeeding information, practical
-points, shared reference IDs and embedded clinical-validation metadata.
-
-The `prescribing` manifest collection may remain empty while the capability is
-installed. `minimumAppVersion` remains at its existing requirement until at
-least one prescribing medicine is published; once prescribing content exists,
-the generated manifest requires app `0.33.0` or later.
-
-Prescribing lifecycle values are `active`, `withdrawn` and `superseded`. CDM
-workflow states such as Draft or Submitted for review are governance metadata
-and must never be written into clinical JSON. Emergency disable remains a
-separate manifest safety override.
-
-## Remote scoring tools and blood panels
-
-`scoring_tools/*.json` and `blood_panels/*.json` now contain shadow copies of
-the clinical definitions currently implemented in Flutter. The app downloads,
-checksums, parses and caches these files as part of the same atomic content
-pack, but version `0.18.0` continues to render the existing Dart screens.
-
-Each migrated definition includes a `migration` block:
-
-```json
-{
-  "state": "shadow",
-  "sourceFile": "lib/screens/phase_one_tools.dart",
-  "currentScreen": "Crb65Screen",
-  "parityStatus": "pending",
-  "migratedOn": "2026-08-01"
-}
+```text
+reference-usage.json
 ```
 
-Do not mark `parityStatus` as `matched` until the remote definition has been
-compared with the current Dart implementation and its tests.
+Reference verification and publication are separate governance concepts. A newly verified reference is not fully publication-ready until the governed registry has itself completed publication.
 
-The shared reference registry and clinical reliability file remain
-authoritative. Every scoring-tool and blood-panel definition must have a
-matching reliability item with the same stable ID and display title.
+## Glossary
 
-### Review-due references
+The repository contains a governed shared clinical glossary under `glossary/`. Terms can contain canonical wording, aliases, definitions, examples, related terms and reference IDs.
 
-A cited reference with `reviewStatus: review-due` no longer blocks publication. During publishing, `tool/mark_review_due_content.py` marks each affected assessment, scoring tool, blood panel, or prescribing medicine with `clinicalValidation.validated: false`, clears previous reviewer metadata, records the affected reference IDs in `reviewNotes`, and bumps the item patch version. Superseded, withdrawn, unavailable, and unverified cited references still block publication.
+## Attachments
 
+Governed files are stored under `attachments/`. Supported content can reference attachments using structured metadata including repository path and SHA-256 hash. Clinically meaningful replacements should use controlled replacement governance and return the parent content to the required review/validation state.
 
-## Assessment subsections
+## Manifest
 
-Assessment guides can declare one or more `categoryIds`. The generated manifest publishes ordered category metadata, and assessments without category metadata are placed in `uncategorised`. The initial configured subsection is `Frailty`.
+`manifest.json` describes the publishable content pack and includes schema version, overall content-pack version, minimum supported app version, content entries, paths, schemas, hashes and safety controls.
 
-## Frailty clinical package
+### `schemaVersion`
 
-The `frailty` assessment category is a coordinated package rather than a single guide. It currently contains:
+Describes the manifest structure itself.
 
-- Frailty Assessment (umbrella guide)
-- Falls in Older Adults
-- Acute Confusion and Delirium
-- Comprehensive Geriatric Assessment
-- Polypharmacy and Medicines-Related Harm
+### `contentVersion`
 
-The focused guides share terminology, baseline-versus-current-function prompts, concise safety-netting and linked NICE/BGS references. New package content remains marked as not clinically validated until formal review.
+Describes the overall generated content pack. Individual items retain their own semantic versions.
 
+## Generated artefacts
 
-## Assessment lifecycle / unitless migration
+The main generated artefacts are:
 
-Run `python tool/migrate_content_lifecycle_v2.py` once on `content-review/clinical-review` after applying this release. It preserves unrelated schema fields, adds explicit assessment lifecycle status, converts legacy blood `unit: "unitless"` values to blank-unit + `unitless: true`, removes only assessment emergency revocations that duplicate a normal withdrawn state, and raises the content pack minimum app version to 0.32.0. Then use CDM **Prepare for publication** to regenerate the final manifest and derived artefacts once.
+```text
+manifest.json
+reference-usage.json
+```
 
+These should be produced by controlled tooling rather than maintained manually.
 
-## Medications and prescribing
-Medication monographs are stored in `medications/`. Condition-based prescribing pathways are stored separately in `prescribing/` and may reference medication monographs by stable `medicationId`.
+## Repository tooling
 
-## Medication, prescribing and notice metadata (2026-08-12)
-- Medication monographs now support aliases and update metadata for search and Updates & Notices.
-- Prescribing pathways now declare a clinical system separately from the condition/category and can cross-link regimen medication IDs.
-- Clinical notices are managed in `clinical_notices/clinical-notices.json` and are included in the generated manifest.
-- The APUC 17-medicine starter formulary is present as clinically unvalidated medication content where a validated monograph has not yet been completed.
+Maintained tools:
 
-## Clinical image attachments
+```text
+tool/generate_reference_usage.py
+tool/parity_case_baseline.json
+tool/sync_manifest.py
+tool/validate_content.py
+tool/validate_manifest_safety.py
+tool/validate_references.py
+tool/validate_remote_engines.py
+```
 
-All managed clinical content types can optionally include an `images` array. Images live under the repository `images/` tree and are linked from structured content by versioned repository path and SHA-256 hash. Replacing a published image must use a new versioned path and include replacement governance metadata; the previous image remains in Git/repository history and, where a clinical meaning change is declared, the parent content must return to unvalidated status before publication.
+### Local Python environment
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install jsonschema
+```
+
+The virtual environment does not need to be activated if its Python executable is called directly.
+
+### Local validation sequence
+
+```bash
+.venv/bin/python tool/generate_reference_usage.py
+.venv/bin/python tool/sync_manifest.py --write
+.venv/bin/python tool/validate_references.py
+.venv/bin/python tool/validate_content.py
+.venv/bin/python tool/validate_manifest_safety.py
+.venv/bin/python tool/sync_manifest.py --check
+```
+
+For a review branch where version progression must be checked against the current published baseline:
+
+```bash
+.venv/bin/python tool/validate_content.py --base-ref origin/main
+```
+
+## GitHub Actions
+
+GitHub Actions provides repository-level technical validation in addition to CDM governance. It should validate clinical JSON and references, verify generated artefacts, enforce version progression against `main` for review pull requests, and remain read-only during ordinary validation.
+
+Technical validation does not replace clinical review or clinical validation in CDM.
+
+## Publication workflow in detail
+
+1. **Author/edit in CDM** — content is created or revised and user identity/professional role are recorded.
+2. **Submit for review** — content moves from Draft to Awaiting review.
+3. **Independent review** — reviewer progresses the item or requests structured changes.
+4. **Clinical validation** — authorised validator completes clinical validation.
+5. **Ready to publish** — the governed version becomes repository-publication eligible.
+6. **Prepare repository publication** — CDM writes the exact governed files to `content-review/clinical-review` and regenerates controlled artefacts.
+7. **Validate and commit** — repository validation runs and the prepared changes are committed.
+8. **Repository review / pull request** — the review branch is compared with `main` and GitHub validation must pass.
+9. **Merge to `main`** — controlled changes enter the authoritative publication branch.
+10. **Repository confirmation** — CDM verifies the exact governed version exists on `main`; only then is it Published.
+
+## Permanent deletion
+
+Permanent deletion is a separately audited governance action rather than a normal content edit. It should verify dependencies, remove the governed file, regenerate generated artefacts, validate the repository, create a dedicated deletion commit on the review branch, pass through repository publication and record actor/reason/commit metadata.
+
+Failed deletion transactions should roll back rather than leaving unexplained dirty working-tree state.
+
+## Superseding, withdrawing and emergency safety controls
+
+Published content should normally be withdrawn or superseded through governance rather than physically deleted. Superseding should explicitly identify the governed replacement.
+
+Emergency disable/revocation is separate from routine lifecycle governance and is intended for urgent clinical-safety action. Emergency actions should remain explicit, attributable and auditable.
+
+## Repository integrity and recovery
+
+CDM repository operations should:
+
+- begin from a known branch and clean state;
+- preserve unrelated local changes;
+- treat generated artefacts as CDM-controlled;
+- restore CDM-touched generated artefacts after failed preparation;
+- verify cleanliness after rollback;
+- report exact recovery paths when automatic cleanup fails;
+- never mark content Published until repository state is confirmed.
+
+## Direct Git editing
+
+Direct Git editing should generally be limited to repository tooling, schemas, workflows, documentation, controlled recovery and exceptional administration. Routine clinical content editing should occur through CDM so authorship, review, validation, versioning and audit history remain intact.
+
+## Responsibilities
+
+### CDM Content Manager
+
+CDM is responsible for authentication, permissions, professional-role snapshots, authorship, editing, requested changes, review, clinical validation, versioning, reference/glossary governance, publication readiness, controlled repository preparation, audit history and publication-state reconciliation.
+
+### This repository
+
+The repository is responsible for version-controlled clinical JSON, schemas, references, attachments, deterministic generated metadata, repository validation, Git history, branch comparison and the final repository-confirmed publication state.
+
+### Clinical Decision Support application
+
+The consuming application is responsible for retrieving the published pack, validating expected hashes/schema compatibility, caching/activating content safely, enforcing minimum app versions and respecting applicable safety controls.
+
+## Fresh baseline
+
+The repository has been deliberately rebaselined to establish a clean governance starting point. Historical development versions should not be used to infer current CDM governance state.
+
+From this baseline onward:
+
+```text
+main = authoritative governed publication branch
+```
+
+Normal governed changes should progress through CDM and the controlled review branch before reaching `main`.
