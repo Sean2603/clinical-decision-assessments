@@ -5,16 +5,16 @@
     "pyelonephritis",
     "upper UTI"
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
   "summary": "This guideline sets out an antimicrobial prescribing strategy for acute pyelonephritis (upper urinary tract infection) in children, young people and adults who do not have a catheter. It aims to optimise antibiotic use and reduce antibiotic resistance.\n",
-  "updatedOn": "2026-08-14",
+  "updatedOn": "2026-08-19",
   "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
   "effectiveFrom": null,
   "clinicalNotes": [
-    "- Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis, acute renal failure).\n\n[[red:- If no response within 24 hours or symptoms worsen at any time admit to secondary care.]]\n\n**- Refer to NICE NG111: Pyelonephritis (acute): antimicrobial prescribing**\n\n[[red:**- If admission not needed, send MSU for culture and start empiric antibiotics. When results of urine culture are available review choice of antibiotic and change the antibiotic if necessary according to susceptibility**]]\n"
+    "- Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis, acute renal failure).\n- If no response within 24 hours or symptoms worsen at any time admit to secondary care.\n- Refer to NICE NG111: Pyelonephritis (acute): antimicrobial prescribing\n- If admission not needed, send MSU for culture and start empiric antibiotics. When results of urine culture are available review choice of antibiotic and change the antibiotic if necessary according to susceptibility"
   ],
   "cautions": [],
   "regimens": [
@@ -79,12 +79,12 @@
     "NICE-NG111"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-19",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-19",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [
     {
@@ -108,5 +108,5 @@
       "uploadedBy": "Sean McGrory"
     }
   ],
-  "niceVisualSummary": "{{attachment:pyelonephritis-visual-summary|View NICE Visual Summary}}"
+  "niceVisualSummary": "NICE Guideline::https://www.nice.org.uk/guidance/ng111/\nNICE Visual Summary::{{attachment:pyelonephritis-visual-summary|View NICE Visual Summary}}"
 }
