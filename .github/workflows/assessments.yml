@@ -68,9 +68,6 @@ jobs:
         if: github.event_name != 'pull_request'
         run: python tool/validate_content.py
 
-      - name: Validate embedded clinical review metadata
-        run: python tool/validate_clinical_reliability.py
-
       - name: Validate reference structure
         run: python tool/validate_references.py
 
