@@ -2,13 +2,13 @@
   "id": "otitis-media-acute",
   "title": "Otitis Media (Acute)",
   "aliases": [],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "status": "active",
   "system": "Upper Respiratory Tract Infections",
   "category": "Ears",
-  "summary": "This covers acute otitis media-for management of other indications including chronic suppurative otitis media, otitis media with effusion (glue ear) and recurrent acute otitis media, CKS is a useful reference.\nDo not issue a prescription for an antimicrobial to a patient who is likely to have a self-limiting condition.\nAcute otitis media is a self-limiting infection. It mainly affects children and can be viral or bacterial in origin. Symptoms can last up to 1 week, although most people get better within 3 days without antibiotics regardless of the cause (bacteria or virus).  Advise patients regarding self-care, patient self-care information is available here and patient information leaflet available here.\n\nTreatment options include no antibiotic prescription, a back-up antibiotic prescription or an immediate antibiotic prescription. Refer to NICE visual summary for full details and to aid decision making.\n\nGroups who may be more likely to benefit from antibiotics:\n\n    Children and young people with acute otitis media and otorrhoea\n    Children under 2 years with acute otitis media in both ears\n\nAn immediate antibiotic prescription should be offered if the child or young person is systemically very unwell or has symptoms and signs of a more serious illness or has a high risk of complications. Refer to hospital if severe systemic infection or complications like mastoiditis.",
-  "niceVisualSummary": "Guideline::https://www.nice.org.uk/guidance/ng185\nNice Visual Summary::{{attachment:otitis-media-acute-antimicrobial-prescribing|View NICE Visual Summary}}",
-  "updatedOn": "2026-08-15",
+  "summary": "- This covers acute otitis media-for management of other indications including chronic suppurative otitis media, otitis media with effusion (glue ear) and recurrent acute otitis media, CKS is a useful reference.\n- Do not issue a prescription for an antimicrobial to a patient who is likely to have a self-limiting condition.\n- Acute otitis media is a self-limiting infection. It mainly affects children and can be viral or bacterial in origin. Symptoms can last up to 1 week, although most people get better within 3 days without antibiotics regardless of the cause (bacteria or virus).  Advise patients regarding self-care, patient self-care information is available here and patient information leaflet available here.\n- Treatment options include no antibiotic prescription, a back-up antibiotic prescription or an immediate antibiotic prescription. Refer to NICE visual summary for full details and to aid decision making.\n\n- Groups who may be more likely to benefit from antibiotics:\n\n  -     Children and young people with acute otitis media and otorrhoea\n  -     Children under 2 years with acute otitis media in both ears\n\n- An immediate antibiotic prescription should be offered if the child or young person is systemically very unwell or has symptoms and signs of a more serious illness or has a high risk of complications. Refer to hospital if severe systemic infection or complications like mastoiditis.",
+  "niceVisualSummary": "NICE Guideline::https://www.nice.org.uk/guidance/ng185\nNice Visual Summary::{{attachment:otitis-media-acute-antimicrobial-prescribing|View NICE Visual Summary}}",
+  "updatedOn": "2026-08-19",
   "changeSummary": null,
   "effectiveFrom": null,
   "clinicalNotes": [],
@@ -25,24 +25,11 @@
       "duration": null,
       "restrictions": [],
       "notes": [
-        "Recommend regular doses of paracetamol or ibuprofen for pain, advising maximum, regular doses as appropriate for the child’s weight / age. These products are available to purchase over the counter.\n\nConsider a prescription for eardrops containing an anaesthetic and an analgesic:\n\nPhenazone 40 mg/g with lidocaine 10 mg/g: Apply 4 drops two or three times a day for up to 7 days. Use only if an immediate oral antibiotic prescription is not given, and there is no eardrum perforation or otorrhoea."
+        "- Recommend regular doses of paracetamol or ibuprofen for pain, advising maximum, regular doses as appropriate for the child’s weight / age. These products are available to purchase over the counter.\n\n- Consider a prescription for eardrops containing an anaesthetic and an analgesic:\n\n[[green:Phenazone 40 mg/g with lidocaine 10 mg/g: Apply 4 drops two or three times a day for up to 7 days. Use only if an immediate oral antibiotic prescription is not given, and there is no eardrum perforation or otorrhoea.]]"
       ]
     }
   ],
-  "specialConsiderations": [
-    {
-      "title": "Pregnancy",
-      "items": [
-        "Beware "
-      ]
-    },
-    {
-      "title": "Renal Inpairment",
-      "items": [
-        "EGFR >50"
-      ]
-    }
-  ],
+  "specialConsiderations": [],
   "references": [
     "NICE-NG91"
   ],
@@ -69,11 +56,11 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-19",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-19",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   }
 }
