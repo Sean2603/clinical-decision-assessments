@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "1.2.43",
-  "updatedAt": "2026-08-18T13:14:57Z",
+  "contentVersion": "1.2.44",
+  "updatedAt": "2026-08-18T20:20:44Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
@@ -150,17 +150,7 @@
       ]
     }
   ],
-  "guidelines": [
-    {
-      "id": "pulmonary_embolism",
-      "title": "Pulmonary embolism",
-      "version": "0.1.0",
-      "file": "guidelines/pulmonary_embolism.json",
-      "schema": "schema/guideline-schema.json",
-      "sha256": "e36668f6447721299ead79db753ef068c13dfa3d4e63c43b0f8ef833ab3eac67",
-      "schemaSha256": "03029a04e79f09d5b189cb6acc3d54bc43c44e2dcd1634c9295bd6ee0778a8af"
-    }
-  ],
+  "guidelines": [],
   "scoringTools": [
     {
       "id": "4at-delirium-screen",
