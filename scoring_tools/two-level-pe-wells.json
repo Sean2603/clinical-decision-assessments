@@ -1,0 +1,191 @@
+{
+  "id": "two-level-pe-wells",
+  "title": "Two-level PE Wells",
+  "subtitle": "PE likelihood and investigation pathway",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Investigation pathway — not a rule-out score",
+  "summary": "Two-level PE Wells categorises suspected pulmonary embolism as likely or unlikely and directs the required investigation pathway.",
+  "population": [
+    "People in whom pulmonary embolism remains clinically suspected."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "clinical-signs-dvt",
+      "label": "Clinical signs and symptoms of DVT",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 3,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "alternative-less-likely",
+      "label": "An alternative diagnosis is less likely than PE",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 3,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "heart-rate-over-100",
+      "label": "Heart rate above 100/min",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.5,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "immobilisation-surgery",
+      "label": "Immobilisation for at least 3 days or surgery in previous 4 weeks",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.5,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "previous-dvt-pe",
+      "label": "Previous DVT or PE",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1.5,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "haemoptysis",
+      "label": "Haemoptysis",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "malignancy",
+      "label": "Malignancy: treatment within 6 months or palliative",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "pe-unlikely",
+      "minimumScore": -10,
+      "maximumScore": 4,
+      "label": "PE unlikely",
+      "interpretation": [
+        "D-dimer is generally required unless PERC has already validly ruled out PE."
+      ],
+      "actions": []
+    },
+    {
+      "id": "pe-likely",
+      "minimumScore": 4.000001,
+      "maximumScore": 20,
+      "label": "PE likely",
+      "interpretation": [
+        "Arrange the immediate imaging pathway."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Both categories require the appropriate D-dimer or imaging pathway."
+  ],
+  "limitations": [
+    "The Wells score does not exclude PE by itself. Do not use it to justify scene discharge without completing the required pathway."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [
+    "NICE-NG158"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "PeWellsScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "evaluation": {
+    "kind": "sum",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
+  "parityCases": [
+    {
+      "id": "result-pe-unlikely",
+      "description": "Executable case for result band: PE unlikely.",
+      "inputs": {
+        "clinical-signs-dvt": false,
+        "alternative-less-likely": false,
+        "heart-rate-over-100": false,
+        "immobilisation-surgery": false,
+        "previous-dvt-pe": false,
+        "haemoptysis": false,
+        "malignancy": false
+      },
+      "expectedScore": 0,
+      "expectedResultId": "pe-unlikely"
+    },
+    {
+      "id": "result-pe-likely",
+      "description": "Executable case for result band: PE likely.",
+      "inputs": {
+        "clinical-signs-dvt": false,
+        "alternative-less-likely": false,
+        "heart-rate-over-100": true,
+        "immobilisation-surgery": true,
+        "previous-dvt-pe": true,
+        "haemoptysis": false,
+        "malignancy": false
+      },
+      "expectedScore": 4.5,
+      "expectedResultId": "pe-likely"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "clinical-signs-dvt": true,
+        "alternative-less-likely": true,
+        "heart-rate-over-100": true,
+        "immobilisation-surgery": true,
+        "previous-dvt-pe": true,
+        "haemoptysis": true,
+        "malignancy": true
+      },
+      "expectedScore": 12.5,
+      "expectedResultId": "pe-likely"
+    }
+  ],
+  "attachments": []
+}

@@ -1,0 +1,163 @@
+{
+  "id": "ottawa-knee-rule",
+  "title": "Ottawa knee rule",
+  "subtitle": "Need for radiography after acute knee injury",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Imaging decision rule",
+  "summary": "Determines whether knee radiography is indicated after acute knee injury.",
+  "population": [
+    "People over 2 years with acute knee injury when fracture is being considered."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "age-55-or-older",
+      "label": "Age 55 years or older",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "isolated-patellar-tenderness",
+      "label": "Isolated patellar tenderness",
+      "description": "Tenderness of the patella with no other bony knee tenderness.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "fibular-head-tenderness",
+      "label": "Tenderness at the head of the fibula",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "unable-flex-90",
+      "label": "Unable to flex knee to 90°",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "unable-four-steps",
+      "label": "Unable to take 4 weight-bearing steps immediately and during assessment",
+      "description": "Four steps are required, even if limping.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "negative",
+      "minimumScore": 0,
+      "maximumScore": 0,
+      "label": "No X-ray indicated",
+      "interpretation": [
+        "No knee X-ray indicated by the Ottawa knee rule."
+      ],
+      "actions": []
+    },
+    {
+      "id": "positive",
+      "minimumScore": 1,
+      "maximumScore": 5,
+      "label": "X-ray indicated",
+      "interpretation": [
+        "Knee X-ray indicated: one or more criteria are present."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Deformity, open injury, absent or reduced distal pulses, new sensory or motor deficit, locked knee, extensor mechanism failure, or inability to mobilise safely overrides a reassuring score."
+  ],
+  "limitations": [
+    "This determines need for fracture imaging only."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "OttawaKneeScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "evaluation": {
+    "kind": "sum",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
+  "parityCases": [
+    {
+      "id": "result-negative",
+      "description": "Executable case for result band: No X-ray indicated.",
+      "inputs": {
+        "age-55-or-older": false,
+        "isolated-patellar-tenderness": false,
+        "fibular-head-tenderness": false,
+        "unable-flex-90": false,
+        "unable-four-steps": false
+      },
+      "expectedScore": 0,
+      "expectedResultId": "negative"
+    },
+    {
+      "id": "result-positive",
+      "description": "Executable case for result band: X-ray indicated.",
+      "inputs": {
+        "age-55-or-older": false,
+        "isolated-patellar-tenderness": false,
+        "fibular-head-tenderness": false,
+        "unable-flex-90": false,
+        "unable-four-steps": true
+      },
+      "expectedScore": 1,
+      "expectedResultId": "positive"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "age-55-or-older": true,
+        "isolated-patellar-tenderness": true,
+        "fibular-head-tenderness": true,
+        "unable-flex-90": true,
+        "unable-four-steps": true
+      },
+      "expectedScore": 5,
+      "expectedResultId": "positive"
+    }
+  ],
+  "attachments": []
+}

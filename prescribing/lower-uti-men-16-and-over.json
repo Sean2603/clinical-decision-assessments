@@ -1,0 +1,88 @@
+{
+  "id": "lower-uti-men-16-and-over",
+  "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)",
+  "aliases": [
+    "UTI men",
+    "lower UTI men"
+  ],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genitourinary",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available here",
+  "updatedOn": "2026-08-12",
+  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis)",
+    "All male UTIs to be considered potentially complicated until proven otherwise.",
+    "In sexually active young men consider differential diagnosis e.g. prostatitis, or chlamydia.",
+    "Symptoms of UTI include: dysuria; frequency; suprapubic tenderness; urgency; polyuria; haematuria; fever > 38 degrees celsius; Some patients may also have non-specific symptoms of infection such as abdominal pain, alteration of behaviour, delirium or loss of diabetes control.",
+    "Dip sticks are not reliable for diagnosis of UTIs in men.",
+    "If three or more symptoms or symptoms are severe prescribe empirical antibiotic immediately (see below for treatment choices) and send MSU for culture. When results are available change the antibiotic according to susceptibility results if the bacteria are resistant, using a narrow spectrum antibiotic whenever possible. Note: amoxicillin resistance is common, therefore only use if culture confirms susceptibility.",
+    "Always consider prostate involvement. Trimethoprim is the first choice if there are symptoms of prostate involvement such as fever, pain at base of penis, around the anus, just above the pubic bone/ lower back as nitrofurantoin and beta-lactams penetrate the prostate poorly. Also see Acute Prostatitis.",
+    "Empiric recommendations listed are not suitable in upper UTI or sepsis.",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions"
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)",
+      "medicationId": "trimethoprim",
+      "displayName": "Trimethoprim tablets",
+      "dose": "200mg BD",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [],
+      "notes": [
+        "A lower risk of resistance to trimethoprim may be more likely if not used in the past 3 months, previous urine culture suggests susceptibility (but this was not used), and in younger people."
+      ]
+    },
+    {
+      "rank": 1,
+      "label": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)",
+      "medicationId": "nitrofurantoin",
+      "displayName": "Nitrofurantoin capsules",
+      "dose": "100mg M/R BD",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [
+        "Normally avoid if eGFR < 45 ml/min.",
+        "If eGFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative; otherwise it is contraindicated in this group."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable",
+      "medicationId": null,
+      "displayName": "Pivmecillinam tablets",
+      "dose": "400mg stat then 200mg TDS",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [
+        "(contraindicated in penicillin hypersensitivity)"
+      ],
+      "notes": [
+        "A higher risk of resistance may be more likely with recent use, older people, people in residential facilities, recent foreign travel or recent hospitalisation.",
+        "If resistance risk is higher (e.g. recent use, older patients, patients in residential facilities, recent foreign travel or recent hospitalisation or chronic/recurrent symptomatic bacteriuria) use 400mg TID for full 7 day course, if previously sensitive."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "attachments": [],
+  "niceVisualSummary": null
+}

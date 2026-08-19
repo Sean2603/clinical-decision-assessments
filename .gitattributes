@@ -1,0 +1,6 @@
+# Keep source-controlled text byte-stable across Windows and GitHub/Linux.
+*.json text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf

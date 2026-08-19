@@ -1,0 +1,150 @@
+## Frailty package layout
+
+All Frailty assessments use the same section order as the established assessment guides:
+
+1. Assessment priorities
+2. History prompts
+3. Acute deterioration and red-flag screen
+4. Focused examination
+5. Common clinical patterns
+6. Management and disposition
+7. Focused safety-netting
+
+This keeps the Frailty subsection visually and structurally consistent with Back Pain and other mature assessment content.
+
+# Clinical Decision Assessments
+
+Version-controlled clinical assessment guidance for the Clinical Decision Support app.
+
+## Structure
+
+- `assessments/` — individual assessment guides
+- `references/` — shared guideline references
+- `scoring_tools/` — remote scoring-tool shadow definitions
+- `blood_panels/` — remote blood-panel shadow definitions
+- `medications/ and prescribing/` — APUC prescribing medicine monographs
+- `schema/` — JSON schema
+- `manifest.json` — published pack metadata and checksums
+- `tool/build_manifest.py` — rebuilds checksums and publication date
+- `.github/workflows/` — validation and manifest publication
+
+## Editing workflow
+
+1. Create a branch.
+2. Edit the relevant assessment JSON.
+3. Increase the assessment version and pack `contentVersion`.
+4. Open a pull request.
+5. Confirm the validation workflow passes.
+6. Complete clinical review.
+7. Merge to `main`.
+8. The manifest workflow recalculates checksums.
+
+The app checks the raw GitHub manifest in the background no more than once every
+24 hours. Manual checks are available in Settings.
+
+
+## Shared references
+
+`references/references.json` is the authoritative registry for assessments, scoring tools, blood panels and prescribing medicines. `clinical_reliability/clinical-reliability.json` stores clinical review metadata and stable `referenceIds`; it does not duplicate source records.
+
+
+## Clinical guidelines
+
+Guidelines are stored in `guidelines/*.json`, validated against
+`schema/guideline-schema.json`, and published through the same `manifest.json`
+as assessments, references and clinical-reliability metadata.
+
+Run before committing:
+
+```powershell
+python tool/validate_content.py
+python tool/validate_clinical_reliability.py
+python tool/validate_references.py
+python tool/generate_reference_usage.py
+python tool/sync_manifest.py
+```
+
+
+## Prescribing content
+
+`medications/ and prescribing/*.json` contains versioned APUC medicine monographs authored and
+governed through CDM. Each medicine stores indication-specific population, dose
+and duration alongside contraindications, cautions, important interactions,
+renal/hepatic considerations, pregnancy/breastfeeding information, practical
+points, shared reference IDs and embedded clinical-validation metadata.
+
+The `prescribing` manifest collection may remain empty while the capability is
+installed. `minimumAppVersion` remains at its existing requirement until at
+least one prescribing medicine is published; once prescribing content exists,
+the generated manifest requires app `0.33.0` or later.
+
+Prescribing lifecycle values are `active`, `withdrawn` and `superseded`. CDM
+workflow states such as Draft or Submitted for review are governance metadata
+and must never be written into clinical JSON. Emergency disable remains a
+separate manifest safety override.
+
+## Remote scoring tools and blood panels
+
+`scoring_tools/*.json` and `blood_panels/*.json` now contain shadow copies of
+the clinical definitions currently implemented in Flutter. The app downloads,
+checksums, parses and caches these files as part of the same atomic content
+pack, but version `0.18.0` continues to render the existing Dart screens.
+
+Each migrated definition includes a `migration` block:
+
+```json
+{
+  "state": "shadow",
+  "sourceFile": "lib/screens/phase_one_tools.dart",
+  "currentScreen": "Crb65Screen",
+  "parityStatus": "pending",
+  "migratedOn": "2026-08-01"
+}
+```
+
+Do not mark `parityStatus` as `matched` until the remote definition has been
+compared with the current Dart implementation and its tests.
+
+The shared reference registry and clinical reliability file remain
+authoritative. Every scoring-tool and blood-panel definition must have a
+matching reliability item with the same stable ID and display title.
+
+### Review-due references
+
+A cited reference with `reviewStatus: review-due` no longer blocks publication. During publishing, `tool/mark_review_due_content.py` marks each affected assessment, scoring tool, blood panel, or prescribing medicine with `clinicalValidation.validated: false`, clears previous reviewer metadata, records the affected reference IDs in `reviewNotes`, and bumps the item patch version. Superseded, withdrawn, unavailable, and unverified cited references still block publication.
+
+
+## Assessment subsections
+
+Assessment guides can declare one or more `categoryIds`. The generated manifest publishes ordered category metadata, and assessments without category metadata are placed in `uncategorised`. The initial configured subsection is `Frailty`.
+
+## Frailty clinical package
+
+The `frailty` assessment category is a coordinated package rather than a single guide. It currently contains:
+
+- Frailty Assessment (umbrella guide)
+- Falls in Older Adults
+- Acute Confusion and Delirium
+- Comprehensive Geriatric Assessment
+- Polypharmacy and Medicines-Related Harm
+
+The focused guides share terminology, baseline-versus-current-function prompts, concise safety-netting and linked NICE/BGS references. New package content remains marked as not clinically validated until formal review.
+
+
+## Assessment lifecycle / unitless migration
+
+Run `python tool/migrate_content_lifecycle_v2.py` once on `content-review/clinical-review` after applying this release. It preserves unrelated schema fields, adds explicit assessment lifecycle status, converts legacy blood `unit: "unitless"` values to blank-unit + `unitless: true`, removes only assessment emergency revocations that duplicate a normal withdrawn state, and raises the content pack minimum app version to 0.32.0. Then use CDM **Prepare for publication** to regenerate the final manifest and derived artefacts once.
+
+
+## Medications and prescribing
+Medication monographs are stored in `medications/`. Condition-based prescribing pathways are stored separately in `prescribing/` and may reference medication monographs by stable `medicationId`.
+
+## Medication, prescribing and notice metadata (2026-08-12)
+- Medication monographs now support aliases and update metadata for search and Updates & Notices.
+- Prescribing pathways now declare a clinical system separately from the condition/category and can cross-link regimen medication IDs.
+- Clinical notices are managed in `clinical_notices/clinical-notices.json` and are included in the generated manifest.
+- The APUC 17-medicine starter formulary is present as clinically unvalidated medication content where a validated monograph has not yet been completed.
+
+## Clinical image attachments
+
+All managed clinical content types can optionally include an `images` array. Images live under the repository `images/` tree and are linked from structured content by versioned repository path and SHA-256 hash. Replacing a published image must use a new versioned path and include replacement governance metadata; the previous image remains in Git/repository history and, where a clinical meaning change is declared, the parent content must return to unvalidated status before publication.

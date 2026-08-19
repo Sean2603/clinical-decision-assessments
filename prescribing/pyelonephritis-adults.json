@@ -1,0 +1,112 @@
+{
+  "id": "pyelonephritis-adults",
+  "title": "Pyelonephritis – Adults",
+  "aliases": [
+    "pyelonephritis",
+    "upper UTI"
+  ],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genitourinary",
+  "category": "Urinary tract infection",
+  "summary": "This guideline sets out an antimicrobial prescribing strategy for acute pyelonephritis (upper urinary tract infection) in children, young people and adults who do not have a catheter. It aims to optimise antibiotic use and reduce antibiotic resistance.\n",
+  "updatedOn": "2026-08-14",
+  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "- Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis, acute renal failure).\n\n[[red:- If no response within 24 hours or symptoms worsen at any time admit to secondary care.]]\n\n**- Refer to NICE NG111: Pyelonephritis (acute): antimicrobial prescribing**\n\n[[red:**- If admission not needed, send MSU for culture and start empiric antibiotics. When results of urine culture are available review choice of antibiotic and change the antibiotic if necessary according to susceptibility**]]\n"
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st choice",
+      "medicationId": "cefalexin",
+      "displayName": "Cefalexin capsules",
+      "dose": "500mg BD to TDS (up to 1-1.5g TDS to QDS for severe infections)",
+      "route": null,
+      "frequency": null,
+      "duration": "7 - 10 days",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "If lab report shows sensitive",
+      "medicationId": "trimethoprim",
+      "displayName": "Trimethoprim tablets",
+      "dose": "200mg BD",
+      "route": null,
+      "frequency": null,
+      "duration": "14 days",
+      "restrictions": [
+        "(only if sensitivities are known)"
+      ],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "If lab report shows sensitive",
+      "medicationId": null,
+      "displayName": "Co-amoxiclav tablets",
+      "dose": "500/125mg TDS",
+      "route": null,
+      "frequency": null,
+      "duration": "7 to 10 days",
+      "restrictions": [
+        "(only if sensitivities are known)"
+      ],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "Only if other first-choice antibiotics are unsuitable",
+      "medicationId": null,
+      "displayName": "Ciprofloxacin tablets",
+      "dose": "500mg BD",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [],
+      "notes": [
+        "A patient information sheet should be given to all patients who receive a fluoroquinolone.",
+        "Refer to MHRA drug safety update Fluoroquinolone antibiotics: must now only be prescribed when other commonly recommended antibiotics are inappropriate."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [
+    "NICE-NG111"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "attachments": [
+    {
+      "id": "pyelonephritis-visual-summary",
+      "title": "Pyelonephritis Visual Summary",
+      "label": "NG111 - Guideline",
+      "caption": "NICE visual summary of the guideline - PDF format",
+      "source": "https://www.nice.org.uk/guidance/ng111/resources/visual-summary-pdf-6544161037",
+      "referenceId": "NICE-NG111",
+      "replacementGovernance": null,
+      "path": "attachments/prescribing/pyelonephritis-adults/pyelonephritis-visual-summary-v1.0.0.pdf",
+      "type": "pdf",
+      "version": "1.0.0",
+      "sha256": "35113555fd98817a962dce42d9a259392d915f469624a8a3d576ffdd30700239",
+      "mediaType": "application/pdf",
+      "originalFileName": "Plelonephritis (acute) - antimicrobial prescribing.pdf",
+      "fileSize": 266463,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-08-12T14:43:51.030Z",
+      "uploadedBy": "Sean McGrory"
+    }
+  ],
+  "niceVisualSummary": "{{attachment:pyelonephritis-visual-summary|View NICE Visual Summary}}"
+}

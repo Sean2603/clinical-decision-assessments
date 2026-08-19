@@ -1,0 +1,263 @@
+{
+  "id": "polypharmacy-and-medicines-related-harm",
+  "title": "Polypharmacy and Medicines-Related Harm",
+  "version": "0.1.0",
+  "summary": "A clinician-facing guide for recognising medicines-related deterioration in an older person, reconciling treatment, identifying high-risk medicines and arranging safe prescriber-led review.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "must-confirm",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "The complete current medicines list, including prescribed, over-the-counter, herbal and recently stopped medicines.",
+            "Recent starts, dose changes, formulation changes, missed doses, duplication and administration errors.",
+            "A plausible link between medicines and falls, confusion, hypotension, bradycardia, bleeding, constipation, urinary retention, hypoglycaemia, acute kidney injury or sedation.",
+            "Renal and hepatic impairment affecting accumulation or dose.",
+            "Whether each medicine has a current indication, meaningful benefit and acceptable burden.",
+            "Whether the person can obtain, organise, understand and take medicines safely."
+          ],
+          "references": [
+            "NICE-NG5",
+            "NICE-NG56"
+          ],
+          "importantLimitation": "Do not abruptly stop essential long-term medicines solely because polypharmacy is present. Changes should be indication-led, risk-assessed and prescriber-owned."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "History prompts",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "sources",
+          "title": "Confirm from multiple sources",
+          "mustConfirmOrExclude": [
+            "Patient or carer report.",
+            "Current repeat list and recent discharge or clinic letters.",
+            "Medication administration record, blister pack or actual containers.",
+            "Community pharmacy information where available.",
+            "Allergies, previous adverse reactions and actual adherence."
+          ],
+          "references": [
+            "NICE-NG5"
+          ]
+        },
+        {
+          "id": "practical-use",
+          "title": "How medicines are actually used",
+          "mustConfirmOrExclude": [
+            "Who orders, collects, stores and administers medicines.",
+            "Swallowing difficulty, dexterity, vision, cognition and ability to open packaging.",
+            "Use of “when required” medicines and maximum doses.",
+            "Duplicate brands, old supplies and medicines borrowed from others."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acute-deterioration-red-flags",
+      "title": "Acute deterioration and red-flag screen",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "urgent",
+          "title": "Urgent or emergency assessment",
+          "urgentFeatures": [
+            "Suspected overdose, severe sedation, respiratory depression, seizure or reduced consciousness.",
+            "Significant bleeding, head injury while anticoagulated, severe hypoglycaemia or serious arrhythmia.",
+            "Severe dehydration, acute kidney injury, dangerous electrolyte abnormality or inability to take essential medicines.",
+            "No safe person or system available to administer medicines."
+          ],
+          "implications": [
+            "Treat immediate threats and contact the appropriate emergency, toxicology or prescriber service."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "items": [
+        {
+          "id": "physiology-and-targeted-examination",
+          "title": "Physiology and targeted examination",
+          "mustConfirmOrExclude": [
+            "Full observations, glucose and hydration/perfusion assessment where clinically relevant.",
+            "Pulse rhythm, lying and standing blood pressure, neurological state, gait and falls risk when medicines may be contributing.",
+            "Evidence of bleeding, infection, fluid overload, urinary retention, constipation, oversedation or other suspected adverse effects.",
+            "Relevant blood tests, ECG or medicine-level monitoring when available and indicated."
+          ],
+          "references": [
+            "NICE-NG5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-clinical-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "items": [
+        {
+          "id": "falls-hypotension",
+          "title": "Falls, dizziness and hypotension",
+          "commonFindings": [
+            "Antihypertensives, diuretics, nitrates, alpha-blockers, sedatives, opioids, antidepressants or antipsychotics.",
+            "Postural symptoms, dehydration, bradycardia or recent dose change."
+          ],
+          "implications": [
+            "Measure postural blood pressure when safe, assess hydration and obtain prescriber-led review."
+          ],
+          "references": [
+            "NICE-NG249"
+          ]
+        },
+        {
+          "id": "confusion-sedation",
+          "title": "Confusion, sedation and anticholinergic burden",
+          "commonFindings": [
+            "Opioids, benzodiazepines, Z-drugs, antihistamines, bladder antimuscarinics, antipsychotics or multiple centrally acting medicines.",
+            "New drowsiness, agitation, hallucinations, constipation or urinary retention."
+          ],
+          "implications": [
+            "Assess for delirium and other causes; reduce avoidable sedative and anticholinergic burden through urgent review."
+          ],
+          "references": [
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "aki-electrolytes",
+          "title": "Acute kidney injury and electrolyte disturbance",
+          "commonFindings": [
+            "Diuretics, ACE inhibitors, ARBs, NSAIDs or medicines requiring renal dose adjustment during dehydration or acute illness.",
+            "Reduced intake, vomiting, diarrhoea, rising creatinine or potassium abnormality."
+          ],
+          "implications": [
+            "Assess volume status and renal function, and seek prescriber advice on temporary or permanent changes."
+          ]
+        },
+        {
+          "id": "bleeding",
+          "title": "Bleeding risk",
+          "commonFindings": [
+            "Anticoagulants, antiplatelets, NSAIDs, SSRIs or interacting medicines.",
+            "Falls, bruising, melaena, haematuria, anaemia symptoms or head injury."
+          ],
+          "implications": [
+            "Use the relevant bleeding or head-injury pathway and confirm indication, dose, timing and renal function."
+          ]
+        },
+        {
+          "id": "hypoglycaemia",
+          "title": "Hypoglycaemia",
+          "commonFindings": [
+            "Insulin or sulfonylurea with reduced intake, weight loss, renal impairment or administration error.",
+            "Sweating, confusion, collapse, seizure or recurrent low glucose."
+          ],
+          "implications": [
+            "Treat immediately, identify the cause and arrange urgent diabetes medication review."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "indication-benefit",
+          "title": "Indication, benefit and goals",
+          "mustConfirmOrExclude": [
+            "Current indication and evidence of benefit.",
+            "Whether the medicine supports the patient’s priorities and expected prognosis.",
+            "Preventive treatment timescale versus likely benefit.",
+            "Duplicate or conflicting therapy."
+          ]
+        },
+        {
+          "id": "safety-monitoring",
+          "title": "Safety and monitoring",
+          "mustConfirmOrExclude": [
+            "Dose appropriate for age, renal function, hepatic function and weight.",
+            "Required blood tests, observations or drug-level monitoring completed.",
+            "Interactions, contraindications and cumulative adverse effects.",
+            "Clear instructions for acute illness and when to seek review."
+          ]
+        },
+        {
+          "id": "burden-adherence",
+          "title": "Burden and adherence",
+          "mustConfirmOrExclude": [
+            "Complexity, frequency, formulation, swallowing and packaging.",
+            "Cost, access, transport and pharmacy support.",
+            "Understanding, capacity and carer administration.",
+            "Whether simplification could improve safe use."
+          ]
+        },
+        {
+          "id": "change-plan",
+          "title": "Safe change plan",
+          "mustConfirmOrExclude": [
+            "Named prescriber responsible for each change.",
+            "Tapering requirement or withdrawal risk.",
+            "Monitoring after the change and expected timeframe.",
+            "Communication to patient, carers, GP, pharmacy and other services."
+          ],
+          "references": [
+            "NICE-NG5",
+            "NICE-NG56"
+          ]
+        },
+        {
+          "id": "record",
+          "title": "Record explicitly",
+          "mustConfirmOrExclude": [
+            "Sources used for reconciliation and discrepancies found.",
+            "Medicine, dose, route, frequency, indication and actual use.",
+            "Suspected adverse effects and supporting clinical findings.",
+            "Renal function, relevant monitoring and interaction risks.",
+            "Changes made, prescriber authorisation, tapering and monitoring plan.",
+            "Who will obtain and administer medicines after the assessment."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "medicine-safety",
+          "title": "Medicines-related harm",
+          "safetyNetting": [
+            "Any significant deterioration in breathing, chest pain or collapse – call 999.",
+            "Seek urgent reassessment for increasing drowsiness or confusion, a further fall, bleeding, black stools, repeated low glucose, inability to take essential medicines, markedly reduced urine output or vomiting that prevents medicines and fluids being retained."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "categoryIds": [
+    "frailty"
+  ],
+  "status": "active",
+  "attachments": []
+}

@@ -1,0 +1,62 @@
+{
+  "id": "amoxicillin",
+  "title": "Amoxicillin",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "formularyGroup": "Antimicrobials",
+  "medicineType": "Antibacterial",
+  "drugClass": "Aminopenicillin",
+  "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
+  "updatedOn": null,
+  "changeSummary": "Added to the APUC medication formulary.",
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Otitis media (children/young people)",
+      "population": null,
+      "dose": null,
+      "duration": null,
+      "notes": []
+    },
+    {
+      "title": "Community-acquired pneumonia",
+      "population": null,
+      "dose": null,
+      "duration": null,
+      "notes": []
+    },
+    {
+      "title": "COPD exacerbation",
+      "population": null,
+      "dose": null,
+      "duration": null,
+      "notes": []
+    },
+    {
+      "title": "LRTI",
+      "population": null,
+      "dose": null,
+      "duration": null,
+      "notes": []
+    }
+  ],
+  "contraindications": [],
+  "cautions": [],
+  "interactions": [],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [],
+  "pregnancyBreastfeeding": [],
+  "practicalPoints": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "isPenicillin": false,
+  "attachments": []
+}

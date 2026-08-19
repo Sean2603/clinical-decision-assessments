@@ -1,0 +1,68 @@
+{
+  "id": "lipase-and-amylase",
+  "title": "Lipase and amylase",
+  "subtitle": "Pancreatitis interpretation and important alternative causes",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Pancreatitis interpretation and important alternative causes",
+  "introduction": "Acute pancreatitis is a clinical diagnosis supported by characteristic pain and pancreatic enzyme elevation or imaging. Raised lipase/amylase alone is not diagnostic.",
+  "sections": [
+    {
+      "id": "interpretation",
+      "title": "Interpretation",
+      "rows": [
+        {
+          "id": "lipase",
+          "name": "Lipase",
+          "unit": "",
+          "referenceRange": "Laboratory dependent; ≥3 × upper limit strongly supports pancreatitis in the correct clinical setting",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Lipase is generally more pancreas-specific and remains raised longer than amylase. It may also rise with renal failure, bowel ischaemia/obstruction, cholecystitis, perforation, DKA or medications."
+          ],
+          "unitless": true
+        },
+        {
+          "id": "amylase",
+          "name": "Amylase",
+          "unit": "",
+          "referenceRange": "Laboratory dependent; ≥3 × upper limit supports pancreatitis in the correct setting",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Can be normal in delayed presentation, hypertriglyceridaemia or chronic pancreatic disease. Salivary disease, renal failure, bowel pathology and macroamylasaemia can also raise it."
+          ],
+          "unitless": true
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Severe persistent epigastric pain radiating to the back with vomiting, tachycardia, hypotension or fever.",
+    "Jaundice, fever and right-upper-quadrant pain suggesting biliary obstruction/cholangitis.",
+    "Peritonism (rigidity, involuntary guarding or rebound), shock, GI bleeding or reduced consciousness."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Lipase and amylase",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "attachments": []
+}

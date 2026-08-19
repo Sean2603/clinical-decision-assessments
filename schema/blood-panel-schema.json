@@ -1,0 +1,538 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schema/blood-panel-schema.json",
+  "title": "Remote blood-panel definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "subtitle",
+    "version",
+    "minimumAppVersion",
+    "status",
+    "summary",
+    "introduction",
+    "sections",
+    "calculations",
+    "urgentFindings",
+    "overrides",
+    "referenceIds",
+    "clinicalValidation",
+    "migration"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subtitle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "minimumAppVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "withdrawn"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "introduction": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    },
+    "calculations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/calculation"
+      }
+    },
+    "urgentFindings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "overrides": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "referenceIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "clinicalValidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validated",
+        "reviewedBy",
+        "reviewedOn",
+        "reviewerRole",
+        "nextReviewDue",
+        "reviewNotes"
+      ],
+      "properties": {
+        "validated": {
+          "type": "boolean"
+        },
+        "reviewedBy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewedOn": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewerRole": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nextReviewDue": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewNotes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "migration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "sourceFile",
+        "currentScreen",
+        "parityStatus",
+        "migratedOn"
+      ],
+      "properties": {
+        "state": {
+          "const": "shadow"
+        },
+        "sourceFile": {
+          "type": "string",
+          "minLength": 1
+        },
+        "currentScreen": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parityStatus": {
+          "enum": [
+            "pending",
+            "matched",
+            "mismatch"
+          ]
+        },
+        "migratedOn": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/clinicalAttachment"
+      },
+      "default": []
+    }
+  },
+  "$defs": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "unit",
+        "referenceRange",
+        "lowInterpretation",
+        "highInterpretation",
+        "notes"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string"
+        },
+        "referenceRange": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lowInterpretation": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "highInterpretation": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "unitless": {
+          "type": "boolean"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "rows"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rows": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/row"
+          }
+        }
+      }
+    },
+    "calculation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "formula",
+        "inputLabels",
+        "outputUnit",
+        "interpretation",
+        "engine",
+        "parityCases"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "formula": {
+          "type": "string",
+          "minLength": 1
+        },
+        "inputLabels": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "outputUnit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interpretation": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "engine": {
+          "type": "object"
+        },
+        "parityCases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "description",
+              "inputs",
+              "expectedNumber",
+              "expectedText"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "inputs": {
+                "type": "object"
+              },
+              "expectedNumber": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "expectedText": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "clinicalAttachmentReplacementGovernance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "replacedOn",
+        "replacedBy",
+        "replacementReason",
+        "changeSummary",
+        "clinicalMeaningChanged",
+        "requiresRevalidation",
+        "sourceChecked",
+        "previousPath",
+        "previousVersion",
+        "previousSha256"
+      ],
+      "properties": {
+        "replacedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "replacedBy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replacementReason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "changeSummary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clinicalMeaningChanged": {
+          "type": "boolean"
+        },
+        "requiresRevalidation": {
+          "type": "boolean"
+        },
+        "sourceChecked": {
+          "type": "boolean"
+        },
+        "previousPath": {
+          "type": "string",
+          "pattern": "^attachments/"
+        },
+        "previousVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "previousSha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      }
+    },
+    "clinicalAttachment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "title",
+        "label",
+        "path",
+        "caption",
+        "source",
+        "referenceId",
+        "version",
+        "sha256",
+        "mediaType",
+        "originalFileName",
+        "fileSize",
+        "width",
+        "height",
+        "uploadedOn",
+        "uploadedBy",
+        "replacementGovernance"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "image",
+            "pdf",
+            "document",
+            "spreadsheet",
+            "presentation",
+            "text"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^attachments/"
+        },
+        "caption": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "referenceId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "mediaType": {
+          "type": "string",
+          "minLength": 1
+        },
+        "originalFileName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "fileSize": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "uploadedOn": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "uploadedBy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replacementGovernance": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/clinicalAttachmentReplacementGovernance"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

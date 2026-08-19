@@ -1,0 +1,131 @@
+{
+  "id": "bites-human",
+  "title": "Bites - Human",
+  "aliases": [
+    "human bite"
+  ],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin & Soft Tissue",
+  "category": "Bites",
+  "summary": "NICE visual summary and full guidance",
+  "updatedOn": "2026-08-14",
+  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Surgical toilet is most important; assess risk of tetanus, HIV, hepatitis B and C.",
+    "Antibiotic prophylaxis advised for human bites that have broken the skin and drawn blood.",
+    "Consider antibiotic prophylaxis for people with a human bite that has broken the skin but not drawn blood if it: involves a high-risk area such as the hands, feet, face, genitals, skin overlying cartilaginous structures or an area of poor circulation; or is in a person at risk of a serious wound infection because of a comorbidity (such as diabetes, immunosuppression, asplenia or decompensated liver disease).",
+    "Review at 24 and 48 hours.",
+    "Seek specialist advice if person is pregnant."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "medicationId": null,
+      "displayName": "Co-amoxiclav tablets",
+      "dose": "250/125mg or 500/125mg",
+      "route": null,
+      "frequency": "three times a day",
+      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult penicillin allergic / 2nd line",
+      "medicationId": null,
+      "displayName": "Metronidazole tablets PLUS Doxycycline capsules",
+      "dose": "Metronidazole 400mg; Doxycycline 200mg on first day, then 100mg or 200mg daily",
+      "route": null,
+      "frequency": "Metronidazole three times a day",
+      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "Child 1st line",
+      "medicationId": null,
+      "displayName": "Co-amoxiclav oral",
+      "dose": "1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets",
+      "route": null,
+      "frequency": "three times a day",
+      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "restrictions": [
+        "< 1 month refer for specialist advice"
+      ],
+      "notes": [
+        "Co-amoxiclav 400/57 suspension may also be considered to allow for twice-daily dosing."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Child penicillin allergic / 2nd line-under 12 years of age",
+      "medicationId": null,
+      "displayName": "Co-trimoxazole (off-label use)",
+      "dose": "6 weeks – 5 months: 120mg or 24mg/kg twice daily; 6 months – 5 years: 240mg or 24mg/kg twice daily; 6 years – 11 years: 480mg or 24mg/kg twice daily",
+      "route": null,
+      "frequency": null,
+      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "restrictions": [
+        "< 6 weeks refer for specialist advice"
+      ],
+      "notes": [
+        "See the BNF for Children for information on monitoring"
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Child penicillin allergic / 2nd line-aged 12-17 years",
+      "medicationId": null,
+      "displayName": "Doxycycline PLUS Metronidazole",
+      "dose": "Doxycycline 200mg on first day, then 100mg or 200mg daily; Metronidazole 400mg",
+      "route": null,
+      "frequency": "Metronidazole three times a day",
+      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "restrictions": [],
+      "notes": [
+        "A 5-day course is appropriate for treating most human or animal bites, but course length can be increased to 7 days (with review) based on clinical assessment of the wound, for example, if there is significant tissue destruction or it has penetrated bone, joint, tendon or vascular structures.",
+        "See the BNF, BNF for Children, and summary of product characteristics for appropriate use and dosing in specific populations, for example, for people with hepatic or renal impairment, in pregnancy and breastfeeding, and when administering intravenous (or, if appropriate, intramuscular) antibiotics."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [
+    "NICE-BITES-HUMAN-ANIMAL"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "attachments": [
+    {
+      "id": "human-and-animal-bites-antimicrobial-prescribing",
+      "title": "Human and animal bites: antimicrobial prescribing",
+      "label": "View attachment",
+      "caption": null,
+      "source": "https://www.nice.org.uk/guidance/ng184/resources/visual-summary-pdf-8897023117",
+      "referenceId": "NICE-BITES-HUMAN-ANIMAL",
+      "replacementGovernance": null,
+      "path": "attachments/prescribing/bites-human/human-and-animal-bites-antimicrobial-prescribing-v1.0.0.pdf",
+      "type": "pdf",
+      "version": "1.0.0",
+      "sha256": "20473ce528a2c213ae1a1034b9cff19494cb893c221cf60f9e09bec8b7671dec",
+      "mediaType": "application/pdf",
+      "originalFileName": "Human and animal bites - antimicrobial prescribing.pdf",
+      "fileSize": 226581,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-08-14T15:17:18.097Z",
+      "uploadedBy": "Sean McGrory"
+    }
+  ],
+  "niceVisualSummary": "{{attachment:human-and-animal-bites-antimicrobial-prescribing|View NICE Visual Summary}}"
+}

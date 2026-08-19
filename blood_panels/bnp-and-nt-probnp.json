@@ -1,0 +1,82 @@
+{
+  "id": "bnp-and-nt-probnp",
+  "title": "BNP and NT-proBNP",
+  "subtitle": "Heart-failure likelihood, confounders and referral thresholds",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Heart-failure likelihood, confounders and referral thresholds",
+  "introduction": "Natriuretic peptides support assessment of heart failure but do not independently diagnose congestion. Interpret with symptoms, ECG, examination, renal function, rhythm, age, obesity and echocardiography.",
+  "sections": [
+    {
+      "id": "chronic-suspected-heart-failure-nt-probnp",
+      "title": "Chronic suspected heart failure – NT-proBNP",
+      "rows": [
+        {
+          "id": "400-ng-l",
+          "name": "<400 ng/L",
+          "unit": "",
+          "referenceRange": "Heart failure less likely in an untreated person",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Review alternative diagnoses, but levels can be lower with obesity or medications such as diuretics, ACE inhibitors/ARBs/ARNI, beta blockers or mineralocorticoid antagonists."
+          ],
+          "unitless": true
+        },
+        {
+          "id": "400-2-000-ng-l",
+          "name": "400–2,000 ng/L",
+          "unit": "",
+          "referenceRange": "NICE: specialist assessment and echocardiography within 6 weeks",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Does not prove heart failure. Renal impairment, AF, age, PE, sepsis and pulmonary hypertension can elevate the result."
+          ],
+          "unitless": true
+        },
+        {
+          "id": "2-000-ng-l",
+          "name": ">2,000 ng/L",
+          "unit": "",
+          "referenceRange": "NICE: urgent specialist assessment and echocardiography within 2 weeks",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Higher values are associated with worse prognosis, but acute disposition still depends on current symptoms and physiology."
+          ],
+          "unitless": true
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Breathlessness at rest, SpO₂ below expected range, inability to lie flat, pink frothy sputum, widespread crackles, hypotension or new confusion.",
+    "Rapidly increasing peripheral oedema with reduced urine output, chest pain or syncope.",
+    "Do not use a chronically raised BNP/NT-proBNP alone as evidence of acute fluid overload; compare with symptoms, examination, weight and previous results."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [
+    "NICE-NG106"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "BNP and NT-proBNP",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "attachments": []
+}

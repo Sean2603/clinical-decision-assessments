@@ -1,0 +1,230 @@
+{
+  "id": "two-level-dvt-wells",
+  "title": "Two-level DVT Wells",
+  "subtitle": "DVT likelihood and investigation pathway",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Investigation pathway — not a rule-out score",
+  "summary": "Two-level DVT Wells categorises suspected deep-vein thrombosis as likely or unlikely and directs D-dimer or ultrasound assessment.",
+  "population": [
+    "People in whom DVT remains clinically suspected."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "active-cancer",
+      "label": "Active cancer: treatment ongoing, within 6 months, or palliative",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "paralysis-immobilisation",
+      "label": "Paralysis, paresis or recent plaster immobilisation of a lower limb",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "bedridden-surgery",
+      "label": "Bedridden for at least 3 days or major surgery within 12 weeks requiring anaesthesia",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "deep-venous-tenderness",
+      "label": "Localised tenderness along the deep venous system",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "entire-leg-swollen",
+      "label": "Entire leg swollen",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "calf-swelling",
+      "label": "Calf swelling at least 3 cm larger than the asymptomatic side, measured 10 cm below tibial tuberosity",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "pitting-oedema",
+      "label": "Pitting oedema confined to the symptomatic leg",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "collateral-veins",
+      "label": "Collateral superficial veins, excluding varicose veins",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "previous-dvt",
+      "label": "Previously documented DVT",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "alternative-diagnosis",
+      "label": "An alternative diagnosis is at least as likely as DVT",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": -2,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "dvt-unlikely",
+      "minimumScore": -2,
+      "maximumScore": 1,
+      "label": "DVT unlikely",
+      "interpretation": [
+        "D-dimer is generally required; a negative score alone does not exclude DVT."
+      ],
+      "actions": []
+    },
+    {
+      "id": "dvt-likely",
+      "minimumScore": 2,
+      "maximumScore": 9,
+      "label": "DVT likely",
+      "interpretation": [
+        "Arrange proximal leg-vein ultrasound pathway and follow local interim-anticoagulation guidance if imaging is delayed."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Complete the required D-dimer or ultrasound pathway."
+  ],
+  "limitations": [
+    "Do not use a low score as permission to discharge without the required pathway."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [
+    "NICE-NG158"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "DvtWellsScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "evaluation": {
+    "kind": "sum",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
+  "parityCases": [
+    {
+      "id": "result-dvt-unlikely",
+      "description": "Executable case for result band: DVT unlikely.",
+      "inputs": {
+        "active-cancer": false,
+        "paralysis-immobilisation": false,
+        "bedridden-surgery": false,
+        "deep-venous-tenderness": false,
+        "entire-leg-swollen": false,
+        "calf-swelling": false,
+        "pitting-oedema": false,
+        "collateral-veins": false,
+        "previous-dvt": false,
+        "alternative-diagnosis": true
+      },
+      "expectedScore": -2,
+      "expectedResultId": "dvt-unlikely"
+    },
+    {
+      "id": "result-dvt-likely",
+      "description": "Executable case for result band: DVT likely.",
+      "inputs": {
+        "active-cancer": false,
+        "paralysis-immobilisation": false,
+        "bedridden-surgery": false,
+        "deep-venous-tenderness": false,
+        "entire-leg-swollen": false,
+        "calf-swelling": false,
+        "pitting-oedema": false,
+        "collateral-veins": true,
+        "previous-dvt": true,
+        "alternative-diagnosis": false
+      },
+      "expectedScore": 2,
+      "expectedResultId": "dvt-likely"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "active-cancer": true,
+        "paralysis-immobilisation": true,
+        "bedridden-surgery": true,
+        "deep-venous-tenderness": true,
+        "entire-leg-swollen": true,
+        "calf-swelling": true,
+        "pitting-oedema": true,
+        "collateral-veins": true,
+        "previous-dvt": true,
+        "alternative-diagnosis": false
+      },
+      "expectedScore": 9,
+      "expectedResultId": "dvt-likely"
+    }
+  ],
+  "attachments": []
+}

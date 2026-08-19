@@ -1,0 +1,847 @@
+{
+  "id": "back-pain",
+  "title": "Back Pain Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing back pain, recognising serious pathology, performing focused examination and interpreting common examination patterns.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, local pathways or urgent escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-not-miss",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "New bladder, bowel or sexual dysfunction.",
+            "New saddle or perineal sensory disturbance.",
+            "Bilateral or progressive lower-limb neurological symptoms.",
+            "Objective motor weakness, foot drop or unsafe gait.",
+            "Fever, systemic illness or risk factors for spinal infection.",
+            "Significant trauma, focal bony tenderness or fragility-fracture risk.",
+            "Known cancer or features suggesting spinal metastases or metastatic spinal cord compression.",
+            "Abdominal, vascular, renal or hip pathology presenting as back pain."
+          ],
+          "references": [
+            "NICE-NG59",
+            "NICE-NG127",
+            "NICE-NG41",
+            "NICE-NG234"
+          ],
+          "importantLimitation": "A reassuring single symptom, examination finding or test does not independently exclude serious spinal pathology."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "History prompts",
+      "type": "prompt-list",
+      "intro": "Use focused questions to characterise the pain and identify serious pathology or an alternative source.",
+      "items": [
+        {
+          "id": "pain-characteristics",
+          "title": "Pain characteristics",
+          "mustConfirmOrExclude": [
+            "Exact location and whether pain is central, paraspinal, flank, abdominal, buttock or groin.",
+            "Onset: sudden or gradual; traumatic, lifting or spontaneous.",
+            "Duration, progression and whether constant or intermittent.",
+            "Radiation into one or both legs and whether symptoms extend below the knee.",
+            "Aggravating and relieving factors, including movement, position, coughing or straining.",
+            "Pain at rest, night pain and sleep disturbance.",
+            "Effect on standing, walking, transfers, work and self-care."
+          ]
+        },
+        {
+          "id": "neurological-history",
+          "title": "Neurological and cauda equina symptoms",
+          "mustConfirmOrExclude": [
+            "New difficulty initiating urination, reduced bladder sensation, retention or overflow leakage.",
+            "New bowel dysfunction or reduced awareness of defecation.",
+            "New saddle, perineal or genital sensory change.",
+            "New sexual dysfunction associated with the episode.",
+            "Bilateral sciatica, bilateral sensory symptoms or progressive weakness.",
+            "Foot drop, falls, gait change or loss of hand function suggesting more extensive neurological disease."
+          ],
+          "references": [
+            "NICE-NG127"
+          ]
+        },
+        {
+          "id": "serious-pathology-history",
+          "title": "Serious pathology and alternative-source screen",
+          "mustConfirmOrExclude": [
+            "Fever, rigors, recent significant infection, immunosuppression, intravenous drug use or recent spinal procedure.",
+            "Known cancer, unexplained weight loss or progressive non-mechanical pain.",
+            "Significant trauma, osteoporosis, fragility fracture or prolonged corticosteroid use.",
+            "Abdominal pain, collapse, syncope, pulsatile symptoms or vascular risk.",
+            "Flank pain, haematuria, urinary symptoms, vomiting or anuria.",
+            "Hip or groin pain, inability to weight-bear or recent fall."
+          ],
+          "references": [
+            "NICE-NG59",
+            "NICE-NG41",
+            "NICE-NG234"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive or evolving features should change disposition and trigger the appropriate emergency or urgent pathway.",
+      "items": [
+        {
+          "id": "cauda-equina-red-flags",
+          "title": "Cauda equina syndrome",
+          "urgentFeatures": [
+            "New bladder, bowel or sexual dysfunction.",
+            "New saddle or perineal numbness.",
+            "Progressive or bilateral lower-limb neurological deficit."
+          ],
+          "implications": [
+            "Immediate referral for emergency assessment and MRI pathway."
+          ],
+          "references": [
+            "NICE-NG127"
+          ],
+          "importantLimitation": "No single normal symptom, examination finding, rectal examination or bladder scan safely excludes cauda equina syndrome."
+        },
+        {
+          "id": "infection-red-flags",
+          "title": "Spinal infection",
+          "urgentFeatures": [
+            "Fever or systemic illness with new back pain.",
+            "Recent bacteraemia, spinal procedure or surgery.",
+            "Immunosuppression or intravenous drug use.",
+            "Constant progressive pain, focal tenderness or new neurological deficit."
+          ],
+          "implications": [
+            "Possible discitis, vertebral osteomyelitis or spinal epidural abscess; urgent hospital assessment is required."
+          ]
+        },
+        {
+          "id": "fracture-red-flags",
+          "title": "Vertebral fracture",
+          "urgentFeatures": [
+            "Significant trauma or acute focal pain after minor trauma in a person at fragility-fracture risk.",
+            "Focal midline bony tenderness, deformity or neurological deficit."
+          ],
+          "references": [
+            "NICE-NG41"
+          ]
+        },
+        {
+          "id": "malignancy-red-flags",
+          "title": "Malignancy and metastatic spinal cord compression",
+          "urgentFeatures": [
+            "Known cancer with new severe, progressive or night pain.",
+            "Gait disturbance, weakness, sensory loss or bladder or bowel dysfunction."
+          ],
+          "references": [
+            "NICE-NG234"
+          ]
+        },
+        {
+          "id": "vascular-abdominal-red-flags",
+          "title": "Abdominal or vascular emergency",
+          "urgentFeatures": [
+            "Sudden severe back or abdominal pain, collapse, hypotension, pallor or diaphoresis.",
+            "Pulsatile abdominal mass, pulse deficit or a cold pale painful limb."
+          ],
+          "implications": [
+            "Immediate emergency escalation; do not pursue routine spinal imaging."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Compare both sides. Interpret findings alongside the history, observations, risk factors, progression and functional ability.",
+      "items": [
+        {
+          "id": "general-assessment",
+          "title": "General assessment and mobility",
+          "howToTest": [
+            "Assess overall appearance, distress and systemic illness.",
+            "Record observations where clinically indicated, including temperature, heart rate, blood pressure, respiratory rate and oxygen saturation.",
+            "Observe the patient sitting, standing, transferring and walking.",
+            "Assess whether pain is reproducible with movement or position.",
+            "Reassess mobility after analgesia where appropriate."
+          ],
+          "normal": [
+            "Haemodynamically stable and not systemically unwell.",
+            "Able to transfer and mobilise safely.",
+            "Pain is mechanically reproducible without objective neurological deficit."
+          ],
+          "abnormal": [
+            "Fever, hypotension, pallor, diaphoresis or systemic deterioration.",
+            "Collapse, inability to stand, unsafe gait or rapidly worsening function.",
+            "Pain that is constant, disproportionate or unrelated to movement."
+          ],
+          "implications": [
+            "Systemic illness may indicate infection or another non-musculoskeletal cause.",
+            "Collapse or haemodynamic compromise may indicate vascular or intra-abdominal pathology.",
+            "Inability to mobilise safely changes disposition even when no specific diagnosis is confirmed."
+          ],
+          "mustConfirmOrExclude": [
+            "Systemic illness.",
+            "Haemodynamic compromise.",
+            "Unsafe mobility.",
+            "Non-spinal referred pathology."
+          ]
+        },
+        {
+          "id": "inspection-palpation",
+          "title": "Inspection and palpation",
+          "howToTest": [
+            "Inspect posture, spinal alignment, bruising, swelling, wounds, deformity, scars, rash and muscle spasm.",
+            "Palpate the midline vertebrae and paraspinal muscles.",
+            "Assess for focal warmth, swelling and renal-angle tenderness where relevant."
+          ],
+          "normal": [
+            "No deformity, bruising, swelling, rash or focal midline tenderness.",
+            "Possible mild paraspinal tenderness or spasm without bony tenderness."
+          ],
+          "abnormal": [
+            "Focal midline bony tenderness.",
+            "Visible deformity, bruising or swelling.",
+            "Local warmth or focal swelling.",
+            "Renal-angle tenderness.",
+            "Vesicular rash."
+          ],
+          "implications": [
+            "Focal bony tenderness after trauma or in a patient with fragility-fracture risk may indicate vertebral fracture.",
+            "Warmth, swelling or focal tenderness with systemic features may indicate infection.",
+            "Renal-angle tenderness may indicate renal or urinary pathology.",
+            "A vesicular rash may indicate herpes zoster."
+          ],
+          "mustConfirmOrExclude": [
+            "Vertebral fracture.",
+            "Spinal infection.",
+            "Renal or urinary source.",
+            "Herpes zoster."
+          ]
+        },
+        {
+          "id": "gait-functional-testing",
+          "title": "Gait and functional testing",
+          "howToTest": [
+            "Observe normal walking.",
+            "Ask the patient to stand from a chair without using their arms where safe.",
+            "Ask the patient to walk on their heels, then on their toes.",
+            "Look for foot drop, foot slap, knee buckling, leg dragging, asymmetry or a broad-based or stiff gait."
+          ],
+          "normal": [
+            "Symmetrical gait.",
+            "Able to stand, heel-walk and toe-walk bilaterally.",
+            "No objective functional weakness."
+          ],
+          "abnormal": [
+            "Unable to heel-walk.",
+            "Unable to toe-walk.",
+            "Foot drop or foot slap.",
+            "Knee buckling due to true weakness.",
+            "New broad-based, spastic or markedly unsteady gait."
+          ],
+          "implications": [
+            "Difficulty heel-walking may indicate ankle dorsiflexion weakness, commonly involving L4 or L5.",
+            "Difficulty toe-walking may indicate plantarflexion weakness, commonly involving S1.",
+            "A spastic or broad-based gait may indicate spinal cord or central neurological pathology."
+          ],
+          "urgentFeatures": [
+            "New foot drop.",
+            "Progressive weakness.",
+            "Bilateral weakness.",
+            "Spastic or rapidly worsening gait."
+          ]
+        },
+        {
+          "id": "lower-limb-power",
+          "title": "Lower-limb power",
+          "summary": "Test against resistance and compare both sides. Consider pain inhibition and repeat testing if effort is limited.",
+          "howToTest": [
+            "Hip flexion: ask the patient to lift the thigh while you apply downward resistance over the distal thigh.",
+            "Knee extension: ask the patient to straighten the knee while you apply resistance at the lower leg.",
+            "Ankle dorsiflexion: ask the patient to pull the foot towards the shin while you push down over the dorsum of the foot.",
+            "Great-toe extension: stabilise the foot, ask the patient to lift the great toe, then apply downward resistance.",
+            "Ankle plantarflexion: ask the patient to push the foot down against resistance; use repeated heel raises where safe."
+          ],
+          "normal": [
+            "Power is 5/5 and symmetrical.",
+            "The patient can sustain movement against appropriate resistance.",
+            "Functional movements agree with isolated power testing."
+          ],
+          "abnormal": [
+            "Reproducible asymmetrical weakness.",
+            "Power below 5/5 that is not explained by pain alone.",
+            "Foot drop, weak great-toe extension or inability to perform a heel raise.",
+            "Weakness affecting more than one nerve-root pattern."
+          ],
+          "implications": [
+            "Weak knee extension may indicate L3 or L4 radiculopathy or femoral nerve dysfunction.",
+            "Weak ankle dorsiflexion or great-toe extension may indicate L4 or L5 involvement.",
+            "Weak plantarflexion may indicate S1 involvement.",
+            "Bilateral, progressive or multi-root weakness raises concern for cauda equina or spinal cord pathology."
+          ],
+          "urgentFeatures": [
+            "New objective motor weakness.",
+            "Progressive weakness.",
+            "Bilateral weakness.",
+            "New foot drop."
+          ],
+          "importantLimitation": "Pain may inhibit effort. Do not label weakness as pain-limited until objective neurological weakness has been actively reconsidered."
+        },
+        {
+          "id": "lower-limb-sensation",
+          "title": "Lower-limb sensation",
+          "howToTest": [
+            "Use light touch and compare matching points on both legs.",
+            "Test the anterior thigh, medial knee and lower leg, dorsum of the foot and great toe, lateral foot and posterior calf.",
+            "Ask whether sensation is equal, reduced, absent or unusually painful.",
+            "Look for a consistent pattern rather than relying on one isolated point."
+          ],
+          "normal": [
+            "Sensation is symmetrical and intact.",
+            "No consistent dermatomal deficit."
+          ],
+          "abnormal": [
+            "Reduced sensation over the medial lower leg, dorsum of the foot, great toe or lateral foot.",
+            "Widespread or bilateral sensory change.",
+            "A sensory level or pattern that does not fit a single lumbar nerve root."
+          ],
+          "implications": [
+            "Medial lower-leg sensory loss may support L4 involvement.",
+            "Dorsum-of-foot or great-toe sensory loss may support L5 involvement.",
+            "Lateral-foot sensory loss may support S1 involvement.",
+            "Bilateral, widespread or non-dermatomal objective loss may indicate more extensive neurological pathology."
+          ],
+          "urgentFeatures": [
+            "New bilateral sensory loss.",
+            "Rapidly progressive sensory change.",
+            "Saddle or perineal sensory disturbance.",
+            "A clear sensory level."
+          ]
+        },
+        {
+          "id": "reflexes",
+          "title": "Lower-limb reflexes",
+          "howToTest": [
+            "Knee reflex: keep the leg relaxed and strike the patellar tendon below the kneecap.",
+            "Ankle reflex: slightly dorsiflex the foot and strike the Achilles tendon.",
+            "Compare both sides and interpret alongside power, sensation and gait."
+          ],
+          "normal": [
+            "Knee and ankle reflexes are present and broadly symmetrical."
+          ],
+          "abnormal": [
+            "A clearly reduced or absent reflex on one side.",
+            "Markedly brisk reflexes.",
+            "Sustained ankle clonus."
+          ],
+          "implications": [
+            "A reduced knee reflex may support L3 or L4 radiculopathy.",
+            "A reduced ankle reflex may support S1 radiculopathy.",
+            "Brisk reflexes or sustained clonus may indicate upper motor-neurone or spinal cord pathology."
+          ],
+          "importantLimitation": "Reflexes may be reduced by age, peripheral neuropathy or previous disease. An isolated absent reflex is less important than a new asymmetrical pattern."
+        },
+        {
+          "id": "straight-leg-raise",
+          "title": "Straight-leg raise",
+          "howToTest": [
+            "Position the patient supine.",
+            "Keep the knee straight and slowly raise the leg by flexing the hip.",
+            "Ask where symptoms are felt and whether the patient's familiar leg pain is reproduced.",
+            "Compare both sides.",
+            "For crossed straight-leg raise, lift the unaffected leg and assess whether this reproduces pain in the symptomatic leg."
+          ],
+          "normal": [
+            "Hamstring tightness or mild back discomfort only.",
+            "No reproduction of familiar radicular pain."
+          ],
+          "abnormal": [
+            "The patient's familiar shooting or electric leg pain is reproduced, usually below the knee.",
+            "Symptoms are reproduced approximately between 30 and 70 degrees.",
+            "Crossed straight-leg raise reproduces pain in the opposite symptomatic leg."
+          ],
+          "implications": [
+            "A positive test supports lumbosacral nerve-root irritation.",
+            "A positive crossed test is more specific for significant nerve-root irritation or disc prolapse."
+          ],
+          "importantLimitation": "A normal straight-leg raise does not exclude cauda equina syndrome, fracture, infection, malignancy or another serious cause."
+        },
+        {
+          "id": "cauda-equina-screen",
+          "title": "Cauda equina assessment",
+          "howToTest": [
+            "Ask directly about difficulty starting urination, reduced awareness of bladder filling, urinary retention and overflow leakage.",
+            "Ask about new bowel dysfunction or reduced awareness of defecation.",
+            "Ask about new saddle, perineal or genital sensory change.",
+            "Ask about new sexual dysfunction associated with the episode.",
+            "Ask about bilateral sciatica, bilateral sensory symptoms and progressive weakness.",
+            "Where clinically justified and with consent, assess perineal or saddle sensation and examine for objective lower-limb neurological deficits."
+          ],
+          "normal": [
+            "No new bladder, bowel or sexual dysfunction.",
+            "No new saddle or perineal sensory disturbance.",
+            "No bilateral or progressive neurological deficit."
+          ],
+          "abnormal": [
+            "New urinary retention, altered bladder sensation or overflow leakage.",
+            "New bowel dysfunction.",
+            "New saddle or genital sensory disturbance.",
+            "New sexual dysfunction.",
+            "Bilateral or progressive neurological symptoms."
+          ],
+          "implications": [
+            "These findings require immediate assessment for cauda equina syndrome."
+          ],
+          "urgentFeatures": [
+            "Any new bladder, bowel or sexual dysfunction.",
+            "New perineal numbness.",
+            "Progressive or bilateral neurological deficit."
+          ],
+          "references": [
+            "NICE-NG127"
+          ],
+          "importantLimitation": "A normal bladder scan, rectal examination, reflex examination or straight-leg raise must not be used alone to exclude cauda equina syndrome."
+        },
+        {
+          "id": "upper-motor-neurone-screen",
+          "title": "Upper motor-neurone screen",
+          "howToTest": [
+            "Assess gait for stiffness, spasticity or a broad-based pattern.",
+            "Look for increased tone, brisk reflexes or sustained ankle clonus.",
+            "Where within scope, assess the plantar response using a blunt stimulus along the lateral sole."
+          ],
+          "normal": [
+            "Normal tone.",
+            "No sustained clonus.",
+            "Flexor or absent plantar response.",
+            "No spastic gait."
+          ],
+          "abnormal": [
+            "Increased tone.",
+            "Markedly brisk reflexes.",
+            "Sustained clonus.",
+            "Extensor plantar response.",
+            "Spastic or broad-based gait."
+          ],
+          "implications": [
+            "These findings suggest spinal cord or central neurological pathology rather than uncomplicated lumbar radiculopathy."
+          ],
+          "urgentFeatures": [
+            "New upper motor-neurone findings.",
+            "Bilateral weakness.",
+            "A sensory level.",
+            "Bladder or bowel dysfunction."
+          ]
+        },
+        {
+          "id": "alternative-source-examination",
+          "title": "Alternative-source examination",
+          "howToTest": [
+            "Assess hip movement, particularly internal rotation, and determine whether hip movement reproduces the pain.",
+            "Assess the abdomen when pain is atypical, constant, associated with collapse or not reproducible by spinal movement.",
+            "Assess pulses, limb temperature, colour and capillary refill when vascular pathology is possible.",
+            "Assess renal angles and urinary features when a renal or urinary cause is possible."
+          ],
+          "normal": [
+            "No concerning abdominal, vascular, renal or hip findings."
+          ],
+          "abnormal": [
+            "Painful or restricted hip movement.",
+            "Abdominal tenderness or pulsatile mass.",
+            "Reduced or unequal pulses, or a cold pale limb.",
+            "Renal-angle tenderness."
+          ],
+          "implications": [
+            "Back pain may be referred from the hip, abdomen, vascular system or urinary tract.",
+            "Suspected abdominal or vascular emergency requires immediate escalation rather than spinal imaging."
+          ],
+          "mustConfirmOrExclude": [
+            "Hip fracture or acute hip pathology.",
+            "Abdominal aortic aneurysm or dissection.",
+            "Acute limb ischaemia.",
+            "Renal colic, pyelonephritis or urinary obstruction."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-examination-patterns",
+      "title": "Common examination patterns",
+      "type": "common-findings",
+      "intro": "Patterns support clinical reasoning but do not independently confirm or exclude a diagnosis.",
+      "items": [
+        {
+          "id": "mechanical-low-back-pain",
+          "title": "Non-specific mechanical low back pain",
+          "commonFindings": [
+            "Lumbar or paraspinal pain reproduced by movement or position.",
+            "Paraspinal tenderness or muscle spasm.",
+            "Reduced movement because of pain.",
+            "Normal lower-limb power, sensation and reflexes.",
+            "Normal gait or an antalgic gait caused by pain.",
+            "Straight-leg raise causes back discomfort or hamstring tightness without radicular pain below the knee."
+          ],
+          "implications": [
+            "Supports uncomplicated mechanical back pain when the history is reassuring and serious causes have been excluded."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "none",
+            "keyTriggers": [
+              "Image only if serious underlying pathology is suspected or specialist imaging is likely to change management."
+            ],
+            "guidance": [
+              "Do not routinely offer imaging for low back pain with or without sciatica in a non-specialist setting."
+            ],
+            "references": [
+              "NICE-NG59"
+            ]
+          },
+          "importantLimitation": "Movement-related pain and muscular tenderness do not independently exclude fracture, infection, malignancy or referred pathology.",
+          "references": [
+            "NICE-NG59"
+          ]
+        },
+        {
+          "id": "lumbar-radiculopathy",
+          "title": "Lumbar radiculopathy or sciatica",
+          "commonFindings": [
+            "Unilateral shooting, burning or electric leg pain, often extending below the knee.",
+            "Straight-leg raise reproduces familiar radicular leg pain.",
+            "Dermatomal sensory change.",
+            "Myotomal weakness.",
+            "Reduced reflex corresponding to the affected root."
+          ],
+          "implications": [
+            "Supports nerve-root irritation when the history and examination findings form a consistent pattern."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [
+              "MRI in specialist care when the result is likely to change management."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Progressive objective weakness.",
+              "New bilateral neurological symptoms.",
+              "Cauda equina features.",
+              "Suspicion of malignancy, infection or trauma."
+            ],
+            "guidance": [
+              "Do not routinely offer imaging for uncomplicated low back pain with sciatica in a non-specialist setting."
+            ],
+            "references": [
+              "NICE-NG59",
+              "NICE-NG127"
+            ]
+          },
+          "importantLimitation": "Pain distribution is variable and should not be interpreted from a dermatome diagram alone.",
+          "references": [
+            "NICE-NG59",
+            "NICE-NG127"
+          ]
+        },
+        {
+          "id": "suspected-cauda-equina",
+          "title": "Suspected cauda equina syndrome",
+          "commonFindings": [
+            "New urinary retention, altered bladder sensation or overflow leakage.",
+            "New bowel dysfunction.",
+            "New saddle or genital sensory disturbance.",
+            "New sexual dysfunction.",
+            "Bilateral sciatica or progressive lower-limb weakness."
+          ],
+          "implications": [
+            "Requires immediate referral for assessment of cauda equina syndrome."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [
+              "Urgent MRI through the emergency cauda equina pathway."
+            ],
+            "urgency": "immediate",
+            "keyTriggers": [
+              "New bladder, bowel or sexual dysfunction.",
+              "New perineal numbness.",
+              "Progressive or bilateral neurological deficit."
+            ],
+            "guidance": [
+              "Refer immediately for assessment when severe low back pain radiating into the leg is accompanied by new bladder, bowel or sexual dysfunction, or new perineal numbness."
+            ],
+            "references": [
+              "NICE-NG127"
+            ]
+          },
+          "importantLimitation": "No single normal examination finding safely excludes cauda equina syndrome.",
+          "references": [
+            "NICE-NG127"
+          ]
+        },
+        {
+          "id": "upper-motor-neurone-pattern",
+          "title": "Upper motor-neurone or spinal cord pattern",
+          "commonFindings": [
+            "Bilateral symptoms.",
+            "Spastic or broad-based gait.",
+            "Increased tone.",
+            "Brisk reflexes.",
+            "Sustained clonus.",
+            "Extensor plantar response.",
+            "Sensory disturbance not confined to one lumbar nerve root."
+          ],
+          "implications": [
+            "Suggests spinal cord or central neurological pathology rather than uncomplicated mechanical back pain."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Urgent spinal MRI directed by the clinical level.",
+              "CT followed by MRI when acute traumatic spinal injury is suspected with neurological abnormality."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "New upper motor-neurone findings.",
+              "Bilateral weakness.",
+              "Sensory level.",
+              "Bladder or bowel disturbance."
+            ],
+            "guidance": [
+              "When traumatic spinal injury is suspected and a neurological abnormality could be attributable to spinal cord injury, perform MRI after CT regardless of whether CT shows the cause."
+            ],
+            "references": [
+              "NICE-NG41"
+            ]
+          },
+          "references": [
+            "NICE-NG41"
+          ]
+        },
+        {
+          "id": "vertebral-fracture-pattern",
+          "title": "Suspected vertebral fracture",
+          "commonFindings": [
+            "Acute pain after trauma, sudden load or minor injury in a patient with fragility-fracture risk.",
+            "Focal midline bony tenderness.",
+            "Marked pain with movement, standing or weight-bearing.",
+            "Possible deformity or new kyphosis.",
+            "Neurology may be normal."
+          ],
+          "implications": [
+            "May indicate traumatic or osteoporotic vertebral fracture."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Follow the acute spinal-injury imaging pathway.",
+              "CT when thoracic or lumbosacral injury is associated with abnormal neurological signs or symptoms.",
+              "MRI after CT when neurological abnormality may be due to spinal cord injury."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Significant trauma.",
+              "Focal midline bony tenderness.",
+              "Abnormal neurological findings.",
+              "Spinal deformity.",
+              "Fragility-fracture risk with acute focal pain."
+            ],
+            "guidance": [
+              "Use the NICE spinal-injury pathway for suspected acute traumatic injury."
+            ],
+            "references": [
+              "NICE-NG41"
+            ]
+          },
+          "importantLimitation": "The absence of bruising, deformity or neurological deficit does not exclude vertebral fracture.",
+          "references": [
+            "NICE-NG41"
+          ]
+        },
+        {
+          "id": "malignancy-pattern",
+          "title": "Suspected spinal metastases or metastatic spinal cord compression",
+          "commonFindings": [
+            "Known cancer with new or progressive back pain.",
+            "Constant or progressive pain, night pain or pain disturbing sleep.",
+            "Focal spinal tenderness.",
+            "Weakness, gait disturbance, sensory loss or bladder or bowel dysfunction when cord or cauda equina compression is present."
+          ],
+          "implications": [
+            "Possible spinal metastases, pathological fracture or metastatic spinal cord compression."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Whole-spine MRI."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Neurological symptoms or signs suggesting metastatic spinal cord compression.",
+              "Known cancer with features suggesting spinal metastases."
+            ],
+            "guidance": [
+              "Ensure access to urgent MRI within 24 hours for suspected metastatic spinal cord compression.",
+              "Suspected spinal metastases without cord-compression features generally require MRI within 1 week."
+            ],
+            "references": [
+              "NICE-NG234"
+            ]
+          },
+          "importantLimitation": "A normal neurological examination does not exclude early spinal metastases.",
+          "references": [
+            "NICE-NG234"
+          ]
+        },
+        {
+          "id": "spinal-infection-pattern",
+          "title": "Suspected spinal infection",
+          "commonFindings": [
+            "Constant or progressive pain.",
+            "Focal spinal tenderness.",
+            "Fever or systemic illness may be present but can be absent.",
+            "Relevant infection risk factors or recent spinal procedure."
+          ],
+          "implications": [
+            "Possible discitis, vertebral osteomyelitis or spinal epidural abscess."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Urgent spinal MRI through the hospital pathway."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Systemic illness, infection risk or neurological deficit."
+            ],
+            "guidance": [
+              "Suspected infection is outside the routine non-specific low-back-pain pathway."
+            ],
+            "references": [
+              "NICE-NG59"
+            ]
+          },
+          "importantLimitation": "A normal temperature or early normal plain X-ray does not exclude spinal infection.",
+          "references": [
+            "NICE-NG59"
+          ]
+        },
+        {
+          "id": "hip-pathology-pattern",
+          "title": "Hip pathology presenting as back or buttock pain",
+          "commonFindings": [
+            "Groin, buttock or anterior-thigh pain.",
+            "Reduced or painful hip internal rotation.",
+            "Pain reproduced more by hip than lumbar movement.",
+            "Difficulty weight-bearing with a normal lumbar neurological examination."
+          ],
+          "implications": [
+            "Consider hip osteoarthritis, occult fracture or acute joint pathology."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Urgent hip X-ray when fracture is suspected; further imaging if suspicion persists despite normal X-ray."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Trauma, inability to weight-bear, shortening or external rotation."
+            ],
+            "guidance": [],
+            "references": []
+          }
+        },
+        {
+          "id": "renal-urinary-pattern",
+          "title": "Renal or urinary source",
+          "commonFindings": [
+            "Flank or loin pain rather than central lumbar pain.",
+            "Renal-angle tenderness.",
+            "Haematuria, urinary symptoms, fever or vomiting.",
+            "Normal lower-limb neurological examination."
+          ],
+          "implications": [
+            "Consider renal colic, pyelonephritis or urinary obstruction."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Follow the renal or urinary imaging pathway rather than spinal imaging."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Fever or rigors, anuria, solitary kidney, renal impairment or uncontrolled symptoms."
+            ],
+            "guidance": [],
+            "references": []
+          }
+        },
+        {
+          "id": "abdominal-vascular-pattern",
+          "title": "Abdominal or vascular source",
+          "commonFindings": [
+            "Back pain with abdominal pain, collapse, hypotension, pallor or diaphoresis.",
+            "Abdominal tenderness or pulsatile mass.",
+            "Reduced or unequal pulses, or a cold pale limb.",
+            "Pain not reliably reproduced by spinal movement."
+          ],
+          "implications": [
+            "Consider abdominal aortic aneurysm, dissection, acute limb ischaemia or other abdominal pathology."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [
+              "Emergency vascular or abdominal imaging through the receiving-hospital pathway."
+            ],
+            "urgency": "immediate",
+            "keyTriggers": [
+              "Collapse, haemodynamic compromise, pulsatile mass or limb ischaemia. "
+            ],
+            "guidance": [],
+            "references": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "intro": "Use the standard emergency statement, then add the diagnosis-specific warning features.",
+      "items": [
+        {
+          "id": "back-pain-safety-netting",
+          "title": "Back pain",
+          "safetyNetting": [
+            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
+            "Seek urgent reassessment for new difficulty passing urine, urinary retention or incontinence; loss of bowel control; saddle or genital numbness; new or worsening leg weakness; bilateral leg symptoms; inability to walk; fever or rigors; or rapidly worsening or uncontrolled pain."
+          ],
+          "importantLimitation": "Safety-netting does not make discharge appropriate when serious pathology has not been adequately excluded."
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG59",
+    "NICE-NG127",
+    "NICE-NG41",
+    "NICE-NG234"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "status": "active",
+  "attachments": []
+}

@@ -1,0 +1,649 @@
+{
+  "id": "acute-kidney-injury-assessment",
+  "title": "Acute Kidney Injury Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for recognising acute kidney injury, comparing renal function with baseline, identifying the likely cause, assessing fluid status and complications, and selecting an appropriate monitoring or referral pathway.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide after immediate ABC concerns have been addressed. Confirm that the creatinine change represents acute kidney injury, identify reversible causes and complications, and determine who can be monitored safely outside hospital.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Whether acute kidney injury criteria are met by creatinine change or urine output, rather than interpreting the current eGFR in isolation.",
+            "The most reliable previous creatinine, the time between samples and the direction and speed of change.",
+            "Oliguria: urine output below 0.5 mL/kg/hour, including duration and whether output has been measured reliably.",
+            "Hypovolaemia, sepsis, urinary obstruction, cardiorenal congestion and exposure to kidney-injuring medicines or toxins.",
+            "Hyperkalaemia, metabolic acidosis, pulmonary oedema, uraemic complications or other evidence that renal replacement therapy may be required.",
+            "Stage 3 acute kidney injury, renal transplant, chronic kidney disease stage 4 or 5, an unclear cause or inadequate response to initial treatment.",
+            "A documented monitoring plan, medication plan, responsible clinician and repeat-blood timeframe before community management is selected."
+          ],
+          "references": [
+            "NICE-NG148"
+          ],
+          "importantLimitation": "A low eGFR during an acute creatinine rise does not accurately describe stable chronic kidney function. Diagnose and stage acute kidney injury from change in creatinine and urine output."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "History prompts",
+      "type": "prompt-list",
+      "intro": "Establish the renal trajectory, likely precipitant, urine output, medication exposure and whether the patient can be monitored safely.",
+      "items": [
+        {
+          "id": "renal-trajectory",
+          "title": "Renal trajectory and previous results",
+          "mustConfirmOrExclude": [
+            "Current creatinine, urea, potassium, bicarbonate, sodium and eGFR.",
+            "Previous creatinine values with exact dates, including the most recent stable baseline where available.",
+            "Absolute and percentage creatinine change and whether this occurred within 48 hours or 7 days.",
+            "Previous acute kidney injury, chronic kidney disease, renal replacement therapy or nephrology follow-up.",
+            "Recent discharge, surgery, contrast exposure or an earlier abnormal result that has not been reviewed."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "intake-and-losses",
+          "title": "Intake, losses and fluid balance",
+          "mustConfirmOrExclude": [
+            "Reduced oral intake, thirst and ability to access or prepare drinks.",
+            "Vomiting, diarrhoea, fever, sweating, bleeding, high stoma output, fistula output or other ongoing losses.",
+            "Usual and current urine output, last passed urine, urine colour and whether output has fallen substantially.",
+            "Recent weight change and any available fluid-balance record.",
+            "Symptoms of fluid overload, including orthopnoea, new breathlessness, rapid weight gain, peripheral oedema or reduced exercise tolerance."
+          ],
+          "references": [
+            "NICE-NG148",
+            "NICE-CG174"
+          ]
+        },
+        {
+          "id": "urinary-obstruction-history",
+          "title": "Urinary and obstruction history",
+          "mustConfirmOrExclude": [
+            "Difficulty initiating urination, poor stream, incomplete emptying, retention, overflow leakage or suprapubic discomfort.",
+            "Anuria, flank pain, renal colic, haematuria or recurrent urinary infection.",
+            "Known prostate disease, pelvic malignancy, renal stones, ureteric stent, nephrostomy or urinary diversion.",
+            "Catheter patency, bypassing, blockage, reduced drainage or recent catheter change.",
+            "Solitary kidney, renal transplant or previous obstructive uropathy."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "infection-and-systemic-disease",
+          "title": "Infection and systemic disease",
+          "mustConfirmOrExclude": [
+            "Fever, rigors, respiratory symptoms, urinary symptoms, skin infection, abdominal symptoms or another possible infection source.",
+            "Recent hypotension, sepsis, severe illness or deteriorating early warning score.",
+            "Rash, joint symptoms, sinus symptoms, haemoptysis or other features suggesting vasculitis or multisystem disease.",
+            "Oedema, frothy urine or visible haematuria suggesting glomerular disease.",
+            "Recent muscle injury, prolonged immobilisation, seizures or dark urine suggesting rhabdomyolysis."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "medicines-and-toxins",
+          "title": "Medicines and nephrotoxic exposure",
+          "mustConfirmOrExclude": [
+            "NSAIDs, ACE inhibitors, ARBs, diuretics, aminoglycosides and other medicines that can cause or worsen kidney injury.",
+            "Trimethoprim, lithium, digoxin, metformin, SGLT2 inhibitors, anticoagulants and other medicines whose safety or dosing changes with renal impairment.",
+            "Recent antimicrobial treatment, dose, duration and susceptibility results where relevant.",
+            "Iodine-based contrast exposure within the previous week.",
+            "Over-the-counter medicines, herbal products, recreational drugs or possible overdose.",
+            "Any medicine withheld already and who authorised the change."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "comorbidity-and-community-safety",
+          "title": "Comorbidity and community safety",
+          "mustConfirmOrExclude": [
+            "Heart failure, liver disease, diabetes, vascular disease, malignancy or chronic kidney disease.",
+            "Age 65 years or over, frailty, cognitive impairment or dependence on carers for fluids and medicines.",
+            "Baseline mobility, current functional decline and ability to attend repeat blood tests.",
+            "Availability of a responsible clinician to review results and act on deterioration.",
+            "Treatment escalation plan, advance decisions and goals of care where relevant."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Complication and urgent-cause screen",
+      "type": "prompt-list",
+      "intro": "Positive findings should change disposition and trigger the appropriate acute, renal, urology or local escalation pathway.",
+      "items": [
+        {
+          "id": "hyperkalaemia",
+          "title": "Hyperkalaemia",
+          "urgentFeatures": [
+            "Potassium at a locally defined urgent threshold, a rapidly rising potassium or a result accompanied by weakness, bradycardia, palpitations or syncope.",
+            "ECG abnormalities compatible with hyperkalaemia.",
+            "Persistent hyperkalaemia despite initial management."
+          ],
+          "implications": [
+            "Requires immediate clinical review and management through the relevant JRCALC or hospital hyperkalaemia pathway."
+          ],
+          "references": [
+            "NICE-NG148"
+          ],
+          "importantLimitation": "A normal ECG does not exclude clinically important hyperkalaemia, and a haemolysed sample should be repeated urgently when the clinical risk is significant."
+        },
+        {
+          "id": "fluid-overload",
+          "title": "Fluid overload or pulmonary oedema",
+          "urgentFeatures": [
+            "New oxygen requirement, respiratory distress, orthopnoea or widespread crackles.",
+            "Rapidly increasing oedema or weight with oliguria.",
+            "Fluid overload that is not responding to medical management."
+          ],
+          "implications": [
+            "Possible indication for urgent renal or critical-care discussion, particularly when pulmonary oedema does not respond to treatment."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "acidosis-or-uraemia",
+          "title": "Metabolic acidosis or uraemic complications",
+          "urgentFeatures": [
+            "Severe or worsening metabolic acidosis.",
+            "Encephalopathy, pericarditic chest pain, unexplained bleeding, persistent vomiting or other suspected uraemic complications.",
+            "Complications not responding to medical management."
+          ],
+          "implications": [
+            "Discuss possible renal replacement therapy immediately with nephrology or critical care."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "obstruction-or-pyonephrosis",
+          "title": "Urinary obstruction or pyonephrosis",
+          "urgentFeatures": [
+            "Anuria, an obstructed solitary kidney, bilateral upper urinary tract obstruction or complications caused by obstruction.",
+            "Fever or systemic illness with suspected infected obstruction.",
+            "Palpable bladder or significant post-void residual with renal impairment."
+          ],
+          "implications": [
+            "Upper tract obstruction requires urology referral; pyonephrosis, an obstructed solitary kidney or bilateral obstruction requires immediate referral."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "shock-or-sepsis",
+          "title": "Shock, sepsis or ongoing major losses",
+          "urgentFeatures": [
+            "Hypotension, cool peripheries, prolonged capillary refill, altered consciousness or worsening early warning score.",
+            "Sepsis with oliguria or deteriorating renal function.",
+            "Uncontrolled vomiting, diarrhoea, bleeding or high-output losses."
+          ],
+          "implications": [
+            "The renal injury is part of an acute systemic illness and should not be managed as an isolated abnormal blood result."
+          ],
+          "references": [
+            "NICE-NG148",
+            "NICE-CG174"
+          ]
+        },
+        {
+          "id": "intrinsic-renal-disease",
+          "title": "Possible intrinsic renal disease",
+          "urgentFeatures": [
+            "Haematuria and proteinuria without urinary infection or catheter trauma.",
+            "Purpuric rash, pulmonary haemorrhage, systemic inflammatory features or rapidly progressive renal decline.",
+            "Acute kidney injury with no clear cause."
+          ],
+          "implications": [
+            "Possible glomerulonephritis, vasculitis or another condition needing specialist treatment; discuss with nephrology within 24 hours or sooner if clinically unstable."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "high-risk-aki",
+          "title": "High-risk acute kidney injury",
+          "urgentFeatures": [
+            "Stage 3 acute kidney injury.",
+            "Renal transplant.",
+            "Chronic kidney disease stage 4 or 5.",
+            "Inadequate response to treatment, complications or uncertainty about the cause."
+          ],
+          "implications": [
+            "Discuss management with nephrology as soon as possible and within 24 hours of detection."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Assess perfusion and congestion together. Dry mucous membranes or peripheral oedema alone do not define intravascular volume status.",
+      "items": [
+        {
+          "id": "general-and-observations",
+          "title": "General assessment and observations",
+          "howToTest": [
+            "Assess appearance, distress, alertness and evidence of systemic illness.",
+            "Record temperature, heart rate, blood pressure, respiratory rate, oxygen saturation and early warning score.",
+            "Review the trend rather than relying on one set of observations.",
+            "Assess current mobility and function compared with baseline."
+          ],
+          "normal": [
+            "Physiologically stable, alert and not systemically unwell.",
+            "Function is close to baseline."
+          ],
+          "abnormal": [
+            "Hypotension, tachycardia, tachypnoea, hypoxia, fever or altered consciousness.",
+            "New inability to stand, transfer or self-care."
+          ],
+          "implications": [
+            "Abnormal physiology or functional deterioration may indicate sepsis, hypovolaemia, fluid overload or another acute precipitant requiring hospital assessment."
+          ],
+          "mustConfirmOrExclude": [
+            "Systemic deterioration.",
+            "Shock or sepsis.",
+            "Unsafe function or inability to maintain oral intake."
+          ]
+        },
+        {
+          "id": "perfusion-and-volume-depletion",
+          "title": "Perfusion and possible volume depletion",
+          "howToTest": [
+            "Assess pulse, blood pressure, capillary refill, peripheral temperature and mental state.",
+            "Assess thirst, mucous membranes and recent intake, recognising that individual signs are nonspecific.",
+            "Measure lying and standing blood pressure when safe and clinically relevant.",
+            "Review weight change and fluid losses."
+          ],
+          "normal": [
+            "Warm peripheries, capillary refill 2 seconds or less and no symptomatic postural fall.",
+            "No history of significant intake deficit or ongoing losses."
+          ],
+          "abnormal": [
+            "Systolic blood pressure below 100 mmHg, heart rate above 90 beats/minute, capillary refill above 2 seconds or cold peripheries.",
+            "Postural symptoms or a systolic fall of at least 20 mmHg or diastolic fall of at least 10 mmHg after standing.",
+            "Marked thirst, poor intake or ongoing losses."
+          ],
+          "implications": [
+            "Supports possible hypovolaemia when findings form a consistent clinical pattern.",
+            "Fluid treatment requires reassessment and caution in heart failure, advanced kidney disease or liver disease."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG136"
+          ],
+          "importantLimitation": "No single bedside sign accurately confirms dehydration or predicts fluid responsiveness."
+        },
+        {
+          "id": "congestion-and-overload",
+          "title": "Congestion and fluid overload",
+          "howToTest": [
+            "Ask about orthopnoea, paroxysmal nocturnal dyspnoea and rapid weight gain.",
+            "Assess respiratory effort, oxygen saturation and lung fields for crackles.",
+            "Assess jugular venous pressure where competent, peripheral oedema and sacral oedema.",
+            "Compare current weight with baseline where available."
+          ],
+          "normal": [
+            "No new breathlessness, crackles, raised JVP or rapidly increasing oedema."
+          ],
+          "abnormal": [
+            "Orthopnoea, hypoxia, crackles, raised JVP, rapidly increasing oedema or weight gain."
+          ],
+          "implications": [
+            "Acute kidney injury may be associated with cardiorenal congestion; automatic fluid administration may worsen pulmonary oedema."
+          ],
+          "urgentFeatures": [
+            "Respiratory distress.",
+            "New oxygen requirement.",
+            "Pulmonary oedema with oliguria."
+          ]
+        },
+        {
+          "id": "urine-output-and-bladder",
+          "title": "Urine output and bladder assessment",
+          "howToTest": [
+            "Establish last urine output and quantify output over time where possible.",
+            "Inspect catheter tubing and drainage bag for kinks, blockage, bypassing or unexpectedly low output.",
+            "Palpate or percuss for a distended bladder where appropriate.",
+            "Use a bladder scanner when available, within scope and likely to change management."
+          ],
+          "normal": [
+            "Urine output is maintained and there is no evidence of retention or catheter obstruction."
+          ],
+          "abnormal": [
+            "Urine output below 0.5 mL/kg/hour, anuria, palpable bladder, high residual volume or blocked catheter."
+          ],
+          "implications": [
+            "Oliguria supports acute kidney injury severity and may indicate hypoperfusion, intrinsic renal injury or obstruction.",
+            "Lower urinary tract obstruction may be reversible but does not exclude simultaneous upper tract obstruction."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "abdominal-and-renal",
+          "title": "Abdominal and renal examination",
+          "howToTest": [
+            "Assess for suprapubic fullness or tenderness.",
+            "Assess renal angles for tenderness when infection or obstruction is suspected.",
+            "Assess the abdomen for masses, tenderness, distension or an alternative acute process.",
+            "Review stoma, fistula, drains or wounds where relevant and quantify losses."
+          ],
+          "normal": [
+            "No bladder distension, renal-angle tenderness or concerning abdominal findings."
+          ],
+          "abnormal": [
+            "Distended bladder, renal-angle tenderness, abdominal mass, significant tenderness or high-output losses."
+          ],
+          "implications": [
+            "May identify urinary retention, pyelonephritis, obstruction or an abdominal cause of fluid loss."
+          ]
+        },
+        {
+          "id": "urinalysis",
+          "title": "Urinalysis",
+          "howToTest": [
+            "Test urine for blood, protein, leucocytes, nitrites and glucose as soon as acute kidney injury is suspected or detected.",
+            "Interpret the dipstick alongside symptoms, catheter status and microscopy or culture where indicated.",
+            "Document the result and the action taken."
+          ],
+          "normal": [
+            "No blood or significant protein and no pattern supporting infection."
+          ],
+          "abnormal": [
+            "Haematuria and proteinuria without urinary infection or catheter trauma.",
+            "Leucocytes or nitrites with compatible urinary or systemic symptoms.",
+            "Marked glycosuria or ketonuria requiring metabolic assessment."
+          ],
+          "implications": [
+            "Haematuria plus proteinuria without another explanation raises concern for acute nephritis and requires nephrology consideration."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "skin-and-systemic-examination",
+          "title": "Skin and multisystem examination",
+          "howToTest": [
+            "Inspect for rash, purpura, cellulitis, pressure injury and signs of infection.",
+            "Assess joints and upper respiratory or pulmonary features where vasculitis is possible.",
+            "Look for bruising or bleeding where anticoagulants may be accumulating.",
+            "Assess muscles for tenderness or swelling when rhabdomyolysis is possible."
+          ],
+          "normal": [
+            "No rash, purpura, infection source or multisystem features."
+          ],
+          "abnormal": [
+            "Purpura, haemoptysis, inflammatory joint features, significant infection or muscle injury."
+          ],
+          "implications": [
+            "May indicate vasculitis, glomerulonephritis, sepsis, rhabdomyolysis or drug toxicity rather than uncomplicated volume depletion."
+          ]
+        },
+        {
+          "id": "medication-review",
+          "title": "Medication review",
+          "howToTest": [
+            "Reconcile prescribed, over-the-counter and recently stopped medicines.",
+            "Identify medicines that may have precipitated kidney injury or now require review because renal function has changed.",
+            "Check timing of last doses and whether the patient can understand and follow a temporary medication plan.",
+            "Confirm who will restart or permanently review any withheld medicine."
+          ],
+          "normal": [
+            "No clear nephrotoxic exposure and medicines are appropriate for current renal function."
+          ],
+          "abnormal": [
+            "Recent NSAID use, interacting medicines, dose accumulation risk or an unsafe unmonitored sick-day medication plan."
+          ],
+          "implications": [
+            "Medication changes should be individualised and documented; avoid blanket stopping without considering the indication, fluid state and follow-up."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-examination-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Patterns support causal reasoning but do not independently prove the cause of acute kidney injury.",
+      "items": [
+        {
+          "id": "volume-depletion-pattern",
+          "title": "Likely hypovolaemic or pre-renal pattern",
+          "commonFindings": [
+            "Reduced intake or significant gastrointestinal, stoma, fistula or insensible losses.",
+            "Thirst, postural symptoms, tachycardia, low blood pressure, cool peripheries or delayed capillary refill.",
+            "Reduced urine output without evidence of congestion or obstruction.",
+            "Creatinine improves after the cause and circulating volume are corrected."
+          ],
+          "implications": [
+            "Supports reduced renal perfusion, but ongoing reassessment is required and fluid must be used cautiously when cardiac or renal reserve is limited."
+          ],
+          "references": [
+            "NICE-NG148",
+            "NICE-CG174"
+          ],
+          "importantLimitation": "A raised urea-to-creatinine ratio, dry mouth or concentrated urine is not sufficiently specific to establish the diagnosis alone."
+        },
+        {
+          "id": "sepsis-associated-pattern",
+          "title": "Sepsis-associated acute kidney injury",
+          "commonFindings": [
+            "Infection symptoms or source with fever, hypotension, tachypnoea, altered cognition or deteriorating observations.",
+            "Oliguria or rising creatinine during systemic illness.",
+            "Volume status may be complex and can change during treatment."
+          ],
+          "implications": [
+            "Treat as acute systemic illness and follow the relevant infection and sepsis pathway rather than managing the laboratory abnormality alone."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "medication-associated-pattern",
+          "title": "Medication-associated renal deterioration",
+          "commonFindings": [
+            "Recent NSAID, ACE inhibitor, ARB, diuretic, aminoglycoside, contrast or other relevant exposure.",
+            "Concurrent hypovolaemia, infection or heart failure.",
+            "No single alternative cause fully explains the change."
+          ],
+          "implications": [
+            "Review the indication, recent fluid state, interactions and renal dosing; document any withholding and the restart plan."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "obstructive-pattern",
+          "title": "Possible post-renal obstruction",
+          "commonFindings": [
+            "Anuria, fluctuating urine output, retention symptoms, blocked catheter, hydronephrosis risk or known urological disease.",
+            "Palpable bladder, high residual volume, flank pain or solitary kidney.",
+            "No clear alternative cause or failure to improve after initial treatment."
+          ],
+          "implications": [
+            "Relieve lower tract obstruction where appropriate and use the urgent urology and imaging pathway for suspected upper tract obstruction."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Ultrasound of the urinary tract."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "No identified cause of acute kidney injury.",
+              "Risk of urinary tract obstruction.",
+              "Anuria or obstructive symptoms."
+            ],
+            "guidance": [
+              "Offer urgent urinary tract ultrasound within 24 hours when the cause is not identified or obstruction risk is present.",
+              "Do not routinely offer ultrasound when the cause has been identified and obstruction is not suspected."
+            ],
+            "references": [
+              "NICE-NG148"
+            ]
+          },
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "pyonephrosis-pattern",
+          "title": "Possible infected obstructed kidney",
+          "commonFindings": [
+            "Acute kidney injury with fever or systemic illness and flank pain, obstruction risk or hydronephrosis history.",
+            "Possible anuria, solitary kidney or urinary instrumentation."
+          ],
+          "implications": [
+            "Pyonephrosis is a time-critical infected obstruction requiring immediate imaging and urology involvement."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "yes",
+            "preferredImaging": [
+              "Immediate ultrasound of the urinary tract."
+            ],
+            "urgency": "immediate",
+            "keyTriggers": [
+              "Suspected pyonephrosis in a person with acute kidney injury."
+            ],
+            "guidance": [
+              "Offer urinary tract ultrasound within 6 hours of assessment and refer immediately through the urology pathway."
+            ],
+            "references": [
+              "NICE-NG148"
+            ]
+          },
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "cardiorenal-congestion-pattern",
+          "title": "Cardiorenal or congested pattern",
+          "commonFindings": [
+            "Heart failure history with orthopnoea, crackles, raised JVP, oedema or rapid weight gain.",
+            "Rising creatinine with reduced effective renal perfusion or during diuretic treatment.",
+            "The patient may be oedematous but still have impaired renal perfusion."
+          ],
+          "implications": [
+            "Avoid automatic fluid administration; assess congestion, perfusion, treatment response and the need for specialist heart-failure or renal advice."
+          ],
+          "references": [
+            "NICE-NG148",
+            "NICE-NG106"
+          ]
+        },
+        {
+          "id": "intrinsic-renal-pattern",
+          "title": "Possible intrinsic renal disease",
+          "commonFindings": [
+            "Haematuria and proteinuria without urinary infection or catheter trauma.",
+            "Rash, pulmonary symptoms, oedema, hypertension or systemic inflammatory features.",
+            "No clear haemodynamic, medication or obstructive explanation."
+          ],
+          "implications": [
+            "Possible nephritis, glomerulonephritis, vasculitis or interstitial disease; discuss with nephrology within 24 hours or immediately if unstable."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "chronic-kidney-disease-pattern",
+          "title": "Stable chronic kidney disease rather than acute kidney injury",
+          "commonFindings": [
+            "Creatinine and eGFR are similar to several previous stable results.",
+            "No qualifying acute creatinine rise and no new oliguria.",
+            "No acute precipitant or complication."
+          ],
+          "implications": [
+            "Manage chronic kidney disease according to the appropriate pathway, while recognising that a person with CKD can still develop superimposed acute kidney injury."
+          ],
+          "importantLimitation": "A single old result or an assumed baseline is insufficient to exclude acute kidney injury."
+        },
+        {
+          "id": "community-monitoring-pattern",
+          "title": "Potentially suitable for monitored community management",
+          "commonFindings": [
+            "Clear and reversible cause with prompt clinical improvement.",
+            "No urgent complication, obstruction concern, stage 3 acute kidney injury, renal transplant or advanced chronic kidney disease.",
+            "Oral intake and urine output are adequate or improving.",
+            "A named clinician will review repeat bloods, medicines and symptoms within a clinically appropriate timeframe.",
+            "The patient and carers understand the escalation plan and can obtain help."
+          ],
+          "implications": [
+            "Community management is a pathway decision requiring active monitoring, not simply discharge because observations are normal."
+          ],
+          "references": [
+            "NICE-NG148"
+          ],
+          "importantLimitation": "Normal observations do not make an unmonitored rising creatinine safe."
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "intro": "Use the standard emergency statement, then add renal and cause-specific warning features and the agreed repeat-test plan.",
+      "items": [
+        {
+          "id": "aki-safety-netting",
+          "title": "Acute kidney injury",
+          "safetyNetting": [
+            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
+            "Seek urgent reassessment for passing very little or no urine; worsening breathlessness, orthopnoea or rapidly increasing swelling; new confusion or marked drowsiness; persistent vomiting; severe weakness or palpitations; fever or rigors; flank pain with systemic illness; or inability to maintain fluid intake.",
+            "Attend the agreed repeat blood test and clinical review. Confirm who will check the result and what to do if the appointment or result review does not occur."
+          ],
+          "importantLimitation": "Safety-netting does not make discharge appropriate without a reliable monitoring, medication and result-review plan.",
+          "references": [
+            "NICE-NG148"
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "status": "active",
+  "attachments": []
+}

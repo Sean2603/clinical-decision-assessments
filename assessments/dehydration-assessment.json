@@ -1,0 +1,573 @@
+{
+  "id": "dehydration-assessment",
+  "title": "Dehydration Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing reduced fluid intake or fluid losses, distinguishing water deficit from circulatory volume depletion, identifying complications and fluid-overload risk, and selecting an appropriate oral, community or hospital pathway.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide to assess the cause, severity and consequences of fluid deficit. Dehydration and hypovolaemia overlap but are not interchangeable.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Whether the main problem is reduced total-body water, reduced circulating volume, both, or an alternative condition.",
+            "The duration and quantity of reduced intake and all ongoing losses, including vomiting, diarrhoea, fever, high stoma output, bleeding and diuresis.",
+            "Evidence of impaired perfusion: hypotension, tachycardia, prolonged capillary refill, cold peripheries, altered cognition or reduced urine output.",
+            "Acute kidney injury, sodium disturbance, hyperglycaemic emergency or another metabolic complication.",
+            "Heart failure, advanced kidney disease, liver disease or oedema that increases the risk of inappropriate fluid administration.",
+            "Why the patient cannot maintain intake, including dysphagia, nausea, delirium, dependence, access problems, neglect or medication effects.",
+            "A clear replacement, monitoring and reassessment plan with a named responsible clinician."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG148"
+          ],
+          "importantLimitation": "Dry mouth, skin turgor and concentrated urine are individually nonspecific, particularly in older people. Diagnose clinically from the history, perfusion, fluid balance, weight and laboratory trend."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "History prompts",
+      "type": "prompt-list",
+      "intro": "Quantify intake and losses, establish the reason for poor intake and identify patients at risk of renal, electrolyte or functional deterioration.",
+      "items": [
+        {
+          "id": "intake-history",
+          "title": "Fluid intake and access",
+          "mustConfirmOrExclude": [
+            "Usual fluid intake and estimated intake over the previous 24 to 72 hours.",
+            "Thirst, dry mouth, nausea, early satiety or aversion to fluids.",
+            "Ability to reach, prepare, hold and swallow drinks independently.",
+            "Dependence on carers and whether drinks have actually been offered and consumed.",
+            "Environmental factors, heat exposure, fever or increased respiratory losses.",
+            "Alcohol intake and drinks with high sugar or caffeine content where relevant."
+          ],
+          "references": [
+            "NICE-CG174"
+          ]
+        },
+        {
+          "id": "losses-history",
+          "title": "Ongoing fluid losses",
+          "mustConfirmOrExclude": [
+            "Frequency, duration and estimated volume of vomiting or diarrhoea.",
+            "Stoma, fistula, drain or nasogastric losses and change from usual output.",
+            "Polyuria, glycosuria, osmotic diuresis or increased diuretic effect.",
+            "Fever, sweating or prolonged tachypnoea.",
+            "Bleeding, melaena, haematemesis or other concealed volume loss.",
+            "Whether losses are continuing and can be managed in the current setting."
+          ],
+          "references": [
+            "NICE-CG174"
+          ]
+        },
+        {
+          "id": "urine-and-renal-history",
+          "title": "Urine output and renal risk",
+          "mustConfirmOrExclude": [
+            "Last passed urine, frequency, volume and change from usual output.",
+            "Oliguria below 0.5 mL/kg/hour or anuria.",
+            "Dark urine, haematuria, dysuria, retention symptoms or catheter problems.",
+            "Previous acute kidney injury, chronic kidney disease, renal transplant or solitary kidney.",
+            "Recent creatinine, urea, sodium, potassium and bicarbonate results."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "symptoms-and-functional-change",
+          "title": "Symptoms and functional change",
+          "mustConfirmOrExclude": [
+            "Dizziness on standing, presyncope, syncope, weakness or falls.",
+            "New confusion, slow responses, drowsiness or delirium.",
+            "Reduced mobility, inability to transfer or inability to perform usual self-care.",
+            "Headache, muscle cramps, palpitations or severe lethargy suggesting electrolyte disturbance.",
+            "Breathlessness, orthopnoea, swelling or rapid weight gain suggesting fluid overload rather than simple depletion."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG136"
+          ]
+        },
+        {
+          "id": "cause-and-comorbidity",
+          "title": "Underlying cause and comorbidity",
+          "mustConfirmOrExclude": [
+            "Infection, fever, pain, constipation, urinary retention or another illness reducing intake.",
+            "Diabetes and symptoms of marked hyperglycaemia or ketoacidosis.",
+            "Heart failure, kidney disease, liver disease or adrenal disease.",
+            "Dysphagia, stroke, Parkinson disease, dementia, depression or oral and dental problems.",
+            "Frailty, recent hospital discharge, bereavement, social isolation or carer breakdown."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "medication-history",
+          "title": "Medication review",
+          "mustConfirmOrExclude": [
+            "Diuretics, ACE inhibitors, ARBs, NSAIDs and medicines that may worsen kidney injury during volume depletion.",
+            "SGLT2 inhibitors, insulin and other glucose-lowering medicines.",
+            "Laxatives, sedatives, anticholinergics and medicines causing nausea or reduced alertness.",
+            "Recent medication changes or dosing errors.",
+            "Whether a temporary medication plan is required and who will review and restart treatment."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Complication and alternative-cause screen",
+      "type": "prompt-list",
+      "intro": "Positive findings should change disposition and trigger the relevant acute or specialty pathway.",
+      "items": [
+        {
+          "id": "hypovolaemic-shock",
+          "title": "Hypovolaemia with impaired perfusion",
+          "urgentFeatures": [
+            "Systolic blood pressure below 100 mmHg, heart rate above 90 beats/minute, respiratory rate above 20 breaths/minute, capillary refill above 2 seconds or cold peripheries.",
+            "Collapse, altered consciousness, severe postural symptoms or worsening early warning score.",
+            "Ongoing major losses or bleeding."
+          ],
+          "implications": [
+            "Possible urgent fluid-resuscitation requirement; use the relevant emergency and hospital pathway with close reassessment."
+          ],
+          "references": [
+            "NICE-CG174"
+          ]
+        },
+        {
+          "id": "acute-kidney-injury",
+          "title": "Acute kidney injury or oliguria",
+          "urgentFeatures": [
+            "Creatinine rise meeting acute kidney injury criteria.",
+            "Urine output below 0.5 mL/kg/hour or anuria.",
+            "Hyperkalaemia, acidosis, fluid overload or uraemic features."
+          ],
+          "implications": [
+            "Use the acute kidney injury assessment and monitoring pathway; do not treat dehydration without reviewing renal complications and obstruction."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "sodium-or-metabolic-disturbance",
+          "title": "Sodium or metabolic disturbance",
+          "urgentFeatures": [
+            "Marked hypernatraemia or hyponatraemia, especially with neurological symptoms.",
+            "Severe hyperglycaemia, ketones, acidosis or suspected hyperosmolar hyperglycaemic state.",
+            "Seizure, marked drowsiness, confusion or focal neurological symptoms."
+          ],
+          "implications": [
+            "Fluid type and correction rate require diagnosis-specific management and laboratory monitoring; avoid unsupervised rapid correction."
+          ]
+        },
+        {
+          "id": "sepsis-or-serious-illness",
+          "title": "Sepsis or serious underlying illness",
+          "urgentFeatures": [
+            "Fever, rigors, hypotension, tachypnoea, hypoxia or altered cognition.",
+            "Abdominal pain, peritonism, gastrointestinal bleeding or severe uncontrolled symptoms.",
+            "Rapid functional decline without a clear benign explanation."
+          ],
+          "implications": [
+            "Dehydration may be secondary to a serious acute illness and should not become the final diagnosis without identifying the cause."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "fluid-overload-risk",
+          "title": "Fluid overload or high-risk fluid administration",
+          "urgentFeatures": [
+            "Orthopnoea, new oxygen requirement, crackles, raised JVP or rapidly increasing oedema.",
+            "Advanced heart failure, kidney disease or liver disease with uncertain volume status.",
+            "Breathlessness or deterioration during oral or intravenous replacement."
+          ],
+          "implications": [
+            "Stop and reassess fluid treatment; specialist input or monitored treatment may be required."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG106"
+          ]
+        },
+        {
+          "id": "unsafe-swallow-or-access",
+          "title": "Unsafe swallow or inability to maintain intake",
+          "urgentFeatures": [
+            "Coughing, choking, wet voice or recurrent aspiration with fluids.",
+            "Persistent vomiting or inability to retain oral fluids.",
+            "Delirium, severe weakness or dependence without reliable assistance.",
+            "Possible neglect, safeguarding concern or unavailable essential care."
+          ],
+          "implications": [
+            "Oral hydration advice is unsafe or insufficient; arrange the appropriate swallowing, medical, social-care or safeguarding pathway."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Combine history, perfusion, congestion, intake and output, weight and laboratory trends. Reassess after any intervention.",
+      "items": [
+        {
+          "id": "general-and-observations",
+          "title": "General assessment and observations",
+          "howToTest": [
+            "Assess alertness, distress, speech, ability to engage and evidence of acute illness.",
+            "Record temperature, heart rate, blood pressure, respiratory rate, oxygen saturation and early warning score.",
+            "Compare with previous observations and baseline function."
+          ],
+          "normal": [
+            "Alert, physiologically stable and functionally near baseline."
+          ],
+          "abnormal": [
+            "Hypotension, tachycardia, tachypnoea, fever, hypoxia or altered consciousness.",
+            "New inability to mobilise, transfer or self-care."
+          ],
+          "implications": [
+            "Abnormal physiology or function may indicate impaired perfusion, infection, electrolyte disturbance or another acute cause."
+          ]
+        },
+        {
+          "id": "perfusion-assessment",
+          "title": "Perfusion assessment",
+          "howToTest": [
+            "Assess capillary refill, peripheral temperature, pulse character, blood pressure and mental state.",
+            "Look for pallor, diaphoresis and reduced urine output.",
+            "Consider passive leg raising only if competent and in a setting where a measurable haemodynamic response can be interpreted."
+          ],
+          "normal": [
+            "Warm peripheries, capillary refill 2 seconds or less and stable blood pressure."
+          ],
+          "abnormal": [
+            "Cold peripheries, capillary refill above 2 seconds, low blood pressure, tachycardia or altered cognition."
+          ],
+          "implications": [
+            "A consistent pattern supports reduced circulating volume and may require monitored fluid replacement."
+          ],
+          "references": [
+            "NICE-CG174"
+          ]
+        },
+        {
+          "id": "postural-blood-pressure",
+          "title": "Lying and standing blood pressure",
+          "howToTest": [
+            "Measure blood pressure lying down, or seated if lying measurement is impractical.",
+            "Repeat after the person has stood for at least 1 minute, provided this is safe.",
+            "Record symptoms as well as the numerical change.",
+            "If symptoms persist with a smaller fall after a seated baseline, repeat from lying when possible."
+          ],
+          "normal": [
+            "No significant blood pressure fall and no postural symptoms."
+          ],
+          "abnormal": [
+            "Systolic fall of at least 20 mmHg or diastolic fall of at least 10 mmHg after standing.",
+            "Dizziness, presyncope, weakness or inability to remain standing."
+          ],
+          "implications": [
+            "Review likely causes including medication, volume loss, autonomic dysfunction and prolonged immobility."
+          ],
+          "references": [
+            "NICE-NG136"
+          ],
+          "importantLimitation": "Postural hypotension supports a haemodynamic problem but does not establish dehydration as the cause."
+        },
+        {
+          "id": "hydration-signs",
+          "title": "Hydration-related physical signs",
+          "howToTest": [
+            "Assess thirst, oral mucosa, tongue, eyes and general appearance.",
+            "Assess skin condition but recognise reduced skin elasticity is common with ageing.",
+            "Check for recent weight loss where a reliable baseline exists."
+          ],
+          "normal": [
+            "No marked thirst or new dry mucosa and weight is close to baseline."
+          ],
+          "abnormal": [
+            "Marked thirst, very dry mouth, reduced intake and acute weight loss forming a consistent clinical pattern."
+          ],
+          "implications": [
+            "These findings support fluid deficit only when interpreted with intake, losses, perfusion and laboratory results."
+          ],
+          "importantLimitation": "Dry mucosa and poor skin turgor are not reliable standalone diagnostic tests."
+        },
+        {
+          "id": "congestion-screen",
+          "title": "Congestion and overload screen",
+          "howToTest": [
+            "Ask about breathlessness, orthopnoea, nocturnal breathlessness and weight gain.",
+            "Assess oxygen saturation, respiratory effort and lungs for crackles.",
+            "Assess JVP where competent, peripheral oedema and sacral oedema."
+          ],
+          "normal": [
+            "No signs or symptoms of pulmonary or peripheral congestion."
+          ],
+          "abnormal": [
+            "Orthopnoea, crackles, raised JVP, oedema, hypoxia or rapid weight gain."
+          ],
+          "implications": [
+            "The patient may have fluid overload or mixed intravascular depletion and congestion; avoid reflex fluid administration."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG106"
+          ]
+        },
+        {
+          "id": "urine-output",
+          "title": "Urine output and urinary assessment",
+          "howToTest": [
+            "Estimate or measure urine output and compare with usual frequency and volume.",
+            "Check catheter patency and drainage where present.",
+            "Assess for retention, dysuria, haematuria or flank pain."
+          ],
+          "normal": [
+            "Urine output maintained without retention or urinary symptoms."
+          ],
+          "abnormal": [
+            "Oliguria below 0.5 mL/kg/hour, anuria, retention or dark concentrated urine with other evidence of fluid deficit."
+          ],
+          "implications": [
+            "Reduced output may reflect hypoperfusion, acute kidney injury or obstruction and requires cause-specific assessment."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "cognition-and-function",
+          "title": "Cognition, mobility and practical ability",
+          "howToTest": [
+            "Establish baseline cognition and function from the patient and a collateral source.",
+            "Assess for new confusion, inattention, slow responses or fluctuation.",
+            "Observe sitting, standing, transfers and walking where safe.",
+            "Confirm the person can obtain, prepare, hold and swallow fluids."
+          ],
+          "normal": [
+            "Cognition and function are at baseline and oral hydration is practically achievable."
+          ],
+          "abnormal": [
+            "Delirium, marked weakness, unsafe mobility or inability to access and consume fluids."
+          ],
+          "implications": [
+            "A physiologically stable patient may still be unsafe at home if the cause of poor intake cannot be corrected or supported."
+          ],
+          "references": [
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "laboratory-review",
+          "title": "Laboratory review",
+          "howToTest": [
+            "Review sodium, potassium, urea, creatinine, bicarbonate and glucose with previous results.",
+            "Calculate the absolute and percentage creatinine change.",
+            "Review full blood count and other tests according to the suspected cause.",
+            "Plan the next sample based on severity, treatment and ongoing losses."
+          ],
+          "normal": [
+            "No important electrolyte disturbance or acute kidney injury and results are stable."
+          ],
+          "abnormal": [
+            "Acute kidney injury, hypernatraemia, hyponatraemia, potassium disturbance, acidosis or marked hyperglycaemia."
+          ],
+          "implications": [
+            "Laboratory abnormalities may determine fluid composition, monitoring frequency and disposition."
+          ],
+          "references": [
+            "NICE-NG148",
+            "NICE-CG174"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-examination-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Patterns support clinical reasoning. Always identify the cause of reduced intake or losses and assess the risk of treatment.",
+      "items": [
+        {
+          "id": "reduced-intake-pattern",
+          "title": "Reduced intake without major ongoing losses",
+          "commonFindings": [
+            "Clear period of reduced drinking due to illness, access difficulty, nausea or dependence.",
+            "Thirst or dry mouth with mild postural symptoms but preserved perfusion.",
+            "Urine output reduced but present.",
+            "No marked electrolyte disturbance, acute kidney injury or fluid-overload features."
+          ],
+          "implications": [
+            "May respond to structured oral hydration and treatment of the cause when intake is safe, achievable and actively reassessed."
+          ],
+          "references": [
+            "NICE-CG174"
+          ]
+        },
+        {
+          "id": "gastrointestinal-loss-pattern",
+          "title": "Gastrointestinal or high-output loss",
+          "commonFindings": [
+            "Vomiting, diarrhoea, high stoma or fistula output with ongoing measurable loss.",
+            "Postural symptoms, tachycardia, reduced urine output or weight loss.",
+            "Potential sodium, potassium, bicarbonate or renal abnormalities."
+          ],
+          "implications": [
+            "Replacement must account for both water and electrolyte losses, ongoing output and the ability to retain oral treatment."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "hypernatraemic-water-deficit",
+          "title": "Possible hypernatraemic water deficit",
+          "commonFindings": [
+            "Reduced access to water, impaired thirst or dependence on carers.",
+            "Neurological symptoms may occur when severe or rapidly developing.",
+            "Serum sodium is raised and treatment requires a controlled correction plan."
+          ],
+          "implications": [
+            "Requires diagnosis-specific replacement and repeat sodium monitoring; avoid rapid unsupervised correction."
+          ]
+        },
+        {
+          "id": "dehydration-with-aki",
+          "title": "Fluid deficit with acute kidney injury",
+          "commonFindings": [
+            "Reduced intake or losses with a qualifying creatinine rise or oliguria.",
+            "Possible medication contributors such as NSAIDs, ACE inhibitors, ARBs or diuretics.",
+            "Renal function and potassium require active follow-up."
+          ],
+          "implications": [
+            "Use the acute kidney injury pathway and document medication, repeat-blood and result-review responsibilities."
+          ],
+          "references": [
+            "NICE-NG148"
+          ]
+        },
+        {
+          "id": "mixed-depletion-and-congestion",
+          "title": "Mixed fluid deficit and congestion",
+          "commonFindings": [
+            "Heart failure, kidney or liver disease with oedema or crackles but poor intake, hypotension or renal deterioration.",
+            "Clinical signs appear conflicting because extravascular fluid excess can coexist with reduced effective circulating volume."
+          ],
+          "implications": [
+            "Requires cautious senior-led fluid and diuretic decision-making with close reassessment rather than automatic oral or intravenous loading."
+          ],
+          "references": [
+            "NICE-CG174",
+            "NICE-NG106"
+          ]
+        },
+        {
+          "id": "postural-hypotension-pattern",
+          "title": "Postural hypotension",
+          "commonFindings": [
+            "Dizziness or weakness on standing.",
+            "Systolic blood pressure falls by at least 20 mmHg or diastolic by at least 10 mmHg after standing.",
+            "Possible medication, autonomic, deconditioning or volume-related contributors."
+          ],
+          "implications": [
+            "Review medication and causes; use standing blood pressure for subsequent assessment where appropriate."
+          ],
+          "references": [
+            "NICE-NG136"
+          ],
+          "importantLimitation": "Postural hypotension is not synonymous with dehydration."
+        },
+        {
+          "id": "frailty-access-pattern",
+          "title": "Frailty, delirium or access-related fluid deficit",
+          "commonFindings": [
+            "Dependence on carers, cognitive impairment, reduced mobility or inability to prepare or hold drinks.",
+            "New delirium or functional decline may be the presenting feature.",
+            "The physiological deficit may recur unless the practical cause is corrected."
+          ],
+          "implications": [
+            "Treat the acute cause and establish reliable support, monitoring and safeguarding arrangements before discharge."
+          ],
+          "references": [
+            "NICE-NG56",
+            "NICE-CG103"
+          ]
+        },
+        {
+          "id": "unsafe-swallow-pattern",
+          "title": "Dysphagia or unsafe oral hydration",
+          "commonFindings": [
+            "Coughing, choking, wet voice or respiratory symptoms during drinking.",
+            "Known neurological disease or recent stroke.",
+            "Unable to maintain intake safely despite assistance."
+          ],
+          "implications": [
+            "Do not rely on standard oral hydration advice; arrange swallowing and medical assessment and use an alternative route only within an appropriate monitored plan."
+          ]
+        },
+        {
+          "id": "community-management-pattern",
+          "title": "Potentially suitable for community treatment",
+          "commonFindings": [
+            "Cause identified and reversible.",
+            "Physiology and cognition are stable and there is no important acute kidney injury, electrolyte disturbance or overload.",
+            "The person can safely drink and retain an agreed amount, or reliable assistance is in place.",
+            "Ongoing losses are controlled or can be measured and replaced.",
+            "A named service will reassess symptoms, intake, output and bloods when indicated."
+          ],
+          "implications": [
+            "Community treatment requires an active hydration and review plan rather than generic advice to drink more."
+          ],
+          "importantLimitation": "A patient who cannot access, swallow or retain fluids is not suitable for oral management simply because observations are normal."
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "intro": "Give cause-specific advice, the agreed fluid plan and the exact review arrangements.",
+      "items": [
+        {
+          "id": "dehydration-safety-netting",
+          "title": "Dehydration or fluid deficit",
+          "safetyNetting": [
+            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
+            "Seek urgent reassessment for passing very little or no urine; worsening dizziness or fainting; new confusion or severe drowsiness; inability to keep fluids down; ongoing large-volume diarrhoea, vomiting, stoma or fistula losses; blood in vomit or stool; or worsening breathlessness or swelling during fluid replacement.",
+            "Follow the agreed drinking or replacement plan and attend the arranged review or blood test. Confirm who will review the result and what to do if intake remains below target."
+          ],
+          "importantLimitation": "Safety-netting cannot compensate for an unsafe swallow, unreliable care support, ongoing uncontrolled losses or absent clinical follow-up."
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "status": "withdrawn",
+  "attachments": []
+}

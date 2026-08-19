@@ -1,0 +1,99 @@
+{
+  "id": "coagulation",
+  "title": "Coagulation",
+  "subtitle": "INR, PT, APTT, fibrinogen and DIC patterns",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "INR, PT, APTT, fibrinogen and DIC patterns",
+  "introduction": "Interpret INR/PT/APTT with indication, anticoagulant, dose timing, liver function, platelet count, fibrinogen and bleeding. INR is designed mainly to monitor warfarin and is not a universal measure of bleeding risk.",
+  "sections": [
+    {
+      "id": "core-tests",
+      "title": "Core tests",
+      "rows": [
+        {
+          "id": "inr-pt",
+          "name": "INR / PT",
+          "unit": "",
+          "referenceRange": "INR about 0.8–1.2 when not anticoagulated; warfarin target commonly 2.0–3.0 but indication-specific",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Raised by warfarin, vitamin K deficiency, liver synthetic dysfunction, DIC or factor deficiency. Direct oral anticoagulants can alter PT/INR unpredictably; a normal INR does not exclude a clinically relevant DOAC effect."
+          ],
+          "unitless": true
+        },
+        {
+          "id": "aptt",
+          "name": "APTT",
+          "unit": "",
+          "referenceRange": "Laboratory dependent",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Prolonged with unfractionated heparin, factor deficiencies/inhibitors, lupus anticoagulant or DIC. A normal APTT does not reliably exclude DOAC activity."
+          ],
+          "unitless": true
+        },
+        {
+          "id": "fibrinogen",
+          "name": "Fibrinogen",
+          "unit": "",
+          "referenceRange": "Approx. 1.5–4.0 g/L",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Low fibrinogen with prolonged PT/APTT, thrombocytopenia and bleeding supports consumption such as DIC. It can be normal or raised early because it is also an acute-phase protein."
+          ],
+          "unitless": true
+        }
+      ]
+    },
+    {
+      "id": "pattern-recognition",
+      "title": "Pattern recognition",
+      "rows": [
+        {
+          "id": "possible-dic",
+          "name": "Possible DIC",
+          "unit": "",
+          "referenceRange": "No single diagnostic value",
+          "lowInterpretation": [],
+          "highInterpretation": [],
+          "notes": [
+            "Look for falling platelets, prolonged PT and APTT, low fibrinogen, raised D-dimer, bleeding/oozing, purpura, organ dysfunction and a trigger such as sepsis, trauma, malignancy or obstetric catastrophe."
+          ],
+          "unitless": true
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Any anticoagulated patient with intracranial symptoms, haemodynamic compromise, haematemesis, melaena, major haematuria or uncontrolled bleeding.",
+    "Markedly raised INR with bleeding, or INR ≥8 even without bleeding: follow the local warfarin reversal pathway.",
+    "Possible DIC with bleeding, shock, mottling, falling platelets or organ dysfunction.",
+    "Do not delay emergency treatment because PT/APTT/INR are normal when a DOAC was taken recently."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
+    "currentScreen": "Coagulation",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "attachments": []
+}

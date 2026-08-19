@@ -1,0 +1,135 @@
+{
+  "id": "c-reactive-protein",
+  "title": "C-reactive protein",
+  "subtitle": "Inflammatory marker interpreted with timing and clinical context",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Inflammatory marker interpreted with timing and clinical context",
+  "introduction": "CRP is a non-specific marker of inflammation. It begins rising several hours after an inflammatory stimulus and may peak around 48 hours, so an early normal result does not exclude serious infection or inflammation.",
+  "sections": [
+    {
+      "id": "practical-interpretation",
+      "title": "Practical interpretation",
+      "rows": [
+        {
+          "id": "within-laboratory-range",
+          "name": "Within laboratory range",
+          "unit": "",
+          "referenceRange": "Often <5 mg/L, but use the reporting laboratory range",
+          "lowInterpretation": [
+            "Makes a substantial systemic inflammatory response less likely at that moment."
+          ],
+          "highInterpretation": [
+            "Not applicable."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "mild-elevation",
+          "name": "Mild elevation",
+          "unit": "",
+          "referenceRange": "Approximately 5–40 mg/L",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Can occur with mild inflammation, early infection, viral illness, tissue injury, obesity or chronic inflammatory disease."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "moderate-elevation",
+          "name": "Moderate elevation",
+          "unit": "",
+          "referenceRange": "Approximately 40–100 mg/L",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Supports clinically important inflammation or infection but is not diagnostic of bacterial infection."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "marked-elevation",
+          "name": "Marked elevation",
+          "unit": "",
+          "referenceRange": ">100 mg/L",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Raises concern for substantial bacterial infection, major inflammation, tissue injury or other serious pathology; interpret with the patient rather than the number alone."
+          ],
+          "notes": [],
+          "unitless": true
+        }
+      ]
+    },
+    {
+      "id": "trend-and-timing",
+      "title": "Trend and timing",
+      "rows": [
+        {
+          "id": "rising-crp",
+          "name": "Rising CRP",
+          "unit": "",
+          "referenceRange": "Compare serial results and time interval",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "May indicate evolving inflammation, inadequate source control or expected delayed peak. A rising result is not automatically treatment failure without clinical context."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "falling-crp",
+          "name": "Falling CRP",
+          "unit": "",
+          "referenceRange": "Compare serial results and clinical state",
+          "lowInterpretation": [
+            "Often supports improvement."
+          ],
+          "highInterpretation": [
+            "A falling CRP does not override deterioration, new hypoxia, hypotension, confusion or another new clinical concern."
+          ],
+          "notes": [],
+          "unitless": true
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Do not use a low CRP to discharge a patient with hypotension, new confusion, hypoxia, rigors, mottled skin, reduced urine output or rapidly progressive symptoms.",
+    "A normal or mildly raised CRP early in illness does not exclude sepsis, pneumonia, pyelonephritis, appendicitis or another serious infection.",
+    "A CRP >100 mg/L is not itself a diagnosis or an automatic indication for antibiotics; identify the source and assess physiology.",
+    "Immunosuppressed patients may have a reduced inflammatory response despite serious infection."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/blood_interpretation_screen.dart",
+    "currentScreen": "C-reactive protein",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "attachments": []
+}

@@ -1,0 +1,53 @@
+{
+  "id": "pecarn",
+  "title": "PECARN",
+  "subtitle": "Paediatric head-injury risk pathway",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "pathway-reference",
+  "typeLabel": "Hospital or imaging pathway",
+  "summary": "PECARN distinguishes very-low-risk and observation groups. It should not be reduced to one generic checklist or used outside the validated paediatric population.",
+  "population": [
+    "Separate under-2-year and age-2-or-older pathways, including mental state, skull-fracture signs, mechanism, vomiting, loss of consciousness, headache and parental assessment of behaviour."
+  ],
+  "exclusions": [
+    "Do not enter assumed normal results."
+  ],
+  "criteria": [],
+  "results": [],
+  "overrides": [
+    "Follow the applicable NICE, local emergency department or specialty pathway."
+  ],
+  "limitations": [
+    "PECARN distinguishes very-low-risk and observation groups. It should not be reduced to one generic checklist or used outside the validated paediatric population."
+  ],
+  "calculationStrategy": "none",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "HospitalToolReferenceScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "evaluation": {
+    "kind": "none",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
+  "parityCases": [],
+  "attachments": []
+}

@@ -1,0 +1,194 @@
+{
+  "id": "glasgow-coma-scale",
+  "title": "Glasgow Coma Scale",
+  "subtitle": "Consciousness assessment and trending",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Consciousness assessment",
+  "summary": "Records eye, verbal and motor responses and their total while emphasising component documentation and trend.",
+  "population": [
+    "People requiring structured consciousness assessment."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "eye-response",
+      "label": "Eye response",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "spontaneous",
+          "label": "Spontaneous",
+          "score": 4
+        },
+        {
+          "id": "to-sound",
+          "label": "To sound",
+          "score": 3
+        },
+        {
+          "id": "to-pressure",
+          "label": "To pressure",
+          "score": 2
+        },
+        {
+          "id": "none",
+          "label": "None",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "id": "verbal-response",
+      "label": "Verbal response",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "orientated",
+          "label": "Orientated",
+          "score": 5
+        },
+        {
+          "id": "confused",
+          "label": "Confused",
+          "score": 4
+        },
+        {
+          "id": "words",
+          "label": "Words",
+          "score": 3
+        },
+        {
+          "id": "sounds",
+          "label": "Sounds",
+          "score": 2
+        },
+        {
+          "id": "none",
+          "label": "None",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "id": "motor-response",
+      "label": "Motor response",
+      "description": "",
+      "inputType": "choice",
+      "unit": "",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "obeys-commands",
+          "label": "Obeys commands",
+          "score": 6
+        },
+        {
+          "id": "localises-pressure",
+          "label": "Localises pressure",
+          "score": 5
+        },
+        {
+          "id": "normal-flexion",
+          "label": "Normal flexion",
+          "score": 4
+        },
+        {
+          "id": "abnormal-flexion",
+          "label": "Abnormal flexion",
+          "score": 3
+        },
+        {
+          "id": "extension",
+          "label": "Extension",
+          "score": 2
+        },
+        {
+          "id": "none",
+          "label": "None",
+          "score": 1
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "gcs",
+      "minimumScore": 3,
+      "maximumScore": 15,
+      "label": "GCS total",
+      "interpretation": [
+        "Record the individual components and trend, not only the total."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "A fall from 15, a reduction of 2 or more points, or any new focal neurological deficit requires urgent explanation and escalation."
+  ],
+  "limitations": [
+    "Document barriers such as intubation, aphasia, deafness, language, sedation, paralysis, facial or orbital injury."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "GcsScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "evaluation": {
+    "kind": "sum",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
+  "parityCases": [
+    {
+      "id": "result-gcs",
+      "description": "Executable case for result band: GCS total.",
+      "inputs": {
+        "eye-response": "none",
+        "verbal-response": "none",
+        "motor-response": "none"
+      },
+      "expectedScore": 3,
+      "expectedResultId": "gcs"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "eye-response": "spontaneous",
+        "verbal-response": "orientated",
+        "motor-response": "obeys-commands"
+      },
+      "expectedScore": 15,
+      "expectedResultId": "gcs"
+    }
+  ],
+  "attachments": []
+}

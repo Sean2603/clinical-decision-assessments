@@ -1,0 +1,41 @@
+{
+  "id": "cefalexin",
+  "title": "Cefalexin",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "formularyGroup": "Antimicrobials",
+  "medicineType": "Antibacterial",
+  "drugClass": "First-generation cephalosporin",
+  "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
+  "updatedOn": null,
+  "changeSummary": "Added to the APUC medication formulary.",
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "UUTI (adults/children)",
+      "population": null,
+      "dose": null,
+      "duration": null,
+      "notes": []
+    }
+  ],
+  "contraindications": [],
+  "cautions": [],
+  "interactions": [],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [],
+  "pregnancyBreastfeeding": [],
+  "practicalPoints": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "isPenicillin": false,
+  "attachments": []
+}

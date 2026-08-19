@@ -1,0 +1,188 @@
+{
+  "id": "curb-65",
+  "title": "CURB-65",
+  "subtitle": "Pneumonia severity with blood urea",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Pneumonia mortality risk — requires blood urea",
+  "summary": "CURB-65 estimates pneumonia mortality risk using confusion, urea, respiratory rate, blood pressure and age.",
+  "population": [
+    "People with pneumonia as the working diagnosis and a current blood urea result."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "confusion",
+      "label": "New confusion",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "urea",
+      "label": "Urea above 7 mmol/L",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "respiratory-rate",
+      "label": "Respiratory rate 30/min or higher",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "blood-pressure",
+      "label": "Systolic BP below 90 mmHg or diastolic BP 60 mmHg or lower",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "age",
+      "label": "Age 65 years or older",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "lower",
+      "minimumScore": 0,
+      "maximumScore": 1,
+      "label": "Lower mortality-risk category",
+      "interpretation": [
+        "Hypoxia, sepsis, inability to maintain oral intake, decompensated comorbidity or unsafe home circumstances may still require admission."
+      ],
+      "actions": []
+    },
+    {
+      "id": "intermediate",
+      "minimumScore": 2,
+      "maximumScore": 2,
+      "label": "Intermediate risk",
+      "interpretation": [
+        "Hospital assessment should be considered."
+      ],
+      "actions": []
+    },
+    {
+      "id": "high",
+      "minimumScore": 3,
+      "maximumScore": 5,
+      "label": "High risk",
+      "interpretation": [
+        "Urgent hospital assessment is generally required."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Clinical and social concerns override a low score."
+  ],
+  "limitations": [
+    "Only use when pneumonia is the working diagnosis and a current urea result is available. It does not exclude pulmonary embolism, heart failure, sepsis or other causes of respiratory symptoms."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [
+    "NICE-NG250"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "Curb65Screen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "evaluation": {
+    "kind": "sum",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
+  "parityCases": [
+    {
+      "id": "result-lower",
+      "description": "Executable case for result band: Lower mortality-risk category.",
+      "inputs": {
+        "confusion": false,
+        "urea": false,
+        "respiratory-rate": false,
+        "blood-pressure": false,
+        "age": false
+      },
+      "expectedScore": 0,
+      "expectedResultId": "lower"
+    },
+    {
+      "id": "result-intermediate",
+      "description": "Executable case for result band: Intermediate risk.",
+      "inputs": {
+        "confusion": false,
+        "urea": false,
+        "respiratory-rate": false,
+        "blood-pressure": true,
+        "age": true
+      },
+      "expectedScore": 2,
+      "expectedResultId": "intermediate"
+    },
+    {
+      "id": "result-high",
+      "description": "Executable case for result band: High risk.",
+      "inputs": {
+        "confusion": false,
+        "urea": false,
+        "respiratory-rate": true,
+        "blood-pressure": true,
+        "age": true
+      },
+      "expectedScore": 3,
+      "expectedResultId": "high"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "confusion": true,
+        "urea": true,
+        "respiratory-rate": true,
+        "blood-pressure": true,
+        "age": true
+      },
+      "expectedScore": 5,
+      "expectedResultId": "high"
+    }
+  ],
+  "attachments": []
+}

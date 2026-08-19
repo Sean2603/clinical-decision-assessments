@@ -1,0 +1,87 @@
+{
+  "id": "lower-uti-pregnancy-asymptomatic",
+  "title": "Lower UTI in Pregnancy - Asymptomatic",
+  "version": "0.1.0",
+  "status": "active",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available here\n\nAsymptomatic bacteriuria in pregnancy",
+  "clinicalNotes": [
+    "Offer an immediate antibiotic prescription to pregnant women with asymptomatic bacteriuria as soon as confirmed with a repeat sample. Treat as per sensitivities.",
+    "Dipstick diagnosis is not appropriate for diagnosing asymptomatic bacteriuria in pregnancy.",
+    "Asymptomatic bacteriuria is treated with antibiotics in pregnant women because it is a risk factor for pyelonephritis and premature delivery. Clinical benefit of treating asymptomatic bacteriuria is demonstrated when it is diagnosed with two positive samples.",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions"
+  ],
+  "cautions": [
+    "Nitrofurantoin - do not use at term / use with caution in third trimester.",
+    "Trimethoprim - avoid in first trimester or if patient has low folate status or is on folate antagonist e.g. antiepileptic medication.",
+    "Pivmecillinam - the intake of pivmecillinam shortly before delivery may cause a false positive test for isovaleric acidaemia in the newborn as part of neonatal screening. It is not an empiric recommendation but it may be indicated by sensitivities. If prescribing is necessary in later pregnancy, advise the patient of the possibility of false positives in newborn bloodspot screening results."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Treatment choices when sensitivities are known in order of preference: 1st choice:",
+      "medicationId": null,
+      "displayName": "Amoxicillin capsules",
+      "dose": "500mg TDS",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "2nd choice:",
+      "medicationId": null,
+      "displayName": "Nitrofurantoin (avoid at term) capsules",
+      "dose": "100mg M/R BD",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [
+        "Normally avoid if eGFR < 45 ml/min.",
+        "If eGFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative; otherwise it is contraindicated in this group."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "3rd choice:",
+      "medicationId": null,
+      "displayName": "Cefalexin capsules:",
+      "dose": "500mg BD",
+      "route": null,
+      "frequency": null,
+      "duration": "7 days",
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Confirmed penicillin allergy in patients at term",
+      "items": [
+        "Trimethoprim 200mg BD x 7 days may be considered in true penicillin allergy at term. This is off-label - manufacturers advise avoid during pregnancy. Final decision is the clinician's with agreement of the patient."
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "aliases": [
+    "UTI",
+    "lower UTI"
+  ],
+  "system": "Genitourinary",
+  "updatedOn": null,
+  "changeSummary": "Legacy prescribing pathway metadata normalised for the current schema.",
+  "effectiveFrom": null,
+  "attachments": [],
+  "niceVisualSummary": null
+}

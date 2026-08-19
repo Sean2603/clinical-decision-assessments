@@ -1,0 +1,153 @@
+{
+  "id": "centor-criteria",
+  "title": "Centor criteria",
+  "subtitle": "Alternative acute sore-throat score",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "mode": "calculator",
+  "typeLabel": "Antibiotic decision support",
+  "summary": "Centor estimates likelihood of group A streptococcal infection and is not an airway or sepsis rule-out tool.",
+  "population": [
+    "People with acute sore throat."
+  ],
+  "exclusions": [],
+  "criteria": [
+    {
+      "id": "tonsillar-exudate",
+      "label": "Tonsillar exudate",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "tender-anterior-cervical-nodes",
+      "label": "Tender anterior cervical lymphadenopathy",
+      "description": "Painful/tender nodes at the front of the neck.",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "fever-history",
+      "label": "History of fever",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    },
+    {
+      "id": "absence-cough",
+      "label": "Absence of cough",
+      "description": "",
+      "inputType": "boolean",
+      "unit": "",
+      "scoreWhenTrue": 1,
+      "rules": [],
+      "choices": []
+    }
+  ],
+  "results": [
+    {
+      "id": "low",
+      "minimumScore": 0,
+      "maximumScore": 2,
+      "label": "Antibiotics generally not indicated",
+      "interpretation": [
+        "Antibiotics are generally not indicated."
+      ],
+      "actions": []
+    },
+    {
+      "id": "higher",
+      "minimumScore": 3,
+      "maximumScore": 4,
+      "label": "More likely to benefit",
+      "interpretation": [
+        "The patient is more likely to benefit from an immediate or back-up antibiotic, depending on clinical findings and local guidance."
+      ],
+      "actions": []
+    }
+  ],
+  "overrides": [
+    "Assess airway, hydration and deep-neck infection separately.",
+    "Follow the Northern Ireland Primary Care Antimicrobial MicroGuide."
+  ],
+  "limitations": [
+    "Do not use as a standalone prescribing instruction."
+  ],
+  "calculationStrategy": "sum",
+  "referenceIds": [
+    "NICE-NG84"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/phase_one_tools.dart",
+    "currentScreen": "CentorScreen",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "evaluation": {
+    "kind": "sum",
+    "scoreCriteria": null,
+    "requiredTrue": [],
+    "failureScore": null,
+    "failureResultId": null,
+    "groups": [],
+    "decisionRules": []
+  },
+  "parityCases": [
+    {
+      "id": "result-low",
+      "description": "Executable case for result band: Antibiotics generally not indicated.",
+      "inputs": {
+        "tonsillar-exudate": false,
+        "tender-anterior-cervical-nodes": false,
+        "fever-history": false,
+        "absence-cough": false
+      },
+      "expectedScore": 0,
+      "expectedResultId": "low"
+    },
+    {
+      "id": "result-higher",
+      "description": "Executable case for result band: More likely to benefit.",
+      "inputs": {
+        "tonsillar-exudate": false,
+        "tender-anterior-cervical-nodes": true,
+        "fever-history": true,
+        "absence-cough": true
+      },
+      "expectedScore": 3,
+      "expectedResultId": "higher"
+    },
+    {
+      "id": "maximum-score",
+      "description": "All criteria set to their highest scoring values.",
+      "inputs": {
+        "tonsillar-exudate": true,
+        "tender-anterior-cervical-nodes": true,
+        "fever-history": true,
+        "absence-cough": true
+      },
+      "expectedScore": 4,
+      "expectedResultId": "higher"
+    }
+  ],
+  "attachments": []
+}

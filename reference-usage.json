@@ -1,0 +1,420 @@
+{
+  "generated": true,
+  "references": [
+    {
+      "referenceId": "BGS-CGA",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-BITES-HUMAN-ANIMAL",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "bites-animal",
+          "title": "Bites - Animal"
+        },
+        {
+          "type": "prescribing",
+          "id": "bites-human",
+          "title": "Bites - Human"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-CG103",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-confusion-and-delirium",
+          "title": "Acute Confusion and Delirium"
+        },
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-CG147",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-CG174",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG106",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "blood-panel",
+          "id": "bnp-and-nt-probnp",
+          "title": "BNP and NT-proBNP"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG111",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "pyelonephritis-adults",
+          "title": "Pyelonephritis – Adults"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG127",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG128",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG136",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG141",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG148",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-kidney-injury-assessment",
+          "title": "Acute Kidney Injury Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        },
+        {
+          "type": "blood-panel",
+          "id": "urea-and-electrolytes",
+          "title": "Urea and electrolytes"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG158",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "perc-rule",
+          "title": "PERC rule"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "two-level-dvt-wells",
+          "title": "Two-level DVT Wells"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "two-level-pe-wells",
+          "title": "Two-level PE Wells"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG185",
+      "usedBy": [
+        {
+          "type": "blood-panel",
+          "id": "troponin",
+          "title": "Troponin"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG19",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG219",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "red-leg-assessment",
+          "title": "Red or Swollen Leg Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG232",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG234",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG249",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "dizziness-vertigo-assessment",
+          "title": "Dizziness and Vertigo Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG250",
+      "usedBy": [
+        {
+          "type": "scoring-tool",
+          "id": "curb-65",
+          "title": "CURB-65"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG41",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG5",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "acute-confusion-and-delirium",
+          "title": "Acute Confusion and Delirium"
+        },
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG56",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "comprehensive-geriatric-assessment",
+          "title": "Comprehensive Geriatric Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "dehydration-assessment",
+          "title": "Dehydration Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "falls-in-older-adults",
+          "title": "Falls in Older Adults"
+        },
+        {
+          "type": "assessment",
+          "id": "frailty-assessment",
+          "title": "Frailty Assessment"
+        },
+        {
+          "type": "assessment",
+          "id": "polypharmacy-and-medicines-related-harm",
+          "title": "Polypharmacy and Medicines-Related Harm"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG59",
+      "usedBy": [
+        {
+          "type": "assessment",
+          "id": "back-pain",
+          "title": "Back Pain Assessment"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG84",
+      "usedBy": [
+        {
+          "type": "scoring-tool",
+          "id": "centor-criteria",
+          "title": "Centor criteria"
+        },
+        {
+          "type": "scoring-tool",
+          "id": "feverpain",
+          "title": "FeverPAIN"
+        }
+      ]
+    },
+    {
+      "referenceId": "NICE-NG91",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "otitis-media-acute",
+          "title": "Otitis Media (Acute)"
+        }
+      ]
+    }
+  ]
+}

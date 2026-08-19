@@ -1,0 +1,72 @@
+{
+  "id": "dental-abscess-urgent-treatment",
+  "title": "Dental Abscess requiring urgent treatment",
+  "aliases": [
+    "dental abscess"
+  ],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Dental",
+  "category": "Dental infections in general practice",
+  "summary": "See NICE CKS Dental Abscess for full guidance",
+  "updatedOn": "2026-08-12",
+  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Advise urgent dental consultation as dental abscess is treated in the first instance using local measures to achieve drainage, with removal of the cause if possible. Medication will not eliminate the source of the infection.",
+    "Antibiotics are only recommended if there are signs of severe/spreading infection, systemic symptoms or high risk of complications e.g. patient is immunocompromised or has diabetes. Otherwise, appropriate analgesia should be the first option until a dentist can be seen.",
+    "In severe or spreading infection (lymph node involvement or systemic signs such as fever or malaise), consider concomitant treatment with metronidazole and use clinical judgement to determine if onward referral to hospital is required.",
+    "If patient has significant trismus, floor-of-mouth swelling or difficulty breathing, urgent referral to hospital is required."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "medicationId": null,
+      "displayName": "Phenoxymethylpenicillin tablets",
+      "dose": "500mg to 1000mg",
+      "route": null,
+      "frequency": "four times a day",
+      "duration": "5 days (review after 3 days)",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "medicationId": "amoxicillin",
+      "displayName": "Amoxicillin capsules",
+      "dose": "500mg to 1000mg",
+      "route": null,
+      "frequency": "three times a day",
+      "duration": "5 days (review after 3 days)",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "Adult 1st line Penicillin Allergy",
+      "medicationId": null,
+      "displayName": "Metronidazole tablets",
+      "dose": "400mg",
+      "route": null,
+      "frequency": "three times a day",
+      "duration": "5 days (review after 3 days)",
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "attachments": [],
+  "niceVisualSummary": null
+}

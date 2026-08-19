@@ -1,0 +1,98 @@
+{
+  "id": "lower-uti-non-pregnant-women-16-and-over",
+  "title": "Lower UTI Non-pregnant women aged 16 years and over",
+  "version": "0.1.0",
+  "status": "active",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available here",
+  "clinicalNotes": [
+    "Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis)",
+    "Symptoms of UTI include dysuria, frequency, suprapubic tenderness, urgency, polyuria, haematuria, fever > 38 degrees C. Prescribe empirical antibiotic treatment if symptoms are severe or 3 or more symptoms of UTI and NO vaginal discharge/irritation. Some patients may also have non-specific symptoms of infection such as abdominal pain, alteration of behaviour, delirium (confusion) or loss of diabetes control. Amoxicillin resistance is common, therefore ONLY use if culture confirms susceptibility",
+    "Female Under 65: Acute uncomplicated UTI in women <65 years often resolves in a few days without treatment. Consider chlamydia in sexually active young women. Do not routinely culture urine unless suspected pyelonephritis, failed antibiotic treatment or persistent symptoms, recurrent UTI, abnormalities of genitourinary tract, renal impairment. See Public Health England Diagnosis of urinary tract infections: quick reference guide for primary care for algorithm",
+    "A delayed script can be considered instead of immediate antibiotics if symptoms are mild and there are no risk factors for complicated infection",
+    "Dipstick tests should only be used to diagnose bacteriuria in women <65 with limited symptoms and signs (no more than two symptoms) if urine is cloudy. For under 65, refer to PHE Quick reference guide.",
+    "Dipsticks should NOT be used to diagnose UTI in older people, as diagnosis in this group should be made on the basis of urinary symptoms and signs of sepsis identified as part of a full clinical assessment For over 65s, refer to PHA decision aid.",
+    "Empiric recommendations listed are NOT suitable in upper UTI or sepsis",
+    "Self-care advice: paracetamol for pain or, if preferred and suitable, ibuprofen; advise drinking enough fluid to avoid dehydration",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions"
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st choice:",
+      "medicationId": null,
+      "displayName": "Nitrofurantoin capsules",
+      "dose": "100mg M/R BD",
+      "route": null,
+      "frequency": null,
+      "duration": "3 days",
+      "restrictions": [
+        "Normally avoid If eGFR < 45ml/min. If GFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative and treat for 5-7 days; otherwise it is contraindicated in this group."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 1,
+      "label": "Alternative if cultures known or there is a lower risk of resistance",
+      "medicationId": null,
+      "displayName": "Trimethoprim tablets",
+      "dose": "200mg BD",
+      "route": null,
+      "frequency": null,
+      "duration": "3 days",
+      "restrictions": [],
+      "notes": [
+        "A lower risk of resistance may be more likely if not used in the past 3 months, previous urine culture suggests susceptibility (but this was not used), and in younger people."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "2nd choice\nno improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable",
+      "medicationId": null,
+      "displayName": "Pivmecillinam tablets",
+      "dose": "400mg stat then 200mg TDS",
+      "route": null,
+      "frequency": null,
+      "duration": "3 days",
+      "restrictions": [
+        "(contraindicated in penicillin hypersensitivity)"
+      ],
+      "notes": [
+        "In patients at higher risk of resistance use 400mg TID for full 3 days. A higher risk of resistance may be more likely with recent use, older people, people in residential facilities, recent foreign travel, recent hospitalisation, chronic or recurrent symptomatic bacteriuria."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "3rd choice (if other options unsuitable – check availability with community pharmacy)",
+      "medicationId": null,
+      "displayName": "Fosfomycin",
+      "dose": "3g granules for oral solution 3g stat dose",
+      "route": null,
+      "frequency": null,
+      "duration": null,
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": null
+  },
+  "aliases": [
+    "UTI",
+    "lower UTI"
+  ],
+  "system": "Genitourinary",
+  "updatedOn": null,
+  "changeSummary": "Legacy prescribing pathway metadata normalised for the current schema.",
+  "effectiveFrom": null,
+  "attachments": [],
+  "niceVisualSummary": null
+}

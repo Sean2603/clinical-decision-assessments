@@ -1,0 +1,192 @@
+{
+  "id": "liver-blood-tests",
+  "title": "Liver blood tests",
+  "subtitle": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
+  "introduction": "“LFTs” contain markers of hepatocyte injury, cholestasis and synthetic function. ALT, ALP and bilirubin describe patterns of injury; albumin and INR help assess synthetic function but are influenced by other conditions.",
+  "sections": [
+    {
+      "id": "individual-tests",
+      "title": "Individual tests",
+      "rows": [
+        {
+          "id": "alt",
+          "name": "ALT",
+          "unit": "",
+          "referenceRange": "Laboratory and sex dependent; often upper limit about 35–50 IU/L",
+          "lowInterpretation": [
+            "Usually not clinically important."
+          ],
+          "highInterpretation": [
+            "Hepatocellular injury. Causes include fatty liver disease, viral hepatitis, alcohol-related injury, medicines, ischaemia and autoimmune hepatitis."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "alp",
+          "name": "ALP",
+          "unit": "",
+          "referenceRange": "Laboratory dependent; often about 30–130 IU/L",
+          "lowInterpretation": [
+            "Can occur with malnutrition, zinc deficiency, hypothyroidism or rare metabolic disorders."
+          ],
+          "highInterpretation": [
+            "Cholestasis or biliary obstruction, but also bone disease, healing fracture, pregnancy and growth. Use GGT to support hepatic origin."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "ggt",
+          "name": "GGT",
+          "unit": "",
+          "referenceRange": "Laboratory and sex dependent",
+          "lowInterpretation": [
+            "Usually not clinically important."
+          ],
+          "highInterpretation": [
+            "Supports hepatic origin of raised ALP. Can rise with alcohol, cholestasis, fatty liver and enzyme-inducing medicines; it is non-specific."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "bilirubin",
+          "name": "Bilirubin",
+          "unit": "",
+          "referenceRange": "Often <21 micromol/L",
+          "lowInterpretation": [
+            "Usually not clinically important."
+          ],
+          "highInterpretation": [
+            "Pre-hepatic haemolysis, hepatocellular dysfunction or biliary obstruction. Visible jaundice often appears around 40–60 micromol/L but varies."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "albumin",
+          "name": "Albumin",
+          "unit": "",
+          "referenceRange": "Approx. 35–50 g/L",
+          "lowInterpretation": [
+            "Chronic liver dysfunction, inflammation, malnutrition, renal or gastrointestinal protein loss, or dilution. It changes slowly and is not a sensitive marker of acute liver injury."
+          ],
+          "highInterpretation": [
+            "Usually haemoconcentration from reduced plasma volume."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "inr-prothrombin-time",
+          "name": "INR / prothrombin time",
+          "unit": "",
+          "referenceRange": "Use local range; interpret separately when taking warfarin",
+          "lowInterpretation": [
+            "Not usually clinically important."
+          ],
+          "highInterpretation": [
+            "Can indicate reduced hepatic synthesis, vitamin K deficiency, anticoagulant effect or DIC. In acute liver injury, a rising INR is an important marker of failure."
+          ],
+          "notes": [],
+          "unitless": true
+        }
+      ]
+    },
+    {
+      "id": "recognise-the-pattern",
+      "title": "Recognise the pattern",
+      "rows": [
+        {
+          "id": "hepatocellular-pattern",
+          "name": "Hepatocellular pattern",
+          "unit": "",
+          "referenceRange": "ALT rise predominates over ALP",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Consider viral, metabolic, autoimmune, drug-induced or ischaemic hepatocyte injury."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "cholestatic-pattern",
+          "name": "Cholestatic pattern",
+          "unit": "",
+          "referenceRange": "ALP rise predominates, often with GGT and bilirubin",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Consider gallstone obstruction, biliary infection, pancreatic/biliary malignancy, drug-induced cholestasis or infiltrative disease."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "mixed-pattern",
+          "name": "Mixed pattern",
+          "unit": "",
+          "referenceRange": "Both ALT and ALP substantially raised",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Consider drug injury, infection, obstruction with hepatocyte injury or another mixed hepatic process."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "isolated-bilirubin-rise",
+          "name": "Isolated bilirubin rise",
+          "unit": "",
+          "referenceRange": "Other enzymes normal or minimally changed",
+          "lowInterpretation": [
+            "Not applicable."
+          ],
+          "highInterpretation": [
+            "Consider Gilbert syndrome, haemolysis or an early/partial obstructive process; assess conjugated fraction where available."
+          ],
+          "notes": [],
+          "unitless": true
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Jaundice with fever, right-upper-quadrant pain, hypotension or new confusion: consider ascending cholangitis and urgent hospital assessment.",
+    "Acute liver injury with confusion, drowsiness, hypoglycaemia, bleeding, rising INR or metabolic acidosis: consider acute liver failure.",
+    "Very large new ALT rise, particularly into the thousands, with hypotension, overdose risk, medication change or viral symptoms.",
+    "Raised bilirubin with pale stool, dark urine, pruritus, weight loss or a palpable gallbladder requires prompt obstructive/malignancy assessment.",
+    "Albumin alone should not be used to diagnose acute liver failure; check INR, glucose, mental state and the overall clinical picture."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/blood_interpretation_screen.dart",
+    "currentScreen": "Liver blood tests",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "attachments": []
+}

@@ -1,0 +1,989 @@
+{
+  "id": "red-leg-assessment",
+  "title": "Red or Swollen Leg Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing an acutely red or swollen leg, distinguishing infection from vascular, venous, lymphatic, joint and traumatic causes, and supporting safe investigation, referral and follow-up.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, JRCALC, local DVT pathways, antimicrobial guidance or urgent escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-not-miss",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "A rapidly progressive soft-tissue infection, including necrotising infection.",
+            "Acute limb ischaemia, threatened limb perfusion or compartment syndrome.",
+            "Deep vein thrombosis and symptoms suggesting pulmonary embolism.",
+            "Septic arthritis, deep abscess, osteomyelitis or another deep infection.",
+            "A limb-threatening diabetic foot problem.",
+            "Cellulitis or erysipelas and any portal of entry.",
+            "Venous eczema, lipodermatosclerosis, lymphoedema or another non-infectious mimic.",
+            "Trauma, haematoma, superficial thrombophlebitis, gout or inflammatory arthritis.",
+            "Loss of mobility, inability to self-care or inadequate support that changes disposition."
+          ],
+          "references": [
+            "NICE-NG141",
+            "NICE-NG158",
+            "NICE-NG19",
+            "NICE-NG219",
+            "NICE-CG147"
+          ],
+          "importantLimitation": "Redness, warmth, swelling, fever, CRP and white-cell count are individually non-specific. No single finding reliably distinguishes cellulitis from DVT or another mimic."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "History prompts",
+      "type": "prompt-list",
+      "intro": "Define the pattern, time course and likely anatomical source before labelling the presentation as cellulitis.",
+      "items": [
+        {
+          "id": "distribution-time-course",
+          "title": "Distribution and time course",
+          "mustConfirmOrExclude": [
+            "Exact onset and whether symptoms developed suddenly, gradually or on a background of chronic swelling or skin change.",
+            "Unilateral or bilateral involvement.",
+            "Exact starting point and whether redness or swelling is spreading.",
+            "Localised, linear, joint-centred, gaiter-region, foot-predominant or whole-leg involvement.",
+            "Whether swelling preceded redness or redness preceded swelling.",
+            "Previous similar episodes, previous diagnosis and response to antibiotics, elevation, compression or topical treatment.",
+            "Any marked change from the patient's usual leg appearance, size, mobility or function."
+          ]
+        },
+        {
+          "id": "symptom-characteristics",
+          "title": "Symptoms and functional effect",
+          "mustConfirmOrExclude": [
+            "Pain, itch, burning, heaviness or tightness, including which symptom predominates.",
+            "Local warmth, tenderness, throbbing or pain with movement.",
+            "Fever, rigors, malaise, confusion, reduced intake or other systemic deterioration.",
+            "Pain at rest, pain on weight-bearing and ability to stand, transfer and walk.",
+            "Pain centred on a joint and restriction of active or passive movement.",
+            "Severe or rapidly escalating pain, particularly when disproportionate to visible skin changes.",
+            "Chest pain, new breathlessness, haemoptysis, syncope or collapse."
+          ],
+          "references": [
+            "NICE-NG141",
+            "NICE-NG158",
+            "NICE-NG219"
+          ]
+        },
+        {
+          "id": "skin-entry-trigger",
+          "title": "Skin breach, exposure and trigger",
+          "mustConfirmOrExclude": [
+            "Wound, ulcer, fissure, blister, pressure injury, puncture, injection, cannula site or recent procedure.",
+            "Interdigital cracking, maceration or fungal infection.",
+            "Bite, sting, new topical product, adhesive, dressing or compression garment.",
+            "Trauma, fall, direct blow, vigorous exercise or possible foreign body.",
+            "Exposure to fresh water, sea water, animal saliva or soil.",
+            "Recent travel or infection acquired outside the UK.",
+            "Purulent discharge, fluctuance or a previously drained abscess."
+          ],
+          "references": [
+            "NICE-NG141"
+          ]
+        },
+        {
+          "id": "dvt-risk-history",
+          "title": "DVT and venous thromboembolism risk",
+          "mustConfirmOrExclude": [
+            "Previous DVT or pulmonary embolism.",
+            "Active cancer or recent cancer treatment.",
+            "Recent major surgery, hospital admission or bed rest for at least 3 days.",
+            "Paralysis, paresis, plaster cast, lower-limb immobilisation or substantial reduction in mobility.",
+            "Pregnancy, postpartum state, combined hormonal contraception or hormone replacement therapy.",
+            "Long-distance travel or prolonged seated immobility.",
+            "Known thrombophilia or strong family history of venous thromboembolism.",
+            "Current anticoagulation, adherence, recent interruption and any bleeding risk."
+          ],
+          "references": [
+            "NICE-NG158"
+          ]
+        },
+        {
+          "id": "vascular-history",
+          "title": "Arterial and perfusion history",
+          "mustConfirmOrExclude": [
+            "Sudden severe limb pain or abrupt deterioration.",
+            "New coldness, pallor, mottling, numbness or weakness.",
+            "Previous peripheral arterial disease, vascular surgery, angioplasty or amputation.",
+            "Intermittent claudication or rest pain.",
+            "Diabetes, smoking, atrial fibrillation and other vascular risk factors.",
+            "Recent tight bandage, cast or compression garment."
+          ],
+          "references": [
+            "NICE-CG147"
+          ]
+        },
+        {
+          "id": "background-medication-history",
+          "title": "Background conditions and medicines",
+          "mustConfirmOrExclude": [
+            "Chronic venous insufficiency, varicose veins, venous ulceration or previous venous intervention.",
+            "Lymphoedema, lymph-node surgery, radiotherapy or recurrent cellulitis.",
+            "Diabetes, neuropathy, previous diabetic foot disease or poor glycaemic control.",
+            "Heart failure, renal disease, liver disease or chronic bilateral oedema.",
+            "Inflammatory arthritis, gout, immunosuppression or recurrent skin disease.",
+            "Anticoagulants, antiplatelets, corticosteroids, immunosuppressants and recent antibiotics.",
+            "Calcium-channel blockers or other medicines that may contribute to oedema.",
+            "Known drug allergies, renal impairment and recent renal function when antimicrobial treatment may be required."
+          ],
+          "references": [
+            "NICE-NG141",
+            "NICE-NG19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive or evolving features should change disposition and trigger JRCALC or the relevant urgent local pathway. This section identifies escalation triggers rather than reproducing emergency treatment.",
+      "items": [
+        {
+          "id": "necrotising-infection-red-flags",
+          "title": "Necrotising or rapidly progressive soft-tissue infection",
+          "urgentFeatures": [
+            "Severe pain that is disproportionate to the visible skin findings.",
+            "Rapid progression over minutes or hours.",
+            "Skin necrosis, dusky discolouration, haemorrhagic bullae or anaesthesia.",
+            "Crepitus, marked oedema beyond the erythematous margin or systemic toxicity.",
+            "Significant deterioration despite appropriate initial treatment."
+          ],
+          "implications": [
+            "Possible necrotising infection or deep soft-tissue infection; urgent hospital assessment is required."
+          ],
+          "references": [
+            "NICE-NG141"
+          ],
+          "importantLimitation": "Early necrotising infection may have limited visible skin change. Do not rely on the absence of crepitus, fever or laboratory abnormalities."
+        },
+        {
+          "id": "acute-limb-ischaemia-red-flags",
+          "title": "Acute limb ischaemia or threatened perfusion",
+          "urgentFeatures": [
+            "Sudden severe limb pain.",
+            "Cold, pale, cyanosed or mottled limb.",
+            "Absent or newly reduced pulses.",
+            "New paraesthesia, sensory loss or weakness.",
+            "Delayed capillary refill or rapidly deteriorating distal perfusion."
+          ],
+          "implications": [
+            "Possible acute limb ischaemia; follow JRCALC and the emergency vascular pathway."
+          ],
+          "references": [
+            "NICE-CG147"
+          ],
+          "importantLimitation": "Palpable pulses do not exclude more distal arterial disease, and chronic pulse deficits may complicate comparison. Interpret against the contralateral limb and baseline."
+        },
+        {
+          "id": "compartment-syndrome-red-flags",
+          "title": "Compartment syndrome",
+          "urgentFeatures": [
+            "Severe escalating pain after trauma, crush injury, reperfusion or tight immobilisation.",
+            "Pain on passive stretch.",
+            "Tense swollen compartment.",
+            "New sensory or motor deficit."
+          ],
+          "implications": [
+            "Possible compartment syndrome; immediate hospital assessment is required."
+          ],
+          "importantLimitation": "A pulse may remain present until late. Do not use preserved pulses to exclude compartment syndrome."
+        },
+        {
+          "id": "septic-joint-deep-infection-red-flags",
+          "title": "Septic arthritis, osteomyelitis or deep infection",
+          "urgentFeatures": [
+            "Acutely hot, swollen and severely painful joint with marked restriction of active and passive movement.",
+            "Deep focal tenderness, fluctuance or suspected abscess.",
+            "Exposed bone, deep ulcer or a wound that probes towards bone.",
+            "Systemic illness, immunosuppression or recent joint procedure.",
+            "Persistent or recurrent inflammation despite appropriate treatment."
+          ],
+          "implications": [
+            "Possible septic arthritis, osteomyelitis or deep abscess; urgent same-day specialist assessment is required."
+          ],
+          "references": [
+            "NICE-NG141",
+            "NICE-NG219",
+            "NICE-NG19"
+          ]
+        },
+        {
+          "id": "dvt-pe-red-flags",
+          "title": "Deep vein thrombosis or pulmonary embolism",
+          "urgentFeatures": [
+            "A clinically suspected DVT requiring the local two-level Wells, D-dimer and ultrasound pathway.",
+            "New chest pain, breathlessness, haemoptysis, syncope or collapse alongside possible DVT.",
+            "Marked whole-leg swelling, deep venous tenderness or substantial asymmetry with relevant risk factors."
+          ],
+          "implications": [
+            "Follow the local DVT pathway. Where pulmonary embolism is suspected, follow JRCALC and the relevant emergency pathway."
+          ],
+          "references": [
+            "NICE-NG158"
+          ],
+          "importantLimitation": "Cellulitis and DVT can coexist. An apparent skin infection does not remove the need for a DVT assessment when clinical suspicion remains."
+        },
+        {
+          "id": "diabetic-foot-red-flags",
+          "title": "Limb-threatening diabetic foot problem",
+          "urgentFeatures": [
+            "Diabetic foot ulceration with fever, systemic deterioration or suspected sepsis.",
+            "Ulceration with limb ischaemia.",
+            "Gangrene.",
+            "Concern for deep soft-tissue or bone infection.",
+            "Rapidly progressive infection, extensive tissue loss or new neurovascular compromise."
+          ],
+          "implications": [
+            "Use the diabetic-foot pathway. Limb-threatening or life-threatening disease requires immediate acute-service referral and notification of the multidisciplinary foot service according to local arrangements."
+          ],
+          "references": [
+            "NICE-NG19"
+          ]
+        },
+        {
+          "id": "systemic-deterioration-red-flags",
+          "title": "Systemic or functional deterioration",
+          "urgentFeatures": [
+            "Physiological instability or rapidly worsening observations.",
+            "New delirium, reduced consciousness or marked functional decline.",
+            "Unable to stand, transfer or mobilise safely.",
+            "Unable to take or retain oral medication or fluids.",
+            "Inadequate support, safeguarding concern or inability to access required treatment and review."
+          ],
+          "implications": [
+            "Disposition must account for physiological status, function, treatment access and support, even when the local leg findings initially appear uncomplicated."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Expose and compare both legs from the feet to above the knees. Interpret the findings alongside the history, observations, risk factors, progression and baseline appearance.",
+      "items": [
+        {
+          "id": "general-assessment",
+          "title": "General assessment and mobility",
+          "howToTest": [
+            "Assess overall appearance, distress, hydration and systemic illness.",
+            "Record temperature, heart rate, blood pressure, respiratory rate and oxygen saturation where clinically indicated.",
+            "Assess cognition and compare with baseline in older or frail patients.",
+            "Observe sitting, standing, transfers and walking where safe.",
+            "Assess ability to obtain, take and monitor treatment at home."
+          ],
+          "normal": [
+            "Physiologically stable and not systemically unwell.",
+            "Alert and functioning at usual baseline.",
+            "Able to transfer and mobilise safely with usual support.",
+            "Able to take oral medication and engage with follow-up."
+          ],
+          "abnormal": [
+            "Fever, hypotension, tachycardia, tachypnoea or systemic deterioration.",
+            "New confusion, reduced intake or marked functional decline.",
+            "Unable to weight-bear, transfer or mobilise safely.",
+            "Unable to take treatment or no safe follow-up arrangement."
+          ],
+          "implications": [
+            "Systemic or functional deterioration may indicate more extensive infection or another acute illness.",
+            "Unsafe mobility or inadequate support changes disposition even where no limb-threatening diagnosis is confirmed."
+          ],
+          "mustConfirmOrExclude": [
+            "Systemic illness.",
+            "Functional deterioration.",
+            "Unsafe mobility.",
+            "Barriers to safe treatment and follow-up."
+          ]
+        },
+        {
+          "id": "inspection-distribution",
+          "title": "Inspection and distribution",
+          "howToTest": [
+            "Expose both legs fully and compare colour, size, contour and chronic skin changes.",
+            "Identify the exact anatomical distribution and whether the process is unilateral or bilateral.",
+            "Determine whether the redness is diffuse, sharply demarcated, linear along a vein, centred on a joint, confined to the gaiter region or associated with a wound.",
+            "Inspect for scaling, crusting, weeping, excoriation, pigmentation, induration, varicosities, bullae, bruising, necrosis and lymphangitic streaking.",
+            "Inspect the plantar surface, heels and interdigital spaces.",
+            "Consider marking the erythematous margin with a single-use marker when cellulitis is treated and serial comparison is planned."
+          ],
+          "normal": [
+            "No acute asymmetry, expanding erythema, skin breakdown or concerning chronic skin change.",
+            "No blistering, necrosis or lymphangitic spread."
+          ],
+          "abnormal": [
+            "Expanding unilateral erythema and swelling.",
+            "Bilateral gaiter-region erythema with scaling, pigmentation or chronic oedema.",
+            "Linear erythema and tenderness following a superficial vein.",
+            "Bullae, dusky skin, necrosis or rapidly progressive discolouration.",
+            "Ulcer, wound, fissure, purulence or interdigital skin breakdown."
+          ],
+          "implications": [
+            "Diffuse warmth and tenderness with an entry point may support cellulitis.",
+            "Bilateral chronic scaling and pigmentation favour venous disease or dermatitis over bilateral cellulitis.",
+            "Linear inflammation suggests superficial thrombophlebitis.",
+            "Bullae, necrosis or rapid progression raises concern for severe or deep infection."
+          ],
+          "mustConfirmOrExclude": [
+            "Cellulitis or erysipelas.",
+            "Venous eczema or lipodermatosclerosis.",
+            "Superficial thrombophlebitis.",
+            "Necrotising or deep infection.",
+            "Portal of entry."
+          ],
+          "importantLimitation": "Erythema may be less visible on darker skin tones. Give greater weight to warmth, swelling, tenderness, texture and change from the patient's baseline."
+        },
+        {
+          "id": "palpation-temperature-tenderness",
+          "title": "Palpation, temperature and tenderness",
+          "howToTest": [
+            "Compare temperature using the backs of the hands at matching sites on both legs.",
+            "Palpate gently to identify whether tenderness is cutaneous, subcutaneous, venous, muscular, bony or joint-centred.",
+            "Assess for induration, fluctuance, crepitus and a tense compartment.",
+            "Determine whether pain is proportionate to the visible findings.",
+            "Palpate along the deep venous distribution only as part of an overall DVT assessment; do not repeatedly squeeze the calf."
+          ],
+          "normal": [
+            "No significant temperature difference.",
+            "No focal deep tenderness, fluctuance, crepitus or disproportionate pain.",
+            "Soft compartments."
+          ],
+          "abnormal": [
+            "Localised warmth and cutaneous tenderness.",
+            "Deep venous distribution tenderness.",
+            "Fluctuance suggesting a collection.",
+            "Crepitus, severe disproportionate pain or a tense compartment.",
+            "Focal bony or deep tissue tenderness."
+          ],
+          "implications": [
+            "Warmth and superficial tenderness may support cellulitis but remain non-specific.",
+            "Deep venous tenderness contributes to the DVT Wells score when DVT is suspected.",
+            "Fluctuance may indicate an abscess requiring drainage.",
+            "Disproportionate pain, crepitus or tense swelling requires urgent escalation."
+          ],
+          "mustConfirmOrExclude": [
+            "Deep vein thrombosis.",
+            "Abscess.",
+            "Necrotising infection.",
+            "Compartment syndrome.",
+            "Deep tissue or bone infection."
+          ]
+        },
+        {
+          "id": "swelling-oedema-measurement",
+          "title": "Swelling, oedema and limb measurement",
+          "howToTest": [
+            "Determine whether swelling is localised, calf-predominant, whole-leg, foot-predominant or bilateral.",
+            "Assess for pitting by applying firm pressure over a bony area for several seconds and observing for a persistent indentation.",
+            "Assess whether oedema is confined to the symptomatic leg.",
+            "When DVT is suspected, measure calf circumference at the same defined level on both legs, 10 cm below the tibial tuberosity.",
+            "Document the exact measurement site and difference rather than recording only that one calf is larger."
+          ],
+          "normal": [
+            "No clinically significant asymmetry.",
+            "No new unilateral pitting oedema.",
+            "Calf difference below 3 cm when measured correctly."
+          ],
+          "abnormal": [
+            "Calf swelling at least 3 cm greater than the asymptomatic side.",
+            "Pitting oedema confined to the symptomatic leg.",
+            "Entire leg swollen.",
+            "Chronic foot and toe swelling with skin thickening.",
+            "Bilateral dependent pitting oedema."
+          ],
+          "implications": [
+            "A calf difference of at least 3 cm, unilateral pitting oedema or whole-leg swelling contributes to the two-level DVT Wells score.",
+            "Foot and toe involvement with chronic skin thickening supports lymphoedema.",
+            "Bilateral dependent oedema suggests venous, cardiac, renal, hepatic, medication-related or immobility-related causes."
+          ],
+          "references": [
+            "NICE-NG158"
+          ],
+          "importantLimitation": "Oedema is not specific to DVT or cellulitis. Previous surgery, chronic asymmetry, lymphoedema and body habitus may limit measurement."
+        },
+        {
+          "id": "dvt-wells-assessment",
+          "title": "Two-level DVT Wells assessment",
+          "summary": "Use only when DVT is clinically suspected. Document each criterion and the alternative diagnosis considered; do not record only the total score.",
+          "howToTest": [
+            "Add 1 point for active cancer: treatment ongoing, within 6 months or palliative.",
+            "Add 1 point for paralysis, paresis or recent plaster immobilisation of a lower extremity.",
+            "Add 1 point for being bedridden for at least 3 days or major surgery within 12 weeks requiring general or regional anaesthesia.",
+            "Add 1 point for localised tenderness along the distribution of the deep venous system.",
+            "Add 1 point if the entire leg is swollen.",
+            "Add 1 point if calf swelling is at least 3 cm greater than the asymptomatic side, measured 10 cm below the tibial tuberosity.",
+            "Add 1 point for pitting oedema confined to the symptomatic leg.",
+            "Add 1 point for collateral superficial veins that are non-varicose.",
+            "Add 1 point for previously documented DVT.",
+            "Subtract 2 points if an alternative diagnosis is at least as likely as DVT.",
+            "Classify 2 points or more as DVT likely and 1 point or less as DVT unlikely."
+          ],
+          "normal": [
+            "DVT unlikely: Wells score 1 point or less, followed by the local D-dimer pathway."
+          ],
+          "abnormal": [
+            "DVT likely: Wells score 2 points or more, followed by the local proximal leg vein ultrasound pathway."
+          ],
+          "implications": [
+            "The score determines the diagnostic pathway; it does not diagnose or exclude DVT.",
+            "Use the local arrangements for D-dimer, imaging, interim anticoagulation, renal assessment and follow-up responsibility."
+          ],
+          "urgentFeatures": [
+            "New symptoms suggesting pulmonary embolism.",
+            "Delay in access to the required DVT diagnostic pathway.",
+            "High bleeding risk or contraindication when interim anticoagulation may be considered."
+          ],
+          "references": [
+            "NICE-NG158"
+          ],
+          "importantLimitation": "Do not apply the Wells score as a screening tool to every red leg. It is used after clinical suspicion of DVT has been established."
+        },
+        {
+          "id": "neurovascular-examination",
+          "title": "Neurovascular examination",
+          "howToTest": [
+            "Compare dorsalis pedis and posterior tibial pulses where palpable.",
+            "Assess capillary refill, distal temperature and colour.",
+            "Assess light-touch sensation and motor function.",
+            "Ask about rest pain, claudication, new numbness and weakness.",
+            "Use local vascular assessment pathways when compression is being considered."
+          ],
+          "normal": [
+            "Warm, well-perfused foot.",
+            "Capillary refill not delayed.",
+            "Pulses present and comparable with the opposite side or documented baseline.",
+            "Sensation and movement preserved."
+          ],
+          "abnormal": [
+            "Cold, pale, cyanosed or mottled foot.",
+            "Absent or newly reduced pulses.",
+            "Delayed capillary refill.",
+            "New sensory loss or weakness.",
+            "Tissue loss, gangrene or ischaemic ulceration."
+          ],
+          "implications": [
+            "New perfusion or neurological abnormality may indicate limb-threatening arterial compromise.",
+            "Compression should not be automatically advised where significant arterial disease has not been excluded through the appropriate pathway."
+          ],
+          "urgentFeatures": [
+            "Sudden pain with pallor, pulselessness, coldness, paraesthesia or weakness.",
+            "Gangrene or ulceration with limb ischaemia."
+          ],
+          "references": [
+            "NICE-CG147",
+            "NICE-NG19"
+          ]
+        },
+        {
+          "id": "joint-examination",
+          "title": "Joint and musculoskeletal examination",
+          "howToTest": [
+            "Identify whether maximal pain and swelling are centred on the ankle, knee, first metatarsophalangeal joint or another joint.",
+            "Inspect for effusion, deformity and focal joint swelling.",
+            "Assess active movement, then carefully assess passive movement.",
+            "Assess weight-bearing and gait where safe.",
+            "Examine for local trauma, bony tenderness, tendon injury or muscle injury when suggested by the history."
+          ],
+          "normal": [
+            "Full or near-full joint movement without marked pain.",
+            "No focal effusion or joint-centred tenderness.",
+            "No focal bony tenderness or traumatic deformity."
+          ],
+          "abnormal": [
+            "Marked pain with passive movement.",
+            "Hot swollen joint with substantial restriction.",
+            "Focal effusion or severe joint-centred tenderness.",
+            "Inability to weight-bear because of joint pain.",
+            "Focal bony tenderness, bruising or traumatic deformity."
+          ],
+          "implications": [
+            "A hot, severely painful and restricted joint requires assessment for septic arthritis and crystal arthritis.",
+            "Diffuse skin inflammation with preserved painless joint movement is more consistent with a superficial process.",
+            "Traumatic findings may require an injury-specific pathway."
+          ],
+          "urgentFeatures": [
+            "Suspected septic arthritis.",
+            "Neurovascular compromise.",
+            "Suspected fracture or compartment syndrome."
+          ],
+          "references": [
+            "NICE-NG219"
+          ]
+        },
+        {
+          "id": "wound-ulcer-diabetic-foot",
+          "title": "Wound, ulcer and diabetic-foot assessment",
+          "howToTest": [
+            "Inspect all wounds and ulcers for size, depth, location, discharge, odour, surrounding erythema and tissue loss.",
+            "Assess whether redness, warmth, swelling or pain extends beyond the ulcer margin.",
+            "Look for exposed or palpable bone, deep sinus, fluctuance, gangrene or spreading infection.",
+            "In diabetes, inspect the entire foot including the plantar surface, heels and between the toes.",
+            "Assess perfusion and sensation and determine whether the problem meets the local active diabetic-foot criteria.",
+            "Consider a microbiological sample only when indicated by the relevant wound or cellulitis guidance; do not swab intact skin."
+          ],
+          "normal": [
+            "No ulcer, wound or portal of entry.",
+            "No purulence, deep tissue exposure, gangrene or spreading inflammation."
+          ],
+          "abnormal": [
+            "Ulcer with spreading erythema, warmth, swelling or increased pain.",
+            "Purulent discharge or fluctuance.",
+            "Deep ulcer, exposed bone or suspected osteomyelitis.",
+            "Gangrene or associated ischaemia.",
+            "Interdigital fissuring or fungal change providing a possible portal of entry."
+          ],
+          "implications": [
+            "An ulcer may be colonised without being infected; diagnose infection from clinical signs rather than a positive swab alone.",
+            "A limb-threatening diabetic foot problem requires immediate acute referral.",
+            "Other active diabetic-foot problems require prompt referral through the local multidisciplinary pathway."
+          ],
+          "references": [
+            "NICE-NG141",
+            "NICE-NG19"
+          ]
+        },
+        {
+          "id": "venous-lymphatic-examination",
+          "title": "Venous and lymphatic features",
+          "howToTest": [
+            "Inspect for varicose veins, haemosiderin pigmentation, gaiter-region eczema, induration and venous ulceration.",
+            "Assess whether symptoms worsen with dependency and improve with elevation.",
+            "Assess chronicity, foot and toe involvement, skin thickening and tissue fibrosis.",
+            "Check for previous lymph-node surgery, radiotherapy or known lymphoedema.",
+            "Compare with previous photographs, measurements or documented baseline where available."
+          ],
+          "normal": [
+            "No chronic venous skin change, varicosities or longstanding oedema.",
+            "No foot or toe swelling, skin thickening or fibrosis."
+          ],
+          "abnormal": [
+            "Gaiter-region pigmentation, scaling, eczema or induration.",
+            "Varicosities and chronic dependent oedema.",
+            "Foot and toe involvement with skin thickening or fibrosis.",
+            "Chronic asymmetrical swelling with recurrent cellulitis."
+          ],
+          "implications": [
+            "Chronic venous disease may mimic or predispose to cellulitis.",
+            "Lymphoedema may produce chronic swelling and skin change and increases cellulitis risk.",
+            "Acute inflammation can occur on top of chronic venous or lymphatic disease; compare with baseline."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-examination-patterns",
+      "title": "Common examination patterns",
+      "type": "common-findings",
+      "intro": "Patterns support clinical reasoning but do not independently confirm or exclude a diagnosis. More than one process may coexist.",
+      "items": [
+        {
+          "id": "cellulitis-pattern",
+          "title": "Cellulitis or erysipelas",
+          "commonFindings": [
+            "Acute or subacute unilateral spreading erythema, warmth, tenderness and swelling.",
+            "Possible portal of entry such as a wound, ulcer, fissure, interdigital fungal change or skin trauma.",
+            "Skin may be diffusely tender and indurated.",
+            "Fever or systemic symptoms may be present but can be absent.",
+            "Joint movement is not markedly restricted unless inflammation overlies or involves a joint."
+          ],
+          "implications": [
+            "Supports cellulitis when compatible with the history and after important mimics and deeper infection have been considered.",
+            "Follow current Northern Ireland antimicrobial guidance for treatment choice, allergy alternatives, dose, renal adjustment and review."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "none",
+            "keyTriggers": [
+              "Suspected abscess, deep infection, osteomyelitis, foreign body or alternative diagnosis requiring imaging."
+            ],
+            "guidance": [
+              "Cellulitis is primarily a clinical diagnosis; routine imaging is not required for an uncomplicated presentation."
+            ],
+            "references": [
+              "NICE-NG141"
+            ]
+          },
+          "importantLimitation": "Bilateral cellulitis is uncommon. Bilateral chronic erythema, itch, scaling, pigmentation and oedema should prompt active consideration of venous or inflammatory skin disease.",
+          "references": [
+            "NICE-NG141"
+          ]
+        },
+        {
+          "id": "dvt-pattern",
+          "title": "Deep vein thrombosis",
+          "commonFindings": [
+            "Unilateral leg swelling or pain.",
+            "Deep venous distribution tenderness.",
+            "Entire-leg swelling or calf asymmetry.",
+            "Pitting oedema confined to the symptomatic leg.",
+            "Relevant provoking factors or previous DVT."
+          ],
+          "implications": [
+            "Use the two-level DVT Wells score and local diagnostic pathway when DVT is clinically suspected."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Proximal leg vein ultrasound through the local DVT pathway."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "DVT likely: Wells score 2 points or more.",
+              "Positive D-dimer after a DVT-unlikely score.",
+              "Persistent clinical concern despite an alternative diagnosis."
+            ],
+            "guidance": [
+              "Where DVT is likely, NICE recommends ultrasound with the result available within 4 hours if possible, or the interim anticoagulation and imaging-within-24-hours pathway when timely imaging is unavailable."
+            ],
+            "references": [
+              "NICE-NG158"
+            ]
+          },
+          "importantLimitation": "Clinical examination and inflammatory markers cannot independently exclude DVT. Cellulitis and DVT may coexist.",
+          "references": [
+            "NICE-NG158"
+          ]
+        },
+        {
+          "id": "venous-eczema-pattern",
+          "title": "Venous eczema or stasis dermatitis",
+          "commonFindings": [
+            "Chronic or recurrent lower-leg erythema, often bilateral.",
+            "Itch, dryness, scaling, crusting, weeping or excoriation.",
+            "Gaiter-region pigmentation, varicosities and dependent oedema.",
+            "Symptoms may worsen later in the day and improve with elevation.",
+            "Less focal tenderness and less rapid progression than typical cellulitis."
+          ],
+          "implications": [
+            "Supports chronic venous inflammation rather than primary bacterial cellulitis.",
+            "Assess for superimposed infection, ulceration and arterial suitability before any compression pathway."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "none",
+            "keyTriggers": [
+              "Concern for DVT, arterial disease, ulcer complication or another diagnosis."
+            ],
+            "guidance": [
+              "Use local venous-disease, tissue-viability and compression-assessment pathways."
+            ],
+            "references": []
+          },
+          "importantLimitation": "Venous eczema and cellulitis may coexist, particularly where skin integrity is impaired."
+        },
+        {
+          "id": "lipodermatosclerosis-pattern",
+          "title": "Lipodermatosclerosis",
+          "commonFindings": [
+            "Chronic venous disease with painful induration in the gaiter region.",
+            "Hyperpigmentation, fibrosis and an inverted-champagne-bottle leg shape in established disease.",
+            "An acute inflammatory phase may be red, warm and tender.",
+            "Usually associated with longstanding oedema or other venous signs."
+          ],
+          "implications": [
+            "May mimic cellulitis. Consider venous disease when the pattern is chronic, gaiter-predominant and accompanied by pigmentation or fibrosis."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "none",
+            "keyTriggers": [
+              "Concern for DVT, ulcer complication or significant arterial disease."
+            ],
+            "guidance": [
+              "Use local venous and tissue-viability pathways."
+            ],
+            "references": []
+          }
+        },
+        {
+          "id": "lymphoedema-pattern",
+          "title": "Lymphoedema",
+          "commonFindings": [
+            "Chronic limb heaviness and swelling.",
+            "Foot and toe involvement.",
+            "Pitting may be present early, with firmer fibrotic tissue and skin thickening later.",
+            "Asymmetry may be longstanding.",
+            "History of lymph-node surgery, radiotherapy, malignancy or recurrent cellulitis."
+          ],
+          "implications": [
+            "Supports lymphatic oedema. Assess carefully for superimposed cellulitis and follow the local lymphoedema pathway."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "none",
+            "keyTriggers": [
+              "New unexplained unilateral swelling, suspected DVT, malignancy or acute infection."
+            ],
+            "guidance": [
+              "Do not assume all new redness in a chronically swollen limb is baseline lymphoedema."
+            ],
+            "references": []
+          },
+          "importantLimitation": "A chronically abnormal limb can still develop DVT, cellulitis or acute arterial compromise."
+        },
+        {
+          "id": "superficial-thrombophlebitis-pattern",
+          "title": "Superficial thrombophlebitis",
+          "commonFindings": [
+            "Localised linear erythema and tenderness following a superficial vein.",
+            "Palpable firm or tender cord.",
+            "Usually more focal than cellulitis or DVT.",
+            "Possible associated varicose veins, cannulation or local trauma."
+          ],
+          "implications": [
+            "Supports superficial venous thrombosis, but assess extent, proximity to the deep venous system and DVT risk through the local pathway."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Venous ultrasound when required by the local superficial-vein thrombosis pathway."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Extensive symptoms.",
+              "Proximity to the saphenofemoral or saphenopopliteal junction.",
+              "Concurrent DVT features or significant venous thromboembolism risk."
+            ],
+            "guidance": [
+              "Do not assume a superficial palpable cord excludes concurrent DVT."
+            ],
+            "references": []
+          }
+        },
+        {
+          "id": "gout-inflammatory-joint-pattern",
+          "title": "Gout or inflammatory arthritis",
+          "commonFindings": [
+            "Redness and swelling centred on a joint.",
+            "Marked joint tenderness.",
+            "Pain with active and passive movement.",
+            "Previous similar self-limiting episodes or established gout.",
+            "Possible tophus or involvement of the first metatarsophalangeal joint."
+          ],
+          "implications": [
+            "Supports crystal or inflammatory arthritis, but septic arthritis must be actively considered in every acutely painful red swollen joint."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Clinical suspicion of septic arthritis.",
+              "Trauma or concern for fracture.",
+              "Diagnostic uncertainty requiring aspiration or specialist assessment."
+            ],
+            "guidance": [
+              "A normal serum urate during an acute flare does not independently exclude gout."
+            ],
+            "references": [
+              "NICE-NG219"
+            ]
+          },
+          "importantLimitation": "Do not diagnose gout solely from redness at a typical joint or a previous history of gout.",
+          "references": [
+            "NICE-NG219"
+          ]
+        },
+        {
+          "id": "septic-arthritis-pattern",
+          "title": "Suspected septic arthritis",
+          "commonFindings": [
+            "Acute hot swollen joint.",
+            "Severe joint-centred pain.",
+            "Marked restriction of active and passive movement.",
+            "Inability to weight-bear.",
+            "Fever or systemic symptoms may be present but can be absent."
+          ],
+          "implications": [
+            "Requires immediate referral through the local septic-joint pathway."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Joint aspiration and imaging directed by the receiving specialist pathway."
+            ],
+            "urgency": "immediate",
+            "keyTriggers": [
+              "Clinical suspicion of septic arthritis."
+            ],
+            "guidance": [
+              "Do not delay referral while awaiting routine blood tests or plain imaging."
+            ],
+            "references": [
+              "NICE-NG219"
+            ]
+          },
+          "importantLimitation": "Normal temperature, normal inflammatory markers or a history of gout do not safely exclude septic arthritis.",
+          "references": [
+            "NICE-NG219"
+          ]
+        },
+        {
+          "id": "contact-dermatitis-bite-pattern",
+          "title": "Contact dermatitis or inflammatory bite reaction",
+          "commonFindings": [
+            "Itch predominates over pain.",
+            "Sharply patterned rash corresponding to an exposure.",
+            "Vesicles, weeping or superficial excoriation.",
+            "Identifiable punctum or localised bite reaction.",
+            "Limited systemic disturbance."
+          ],
+          "implications": [
+            "Supports a non-infectious inflammatory cause. Assess for secondary infection when warmth, spreading tenderness, purulence or systemic symptoms develop."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "none",
+            "keyTriggers": [
+              "Retained foreign body, deep collection, significant systemic reaction or diagnostic uncertainty."
+            ],
+            "guidance": [],
+            "references": [
+              "NICE-NG141"
+            ]
+          },
+          "references": [
+            "NICE-NG141"
+          ]
+        },
+        {
+          "id": "trauma-haematoma-pattern",
+          "title": "Trauma or haematoma",
+          "commonFindings": [
+            "Clear traumatic onset or local impact.",
+            "Bruising, localised swelling and tenderness.",
+            "Anticoagulant or antiplatelet use may increase the extent of bruising.",
+            "Symptoms correspond to the injured tissue rather than a spreading cutaneous pattern."
+          ],
+          "implications": [
+            "Supports traumatic soft-tissue injury or haematoma, but assess for fracture, compartment syndrome, ongoing bleeding and infection."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Imaging directed by the injury-specific clinical decision rule or local pathway."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Focal bony tenderness, inability to weight-bear, deformity, neurovascular abnormality or escalating tense swelling."
+            ],
+            "guidance": [],
+            "references": []
+          },
+          "importantLimitation": "Minor or unremembered trauma does not adequately explain rapidly progressive erythema, severe pain or systemic illness."
+        },
+        {
+          "id": "systemic-bilateral-oedema-pattern",
+          "title": "Systemic or dependent bilateral oedema",
+          "commonFindings": [
+            "Bilateral pitting oedema.",
+            "Relatively symmetrical distribution.",
+            "Limited focal warmth or tenderness.",
+            "Associated heart-failure, renal, hepatic, medication or immobility-related features.",
+            "Weight change, breathlessness, orthopnoea or reduced urine output may be present depending on the cause."
+          ],
+          "implications": [
+            "Consider a systemic or medication-related cause rather than bilateral cellulitis.",
+            "Assess for asymmetry, skin breakdown or superimposed infection."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "no",
+            "preferredImaging": [],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Clinical features suggesting acute heart failure, renal deterioration, DVT or another acute cause."
+            ],
+            "guidance": [
+              "Investigations should be directed by the suspected systemic cause and whether the result will alter management or disposition."
+            ],
+            "references": []
+          }
+        },
+        {
+          "id": "diabetic-foot-infection-pattern",
+          "title": "Diabetic foot infection",
+          "commonFindings": [
+            "Diabetes with an ulcer, wound, fissure or other active foot problem.",
+            "Local warmth, erythema, swelling, purulence or increasing pain, noting that neuropathy may reduce pain.",
+            "Possible ischaemia, gangrene, deep tissue involvement or exposed bone.",
+            "Systemic illness may indicate severe infection."
+          ],
+          "implications": [
+            "Use the dedicated diabetic-foot pathway rather than the generic cellulitis pathway."
+          ],
+          "imagingGuidance": {
+            "routineImaging": "conditional",
+            "preferredImaging": [
+              "Imaging for suspected deep soft-tissue or bone infection through the multidisciplinary diabetic-foot pathway."
+            ],
+            "urgency": "urgent",
+            "keyTriggers": [
+              "Ulceration with fever or sepsis features.",
+              "Ulceration with limb ischaemia.",
+              "Deep soft-tissue or bone infection.",
+              "Gangrene."
+            ],
+            "guidance": [
+              "Limb-threatening or life-threatening diabetic-foot disease requires immediate acute-service referral.",
+              "Other active diabetic-foot problems require referral within 1 working day for specialist triage according to local arrangements."
+            ],
+            "references": [
+              "NICE-NG19"
+            ]
+          },
+          "importantLimitation": "Neuropathy may blunt pain and inflammatory signs. A relatively painless foot lesion may still be limb threatening.",
+          "references": [
+            "NICE-NG19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "intro": "Use the standard emergency statement, then add the diagnosis-specific warning features and the planned review interval.",
+      "items": [
+        {
+          "id": "red-leg-safety-netting",
+          "title": "Red or swollen leg",
+          "safetyNetting": [
+            "Call 999 for significant deterioration in breathing, chest pain or collapse.",
+            "Seek urgent reassessment for rapidly spreading redness or swelling; severe or escalating pain; blistering, skin blackening or new numbness; a cold, pale or weak limb; new fever, rigors, confusion or marked general deterioration; inability to stand or walk; or a newly hot, severely painful and restricted joint.",
+            "When treated for cellulitis, seek reassessment if symptoms worsen at any time or do not start to improve within 2 to 3 days. Skin colour and swelling may take longer to return fully to normal.",
+            "Follow the arranged DVT, wound, diabetic-foot, vascular, tissue-viability or hospital-at-home review plan and seek help promptly if the expected contact or investigation does not occur."
+          ],
+          "references": [
+            "NICE-NG141",
+            "NICE-NG158",
+            "NICE-NG19"
+          ],
+          "importantLimitation": "Safety-netting does not make discharge appropriate when serious pathology has not been adequately excluded, the diagnosis remains unsafe or follow-up cannot be delivered."
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "status": "active",
+  "attachments": []
+}

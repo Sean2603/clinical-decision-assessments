@@ -1,0 +1,184 @@
+{
+  "id": "full-blood-count",
+  "title": "Full blood count",
+  "subtitle": "Haemoglobin, indices, white cells, differential and platelets",
+  "version": "0.1.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Haemoglobin, indices, white cells, differential and platelets",
+  "introduction": "Interpret haemoglobin, cell size, white-cell differential and platelets together. Typical ranges below are approximate adult examples and must be replaced by the reporting laboratory’s range.",
+  "sections": [
+    {
+      "id": "haemoglobin-and-red-cell-indices",
+      "title": "Haemoglobin and red-cell indices",
+      "rows": [
+        {
+          "id": "haemoglobin",
+          "name": "Haemoglobin",
+          "unit": "",
+          "referenceRange": "Approx. female 115–160 g/L; male 130–180 g/L",
+          "lowInterpretation": [
+            "Anaemia. Assess magnitude, speed of fall, bleeding, haemolysis, renal disease, nutritional deficiency and chronic inflammation."
+          ],
+          "highInterpretation": [
+            "Haemoconcentration from reduced plasma volume, smoking or chronic hypoxia; less commonly a primary erythrocytosis."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "mcv",
+          "name": "MCV",
+          "unit": "",
+          "referenceRange": "Approx. 80–100 fL",
+          "lowInterpretation": [
+            "Microcytosis: iron deficiency, thalassaemia or some chronic inflammatory states."
+          ],
+          "highInterpretation": [
+            "Macrocytosis: vitamin B12 or folate deficiency, alcohol, liver disease, hypothyroidism, reticulocytosis or medication effects."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "mch-mchc",
+          "name": "MCH / MCHC",
+          "unit": "",
+          "referenceRange": "Laboratory dependent",
+          "lowInterpretation": [
+            "Supports hypochromia, commonly seen with iron deficiency."
+          ],
+          "highInterpretation": [
+            "MCH may rise with macrocytosis. A markedly raised MCHC can reflect spherocytosis, cold agglutinins or analytical interference."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "rdw",
+          "name": "RDW",
+          "unit": "",
+          "referenceRange": "Laboratory dependent",
+          "lowInterpretation": [
+            "Usually not clinically important."
+          ],
+          "highInterpretation": [
+            "Greater variation in red-cell size; may support evolving iron, B12 or folate deficiency, mixed deficiencies or recent transfusion."
+          ],
+          "notes": [],
+          "unitless": true
+        }
+      ]
+    },
+    {
+      "id": "white-cells-and-differential",
+      "title": "White cells and differential",
+      "rows": [
+        {
+          "id": "total-wcc",
+          "name": "Total WCC",
+          "unit": "",
+          "referenceRange": "Approx. 4–11 ×10⁹/L",
+          "lowInterpretation": [
+            "Viral illness, medication or chemotherapy effect, marrow suppression, autoimmune disease or severe sepsis."
+          ],
+          "highInterpretation": [
+            "Infection, inflammation, corticosteroids, physiological stress, smoking or haematological disease."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "neutrophils",
+          "name": "Neutrophils",
+          "unit": "",
+          "referenceRange": "Approx. 2–7.5 ×10⁹/L",
+          "lowInterpretation": [
+            "Infection risk rises as the count falls. In a patient receiving anticancer treatment, neutrophils ≤0.5 ×10⁹/L with temperature >38°C or features of sepsis is neutropenic sepsis."
+          ],
+          "highInterpretation": [
+            "Common with bacterial infection, inflammation, corticosteroids, tissue injury or physiological stress."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "lymphocytes",
+          "name": "Lymphocytes",
+          "unit": "",
+          "referenceRange": "Approx. 1–4 ×10⁹/L",
+          "lowInterpretation": [
+            "Acute illness, corticosteroids, immunodeficiency or treatment effect."
+          ],
+          "highInterpretation": [
+            "Often viral infection; persistent or marked elevation may require assessment for lymphoproliferative disease."
+          ],
+          "notes": [],
+          "unitless": true
+        },
+        {
+          "id": "eosinophils",
+          "name": "Eosinophils",
+          "unit": "",
+          "referenceRange": "Usually <0.5 ×10⁹/L",
+          "lowInterpretation": [
+            "Usually not clinically important."
+          ],
+          "highInterpretation": [
+            "Allergy, asthma, parasitic infection, drug reaction, eosinophilic disease or adrenal insufficiency."
+          ],
+          "notes": [],
+          "unitless": true
+        }
+      ]
+    },
+    {
+      "id": "platelets",
+      "title": "Platelets",
+      "rows": [
+        {
+          "id": "platelet-count",
+          "name": "Platelet count",
+          "unit": "",
+          "referenceRange": "Approx. 150–400 ×10⁹/L",
+          "lowInterpretation": [
+            "Bleeding risk depends on count, trajectory and platelet function. Consider sepsis, medication, liver disease, immune destruction, DIC or marrow failure."
+          ],
+          "highInterpretation": [
+            "Reactive inflammation, infection, iron deficiency, recent surgery or splenectomy; persistent unexplained elevation may reflect a myeloproliferative disorder."
+          ],
+          "notes": [],
+          "unitless": true
+        }
+      ]
+    }
+  ],
+  "calculations": [],
+  "urgentFindings": [
+    "Active bleeding, haemodynamic compromise, chest pain, syncope or breathlessness with anaemia.",
+    "Rapid haemoglobin fall compared with recent results, even when the current value remains within the laboratory range.",
+    "Neutrophils ≤0.5 ×10⁹/L with temperature >38°C or features of sepsis (for example hypotension, new confusion, rigors, reduced urine output or mottled skin) during anticancer treatment.",
+    "Platelets very low or falling with spontaneous bleeding, petechiae, melaena, haematuria, neurological symptoms or suspected DIC.",
+    "Pancytopenia: low haemoglobin, white cells and platelets together, particularly when new."
+  ],
+  "overrides": [
+    "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "reviewNotes": null,
+    "nextReviewDue": null
+  },
+  "migration": {
+    "state": "shadow",
+    "sourceFile": "lib/screens/blood_interpretation_screen.dart",
+    "currentScreen": "Full blood count",
+    "parityStatus": "pending",
+    "migratedOn": "2026-08-01"
+  },
+  "attachments": []
+}
