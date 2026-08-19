@@ -251,6 +251,94 @@
         "$ref": "#/$defs/clinicalAttachment"
       },
       "default": []
+    },
+    "prominentResources": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "sourceType",
+              "url"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sourceType": {
+                "const": "url"
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https?://"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "sourceType",
+              "attachmentId"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sourceType": {
+                "const": "attachment"
+              },
+              "attachmentId": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "alternateModes": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "label",
+          "whenOmittedCriterionIds",
+          "results"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "whenOmittedCriterionIds": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "results": {
+            "type": "array"
+          }
+        }
+      }
     }
   },
   "allOf": [
@@ -401,6 +489,10 @@
           "items": {
             "$ref": "#/$defs/choice"
           }
+        },
+        "required": {
+          "type": "boolean",
+          "default": true
         }
       }
     },

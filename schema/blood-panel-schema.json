@@ -182,6 +182,58 @@
         "$ref": "#/$defs/clinicalAttachment"
       },
       "default": []
+    },
+    "prominentResources": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "sourceType",
+              "url"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sourceType": {
+                "const": "url"
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https?://"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "sourceType",
+              "attachmentId"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sourceType": {
+                "const": "attachment"
+              },
+              "attachmentId": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        ]
+      }
     }
   },
   "$defs": {
