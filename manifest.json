@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "0.0.1",
-  "updatedAt": "2026-08-19T12:48:33Z",
+  "contentVersion": "0.0.2",
+  "updatedAt": "2026-08-19T16:04:51Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
@@ -512,19 +512,19 @@
     {
       "id": "otitis-media-acute",
       "title": "Otitis Media (Acute)",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "file": "prescribing/otitis-media-acute.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "a39cc79a31e7a1ff70bd10ddafa1f1891f131f3056ac09e2e81daafc6966af40",
+      "sha256": "2f4d9f0035883a19e1c179c5124ba7aeb1031aecc41efe932206be86e27d3e1b",
       "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     },
     {
       "id": "pyelonephritis-adults",
       "title": "Pyelonephritis – Adults",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "fb4e008a1cc58ea415544b9f0885e1c268d5de90c5afee16229cdbed27f93302",
+      "sha256": "cf6bd36433d3e7455dd9c4f8e4e9fee961cec20cc2ee1014221d0082ea32c69e",
       "schemaSha256": "2389ca9584b781f7db4ba681dcd8089c8dc54bbabb8c7a0c1b3a6c287a4d9bf1"
     }
   ]
