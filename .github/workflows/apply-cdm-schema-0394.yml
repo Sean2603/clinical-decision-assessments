@@ -1,0 +1,112 @@
+name: Apply CDM schema 0.39.4
+
+on:
+  push:
+    branches:
+      - cdm/schema-0.39.4
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: cdm/schema-0.39.4
+          fetch-depth: 0
+      - name: Update schemas
+        run: |
+          python3 <<'PY'
+          import json
+          from pathlib import Path
+
+          resource_schema = {
+            "type": "array",
+            "default": [],
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "additionalProperties": False,
+                  "required": ["label", "sourceType", "url"],
+                  "properties": {
+                    "label": {"type": "string", "minLength": 1},
+                    "sourceType": {"const": "url"},
+                    "url": {"type": "string", "pattern": "^https?://"}
+                  }
+                },
+                {
+                  "type": "object",
+                  "additionalProperties": False,
+                  "required": ["label", "sourceType", "attachmentId"],
+                  "properties": {
+                    "label": {"type": "string", "minLength": 1},
+                    "sourceType": {"const": "attachment"},
+                    "attachmentId": {"type": "string", "minLength": 1}
+                  }
+                }
+              ]
+            }
+          }
+
+          for name in [
+            'assessment-schema.json','guideline-schema.json','scoring-tool-schema.json',
+            'blood-panel-schema.json','medication-schema.json','prescribing-schema.json'
+          ]:
+            path=Path('schema')/name
+            data=json.loads(path.read_text())
+            data.setdefault('properties', {})['prominentResources']=resource_schema
+            path.write_text(json.dumps(data, indent=2)+'\n')
+
+          path=Path('schema/clinical-notices-schema.json')
+          data=json.loads(path.read_text())
+          notice=data['$defs']['notice']
+          notice.setdefault('properties', {})['prominentResources']=resource_schema
+          notice['properties']['attachments']={"type":"array","items":{"$ref":"#/$defs/clinicalAttachment"},"default":[]}
+          path.write_text(json.dumps(data, indent=2)+'\n')
+
+          # Scoring-tool optional criteria and alternate modes used by CDM 0.39.4.
+          path=Path('schema/scoring-tool-schema.json')
+          data=json.loads(path.read_text())
+          text=json.dumps(data)
+          # Locate likely criterion definition by structure rather than name.
+          for key, definition in data.get('$defs', {}).items():
+            if not isinstance(definition, dict):
+              continue
+            props=definition.get('properties')
+            if isinstance(props, dict) and 'inputType' in props and ('scoreWhenTrue' in props or 'rules' in props):
+              props['required']={"type":"boolean","default":True}
+          data.setdefault('properties', {})['alternateModes']={
+            "type":"array","default":[],"items":{
+              "type":"object","additionalProperties":False,
+              "required":["id","label","whenOmittedCriterionIds","results"],
+              "properties":{
+                "id":{"type":"string","minLength":1},
+                "label":{"type":"string","minLength":1},
+                "whenOmittedCriterionIds":{"type":"array","minItems":1,"uniqueItems":True,"items":{"type":"string","minLength":1}},
+                "results":{"type":"array"}
+              }
+            }
+          }
+          path.write_text(json.dumps(data, indent=2)+'\n')
+          PY
+      - name: Validate JSON schemas
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          for p in Path('schema').glob('*.json'):
+              json.loads(p.read_text())
+          print('All schemas parse as JSON')
+          PY
+      - name: Commit schema support
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/apply-cdm-schema-0394.yml
+          git add schema
+          git commit -m "Add CDM prominent resources and alternate scoring schema support"
+          git push origin cdm/schema-0.39.4
