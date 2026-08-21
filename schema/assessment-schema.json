@@ -122,6 +122,13 @@
         "$ref": "#/$defs/clinicalAttachment"
       },
       "default": []
+    },
+    "prominentResources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/prominentResource"
+      },
+      "default": []
     }
   },
   "$defs": {
@@ -462,6 +469,71 @@
           ]
         }
       }
+    },
+    "prominentResource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "sourceType"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "url",
+            "attachment"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "attachmentId": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sourceType": {
+                "const": "url"
+              }
+            },
+            "required": [
+              "sourceType"
+            ]
+          },
+          "then": {
+            "required": [
+              "url"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "sourceType": {
+                "const": "attachment"
+              }
+            },
+            "required": [
+              "sourceType"
+            ]
+          },
+          "then": {
+            "required": [
+              "attachmentId"
+            ]
+          }
+        }
+      ]
     }
   }
 }
