@@ -135,6 +135,53 @@
         "minLength": 1
       }
     },
+    "medicationComponent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "medicationId",
+        "displayName",
+        "dose",
+        "route",
+        "frequency",
+        "duration"
+      ],
+      "properties": {
+        "medicationId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "route": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "frequency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "duration": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
     "regimen": {
       "type": "object",
       "additionalProperties": false,
@@ -197,6 +244,13 @@
         },
         "notes": {
           "$ref": "#/$defs/stringList"
+        },
+        "components": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/medicationComponent"
+          }
         }
       }
     },

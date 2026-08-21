@@ -153,6 +153,57 @@
         "minLength": 1
       }
     },
+    "indicationRegimen": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "population",
+        "dose",
+        "route",
+        "frequency",
+        "duration",
+        "prescribingPathwayId",
+        "prescribingChoiceLabel"
+      ],
+      "properties": {
+        "population": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "route": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "frequency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "duration": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "prescribingPathwayId": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "prescribingChoiceLabel": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
     "indication": {
       "type": "object",
       "additionalProperties": false,
@@ -188,6 +239,13 @@
         },
         "notes": {
           "$ref": "#/$defs/stringList"
+        },
+        "regimens": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/indicationRegimen"
+          },
+          "default": []
         }
       }
     },

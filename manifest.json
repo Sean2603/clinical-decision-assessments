@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "0.0.3",
-  "updatedAt": "2026-08-21T10:47:11Z",
+  "contentVersion": "0.0.4",
+  "updatedAt": "2026-08-21T16:37:45Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.34.0",
   "references": {
@@ -406,7 +406,7 @@
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "f34212d825409a91054519a0265433f2bd511197a1026e8e78eb5ab0486606ba",
-      "schemaSha256": "30693e3fdf46fc149b78d47026e2c4a2125c4e4a02933f19d6ade9b1831acdea"
+      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
     },
     {
       "id": "cefalexin",
@@ -415,7 +415,7 @@
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "e18cf4fa8aad159a5f6c5c1b9f397f63538bfb7e91d8473bda947c7b9d602635",
-      "schemaSha256": "30693e3fdf46fc149b78d47026e2c4a2125c4e4a02933f19d6ade9b1831acdea"
+      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
     },
     {
       "id": "co-codamol",
@@ -424,7 +424,7 @@
       "file": "medications/co-codamol.json",
       "schema": "schema/medication-schema.json",
       "sha256": "f420f708b85ded0a8c93a70c040ed9154a57499ce90edd8d5efc053d72bae135",
-      "schemaSha256": "30693e3fdf46fc149b78d47026e2c4a2125c4e4a02933f19d6ade9b1831acdea"
+      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
     },
     {
       "id": "nitrofurantoin",
@@ -433,7 +433,7 @@
       "file": "medications/nitrofurantoin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "15b5b8e9389e79afb6f6c37bcd9d3718d652deb7f48f1af7b424ac79e96104be",
-      "schemaSha256": "30693e3fdf46fc149b78d47026e2c4a2125c4e4a02933f19d6ade9b1831acdea"
+      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
     },
     {
       "id": "trimethoprim",
@@ -442,7 +442,7 @@
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
       "sha256": "34f0842fb9e84535c248ecbba6a6e9dc4184542fd91766d72591f44cd86c8192",
-      "schemaSha256": "30693e3fdf46fc149b78d47026e2c4a2125c4e4a02933f19d6ade9b1831acdea"
+      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
     }
   ],
   "prescribing": [
@@ -453,7 +453,7 @@
       "file": "prescribing/bites-animal.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "43c799248a5440532fd0e1df4e35825c9fbf443c28e8fa481f5e67e81ffc591f",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "bites-human",
@@ -462,7 +462,7 @@
       "file": "prescribing/bites-human.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "cdef564ae6054a09b6bab7ff00f7025708cbeec1cbe865747351146c8c212f56",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "conjunctivitis",
@@ -471,7 +471,7 @@
       "file": "prescribing/conjunctivitis.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "04d83e9728fca4abc1875a2a5530ee8c31eefa03d2a2f7f6ef78d25703991676",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "dental-abscess-urgent-treatment",
@@ -480,7 +480,7 @@
       "file": "prescribing/dental-abscess-urgent-treatment.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "c82515e28186f0f83a81e9844687319a60f86a9fae9638cd85218cd85319bfc7",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "lower-uti-men-16-and-over",
@@ -489,7 +489,7 @@
       "file": "prescribing/lower-uti-men-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "9a3f9922fc0f6b2c68511016121d4c02d12d4a18b4174b89739a008d92dbd603",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "lower-uti-non-pregnant-women-16-and-over",
@@ -498,7 +498,7 @@
       "file": "prescribing/lower-uti-non-pregnant-women-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "a10b516f3b726867d0d0e5132c119d60717bc0cf2dd609b1b9755788147a59ea",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "lower-uti-pregnancy-asymptomatic",
@@ -507,7 +507,7 @@
       "file": "prescribing/lower-uti-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "884a03b562400bc64f7f493c52880f21b72576e6fc9dd2a14d9b6dc0cae3e13a",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "otitis-media-acute",
@@ -516,7 +516,7 @@
       "file": "prescribing/otitis-media-acute.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "2f4d9f0035883a19e1c179c5124ba7aeb1031aecc41efe932206be86e27d3e1b",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     },
     {
       "id": "pyelonephritis-adults",
@@ -525,7 +525,7 @@
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "cf6bd36433d3e7455dd9c4f8e4e9fee961cec20cc2ee1014221d0082ea32c69e",
-      "schemaSha256": "f86a0adbe8e66c35fc98b4d0e3717eb973dbeb16482470f4f68ff52544b4d0cd"
+      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
     }
   ]
 }
