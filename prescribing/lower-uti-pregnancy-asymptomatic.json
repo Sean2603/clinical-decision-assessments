@@ -1,10 +1,18 @@
 {
   "id": "lower-uti-pregnancy-asymptomatic",
   "title": "Lower UTI in Pregnancy - Asymptomatic",
-  "version": "0.1.0",
+  "aliases": [
+    "UTI",
+    "lower UTI"
+  ],
+  "version": "0.1.1",
   "status": "active",
+  "system": "Genitourinary",
   "category": "Urinary tract infection",
   "summary": "NICE Visual Summary available here\n\nAsymptomatic bacteriuria in pregnancy",
+  "updatedOn": null,
+  "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
+  "effectiveFrom": null,
   "clinicalNotes": [
     "Offer an immediate antibiotic prescription to pregnant women with asymptomatic bacteriuria as soon as confirmed with a repeat sample. Treat as per sensitivities.",
     "Dipstick diagnosis is not appropriate for diagnosing asymptomatic bacteriuria in pregnancy.",
@@ -20,24 +28,32 @@
     {
       "rank": 1,
       "label": "Treatment choices when sensitivities are known in order of preference: 1st choice:",
-      "medicationId": null,
-      "displayName": "Amoxicillin capsules",
-      "dose": "500mg TDS",
-      "route": null,
-      "frequency": null,
-      "duration": "7 days",
+      "components": [
+        {
+          "medicationId": "amoxicillin",
+          "displayName": "Amoxicillin capsules",
+          "dose": "500mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days"
+        }
+      ],
       "restrictions": [],
       "notes": []
     },
     {
       "rank": 2,
       "label": "2nd choice:",
-      "medicationId": null,
-      "displayName": "Nitrofurantoin (avoid at term) capsules",
-      "dose": "100mg M/R BD",
-      "route": null,
-      "frequency": null,
-      "duration": "7 days",
+      "components": [
+        {
+          "medicationId": "nitrofurantoin",
+          "displayName": "Nitrofurantoin (avoid at term) capsules",
+          "dose": "100mg M/R BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days"
+        }
+      ],
       "restrictions": [
         "Normally avoid if eGFR < 45 ml/min.",
         "If eGFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative; otherwise it is contraindicated in this group."
@@ -47,12 +63,16 @@
     {
       "rank": 3,
       "label": "3rd choice:",
-      "medicationId": null,
-      "displayName": "Cefalexin capsules:",
-      "dose": "500mg BD",
-      "route": null,
-      "frequency": null,
-      "duration": "7 days",
+      "components": [
+        {
+          "medicationId": "cefalexin",
+          "displayName": "Cefalexin capsules:",
+          "dose": "500mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days"
+        }
+      ],
       "restrictions": [],
       "notes": []
     }
@@ -74,14 +94,6 @@
     "nextReviewDue": null,
     "reviewNotes": null
   },
-  "aliases": [
-    "UTI",
-    "lower UTI"
-  ],
-  "system": "Genitourinary",
-  "updatedOn": null,
-  "changeSummary": "Legacy prescribing pathway metadata normalised for the current schema.",
-  "effectiveFrom": null,
   "attachments": [],
-  "niceVisualSummary": null
+  "prominentResources": []
 }

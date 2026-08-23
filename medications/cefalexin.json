@@ -2,22 +2,30 @@
   "id": "cefalexin",
   "title": "Cefalexin",
   "aliases": [],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "formularyGroup": "Antimicrobials",
   "medicineType": "Antibacterial",
   "drugClass": "First-generation cephalosporin",
   "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
   "updatedOn": null,
-  "changeSummary": "Added to the APUC medication formulary.",
+  "changeSummary": "Migrated to indication-level regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "indications": [
     {
       "title": "UUTI (adults/children)",
-      "population": null,
-      "dose": null,
-      "duration": null,
-      "notes": []
+      "notes": [],
+      "regimens": [
+        {
+          "population": null,
+          "dose": "500mg BD to TDS (up to 1-1.5g TDS to QDS for severe infections)",
+          "route": null,
+          "frequency": null,
+          "duration": "7 - 10 days",
+          "prescribingPathwayId": "pyelonephritis-adults",
+          "prescribingChoiceLabel": "1st choice"
+        }
+      ]
     }
   ],
   "contraindications": [],
@@ -37,5 +45,6 @@
     "reviewNotes": null
   },
   "isPenicillin": false,
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }

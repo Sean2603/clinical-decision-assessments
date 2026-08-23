@@ -5,13 +5,13 @@
     "UTI men",
     "lower UTI men"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
   "summary": "NICE Visual Summary available here",
   "updatedOn": "2026-08-12",
-  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
     "Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis)",
@@ -29,12 +29,16 @@
     {
       "rank": 1,
       "label": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)",
-      "medicationId": "trimethoprim",
-      "displayName": "Trimethoprim tablets",
-      "dose": "200mg BD",
-      "route": null,
-      "frequency": null,
-      "duration": "7 days",
+      "components": [
+        {
+          "medicationId": "trimethoprim",
+          "displayName": "Trimethoprim tablets",
+          "dose": "200mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days"
+        }
+      ],
       "restrictions": [],
       "notes": [
         "A lower risk of resistance to trimethoprim may be more likely if not used in the past 3 months, previous urine culture suggests susceptibility (but this was not used), and in younger people."
@@ -43,12 +47,16 @@
     {
       "rank": 1,
       "label": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)",
-      "medicationId": "nitrofurantoin",
-      "displayName": "Nitrofurantoin capsules",
-      "dose": "100mg M/R BD",
-      "route": null,
-      "frequency": null,
-      "duration": "7 days",
+      "components": [
+        {
+          "medicationId": "nitrofurantoin",
+          "displayName": "Nitrofurantoin capsules",
+          "dose": "100mg M/R BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days"
+        }
+      ],
       "restrictions": [
         "Normally avoid if eGFR < 45 ml/min.",
         "If eGFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative; otherwise it is contraindicated in this group."
@@ -58,12 +66,16 @@
     {
       "rank": 2,
       "label": "2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable",
-      "medicationId": null,
-      "displayName": "Pivmecillinam tablets",
-      "dose": "400mg stat then 200mg TDS",
-      "route": null,
-      "frequency": null,
-      "duration": "7 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Pivmecillinam tablets",
+          "dose": "400mg stat then 200mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days"
+        }
+      ],
       "restrictions": [
         "(contraindicated in penicillin hypersensitivity)"
       ],
@@ -84,5 +96,5 @@
     "reviewNotes": null
   },
   "attachments": [],
-  "niceVisualSummary": null
+  "prominentResources": []
 }

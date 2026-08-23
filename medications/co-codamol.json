@@ -1,19 +1,23 @@
 {
   "id": "co-codamol",
   "title": "Co-codamol",
-  "version": "0.1.0",
+  "aliases": [],
+  "version": "0.1.1",
   "status": "active",
   "formularyGroup": "Analgesia",
   "medicineType": "Combination analgesic",
   "drugClass": "Paracetamol + opioid",
   "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
+  "updatedOn": null,
+  "changeSummary": "Migrated to the indication-regimen model. Existing standalone dosing metadata is retained as a note until a governed prescribing pathway is available.",
+  "effectiveFrom": null,
   "indications": [
     {
       "title": "Analgesia",
-      "population": "Adult >18years old",
-      "dose": "8/500 x2",
-      "duration": "Every 4-6hours",
-      "notes": []
+      "notes": [
+        "Legacy standalone dosing metadata retained pending a governed prescribing pathway: population Adult >18years old; dose 8/500 x2; duration Every 4-6hours."
+      ],
+      "regimens": []
     }
   ],
   "contraindications": [],
@@ -34,10 +38,7 @@
     "nextReviewDue": null,
     "reviewNotes": null
   },
-  "aliases": [],
-  "updatedOn": null,
-  "changeSummary": "Legacy medication metadata normalised for the current schema.",
-  "effectiveFrom": null,
   "isPenicillin": false,
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }

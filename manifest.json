@@ -1,12 +1,16 @@
 {
   "schemaVersion": 3,
-  "contentVersion": "0.0.4",
-  "updatedAt": "2026-08-21T16:37:45Z",
+  "contentVersion": "0.0.5",
+  "updatedAt": "2026-08-23T14:19:36Z",
   "emergencyRevocations": [],
-  "minimumAppVersion": "0.34.0",
+  "minimumAppVersion": "0.49.0",
   "references": {
     "file": "references/references.json",
     "sha256": "0120ca0c652606b331b30fb3603d2906836721393c836752c81c6d3a83033625"
+  },
+  "glossary": {
+    "file": "glossary/glossary.json",
+    "sha256": "b022192c6bff3fda86b3d2bc8f7da8786fc2fe0c68b83b2d76a3ecc571396923"
   },
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
@@ -402,130 +406,130 @@
     {
       "id": "amoxicillin",
       "title": "Amoxicillin",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "f34212d825409a91054519a0265433f2bd511197a1026e8e78eb5ab0486606ba",
-      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
+      "sha256": "f04a966f49f3efe66d9616595d00427a02b2b34a7fe06781163dbc426c497152",
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
     },
     {
       "id": "cefalexin",
       "title": "Cefalexin",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "e18cf4fa8aad159a5f6c5c1b9f397f63538bfb7e91d8473bda947c7b9d602635",
-      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
+      "sha256": "7a5f17d6c432a3735092a26e743538c7d4f1da25142fa55729eb80c3d6b3d50e",
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
     },
     {
       "id": "co-codamol",
       "title": "Co-codamol",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/co-codamol.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "f420f708b85ded0a8c93a70c040ed9154a57499ce90edd8d5efc053d72bae135",
-      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
+      "sha256": "82c7df9a62326394969c8446d23e79a8167cae7d191f1cf4a1ac28cd318e1c0a",
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
     },
     {
       "id": "nitrofurantoin",
       "title": "Nitrofurantoin",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/nitrofurantoin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "15b5b8e9389e79afb6f6c37bcd9d3718d652deb7f48f1af7b424ac79e96104be",
-      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
+      "sha256": "272bdec19f1e0a57434590120569e1eb7dd2d2e4d29bfc6f759cccd2529db78d",
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
     },
     {
       "id": "trimethoprim",
       "title": "Trimethoprim",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "34f0842fb9e84535c248ecbba6a6e9dc4184542fd91766d72591f44cd86c8192",
-      "schemaSha256": "c78d165cb4360729834e64de53491d4605c5531000214d50d69429893826e5c0"
+      "sha256": "8c3665cf39b54c9c0329f168f87fa24c0343730225fa4baedb77416dec9664c3",
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
     }
   ],
   "prescribing": [
     {
       "id": "bites-animal",
       "title": "Bites - Animal",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "prescribing/bites-animal.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "43c799248a5440532fd0e1df4e35825c9fbf443c28e8fa481f5e67e81ffc591f",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "fc9099ffd31001e7498cf76214e66e28a23062e670617c61fd57e700734670b8",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "bites-human",
       "title": "Bites - Human",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "prescribing/bites-human.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "cdef564ae6054a09b6bab7ff00f7025708cbeec1cbe865747351146c8c212f56",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "92f7ec86728d8359441a742b49dd326c327bf802f36a5254ed7c516b79453d79",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "conjunctivitis",
       "title": "Conjunctivitis",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "prescribing/conjunctivitis.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "04d83e9728fca4abc1875a2a5530ee8c31eefa03d2a2f7f6ef78d25703991676",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "e769a4be894a6b6b4be828527dde45eac83363885839731110ed5dd4a02fcac6",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "dental-abscess-urgent-treatment",
       "title": "Dental Abscess requiring urgent treatment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "prescribing/dental-abscess-urgent-treatment.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "c82515e28186f0f83a81e9844687319a60f86a9fae9638cd85218cd85319bfc7",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "254d44862f182bb21c5e4a425e46c3fa74436d02848aca2b0e28f3e8f3a0b709",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "lower-uti-men-16-and-over",
       "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "prescribing/lower-uti-men-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "9a3f9922fc0f6b2c68511016121d4c02d12d4a18b4174b89739a008d92dbd603",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "7cf3bd2df595457b344a2d756b8364f6411e419b6d48d2a1c6a5332172bbaa36",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "lower-uti-non-pregnant-women-16-and-over",
       "title": "Lower UTI Non-pregnant women aged 16 years and over",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "prescribing/lower-uti-non-pregnant-women-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "a10b516f3b726867d0d0e5132c119d60717bc0cf2dd609b1b9755788147a59ea",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "12574baec4b9fb14ea129af054637079cee2ff69feee152e23ddbf579d0a54d9",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "lower-uti-pregnancy-asymptomatic",
       "title": "Lower UTI in Pregnancy - Asymptomatic",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "prescribing/lower-uti-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "884a03b562400bc64f7f493c52880f21b72576e6fc9dd2a14d9b6dc0cae3e13a",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "a45a7db9e96899ba632530203539e21b1ef3dfe061faf3ac5b059e0959dcb77c",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "otitis-media-acute",
       "title": "Otitis Media (Acute)",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "file": "prescribing/otitis-media-acute.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "2f4d9f0035883a19e1c179c5124ba7aeb1031aecc41efe932206be86e27d3e1b",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "d71038a657acd8f7fc2dc3e32b9b3a7b1e5c63cff21fb75cec532ca73c59e7aa",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     },
     {
       "id": "pyelonephritis-adults",
       "title": "Pyelonephritis – Adults",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "cf6bd36433d3e7455dd9c4f8e4e9fee961cec20cc2ee1014221d0082ea32c69e",
-      "schemaSha256": "827de185539c4ae21e85d4db7b01b9e0273a9ef900c54b1c817137d60f25471c"
+      "sha256": "4950777184224ed12cb437df33fe996ac02373aeea8d17e30e02b25378e2e033",
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
     }
   ]
 }

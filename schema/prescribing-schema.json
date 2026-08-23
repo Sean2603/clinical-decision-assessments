@@ -57,12 +57,6 @@
     "summary": {
       "type": "string"
     },
-    "niceVisualSummary": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
     "updatedOn": {
       "type": [
         "string",
@@ -188,12 +182,7 @@
       "required": [
         "rank",
         "label",
-        "medicationId",
-        "displayName",
-        "dose",
-        "route",
-        "frequency",
-        "duration",
+        "components",
         "restrictions",
         "notes"
       ],
@@ -206,51 +195,18 @@
           "type": "string",
           "minLength": 1
         },
-        "medicationId": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "pattern": "^[a-z0-9_-]+$"
-        },
-        "displayName": {
-          "type": "string",
-          "minLength": 1
-        },
-        "dose": {
-          "type": "string",
-          "minLength": 1
-        },
-        "route": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "frequency": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "duration": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "restrictions": {
-          "$ref": "#/$defs/stringList"
-        },
-        "notes": {
-          "$ref": "#/$defs/stringList"
-        },
         "components": {
           "type": "array",
           "minItems": 1,
           "items": {
             "$ref": "#/$defs/medicationComponent"
           }
+        },
+        "restrictions": {
+          "$ref": "#/$defs/stringList"
+        },
+        "notes": {
+          "$ref": "#/$defs/stringList"
         }
       }
     },

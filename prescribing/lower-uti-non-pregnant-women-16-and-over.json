@@ -1,10 +1,18 @@
 {
   "id": "lower-uti-non-pregnant-women-16-and-over",
   "title": "Lower UTI Non-pregnant women aged 16 years and over",
-  "version": "0.1.0",
+  "aliases": [
+    "UTI",
+    "lower UTI"
+  ],
+  "version": "0.1.1",
   "status": "active",
+  "system": "Genitourinary",
   "category": "Urinary tract infection",
   "summary": "NICE Visual Summary available here",
+  "updatedOn": null,
+  "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
+  "effectiveFrom": null,
   "clinicalNotes": [
     "Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis)",
     "Symptoms of UTI include dysuria, frequency, suprapubic tenderness, urgency, polyuria, haematuria, fever > 38 degrees C. Prescribe empirical antibiotic treatment if symptoms are severe or 3 or more symptoms of UTI and NO vaginal discharge/irritation. Some patients may also have non-specific symptoms of infection such as abdominal pain, alteration of behaviour, delirium (confusion) or loss of diabetes control. Amoxicillin resistance is common, therefore ONLY use if culture confirms susceptibility",
@@ -21,12 +29,16 @@
     {
       "rank": 1,
       "label": "1st choice:",
-      "medicationId": null,
-      "displayName": "Nitrofurantoin capsules",
-      "dose": "100mg M/R BD",
-      "route": null,
-      "frequency": null,
-      "duration": "3 days",
+      "components": [
+        {
+          "medicationId": "nitrofurantoin",
+          "displayName": "Nitrofurantoin capsules",
+          "dose": "100mg M/R BD",
+          "route": null,
+          "frequency": null,
+          "duration": "3 days"
+        }
+      ],
       "restrictions": [
         "Normally avoid If eGFR < 45ml/min. If GFR is 30-44ml/min use nitrofurantoin only if resistance and no alternative and treat for 5-7 days; otherwise it is contraindicated in this group."
       ],
@@ -35,12 +47,16 @@
     {
       "rank": 1,
       "label": "Alternative if cultures known or there is a lower risk of resistance",
-      "medicationId": null,
-      "displayName": "Trimethoprim tablets",
-      "dose": "200mg BD",
-      "route": null,
-      "frequency": null,
-      "duration": "3 days",
+      "components": [
+        {
+          "medicationId": "trimethoprim",
+          "displayName": "Trimethoprim tablets",
+          "dose": "200mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "3 days"
+        }
+      ],
       "restrictions": [],
       "notes": [
         "A lower risk of resistance may be more likely if not used in the past 3 months, previous urine culture suggests susceptibility (but this was not used), and in younger people."
@@ -49,12 +65,16 @@
     {
       "rank": 2,
       "label": "2nd choice\nno improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable",
-      "medicationId": null,
-      "displayName": "Pivmecillinam tablets",
-      "dose": "400mg stat then 200mg TDS",
-      "route": null,
-      "frequency": null,
-      "duration": "3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Pivmecillinam tablets",
+          "dose": "400mg stat then 200mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "3 days"
+        }
+      ],
       "restrictions": [
         "(contraindicated in penicillin hypersensitivity)"
       ],
@@ -65,12 +85,16 @@
     {
       "rank": 3,
       "label": "3rd choice (if other options unsuitable – check availability with community pharmacy)",
-      "medicationId": null,
-      "displayName": "Fosfomycin",
-      "dose": "3g granules for oral solution 3g stat dose",
-      "route": null,
-      "frequency": null,
-      "duration": null,
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fosfomycin",
+          "dose": "3g granules for oral solution 3g stat dose",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
       "restrictions": [],
       "notes": []
     }
@@ -85,14 +109,6 @@
     "nextReviewDue": null,
     "reviewNotes": null
   },
-  "aliases": [
-    "UTI",
-    "lower UTI"
-  ],
-  "system": "Genitourinary",
-  "updatedOn": null,
-  "changeSummary": "Legacy prescribing pathway metadata normalised for the current schema.",
-  "effectiveFrom": null,
   "attachments": [],
-  "niceVisualSummary": null
+  "prominentResources": []
 }

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schema/glossary-schema.json",
+  "title": "Shared governed clinical glossary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "version",
+    "entries",
+    "clinicalValidation",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "const": "glossary"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "withdrawn"
+      ]
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/entry"
+      }
+    },
+    "clinicalValidation": {
+      "$ref": "#/$defs/clinicalValidation"
+    }
+  },
+  "$defs": {
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "term",
+        "aliases",
+        "plainDefinition",
+        "clinicalDefinition",
+        "examples",
+        "relatedTerms",
+        "referenceIds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "term": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "$ref": "#/$defs/stringList"
+        },
+        "plainDefinition": {
+          "type": "string"
+        },
+        "clinicalDefinition": {
+          "type": "string"
+        },
+        "examples": {
+          "$ref": "#/$defs/stringList"
+        },
+        "relatedTerms": {
+          "$ref": "#/$defs/stringList"
+        },
+        "referenceIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "stringList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "clinicalValidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validated",
+        "reviewedBy",
+        "reviewedOn",
+        "reviewerRole",
+        "nextReviewDue",
+        "reviewNotes"
+      ],
+      "properties": {
+        "validated": {
+          "type": "boolean"
+        },
+        "reviewedBy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewedOn": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewerRole": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "nextReviewDue": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "reviewNotes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

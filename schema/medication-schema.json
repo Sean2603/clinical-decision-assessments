@@ -209,33 +209,13 @@
       "additionalProperties": false,
       "required": [
         "title",
-        "population",
-        "dose",
-        "duration",
-        "notes"
+        "notes",
+        "regimens"
       ],
       "properties": {
         "title": {
           "type": "string",
           "minLength": 1
-        },
-        "population": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "dose": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "duration": {
-          "type": [
-            "string",
-            "null"
-          ]
         },
         "notes": {
           "$ref": "#/$defs/stringList"
@@ -244,8 +224,7 @@
           "type": "array",
           "items": {
             "$ref": "#/$defs/indicationRegimen"
-          },
-          "default": []
+          }
         }
       }
     },

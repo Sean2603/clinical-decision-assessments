@@ -2,22 +2,48 @@
   "id": "nitrofurantoin",
   "title": "Nitrofurantoin",
   "aliases": [],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "formularyGroup": "Antimicrobials",
   "medicineType": "Urinary antibacterial",
   "drugClass": "Nitrofuran",
   "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
   "updatedOn": null,
-  "changeSummary": "Added to the APUC medication formulary.",
+  "changeSummary": "Migrated to indication-level regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "indications": [
     {
       "title": "LUTI (pregnant/non-pregnant)",
-      "population": null,
-      "dose": null,
-      "duration": null,
-      "notes": []
+      "notes": [],
+      "regimens": [
+        {
+          "population": null,
+          "dose": "100mg M/R BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days",
+          "prescribingPathwayId": "lower-uti-men-16-and-over",
+          "prescribingChoiceLabel": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)"
+        },
+        {
+          "population": null,
+          "dose": "100mg M/R BD",
+          "route": null,
+          "frequency": null,
+          "duration": "3 days",
+          "prescribingPathwayId": "lower-uti-non-pregnant-women-16-and-over",
+          "prescribingChoiceLabel": "1st choice:"
+        },
+        {
+          "population": null,
+          "dose": "100mg M/R BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days",
+          "prescribingPathwayId": "lower-uti-pregnancy-asymptomatic",
+          "prescribingChoiceLabel": "2nd choice:"
+        }
+      ]
     }
   ],
   "contraindications": [],
@@ -37,5 +63,6 @@
     "reviewNotes": null
   },
   "isPenicillin": false,
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }

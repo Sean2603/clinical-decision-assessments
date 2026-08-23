@@ -5,13 +5,13 @@
     "pyelonephritis",
     "upper UTI"
   ],
-  "version": "0.2.0",
+  "version": "0.2.1",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
   "summary": "This guideline sets out an antimicrobial prescribing strategy for acute pyelonephritis (upper urinary tract infection) in children, young people and adults who do not have a catheter. It aims to optimise antibiotic use and reduce antibiotic resistance.\n",
   "updatedOn": "2026-08-19",
-  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "changeSummary": "Migrated to component-based prescribing regimens and structured prominent resources; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
     "- Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis, acute renal failure).\n- If no response within 24 hours or symptoms worsen at any time admit to secondary care.\n- Refer to NICE NG111: Pyelonephritis (acute): antimicrobial prescribing\n- If admission not needed, send MSU for culture and start empiric antibiotics. When results of urine culture are available review choice of antibiotic and change the antibiotic if necessary according to susceptibility"
@@ -21,24 +21,32 @@
     {
       "rank": 1,
       "label": "1st choice",
-      "medicationId": "cefalexin",
-      "displayName": "Cefalexin capsules",
-      "dose": "500mg BD to TDS (up to 1-1.5g TDS to QDS for severe infections)",
-      "route": null,
-      "frequency": null,
-      "duration": "7 - 10 days",
+      "components": [
+        {
+          "medicationId": "cefalexin",
+          "displayName": "Cefalexin capsules",
+          "dose": "500mg BD to TDS (up to 1-1.5g TDS to QDS for severe infections)",
+          "route": null,
+          "frequency": null,
+          "duration": "7 - 10 days"
+        }
+      ],
       "restrictions": [],
       "notes": []
     },
     {
       "rank": 1,
       "label": "If lab report shows sensitive",
-      "medicationId": "trimethoprim",
-      "displayName": "Trimethoprim tablets",
-      "dose": "200mg BD",
-      "route": null,
-      "frequency": null,
-      "duration": "14 days",
+      "components": [
+        {
+          "medicationId": "trimethoprim",
+          "displayName": "Trimethoprim tablets",
+          "dose": "200mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "14 days"
+        }
+      ],
       "restrictions": [
         "(only if sensitivities are known)"
       ],
@@ -47,12 +55,16 @@
     {
       "rank": 1,
       "label": "If lab report shows sensitive",
-      "medicationId": null,
-      "displayName": "Co-amoxiclav tablets",
-      "dose": "500/125mg TDS",
-      "route": null,
-      "frequency": null,
-      "duration": "7 to 10 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav tablets",
+          "dose": "500/125mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "7 to 10 days"
+        }
+      ],
       "restrictions": [
         "(only if sensitivities are known)"
       ],
@@ -61,12 +73,16 @@
     {
       "rank": 1,
       "label": "Only if other first-choice antibiotics are unsuitable",
-      "medicationId": null,
-      "displayName": "Ciprofloxacin tablets",
-      "dose": "500mg BD",
-      "route": null,
-      "frequency": null,
-      "duration": "7 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Ciprofloxacin tablets",
+          "dose": "500mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days"
+        }
+      ],
       "restrictions": [],
       "notes": [
         "A patient information sheet should be given to all patients who receive a fluoroquinolone.",
@@ -108,5 +124,16 @@
       "uploadedBy": "Sean McGrory"
     }
   ],
-  "niceVisualSummary": "NICE Guideline::https://www.nice.org.uk/guidance/ng111/\nNICE Visual Summary::{{attachment:pyelonephritis-visual-summary|View NICE Visual Summary}}"
+  "prominentResources": [
+    {
+      "label": "NICE Guideline",
+      "sourceType": "url",
+      "url": "https://www.nice.org.uk/guidance/ng111/"
+    },
+    {
+      "label": "View NICE Visual Summary",
+      "sourceType": "attachment",
+      "attachmentId": "pyelonephritis-visual-summary"
+    }
+  ]
 }

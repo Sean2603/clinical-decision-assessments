@@ -4,13 +4,13 @@
   "aliases": [
     "human bite"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "system": "Skin & Soft Tissue",
   "category": "Bites",
   "summary": "NICE visual summary and full guidance",
   "updatedOn": "2026-08-14",
-  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
     "Surgical toilet is most important; assess risk of tetanus, HIV, hepatitis B and C.",
@@ -24,36 +24,56 @@
     {
       "rank": 1,
       "label": "Adult 1st line",
-      "medicationId": null,
-      "displayName": "Co-amoxiclav tablets",
-      "dose": "250/125mg or 500/125mg",
-      "route": null,
-      "frequency": "three times a day",
-      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav tablets",
+          "dose": "250/125mg or 500/125mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        }
+      ],
       "restrictions": [],
       "notes": []
     },
     {
       "rank": 2,
       "label": "Adult penicillin allergic / 2nd line",
-      "medicationId": null,
-      "displayName": "Metronidazole tablets PLUS Doxycycline capsules",
-      "dose": "Metronidazole 400mg; Doxycycline 200mg on first day, then 100mg or 200mg daily",
-      "route": null,
-      "frequency": "Metronidazole three times a day",
-      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Metronidazole tablets",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200mg on first day, then 100mg or 200mg daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        }
+      ],
       "restrictions": [],
       "notes": []
     },
     {
       "rank": 1,
       "label": "Child 1st line",
-      "medicationId": null,
-      "displayName": "Co-amoxiclav oral",
-      "dose": "1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets",
-      "route": null,
-      "frequency": "three times a day",
-      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav oral",
+          "dose": "1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        }
+      ],
       "restrictions": [
         "< 1 month refer for specialist advice"
       ],
@@ -64,12 +84,16 @@
     {
       "rank": 2,
       "label": "Child penicillin allergic / 2nd line-under 12 years of age",
-      "medicationId": null,
-      "displayName": "Co-trimoxazole (off-label use)",
-      "dose": "6 weeks – 5 months: 120mg or 24mg/kg twice daily; 6 months – 5 years: 240mg or 24mg/kg twice daily; 6 years – 11 years: 480mg or 24mg/kg twice daily",
-      "route": null,
-      "frequency": null,
-      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-trimoxazole (off-label use)",
+          "dose": "6 weeks – 5 months: 120mg or 24mg/kg twice daily; 6 months – 5 years: 240mg or 24mg/kg twice daily; 6 years – 11 years: 480mg or 24mg/kg twice daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        }
+      ],
       "restrictions": [
         "< 6 weeks refer for specialist advice"
       ],
@@ -80,12 +104,24 @@
     {
       "rank": 2,
       "label": "Child penicillin allergic / 2nd line-aged 12-17 years",
-      "medicationId": null,
-      "displayName": "Doxycycline PLUS Metronidazole",
-      "dose": "Doxycycline 200mg on first day, then 100mg or 200mg daily; Metronidazole 400mg",
-      "route": null,
-      "frequency": "Metronidazole three times a day",
-      "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline",
+          "dose": "200mg on first day, then 100mg or 200mg daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Metronidazole",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        }
+      ],
       "restrictions": [],
       "notes": [
         "A 5-day course is appropriate for treating most human or animal bites, but course length can be increased to 7 days (with review) based on clinical assessment of the wound, for example, if there is significant tissue destruction or it has penetrated bone, joint, tendon or vascular structures.",
@@ -127,5 +163,11 @@
       "uploadedBy": "Sean McGrory"
     }
   ],
-  "niceVisualSummary": "{{attachment:human-and-animal-bites-antimicrobial-prescribing|View NICE Visual Summary}}"
+  "prominentResources": [
+    {
+      "label": "View NICE Visual Summary",
+      "sourceType": "attachment",
+      "attachmentId": "human-and-animal-bites-antimicrobial-prescribing"
+    }
+  ]
 }

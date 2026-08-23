@@ -5,13 +5,13 @@
     "infective conjunctivitis",
     "eye infection"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "system": "Eye",
   "category": "Eye infections",
   "summary": "See NICE CKS Conjunctivitis - infective for full guidance.",
   "updatedOn": "2026-08-12",
-  "changeSummary": "Initial condition-based prescribing pathway added from supplied source screenshot.",
+  "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
     "Treat only if severe, as most infections are viral or self-limiting. A delayed treatment strategy may be appropriate if symptoms have not improved in 3 days.",
@@ -25,36 +25,48 @@
     {
       "rank": 1,
       "label": "Adults & children >1 month 1st line",
-      "medicationId": null,
-      "displayName": "Chloramphenicol eye drops",
-      "dose": "Apply 1 drop every 2 hours for 2 days, then reduce frequency depending on severity of infection",
-      "route": null,
-      "frequency": null,
-      "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Chloramphenicol eye drops",
+          "dose": "Apply 1 drop every 2 hours for 2 days, then reduce frequency depending on severity of infection",
+          "route": null,
+          "frequency": null,
+          "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)"
+        }
+      ],
       "restrictions": [],
       "notes": []
     },
     {
       "rank": 1,
       "label": "Adults & children >1 month 1st line",
-      "medicationId": null,
-      "displayName": "Chloramphenicol eye ointment",
-      "dose": "Apply 3-4 times daily",
-      "route": null,
-      "frequency": null,
-      "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Chloramphenicol eye ointment",
+          "dose": "Apply 3-4 times daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)"
+        }
+      ],
       "restrictions": [],
       "notes": []
     },
     {
       "rank": 2,
       "label": "Adults & children >1 month 2nd line",
-      "medicationId": null,
-      "displayName": "Fusidic acid 1% modified-release eye drops",
-      "dose": "Apply 1 drop twice daily",
-      "route": null,
-      "frequency": null,
-      "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fusidic acid 1% modified-release eye drops",
+          "dose": "Apply 1 drop twice daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)"
+        }
+      ],
       "restrictions": [],
       "notes": []
     }
@@ -70,5 +82,5 @@
     "reviewNotes": null
   },
   "attachments": [],
-  "niceVisualSummary": null
+  "prominentResources": []
 }
