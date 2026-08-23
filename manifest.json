@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.6",
-  "updatedAt": "2026-08-23T17:25:29Z",
+  "contentVersion": "0.0.7",
+  "updatedAt": "2026-08-23T18:00:42Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.49.0",
-  "downloadSizeBytes": 1306623,
+  "downloadSizeBytes": 1307475,
   "references": {
     "file": "references/references.json",
-    "sha256": "0120ca0c652606b331b30fb3603d2906836721393c836752c81c6d3a83033625",
-    "sizeBytes": 29448
+    "sha256": "105b75e8961b6efed0ce43c2e1c714f7a742988d04830a661cd257376c0eb33a",
+    "sizeBytes": 30115
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -608,12 +608,12 @@
     {
       "id": "conjunctivitis",
       "title": "Conjunctivitis",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "prescribing/conjunctivitis.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "e769a4be894a6b6b4be828527dde45eac83363885839731110ed5dd4a02fcac6",
+      "sha256": "66d7c78a53767e723e444dda9f07b911cb8328564c5855ba9bf8535585943401",
       "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
-      "sizeBytes": 3167,
+      "sizeBytes": 3352,
       "schemaSizeBytes": 10673,
       "attachmentsSizeBytes": 0
     },

@@ -87,6 +87,16 @@
       ]
     },
     {
+      "referenceId": "NICE-CKS-CONJUNCTIVITIS",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "conjunctivitis",
+          "title": "Conjunctivitis"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG106",
       "usedBy": [
         {
