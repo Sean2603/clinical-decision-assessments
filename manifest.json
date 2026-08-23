@@ -1,22 +1,27 @@
 {
-  "schemaVersion": 3,
-  "contentVersion": "0.0.5",
-  "updatedAt": "2026-08-23T14:19:36Z",
+  "schemaVersion": 4,
+  "contentVersion": "0.0.6",
+  "updatedAt": "2026-08-23T17:25:29Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.49.0",
+  "downloadSizeBytes": 1306623,
   "references": {
     "file": "references/references.json",
-    "sha256": "0120ca0c652606b331b30fb3603d2906836721393c836752c81c6d3a83033625"
+    "sha256": "0120ca0c652606b331b30fb3603d2906836721393c836752c81c6d3a83033625",
+    "sizeBytes": 29448
   },
   "glossary": {
     "file": "glossary/glossary.json",
-    "sha256": "b022192c6bff3fda86b3d2bc8f7da8786fc2fe0c68b83b2d76a3ecc571396923"
+    "sha256": "b022192c6bff3fda86b3d2bc8f7da8786fc2fe0c68b83b2d76a3ecc571396923",
+    "sizeBytes": 2255
   },
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
     "sha256": "43e11020d1f4934c14668493aa656fbdfcbb776ff4e6b1c20f87349882c9da5f",
     "schemaSha256": "791d5893b2faffadefc2c5a6014d32552c3bb6f2d5cbffc378aa9ce72e9757c7",
+    "sizeBytes": 428,
+    "schemaSizeBytes": 5212,
     "items": [
       {
         "id": "frailty",
@@ -41,6 +46,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "74f39e23817bf21dd2d8b3d2db45793b9db83b9e7fe8fd5f3e7a581887b1e835",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 12104,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
       ]
@@ -53,6 +61,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "f7939b15cb50a55f2eaf2c1fcb688a217ee03b82ab411f7f4b150f5a62095007",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 32156,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "uncategorised"
       ]
@@ -65,6 +76,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "135af8a0d9c2429a4598aef24ba0450d1e88b7cc0f6232c43eddbd61feb627f4",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 38150,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "uncategorised"
       ]
@@ -77,6 +91,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "ff09e25dedda385ef4101ea085396ad2f8d9e3b3e5633b1c496d4b6bc4e32262",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 11743,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
       ]
@@ -89,6 +106,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "741683a6ade552675ffe101ad24d9e4473cbf4439f7f079df4b3c7ccdcc26cd1",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 27434,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "uncategorised"
       ]
@@ -101,6 +121,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "b6b9b58ba8bcf42ab9d38cd5ff054b7178139a77344e4a0686ef1f7aeb4e99a1",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 30934,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "uncategorised"
       ]
@@ -113,6 +136,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "07f9c9438625c5a9427ca8b9dc71c8bb44044c22af79658b6f96808f2b773272",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 17158,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
       ]
@@ -125,6 +151,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "7f38532cc4235d28686b3f2fb33d29998fd6978ae637bc35c42d0853857afc8b",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 29791,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
       ]
@@ -137,6 +166,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "2023854d93a366b07606102a38d4ccbfbb51f9a6b25b95c2a0444f942e90f606",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 10907,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
       ]
@@ -149,6 +181,9 @@
       "schema": "schema/assessment-schema.json",
       "sha256": "f5445f01c2b6afdb3afee9f326a5e31dbafcf8d926da8cda9e8f34f24b7776ab",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 50023,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
       "categoryIds": [
         "uncategorised"
       ]
@@ -163,7 +198,10 @@
       "file": "scoring_tools/4at-delirium-screen.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "76d9866e6009cb11d44e8eafae171b628d26c056e6f6f5d8c4fd1fa0086d886b",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 6359,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "centor-criteria",
@@ -172,7 +210,10 @@
       "file": "scoring_tools/centor-criteria.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "5e245a00819347ca096b8636dbec068a38cbd7be808e9301e710f6b3eebec791",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 4019,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "curb-65",
@@ -181,7 +222,10 @@
       "file": "scoring_tools/curb-65.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "4e26a7526f67e120f871988ffee5eb3885ea31aff068c7a39200f2276f8fafdd",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 4836,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "feverpain",
@@ -190,7 +234,10 @@
       "file": "scoring_tools/feverpain.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "153baa61938eda2ee3c693208a14b7d252d2f9546913b2c26ec5edac26ddfe17",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 5161,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "glasgow-coma-scale",
@@ -199,7 +246,10 @@
       "file": "scoring_tools/glasgow-coma-scale.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "c9dd99543fc93014599c88504a90e13d0f59c093afb67f1ca0b8717e897f534b",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 4569,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "news2",
@@ -208,7 +258,10 @@
       "file": "scoring_tools/news2.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "3384d55cc283227eb30666640cd741cdc2e900f662360e77377ae408ec34d9c6",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 9646,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "ottawa-ankle-and-foot-rules",
@@ -217,7 +270,10 @@
       "file": "scoring_tools/ottawa-ankle-and-foot-rules.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "861d10bb576316412b0685b601159af8258d7fada76d0d13ffeb8843b537a875",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 6208,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "ottawa-knee-rule",
@@ -226,7 +282,10 @@
       "file": "scoring_tools/ottawa-knee-rule.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "05849a1d62e68cb89e1ee65194b5d268a2e779528c45e08070fceeaf0815eb34",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 4471,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "pecarn",
@@ -235,7 +294,10 @@
       "file": "scoring_tools/pecarn.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "cb8326cee798b3169379b9e514760fb5d7d95fdf15463c23990313946792ce85",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 1723,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "perc-rule",
@@ -244,7 +306,10 @@
       "file": "scoring_tools/perc-rule.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "8885d37805518ae9439e833d882a13c53185c92e4a4063a403a59ce6b88bf7d3",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 7600,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "two-level-dvt-wells",
@@ -253,7 +318,10 @@
       "file": "scoring_tools/two-level-dvt-wells.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "1f970dc90cd297150c5c03d68a6d0acc8d56d64e106efbaf495422f8338921da",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 6306,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "two-level-pe-wells",
@@ -262,7 +330,10 @@
       "file": "scoring_tools/two-level-pe-wells.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "aa54e0ba6e410fa12935df5121ba67e68f356472315ace0ca136e6db264cc0a9",
-      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b"
+      "schemaSha256": "d1c7be18bf9df6877ed06022505e19ba062ce5c6565d526bbe6d62bb511a5d8b",
+      "sizeBytes": 5062,
+      "schemaSizeBytes": 13989,
+      "attachmentsSizeBytes": 0
     }
   ],
   "bloodPanels": [
@@ -273,7 +344,10 @@
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "ca0863d52e2b4e8debb8726dc735dd3e8850aad6c0d671d5c9a06759842abca6",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 10893,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "bnp-and-nt-probnp",
@@ -282,7 +356,10 @@
       "file": "blood_panels/bnp-and-nt-probnp.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "47732bed5d88a086e967b775357926b22eb0695cb9c2f8b2499c769cb3c09674",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 3249,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "c-reactive-protein",
@@ -291,7 +368,10 @@
       "file": "blood_panels/c-reactive-protein.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "335f3631b1988865306a3a0b8af385fea4cfe2309718a4b000b8b4ad92165197",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 4967,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "calcium-magnesium-and-phosphate",
@@ -300,7 +380,10 @@
       "file": "blood_panels/calcium-magnesium-and-phosphate.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "fba5dbfc88213ce8bb6edbfba1d651094b3621c2e0027acd79793dbf8fa38dad",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 5398,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "coagulation",
@@ -309,7 +392,10 @@
       "file": "blood_panels/coagulation.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "3798d16567ca713c526af14300993da37c4c76d5cbedec9a7c7a13b0c634e98a",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 3876,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "creatine-kinase",
@@ -318,7 +404,10 @@
       "file": "blood_panels/creatine-kinase.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "42a7a71e6a0fc8c7504009c9f1202b8bd98466ffe366d59a6b5ad166d04fbf5e",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 2701,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "full-blood-count",
@@ -327,7 +416,10 @@
       "file": "blood_panels/full-blood-count.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "bd35dd45bd344d8b50ce60b62491462f8f79f4350cbbf2ec42546e6d9c3cfe35",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 7093,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "glucose-ketones-and-lactate",
@@ -336,7 +428,10 @@
       "file": "blood_panels/glucose-ketones-and-lactate.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "8146e5e5ff6430dadff9caf576af85eb88d642ef5faf7d75c7af3bfc3201f3b7",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 4814,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "haematinics",
@@ -345,7 +440,10 @@
       "file": "blood_panels/haematinics.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "c3343c5efe7c939b1013c5e84a3eeebb97fb8a459fd734674654ddf323d8c936",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 3697,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "lipase-and-amylase",
@@ -354,7 +452,10 @@
       "file": "blood_panels/lipase-and-amylase.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "ef3c4d101eb833599a000efa44524dca86a138307badac4fd001455a4d2d5c49",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 2708,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "liver-blood-tests",
@@ -363,7 +464,10 @@
       "file": "blood_panels/liver-blood-tests.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "f592bc7107e1a5b8b965559d3074a57c5616daccf0ea721714633931207c4729",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 7352,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "serum-osmolality",
@@ -372,7 +476,10 @@
       "file": "blood_panels/serum-osmolality.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "d65f91b566364a275d0b8b5696775f2e51c51fe4ae279cc678146d828df691a1",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 5028,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "thyroid-function",
@@ -381,7 +488,10 @@
       "file": "blood_panels/thyroid-function.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "4ea0b0f5c4e5a0e274fa34589d4c2bda4a58f50dd9fde7b2eb7d949c67ea1cb2",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 3898,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "troponin",
@@ -390,7 +500,10 @@
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "1eee42a5fdeac33c17cc051e350b0c5183d5a7b41ba64b6b9336452f8a710586",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 3243,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "urea-and-electrolytes",
@@ -399,7 +512,10 @@
       "file": "blood_panels/urea-and-electrolytes.json",
       "schema": "schema/blood-panel-schema.json",
       "sha256": "5162f7a85140cb53f230e7611429900d15f36ebe18ffb3b0b5d0837f52750e04",
-      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb"
+      "schemaSha256": "f97ee408e2a8ff0a420413b0e3df2da09547996960349272571a583038a167fb",
+      "sizeBytes": 7032,
+      "schemaSizeBytes": 12676,
+      "attachmentsSizeBytes": 0
     }
   ],
   "medications": [
@@ -410,7 +526,10 @@
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "f04a966f49f3efe66d9616595d00427a02b2b34a7fe06781163dbc426c497152",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
+      "sizeBytes": 1380,
+      "schemaSizeBytes": 10701,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "cefalexin",
@@ -419,7 +538,10 @@
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "7a5f17d6c432a3735092a26e743538c7d4f1da25142fa55729eb80c3d6b3d50e",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
+      "sizeBytes": 1417,
+      "schemaSizeBytes": 10701,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "co-codamol",
@@ -428,7 +550,10 @@
       "file": "medications/co-codamol.json",
       "schema": "schema/medication-schema.json",
       "sha256": "82c7df9a62326394969c8446d23e79a8167cae7d191f1cf4a1ac28cd318e1c0a",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
+      "sizeBytes": 1398,
+      "schemaSizeBytes": 10701,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "nitrofurantoin",
@@ -437,7 +562,10 @@
       "file": "medications/nitrofurantoin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "272bdec19f1e0a57434590120569e1eb7dd2d2e4d29bfc6f759cccd2529db78d",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
+      "sizeBytes": 2019,
+      "schemaSizeBytes": 10701,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "trimethoprim",
@@ -446,7 +574,10 @@
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
       "sha256": "8c3665cf39b54c9c0329f168f87fa24c0343730225fa4baedb77416dec9664c3",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a"
+      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
+      "sizeBytes": 1867,
+      "schemaSizeBytes": 10701,
+      "attachmentsSizeBytes": 0
     }
   ],
   "prescribing": [
@@ -457,7 +588,10 @@
       "file": "prescribing/bites-animal.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "fc9099ffd31001e7498cf76214e66e28a23062e670617c61fd57e700734670b8",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 7194,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 226581
     },
     {
       "id": "bites-human",
@@ -466,7 +600,10 @@
       "file": "prescribing/bites-human.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "92f7ec86728d8359441a742b49dd326c327bf802f36a5254ed7c516b79453d79",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 6569,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 226581
     },
     {
       "id": "conjunctivitis",
@@ -475,7 +612,10 @@
       "file": "prescribing/conjunctivitis.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "e769a4be894a6b6b4be828527dde45eac83363885839731110ed5dd4a02fcac6",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 3167,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "dental-abscess-urgent-treatment",
@@ -484,7 +624,10 @@
       "file": "prescribing/dental-abscess-urgent-treatment.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "254d44862f182bb21c5e4a425e46c3fa74436d02848aca2b0e28f3e8f3a0b709",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 2932,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "lower-uti-men-16-and-over",
@@ -493,7 +636,10 @@
       "file": "prescribing/lower-uti-men-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "7cf3bd2df595457b344a2d756b8364f6411e419b6d48d2a1c6a5332172bbaa36",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 4725,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "lower-uti-non-pregnant-women-16-and-over",
@@ -502,7 +648,10 @@
       "file": "prescribing/lower-uti-non-pregnant-women-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "12574baec4b9fb14ea129af054637079cee2ff69feee152e23ddbf579d0a54d9",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 5387,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "lower-uti-pregnancy-asymptomatic",
@@ -511,7 +660,10 @@
       "file": "prescribing/lower-uti-pregnancy-asymptomatic.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "a45a7db9e96899ba632530203539e21b1ef3dfe061faf3ac5b059e0959dcb77c",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 3851,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "otitis-media-acute",
@@ -520,7 +672,10 @@
       "file": "prescribing/otitis-media-acute.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "d71038a657acd8f7fc2dc3e32b9b3a7b1e5c63cff21fb75cec532ca73c59e7aa",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 4353,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 269081
     },
     {
       "id": "pyelonephritis-adults",
@@ -529,7 +684,10 @@
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
       "sha256": "4950777184224ed12cb437df33fe996ac02373aeea8d17e30e02b25378e2e033",
-      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199"
+      "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
+      "sizeBytes": 4803,
+      "schemaSizeBytes": 10673,
+      "attachmentsSizeBytes": 266463
     }
   ]
 }
