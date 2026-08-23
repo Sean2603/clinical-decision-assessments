@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-18",
+  "lastChecked": "2026-08-23",
   "references": [
     {
       "id": "NICE-NG59",
@@ -669,6 +669,26 @@
       "reviewedBy": "Sean McGrory",
       "reviewerRole": "tAPUC",
       "nextReviewDue": "2027-08-18",
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": []
+    },
+    {
+      "id": "NICE-CKS-CONJUNCTIVITIS",
+      "organisation": "NICE Clinical Knowledge Summaries",
+      "shortOrganisation": "NICE-CKS",
+      "title": "Conjunctivitis",
+      "referenceNumber": "Conjunctivitis",
+      "type": "guideline",
+      "url": "https://cks.nice.org.uk/topics/conjunctivitis-infective/",
+      "published": "2022-10-01",
+      "lastUpdated": null,
+      "accessed": "2026-08-23",
+      "lastReviewed": "2026-08-23",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-23",
       "supersededBy": null,
       "notes": null,
       "relevantTopics": []
