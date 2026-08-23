@@ -5,20 +5,16 @@
     "infective conjunctivitis",
     "eye infection"
   ],
-  "version": "0.1.1",
+  "version": "0.2.0",
   "status": "active",
   "system": "Eye",
   "category": "Eye infections",
-  "summary": "See NICE CKS Conjunctivitis - infective for full guidance.",
-  "updatedOn": "2026-08-12",
+  "summary": "",
+  "updatedOn": "2026-08-23",
   "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
-    "Treat only if severe, as most infections are viral or self-limiting. A delayed treatment strategy may be appropriate if symptoms have not improved in 3 days.",
-    "Bacterial conjunctivitis is characterised by red eye with mucopurulent, not watery, discharge. It is usually bilateral (one eye may be affected before the other by one or two days) and often resolves in 5-7 days without treatment.",
-    "Antibiotics are not recommended if there is watering or discharge from an eye, without conjunctival erythema.",
-    "Ointment stays in the eye longer and therefore is a good night-time treatment option, however due to blurring of vision, drops may be more acceptable to some patients during the day.",
-    "See also The College of Optometrists for information on appropriate pharmacological and non-pharmacological management options and advice for contact lens wearers."
+    "- Treat only if severe, as most infections are viral or self-limiting. A delayed treatment strategy may be appropriate if symptoms have not improved in 3 days.\n- Bacterial conjunctivitis is characterised by red eye with mucopurulent, not watery, discharge. It is usually bilateral (one eye may be affected before the other by one or two days) and often resolves in 5-7 days without treatment.\n- Antibiotics are not recommended if there is watering or discharge from an eye, without conjunctival erythema.\n- Ointment stays in the eye longer and therefore is a good night-time treatment option, however due to blurring of vision, drops may be more acceptable to some patients during the day.\n- See also The College of Optometrists for information on appropriate pharmacological and non-pharmacological management options and advice for contact lens wearers."
   ],
   "cautions": [],
   "regimens": [
@@ -72,15 +68,23 @@
     }
   ],
   "specialConsiderations": [],
-  "references": [],
+  "references": [
+    "NICE-CKS-CONJUNCTIVITIS"
+  ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-23",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-23",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [
+    {
+      "label": "NICE CKS",
+      "sourceType": "url",
+      "url": "https://cks.nice.org.uk/topics/conjunctivitis-infective/"
+    }
+  ]
 }
