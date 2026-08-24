@@ -2,7 +2,7 @@
   "id": "bnp-and-nt-probnp",
   "title": "BNP and NT-proBNP",
   "subtitle": "Heart-failure likelihood, confounders and referral thresholds",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Heart-failure likelihood, confounders and referral thresholds",
@@ -64,19 +64,40 @@
     "NICE-NG106"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "reviewNotes": null,
-    "nextReviewDue": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-24",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "nextReviewDue": "2028-08-24"
   },
-  "migration": {
-    "state": "shadow",
-    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
-    "currentScreen": "BNP and NT-proBNP",
-    "parityStatus": "pending",
-    "migratedOn": "2026-08-01"
-  },
-  "attachments": []
+  "attachments": [
+    {
+      "id": "rvh-clinical-biochemistry-manual",
+      "type": "pdf",
+      "title": "RVH Clinical Biochemistry Manual",
+      "label": "Clinical Biochem",
+      "path": "attachments/blood_panels/c-reactive-protein/rvh-clinical-biochemistry-manual-v1.0.0.pdf",
+      "caption": null,
+      "source": "https://belfasttrust.hscni.net/download/281/lab-manual/10293/clinical-biochemistry-user-manual.pdf",
+      "referenceId": null,
+      "version": "1.0.0",
+      "sha256": "9235dcdfac8a7376156ccb55243270bcefc8ffb610482ddec2fbcdfa013c6904",
+      "mediaType": "application/pdf",
+      "originalFileName": "Clinical-Biochemistry-User-Manual.pdf",
+      "fileSize": 3100287,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-08-24T13:01:13.929Z",
+      "uploadedBy": "Sean McGrory — tAPUC",
+      "replacementGovernance": null
+    }
+  ],
+  "prominentResources": [
+    {
+      "label": "RVH Clinical Biochem",
+      "sourceType": "attachment",
+      "attachmentId": "rvh-clinical-biochemistry-manual"
+    }
+  ]
 }

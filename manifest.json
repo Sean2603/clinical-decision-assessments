@@ -1,10 +1,10 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.8",
-  "updatedAt": "2026-08-24T16:29:54Z",
+  "contentVersion": "0.0.9",
+  "updatedAt": "2026-08-24T20:20:24Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.49.0",
-  "downloadSizeBytes": 4518588,
+  "downloadSizeBytes": 4519464,
   "references": {
     "file": "references/references.json",
     "sha256": "8c77a06104c1dfc1e6e0110a8843c0101413982e753b057f027d71f647179f23",
@@ -352,14 +352,14 @@
     {
       "id": "bnp-and-nt-probnp",
       "title": "BNP and NT-proBNP",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "file": "blood_panels/bnp-and-nt-probnp.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "47732bed5d88a086e967b775357926b22eb0695cb9c2f8b2499c769cb3c09674",
+      "sha256": "07e4b2d268db05ca9288fc57e79bc2b4079dce3903179aef0c442481fd2370bb",
       "schemaSha256": "8da5ac1b3e5432c93de882f7abb54aaecb408d3ccb3a0f659280094d2a08d6d9",
-      "sizeBytes": 3249,
+      "sizeBytes": 4136,
       "schemaSizeBytes": 12659,
-      "attachmentsSizeBytes": 0
+      "attachmentsSizeBytes": 3100287
     },
     {
       "id": "c-reactive-protein",
@@ -644,12 +644,12 @@
     {
       "id": "lower-uti-non-pregnant-women-16-and-over",
       "title": "Lower UTI Non-pregnant women aged 16 years and over",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "file": "prescribing/lower-uti-non-pregnant-women-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "d806f1e579883abd675ad6ab40529293aaace58d379ecdfa9e03dc6d8664e8fe",
+      "sha256": "ba36592ddb5b0fb4db49763c913140efa0614cb4e44e12c1f7473ddcb3e5d599",
       "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
-      "sizeBytes": 6547,
+      "sizeBytes": 6536,
       "schemaSizeBytes": 10673,
       "attachmentsSizeBytes": 106323
     },
