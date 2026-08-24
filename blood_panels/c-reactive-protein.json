@@ -2,7 +2,7 @@
   "id": "c-reactive-protein",
   "title": "C-reactive protein",
   "subtitle": "Inflammatory marker interpreted with timing and clinical context",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Inflammatory marker interpreted with timing and clinical context",
@@ -117,19 +117,40 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "reviewNotes": null,
-    "nextReviewDue": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-24",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "nextReviewDue": "2028-08-24"
   },
-  "migration": {
-    "state": "shadow",
-    "sourceFile": "lib/screens/blood_interpretation_screen.dart",
-    "currentScreen": "C-reactive protein",
-    "parityStatus": "pending",
-    "migratedOn": "2026-08-01"
-  },
-  "attachments": []
+  "attachments": [
+    {
+      "id": "rvh-clinical-biochemistry-manual",
+      "title": "RVH Clinical Biochemistry Manual",
+      "label": "Clinical Biochem",
+      "caption": null,
+      "source": "https://belfasttrust.hscni.net/download/281/lab-manual/10293/clinical-biochemistry-user-manual.pdf",
+      "referenceId": null,
+      "replacementGovernance": null,
+      "path": "attachments/blood_panels/c-reactive-protein/rvh-clinical-biochemistry-manual-v1.0.0.pdf",
+      "type": "pdf",
+      "version": "1.0.0",
+      "sha256": "9235dcdfac8a7376156ccb55243270bcefc8ffb610482ddec2fbcdfa013c6904",
+      "mediaType": "application/pdf",
+      "originalFileName": "Clinical-Biochemistry-User-Manual.pdf",
+      "fileSize": 3100287,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-08-24T13:01:13.929Z",
+      "uploadedBy": "Sean McGrory — tAPUC"
+    }
+  ],
+  "prominentResources": [
+    {
+      "label": "Clinical Biochem Manual",
+      "sourceType": "attachment",
+      "attachmentId": "rvh-clinical-biochemistry-manual"
+    }
+  ]
 }

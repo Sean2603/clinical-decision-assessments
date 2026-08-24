@@ -117,6 +117,16 @@
       ]
     },
     {
+      "referenceId": "NICE-NG109",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "lower-uti-non-pregnant-women-16-and-over",
+          "title": "Lower UTI Non-pregnant women aged 16 years and over"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG111",
       "usedBy": [
         {
