@@ -18,8 +18,7 @@
     "urgentFindings",
     "overrides",
     "referenceIds",
-    "clinicalValidation",
-    "migration"
+    "clinicalValidation"
   ],
   "properties": {
     "id": {
