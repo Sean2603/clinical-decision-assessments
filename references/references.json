@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-23",
+  "lastChecked": "2026-08-24",
   "references": [
     {
       "id": "NICE-NG59",
@@ -685,6 +685,26 @@
       "lastUpdated": null,
       "accessed": "2026-08-23",
       "lastReviewed": "2026-08-23",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-23",
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": []
+    },
+    {
+      "id": "NICE-NG109",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Urinary tract infection (lower): antimicrobial prescribing",
+      "referenceNumber": "NG109",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng109/",
+      "published": "2018-10-31",
+      "lastUpdated": "2025-05-01",
+      "accessed": "2026-08-23",
+      "lastReviewed": "2026-08-24",
       "reviewStatus": "current",
       "reviewedBy": "Sean McGrory",
       "reviewerRole": "tAPUC",

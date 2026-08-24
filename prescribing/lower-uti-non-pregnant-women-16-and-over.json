@@ -5,24 +5,16 @@
     "UTI",
     "lower UTI"
   ],
-  "version": "0.1.1",
+  "version": "0.2.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
-  "summary": "NICE Visual Summary available here",
-  "updatedOn": null,
+  "summary": "",
+  "updatedOn": "2026-08-24",
   "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
-    "Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis)",
-    "Symptoms of UTI include dysuria, frequency, suprapubic tenderness, urgency, polyuria, haematuria, fever > 38 degrees C. Prescribe empirical antibiotic treatment if symptoms are severe or 3 or more symptoms of UTI and NO vaginal discharge/irritation. Some patients may also have non-specific symptoms of infection such as abdominal pain, alteration of behaviour, delirium (confusion) or loss of diabetes control. Amoxicillin resistance is common, therefore ONLY use if culture confirms susceptibility",
-    "Female Under 65: Acute uncomplicated UTI in women <65 years often resolves in a few days without treatment. Consider chlamydia in sexually active young women. Do not routinely culture urine unless suspected pyelonephritis, failed antibiotic treatment or persistent symptoms, recurrent UTI, abnormalities of genitourinary tract, renal impairment. See Public Health England Diagnosis of urinary tract infections: quick reference guide for primary care for algorithm",
-    "A delayed script can be considered instead of immediate antibiotics if symptoms are mild and there are no risk factors for complicated infection",
-    "Dipstick tests should only be used to diagnose bacteriuria in women <65 with limited symptoms and signs (no more than two symptoms) if urine is cloudy. For under 65, refer to PHE Quick reference guide.",
-    "Dipsticks should NOT be used to diagnose UTI in older people, as diagnosis in this group should be made on the basis of urinary symptoms and signs of sepsis identified as part of a full clinical assessment For over 65s, refer to PHA decision aid.",
-    "Empiric recommendations listed are NOT suitable in upper UTI or sepsis",
-    "Self-care advice: paracetamol for pain or, if preferred and suitable, ibuprofen; advise drinking enough fluid to avoid dehydration",
-    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions"
+    "- Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis)\n- Symptoms of UTI include dysuria, frequency, suprapubic tenderness, urgency, polyuria, haematuria, fever > 38 degrees C. Prescribe empirical antibiotic treatment if symptoms are severe or 3 or more symptoms of UTI and NO vaginal discharge/irritation. Some patients may also have non-specific symptoms of infection such as abdominal pain, alteration of behaviour, delirium (confusion) or loss of diabetes control. Amoxicillin resistance is common, therefore ONLY use if culture confirms susceptibility\n- Female Under 65: Acute uncomplicated UTI in women <65 years often resolves in a few days without treatment. Consider chlamydia in sexually active young women. Do not routinely culture urine unless suspected pyelonephritis, failed antibiotic treatment or persistent symptoms, recurrent UTI, abnormalities of genitourinary tract, renal impairment.\n- See Public Health England Diagnosis of urinary tract infections: quick reference guide for primary care for algorithm\n- A delayed script can be considered instead of immediate antibiotics if symptoms are mild and there are no risk factors for complicated infection\n- Dipstick tests should only be used to diagnose bacteriuria in women <65 with limited symptoms and signs (no more than two symptoms) if urine is cloudy. For under 65, refer to PHE Quick reference guide.\n- Dipsticks should NOT be used to diagnose UTI in older people, as diagnosis in this group should be made on the basis of urinary symptoms and signs of sepsis identified as part of a full clinical assessment For over 65s, refer to PHA decision aid.\n- Empiric recommendations listed are NOT suitable in upper UTI or sepsis\n- Self-care advice: paracetamol for pain or, if preferred and suitable, ibuprofen; advise drinking enough fluid to avoid dehydration\n- See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions"
   ],
   "cautions": [],
   "regimens": [
@@ -64,7 +56,7 @@
     },
     {
       "rank": 2,
-      "label": "2nd choice\nno improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable",
+      "label": "2nd choice if no improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable",
       "components": [
         {
           "medicationId": null,
@@ -100,15 +92,44 @@
     }
   ],
   "specialConsiderations": [],
-  "references": [],
+  "references": [
+    "NICE-NG109"
+  ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-24",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-24",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
-  "attachments": [],
-  "prominentResources": []
+  "attachments": [
+    {
+      "id": "lower-uti-non-pregnant-women-aged-16-years-and-over",
+      "title": "Lower UTI Non-pregnant women aged 16 years and over",
+      "label": "Visual Summary",
+      "caption": "NICE Visual Summary",
+      "source": "https://www.nice.org.uk/guidance/ng109/resources/visual-summary-pdf-6544021069",
+      "referenceId": "NICE-NG109",
+      "replacementGovernance": null,
+      "path": "attachments/prescribing/lower-uti-non-pregnant-women-16-and-over/lower-uti-non-pregnant-women-aged-16-years-and-over-v1.0.0.pdf",
+      "type": "pdf",
+      "version": "1.0.0",
+      "sha256": "50dad7fea2d64f5734b726e786559c05d70b6b2970c52251d19e938c4c83d335",
+      "mediaType": "application/pdf",
+      "originalFileName": "visual-summary-pdf-6544021069.pdf",
+      "fileSize": 106323,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-08-23T20:11:09.776Z",
+      "uploadedBy": "Sean McGrory — tAPUC"
+    }
+  ],
+  "prominentResources": [
+    {
+      "label": "NICE Visual Summary",
+      "sourceType": "url",
+      "url": "https://www.nice.org.uk/guidance/ng109/resources/visual-summary-pdf-6544021069"
+    }
+  ]
 }
