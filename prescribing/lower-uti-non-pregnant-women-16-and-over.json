@@ -5,7 +5,7 @@
     "UTI",
     "lower UTI"
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
@@ -128,8 +128,8 @@
   "prominentResources": [
     {
       "label": "NICE Visual Summary",
-      "sourceType": "url",
-      "url": "https://www.nice.org.uk/guidance/ng109/resources/visual-summary-pdf-6544021069"
+      "sourceType": "attachment",
+      "attachmentId": "lower-uti-non-pregnant-women-aged-16-years-and-over"
     }
   ]
 }
