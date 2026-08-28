@@ -2,14 +2,14 @@
   "id": "cefalexin",
   "title": "Cefalexin",
   "aliases": [],
-  "version": "0.1.1",
+  "version": "0.2.0",
   "status": "active",
   "formularyGroup": "Antimicrobials",
   "medicineType": "Antibacterial",
   "drugClass": "First-generation cephalosporin",
-  "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
-  "updatedOn": null,
-  "changeSummary": "Migrated to indication-level regimens; clinical content unchanged.",
+  "summary": "",
+  "updatedOn": "2026-08-28",
+  "changeSummary": null,
   "effectiveFrom": null,
   "indications": [
     {
@@ -26,26 +26,502 @@
           "prescribingChoiceLabel": "1st choice"
         }
       ]
+    },
+    {
+      "title": "Lower UTI in Pregnancy - Asymptomatic",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "3rd choice:",
+          "dose": "500mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days",
+          "prescribingPathwayId": "lower-uti-pregnancy-asymptomatic",
+          "prescribingChoiceLabel": "3rd choice:"
+        }
+      ]
+    },
+    {
+      "title": "Pyelonephritis – Adults",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "1st choice",
+          "dose": "500mg BD to TDS (up to 1-1.5g TDS to QDS for severe infections)",
+          "route": null,
+          "frequency": null,
+          "duration": "7 - 10 days",
+          "prescribingPathwayId": "pyelonephritis-adults",
+          "prescribingChoiceLabel": "1st choice"
+        }
+      ]
     }
   ],
   "contraindications": [],
   "cautions": [],
-  "interactions": [],
-  "renalConsiderations": [],
+  "interactions": [
+    {
+      "drug": "Aceclofenac",
+      "description": "Both Cefalexin and Aceclofenac can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Aciclovir",
+      "description": "Both Cefalexin and Aciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Amikacin",
+      "description": "Both Cefalexin and Amikacin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Amphotericin B",
+      "description": "Both Cefalexin and Amphotericin B can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Aspirin",
+      "description": "Both Cefalexin and Aspirin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Captopril",
+      "description": "Both Cefalexin and Captopril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Carboplatin",
+      "description": "Both Cefalexin and Carboplatin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Celecoxib",
+      "description": "Both Cefalexin and Celecoxib can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ciclosporin",
+      "description": "Both Cefalexin and Ciclosporin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cidofovir",
+      "description": "Both Cefalexin and Cidofovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cisplatin",
+      "description": "Both Cefalexin and Cisplatin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Colistimethate",
+      "description": "Both Cefalexin and Colistimethate can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Deferasirox",
+      "description": "Both Cefalexin and Deferasirox can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Dexketoprofen",
+      "description": "Both Cefalexin and Dexketoprofen can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Diclofenac",
+      "description": "Both Cefalexin and Diclofenac can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Enalapril",
+      "description": "Both Cefalexin and Enalapril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Etodolac",
+      "description": "Both Cefalexin and Etodolac can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Etoricoxib",
+      "description": "Both Cefalexin and Etoricoxib can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Flurbiprofen",
+      "description": "Both Cefalexin and Flurbiprofen can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Foscarnet",
+      "description": "Both Cefalexin and Foscarnet can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fosinopril",
+      "description": "Both Cefalexin and Fosinopril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ganciclovir",
+      "description": "Both Cefalexin and Ganciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Gentamicin",
+      "description": "Both Cefalexin and Gentamicin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ibuprofen",
+      "description": "Both Cefalexin and Ibuprofen can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ifosfamide",
+      "description": "Both Cefalexin and Ifosfamide can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Imidapril",
+      "description": "Both Cefalexin and Imidapril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Indometacin",
+      "description": "Both Cefalexin and Indometacin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Inotersen",
+      "description": "Both Cefalexin and Inotersen can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ketoprofen",
+      "description": "Both Cefalexin and Ketoprofen can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ketorolac",
+      "description": "Both Cefalexin and Ketorolac can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lisinopril",
+      "description": "Both Cefalexin and Lisinopril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lithium",
+      "description": "Both Cefalexin and Lithium can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Mefenamic acid",
+      "description": "Both Cefalexin and Mefenamic acid can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Meloxicam",
+      "description": "Both Cefalexin and Meloxicam can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Mesalazine",
+      "description": "Both Cefalexin and Mesalazine can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Both Cefalexin and Methotrexate can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Nabumetone",
+      "description": "Both Cefalexin and Nabumetone can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Naproxen",
+      "description": "Both Cefalexin and Naproxen can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Neomycin",
+      "description": "Both Cefalexin and Neomycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Netilmicin",
+      "description": "Both Cefalexin and Netilmicin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Oxaliplatin",
+      "description": "Both Cefalexin and Oxaliplatin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pamidronate",
+      "description": "Both Cefalexin and Pamidronate can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Parecoxib",
+      "description": "Both Cefalexin and Parecoxib can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pemetrexed",
+      "description": "Both Cefalexin and Pemetrexed can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pentamidine",
+      "description": "Both Cefalexin and Pentamidine can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Perindopril",
+      "description": "Both Cefalexin and Perindopril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Phenazone",
+      "description": "Both Cefalexin and Phenazone can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Piroxicam",
+      "description": "Both Cefalexin and Piroxicam can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Quinapril",
+      "description": "Both Cefalexin and Quinapril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ramipril",
+      "description": "Both Cefalexin and Ramipril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Rifampicin",
+      "description": "Both Cefalexin and Rifampicin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Streptomycin",
+      "description": "Both Cefalexin and Streptomycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Streptozocin",
+      "description": "Both Cefalexin and Streptozocin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Sulfasalazine",
+      "description": "Both Cefalexin and Sulfasalazine can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Sulindac",
+      "description": "Both Cefalexin and Sulindac can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tacrolimus",
+      "description": "Both Cefalexin and Tacrolimus can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tenofovir disoproxil",
+      "description": "Both Cefalexin and Tenofovir disoproxil can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tenoxicam",
+      "description": "Both Cefalexin and Tenoxicam can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tiaprofenic acid",
+      "description": "Both Cefalexin and Tiaprofenic acid can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tobramycin",
+      "description": "Both Cefalexin and Tobramycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tolfenamic acid",
+      "description": "Both Cefalexin and Tolfenamic acid can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Trandolapril",
+      "description": "Both Cefalexin and Trandolapril can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Trimethoprim",
+      "description": "Both Cefalexin and Trimethoprim can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Valaciclovir",
+      "description": "Both Cefalexin and Valaciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Valganciclovir",
+      "description": "Both Cefalexin and Valganciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vancomycin",
+      "description": "Both Cefalexin and Vancomycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Voclosporin",
+      "description": "Both Cefalexin and Voclosporin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Zoledronate",
+      "description": "Both Cefalexin and Zoledronate can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    }
+  ],
+  "renalConsiderations": [
+    "Max. 3 g daily if eGFR 40–50 mL/minute/1.73 m 2 .",
+    "Max. 1.5 g daily if eGFR 10–40 mL/minute/1.73 m 2 .",
+    "Max. 750 mg daily if eGFR less than 10 mL/minute/1.73 m 2 .",
+    "Reduce dose in moderate impairment."
+  ],
   "hepaticConsiderations": [],
-  "pregnancyBreastfeeding": [],
+  "pregnancyBreastfeeding": [
+    "500 mg for 1 dose, dose to be taken following exposure to a trigger.",
+    "500 mg twice daily for 7 days.",
+    "Not known to be harmful.",
+    "Present in milk in low concentration, but appropriate to use."
+  ],
   "practicalPoints": [],
-  "references": [],
+  "references": [
+    "bnf-cefalexin"
+  ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-28",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-28",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "isPenicillin": false,
   "attachments": [],
   "prominentResources": [],
-  "sideEffects": []
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Abdominal pain; diarrhoea; dizziness; eosinophilia; headache; leucopenia; nausea; neutropenia; pseudomembranous enterocolitis; skin reactions; thrombocytopenia; vomiting"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Anaphylactic reaction; angioedema"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; haemolytic anaemia; nephritis tubulointerstitial (reversible); severe cutaneous adverse reactions (SCARs)"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Agitation; arthritis; confusion; fatigue; gastrointestinal discomfort; genital pruritus; hallucination; hepatitis (transient); hypersensitivity; increased risk of infection; jaundice cholestatic (transient); joint disorders; vaginal discharge"
+      ]
+    }
+  ]
 }

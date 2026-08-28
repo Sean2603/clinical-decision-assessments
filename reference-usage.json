@@ -445,6 +445,30 @@
           "title": "Amoxicillin"
         }
       ]
+    },
+    {
+      "referenceId": "bnf-cefalexin",
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "cefalexin",
+          "title": "Cefalexin"
+        }
+      ]
+    },
+    {
+      "referenceId": "bnf-nitrofurantoin",
+      "usedBy": []
+    },
+    {
+      "referenceId": "bnf-trimethoprim",
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "trimethoprim",
+          "title": "Trimethoprim"
+        }
+      ]
     }
   ]
 }

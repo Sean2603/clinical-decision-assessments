@@ -1,5 +1,41 @@
 # Shared reference registry — Publication history
 
+<!-- cdm-publication:0.8.0 -->
+## v0.8.0 — 2026-08-28
+
+- **Content ID:** `references`
+- **Content type:** reference-registry
+- **Previous published version:** 0.8.0
+- **Published version:** 0.8.0
+- **Generated:** 2026-08-28T16:15:10.615Z
+
+## Change control
+
+- **Summary:** Evidence reference changed: references[bnf-trimethoprim] › review Status.
+- **Risk:** reference-update
+- **Selected version increase:** minor
+- **Recommended version increase:** patch
+- **Changed fields:** 1
+- **Override reason:** Review-cycle versioning keeps this new post-publication cycle on 0.8.x.
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-08-28T12:00:00.000Z
+- **Notes:** Added reference: bnf-trimethoprim — British National Formulary: Trimethoprim
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.8.0 -->
+
+---
+
 <!-- cdm-publication:0.7.0 -->
 ## v0.7.0 — 2026-08-28
 

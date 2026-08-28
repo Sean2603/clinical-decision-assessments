@@ -735,6 +735,75 @@
         "amoxicillin",
         "Amoxicillin"
       ]
+    },
+    {
+      "id": "bnf-cefalexin",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Cefalexin",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/cefalexin/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/cefalexin/",
+      "relevantTopics": [
+        "cefalexin",
+        "Cefalexin"
+      ]
+    },
+    {
+      "id": "bnf-nitrofurantoin",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Nitrofurantoin",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/nitrofurantoin/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/nitrofurantoin/",
+      "relevantTopics": [
+        "nitrofurantoin",
+        "Nitrofurantoin"
+      ]
+    },
+    {
+      "id": "bnf-trimethoprim",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Trimethoprim",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/trimethoprim/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/trimethoprim/",
+      "relevantTopics": [
+        "trimethoprim",
+        "Trimethoprim"
+      ]
     }
   ]
 }
