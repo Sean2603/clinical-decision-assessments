@@ -1,10 +1,10 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.18",
-  "updatedAt": "2026-08-28T19:58:22Z",
+  "contentVersion": "0.0.19",
+  "updatedAt": "2026-08-28T21:00:13Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4607435,
+  "downloadSizeBytes": 4607337,
   "references": {
     "file": "references/references.json",
     "sha256": "efe17cedc7c7e0e18422d1d0391edebc8d10457c01574da62b6f1a47c526c51d",
@@ -340,12 +340,12 @@
     {
       "id": "abg-and-vbg",
       "title": "ABG and VBG",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "file": "blood_panels/abg-and-vbg.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "9b7d50197ff32bc40f2d4a3fe5e802e8529a20b9dae6e600b8938b1480838f41",
+      "sha256": "d3390d6835e600c159b2e1aa0af5fed4c7d03c12beafaf2ec14116e393be1aa0",
       "schemaSha256": "cbbe2ef7a272734241502f7a98f752ee0fae2ea34cd725fb6795e19aea4b78c2",
-      "sizeBytes": 16430,
+      "sizeBytes": 16332,
       "schemaSizeBytes": 15072,
       "attachmentsSizeBytes": 0
     },
