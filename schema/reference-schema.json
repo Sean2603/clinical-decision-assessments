@@ -103,7 +103,10 @@
           "pattern": "^https://"
         },
         "published": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "format": "date"
         },
         "lastUpdated": {

@@ -1,3 +1,9 @@
+## 0.0.11 - Nullable reference publication dates
+
+- Reference schema now permits `published: null` for continuously updated online resources that have no discrete publication date.
+- Supplied publication dates remain ISO date validated.
+- Minimum compatible app version is 0.52.0.
+
 ## 2026-08-28 – Native structured medication interactions and side effects
 
 - Expanded `schema/medication-schema.json` so medication interactions are governed objects with `drug`, `description`, `severity` and `evidence`.

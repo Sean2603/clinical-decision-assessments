@@ -315,3 +315,8 @@ main = authoritative governed publication branch
 ```
 
 Normal governed changes should progress through CDM and the controlled review branch before reaching `main`.
+
+
+## Nullable reference publication dates
+
+A reference with no discrete publication date may use `published: null`. This is intended for continuously updated online resources. `accessed` remains mandatory and `lastUpdated` should be used when a reliable source update date is available.
