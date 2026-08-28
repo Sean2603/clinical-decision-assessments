@@ -1,18 +1,10 @@
 {
   "schemaVersion": 4,
-<<<<<<< Updated upstream
-  "contentVersion": "0.0.15",
-  "updatedAt": "2026-08-28T19:10:26Z",
-  "emergencyRevocations": [],
-  "minimumAppVersion": "0.52.0",
-  "downloadSizeBytes": 4588638,
-=======
-  "contentVersion": "0.0.16",
-  "updatedAt": "2026-08-28T19:29:53Z",
+  "contentVersion": "0.0.17",
+  "updatedAt": "2026-08-28T19:44:26Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4569720,
->>>>>>> Stashed changes
+  "downloadSizeBytes": 4598975,
   "references": {
     "file": "references/references.json",
     "sha256": "efe17cedc7c7e0e18422d1d0391edebc8d10457c01574da62b6f1a47c526c51d",
