@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.12",
-  "updatedAt": "2026-08-28T14:37:21Z",
+  "contentVersion": "0.0.13",
+  "updatedAt": "2026-08-28T16:16:24Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.52.0",
-  "downloadSizeBytes": 4526244,
+  "downloadSizeBytes": 4583999,
   "references": {
     "file": "references/references.json",
-    "sha256": "b2cf59fe5e567d3f28193ff1891fba7cf93cdef74d3d93859cb38aa2df76f88f",
-    "sizeBytes": 31599
+    "sha256": "efe17cedc7c7e0e18422d1d0391edebc8d10457c01574da62b6f1a47c526c51d",
+    "sizeBytes": 33987
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -534,12 +534,12 @@
     {
       "id": "cefalexin",
       "title": "Cefalexin",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "1ccb13ffb1bd7e275b1d2e48f6ec144bbfd8f7208f5213383315e0bbef7bd41f",
+      "sha256": "f5e6d8d65a30d121f3aa83943027dd7fbadb07668ecd77f99632c65b0d9e935f",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
-      "sizeBytes": 1438,
+      "sizeBytes": 16119,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
@@ -570,12 +570,12 @@
     {
       "id": "trimethoprim",
       "title": "Trimethoprim",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "e6de3c60d599478bbef0c6f7f1e9f78dceecd36451b27bfa2d076ed913e577ba",
+      "sha256": "f1142d03d4a4d1ad626879258f4af6893f080b6f29bd7f629b7e53271388b55c",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
-      "sizeBytes": 1888,
+      "sizeBytes": 42574,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     }
