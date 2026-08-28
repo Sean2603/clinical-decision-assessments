@@ -26,7 +26,11 @@
           "notes": [
             "VBG pH is normally slightly lower than arterial pH."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "pco2",
@@ -41,7 +45,11 @@
           ],
           "notes": [
             "PvCO₂ is normally slightly higher than arterial pCO₂."
-          ]
+          ],
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "bicarbonate",
@@ -54,7 +62,11 @@
           "highInterpretation": [
             "Supports metabolic alkalosis or renal compensation for respiratory acidosis."
           ],
-          "notes": []
+          "notes": [],
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "base-excess",
@@ -67,7 +79,11 @@
           "highInterpretation": [
             "A positive value supports metabolic alkalosis or chronic compensation."
           ],
-          "notes": []
+          "notes": [],
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "po2",
@@ -80,7 +96,11 @@
           "highInterpretation": [],
           "notes": [
             "Do not use venous pO₂ to assess arterial oxygenation."
-          ]
+          ],
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "lactate",
@@ -93,7 +113,11 @@
           ],
           "notes": [
             "A normal lactate does not exclude sepsis, shock or another serious illness."
-          ]
+          ],
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
@@ -115,7 +139,11 @@
           "notes": [
             "Consider hypoventilation, COPD/asthma fatigue, sedative/opioid effect, neuromuscular weakness or severe obesity hypoventilation. Raised bicarbonate may indicate chronic compensation or acute-on-chronic respiratory acidosis."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "metabolic-acidosis",
@@ -127,7 +155,11 @@
           "notes": [
             "Consider lactate, ketones, renal failure, diarrhoea, toxins and the anion gap. Low pCO₂ may indicate respiratory compensation."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "mixed-acidosis",
@@ -139,7 +171,11 @@
           "notes": [
             "High-risk pattern requiring urgent assessment."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "respiratory-alkalosis",
@@ -151,7 +187,11 @@
           "notes": [
             "Consider pain/anxiety only after excluding hypoxia, PE, sepsis, pregnancy, liver disease and salicylates."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "metabolic-alkalosis",
@@ -163,7 +203,11 @@
           "notes": [
             "Consider vomiting, gastric losses, diuretics, hypokalaemia, mineralocorticoid excess or alkali administration."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "mixed-alkalosis",
@@ -175,7 +219,11 @@
           "notes": [
             "Both low pCO₂ and raised bicarbonate are driving the pH up."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

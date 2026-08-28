@@ -1,3 +1,11 @@
+## 0.0.17 - 2026-08-28
+
+### Individual blood-test navigation metadata
+
+- Added optional navigation metadata to individual blood-test rows.
+- Each test can independently opt into the App jump menu and provide an optional navigation label.
+- Existing blood rows default to `showInJumpTo: false`; section-level navigation is unchanged.
+
 ## 0.0.16 - 2026-08-28
 
 ### Blood-panel navigation, calculator input constraints and U&E AKI

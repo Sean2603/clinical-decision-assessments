@@ -22,7 +22,11 @@
           "notes": [
             "Consider autoimmune thyroid disease, post-treatment disease or medication effects. Assess severity and symptoms rather than TSH alone."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "low-tsh-high-free-t4-t3",
@@ -34,7 +38,11 @@
           "notes": [
             "Consider Graves disease, toxic nodules, thyroiditis or excessive replacement. Check pulse/rhythm, temperature, hydration and cardiovascular symptoms."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "high-tsh-normal-free-t4",
@@ -46,7 +54,11 @@
           "notes": [
             "Repeat and interpret with symptoms, thyroid antibodies, pregnancy plans and degree/persistence of TSH elevation."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "low-tsh-normal-free-t4-t3",
@@ -58,7 +70,11 @@
           "notes": [
             "Consider medication, acute illness, pregnancy and early thyroid disease."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "low-normal-tsh-low-free-t4",
@@ -70,7 +86,11 @@
           "notes": [
             "Do not label as primary hypothyroidism without considering pituitary disease, severe illness and medication effects."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

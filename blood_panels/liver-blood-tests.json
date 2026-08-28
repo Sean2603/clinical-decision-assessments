@@ -24,7 +24,11 @@
             "Hepatocellular injury. Causes include fatty liver disease, viral hepatitis, alcohol-related injury, medicines, ischaemia and autoimmune hepatitis."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "alp",
@@ -38,7 +42,11 @@
             "Cholestasis or biliary obstruction, but also bone disease, healing fracture, pregnancy and growth. Use GGT to support hepatic origin."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "ggt",
@@ -52,7 +60,11 @@
             "Supports hepatic origin of raised ALP. Can rise with alcohol, cholestasis, fatty liver and enzyme-inducing medicines; it is non-specific."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "bilirubin",
@@ -66,7 +78,11 @@
             "Pre-hepatic haemolysis, hepatocellular dysfunction or biliary obstruction. Visible jaundice often appears around 40–60 micromol/L but varies."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "albumin",
@@ -80,7 +96,11 @@
             "Usually haemoconcentration from reduced plasma volume."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "inr-prothrombin-time",
@@ -94,7 +114,11 @@
             "Can indicate reduced hepatic synthesis, vitamin K deficiency, anticoagulant effect or DIC. In acute liver injury, a rising INR is an important marker of failure."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
@@ -118,7 +142,11 @@
             "Consider viral, metabolic, autoimmune, drug-induced or ischaemic hepatocyte injury."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "cholestatic-pattern",
@@ -132,7 +160,11 @@
             "Consider gallstone obstruction, biliary infection, pancreatic/biliary malignancy, drug-induced cholestasis or infiltrative disease."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "mixed-pattern",
@@ -146,7 +178,11 @@
             "Consider drug injury, infection, obstruction with hepatocyte injury or another mixed hepatic process."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "isolated-bilirubin-rise",
@@ -160,7 +196,11 @@
             "Consider Gilbert syndrome, haemolysis or an early/partial obstructive process; assess conjugated fraction where available."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

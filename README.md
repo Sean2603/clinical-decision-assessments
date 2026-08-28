@@ -1,4 +1,4 @@
-## CDA content version 0.0.16
+## CDA content version 0.0.17
 
 Scoring tools and blood panels are now native governed CDA content rather than shadow copies of Flutter clinical screens.
 

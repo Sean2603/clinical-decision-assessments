@@ -22,7 +22,11 @@
           "notes": [
             "Review alternative diagnoses, but levels can be lower with obesity or medications such as diuretics, ACE inhibitors/ARBs/ARNI, beta blockers or mineralocorticoid antagonists."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "400-2-000-ng-l",
@@ -34,7 +38,11 @@
           "notes": [
             "Does not prove heart failure. Renal impairment, AF, age, PE, sepsis and pulmonary hypertension can elevate the result."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "2-000-ng-l",
@@ -46,7 +54,11 @@
           "notes": [
             "Higher values are associated with worse prognosis, but acute disposition still depends on current symptoms and physiology."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

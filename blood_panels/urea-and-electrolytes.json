@@ -24,7 +24,11 @@
             "Usually free-water deficit from reduced intake or excess loss; less commonly sodium gain."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "potassium",
@@ -38,7 +42,11 @@
             "AKI/CKD, ACE inhibitor or ARB, potassium-sparing diuretic, trimethoprim, tissue breakdown or acidosis. Exclude haemolysed sample where appropriate."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "bicarbonate",
@@ -52,7 +60,11 @@
             "Metabolic alkalosis or compensation for chronic respiratory acidosis; consider vomiting, diuretics or chronic hypercapnia."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
@@ -76,7 +88,11 @@
             "Reduced renal clearance, dehydration, GI bleeding, catabolism, corticosteroids or high protein intake. Interpret beside creatinine."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "creatinine",
@@ -90,7 +106,11 @@
             "Reduced filtration, but assess change from baseline. AKI can occur with a creatinine still inside the stated reference range."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "egfr",
@@ -104,7 +124,11 @@
             "Usually reported as ≥90; a high estimate can be misleading in low muscle mass."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
@@ -128,7 +152,11 @@
             "Treat as clinically important AKI and identify cause, medication risks, fluid status and complications."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "stage-2",
@@ -142,7 +170,11 @@
             "More substantial AKI; usually requires urgent clinical assessment and close monitoring."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "stage-3",
@@ -156,7 +188,11 @@
             "Severe AKI requiring urgent hospital-level assessment."
           ],
           "notes": [],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

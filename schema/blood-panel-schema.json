@@ -245,6 +245,26 @@
         },
         "unitless": {
           "type": "boolean"
+        },
+        "navigation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "showInJumpTo",
+            "label"
+          ],
+          "properties": {
+            "showInJumpTo": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          }
         }
       }
     },

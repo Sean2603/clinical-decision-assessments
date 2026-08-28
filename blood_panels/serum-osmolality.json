@@ -22,7 +22,11 @@
           "notes": [
             "Low measured osmolality with hyponatraemia confirms hypotonic hyponatraemia. Normal/high osmolality suggests glucose, mannitol or another effective osmole, or pseudohyponatraemia."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "osmolal-gap",
@@ -34,7 +38,11 @@
           "notes": [
             "A raised gap can occur with toxic alcohols, ethanol, ketones, lactate, renal failure or laboratory/formula variation. A normal gap does not exclude late toxic alcohol poisoning."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

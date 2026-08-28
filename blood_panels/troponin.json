@@ -22,7 +22,11 @@
           "notes": [
             "A single low result only rules out MI when the validated pathway permits it, taking account of symptom onset and sampling time. It does not rule out unstable angina, PE, aortic disease or other causes of chest pain."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "above-99th-centile",
@@ -34,7 +38,11 @@
           "notes": [
             "Possible causes include type 1 MI, supply–demand mismatch, tachyarrhythmia, heart failure, myocarditis, PE, sepsis, renal disease, stroke, trauma or strenuous exercise."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "rise-or-fall",
@@ -46,7 +54,11 @@
           "notes": [
             "Dynamic change supports acute injury. Chronic stable elevation is common in CKD and structural heart disease, but a new rise/fall can still represent acute MI."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

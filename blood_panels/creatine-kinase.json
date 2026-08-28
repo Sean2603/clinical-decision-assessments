@@ -22,7 +22,11 @@
           "notes": [
             "Causes include prolonged immobilisation, crush injury, seizure, hyperthermia, extreme exercise, ischaemia, infection, inflammatory myopathy, statins or toxins. Risk depends on CK trend, creatinine, potassium, phosphate, calcium, hydration and urine output."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "marked-elevation",
@@ -34,7 +38,11 @@
           "notes": [
             "This is not an absolute treatment threshold. AKI and dangerous hyperkalaemia can occur at lower values, particularly with dehydration, sepsis or baseline renal disease."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

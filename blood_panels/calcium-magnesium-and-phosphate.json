@@ -22,7 +22,11 @@
           "notes": [
             "Consider vitamin D deficiency, hypoparathyroidism, renal failure, pancreatitis, sepsis, low magnesium or massive transfusion. Symptoms include perioral tingling, carpopedal spasm, tetany, seizure and prolonged QT."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "hypercalcaemia",
@@ -34,7 +38,11 @@
           "notes": [
             "Consider malignancy, primary hyperparathyroidism, medication or granulomatous disease. Look for dehydration, constipation, vomiting, polyuria, confusion, weakness and shortened QT."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
@@ -56,7 +64,11 @@
           "notes": [
             "Low magnesium can cause tremor, weakness, seizures, hypokalaemia that is difficult to correct and ventricular arrhythmias including torsades. High magnesium can cause hyporeflexia, bradycardia, hypotension and respiratory depression."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "phosphate",
@@ -68,7 +80,11 @@
           "notes": [
             "Low phosphate can cause weakness, respiratory muscle failure, rhabdomyolysis and haemolysis. A rapid fall after nutrition in a malnourished patient suggests refeeding syndrome, often with low potassium and magnesium."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

@@ -22,7 +22,11 @@
           "notes": [
             "Lipase is generally more pancreas-specific and remains raised longer than amylase. It may also rise with renal failure, bowel ischaemia/obstruction, cholecystitis, perforation, DKA or medications."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "amylase",
@@ -34,7 +38,11 @@
           "notes": [
             "Can be normal in delayed presentation, hypertriglyceridaemia or chronic pancreatic disease. Salivary disease, renal failure, bowel pathology and macroamylasaemia can also raise it."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

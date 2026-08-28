@@ -22,7 +22,11 @@
           "notes": [
             "Raised by warfarin, vitamin K deficiency, liver synthetic dysfunction, DIC or factor deficiency. Direct oral anticoagulants can alter PT/INR unpredictably; a normal INR does not exclude a clinically relevant DOAC effect."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "aptt",
@@ -34,7 +38,11 @@
           "notes": [
             "Prolonged with unfractionated heparin, factor deficiencies/inhibitors, lupus anticoagulant or DIC. A normal APTT does not reliably exclude DOAC activity."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "fibrinogen",
@@ -46,7 +54,11 @@
           "notes": [
             "Low fibrinogen with prolonged PT/APTT, thrombocytopenia and bleeding supports consumption such as DIC. It can be normal or raised early because it is also an acute-phase protein."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
@@ -68,7 +80,11 @@
           "notes": [
             "Look for falling platelets, prolonged PT and APTT, low fibrinogen, raised D-dimer, bleeding/oozing, purpura, organ dysfunction and a trigger such as sepsis, trauma, malignancy or obstetric catastrophe."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {

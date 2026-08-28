@@ -22,7 +22,11 @@
           "notes": [
             "Ferritin is an acute-phase protein and may be normal or raised despite iron deficiency during infection, inflammation, liver disease or malignancy."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "transferrin-saturation",
@@ -34,7 +38,11 @@
           "notes": [
             "Low saturation with low ferritin supports absolute iron deficiency. Low saturation with normal/high ferritin may reflect inflammation, CKD or mixed deficiency."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
@@ -56,7 +64,11 @@
           "notes": [
             "Deficiency can produce macrocytosis, glossitis, paraesthesia, impaired vibration/proprioception, gait disturbance, cognitive change or pancytopenia. Neurological deficiency can occur without anaemia or macrocytosis."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         },
         {
           "id": "folate",
@@ -68,7 +80,11 @@
           "notes": [
             "Low folate can cause macrocytic anaemia. Replace B12 deficiency first or concurrently; folate alone can improve anaemia while neurological B12 injury progresses."
           ],
-          "unitless": true
+          "unitless": true,
+          "navigation": {
+            "showInJumpTo": false,
+            "label": null
+          }
         }
       ],
       "navigation": {
