@@ -1,5 +1,45 @@
 # Shared reference registry — Publication history
 
+<!-- cdm-publication:0.9.0 -->
+## v0.9.0 — 2026-08-28
+
+- **Content ID:** `references`
+- **Content type:** reference-registry
+- **Previous published version:** 0.9.0
+- **Published version:** 0.9.0
+- **Generated:** 2026-08-28T21:36:57.731Z
+
+## Change control
+
+- **Summary:** Evidence reference changed: references[bnf-metronidazole] › review Status.
+- **Risk:** reference-update
+- **Selected version increase:** minor
+- **Recommended version increase:** patch
+- **Changed fields:** 5
+- **Override reason:** Review-cycle versioning keeps this new post-publication cycle on 0.9.x.
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-08-28T12:00:00.000Z
+- **Notes:** Added reference: bnf-ciprofloxacin — British National Formulary: Ciprofloxacin
+Added reference: bnf-co-amoxiclav — British National Formulary: Co-amoxiclav
+Added reference: bnf-doxycycline — British National Formulary: Doxycycline
+Added reference: bnf-metronidazole — British National Formulary: Metronidazole
+Added reference: bnf-phenoxymethylpenicillin — British National Formulary: Phenoxymethylpenicillin
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.9.0 -->
+
+---
+
 <!-- cdm-publication:0.8.0 -->
 ## v0.8.0 — 2026-08-28
 
