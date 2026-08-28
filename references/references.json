@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-24",
+  "lastChecked": "2026-08-28",
   "references": [
     {
       "id": "NICE-NG59",
@@ -712,6 +712,29 @@
       "supersededBy": null,
       "notes": null,
       "relevantTopics": []
+    },
+    {
+      "id": "bnf-amoxicillin",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Amoxicillin",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/amoxicillin/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/amoxicillin/",
+      "relevantTopics": [
+        "amoxicillin",
+        "Amoxicillin"
+      ]
     }
   ]
 }

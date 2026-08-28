@@ -1,5 +1,41 @@
 # Shared reference registry — Publication history
 
+<!-- cdm-publication:0.7.0 -->
+## v0.7.0 — 2026-08-28
+
+- **Content ID:** `references`
+- **Content type:** reference-registry
+- **Previous published version:** 0.1.0
+- **Published version:** 0.7.0
+- **Generated:** 2026-08-28T13:49:44.879Z
+
+## Change control
+
+- **Summary:** Evidence reference changed: references[bnf-amoxicillin] › review Status.
+- **Risk:** reference-update
+- **Selected version increase:** minor
+- **Recommended version increase:** patch
+- **Changed fields:** 2
+- **Override reason:** Review-cycle versioning keeps this new post-publication cycle on 0.7.x.
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-08-28T12:00:00.000Z
+- **Notes:** Added reference: bnf-amoxicillin — British National Formulary: Amoxicillin
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.7.0 -->
+
+---
+
 <!-- cdm-publication:0.4.0 -->
 ## v0.4.0 — 2026-08-24
 
