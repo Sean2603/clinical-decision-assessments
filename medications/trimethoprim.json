@@ -2,14 +2,14 @@
   "id": "trimethoprim",
   "title": "Trimethoprim",
   "aliases": [],
-  "version": "0.1.1",
+  "version": "0.2.0",
   "status": "active",
   "formularyGroup": "Antimicrobials",
   "medicineType": "Antibacterial",
   "drugClass": "Folate antagonist",
-  "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
-  "updatedOn": null,
-  "changeSummary": "Migrated to indication-level regimens; clinical content unchanged.",
+  "summary": "",
+  "updatedOn": "2026-08-28",
+  "changeSummary": null,
   "effectiveFrom": null,
   "indications": [
     {
@@ -41,26 +41,872 @@
           "prescribingChoiceLabel": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)"
         }
       ]
+    },
+    {
+      "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)",
+          "dose": "200mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days",
+          "prescribingPathwayId": "lower-uti-men-16-and-over",
+          "prescribingChoiceLabel": "1st choice empiric treatment (whilst waiting sensitivities as per MSU)"
+        }
+      ]
+    },
+    {
+      "title": "Lower UTI Non-pregnant women aged 16 years and over",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "Alternative if cultures known or there is a lower risk of resistance",
+          "dose": "200mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "3 days",
+          "prescribingPathwayId": "lower-uti-non-pregnant-women-16-and-over",
+          "prescribingChoiceLabel": "Alternative if cultures known or there is a lower risk of resistance"
+        }
+      ]
+    },
+    {
+      "title": "Pyelonephritis – Adults",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "If lab report shows sensitive",
+          "dose": "200mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "14 days",
+          "prescribingPathwayId": "pyelonephritis-adults",
+          "prescribingChoiceLabel": "If lab report shows sensitive"
+        }
+      ]
     }
   ],
-  "contraindications": [],
-  "cautions": [],
-  "interactions": [],
-  "renalConsiderations": [],
+  "contraindications": [
+    "Blood dyscrasias"
+  ],
+  "cautions": [
+    "Acute porphyrias",
+    "elderly (in adults)",
+    "predisposition to folate deficiency"
+  ],
+  "interactions": [
+    {
+      "drug": "Aceclofenac",
+      "description": "Both Trimethoprim and Aceclofenac can increase the risk of nephrotoxicity. Both Trimethoprim and Aceclofenac can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Acenocoumarol",
+      "description": "Trimethoprim is predicted to increase the anticoagulant effect of Acenocoumarol. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Aciclovir",
+      "description": "Both Trimethoprim and Aciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Aliskiren",
+      "description": "Both Trimethoprim and Aliskiren can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Amikacin",
+      "description": "Both Trimethoprim and Amikacin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Amiloride",
+      "description": "Both Trimethoprim and Amiloride can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Amphotericin B",
+      "description": "Both Trimethoprim and Amphotericin B can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Aspirin",
+      "description": "Both Trimethoprim and Aspirin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Azathioprine",
+      "description": "Trimethoprim might increase the risk of haematological toxicity when given with Azathioprine in renal transplant patients. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Azilsartan",
+      "description": "Both Trimethoprim and Azilsartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Bemiparin",
+      "description": "Both Trimethoprim and Bemiparin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Bromfenac",
+      "description": "Both Trimethoprim and Bromfenac can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Candesartan",
+      "description": "Both Trimethoprim and Candesartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Captopril",
+      "description": "Both Trimethoprim and Captopril can increase the risk of nephrotoxicity. Both Trimethoprim and Captopril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Carboplatin",
+      "description": "Both Trimethoprim and Carboplatin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefaclor",
+      "description": "Both Trimethoprim and Cefaclor can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefadroxil",
+      "description": "Both Trimethoprim and Cefadroxil can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefalexin",
+      "description": "Both Trimethoprim and Cefalexin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefazolin",
+      "description": "Both Trimethoprim and Cefazolin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefepime",
+      "description": "Both Trimethoprim and Cefepime can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefixime",
+      "description": "Both Trimethoprim and Cefixime can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefotaxime",
+      "description": "Both Trimethoprim and Cefotaxime can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefoxitin",
+      "description": "Both Trimethoprim and Cefoxitin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefradine",
+      "description": "Both Trimethoprim and Cefradine can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ceftaroline",
+      "description": "Both Trimethoprim and Ceftaroline can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ceftazidime",
+      "description": "Both Trimethoprim and Ceftazidime can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ceftobiprole",
+      "description": "Both Trimethoprim and Ceftobiprole can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ceftolozane",
+      "description": "Both Trimethoprim and Ceftolozane can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ceftriaxone",
+      "description": "Both Trimethoprim and Ceftriaxone can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cefuroxime",
+      "description": "Both Trimethoprim and Cefuroxime can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Celecoxib",
+      "description": "Both Trimethoprim and Celecoxib can increase the risk of nephrotoxicity. Both Trimethoprim and Celecoxib can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ciclosporin",
+      "description": "Both Trimethoprim and Ciclosporin can increase the risk of nephrotoxicity. Both Trimethoprim and Ciclosporin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cidofovir",
+      "description": "Both Trimethoprim and Cidofovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cisplatin",
+      "description": "Both Trimethoprim and Cisplatin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Clozapine",
+      "description": "Trimethoprim might increase the risk of neutropenia when given with Clozapine. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Colistimethate",
+      "description": "Both Trimethoprim and Colistimethate can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Dalteparin",
+      "description": "Both Trimethoprim and Dalteparin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Dapsone",
+      "description": "Dapsone increases the exposure to Trimethoprim and Trimethoprim increases the exposure to Dapsone. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Deferasirox",
+      "description": "Both Trimethoprim and Deferasirox can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Dexketoprofen",
+      "description": "Both Trimethoprim and Dexketoprofen can increase the risk of nephrotoxicity. Both Trimethoprim and Dexketoprofen can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Diclofenac",
+      "description": "Both Trimethoprim and Diclofenac can increase the risk of nephrotoxicity. Both Trimethoprim and Diclofenac can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Digoxin",
+      "description": "Trimethoprim increases the concentration of Digoxin. Manufacturer advises monitor Digoxin concentration.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Drospirenone",
+      "description": "Both Trimethoprim and Drospirenone can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Enalapril",
+      "description": "Both Trimethoprim and Enalapril can increase the risk of nephrotoxicity. Both Trimethoprim and Enalapril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Enoxaparin",
+      "description": "Both Trimethoprim and Enoxaparin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Eplerenone",
+      "description": "Both Trimethoprim and Eplerenone can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Eprosartan",
+      "description": "Both Trimethoprim and Eprosartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Etodolac",
+      "description": "Both Trimethoprim and Etodolac can increase the risk of nephrotoxicity. Both Trimethoprim and Etodolac can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Etoricoxib",
+      "description": "Both Trimethoprim and Etoricoxib can increase the risk of nephrotoxicity. Both Trimethoprim and Etoricoxib can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Finerenone",
+      "description": "Both Trimethoprim and Finerenone can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Flurbiprofen",
+      "description": "Both Trimethoprim and Flurbiprofen can increase the risk of nephrotoxicity. Both Trimethoprim and Flurbiprofen can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Foscarnet",
+      "description": "Both Trimethoprim and Foscarnet can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fosinopril",
+      "description": "Both Trimethoprim and Fosinopril can increase the risk of nephrotoxicity. Both Trimethoprim and Fosinopril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fosphenytoin",
+      "description": "Trimethoprim increases the concentration of Fosphenytoin. Manufacturer advises monitor concentration.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Ganciclovir",
+      "description": "Both Trimethoprim and Ganciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Gentamicin",
+      "description": "Both Trimethoprim and Gentamicin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Heparin",
+      "description": "Both Trimethoprim and Heparin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ibuprofen",
+      "description": "Both Trimethoprim and Ibuprofen can increase the risk of nephrotoxicity. Both Trimethoprim and Ibuprofen can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ifosfamide",
+      "description": "Both Trimethoprim and Ifosfamide can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Imidapril",
+      "description": "Both Trimethoprim and Imidapril can increase the risk of nephrotoxicity. Both Trimethoprim and Imidapril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Indometacin",
+      "description": "Both Trimethoprim and Indometacin can increase the risk of nephrotoxicity. Both Trimethoprim and Indometacin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Inotersen",
+      "description": "Both Trimethoprim and Inotersen can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Irbesartan",
+      "description": "Both Trimethoprim and Irbesartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ketoprofen",
+      "description": "Both Trimethoprim and Ketoprofen can increase the risk of nephrotoxicity. Both Trimethoprim and Ketoprofen can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ketorolac",
+      "description": "Both Trimethoprim and Ketorolac can increase the risk of nephrotoxicity. Both Trimethoprim and Ketorolac can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Labetalol",
+      "description": "Both Trimethoprim and Labetalol can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lamivudine",
+      "description": "Trimethoprim slightly increases the exposure to Lamivudine. Manufacturer advises monitor.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Lisinopril",
+      "description": "Both Trimethoprim and Lisinopril can increase the risk of nephrotoxicity. Both Trimethoprim and Lisinopril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lithium",
+      "description": "Both Trimethoprim and Lithium can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Losartan",
+      "description": "Both Trimethoprim and Losartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Mefenamic acid",
+      "description": "Both Trimethoprim and Mefenamic acid can increase the risk of nephrotoxicity. Both Trimethoprim and Mefenamic acid can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Meloxicam",
+      "description": "Both Trimethoprim and Meloxicam can increase the risk of nephrotoxicity. Both Trimethoprim and Meloxicam can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Mercaptopurine",
+      "description": "Trimethoprim might increase the risk of haematological toxicity when given with Mercaptopurine in renal transplant patients. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Mesalazine",
+      "description": "Both Trimethoprim and Mesalazine can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Metformin",
+      "description": "Trimethoprim is predicted to increase the exposure to Metformin. Manufacturer advises use with caution and adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Trimethoprim increases the risk of haematological side-effects (sometimes fatal) when given with Methotrexate. Manufacturer advises avoid. See methotrexate for further information. Both Trimethoprim and Methotrexate can increase the risk of nephrotoxicity.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Nabumetone",
+      "description": "Both Trimethoprim and Nabumetone can increase the risk of nephrotoxicity. Both Trimethoprim and Nabumetone can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Naproxen",
+      "description": "Both Trimethoprim and Naproxen can increase the risk of nephrotoxicity. Both Trimethoprim and Naproxen can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Neomycin",
+      "description": "Both Trimethoprim and Neomycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Netilmicin",
+      "description": "Both Trimethoprim and Netilmicin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Olmesartan",
+      "description": "Both Trimethoprim and Olmesartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Oxaliplatin",
+      "description": "Both Trimethoprim and Oxaliplatin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pamidronate",
+      "description": "Both Trimethoprim and Pamidronate can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Parecoxib",
+      "description": "Both Trimethoprim and Parecoxib can increase the risk of nephrotoxicity. Both Trimethoprim and Parecoxib can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pemetrexed",
+      "description": "Both Trimethoprim and Pemetrexed can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pentamidine",
+      "description": "Both Trimethoprim and Pentamidine can increase the risk of nephrotoxicity. Both Trimethoprim and Pentamidine can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Perindopril",
+      "description": "Both Trimethoprim and Perindopril can increase the risk of nephrotoxicity. Both Trimethoprim and Perindopril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Phenazone",
+      "description": "Both Trimethoprim and Phenazone can increase the risk of nephrotoxicity. Both Trimethoprim and Phenazone can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Phenytoin",
+      "description": "Trimethoprim increases the concentration of Phenytoin. Manufacturer advises monitor concentration.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Piroxicam",
+      "description": "Both Trimethoprim and Piroxicam can increase the risk of nephrotoxicity. Both Trimethoprim and Piroxicam can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Potassium aminobenzoate",
+      "description": "Both Trimethoprim and Potassium aminobenzoate can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Potassium canrenoate",
+      "description": "Both Trimethoprim and Potassium canrenoate can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Potassium chloride",
+      "description": "Both Trimethoprim and Potassium chloride can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pramipexole",
+      "description": "Trimethoprim is predicted to increase the exposure to Pramipexole. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Pyrimethamine",
+      "description": "Pyrimethamine increases the risk of adverse effects when given with Trimethoprim. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Quinapril",
+      "description": "Both Trimethoprim and Quinapril can increase the risk of nephrotoxicity. Both Trimethoprim and Quinapril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ramipril",
+      "description": "Both Trimethoprim and Ramipril can increase the risk of nephrotoxicity. Both Trimethoprim and Ramipril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Repaglinide",
+      "description": "Trimethoprim slightly increases the exposure to Repaglinide. Manufacturer advises avoid or monitor blood glucose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Rifampicin",
+      "description": "Rifampicin decreases the exposure to Trimethoprim. Manufacturer makes no recommendation. Both Trimethoprim and Rifampicin can increase the risk of nephrotoxicity.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Sapropterin",
+      "description": "Trimethoprim is predicted to decrease the efficacy of Sapropterin. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Sparsentan",
+      "description": "Both Trimethoprim and Sparsentan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Spironolactone",
+      "description": "Both Trimethoprim and Spironolactone can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Streptomycin",
+      "description": "Both Trimethoprim and Streptomycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Streptozocin",
+      "description": "Both Trimethoprim and Streptozocin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Sulfasalazine",
+      "description": "Both Trimethoprim and Sulfasalazine can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Sulindac",
+      "description": "Both Trimethoprim and Sulindac can increase the risk of nephrotoxicity. Both Trimethoprim and Sulindac can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Suxamethonium",
+      "description": "Both Trimethoprim and Suxamethonium can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tacrolimus",
+      "description": "Both Trimethoprim and Tacrolimus can increase the risk of nephrotoxicity. Both Trimethoprim and Tacrolimus can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Telmisartan",
+      "description": "Both Trimethoprim and Telmisartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tenofovir disoproxil",
+      "description": "Both Trimethoprim and Tenofovir disoproxil can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tenoxicam",
+      "description": "Both Trimethoprim and Tenoxicam can increase the risk of nephrotoxicity. Both Trimethoprim and Tenoxicam can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tiaprofenic acid",
+      "description": "Both Trimethoprim and Tiaprofenic acid can increase the risk of nephrotoxicity. Both Trimethoprim and Tiaprofenic acid can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tinzaparin",
+      "description": "Both Trimethoprim and Tinzaparin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tobramycin",
+      "description": "Both Trimethoprim and Tobramycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tolfenamic acid",
+      "description": "Both Trimethoprim and Tolfenamic acid can increase the risk of nephrotoxicity. Both Trimethoprim and Tolfenamic acid can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tolvaptan",
+      "description": "Both Trimethoprim and Tolvaptan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Trandolapril",
+      "description": "Both Trimethoprim and Trandolapril can increase the risk of nephrotoxicity. Both Trimethoprim and Trandolapril can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Treprostinil",
+      "description": "Trimethoprim is predicted to increase the exposure to Treprostinil. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Triamterene",
+      "description": "Both Trimethoprim and Triamterene can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Valaciclovir",
+      "description": "Both Trimethoprim and Valaciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Valganciclovir",
+      "description": "Both Trimethoprim and Valganciclovir can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Valsartan",
+      "description": "Both Trimethoprim and Valsartan can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vancomycin",
+      "description": "Both Trimethoprim and Vancomycin can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Voclosporin",
+      "description": "Both Trimethoprim and Voclosporin can increase the risk of nephrotoxicity. Both Trimethoprim and Voclosporin can increase the risk of hyperkalaemia (hyperkalaemia is particularly notable when ACE inhibitors or angiotensin-II receptor antagonists are given with spironolactone or eplerenone).",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Trimethoprim is predicted to increase the anticoagulant effect of Warfarin. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Zoledronate",
+      "description": "Both Trimethoprim and Zoledronate can increase the risk of nephrotoxicity.",
+      "severity": null,
+      "evidence": null
+    }
+  ],
+  "renalConsiderations": [
+    "Manufacturer advises caution in impairment.",
+    "Manufacturer advises dose reduction to half normal dose after 3 days if eGFR 15–30 mL/minute/1.73 m 2 .",
+    "Manufacturer advises dose reduction to half normal dose if eGFR less than 15 mL/minute/1.73 m 2 .",
+    "Manufacturer advises dose reduction to half normal dose after 3 days if estimated glomerular filtration rate 15–30 mL/minute/1.73 m 2 .",
+    "Manufacturer advises dose reduction to half normal dose if estimated glomerular filtration rate less than 15 mL/minute/1.73 m 2 ."
+  ],
   "hepaticConsiderations": [],
-  "pregnancyBreastfeeding": [],
-  "practicalPoints": [],
-  "references": [],
+  "pregnancyBreastfeeding": [
+    "200 mg for 1 dose, dose to be taken following exposure to a trigger.",
+    "Teratogenic risk in first trimester (folate antagonist). Manufacturers advise avoid during pregnancy.",
+    "Present in milk—short-term use not known to be harmful."
+  ],
+  "practicalPoints": [
+    "Manufacturer advises monitor blood counts with long-term use and in those with, or at risk of, folate deficiency.",
+    "Manufacturer advises monitor serum electrolytes in patients at risk of developing hyperkalaemia, and consider monitoring in other patients, particularly with long-term use.",
+    "Manufacturer advises consider monitoring renal function, particularly with long-term use.",
+    "Manufacturer advises monitoring of plasma-trimethoprim concentration may be considered with long-term use and under specialist advice.",
+    "On long-term treatment, patients and their carers should be told how to recognise signs of blood disorders and advised to seek immediate medical attention if symptoms such as fever, sore throat, rash, mouth ulcers, purpura, bruising or bleeding develop.",
+    "https://www.medicinesforchildren.org.uk/medicines/trimethoprim-for-bacterial-infections/"
+  ],
+  "references": [
+    "bnf-trimethoprim"
+  ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-28",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-28",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "isPenicillin": false,
   "attachments": [],
   "prominentResources": [],
-  "sideEffects": []
+  "sideEffects": [
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; angioedema; anxiety; appetite decreased; arthralgia; behaviour abnormal; bone marrow disorders; confusion; constipation; cough; depression; dizziness; dyspnoea; eosinophilia; erythema nodosum; fever; haemolysis; haemolytic anaemia; haemorrhage; hallucination; hepatic disorders; hypoglycaemia; lethargy; leucopenia; meningitis aseptic; movement disorders; myalgia; neutropenia; oral disorders; pancreatitis; paraesthesia; peripheral neuritis; photosensitivity reaction; pseudomembranous enterocolitis; renal impairment; seizure; severe cutaneous adverse reactions (SCARs); sleep disorders; syncope; systemic lupus erythematosus (SLE); thrombocytopenia; tinnitus; tremor; uveitis; vasculitis; vertigo; wheezing"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Gastrointestinal disorder; megaloblastic anaemia; methaemoglobinaemia"
+      ]
+    },
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Diarrhoea; electrolyte imbalance; fungal overgrowth; headache; nausea; skin reactions; vomiting"
+      ]
+    }
+  ]
 }
