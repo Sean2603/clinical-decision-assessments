@@ -2,7 +2,7 @@
   "id": "abg-and-vbg",
   "title": "ABG and VBG",
   "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Acid–base status, ventilation, oxygenation and lactate ",
@@ -28,7 +28,7 @@
           ],
           "unitless": true,
           "navigation": {
-            "showInJumpTo": false,
+            "showInJumpTo": true,
             "label": null
           }
         },
@@ -47,7 +47,7 @@
             "PvCO₂ is normally slightly higher than arterial pCO₂."
           ],
           "navigation": {
-            "showInJumpTo": false,
+            "showInJumpTo": true,
             "label": null
           }
         },
@@ -64,7 +64,7 @@
           ],
           "notes": [],
           "navigation": {
-            "showInJumpTo": false,
+            "showInJumpTo": true,
             "label": null
           }
         },
@@ -81,7 +81,7 @@
           ],
           "notes": [],
           "navigation": {
-            "showInJumpTo": false,
+            "showInJumpTo": true,
             "label": null
           }
         },
@@ -98,7 +98,7 @@
             "Do not use venous pO₂ to assess arterial oxygenation."
           ],
           "navigation": {
-            "showInJumpTo": false,
+            "showInJumpTo": true,
             "label": null
           }
         },
@@ -115,13 +115,13 @@
             "A normal lactate does not exclude sepsis, shock or another serious illness."
           ],
           "navigation": {
-            "showInJumpTo": false,
+            "showInJumpTo": true,
             "label": null
           }
         }
       ],
       "navigation": {
-        "showInJumpTo": true,
+        "showInJumpTo": false,
         "label": null
       }
     },
@@ -424,8 +424,8 @@
         {
           "id": "ph",
           "label": "pH",
-          "min": 6.0,
-          "max": 8.0,
+          "min": 6,
+          "max": 8,
           "decimalPlaces": 3,
           "unit": null,
           "validationMessage": "Enter a plausible blood pH between 6.0 and 8.0."
@@ -434,7 +434,7 @@
           "id": "pco2",
           "label": "pCO₂ (kPa)",
           "min": 0.5,
-          "max": 20.0,
+          "max": 20,
           "decimalPlaces": 2,
           "unit": "kPa",
           "validationMessage": "Enter pCO₂ between 0.5 and 20 kPa."
@@ -442,8 +442,8 @@
         {
           "id": "bicarbonate",
           "label": "Bicarbonate (mmol/L)",
-          "min": 1.0,
-          "max": 80.0,
+          "min": 1,
+          "max": 80,
           "decimalPlaces": 1,
           "unit": "mmol/L",
           "validationMessage": "Enter bicarbonate between 1 and 80 mmol/L."
@@ -464,19 +464,13 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-28",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-28",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
-  },
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }
