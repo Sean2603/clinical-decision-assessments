@@ -111,6 +111,16 @@
           "expectedNumber": 2.2,
           "expectedText": null
         }
+      ],
+      "inputs": [
+        {
+          "id": "measuredCalcium",
+          "label": "Measured calcium (mmol/L)"
+        },
+        {
+          "id": "albumin",
+          "label": "Albumin (g/L)"
+        }
       ]
     }
   ],
@@ -133,11 +143,11 @@
     "nextReviewDue": null
   },
   "migration": {
-    "state": "shadow",
-    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
-    "currentScreen": "Calcium, magnesium and phosphate",
-    "parityStatus": "pending",
-    "migratedOn": "2026-08-01"
+    "state": "native",
+    "sourceFile": "CDA governed content",
+    "currentScreen": "Generic CDA renderer",
+    "parityStatus": "matched",
+    "migratedOn": "2026-08-28"
   },
   "attachments": []
 }

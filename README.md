@@ -1,3 +1,13 @@
+## CDA content version 0.0.14
+
+Scoring tools and blood panels are now native governed CDA content rather than shadow copies of Flutter clinical screens.
+
+- **22 scoring tools/pathway references** are governed in `scoring_tools/`.
+- **15 blood panels** are governed in `blood_panels/`.
+- Calculator evaluation and parity cases remain executable through the shared remote engine contract.
+- Blood calculations may declare explicit `inputs[]` IDs/labels for generic App rendering.
+- The Flutter App catalogue is derived from the manifest; adding or withdrawing supported CDA items no longer requires a Dart catalogue edit.
+
 # Clinical Decision Assessments
 
 Governed clinical-content repository for the **Clinical Decision Support** platform.

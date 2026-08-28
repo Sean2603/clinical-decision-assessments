@@ -174,11 +174,11 @@
     "nextReviewDue": null
   },
   "migration": {
-    "state": "shadow",
-    "sourceFile": "lib/screens/blood_interpretation_screen.dart",
-    "currentScreen": "Full blood count",
-    "parityStatus": "pending",
-    "migratedOn": "2026-08-01"
+    "state": "native",
+    "sourceFile": "CDA governed content",
+    "currentScreen": "Generic CDA renderer",
+    "parityStatus": "matched",
+    "migratedOn": "2026-08-28"
   },
   "attachments": []
 }

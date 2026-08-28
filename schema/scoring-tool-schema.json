@@ -184,7 +184,10 @@
       ],
       "properties": {
         "state": {
-          "const": "shadow"
+          "enum": [
+            "shadow",
+            "native"
+          ]
         },
         "sourceFile": {
           "type": "string",

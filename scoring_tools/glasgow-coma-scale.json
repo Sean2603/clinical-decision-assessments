@@ -151,11 +151,11 @@
     "reviewNotes": null
   },
   "migration": {
-    "state": "shadow",
-    "sourceFile": "lib/screens/phase_one_tools.dart",
-    "currentScreen": "GcsScreen",
-    "parityStatus": "pending",
-    "migratedOn": "2026-08-01"
+    "state": "native",
+    "sourceFile": "CDA governed content",
+    "currentScreen": "Generic CDA renderer",
+    "parityStatus": "matched",
+    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "sum",

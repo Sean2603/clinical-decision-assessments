@@ -83,6 +83,20 @@
           "expectedNumber": 310,
           "expectedText": null
         }
+      ],
+      "inputs": [
+        {
+          "id": "sodium",
+          "label": "Sodium (mmol/L)"
+        },
+        {
+          "id": "glucose",
+          "label": "Glucose (mmol/L)"
+        },
+        {
+          "id": "urea",
+          "label": "Urea (mmol/L)"
+        }
       ]
     },
     {
@@ -125,6 +139,16 @@
           "expectedNumber": 30,
           "expectedText": null
         }
+      ],
+      "inputs": [
+        {
+          "id": "measuredOsmolality",
+          "label": "Measured osmolality (mOsm/kg)"
+        },
+        {
+          "id": "calculatedOsmolality",
+          "label": "Calculated osmolality (mOsm/kg)"
+        }
       ]
     }
   ],
@@ -146,11 +170,11 @@
     "nextReviewDue": null
   },
   "migration": {
-    "state": "shadow",
-    "sourceFile": "lib/screens/additional_blood_interpretation_screens.dart",
-    "currentScreen": "Serum osmolality",
-    "parityStatus": "pending",
-    "migratedOn": "2026-08-01"
+    "state": "native",
+    "sourceFile": "CDA governed content",
+    "currentScreen": "Generic CDA renderer",
+    "parityStatus": "matched",
+    "migratedOn": "2026-08-28"
   },
   "attachments": []
 }

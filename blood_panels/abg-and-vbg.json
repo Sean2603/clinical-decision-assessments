@@ -209,7 +209,14 @@
           "primary-metabolic-acidosis": "Primary metabolic acidosis pattern",
           "mixed-respiratory-metabolic-acidosis": "Mixed respiratory and metabolic acidosis pattern",
           "primary-respiratory-alkalosis": "Primary respiratory alkalosis pattern",
-          "primary-metabolic-alkalosis": "Primary metabolic alkalosis pattern"
+          "primary-metabolic-alkalosis": "Primary metabolic alkalosis pattern",
+          "respiratory-acidosis-with-raised-bicarbonate": "Respiratory acidosis pattern with raised bicarbonate",
+          "metabolic-acidosis-with-respiratory-compensation": "Metabolic acidosis pattern with respiratory compensation",
+          "respiratory-alkalosis-with-reduced-bicarbonate": "Respiratory alkalosis pattern with reduced bicarbonate",
+          "metabolic-alkalosis-with-respiratory-compensation": "Metabolic alkalosis pattern with respiratory compensation",
+          "mixed-respiratory-metabolic-alkalosis": "Mixed respiratory and metabolic alkalosis pattern",
+          "compensated-respiratory-acidosis": "Compensated respiratory acidosis pattern",
+          "compensated-respiratory-alkalosis-or-mixed": "Compensated respiratory alkalosis or mixed pattern"
         }
       },
       "parityCases": [
@@ -278,6 +285,97 @@
           },
           "expectedNumber": null,
           "expectedText": "Primary metabolic alkalosis pattern"
+        },
+        {
+          "id": "respiratory-acidosis-raised-bicarbonate",
+          "description": "Raised pCO₂ and bicarbonate with acidaemia.",
+          "inputs": {
+            "ph": 7.25,
+            "pco2": 8,
+            "bicarbonate": 30
+          },
+          "expectedNumber": null,
+          "expectedText": "Respiratory acidosis pattern with raised bicarbonate"
+        },
+        {
+          "id": "metabolic-acidosis-compensation",
+          "description": "Low bicarbonate and pCO₂ with acidaemia.",
+          "inputs": {
+            "ph": 7.25,
+            "pco2": 3.5,
+            "bicarbonate": 15
+          },
+          "expectedNumber": null,
+          "expectedText": "Metabolic acidosis pattern with respiratory compensation"
+        },
+        {
+          "id": "respiratory-alkalosis-reduced-bicarbonate",
+          "description": "Low pCO₂ and bicarbonate with alkalaemia.",
+          "inputs": {
+            "ph": 7.5,
+            "pco2": 3.5,
+            "bicarbonate": 18
+          },
+          "expectedNumber": null,
+          "expectedText": "Respiratory alkalosis pattern with reduced bicarbonate"
+        },
+        {
+          "id": "metabolic-alkalosis-compensation",
+          "description": "Raised bicarbonate and pCO₂ with alkalaemia.",
+          "inputs": {
+            "ph": 7.5,
+            "pco2": 7,
+            "bicarbonate": 32
+          },
+          "expectedNumber": null,
+          "expectedText": "Metabolic alkalosis pattern with respiratory compensation"
+        },
+        {
+          "id": "mixed-alkalosis",
+          "description": "Low pCO₂ and raised bicarbonate with alkalaemia.",
+          "inputs": {
+            "ph": 7.5,
+            "pco2": 3.5,
+            "bicarbonate": 32
+          },
+          "expectedNumber": null,
+          "expectedText": "Mixed respiratory and metabolic alkalosis pattern"
+        },
+        {
+          "id": "compensated-respiratory-acidosis",
+          "description": "Normal-range pH with raised pCO₂ and bicarbonate.",
+          "inputs": {
+            "ph": 7.4,
+            "pco2": 7,
+            "bicarbonate": 30
+          },
+          "expectedNumber": null,
+          "expectedText": "Compensated respiratory acidosis pattern"
+        },
+        {
+          "id": "compensated-respiratory-alkalosis",
+          "description": "Normal-range pH with low pCO₂ and bicarbonate.",
+          "inputs": {
+            "ph": 7.4,
+            "pco2": 3.5,
+            "bicarbonate": 18
+          },
+          "expectedNumber": null,
+          "expectedText": "Compensated respiratory alkalosis or mixed pattern"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "ph",
+          "label": "pH"
+        },
+        {
+          "id": "pco2",
+          "label": "pCO₂ (kPa)"
+        },
+        {
+          "id": "bicarbonate",
+          "label": "Bicarbonate (mmol/L)"
         }
       ]
     }
@@ -303,11 +401,11 @@
     "reviewNotes": null
   },
   "migration": {
-    "state": "shadow",
-    "sourceFile": "lib/screens/abg_vbg_interpretation_screen.dart",
-    "currentScreen": "AbgVbgInterpretationScreen",
-    "parityStatus": "pending",
-    "migratedOn": "2026-08-01"
+    "state": "native",
+    "sourceFile": "CDA governed content",
+    "currentScreen": "Generic CDA renderer",
+    "parityStatus": "matched",
+    "migratedOn": "2026-08-28"
   },
   "attachments": []
 }

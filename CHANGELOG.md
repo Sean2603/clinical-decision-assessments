@@ -1,3 +1,15 @@
+## 0.0.14 - 2026-08-28
+
+### Native CDA scoring and blood catalogue
+
+- Added governed definitions for the ten scoring/reference tools that previously existed only as hard-coded Flutter screens: CRB-65, Canadian C-spine rule, ADD-RS, HEART, DECAF, NICE head-injury pathway, Canadian CT Head Rule, EDACS, Glasgow-Blatchford and Canadian Syncope Risk Score.
+- The scoring catalogue now contains 22 governed definitions.
+- Added executable parity cases for the five newly governed calculators.
+- Marked scoring and blood migration metadata as native/matched now that the Flutter app renders them directly from CDA.
+- Added explicit optional calculation input metadata for governed blood calculations while retaining existing engine/parity definitions.
+- Completed ABG/VBG text-result coverage for every executable acid-base engine outcome and added parity cases for compensated and mixed patterns.
+- CDA remains authoritative for the scoring-tool and blood-panel catalogues.
+
 ## 0.0.11 - Nullable reference publication dates
 
 - Reference schema now permits `published: null` for continuously updated online resources that have no discrete publication date.
