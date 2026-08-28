@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.11",
-  "updatedAt": "2026-08-28T13:06:01Z",
+  "contentVersion": "0.0.12",
+  "updatedAt": "2026-08-28T14:37:21Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.52.0",
-  "downloadSizeBytes": 4520877,
+  "downloadSizeBytes": 4526244,
   "references": {
     "file": "references/references.json",
-    "sha256": "8c77a06104c1dfc1e6e0110a8843c0101413982e753b057f027d71f647179f23",
-    "sizeBytes": 30807
+    "sha256": "b2cf59fe5e567d3f28193ff1891fba7cf93cdef74d3d93859cb38aa2df76f88f",
+    "sizeBytes": 31599
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -522,12 +522,12 @@
     {
       "id": "amoxicillin",
       "title": "Amoxicillin",
-      "version": "0.1.1",
+      "version": "0.4.0",
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "c732044246dc7e3449ad9890421c51697165d6afc74090595bd180ab7c7d0926",
+      "sha256": "2e6031f2d6f805cf8b195c66125f489d3a6ded2478d8db1fb92c5c411d821488",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
-      "sizeBytes": 1401,
+      "sizeBytes": 5976,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },

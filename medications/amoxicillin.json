@@ -2,55 +2,155 @@
   "id": "amoxicillin",
   "title": "Amoxicillin",
   "aliases": [],
-  "version": "0.1.1",
+  "version": "0.4.0",
   "status": "active",
   "formularyGroup": "Antimicrobials",
   "medicineType": "Antibacterial",
   "drugClass": "Aminopenicillin",
-  "summary": "APUC starter formulary draft. Complete indication-specific prescribing details and clinical review before publication.",
-  "updatedOn": null,
+  "summary": "",
+  "updatedOn": "2026-08-28",
   "changeSummary": "Migrated to indication-level regimens; existing undosed indications retained without inventing dosing.",
   "effectiveFrom": null,
   "indications": [
     {
-      "title": "Otitis media (children/young people)",
+      "title": "Dental Abscess requiring urgent treatment",
       "notes": [],
-      "regimens": []
+      "regimens": [
+        {
+          "population": "Adult 1st line",
+          "dose": "500mg to 1000mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "5 days (review after 3 days)",
+          "prescribingPathwayId": "dental-abscess-urgent-treatment",
+          "prescribingChoiceLabel": "Adult 1st line"
+        }
+      ]
     },
     {
-      "title": "Community-acquired pneumonia",
+      "title": "Lower UTI in Pregnancy - Asymptomatic",
       "notes": [],
-      "regimens": []
-    },
-    {
-      "title": "COPD exacerbation",
-      "notes": [],
-      "regimens": []
-    },
-    {
-      "title": "LRTI",
-      "notes": [],
-      "regimens": []
+      "regimens": [
+        {
+          "population": "Treatment choices when sensitivities are known in order of preference: 1st choice:",
+          "dose": "500mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days",
+          "prescribingPathwayId": "lower-uti-pregnancy-asymptomatic",
+          "prescribingChoiceLabel": "Treatment choices when sensitivities are known in order of preference: 1st choice:"
+        }
+      ]
     }
   ],
   "contraindications": [],
-  "cautions": [],
-  "interactions": [],
-  "renalConsiderations": [],
-  "hepaticConsiderations": [],
-  "pregnancyBreastfeeding": [],
-  "practicalPoints": [],
-  "references": [],
+  "cautions": [
+    "History of allergy",
+    "Acute lymphocytic leukaemia (increased risk of erythematous rashes)",
+    "chronic lymphocytic leukaemia (increased risk of erythematous rashes)",
+    "cytomegalovirus infection (increased risk of erythematous rashes)",
+    "glandular fever (erythematous rashes common)",
+    "maintain adequate hydration with high doses (particularly during parenteral therapy)",
+    "Accumulation of sodium can occur with high parenteral doses"
+  ],
+  "interactions": [
+    {
+      "drug": "Acenocoumarol",
+      "description": "Amoxicillin potentially alters the anticoagulant effect of Acenocoumarol. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Allopurinol",
+      "description": "Allopurinol increases the risk of skin rash when given with Amoxicillin. Manufacturer advises consider alternatives.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Amoxicillin is predicted to increase the risk of toxicity when given with Methotrexate. Manufacturer advises monitor.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Mycophenolate",
+      "description": "Amoxicillin with clavulanic acid decreases the exposure to Mycophenolate. Manufacturer advises monitor.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Phenindione",
+      "description": "Amoxicillin is predicted to increase the risk of bleeding events when given with Phenindione. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Amoxicillin potentially alters the anticoagulant effect of Warfarin. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    }
+  ],
+  "renalConsiderations": [
+    "Increased risk of convulsions.",
+    "Accumulation of sodium from injection can occur in patients with renal impairment.",
+    "Risk of crystalluria with high doses (particularly during parenteral therapy).",
+    "Reduce dose if eGFR 30 mL/minute/1.73 m 2 or less (consult product literature). M",
+    "Reduce dose if estimated glomerular filtration rate 30 mL/minute/1.73 m 2 or less (consult product literature). M"
+  ],
+  "hepaticConsiderations": [
+    "Manufacturer advises caution."
+  ],
+  "pregnancyBreastfeeding": [
+    "500 mg for 1 dose, dose to be taken following exposure to a trigger.",
+    "500 mg 3 times a day for 7 days.",
+    "250–500 mg 3 times a day, alternatively 750–1000 mg twice daily.",
+    "Not known to be harmful.",
+    "Trace amount in milk, but appropriate to use."
+  ],
+  "practicalPoints": [
+    "Displacement value may be significant when reconstituting injection, consult local guidelines. Dilute intravenous injection to a concentration of 50 mg/mL (100 mg/mL for neonates). May be further diluted with Glucose 5% or Glucose 10% or Sodium chloride 0.9% or 0.45% for intravenous infusion. Give intravenous infusion over 30 minutes when using doses over 30 mg/kg."
+  ],
+  "references": [
+    "bnf-amoxicillin"
+  ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-28",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-28",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
-  "isPenicillin": false,
+  "isPenicillin": true,
   "attachments": [],
   "prominentResources": [],
-  "sideEffects": []
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Diarrhoea; hypersensitivity; nausea; skin reactions; thrombocytopenia; vomiting"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Arthralgia; leucopenia"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; angioedema; haemolytic anaemia; hepatic disorders; nephritis tubulointerstitial; neutropenia; pseudomembranous enterocolitis; seizure; severe cutaneous adverse reactions (SCARs)",
+        "Antibiotic associated colitis; colitis haemorrhagic; crystalluria; dizziness; hyperkinesia; hypersensitivity vasculitis; mucocutaneous candidiasis",
+        "Black hairy tongue"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Enterocolitis; Jarisch-Herxheimer reaction"
+      ]
+    }
+  ]
 }
