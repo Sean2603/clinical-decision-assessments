@@ -17,6 +17,7 @@
     "contraindications",
     "cautions",
     "interactions",
+    "sideEffects",
     "renalConsiderations",
     "hepaticConsiderations",
     "pregnancyBreastfeeding",
@@ -103,7 +104,10 @@
       "$ref": "#/$defs/stringList"
     },
     "interactions": {
-      "$ref": "#/$defs/stringList"
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/medicationInteraction"
+      }
     },
     "renalConsiderations": {
       "$ref": "#/$defs/stringList"
@@ -143,6 +147,13 @@
         "$ref": "#/$defs/prominentResource"
       },
       "default": []
+    },
+    "sideEffects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/medicationSideEffectGroup"
+      },
+      "default": []
     }
   },
   "$defs": {
@@ -151,6 +162,60 @@
       "items": {
         "type": "string",
         "minLength": 1
+      }
+    },
+    "medicationInteraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "drug",
+        "description",
+        "severity",
+        "evidence"
+      ],
+      "properties": {
+        "drug": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "severity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "medicationSideEffectGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "frequency",
+        "effects"
+      ],
+      "properties": {
+        "frequency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "effects": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
       }
     },
     "indicationRegimen": {

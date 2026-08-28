@@ -40,5 +40,6 @@
   },
   "isPenicillin": false,
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [],
+  "sideEffects": []
 }

@@ -6,6 +6,17 @@ This repository is the source-controlled publication target for clinical content
 
 > **Clinical content should normally be authored, reviewed, validated and prepared for publication through CDM.** Direct repository editing is reserved for repository maintenance, tooling, schema changes, recovery, or exceptional administrative work.
 
+
+## Medication safety content contract
+
+Medication monographs use structured safety content for newly governed publications:
+
+- `interactions[]` contains `drug`, `description`, nullable `severity` and nullable `evidence`;
+- `sideEffects[]` groups individual `effects` under a required `frequency`; and
+- each published side-effect group must contain at least one effect.
+
+This contract is supported by CDM 0.41.0 and Flutter app 0.51.0+78. The manifest therefore declares `minimumAppVersion: 0.51.0`. Existing medication files were migrated with empty `sideEffects` arrays so the schema change does not invent clinical content.
+
 ## Repository role
 
 The repository has two distinct responsibilities:

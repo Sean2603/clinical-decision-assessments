@@ -1,3 +1,12 @@
+## 2026-08-28 – Native structured medication interactions and side effects
+
+- Expanded `schema/medication-schema.json` so medication interactions are governed objects with `drug`, `description`, `severity` and `evidence`.
+- Added required grouped `sideEffects` with `frequency` and one or more `effects`.
+- Added empty `sideEffects` arrays to existing medication monographs as a schema migration without changing their clinical meaning.
+- Raised `minimumAppVersion` to `0.51.0` because newly published medication content can use structures not understood by earlier app releases.
+- Regenerated the manifest as contentVersion `0.0.10` with updated medication-schema hashes.
+- Coordinated with CDM 0.41.0 native publication and Flutter app 0.51.0+78 parsing/rendering.
+
 ## Attachment model cleanup
 
 - Retired the legacy `images` schema field and image-specific attachment definitions.

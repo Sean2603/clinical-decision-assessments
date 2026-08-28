@@ -1,10 +1,10 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.9",
-  "updatedAt": "2026-08-24T20:20:24Z",
+  "contentVersion": "0.0.10",
+  "updatedAt": "2026-08-28T13:06:01Z",
   "emergencyRevocations": [],
-  "minimumAppVersion": "0.49.0",
-  "downloadSizeBytes": 4519464,
+  "minimumAppVersion": "0.51.0",
+  "downloadSizeBytes": 4520877,
   "references": {
     "file": "references/references.json",
     "sha256": "8c77a06104c1dfc1e6e0110a8843c0101413982e753b057f027d71f647179f23",
@@ -525,10 +525,10 @@
       "version": "0.1.1",
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "f04a966f49f3efe66d9616595d00427a02b2b34a7fe06781163dbc426c497152",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
-      "sizeBytes": 1380,
-      "schemaSizeBytes": 10701,
+      "sha256": "c732044246dc7e3449ad9890421c51697165d6afc74090595bd180ab7c7d0926",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 1401,
+      "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
     {
@@ -537,10 +537,10 @@
       "version": "0.1.1",
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "7a5f17d6c432a3735092a26e743538c7d4f1da25142fa55729eb80c3d6b3d50e",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
-      "sizeBytes": 1417,
-      "schemaSizeBytes": 10701,
+      "sha256": "1ccb13ffb1bd7e275b1d2e48f6ec144bbfd8f7208f5213383315e0bbef7bd41f",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 1438,
+      "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
     {
@@ -549,10 +549,10 @@
       "version": "0.1.1",
       "file": "medications/co-codamol.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "82c7df9a62326394969c8446d23e79a8167cae7d191f1cf4a1ac28cd318e1c0a",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
-      "sizeBytes": 1398,
-      "schemaSizeBytes": 10701,
+      "sha256": "422e1b8d98f3889f7ed5a0197fd151a9ebfb08941e0b212fe2a4f0ce1dbb8b2c",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 1419,
+      "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
     {
@@ -561,10 +561,10 @@
       "version": "0.1.1",
       "file": "medications/nitrofurantoin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "272bdec19f1e0a57434590120569e1eb7dd2d2e4d29bfc6f759cccd2529db78d",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
-      "sizeBytes": 2019,
-      "schemaSizeBytes": 10701,
+      "sha256": "c6c11bff12572dd6e8924e9789b2f8338b4a3fa9f168e5a1b7779906caa969ac",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 2040,
+      "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
     {
@@ -573,10 +573,10 @@
       "version": "0.1.1",
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "8c3665cf39b54c9c0329f168f87fa24c0343730225fa4baedb77416dec9664c3",
-      "schemaSha256": "aa4c78f9e420b802dcc5b49d74118d07bf5385d9b453ade499d87e7b10cf827a",
-      "sizeBytes": 1867,
-      "schemaSizeBytes": 10701,
+      "sha256": "e6de3c60d599478bbef0c6f7f1e9f78dceecd36451b27bfa2d076ed913e577ba",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 1888,
+      "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     }
   ],
