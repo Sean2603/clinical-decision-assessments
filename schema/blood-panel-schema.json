@@ -271,6 +271,26 @@
           "items": {
             "$ref": "#/$defs/row"
           }
+        },
+        "navigation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "showInJumpTo",
+            "label"
+          ],
+          "properties": {
+            "showInJumpTo": {
+              "type": "boolean"
+            },
+            "label": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "minLength": 1
+            }
+          }
         }
       }
     },
@@ -368,7 +388,12 @@
             "additionalProperties": false,
             "required": [
               "id",
-              "label"
+              "label",
+              "min",
+              "max",
+              "decimalPlaces",
+              "unit",
+              "validationMessage"
             ],
             "properties": {
               "id": {
@@ -378,6 +403,38 @@
               "label": {
                 "type": "string",
                 "minLength": 1
+              },
+              "min": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "max": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "decimalPlaces": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0,
+                "maximum": 6
+              },
+              "unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "validationMessage": {
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             }
           },

@@ -2,8 +2,8 @@
   "id": "calcium-magnesium-and-phosphate",
   "title": "Calcium, magnesium and phosphate",
   "subtitle": "Corrected calcium, arrhythmia risk and refeeding patterns",
-  "version": "0.1.0",
-  "minimumAppVersion": "0.18.0",
+  "version": "0.2.0",
+  "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Corrected calcium, arrhythmia risk and refeeding patterns",
   "introduction": "Use the reporting laboratory range. Corrected calcium formulas are approximations and become unreliable in critical illness, major acid–base disturbance, severe hypoalbuminaemia and renal failure; ionised calcium is preferable in these settings.",
@@ -36,7 +36,11 @@
           ],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "magnesium-and-phosphate",
@@ -66,7 +70,11 @@
           ],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     }
   ],
   "calculations": [
@@ -115,11 +123,21 @@
       "inputs": [
         {
           "id": "measuredCalcium",
-          "label": "Measured calcium (mmol/L)"
+          "label": "Measured calcium (mmol/L)",
+          "min": 0.5,
+          "max": 5.0,
+          "decimalPlaces": 2,
+          "unit": "mmol/L",
+          "validationMessage": "Enter measured calcium between 0.5 and 5.0 mmol/L."
         },
         {
           "id": "albumin",
-          "label": "Albumin (g/L)"
+          "label": "Albumin (g/L)",
+          "min": 5.0,
+          "max": 60.0,
+          "decimalPlaces": 1,
+          "unit": "g/L",
+          "validationMessage": "Enter albumin between 5 and 60 g/L."
         }
       ]
     }

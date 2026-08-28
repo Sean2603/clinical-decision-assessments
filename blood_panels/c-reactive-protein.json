@@ -68,7 +68,11 @@
           "notes": [],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "trend-and-timing",
@@ -102,7 +106,11 @@
           "notes": [],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     }
   ],
   "calculations": [],

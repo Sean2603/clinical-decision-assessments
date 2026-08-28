@@ -36,7 +36,11 @@
           ],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     }
   ],
   "calculations": [],

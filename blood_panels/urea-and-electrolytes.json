@@ -2,8 +2,8 @@
   "id": "urea-and-electrolytes",
   "title": "Urea and electrolytes",
   "subtitle": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
-  "version": "0.1.0",
-  "minimumAppVersion": "0.18.0",
+  "version": "0.2.0",
+  "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
   "introduction": "Interpret electrolytes with symptoms, fluid status, medication, urine output and previous results. Creatinine and eGFR must be interpreted against baseline; eGFR is unreliable during rapidly changing kidney function.",
@@ -54,7 +54,11 @@
           "notes": [],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "renal-markers",
@@ -102,7 +106,11 @@
           "notes": [],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "aki-detection-from-creatinine",
@@ -150,10 +158,147 @@
           "notes": [],
           "unitless": true
         }
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
+    }
+  ],
+  "calculations": [
+    {
+      "id": "aki-creatinine-stage",
+      "title": "AKI warning stage from creatinine",
+      "formula": "Creatinine-based AKI warning stage using current/baseline ratio and a ≥26 µmol/L rise within 48 hours",
+      "inputLabels": [
+        "Baseline creatinine (µmol/L)",
+        "Current creatinine (µmol/L)",
+        "Time between results (hours)"
+      ],
+      "outputUnit": "text",
+      "interpretation": [
+        "This calculator assesses creatinine criteria only. AKI can also be identified or staged using urine output; renal replacement therapy and the wider clinical context are not captured here.",
+        "Use a clinically appropriate recent baseline. The NHS AKI warning algorithm uses historical creatinine selection rules that are more sophisticated than a single manually entered baseline.",
+        "A positive warning stage requires urgent clinical interpretation: review the patient, fluid status, medicines, sepsis/obstruction risk and complications rather than treating the stage number in isolation."
+      ],
+      "engine": {
+        "kind": "aki-creatinine-stage",
+        "expression": null,
+        "precision": null,
+        "parameters": {
+          "stage1Ratio": 1.5,
+          "stage2Ratio": 2.0,
+          "stage3Ratio": 3.0,
+          "absoluteRise": 26.0,
+          "absoluteRiseWindowHours": 48.0,
+          "stage3Creatinine": 354.0
+        },
+        "textResults": {
+          "no-aki": "No creatinine-defined AKI warning stage identified from these two results",
+          "aki-stage-1": "AKI warning stage 1",
+          "aki-stage-2": "AKI warning stage 2",
+          "aki-stage-3": "AKI warning stage 3"
+        }
+      },
+      "parityCases": [
+        {
+          "id": "no-aki",
+          "description": "Small creatinine change below absolute and ratio thresholds.",
+          "inputs": {
+            "baselineCreatinine": 100.0,
+            "currentCreatinine": 120.0,
+            "intervalHours": 24.0
+          },
+          "expectedNumber": null,
+          "expectedText": "No creatinine-defined AKI warning stage identified from these two results"
+        },
+        {
+          "id": "stage-1-absolute-rise",
+          "description": "Rise of 26 µmol/L within 48 hours.",
+          "inputs": {
+            "baselineCreatinine": 100.0,
+            "currentCreatinine": 126.0,
+            "intervalHours": 24.0
+          },
+          "expectedNumber": null,
+          "expectedText": "AKI warning stage 1"
+        },
+        {
+          "id": "stage-1-ratio",
+          "description": "Current creatinine is 1.5 to less than 2 times baseline.",
+          "inputs": {
+            "baselineCreatinine": 100.0,
+            "currentCreatinine": 160.0,
+            "intervalHours": 72.0
+          },
+          "expectedNumber": null,
+          "expectedText": "AKI warning stage 1"
+        },
+        {
+          "id": "stage-2-ratio",
+          "description": "Current creatinine is 2 to less than 3 times baseline.",
+          "inputs": {
+            "baselineCreatinine": 100.0,
+            "currentCreatinine": 220.0,
+            "intervalHours": 72.0
+          },
+          "expectedNumber": null,
+          "expectedText": "AKI warning stage 2"
+        },
+        {
+          "id": "stage-3-ratio",
+          "description": "Current creatinine is at least 3 times baseline.",
+          "inputs": {
+            "baselineCreatinine": 100.0,
+            "currentCreatinine": 310.0,
+            "intervalHours": 72.0
+          },
+          "expectedNumber": null,
+          "expectedText": "AKI warning stage 3"
+        },
+        {
+          "id": "stage-3-high-creatinine",
+          "description": "Current creatinine is at least 354 µmol/L and at least 1.5 times baseline.",
+          "inputs": {
+            "baselineCreatinine": 200.0,
+            "currentCreatinine": 360.0,
+            "intervalHours": 72.0
+          },
+          "expectedNumber": null,
+          "expectedText": "AKI warning stage 3"
+        }
+      ],
+      "inputs": [
+        {
+          "id": "baselineCreatinine",
+          "label": "Baseline creatinine",
+          "min": 10.0,
+          "max": 3000.0,
+          "decimalPlaces": 0,
+          "unit": "µmol/L",
+          "validationMessage": "Enter baseline creatinine between 10 and 3000 µmol/L."
+        },
+        {
+          "id": "currentCreatinine",
+          "label": "Current creatinine",
+          "min": 10.0,
+          "max": 3000.0,
+          "decimalPlaces": 0,
+          "unit": "µmol/L",
+          "validationMessage": "Enter current creatinine between 10 and 3000 µmol/L."
+        },
+        {
+          "id": "intervalHours",
+          "label": "Time between results",
+          "min": 0.0,
+          "max": 168.0,
+          "decimalPlaces": 1,
+          "unit": "hours",
+          "validationMessage": "Use a baseline result from within the previous 7 days (0–168 hours)."
+        }
       ]
     }
   ],
-  "calculations": [],
   "urgentFindings": [
     "Potassium ≥6.0 mmol/L, rapidly rising potassium, ECG change, weakness, bradycardia or arrhythmia. Local thresholds may mandate emergency treatment at a lower result.",
     "Sodium <125 mmol/L with confusion, seizure, reduced consciousness, severe headache or vomiting; or a rapid recent fall.",

@@ -68,7 +68,11 @@
           "notes": [],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "white-cells-and-differential",
@@ -130,7 +134,11 @@
           "notes": [],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "platelets",
@@ -150,7 +158,11 @@
           "notes": [],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     }
   ],
   "calculations": [],

@@ -351,6 +351,37 @@ def evaluate_calculation(
             },
         )
         return None, engine.get("textResults", {}).get(code, code)
+    if kind == "aki-creatinine-stage":
+        parameters = engine.get("parameters", {})
+        baseline = numeric_inputs["baselineCreatinine"]
+        current = numeric_inputs["currentCreatinine"]
+        interval_hours = numeric_inputs["intervalHours"]
+        if baseline <= 0:
+            raise ValueError("Baseline creatinine must be greater than zero.")
+
+        ratio = current / baseline
+        rise = current - baseline
+        stage1_ratio = float(parameters.get("stage1Ratio", 1.5))
+        stage2_ratio = float(parameters.get("stage2Ratio", 2.0))
+        stage3_ratio = float(parameters.get("stage3Ratio", 3.0))
+        absolute_rise = float(parameters.get("absoluteRise", 26.0))
+        absolute_window = float(parameters.get("absoluteRiseWindowHours", 48.0))
+        stage3_creatinine = float(parameters.get("stage3Creatinine", 354.0))
+
+        if ratio >= stage3_ratio or (
+            current >= stage3_creatinine and ratio >= stage1_ratio
+        ):
+            code = "aki-stage-3"
+        elif ratio >= stage2_ratio:
+            code = "aki-stage-2"
+        elif ratio >= stage1_ratio or (
+            interval_hours <= absolute_window and rise >= absolute_rise
+        ):
+            code = "aki-stage-1"
+        else:
+            code = "no-aki"
+
+        return None, engine.get("textResults", {}).get(code, code)
     raise ValueError(
         f"Calculation {calculation['id']} has unsupported engine {kind!r}."
     )

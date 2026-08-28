@@ -1,3 +1,14 @@
+## 0.0.16 - 2026-08-28
+
+### Blood-panel navigation, calculator input constraints and U&E AKI
+
+- Added section navigation metadata (`showInJumpTo` and optional label) to the blood-panel contract and all governed blood sections.
+- Added numeric calculator input constraints: minimum, maximum, decimal precision, unit and validation message.
+- Added broad plausibility guardrails to existing executable blood calculators, including pH input validation.
+- Added a creatinine-based AKI warning-stage calculator within Urea & Electrolytes, with executable parity cases.
+- U&E, ABG/VBG, calcium/minerals and serum osmolality now require App 0.57.0 where new calculator behaviour is clinically relevant.
+- The AKI implementation is creatinine-only and explicitly does not replace urine-output criteria, RRT criteria or clinical assessment.
+
 ## 0.0.14 - 2026-08-28
 
 ### Native CDA scoring and blood catalogue

@@ -2,8 +2,8 @@
   "id": "serum-osmolality",
   "title": "Serum osmolality",
   "subtitle": "Calculated osmolality, tonicity and osmolal gap",
-  "version": "0.1.0",
-  "minimumAppVersion": "0.18.0",
+  "version": "0.2.0",
+  "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Calculated osmolality, tonicity and osmolal gap",
   "introduction": "Calculated osmolality is an estimate. Use measured serum osmolality when evaluating unexplained hyponatraemia, suspected toxic alcohol ingestion or a possible osmolal gap.",
@@ -36,7 +36,11 @@
           ],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     }
   ],
   "calculations": [
@@ -87,15 +91,30 @@
       "inputs": [
         {
           "id": "sodium",
-          "label": "Sodium (mmol/L)"
+          "label": "Sodium (mmol/L)",
+          "min": 80.0,
+          "max": 220.0,
+          "decimalPlaces": 1,
+          "unit": "mmol/L",
+          "validationMessage": "Enter sodium between 80 and 220 mmol/L."
         },
         {
           "id": "glucose",
-          "label": "Glucose (mmol/L)"
+          "label": "Glucose (mmol/L)",
+          "min": 0.0,
+          "max": 100.0,
+          "decimalPlaces": 1,
+          "unit": "mmol/L",
+          "validationMessage": "Enter glucose between 0 and 100 mmol/L."
         },
         {
           "id": "urea",
-          "label": "Urea (mmol/L)"
+          "label": "Urea (mmol/L)",
+          "min": 0.0,
+          "max": 100.0,
+          "decimalPlaces": 1,
+          "unit": "mmol/L",
+          "validationMessage": "Enter urea between 0 and 100 mmol/L."
         }
       ]
     },
@@ -143,11 +162,21 @@
       "inputs": [
         {
           "id": "measuredOsmolality",
-          "label": "Measured osmolality (mOsm/kg)"
+          "label": "Measured osmolality (mOsm/kg)",
+          "min": 150.0,
+          "max": 500.0,
+          "decimalPlaces": 1,
+          "unit": "mOsm/kg",
+          "validationMessage": "Enter measured osmolality between 150 and 500 mOsm/kg."
         },
         {
           "id": "calculatedOsmolality",
-          "label": "Calculated osmolality (mOsm/kg)"
+          "label": "Calculated osmolality (mOsm/kg)",
+          "min": 150.0,
+          "max": 500.0,
+          "decimalPlaces": 1,
+          "unit": "mOsm/kg",
+          "validationMessage": "Enter calculated osmolality between 150 and 500 mOsm/kg."
         }
       ]
     }

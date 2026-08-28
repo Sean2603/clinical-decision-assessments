@@ -48,7 +48,11 @@
           ],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "pattern-recognition",
@@ -66,7 +70,11 @@
           ],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     }
   ],
   "calculations": [],

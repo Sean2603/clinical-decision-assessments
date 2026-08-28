@@ -2,8 +2,8 @@
   "id": "abg-and-vbg",
   "title": "ABG and VBG",
   "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
-  "version": "0.1.0",
-  "minimumAppVersion": "0.18.0",
+  "version": "0.2.0",
+  "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Acid–base status, ventilation, oxygenation and lactate ",
   "introduction": "Use the analyser and local laboratory ranges. A VBG can support assessment of pH, bicarbonate and trends in carbon dioxide, but venous pO₂ must not be used to assess oxygenation. Record the oxygen device and flow or FiO₂ at the time of sampling.",
@@ -95,7 +95,11 @@
             "A normal lactate does not exclude sepsis, shock or another serious illness."
           ]
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     },
     {
       "id": "acid-base-patterns",
@@ -173,7 +177,11 @@
           ],
           "unitless": true
         }
-      ]
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
     }
   ],
   "calculations": [
@@ -367,15 +375,30 @@
       "inputs": [
         {
           "id": "ph",
-          "label": "pH"
+          "label": "pH",
+          "min": 6.0,
+          "max": 8.0,
+          "decimalPlaces": 3,
+          "unit": null,
+          "validationMessage": "Enter a plausible blood pH between 6.0 and 8.0."
         },
         {
           "id": "pco2",
-          "label": "pCO₂ (kPa)"
+          "label": "pCO₂ (kPa)",
+          "min": 0.5,
+          "max": 20.0,
+          "decimalPlaces": 2,
+          "unit": "kPa",
+          "validationMessage": "Enter pCO₂ between 0.5 and 20 kPa."
         },
         {
           "id": "bicarbonate",
-          "label": "Bicarbonate (mmol/L)"
+          "label": "Bicarbonate (mmol/L)",
+          "min": 1.0,
+          "max": 80.0,
+          "decimalPlaces": 1,
+          "unit": "mmol/L",
+          "validationMessage": "Enter bicarbonate between 1 and 80 mmol/L."
         }
       ]
     }
