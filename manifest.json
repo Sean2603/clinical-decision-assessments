@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.17",
-  "updatedAt": "2026-08-28T19:53:58Z",
+  "contentVersion": "0.0.18",
+  "updatedAt": "2026-08-28T19:58:22Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4578180,
+  "downloadSizeBytes": 4607435,
   "references": {
     "file": "references/references.json",
-    "sha256": "8c77a06104c1dfc1e6e0110a8843c0101413982e753b057f027d71f647179f23",
-    "sizeBytes": 30807
+    "sha256": "efe17cedc7c7e0e18422d1d0391edebc8d10457c01574da62b6f1a47c526c51d",
+    "sizeBytes": 33987
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -204,54 +204,6 @@
       "attachmentsSizeBytes": 0
     },
     {
-      "id": "add-rs",
-      "title": "ADD-RS",
-      "version": "0.1.0",
-      "file": "scoring_tools/add-rs.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "adad2be879bb2b3bd234686694f7d0ecad72f4039a446c1342bb6c4a7d4098ff",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 4070,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
-      "id": "canadian-c-spine-rule",
-      "title": "Canadian C-spine rule",
-      "version": "0.1.0",
-      "file": "scoring_tools/canadian-c-spine-rule.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "a935d724eda356d0475cfe3082f32d5df82c512b6b2dd1f603b7a373b9271401",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 7767,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
-      "id": "canadian-ct-head-rule",
-      "title": "Canadian CT Head Rule",
-      "version": "0.1.0",
-      "file": "scoring_tools/canadian-ct-head-rule.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "f317671845aba36b9e00d930de3f3d604bc4fce18dbb20fb1531485126ba6b1f",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 1652,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
-      "id": "canadian-syncope-risk-score",
-      "title": "Canadian Syncope Risk Score",
-      "version": "0.1.0",
-      "file": "scoring_tools/canadian-syncope-risk-score.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "993491c4c514b927537c1c4bf422a13a11dfff92f34af2d292cab0b611f2d353",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 1488,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
       "id": "centor-criteria",
       "title": "Centor criteria",
       "version": "0.1.0",
@@ -260,18 +212,6 @@
       "sha256": "e63f5d92fe08775c87be60414033bf101867de219bb65e73fa9183c04b9b2606",
       "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
       "sizeBytes": 4015,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
-      "id": "crb-65",
-      "title": "CRB-65",
-      "version": "0.1.0",
-      "file": "scoring_tools/crb-65.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "eeb2bd1c353c838bb7b984ba554b591943ba892c6778940c80304b3170d40f6c",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 4342,
       "schemaSizeBytes": 14019,
       "attachmentsSizeBytes": 0
     },
@@ -288,30 +228,6 @@
       "attachmentsSizeBytes": 0
     },
     {
-      "id": "decaf",
-      "title": "DECAF",
-      "version": "0.1.0",
-      "file": "scoring_tools/decaf.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "c37708e44987f9590139ebb8a5343441db0d64d12d03f36f08817a9e56f3af3f",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 3929,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
-      "id": "edacs",
-      "title": "EDACS",
-      "version": "0.1.0",
-      "file": "scoring_tools/edacs.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "8b666be593c2c03eb56aa204a6862e1eae7fa5e08ce571d0ca1d1ee161fd51dd",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 1519,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
       "id": "feverpain",
       "title": "FeverPAIN",
       "version": "0.1.0",
@@ -320,18 +236,6 @@
       "sha256": "a2062ffa525fff701bba8ecde93e7abaf8f24424a4b0189a05224b2c061e90cb",
       "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
       "sizeBytes": 5154,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
-      "id": "glasgow-blatchford",
-      "title": "Glasgow–Blatchford",
-      "version": "0.1.0",
-      "file": "scoring_tools/glasgow-blatchford.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "f3e4c99224dab8c3532333e52bf078a880c458a6b6ec874b7b47b16613c4bc2e",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 1498,
       "schemaSizeBytes": 14019,
       "attachmentsSizeBytes": 0
     },
@@ -348,18 +252,6 @@
       "attachmentsSizeBytes": 0
     },
     {
-      "id": "heart-score",
-      "title": "HEART score",
-      "version": "0.1.0",
-      "file": "scoring_tools/heart-score.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "026df0919de2c66799936c36a1b649b9a48ab03a505c636ce2ef9bba2a50e460",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 5999,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
       "id": "news2",
       "title": "NEWS2",
       "version": "0.1.0",
@@ -368,18 +260,6 @@
       "sha256": "8c483f835d119344808603efe45c6c2756607632cf6d072405b2a45564c5cf82",
       "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
       "sizeBytes": 9643,
-      "schemaSizeBytes": 14019,
-      "attachmentsSizeBytes": 0
-    },
-    {
-      "id": "nice-head-injury-pathway",
-      "title": "NICE head-injury pathway",
-      "version": "0.1.0",
-      "file": "scoring_tools/nice-head-injury-pathway.json",
-      "schema": "schema/scoring-tool-schema.json",
-      "sha256": "cc50bacc6906a47fba6a4f9a3b032d17f90a9fe8a00aa6e57641e451f5a0f407",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
-      "sizeBytes": 1603,
       "schemaSizeBytes": 14019,
       "attachmentsSizeBytes": 0
     },
@@ -642,24 +522,24 @@
     {
       "id": "amoxicillin",
       "title": "Amoxicillin",
-      "version": "0.1.1",
+      "version": "0.4.0",
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "c732044246dc7e3449ad9890421c51697165d6afc74090595bd180ab7c7d0926",
+      "sha256": "2e6031f2d6f805cf8b195c66125f489d3a6ded2478d8db1fb92c5c411d821488",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
-      "sizeBytes": 1401,
+      "sizeBytes": 5976,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
     {
       "id": "cefalexin",
       "title": "Cefalexin",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "1ccb13ffb1bd7e275b1d2e48f6ec144bbfd8f7208f5213383315e0bbef7bd41f",
+      "sha256": "f5e6d8d65a30d121f3aa83943027dd7fbadb07668ecd77f99632c65b0d9e935f",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
-      "sizeBytes": 1438,
+      "sizeBytes": 16119,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
@@ -690,12 +570,12 @@
     {
       "id": "trimethoprim",
       "title": "Trimethoprim",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
-      "sha256": "e6de3c60d599478bbef0c6f7f1e9f78dceecd36451b27bfa2d076ed913e577ba",
+      "sha256": "f1142d03d4a4d1ad626879258f4af6893f080b6f29bd7f629b7e53271388b55c",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
-      "sizeBytes": 1888,
+      "sizeBytes": 42574,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     }
