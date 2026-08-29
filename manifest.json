@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.19",
-  "updatedAt": "2026-08-28T21:00:13Z",
+  "contentVersion": "0.0.20",
+  "updatedAt": "2026-08-29T07:37:42Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4607337,
+  "downloadSizeBytes": 4627227,
   "references": {
     "file": "references/references.json",
-    "sha256": "efe17cedc7c7e0e18422d1d0391edebc8d10457c01574da62b6f1a47c526c51d",
-    "sizeBytes": 33987
+    "sha256": "fc6efe91cd999b268a8b8c8aa699d7b8b733af65d6e12aae4b1d688ffa33d121",
+    "sizeBytes": 41195
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -544,6 +544,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "chloramphenicol",
+      "title": "Chloramphenicol",
+      "version": "0.1.0",
+      "file": "medications/chloramphenicol.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "23ffae3d2ded2693fda5d9f010ad4878f079d68b07a405a99aab59577eedd09c",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 7460,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "co-codamol",
       "title": "Co-codamol",
       "version": "0.1.1",
@@ -552,6 +564,18 @@
       "sha256": "422e1b8d98f3889f7ed5a0197fd151a9ebfb08941e0b212fe2a4f0ce1dbb8b2c",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
       "sizeBytes": 1419,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "fusidic-acid",
+      "title": "Fusidic acid",
+      "version": "0.1.0",
+      "file": "medications/fusidic-acid.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "0784448776e0bcaf6456cc91ca7f1c5316e2298256db2afa15cdbe85bf40392b",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 5272,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
@@ -608,12 +632,12 @@
     {
       "id": "conjunctivitis",
       "title": "Conjunctivitis",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "file": "prescribing/conjunctivitis.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "66d7c78a53767e723e444dda9f07b911cb8328564c5855ba9bf8535585943401",
+      "sha256": "dd897623720da345d1267a965252a441c3fafa37e94908178454b3b237186410",
       "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
-      "sizeBytes": 3352,
+      "sizeBytes": 3302,
       "schemaSizeBytes": 10673,
       "attachmentsSizeBytes": 0
     },

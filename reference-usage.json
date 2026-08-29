@@ -88,13 +88,7 @@
     },
     {
       "referenceId": "NICE-CKS-CONJUNCTIVITIS",
-      "usedBy": [
-        {
-          "type": "prescribing",
-          "id": "conjunctivitis",
-          "title": "Conjunctivitis"
-        }
-      ]
+      "usedBy": []
     },
     {
       "referenceId": "NICE-NG106",
@@ -457,7 +451,55 @@
       ]
     },
     {
+      "referenceId": "bnf-chloramphenicol",
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "chloramphenicol",
+          "title": "Chloramphenicol"
+        }
+      ]
+    },
+    {
+      "referenceId": "bnf-ciprofloxacin",
+      "usedBy": []
+    },
+    {
+      "referenceId": "bnf-co-amoxiclav",
+      "usedBy": []
+    },
+    {
+      "referenceId": "bnf-doxycycline",
+      "usedBy": []
+    },
+    {
+      "referenceId": "bnf-fosfomycin",
+      "usedBy": []
+    },
+    {
+      "referenceId": "bnf-fusidic-acid",
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "fusidic-acid",
+          "title": "Fusidic acid"
+        }
+      ]
+    },
+    {
+      "referenceId": "bnf-metronidazole",
+      "usedBy": []
+    },
+    {
       "referenceId": "bnf-nitrofurantoin",
+      "usedBy": []
+    },
+    {
+      "referenceId": "bnf-phenoxymethylpenicillin",
+      "usedBy": []
+    },
+    {
+      "referenceId": "bnf-pivmecillinam",
       "usedBy": []
     },
     {

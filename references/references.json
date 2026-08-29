@@ -804,6 +804,213 @@
         "trimethoprim",
         "Trimethoprim"
       ]
+    },
+    {
+      "id": "bnf-chloramphenicol",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Chloramphenicol",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/chloramphenicol/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/chloramphenicol/",
+      "relevantTopics": [
+        "chloramphenicol",
+        "Chloramphenicol"
+      ]
+    },
+    {
+      "id": "bnf-fusidic-acid",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Fusidic acid",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/fusidic-acid/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/fusidate/",
+      "relevantTopics": [
+        "fusidic-acid",
+        "Fusidic acid"
+      ]
+    },
+    {
+      "id": "bnf-pivmecillinam",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Pivmecillinam",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/pivmecillinam-hydrochloride/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/pivmecillinam/",
+      "relevantTopics": [
+        "pivmecillinam",
+        "Pivmecillinam"
+      ]
+    },
+    {
+      "id": "bnf-fosfomycin",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Fosfomycin",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/fosfomycin/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": [
+        "fosfomycin",
+        "Fosfomycin"
+      ]
+    },
+    {
+      "id": "bnf-co-amoxiclav",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Co-amoxiclav",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/co-amoxiclav/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/amoxicillin/",
+      "relevantTopics": [
+        "co-amoxiclav",
+        "Co-amoxiclav"
+      ]
+    },
+    {
+      "id": "bnf-ciprofloxacin",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Ciprofloxacin",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/ciprofloxacin/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/ciprofloxacin/",
+      "relevantTopics": [
+        "ciprofloxacin",
+        "Ciprofloxacin"
+      ]
+    },
+    {
+      "id": "bnf-phenoxymethylpenicillin",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Phenoxymethylpenicillin",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/phenoxymethylpenicillin/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/phenoxymethylpenicillin/",
+      "relevantTopics": [
+        "phenoxymethylpenicillin",
+        "Phenoxymethylpenicillin"
+      ]
+    },
+    {
+      "id": "bnf-metronidazole",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Metronidazole",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/metronidazole/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/metronidazole/",
+      "relevantTopics": [
+        "metronidazole",
+        "Metronidazole"
+      ]
+    },
+    {
+      "id": "bnf-doxycycline",
+      "organisation": "BMJ Publishing Group Ltd and Pharmaceutical Press",
+      "shortOrganisation": "BNF",
+      "title": "British National Formulary: Doxycycline",
+      "referenceNumber": "BNF online",
+      "type": "web-resource",
+      "url": "https://bnf.nice.org.uk/drugs/doxycycline/",
+      "published": null,
+      "lastUpdated": null,
+      "accessed": "2026-08-28",
+      "lastReviewed": "2026-08-28",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-28",
+      "supersededBy": null,
+      "notes": "Interactions source: https://bnf.nice.org.uk/interactions/doxycycline/",
+      "relevantTopics": [
+        "doxycycline",
+        "Doxycycline"
+      ]
     }
   ]
 }
