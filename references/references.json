@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastChecked": "2026-08-28",
+  "lastChecked": "2026-08-29",
   "references": [
     {
       "id": "NICE-NG59",
@@ -953,8 +953,8 @@
       "url": "https://bnf.nice.org.uk/drugs/phenoxymethylpenicillin/",
       "published": null,
       "lastUpdated": null,
-      "accessed": "2026-08-28",
-      "lastReviewed": "2026-08-28",
+      "accessed": "2026-08-29",
+      "lastReviewed": "2026-08-29",
       "reviewStatus": "current",
       "reviewedBy": "Sean McGrory",
       "reviewerRole": "tAPUC",
@@ -976,8 +976,8 @@
       "url": "https://bnf.nice.org.uk/drugs/metronidazole/",
       "published": null,
       "lastUpdated": null,
-      "accessed": "2026-08-28",
-      "lastReviewed": "2026-08-28",
+      "accessed": "2026-08-29",
+      "lastReviewed": "2026-08-29",
       "reviewStatus": "current",
       "reviewedBy": "Sean McGrory",
       "reviewerRole": "tAPUC",
@@ -1011,6 +1011,26 @@
         "doxycycline",
         "Doxycycline"
       ]
+    },
+    {
+      "id": "NICE-CKS-DENTAL-ABSCESS",
+      "organisation": "NICE Clinical Knowledge Summaries",
+      "shortOrganisation": "NICE-CKS",
+      "title": "NICE CKS - Dental Abscess",
+      "referenceNumber": "Dental Abscess",
+      "type": "guideline",
+      "url": "https://cks.nice.org.uk/topics/dental-abscess/",
+      "published": "2026-08-29",
+      "lastUpdated": "2023-05-01",
+      "accessed": "2026-08-29",
+      "lastReviewed": "2026-08-29",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-08-29",
+      "supersededBy": null,
+      "notes": null,
+      "relevantTopics": []
     }
   ]
 }
