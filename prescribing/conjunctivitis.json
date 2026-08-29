@@ -5,12 +5,12 @@
     "infective conjunctivitis",
     "eye infection"
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "active",
   "system": "Eye",
   "category": "Eye infections",
   "summary": "",
-  "updatedOn": "2026-08-23",
+  "updatedOn": "2026-08-29",
   "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
@@ -21,62 +21,60 @@
     {
       "rank": 1,
       "label": "Adults & children >1 month 1st line",
+      "restrictions": [],
+      "notes": [],
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Chloramphenicol eye drops",
+          "medicationId": "chloramphenicol",
+          "displayName": "Chloramphenicol",
           "dose": "Apply 1 drop every 2 hours for 2 days, then reduce frequency depending on severity of infection",
           "route": null,
           "frequency": null,
           "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)"
         }
-      ],
-      "restrictions": [],
-      "notes": []
+      ]
     },
     {
       "rank": 1,
       "label": "Adults & children >1 month 1st line",
+      "restrictions": [],
+      "notes": [],
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Chloramphenicol eye ointment",
+          "medicationId": "chloramphenicol",
+          "displayName": "Chloramphenicol",
           "dose": "Apply 3-4 times daily",
           "route": null,
           "frequency": null,
           "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)"
         }
-      ],
-      "restrictions": [],
-      "notes": []
+      ]
     },
     {
       "rank": 2,
       "label": "Adults & children >1 month 2nd line",
+      "restrictions": [],
+      "notes": [],
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Fusidic acid 1% modified-release eye drops",
+          "medicationId": "fusidic-acid",
+          "displayName": "Fusidic acid",
           "dose": "Apply 1 drop twice daily",
           "route": null,
           "frequency": null,
           "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)"
         }
-      ],
-      "restrictions": [],
-      "notes": []
+      ]
     }
   ],
   "specialConsiderations": [],
-  "references": [
-    "NICE-CKS-CONJUNCTIVITIS"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-23",
+    "reviewedOn": "2026-08-29",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-23",
+    "nextReviewDue": "2028-08-29",
     "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [],

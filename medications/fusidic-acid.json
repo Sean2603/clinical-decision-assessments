@@ -1,0 +1,136 @@
+{
+  "id": "fusidic-acid",
+  "title": "Fusidic acid",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "isPenicillin": false,
+  "formularyGroup": "Other",
+  "medicineType": "Antibacterial",
+  "drugClass": "Aminopenicillin",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Conjunctivitis",
+      "notes": [
+        "Linked prescribing pathway: conjunctivitis — Adults & children >1 month 2nd line"
+      ],
+      "regimens": [
+        {
+          "population": "Adults & children >1 month 2nd line",
+          "dose": "Apply 1 drop twice daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)",
+          "prescribingPathwayId": "conjunctivitis",
+          "prescribingChoiceLabel": "Adults & children >1 month 2nd line"
+        }
+      ]
+    }
+  ],
+  "contraindications": [],
+  "cautions": [
+    "Impaired transport and metabolism of bilirubin",
+    "Avoid contact of cream or ointment with eyes",
+    "To avoid the development of resistance, fusidic acid should not be used for longer than 10 days and local microbiology advice should be sought before using it in hospital."
+  ],
+  "interactions": [
+    {
+      "drug": "Atorvastatin",
+      "description": "Fusidate has been reported to cause rhabdomyolysis when given with Atorvastatin. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Fluvastatin",
+      "description": "Fusidate has been reported to cause rhabdomyolysis when given with Fluvastatin. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Nirmatrelvir",
+      "description": "Nirmatrelvir boosted with ritonavir is predicted to increase the concentration of Fusidate. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Pravastatin",
+      "description": "Fusidate has been reported to cause rhabdomyolysis when given with Pravastatin. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Rosuvastatin",
+      "description": "Fusidate has been reported to cause rhabdomyolysis when given with Rosuvastatin. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Simvastatin",
+      "description": "Fusidate has been reported to cause rhabdomyolysis when given with Simvastatin. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Skin reactions",
+        "Crying on application; watering eye",
+        "Appetite decreased; asthenia; headache; malaise",
+        "Appetite decreased; asthenia; headache; malaise; rash pustular; rhabdomyolysis"
+      ]
+    },
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Dry eye; eye discomfort; vision blurred",
+        "Dizziness; drowsiness; hepatic disorders; hyperbilirubinaemia; thrombophlebitis; vascular pain (reduced if given via central vein)",
+        "Diarrhoea; dizziness; drowsiness; gastrointestinal discomfort; nausea; vomiting"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Angioedema; conjunctivitis"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Angioedema; eye inflammation",
+        "Agranulocytosis; anaemia; leucopenia; neutropenia; pancytopenia; renal failure; rhabdomyolysis; thrombocytopenia",
+        "Agranulocytosis; anaemia; hepatic disorders; hyperbilirubinaemia; leucopenia; neutropenia; pancytopenia; renal failure; thrombocytopenia"
+      ]
+    }
+  ],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [
+    "Manufacturer advises caution."
+  ],
+  "pregnancyBreastfeeding": [
+    "Not known to be harmful; manufacturer advises use only if potential benefit outweighs risk.",
+    "Present in milk—manufacturer advises caution."
+  ],
+  "practicalPoints": [
+    "Manufacturer advises monitor liver function with high doses or on prolonged therapy; monitoring also advised for patients with biliary tract obstruction, those taking potentially hepatotoxic medication, or those taking concurrent medication with a similar excretion pathway.",
+    "Manufacturer advises for intravenous infusion , give intermittently in Sodium Chloride 0.9% or Glucose 5%; reconstitute each vial with 10 mL buffer solution, then add contents of vial to 500 mL infusion fluid to give a solution containing approximately 1 mg/mL. Give requisite dose via a central line over 2 hours (give over at least 6 hours if administered via a large peripheral vein)."
+  ],
+  "references": [
+    "bnf-fusidic-acid"
+  ],
+  "prominentResources": [],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}

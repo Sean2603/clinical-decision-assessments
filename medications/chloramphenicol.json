@@ -1,0 +1,184 @@
+{
+  "id": "chloramphenicol",
+  "title": "Chloramphenicol",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "isPenicillin": false,
+  "formularyGroup": "Other",
+  "medicineType": "Antibacterial",
+  "drugClass": "Aminopenicillin",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Conjunctivitis",
+      "notes": [
+        "Linked prescribing pathway: conjunctivitis — Adults & children >1 month 1st line"
+      ],
+      "regimens": [
+        {
+          "population": "Adults & children >1 month 1st line",
+          "dose": "Apply 3-4 times daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Continue use until 48 hours after infection has cleared (typically 5-10 days)",
+          "prescribingPathwayId": "conjunctivitis",
+          "prescribingChoiceLabel": "Adults & children >1 month 1st line"
+        }
+      ]
+    }
+  ],
+  "contraindications": [
+    "Acute porphyrias"
+  ],
+  "cautions": [
+    "Avoid prolonged use",
+    "Avoid repeated courses and prolonged treatment"
+  ],
+  "interactions": [
+    {
+      "drug": "Acenocoumarol",
+      "description": "Chloramphenicol potentially increases the anticoagulant effect of Acenocoumarol. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Fosphenytoin",
+      "description": "intravenous Chloramphenicol increases the concentration of Fosphenytoin and Fosphenytoin affects the concentration of intravenous Chloramphenicol. Manufacturer advises monitor concentration and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Glibenclamide",
+      "description": "Chloramphenicol is predicted to increase the exposure to Glibenclamide. Manufacturer advises monitor blood glucose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Gliclazide",
+      "description": "Chloramphenicol is predicted to increase the exposure to Gliclazide. Manufacturer advises monitor blood glucose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Glimepiride",
+      "description": "Chloramphenicol is predicted to increase the exposure to Glimepiride. Manufacturer advises monitor blood glucose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Glipizide",
+      "description": "Chloramphenicol is predicted to increase the exposure to Glipizide. Manufacturer advises monitor blood glucose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Guanfacine",
+      "description": "Chloramphenicol is predicted to increase the exposure to Guanfacine. Manufacturer advises adjust Guanfacine dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Iron",
+      "description": "Chloramphenicol decreases the efficacy of Iron. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Phenobarbital",
+      "description": "Phenobarbital decreases the concentration of Chloramphenicol. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Phenytoin",
+      "description": "intravenous Chloramphenicol increases the concentration of Phenytoin and Phenytoin affects the concentration of intravenous Chloramphenicol. Manufacturer advises monitor concentration and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Primidone",
+      "description": "Primidone decreases the concentration of Chloramphenicol. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Rifampicin",
+      "description": "Rifampicin decreases the concentration of Chloramphenicol. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Tacrolimus",
+      "description": "Chloramphenicol increases the concentration of Tacrolimus. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Tolbutamide",
+      "description": "Chloramphenicol is predicted to increase the exposure to Tolbutamide. Manufacturer advises monitor blood glucose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Chloramphenicol potentially increases the anticoagulant effect of Warfarin. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Anecdotal"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Aplastic anaemia (reversible or irreversible, with reports of resulting leukaemia)"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Blood disorder; bone marrow depression",
+        "Angioedema; bone marrow disorders; eye stinging; fever; paraesthesia; skin reactions",
+        "Bone marrow disorders; circulatory collapse; diarrhoea; enterocolitis; nausea; optic neuritis; oral disorders; ototoxicity; vomiting",
+        "Agranulocytosis; bone marrow disorders; depression; diarrhoea; dry mouth; fungal superinfection; headache; nausea; nerve disorders; thrombocytopenic purpura; urticaria; vision disorders; vomiting"
+      ]
+    }
+  ],
+  "renalConsiderations": [
+    "Caution (increased risk of bone-marrow depression)—monitor plasma-chloramphenicol concentration. M",
+    "Consider dose reduction. M"
+  ],
+  "hepaticConsiderations": [
+    "Manufacturer advises caution (increased risk of bone-marrow depression)—monitor plasma-chloramphenicol concentration.",
+    "Manufacturer advises consider dose reduction."
+  ],
+  "pregnancyBreastfeeding": [
+    "Manufacturer advises avoid; neonatal ‘grey-baby syndrome’ if used in third trimester.",
+    "Avoid unless essential—no information on topical use but risk of ‘neonatal grey-baby syndrome’ with oral use in third trimester.",
+    "Manufacturer advises avoid; use another antibiotic; may cause bone-marrow toxicity in infant; concentration in milk usually insufficient to cause ‘grey syndrome’.",
+    "Avoid unless essential— theoretical risk of bone-marrow toxicity."
+  ],
+  "practicalPoints": [
+    "Plasma concentration monitoring preferred in the elderly.",
+    "Plasma concentration monitoring preferred in those under 4 years of age.",
+    "Recommended peak plasma concentration (approx. 2 hours after administration by mouth, intravenous injection or infusion) 10–25 mg/litre; pre-dose (‘trough’) concentration should not exceed 15 mg/litre.",
+    "Blood counts required before and periodically during treatment.",
+    "Displacement value may be significant for injection, consult local guidelines. For intermittent intravenous infusion , dilute reconstituted solution further in Glucose 5% or Sodium Chloride 0.9%. M"
+  ],
+  "references": [
+    "bnf-chloramphenicol"
+  ],
+  "prominentResources": [],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}
