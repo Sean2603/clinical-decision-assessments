@@ -1,14 +1,14 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.20",
-  "updatedAt": "2026-08-29T07:37:42Z",
+  "contentVersion": "0.0.21",
+  "updatedAt": "2026-08-29T20:38:38Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4627227,
+  "downloadSizeBytes": 4715545,
   "references": {
     "file": "references/references.json",
-    "sha256": "fc6efe91cd999b268a8b8c8aa699d7b8b733af65d6e12aae4b1d688ffa33d121",
-    "sizeBytes": 41195
+    "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
+    "sizeBytes": 41871
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -556,6 +556,30 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "ciprofloxacin",
+      "title": "Ciprofloxacin",
+      "version": "0.1.0",
+      "file": "medications/ciprofloxacin.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "cbc8deff05be56e5e090db5a6d154823013e72d15ee98d38bfd48f730d80874b",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 28571,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "co-amoxiclav",
+      "title": "Co-amoxiclav",
+      "version": "0.1.0",
+      "file": "medications/co-amoxiclav.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "14bb5273cc196e5760a2301cdc8a8fee7d6344e10cce120a7d97592cd249e863",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 7692,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "co-codamol",
       "title": "Co-codamol",
       "version": "0.1.1",
@@ -564,6 +588,18 @@
       "sha256": "422e1b8d98f3889f7ed5a0197fd151a9ebfb08941e0b212fe2a4f0ce1dbb8b2c",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
       "sizeBytes": 1419,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "doxycycline",
+      "title": "Doxycycline",
+      "version": "0.1.0",
+      "file": "medications/doxycycline.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "5bc56be1407cacd9151ba9558eb5572f6f37af3c2971ed2786cd482d685b57ec",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 24884,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
@@ -580,6 +616,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "metronidazole",
+      "title": "Metronidazole",
+      "version": "0.1.1",
+      "file": "medications/metronidazole.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "8ebe0c4582d1da0a1a513ea90b64821ba55f1a489d455c54b934fdf45bb0536c",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 16777,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "nitrofurantoin",
       "title": "Nitrofurantoin",
       "version": "0.1.1",
@@ -588,6 +636,30 @@
       "sha256": "c6c11bff12572dd6e8924e9789b2f8338b4a3fa9f168e5a1b7779906caa969ac",
       "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
       "sizeBytes": 2040,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "phenoxymethylpenicillin",
+      "title": "Phenoxymethylpenicillin",
+      "version": "0.1.0",
+      "file": "medications/phenoxymethylpenicillin.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "a5e051455ef0a76dd658eb34baf4c3bdce617c27f231e22d9a17ad12413f6c7d",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 3632,
+      "schemaSizeBytes": 12009,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "pivmecillinam",
+      "title": "Pivmecillinam",
+      "version": "0.1.0",
+      "file": "medications/pivmecillinam.json",
+      "schema": "schema/medication-schema.json",
+      "sha256": "5b7cb95b9696ee1d55b047d4352732887165ec7f5601581889e887a0cbfe8633",
+      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "sizeBytes": 4522,
       "schemaSizeBytes": 12009,
       "attachmentsSizeBytes": 0
     },
@@ -608,12 +680,12 @@
     {
       "id": "bites-animal",
       "title": "Bites - Animal",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "prescribing/bites-animal.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "fc9099ffd31001e7498cf76214e66e28a23062e670617c61fd57e700734670b8",
+      "sha256": "e847884379e2dad789019f1c24c9f7867d5c9042be12cccb78816c7307349710",
       "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
-      "sizeBytes": 7194,
+      "sizeBytes": 7307,
       "schemaSizeBytes": 10673,
       "attachmentsSizeBytes": 226581
     },
@@ -644,26 +716,26 @@
     {
       "id": "dental-abscess-urgent-treatment",
       "title": "Dental Abscess requiring urgent treatment",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "prescribing/dental-abscess-urgent-treatment.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "254d44862f182bb21c5e4a425e46c3fa74436d02848aca2b0e28f3e8f3a0b709",
+      "sha256": "68a075aef9b9f74ccde7d2917d0c79e1b5000099c4ebcee8c9065d58f4b88755",
       "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
-      "sizeBytes": 2932,
+      "sizeBytes": 3140,
       "schemaSizeBytes": 10673,
       "attachmentsSizeBytes": 0
     },
     {
       "id": "lower-uti-men-16-and-over",
       "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)",
-      "version": "0.1.1",
+      "version": "0.2.0",
       "file": "prescribing/lower-uti-men-16-and-over.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "7cf3bd2df595457b344a2d756b8364f6411e419b6d48d2a1c6a5332172bbaa36",
+      "sha256": "dec0f436e4e530d01157500f286216cf2356ee2e118224aa823ef76eb556171d",
       "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
-      "sizeBytes": 4725,
+      "sizeBytes": 5965,
       "schemaSizeBytes": 10673,
-      "attachmentsSizeBytes": 0
+      "attachmentsSizeBytes": 106323
     },
     {
       "id": "lower-uti-non-pregnant-women-16-and-over",
@@ -704,12 +776,12 @@
     {
       "id": "pyelonephritis-adults",
       "title": "Pyelonephritis – Adults",
-      "version": "0.2.1",
+      "version": "0.3.0",
       "file": "prescribing/pyelonephritis-adults.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "4950777184224ed12cb437df33fe996ac02373aeea8d17e30e02b25378e2e033",
+      "sha256": "3d999a16b7fd747170c8f4c2057bc5638de13e8fb7e270eaed2ca5550a31e322",
       "schemaSha256": "adb19f37f69a50d735aa7208ff649ea650f64603d8c860b2121acec02860e199",
-      "sizeBytes": 4803,
+      "sizeBytes": 4806,
       "schemaSizeBytes": 10673,
       "attachmentsSizeBytes": 266463
     }

@@ -91,6 +91,16 @@
       "usedBy": []
     },
     {
+      "referenceId": "NICE-CKS-DENTAL-ABSCESS",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "dental-abscess-urgent-treatment",
+          "title": "Dental Abscess requiring urgent treatment"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG106",
       "usedBy": [
         {
@@ -113,6 +123,11 @@
     {
       "referenceId": "NICE-NG109",
       "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "lower-uti-men-16-and-over",
+          "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)"
+        },
         {
           "type": "prescribing",
           "id": "lower-uti-non-pregnant-women-16-and-over",
@@ -462,15 +477,33 @@
     },
     {
       "referenceId": "bnf-ciprofloxacin",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "ciprofloxacin",
+          "title": "Ciprofloxacin"
+        }
+      ]
     },
     {
       "referenceId": "bnf-co-amoxiclav",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "co-amoxiclav",
+          "title": "Co-amoxiclav"
+        }
+      ]
     },
     {
       "referenceId": "bnf-doxycycline",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "doxycycline",
+          "title": "Doxycycline"
+        }
+      ]
     },
     {
       "referenceId": "bnf-fosfomycin",
@@ -488,7 +521,13 @@
     },
     {
       "referenceId": "bnf-metronidazole",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "metronidazole",
+          "title": "Metronidazole"
+        }
+      ]
     },
     {
       "referenceId": "bnf-nitrofurantoin",
@@ -496,11 +535,23 @@
     },
     {
       "referenceId": "bnf-phenoxymethylpenicillin",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "phenoxymethylpenicillin",
+          "title": "Phenoxymethylpenicillin"
+        }
+      ]
     },
     {
       "referenceId": "bnf-pivmecillinam",
-      "usedBy": []
+      "usedBy": [
+        {
+          "type": "medication",
+          "id": "pivmecillinam",
+          "title": "Pivmecillinam"
+        }
+      ]
     },
     {
       "referenceId": "bnf-trimethoprim",
