@@ -2,7 +2,7 @@
   "id": "metronidazole",
   "title": "Metronidazole",
   "aliases": [],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "isPenicillin": false,
   "formularyGroup": "Other",
@@ -28,6 +28,30 @@
           "duration": "5 days (review after 3 days)",
           "prescribingPathwayId": "dental-abscess-urgent-treatment",
           "prescribingChoiceLabel": "Adult 1st line Penicillin Allergy"
+        }
+      ]
+    },
+    {
+      "title": "Bites - Animal",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "Adult penicillin allergic / 2nd line",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Adult penicillin allergic / 2nd line"
+        },
+        {
+          "population": "Child penicillin allergic / 2nd line-aged 12-17 years",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Child penicillin allergic / 2nd line-aged 12-17 years"
         }
       ]
     }

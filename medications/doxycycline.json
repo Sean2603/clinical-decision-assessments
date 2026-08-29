@@ -1,0 +1,669 @@
+{
+  "id": "doxycycline",
+  "title": "Doxycycline",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "isPenicillin": false,
+  "formularyGroup": "Unknown",
+  "medicineType": "Unknown",
+  "drugClass": "Unclassed",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Bites - Animal",
+      "notes": [
+        "Linked prescribing pathway: bites-animal — Adult penicillin allergic / 2nd line"
+      ],
+      "regimens": [
+        {
+          "population": "Child penicillin allergic / 2nd line-aged 12-17 years",
+          "dose": "200mg on first day, then 100mg or 200mg daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Child penicillin allergic / 2nd line-aged 12-17 years"
+        },
+        {
+          "population": "Adult penicillin allergic / 2nd line",
+          "dose": "200mg on first day, then 100mg or 200mg daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Adult penicillin allergic / 2nd line"
+        }
+      ]
+    }
+  ],
+  "contraindications": [],
+  "cautions": [
+    "Myasthenia gravis (muscle weakness may be increased)",
+    "systemic lupus erythematosus (may be exacerbated)",
+    "Alcohol dependence",
+    "children 8–11 years—use only in acute or severe infections when there are no adequate alternatives (deposition in growing bone and teeth, by binding to calcium, causes staining and occasionally dental hypoplasia)",
+    "children under 8 years—use only in severe or life-threatening conditions (e.g. Rocky Mountain spotted fever) when there are no adequate alternatives (deposition in growing bone and teeth, by binding to calcium, causes staining and occasionally dental hypoplasia)"
+  ],
+  "interactions": [
+    {
+      "drug": "Acenocoumarol",
+      "description": "Doxycycline increases the anticoagulant effect of Acenocoumarol. Manufacturer advises monitor INR.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Acitretin",
+      "description": "Acitretin increases the risk of benign intracranial hypertension when given with Doxycycline. Manufacturer advises avoid. Both Doxycycline and Acitretin can increase the risk of hepatotoxicity.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Alcohol",
+      "description": "Alcohol -induced liver disease increases the risk of hepatotoxicity in those taking Doxycycline. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Alectinib",
+      "description": "Both Doxycycline and Alectinib can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Alitretinoin",
+      "description": "Alitretinoin increases the risk of benign intracranial hypertension when given with Doxycycline. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Amiodarone",
+      "description": "Both Doxycycline and Amiodarone can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Anidulafungin",
+      "description": "Both Doxycycline and Anidulafungin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Antacids",
+      "description": "oral Antacids greatly decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Asparaginase",
+      "description": "Both Doxycycline and Asparaginase can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Atorvastatin",
+      "description": "Both Doxycycline and Atorvastatin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Bemiparin",
+      "description": "Doxycycline might increase the risk of hepatotoxicity when given with Bemiparin (high-dose). Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Bexarotene",
+      "description": "Both Doxycycline and Bexarotene can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Bismuth subsalicylate",
+      "description": "oral Bismuth subsalicylate greatly decreases the absorption of oral Doxycycline. Manufacturer advises separate administration by at least 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Calcium acetate",
+      "description": "oral Calcium acetate is predicted to decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Calcium carbonate",
+      "description": "oral Calcium carbonate is predicted to decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Calcium chloride",
+      "description": "oral Calcium chloride is predicted to decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Calcium gluconate",
+      "description": "oral Calcium gluconate is predicted to decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Calcium lactate",
+      "description": "oral Calcium lactate is predicted to decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Calcium phosphate",
+      "description": "oral Calcium phosphate is predicted to decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Capecitabine",
+      "description": "Both Doxycycline and Capecitabine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Carbamazepine",
+      "description": "Carbamazepine decreases the concentration of Doxycycline. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Carmustine",
+      "description": "Both Doxycycline and Carmustine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Caspofungin",
+      "description": "Both Doxycycline and Caspofungin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ciclosporin",
+      "description": "Doxycycline is predicted to increase the concentration of Ciclosporin. Manufacturer advises monitor.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Clofarabine",
+      "description": "Both Doxycycline and Clofarabine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Crisantaspase",
+      "description": "Both Doxycycline and Crisantaspase can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cytarabine",
+      "description": "Both Doxycycline and Cytarabine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Dactinomycin",
+      "description": "Both Doxycycline and Dactinomycin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Dalteparin",
+      "description": "Doxycycline might increase the risk of hepatotoxicity when given with Dalteparin (high-dose). Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Decitabine",
+      "description": "Both Doxycycline and Decitabine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Enoxaparin",
+      "description": "Doxycycline might increase the risk of hepatotoxicity when given with Enoxaparin (high-dose). Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Enzalutamide",
+      "description": "Enzalutamide is predicted to affect the exposure to Doxycycline. Manufacturer advises use with caution or avoid.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Fluconazole",
+      "description": "Both Doxycycline and Fluconazole can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fludarabine",
+      "description": "Both Doxycycline and Fludarabine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fluorouracil",
+      "description": "Both Doxycycline and Fluorouracil can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Flutamide",
+      "description": "Both Doxycycline and Flutamide can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fluvastatin",
+      "description": "Both Doxycycline and Fluvastatin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fosphenytoin",
+      "description": "Fosphenytoin is predicted to decrease the concentration of Doxycycline. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Gemcitabine",
+      "description": "Both Doxycycline and Gemcitabine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Heparin",
+      "description": "Both Doxycycline and Heparin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Iron",
+      "description": "oral Iron decreases the absorption of oral Doxycycline. Manufacturer advises Doxycycline should be taken 2 to 3 hours after iron.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Isoniazid",
+      "description": "Both Doxycycline and Isoniazid can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Isotretinoin",
+      "description": "Isotretinoin increases the risk of benign intracranial hypertension when given with Doxycycline. Manufacturer advises avoid. Both Doxycycline and Isotretinoin can increase the risk of hepatotoxicity.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Itraconazole",
+      "description": "Both Doxycycline and Itraconazole can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Kaolin",
+      "description": "oral Kaolin is predicted to decrease the absorption of oral Doxycycline. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Lanthanum",
+      "description": "oral Lanthanum might decrease the absorption of oral Doxycycline. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Lenalidomide",
+      "description": "Both Doxycycline and Lenalidomide can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lithium",
+      "description": "Doxycycline is predicted to increase the risk of Lithium (Lithium carbonate, Lithium citrate) toxicity when given with Lithium. Manufacturer advises avoid or adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Lomitapide",
+      "description": "Both Doxycycline and Lomitapide can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Magnesium",
+      "description": "oral Magnesium decreases the absorption of oral Doxycycline. Manufacturer advises separate administration by at least 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Mercaptopurine",
+      "description": "Both Doxycycline and Mercaptopurine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Both Doxycycline and Methotrexate can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Micafungin",
+      "description": "Both Doxycycline and Micafungin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Nelarabine",
+      "description": "Both Doxycycline and Nelarabine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Neratinib",
+      "description": "Both Doxycycline and Neratinib can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Nevirapine",
+      "description": "Both Doxycycline and Nevirapine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Nicotinic acid",
+      "description": "Both Doxycycline and Nicotinic acid can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Oxandrolone",
+      "description": "Both Doxycycline and Oxandrolone can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Oxymetholone",
+      "description": "Both Doxycycline and Oxymetholone can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Paracetamol",
+      "description": "Both Doxycycline and Paracetamol can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pegaspargase",
+      "description": "Both Doxycycline and Pegaspargase can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pemetrexed",
+      "description": "Both Doxycycline and Pemetrexed can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Phenindione",
+      "description": "Doxycycline is predicted to increase the anticoagulant effect of Phenindione. Manufacturer advises monitor INR.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Phenobarbital",
+      "description": "Phenobarbital decreases the concentration of Doxycycline. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Phenytoin",
+      "description": "Phenytoin decreases the concentration of Doxycycline. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Pomalidomide",
+      "description": "Both Doxycycline and Pomalidomide can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pravastatin",
+      "description": "Both Doxycycline and Pravastatin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Primidone",
+      "description": "Primidone decreases the concentration of Doxycycline. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Pyrazinamide",
+      "description": "Both Doxycycline and Pyrazinamide can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Quinapril",
+      "description": "oral Quinapril (magnesium carbonate-containing forms) might decrease the absorption of oral Doxycycline. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Rifampicin",
+      "description": "Rifampicin modestly decreases the exposure to Doxycycline. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Ritonavir",
+      "description": "Both Doxycycline and Ritonavir can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Rosuvastatin",
+      "description": "Both Doxycycline and Rosuvastatin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Simvastatin",
+      "description": "Both Doxycycline and Simvastatin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Sotorasib",
+      "description": "Both Doxycycline and Sotorasib can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Streptozocin",
+      "description": "Both Doxycycline and Streptozocin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Strontium",
+      "description": "Strontium is predicted to decrease the absorption of Doxycycline. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Sucralfate",
+      "description": "oral Sucralfate might decrease the absorption of oral Doxycycline. Manufacturer advises separating administration.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Testosterone",
+      "description": "Both Doxycycline and Testosterone can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Thalidomide",
+      "description": "Both Doxycycline and Thalidomide can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tigecycline",
+      "description": "Both Doxycycline and Tigecycline can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tinzaparin",
+      "description": "Doxycycline might increase the risk of hepatotoxicity when given with Tinzaparin (high-dose). Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Tioguanine",
+      "description": "Both Doxycycline and Tioguanine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Trabectedin",
+      "description": "Both Doxycycline and Trabectedin can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Tretinoin",
+      "description": "Tretinoin increases the risk of benign intracranial hypertension when given with Doxycycline. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Valproate",
+      "description": "Both Doxycycline and Valproate can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vitamin A",
+      "description": "Both Doxycycline and Vitamin A can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vorasidenib",
+      "description": "Both Doxycycline and Vorasidenib can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Voriconazole",
+      "description": "Both Doxycycline and Voriconazole can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Doxycycline increases the anticoagulant effect of Warfarin. Manufacturer advises monitor INR.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Zidovudine",
+      "description": "Both Doxycycline and Zidovudine can increase the risk of hepatotoxicity.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Zinc",
+      "description": "oral Zinc is predicted to decrease the absorption of Doxycycline. Manufacturer advises separate administration by 2 to 3 hours.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Angioedema; diarrhoea; headache; Henoch-Schönlein purpura; hypersensitivity; nausea; pericarditis; photosensitivity reaction; skin reactions; systemic lupus erythematosus exacerbated; vomiting",
+        "Dyspnoea; hypotension; peripheral oedema; tachycardia"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Dizziness; pancreatitis",
+        "Gastrointestinal discomfort"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Appetite decreased; discolouration of thyroid gland; dysphagia; eosinophilia; fontanelle bulging (in infants); gastrointestinal disorders; glossitis; haemolytic anaemia; hepatic disorders; idiopathic intracranial hypertension; increased risk of infection; neutropenia; pseudomembranous enterocolitis; Stevens-Johnson syndrome; thrombocytopenia",
+        "Anxiety; arthralgia; Clostridioides difficile colitis; flushing; intracranial pressure increased with papilloedema; Jarisch-Herxheimer reaction; myalgia; photoonycholysis; severe cutaneous adverse reactions (SCARs); skin hyperpigmentation (long term use); stomatitis; tinnitus; vision disorders"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Tooth discolouration"
+      ]
+    }
+  ],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [
+    "In general, manufacturers advise caution."
+  ],
+  "pregnancyBreastfeeding": [
+    "Should not be given to pregnant women; effects on skeletal development have been documented in the first trimester in animal studies. Administration during the second or third trimester may cause discoloration of the child’s teeth, and maternal hepatotoxicity has been reported with large parenteral doses.",
+    "UKHSA advises avoid—when travel to malarious areas is unavoidable and other regimens are unsuitable, doxycycline can be used if the entire course can be completed before 15 weeks’ gestation. See also Pregnancy in Malaria, prophylaxis .",
+    "Should not be given to women who are breast-feeding (although absorption and therefore discoloration of teeth in the infant is probably usually prevented by chelation with calcium in milk).",
+    "See Breast-feeding in Malaria, prophylaxis ."
+  ],
+  "practicalPoints": [
+    "When used for periodontitis, monitor for superficial fungal infection, particularly if predisposition to oral candidiasis.",
+    "Manufacturer advises capsules and tablets should be swallowed whole with plenty of fluid, while sitting or standing.",
+    "Counselling on administration advised.",
+    "Patients should be advised to avoid exposure to sunlight or sun lamps."
+  ],
+  "references": [
+    "bnf-doxycycline"
+  ],
+  "prominentResources": [
+    {
+      "label": "BNF",
+      "sourceType": "url",
+      "url": "https://bnf.nice.org.uk/drugs/doxycycline/"
+    }
+  ],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}

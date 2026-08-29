@@ -1,0 +1,127 @@
+{
+  "id": "pivmecillinam",
+  "title": "Pivmecillinam",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "isPenicillin": false,
+  "formularyGroup": "Unknown",
+  "medicineType": "Unknown",
+  "drugClass": "Unclassed",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)",
+      "notes": [
+        "Linked prescribing pathway: lower-uti-men-16-and-over — 2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable"
+      ],
+      "regimens": [
+        {
+          "population": "2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable",
+          "dose": "400mg stat then 200mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days",
+          "prescribingPathwayId": "lower-uti-men-16-and-over",
+          "prescribingChoiceLabel": "2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable"
+        }
+      ]
+    }
+  ],
+  "contraindications": [
+    "Carnitine deficiency",
+    "gastro-intestinal obstruction",
+    "oesophageal strictures"
+  ],
+  "cautions": [
+    "History of allergy",
+    "Avoid in Acute porphyrias"
+  ],
+  "interactions": [
+    {
+      "drug": "Acenocoumarol",
+      "description": "Pivmecillinam potentially alters the anticoagulant effect of Acenocoumarol. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Pivmecillinam is predicted to increase the risk of toxicity when given with Methotrexate. Manufacturer advises monitor.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Phenindione",
+      "description": "Pivmecillinam is predicted to increase the risk of bleeding events when given with Phenindione. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Valproate",
+      "description": "Valproate increases the risk of adverse effects when given with Pivmecillinam. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Pivmecillinam potentially alters the anticoagulant effect of Warfarin. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Diarrhoea; hypersensitivity; nausea; skin reactions; thrombocytopenia; vomiting",
+        "Vulvovaginal fungal infection"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Arthralgia; leucopenia",
+        "Clostridioides difficile colitis; dizziness; fatigue; gastrointestinal discomfort; gastrointestinal disorders; headache; oral ulceration; vertigo"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; angioedema; haemolytic anaemia; hepatic disorders; nephritis tubulointerstitial; neutropenia; pseudomembranous enterocolitis; seizure; severe cutaneous adverse reactions (SCARs)"
+      ]
+    }
+  ],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [],
+  "pregnancyBreastfeeding": [
+    "Not known to be harmful, but manufacturer advises avoid.",
+    "Trace amount in milk, but appropriate to use."
+  ],
+  "practicalPoints": [
+    "Liver and renal function tests required in long-term use.",
+    "Manufacturer advises tablets should be swallowed whole with plenty of fluid during meals while sitting or standing.",
+    "Patient counselling is advised on administration of pivmecillinam hydrochloride tablets (posture)."
+  ],
+  "references": [
+    "bnf-pivmecillinam"
+  ],
+  "prominentResources": [
+    {
+      "label": "BNF",
+      "sourceType": "url",
+      "url": "https://bnf.nice.org.uk/drugs/pivmecillinam-hydrochloride/"
+    }
+  ],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}
