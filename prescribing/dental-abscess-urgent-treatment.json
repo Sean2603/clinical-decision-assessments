@@ -4,37 +4,34 @@
   "aliases": [
     "dental abscess"
   ],
-  "version": "0.1.1",
+  "version": "0.2.0",
   "status": "active",
   "system": "Dental",
   "category": "Dental infections in general practice",
-  "summary": "See NICE CKS Dental Abscess for full guidance",
-  "updatedOn": "2026-08-12",
+  "summary": "",
+  "updatedOn": "2026-08-29",
   "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
-    "Advise urgent dental consultation as dental abscess is treated in the first instance using local measures to achieve drainage, with removal of the cause if possible. Medication will not eliminate the source of the infection.",
-    "Antibiotics are only recommended if there are signs of severe/spreading infection, systemic symptoms or high risk of complications e.g. patient is immunocompromised or has diabetes. Otherwise, appropriate analgesia should be the first option until a dentist can be seen.",
-    "In severe or spreading infection (lymph node involvement or systemic signs such as fever or malaise), consider concomitant treatment with metronidazole and use clinical judgement to determine if onward referral to hospital is required.",
-    "If patient has significant trismus, floor-of-mouth swelling or difficulty breathing, urgent referral to hospital is required."
+    "- Advise urgent dental consultation as dental abscess is treated in the first instance using local measures to achieve drainage, with removal of the cause if possible. Medication will not eliminate the source of the infection.\n- Antibiotics are only recommended if there are signs of severe/spreading infection, systemic symptoms or high risk of complications e.g. patient is immunocompromised or has diabetes. Otherwise, appropriate analgesia should be the first option until a dentist can be seen.\n- In severe or spreading infection (lymph node involvement or systemic signs such as fever or malaise), consider concomitant treatment with metronidazole and use clinical judgement to determine if onward referral to hospital is required.\n- If patient has significant trismus, floor-of-mouth swelling or difficulty breathing, urgent referral to hospital is required."
   ],
   "cautions": [],
   "regimens": [
     {
       "rank": 1,
       "label": "Adult 1st line",
+      "restrictions": [],
+      "notes": [],
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Phenoxymethylpenicillin tablets",
+          "medicationId": "phenoxymethylpenicillin",
+          "displayName": "Phenoxymethylpenicillin",
           "dose": "500mg to 1000mg",
           "route": null,
           "frequency": "four times a day",
           "duration": "5 days (review after 3 days)"
         }
-      ],
-      "restrictions": [],
-      "notes": []
+      ]
     },
     {
       "rank": 1,
@@ -55,30 +52,38 @@
     {
       "rank": 1,
       "label": "Adult 1st line Penicillin Allergy",
+      "restrictions": [],
+      "notes": [],
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Metronidazole tablets",
+          "medicationId": "metronidazole",
+          "displayName": "Metronidazole",
           "dose": "400mg",
           "route": null,
           "frequency": "three times a day",
           "duration": "5 days (review after 3 days)"
         }
-      ],
-      "restrictions": [],
-      "notes": []
+      ]
     }
   ],
   "specialConsiderations": [],
-  "references": [],
+  "references": [
+    "NICE-CKS-DENTAL-ABSCESS"
+  ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [
+    {
+      "label": "NICE CKS",
+      "sourceType": "url",
+      "url": "https://cks.nice.org.uk/topics/dental-abscess/"
+    }
+  ]
 }

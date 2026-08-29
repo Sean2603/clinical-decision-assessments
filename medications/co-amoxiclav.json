@@ -1,0 +1,170 @@
+{
+  "id": "co-amoxiclav",
+  "title": "Co-amoxiclav",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "isPenicillin": true,
+  "formularyGroup": "Unknown",
+  "medicineType": "Unknown",
+  "drugClass": "Unclassed",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Pyelonephritis – Adults",
+      "notes": [
+        "Linked prescribing pathway: pyelonephritis-adults — If lab report shows sensitive"
+      ],
+      "regimens": []
+    },
+    {
+      "title": "Bites - Animal",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "Adult 1st line",
+          "dose": "250/125mg or 500/125mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Adult 1st line"
+        },
+        {
+          "population": "Child 1st line",
+          "dose": "1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Child 1st line"
+        }
+      ]
+    }
+  ],
+  "contraindications": [
+    "History of co-amoxiclav-associated jaundice or hepatic dysfunction",
+    "history of penicillin-associated jaundice or hepatic dysfunction"
+  ],
+  "cautions": [
+    "History of allergy",
+    "Acute lymphocytic leukaemia (increased risk of erythematous rashes)",
+    "chronic lymphocytic leukaemia (increased risk of erythematous rashes)",
+    "cytomegalovirus infection (increased risk of erythematous rashes)",
+    "glandular fever (erythematous rashes common)",
+    "maintain adequate hydration with high doses (particularly during parental therapy)",
+    "Accumulation of electrolytes contained in parenteral preparations can occur with high doses"
+  ],
+  "interactions": [
+    {
+      "drug": "Acenocoumarol",
+      "description": "Amoxicillin potentially alters the anticoagulant effect of Acenocoumarol. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Allopurinol",
+      "description": "Allopurinol increases the risk of skin rash when given with Amoxicillin. Manufacturer advises consider alternatives.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Amoxicillin is predicted to increase the risk of toxicity when given with Methotrexate. Manufacturer advises monitor.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Mycophenolate",
+      "description": "Amoxicillin with clavulanic acid decreases the exposure to Mycophenolate. Manufacturer advises monitor.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Phenindione",
+      "description": "Amoxicillin is predicted to increase the risk of bleeding events when given with Phenindione. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Amoxicillin potentially alters the anticoagulant effect of Warfarin. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Diarrhoea; hypersensitivity; nausea; skin reactions; thrombocytopenia; vomiting",
+        "Increased risk of infection"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Arthralgia; leucopenia",
+        "Dizziness; dyspepsia; headache"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; angioedema; haemolytic anaemia; hepatic disorders; nephritis tubulointerstitial; neutropenia; pseudomembranous enterocolitis; seizure; severe cutaneous adverse reactions (SCARs)"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Acute kidney injury; antibiotic associated colitis; colitis haemorrhagic; crystalluria; enterocolitis; hypersensitivity vasculitis; Kounis syndrome; meningitis aseptic; pancreatitis acute",
+        "Akathisia; black hairy tongue"
+      ]
+    }
+  ],
+  "renalConsiderations": [
+    "Risk of crystalluria with high doses (particularly during parenteral therapy).",
+    "Accumulation of electrolytes contained in parenteral preparations can occur in patients with renal failure.",
+    "See Prescribing in renal impairment .",
+    "Co-amoxiclav 375 mg (250/125 mg) tablets or 625 mg (500/125 mg) tablets : if creatinine clearance 10–30 mL/minute, 375 mg twice daily or 625 mg twice daily; if creatinine clearance less than 10 mL/minute, 375 mg once daily or 625 mg once daily. M",
+    "Co-amoxiclav 1 g (875/125 mg) tablets or 400/57 mg per 5 mL suspension : avoid if creatinine clearance less than 30 mL/minute. M",
+    "Co-amoxiclav 600 mg (500/100 mg) injection or 1.2 g (1000/200 mg) injection : if creatinine clearance 10–30 mL/minute, 1.2 g initially, then 600 mg every 12 hours; if creatinine clearance less than 10 mL/minute, 1.2 g initially, then 600 mg every 24 hours. M",
+    "Co-amoxiclav 2.2 g (2000/200 mg) injection : avoid if creatinine clearance less than 30 mL/minute. Except when used for Surgical prophylaxis: if creatinine clearance less than 30 mL/minute, 1.1–2.2 g for 1 dose only. M",
+    "Co-amoxiclav 375 mg (250/125 mg) tablets, 625 mg (500/125 mg) tablets, 125/31 mg per 5 mL suspension, or 250/62 mg per 5 mL suspension : use normal dose every 12 hours if estimated glomerular filtration rate 10–30 mL/minute/1.73 m 2 . Use the normal dose recommended for mild or moderate infections every 12 hours if estimated glomerular filtration rate less than 10 mL/minute/1.73 m 2 .",
+    "Co-amoxiclav 600 mg (500/100 mg) injection or 1.2 g (1000/200 mg) injection : use normal initial dose and then use half normal dose every 12 hours if estimated glomerular filtration rate 10–30 mL/minute/1.73 m 2 ; use normal initial dose and then use half normal dose every 24 hours if estimated glomerular filtration rate less than 10 mL/minute/1.73 m 2 .",
+    "Co-amoxiclav 2.2 g (2000/200 mg) injection : avoid if creatinine clearance less than 30 mL/minute. M"
+  ],
+  "hepaticConsiderations": [
+    "Manufacturer advises caution.",
+    "Monitor liver function in liver disease."
+  ],
+  "pregnancyBreastfeeding": [
+    "Specialist sources indicate not known to be harmful. Avoid in preterm prelabour rupture of the membranes (PPROM)—possible increased risk of necrotising enterocolitis in the neonate.",
+    "Trace amount in milk, but appropriate to use."
+  ],
+  "practicalPoints": [
+    "Monitor liver function in liver disease."
+  ],
+  "references": [
+    "bnf-co-amoxiclav"
+  ],
+  "prominentResources": [
+    {
+      "label": "BNF",
+      "sourceType": "url",
+      "url": "https://bnf.nice.org.uk/drugs/co-amoxiclav/"
+    }
+  ],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}

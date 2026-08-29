@@ -1,0 +1,117 @@
+{
+  "id": "phenoxymethylpenicillin",
+  "title": "Phenoxymethylpenicillin",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "isPenicillin": false,
+  "formularyGroup": "Other",
+  "medicineType": "Other",
+  "drugClass": "Other",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Dental Abscess requiring urgent treatment",
+      "notes": [
+        "Frequency: four times a day",
+        "Linked prescribing pathway: dental-abscess-urgent-treatment — Adult 1st line"
+      ],
+      "regimens": [
+        {
+          "population": "Adult 1st line",
+          "dose": "500mg to 1000mg",
+          "route": null,
+          "frequency": "four times a day",
+          "duration": "5 days (review after 3 days)",
+          "prescribingPathwayId": "dental-abscess-urgent-treatment",
+          "prescribingChoiceLabel": "Adult 1st line"
+        }
+      ]
+    }
+  ],
+  "contraindications": [],
+  "cautions": [
+    "History of allergy"
+  ],
+  "interactions": [
+    {
+      "drug": "Acenocoumarol",
+      "description": "Phenoxymethylpenicillin potentially alters the anticoagulant effect of Acenocoumarol. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Phenoxymethylpenicillin is predicted to increase the risk of toxicity when given with Methotrexate. Manufacturer advises monitor.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Phenindione",
+      "description": "Phenoxymethylpenicillin is predicted to increase the risk of bleeding events when given with Phenindione. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Phenoxymethylpenicillin potentially alters the anticoagulant effect of Warfarin. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Diarrhoea; hypersensitivity; nausea; skin reactions; thrombocytopenia; vomiting"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Arthralgia; leucopenia"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; angioedema; haemolytic anaemia; hepatic disorders; nephritis tubulointerstitial; neutropenia; pseudomembranous enterocolitis; seizure; severe cutaneous adverse reactions (SCARs)"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Circulatory collapse; coagulation disorder; eosinophilia; faeces soft; fever; increased risk of infection; neurotoxicity; oral disorders; paraesthesia"
+      ]
+    }
+  ],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [],
+  "pregnancyBreastfeeding": [
+    "Not known to be harmful.",
+    "Trace amounts in milk, but appropriate to use."
+  ],
+  "practicalPoints": [],
+  "references": [
+    "bnf-phenoxymethylpenicillin"
+  ],
+  "prominentResources": [
+    {
+      "label": "BNF",
+      "sourceType": "url",
+      "url": "https://bnf.nice.org.uk/drugs/phenoxymethylpenicillin/"
+    }
+  ],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}

@@ -1,5 +1,43 @@
 # Shared reference registry — Publication history
 
+<!-- cdm-publication:0.2.0 -->
+## v0.2.0 — 2026-08-29
+
+- **Content ID:** `references`
+- **Content type:** reference-registry
+- **Previous published version:** 0.1.0
+- **Published version:** 0.2.0
+- **Generated:** 2026-08-29T08:09:30.432Z
+
+## Change control
+
+- **Summary:** Evidence reference changed: references[NICE-CKS-DENTAL-ABSCESS] › review Status.
+- **Risk:** reference-update
+- **Selected version increase:** minor
+- **Recommended version increase:** patch
+- **Changed fields:** 6
+- **Override reason:** Review-cycle versioning keeps this new post-publication cycle on 0.2.x.
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-08-29T12:00:00.000Z
+- **Notes:** Updated reference: bnf-metronidazole — British National Formulary: Metronidazole
+Updated reference: bnf-phenoxymethylpenicillin — British National Formulary: Phenoxymethylpenicillin
+Added reference: NICE-CKS-DENTAL-ABSCESS — NICE CKS - Dental Abscess
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.2.0 -->
+
+---
+
 <!-- cdm-publication:0.9.0 -->
 ## v0.9.0 — 2026-08-28
 

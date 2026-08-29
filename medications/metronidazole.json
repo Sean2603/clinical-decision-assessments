@@ -1,0 +1,389 @@
+{
+  "id": "metronidazole",
+  "title": "Metronidazole",
+  "aliases": [],
+  "version": "0.1.1",
+  "status": "active",
+  "isPenicillin": false,
+  "formularyGroup": "Other",
+  "medicineType": "Other",
+  "drugClass": "Other",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Dental Abscess requiring urgent treatment",
+      "notes": [
+        "Frequency: three times a day",
+        "Linked prescribing pathway: dental-abscess-urgent-treatment — Adult 1st line Penicillin Allergy"
+      ],
+      "regimens": [
+        {
+          "population": "Adult 1st line Penicillin Allergy",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "5 days (review after 3 days)",
+          "prescribingPathwayId": "dental-abscess-urgent-treatment",
+          "prescribingChoiceLabel": "Adult 1st line Penicillin Allergy"
+        }
+      ]
+    },
+    {
+      "title": "Bites - Animal",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "Adult penicillin allergic / 2nd line",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Adult penicillin allergic / 2nd line"
+        },
+        {
+          "population": "Child penicillin allergic / 2nd line-aged 12-17 years",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Child penicillin allergic / 2nd line-aged 12-17 years"
+        }
+      ]
+    }
+  ],
+  "contraindications": [],
+  "cautions": [
+    "Elderly (particularly at high doses) (in adults)",
+    "evidence or history of blood dyscrasia",
+    "Active or chronic severe CNS disease (risk of neurological aggravation)",
+    "active or chronic severe peripheral nervous system disease (risk of neurological aggravation)",
+    "Cockayne syndrome",
+    "Avoid exposure to strong sunlight or UV light",
+    "Avoid intravaginal preparations (particularly those that require the use of an applicator) in young girls who are not sexually active, unless there is no alternative (in children)",
+    "not recommended during menstruation",
+    "some systemic absorption may occur with vaginal gel",
+    "Severe hepatotoxicity in patients with Cockayne syndrome, including fatal cases with a very rapid onset after starting treatment, has been reported. Metronidazole should not be used unless potential benefit outweighs risk and alternative treatment is unavailable. Liver function tests (LFTs) must be performed before, during, and after treatment until liver function is within normal ranges or baseline values are achieved. Metronidazole should be discontinued if LFTs are markedly elevated during treatment. Patients should be advised to stop treatment and seek immediate medical attention if symptoms of liver injury occur. M",
+    "Regular clinical and laboratory monitoring (including full blood count) advised in patients with evidence or history of blood dyscrasia if high-dose or prolonged treatment exceeding 10 days. M"
+  ],
+  "interactions": [
+    {
+      "drug": "Route-specific information",
+      "description": "Since systemic absorption can follow topical application, the possibility of interactions should be borne in mind. Metronidazole has the following interaction information:",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Acenocoumarol",
+      "description": "Metronidazole increases the anticoagulant effect of Acenocoumarol. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Alcohol",
+      "description": "Alcohol potentially causes a disulfiram-like reaction when given with Metronidazole. Manufacturer advises avoid for at least 48 hours after stopping treatment.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Amiodarone",
+      "description": "Both Metronidazole and Amiodarone can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Bortezomib",
+      "description": "Both Metronidazole and Bortezomib can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Brentuximab vedotin",
+      "description": "Both Metronidazole and Brentuximab vedotin can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Busulfan",
+      "description": "Metronidazole increases the risk of toxicity when given with Busulfan (high-dose). Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Cabazitaxel",
+      "description": "Both Metronidazole and Cabazitaxel can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Capecitabine",
+      "description": "Metronidazole is predicted to increase the risk of Capecitabine toxicity when given with Capecitabine. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Carboplatin",
+      "description": "Both Metronidazole and Carboplatin can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ciclosporin",
+      "description": "Metronidazole has been reported to increase the concentration of Ciclosporin. Manufacturer advises monitor.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Cisplatin",
+      "description": "Both Metronidazole and Cisplatin can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Cytarabine",
+      "description": "Both Metronidazole and Cytarabine can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Disulfiram",
+      "description": "Disulfiram increases the risk of acute psychoses when given with Metronidazole. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Docetaxel",
+      "description": "Both Metronidazole and Docetaxel can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Enfuvirtide",
+      "description": "Both Metronidazole and Enfuvirtide can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Ergometrine",
+      "description": "Metronidazole is predicted to increase the exposure to Ergometrine. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Eribulin",
+      "description": "Both Metronidazole and Eribulin can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Fluorouracil",
+      "description": "Metronidazole increases the risk of toxicity when given with Fluorouracil. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Isoniazid",
+      "description": "Both Metronidazole and Isoniazid can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lamivudine",
+      "description": "Both Metronidazole and Lamivudine can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Leflunomide",
+      "description": "Both Metronidazole and Leflunomide can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lenalidomide",
+      "description": "Both Metronidazole and Lenalidomide can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Lithium",
+      "description": "Metronidazole is predicted to increase the concentration of Lithium. Manufacturer advises avoid or adjust dose.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Mebendazole",
+      "description": "Metronidazole might cause a severe skin reaction, as can Mebendazole. Manufacturer advises avoid.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Nitrofurantoin",
+      "description": "Both Metronidazole and Nitrofurantoin can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Oxaliplatin",
+      "description": "Both Metronidazole and Oxaliplatin can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Paclitaxel",
+      "description": "Both Metronidazole and Paclitaxel can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Phenobarbital",
+      "description": "Phenobarbital is predicted to decrease the exposure to Metronidazole. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Phenytoin",
+      "description": "Both Metronidazole and Phenytoin can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Pomalidomide",
+      "description": "Both Metronidazole and Pomalidomide can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Primidone",
+      "description": "Primidone is predicted to decrease the exposure to Metronidazole. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Tacrolimus",
+      "description": "Metronidazole has been reported to increase the concentration of Tacrolimus. Manufacturer advises monitor.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Teriflunomide",
+      "description": "Both Metronidazole and Teriflunomide can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Thalidomide",
+      "description": "Both Metronidazole and Thalidomide can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vinblastine",
+      "description": "Both Metronidazole and Vinblastine can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vincristine",
+      "description": "Both Metronidazole and Vincristine can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vindesine",
+      "description": "Both Metronidazole and Vindesine can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Vinorelbine",
+      "description": "Both Metronidazole and Vinorelbine can increase the risk of peripheral neuropathy.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Metronidazole increases the anticoagulant effect of Warfarin. Manufacturer advises monitor INR and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Dry mouth; myalgia; nausea; oral disorders; taste metallic; vomiting",
+        "Skin reactions",
+        "Pelvic discomfort; vulvovaginal candidiasis; vulvovaginal disorders"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Asthenia; headache; leucopenia (with long term or intensive therapy)",
+        "Menstrual cycle irregularities; vaginal haemorrhage"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; angioedema; appetite decreased; ataxia; cerebellar syndrome; confusion; diarrhoea; dizziness; drowsiness; encephalopathy; epigastric pain; epileptiform seizure (with long term or intensive therapy); flushing; hallucination; hepatic disorders; meningitis aseptic; mucositis; nerve disorders; neutropenia; pancreatitis; pancytopenia; peripheral neuropathy (with long term or intensive therapy); psychotic disorder; seizure; severe cutaneous adverse reactions (SCARs); skin reactions; thrombocytopenia; urine dark; vision disorders",
+        "Agranulocytosis; ataxia; cerebellar syndrome; confusion; dizziness; drowsiness; encephalopathy; flushing; hallucination; headache; hepatic disorders; myalgia; neutropenia; pancreatitis; pancytopenia; psychotic disorder; seizure; severe cutaneous adverse reactions (SCARs); skin reactions; thrombocytopenia; urine dark; vision disorders",
+        "Agranulocytosis; ataxia; cerebellar syndrome; confusion; dizziness; drowsiness; encephalopathy; flushing; hallucination; headache; hepatic disorders; myalgia; neutropenia; pancreatitis; pancytopenia; psychotic disorder; seizure; severe cutaneous adverse reactions (SCARs); skin reactions; thrombocytopenia; urine dark; vision disorder"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Depressed mood; gastrointestinal disorder; hearing impairment",
+        "Angioedema; appetite decreased; depressed mood; diarrhoea; epigastric pain; epileptiform seizure (with long term or intensive therapy); gastrointestinal disorder; hearing impairment; leucopenia (with long term or intensive therapy); meningitis aseptic; nausea; nerve disorders; oral disorders; peripheral neuropathy (with long term or intensive therapy); taste altered; tinnitus; vertigo; vomiting"
+      ]
+    }
+  ],
+  "renalConsiderations": [],
+  "hepaticConsiderations": [
+    "200 mg 3 times a day for 5–10 days.",
+    "200 mg 4 times a day for 5–10 days.",
+    "400 mg 3 times a day for 5–10 days.",
+    "800 mg 3 times a day for 5–10 days.",
+    "Caution in hepatic encephalopathy (risk of decreased clearance). M",
+    "Caution in severe impairment (risk of decreased clearance). M",
+    "Regular clinical and laboratory monitoring (including full blood count) advised if high-dose or prolonged treatment exceeding 10 days in severe impairment. M",
+    "Reduce dose to one-third of the daily dose in hepatic encephalopathy (may be given once daily). M",
+    "Reduce dose in severe impairment. M"
+  ],
+  "pregnancyBreastfeeding": [
+    "Manufacturer advises avoidance of high-dose regimens; use only if potential benefit outweighs risk.",
+    "Significant amount in milk; manufacturer advises avoid large single doses though otherwise compatible; may give milk a bitter taste."
+  ],
+  "practicalPoints": [
+    "Regular clinical and laboratory monitoring (including full blood count) advised if high-dose or prolonged treatment exceeding 10 days in severe impairment. M",
+    "Regular clinical and laboratory monitoring (particularly leucocyte count) advised if treatment exceeds 10 days; patients should also be monitored for peripheral or central neuropathy.",
+    "Regular clinical and laboratory monitoring (including full blood count) advised if high-dose or prolonged treatment exceeding 10 days; patients should also be monitored for peripheral or central neuropathy.",
+    "Metronidazole is well absorbed orally and the intravenous route is normally reserved for severe infections. Metronidazole by the rectal route is an effective alternative to the intravenous route when oral administration is not possible.",
+    "Patients or their carers should be advised that metronidazole may darken urine (due to presence of metabolites)."
+  ],
+  "references": [
+    "bnf-metronidazole"
+  ],
+  "prominentResources": [
+    {
+      "label": "BNF",
+      "sourceType": "url",
+      "url": "https://bnf.nice.org.uk/drugs/metronidazole/"
+    }
+  ],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}

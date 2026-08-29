@@ -6,12 +6,12 @@
     "dog bite",
     "cat bite"
   ],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "status": "active",
   "system": "Skin & Soft Tissue",
   "category": "Bites",
   "summary": "",
-  "updatedOn": "2026-08-14",
+  "updatedOn": "2026-08-29",
   "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
@@ -27,34 +27,34 @@
     {
       "rank": 1,
       "label": "Adult 1st line",
+      "restrictions": [],
+      "notes": [],
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Co-amoxiclav tablets",
+          "medicationId": "co-amoxiclav",
+          "displayName": "Co-amoxiclav",
           "dose": "250/125mg or 500/125mg",
           "route": null,
           "frequency": "three times a day",
           "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
         }
-      ],
-      "restrictions": [],
-      "notes": []
+      ]
     },
     {
       "rank": 2,
       "label": "Adult penicillin allergic / 2nd line",
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Metronidazole tablets",
+          "medicationId": "metronidazole",
+          "displayName": "Metronidazole",
           "dose": "400mg",
           "route": null,
           "frequency": "three times a day",
           "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
         },
         {
-          "medicationId": null,
-          "displayName": "Doxycycline capsules",
+          "medicationId": "doxycycline",
+          "displayName": "Doxycycline",
           "dose": "200mg on first day, then 100mg or 200mg daily",
           "route": null,
           "frequency": null,
@@ -67,21 +67,21 @@
     {
       "rank": 1,
       "label": "Child 1st line",
-      "components": [
-        {
-          "medicationId": null,
-          "displayName": "Co-amoxiclav oral",
-          "dose": "1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets",
-          "route": null,
-          "frequency": "three times a day",
-          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
-        }
-      ],
       "restrictions": [
         "< 1 month refer for specialist advice"
       ],
       "notes": [
         "Co-amoxiclav 400/57 suspension may also be considered to allow for twice-daily dosing."
+      ],
+      "components": [
+        {
+          "medicationId": "co-amoxiclav",
+          "displayName": "Co-amoxiclav",
+          "dose": "1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
+        }
       ]
     },
     {
@@ -109,7 +109,7 @@
       "label": "Child penicillin allergic / 2nd line-aged 12-17 years",
       "components": [
         {
-          "medicationId": null,
+          "medicationId": "doxycycline",
           "displayName": "Doxycycline",
           "dose": "200mg on first day, then 100mg or 200mg daily",
           "route": null,
@@ -117,7 +117,7 @@
           "duration": "Treatment course: 5 days; Prophylaxis course: 3 days"
         },
         {
-          "medicationId": null,
+          "medicationId": "metronidazole",
           "displayName": "Metronidazole",
           "dose": "400mg",
           "route": null,
@@ -137,12 +137,12 @@
     "NICE-BITES-HUMAN-ANIMAL"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [
     {
