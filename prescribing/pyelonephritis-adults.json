@@ -5,12 +5,12 @@
     "pyelonephritis",
     "upper UTI"
   ],
-  "version": "0.2.1",
+  "version": "0.3.0",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
   "summary": "This guideline sets out an antimicrobial prescribing strategy for acute pyelonephritis (upper urinary tract infection) in children, young people and adults who do not have a catheter. It aims to optimise antibiotic use and reduce antibiotic resistance.\n",
-  "updatedOn": "2026-08-19",
+  "updatedOn": "2026-08-29",
   "changeSummary": "Migrated to component-based prescribing regimens and structured prominent resources; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
@@ -73,20 +73,20 @@
     {
       "rank": 1,
       "label": "Only if other first-choice antibiotics are unsuitable",
+      "restrictions": [],
+      "notes": [
+        "A patient information sheet should be given to all patients who receive a fluoroquinolone.",
+        "Refer to MHRA drug safety update Fluoroquinolone antibiotics: must now only be prescribed when other commonly recommended antibiotics are inappropriate."
+      ],
       "components": [
         {
-          "medicationId": null,
-          "displayName": "Ciprofloxacin tablets",
+          "medicationId": "ciprofloxacin",
+          "displayName": "Ciprofloxacin",
           "dose": "500mg BD",
           "route": null,
           "frequency": null,
           "duration": "7 days"
         }
-      ],
-      "restrictions": [],
-      "notes": [
-        "A patient information sheet should be given to all patients who receive a fluoroquinolone.",
-        "Refer to MHRA drug safety update Fluoroquinolone antibiotics: must now only be prescribed when other commonly recommended antibiotics are inappropriate."
       ]
     }
   ],
@@ -97,9 +97,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-19",
+    "reviewedOn": "2026-08-29",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-19",
+    "nextReviewDue": "2028-08-29",
     "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [

@@ -1,0 +1,660 @@
+{
+  "id": "ciprofloxacin",
+  "title": "Ciprofloxacin",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "isPenicillin": false,
+  "formularyGroup": "Other",
+  "medicineType": "Other",
+  "drugClass": "Other",
+  "summary": "",
+  "updatedOn": "2026-08-29",
+  "changeSummary": null,
+  "effectiveFrom": null,
+  "indications": [
+    {
+      "title": "Pyelonephritis – Adults",
+      "notes": [
+        "Linked prescribing pathway: pyelonephritis-adults — Only if other first-choice antibiotics are unsuitable"
+      ],
+      "regimens": [
+        {
+          "population": "Only if other first-choice antibiotics are unsuitable",
+          "dose": "500mg BD",
+          "route": null,
+          "frequency": null,
+          "duration": "7 days",
+          "prescribingPathwayId": "pyelonephritis-adults",
+          "prescribingChoiceLabel": "Only if other first-choice antibiotics are unsuitable"
+        }
+      ]
+    }
+  ],
+  "contraindications": [
+    "History of tendon disorders related to quinolone use"
+  ],
+  "cautions": [
+    "Can prolong the QT interval",
+    "conditions that predispose to seizures",
+    "diabetes (may affect blood glucose)",
+    "exposure to excessive sunlight and UV radiation should be avoided during treatment and for 48 hours after stopping treatment",
+    "G6PD deficiency",
+    "history of epilepsy",
+    "myasthenia gravis (risk of exacerbation)",
+    "psychiatric disorders",
+    "children or adolescents (arthropathy has developed in weight-bearing joints in young animals ) (in children)",
+    "Quinolones cause arthropathy in the weight-bearing joints of immature animals and are therefore generally not recommended in children and growing adolescents. However, the significance of this effect in humans is uncertain and in some specific circumstances use of ciprofloxacin may be justified in children.",
+    "Known (or at risk of) perforated tympanic membrane",
+    "Acute myocardial infarction (risk factor for QT interval prolongation)",
+    "avoid excessive alkalinity of urine (risk of crystalluria)",
+    "bradycardia (risk factor for QT interval prolongation)",
+    "congenital long QT syndrome (risk factor for QT interval prolongation)",
+    "electrolyte disturbances (risk factor for QT interval prolongation)",
+    "ensure adequate fluid intake (risk of crystalluria)",
+    "heart failure with reduced left ventricular ejection fraction (risk factor for QT interval prolongation)",
+    "history of symptomatic arrhythmias (risk factor for QT interval prolongation)"
+  ],
+  "interactions": [
+    {
+      "drug": "Food and lifestyle",
+      "description": "Manufacturer advises avoid concurrent administration of dairy products and mineral-fortified drinks with oral ciprofloxacin due to reduced exposure.",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Route-specific information",
+      "description": "Since systemic absorption can follow topical application of ciprofloxacin , the possibility of interactions should be borne in mind. Ciprofloxacin has the following interaction information:",
+      "severity": null,
+      "evidence": null
+    },
+    {
+      "drug": "Aceclofenac",
+      "description": "Aceclofenac potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Acenocoumarol",
+      "description": "Ciprofloxacin increases the anticoagulant effect of Acenocoumarol. Manufacturer advises monitor INR.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Agomelatine",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Agomelatine. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Aminophylline",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Aminophylline. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Anagrelide",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Anagrelide. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Antacids",
+      "description": "oral Antacids decrease the absorption of oral Ciprofloxacin. Manufacturer advises take 2 hours before or 4 hours after antacids.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Bedaquiline",
+      "description": "Ciprofloxacin might increase the exposure to Bedaquiline. Manufacturer makes no recommendation.",
+      "severity": "Mild",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Benzydamine",
+      "description": "Benzydamine potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Bromfenac",
+      "description": "Bromfenac potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Calcium acetate",
+      "description": "oral Calcium acetate decreases the absorption of oral Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Calcium carbonate",
+      "description": "oral Calcium carbonate decreases the absorption of oral Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Calcium chloride",
+      "description": "oral Calcium chloride decreases the absorption of oral Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Calcium gluconate",
+      "description": "oral Calcium gluconate decreases the absorption of oral Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Calcium lactate",
+      "description": "oral Calcium lactate decreases the absorption of oral Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Calcium phosphate",
+      "description": "oral Calcium phosphate decreases the absorption of oral Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Capivasertib",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Capivasertib. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Celecoxib",
+      "description": "Celecoxib potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Chlorpromazine",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Chlorpromazine. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Clozapine",
+      "description": "Ciprofloxacin increases the concentration of Clozapine. Manufacturer advises monitor adverse effects and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Daridorexant",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Daridorexant. Manufacturer advises adjust Daridorexant dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Dexketoprofen",
+      "description": "Dexketoprofen potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Diclofenac",
+      "description": "Diclofenac potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Duloxetine",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Duloxetine. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Elacestrant",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Elacestrant. Manufacturer advises avoid or adjust Elacestrant dose.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Eliglustat",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Eliglustat. Manufacturer advises avoid or adjust dose—consult product literature.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Elinzanetant",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Elinzanetant. Manufacturer advises adjust Elinzanetant dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Enteral feeds",
+      "description": "Enteral feeds decrease the exposure to Ciprofloxacin. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Erlotinib",
+      "description": "Ciprofloxacin are predicted to increases the exposure to Erlotinib. Manufacturer advises monitor adverse effects and adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Etodolac",
+      "description": "Etodolac potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Etoricoxib",
+      "description": "Etoricoxib potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Fezolinetant",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Fezolinetant. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Flurbiprofen",
+      "description": "Flurbiprofen potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Fosphenytoin",
+      "description": "Ciprofloxacin affects the concentration of Fosphenytoin. Manufacturer advises monitor concentration and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Guanfacine",
+      "description": "Ciprofloxacin is predicted to increase the concentration of Guanfacine. Manufacturer advises adjust Guanfacine dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Ibrutinib",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Ibrutinib. Manufacturer advises adjust dose—consult product literature.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Ibuprofen",
+      "description": "Ibuprofen potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Indometacin",
+      "description": "Indometacin potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Iron",
+      "description": "oral Iron decreases the exposure to oral Ciprofloxacin. Manufacturer advises separate administration by at least 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Ketoprofen",
+      "description": "Ketoprofen potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Ketorolac",
+      "description": "Ketorolac potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Lanthanum",
+      "description": "Lanthanum moderately decreases the exposure to Ciprofloxacin. Manufacturer advises Ciprofloxacin should be taken 2 hours before or 4 hours after Lanthanum .",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Leflunomide",
+      "description": "Leflunomide is predicted to increase the exposure to Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Lidocaine",
+      "description": "Ciprofloxacin slightly increases the exposure to Lidocaine. Manufacturer makes no recommendation.",
+      "severity": "Mild",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Loxapine",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Loxapine. Manufacturer advises avoid.",
+      "severity": "Unknown",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Mefenamic acid",
+      "description": "Mefenamic acid potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Melatonin",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Melatonin. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Meloxicam",
+      "description": "Meloxicam potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Methotrexate",
+      "description": "Ciprofloxacin potentially increases the risk of toxicity when given with Methotrexate. Manufacturer makes no recommendation.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Mycophenolate",
+      "description": "Ciprofloxacin decreases the concentration of Mycophenolate. Manufacturer advises monitor.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Nabumetone",
+      "description": "Nabumetone potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Naproxen",
+      "description": "Naproxen potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Nepafenac",
+      "description": "Nepafenac potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Nitisinone",
+      "description": "Nitisinone is predicted to increase the exposure to Ciprofloxacin. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Olanzapine",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Olanzapine. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Omaveloxolone",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Omaveloxolone. Manufacturer advises avoid or adjust Omaveloxolone dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Parecoxib",
+      "description": "Parecoxib potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Pentoxifylline",
+      "description": "Ciprofloxacin very slightly increases the exposure to Pentoxifylline. Manufacturer advises monitor adverse effects.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Phenazone",
+      "description": "Phenazone potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Phenytoin",
+      "description": "Ciprofloxacin affects the concentration of Phenytoin. Manufacturer advises monitor concentration and adjust dose.",
+      "severity": "Severe",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Pirfenidone",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Pirfenidone. Manufacturer advises use with caution and adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Piroxicam",
+      "description": "Piroxicam potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Pomalidomide",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Pomalidomide. Manufacturer advises adjust dose—consult product literature.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Rasagiline",
+      "description": "Ciprofloxacin slightly increases the exposure to Rasagiline. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Riluzole",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Riluzole. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Roflumilast",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Roflumilast. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Ropinirole",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Ropinirole. Manufacturer advises adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Ropivacaine",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Ropivacaine. Manufacturer makes no recommendation.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Ruxolitinib",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Ruxolitinib. Manufacturer advises monitor adverse effects.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Sildenafil",
+      "description": "Ciprofloxacin moderately increases the exposure to Sildenafil. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Strontium",
+      "description": "Strontium is predicted to decrease the absorption of Ciprofloxacin. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Sucralfate",
+      "description": "Sucralfate decreases the exposure to Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Sulindac",
+      "description": "Sulindac potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Tenoxicam",
+      "description": "Tenoxicam potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Teriflunomide",
+      "description": "Teriflunomide is predicted to increase the exposure to Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Theophylline",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Theophylline. Manufacturer advises monitor and adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Tiaprofenic acid",
+      "description": "Tiaprofenic acid potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Tizanidine",
+      "description": "Ciprofloxacin increases the exposure to Tizanidine. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Tolfenamic acid",
+      "description": "Tolfenamic acid potentially increases the risk of seizures when given with Ciprofloxacin. Manufacturer advises caution.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Tolvaptan",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Tolvaptan. Manufacturer advises use with caution and adjust Tolvaptan dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Vadadustat",
+      "description": "Vadadustat is predicted to increase the exposure to Ciprofloxacin. Manufacturer advises monitor and adjust dose.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Venetoclax",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Venetoclax. Manufacturer advises avoid or adjust dose—consult product literature.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Vorasidenib",
+      "description": "Ciprofloxacin moderately increases the exposure to Vorasidenib. Manufacturer advises avoid.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Warfarin",
+      "description": "Ciprofloxacin increases the anticoagulant effect of Warfarin. Manufacturer advises monitor INR.",
+      "severity": "Severe",
+      "evidence": "Anecdotal"
+    },
+    {
+      "drug": "Zanubrutinib",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Zanubrutinib. Manufacturer advises avoid or adjust dose—consult product literature.",
+      "severity": "Severe",
+      "evidence": "Theoretical"
+    },
+    {
+      "drug": "Zinc",
+      "description": "Zinc is predicted to decrease the exposure to Ciprofloxacin. Manufacturer advises separate administration by 2 hours.",
+      "severity": "Moderate",
+      "evidence": "Study"
+    },
+    {
+      "drug": "Zolmitriptan",
+      "description": "Ciprofloxacin is predicted to increase the exposure to Zolmitriptan. Manufacturer advises adjust Zolmitriptan dose.",
+      "severity": "Moderate",
+      "evidence": "Theoretical"
+    }
+  ],
+  "sideEffects": [
+    {
+      "frequency": "Common or very common",
+      "effects": [
+        "Appetite decreased; arthralgia; asthenia; constipation; diarrhoea; dizziness; dyspnoea; eye discomfort; eye disorders; fever; fungal infection; gastrointestinal discomfort; headache; myalgia; nausea; QT interval prolongation; skin reactions; sleep disorders; taste altered; tinnitus; vision disorders; vomiting",
+        "Corneal deposits (reversible after completion of treatment)",
+        "Arthropathy (in children)"
+      ]
+    },
+    {
+      "frequency": "Uncommon",
+      "effects": [
+        "Altered smell sensation; anaemia; anxiety; arrhythmias; chest pain; confusion; cough; depression; drowsiness; dry eye; eosinophilia; eye inflammation; flatulence; hallucination; hearing impairment; hepatic disorders; hyperglycaemia; hyperhidrosis; hypersensitivity; hypoglycaemia; hypotension; leucopenia; muscle weakness; neutropenia; pain; palpitations; peripheral neuropathy (sometimes irreversible); pseudomembranous enterocolitis (in adults); renal impairment; seizure; sensation abnormal; stomatitis; tendon disorders; thrombocytopenia; tremor; vertigo",
+        "Ear pruritus",
+        "Akathisia; fungal superinfection; oedema; thrombocytosis; vasodilation",
+        "Akathisia; fungal superinfection"
+      ]
+    },
+    {
+      "frequency": "Rare or very rare",
+      "effects": [
+        "Agranulocytosis; angioedema; arthritis; coordination abnormal; gait abnormal; haemolytic anaemia; hypoglycaemic coma; idiopathic intracranial hypertension; memory impairment; myasthenia gravis aggravated; pancreatitis; pancytopenia; photosensitivity reaction; polyneuropathy; psychotic disorder; severe cutaneous adverse reactions (SCARs); suicidal behaviours; syncope; vasculitis",
+        "Ear pain; increased risk of infection; paranasal sinus hypersecretion",
+        "Antibiotic associated colitis; asthma; bone marrow depression; crystalluria; erythema nodosum; haematuria; intracranial pressure increased; leucocytosis; migraine; muscle cramps; muscle tone increased; nephritis tubulointerstitial; olfactory nerve disorder; status epilepticus",
+        "Antibiotic associated colitis; asthma; bone marrow depression; crystalluria; erythema nodosum; haematuria; intracranial pressure increased; leucocytosis; migraine; muscle cramps; muscle tone increased; nephritis tubulointerstitial; oedema; olfactory nerve disorder; status epilepticus; thrombocytosis; vasodilation"
+      ]
+    },
+    {
+      "frequency": "Frequency not known",
+      "effects": [
+        "Heart valve incompetence; increased risk of aortic aneurysm (more common in elderly); increased risk of aortic dissection (more common in elderly); rhabdomyolysis (in adults)",
+        "Mood altered; self-injurious behaviour"
+      ]
+    }
+  ],
+  "renalConsiderations": [
+    "Give 250–500 mg every 12 hours if eGFR 30–60 mL/minute/1.73 m 2 (every 24 hours if eGFR less than 30 mL/minute/1.73 m 2 ).",
+    "Give (200 mg over 30 minutes), 200–400 mg every 12 hours if eGFR 30–60 mL/minute/ 1.73m 2 (every 24 hours if eGFR less than 30 mL/ minute/1.73 m 2 ).",
+    "Reduce dose if estimated glomerular filtration rate less than 30 mL/minute/1.73 m 2 —consult product literature."
+  ],
+  "hepaticConsiderations": [],
+  "pregnancyBreastfeeding": [
+    "Avoid in pregnancy—shown to cause arthropathy in animal studies; safer alternatives are available.",
+    "UKHSA advises a single dose of ciprofloxacin may be used for prevention of secondary case of meningococcal disease.",
+    "Manufacturer advises use only if potential benefit outweighs risk.",
+    "Manufacturer advises caution.",
+    "Amount too small to be harmful but manufacturer advises avoid."
+  ],
+  "practicalPoints": [
+    "Manufacturer advises discard any ampoules remaining 8 days after opening the pouch.",
+    "Patients and their carers should be advised to stop fluoroquinolone treatment at the first signs of a serious musculoskeletal, neurological or psychiatric side effect and to contact their doctor immediately. The MHRA has produced a patient advice sheet on fluoroquinolones and serious adverse reactions affecting tendons, muscles, joints, and nerves, which should be provided to patients and their carers: https://assets.publishing.service.gov.uk/media/65aa9125c69eea0010883840/FQ_Patient_Information_Sheet_-_TO_PUBLISH.pdf .",
+    "May impair performance of skilled tasks (e.g. driving); effects enhanced by alcohol."
+  ],
+  "references": [
+    "bnf-ciprofloxacin"
+  ],
+  "prominentResources": [
+    {
+      "label": "BNF",
+      "sourceType": "url",
+      "url": "https://bnf.nice.org.uk/drugs/ciprofloxacin/"
+    }
+  ],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-08-29",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-08-29",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  }
+}
