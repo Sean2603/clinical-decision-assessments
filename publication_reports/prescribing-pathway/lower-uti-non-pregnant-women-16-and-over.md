@@ -1,5 +1,41 @@
 # Lower UTI Non-pregnant women aged 16 years and over — Publication history
 
+<!-- cdm-publication:0.3.1 -->
+## v0.3.1 — 2026-08-30
+
+- **Content ID:** `lower-uti-non-pregnant-women-16-and-over`
+- **Content type:** prescribing-pathway
+- **Previous published version:** 0.3.0
+- **Published version:** 0.3.1
+- **Generated:** 2026-08-30T17:51:01.385Z
+
+## Change control
+
+- **Summary:** Removed: regimens item 2 › components; Added: regimens item 2 › display Name; Added: regimens item 2 › dose; plus 4 other changes.
+- **Risk:** clarification
+- **Selected version increase:** patch
+- **Recommended version increase:** patch
+- **Changed fields:** 5
+- **Override reason:** Not recorded
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-08-30T12:00:00.000Z
+- **Notes:** Review completed. No additional review comments recorded.
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.3.1 -->
+
+---
+
 <!-- cdm-publication:0.3.0 -->
 ## v0.3.0 — 2026-08-24
 

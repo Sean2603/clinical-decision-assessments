@@ -1,5 +1,41 @@
 # Pivmecillinam — Publication history
 
+<!-- cdm-publication:0.1.1 -->
+## v0.1.1 — 2026-08-30
+
+- **Content ID:** `pivmecillinam`
+- **Content type:** prescribing
+- **Previous published version:** 0.1.0
+- **Published version:** 0.1.1
+- **Generated:** 2026-08-30T17:50:55.430Z
+
+## Change control
+
+- **Summary:** Added 2nd choice if no improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable regimen for Lower UTI Non-pregnant women aged 16 years and over from prescribing pathway lower-uti-non-pregnant-women-16-and-over.
+- **Risk:** clarification
+- **Selected version increase:** patch
+- **Recommended version increase:** patch
+- **Changed fields:** 4
+- **Override reason:** Automated governed medication mutation; retained as a patch while forcing the affected medication back through review.
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-08-30T12:00:00.000Z
+- **Notes:** Review completed. No additional review comments recorded.
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.1.1 -->
+
+---
+
 <!-- cdm-publication:0.1.0 -->
 ## v0.1.0 — 2026-08-29
 

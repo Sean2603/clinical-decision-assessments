@@ -2,14 +2,14 @@
   "id": "pivmecillinam",
   "title": "Pivmecillinam",
   "aliases": [],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "isPenicillin": false,
   "formularyGroup": "Unknown",
   "medicineType": "Unknown",
   "drugClass": "Unclassed",
   "summary": "",
-  "updatedOn": "2026-08-29",
+  "updatedOn": "2026-08-30",
   "changeSummary": null,
   "effectiveFrom": null,
   "indications": [
@@ -27,6 +27,21 @@
           "duration": "7 days",
           "prescribingPathwayId": "lower-uti-men-16-and-over",
           "prescribingChoiceLabel": "2nd choice empiric treatment (whilst waiting sensitivities as per MSU) Trimethoprim resistance likely and nitrofurantoin unsuitable"
+        }
+      ]
+    },
+    {
+      "title": "Lower UTI Non-pregnant women aged 16 years and over",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "2nd choice if no improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable",
+          "dose": "400mg stat then 200mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "3 days",
+          "prescribingPathwayId": "lower-uti-non-pregnant-women-16-and-over",
+          "prescribingChoiceLabel": "2nd choice if no improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable"
         }
       ]
     }
@@ -119,9 +134,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-29",
+    "reviewedOn": "2026-08-30",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-29",
+    "nextReviewDue": "2028-08-30",
     "reviewNotes": "Review completed. No additional review comments recorded."
   }
 }
