@@ -2,14 +2,14 @@
   "id": "co-amoxiclav",
   "title": "Co-amoxiclav",
   "aliases": [],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "isPenicillin": true,
   "formularyGroup": "Unknown",
   "medicineType": "Unknown",
   "drugClass": "Unclassed",
   "summary": "",
-  "updatedOn": "2026-08-29",
+  "updatedOn": "2026-08-30",
   "changeSummary": null,
   "effectiveFrom": null,
   "indications": [
@@ -40,6 +40,30 @@
           "frequency": "three times a day",
           "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
           "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Child 1st line"
+        }
+      ]
+    },
+    {
+      "title": "Bites - Human",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "Adult 1st line",
+          "dose": "250/125mg or 500/125mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-human",
+          "prescribingChoiceLabel": "Adult 1st line"
+        },
+        {
+          "population": "Child 1st line",
+          "dose": "1 month - 11 months: 0.25ml/kg of 125/31 suspension; 1 - 5 years: 0.25 ml/kg or 5ml of 125/31 suspension; 6-11 years: three times a day 0.15 ml/kg or 5ml of 250/62 suspension; 12-17 years: 250/125mg or 500/125mg tablets",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-human",
           "prescribingChoiceLabel": "Child 1st line"
         }
       ]
@@ -162,9 +186,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-29",
+    "reviewedOn": "2026-08-30",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-29",
+    "nextReviewDue": "2028-08-30",
     "reviewNotes": "Review completed. No additional review comments recorded."
   }
 }

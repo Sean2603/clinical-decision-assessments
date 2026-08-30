@@ -2,14 +2,14 @@
   "id": "doxycycline",
   "title": "Doxycycline",
   "aliases": [],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "status": "active",
   "isPenicillin": false,
   "formularyGroup": "Unknown",
   "medicineType": "Unknown",
   "drugClass": "Unclassed",
   "summary": "",
-  "updatedOn": "2026-08-29",
+  "updatedOn": "2026-08-30",
   "changeSummary": null,
   "effectiveFrom": null,
   "indications": [
@@ -36,6 +36,30 @@
           "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
           "prescribingPathwayId": "bites-animal",
           "prescribingChoiceLabel": "Adult penicillin allergic / 2nd line"
+        }
+      ]
+    },
+    {
+      "title": "Bites - Human",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "Adult penicillin allergic / 2nd line",
+          "dose": "200mg on first day, then 100mg or 200mg daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-human",
+          "prescribingChoiceLabel": "Adult penicillin allergic / 2nd line"
+        },
+        {
+          "population": "Child penicillin allergic / 2nd line-aged 12-17 years",
+          "dose": "200mg on first day, then 100mg or 200mg daily",
+          "route": null,
+          "frequency": null,
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-human",
+          "prescribingChoiceLabel": "Child penicillin allergic / 2nd line-aged 12-17 years"
         }
       ]
     }
@@ -661,9 +685,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-29",
+    "reviewedOn": "2026-08-30",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-29",
+    "nextReviewDue": "2028-08-30",
     "reviewNotes": "Review completed. No additional review comments recorded."
   }
 }
