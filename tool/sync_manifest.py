@@ -20,6 +20,7 @@ COLLECTIONS = {
     "bloodPanels": {"directory": ROOT / "blood_panels", "schema": ROOT / "schema" / "blood-panel-schema.json", "versionField": "version", "allowEmpty": True},
     "medications": {"directory": ROOT / "medications", "schema": ROOT / "schema" / "medication-schema.json", "versionField": "version", "allowEmpty": True},
     "prescribing": {"directory": ROOT / "prescribing", "schema": ROOT / "schema" / "prescribing-schema.json", "versionField": "version", "allowEmpty": True},
+    "sharedLearning": {"directory": ROOT / "shared_learning", "schema": ROOT / "schema" / "shared-learning-schema.json", "versionField": "version", "allowEmpty": True},
 }
 SEMVER_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
 
@@ -220,7 +221,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
     generated_keys = {
         "schemaVersion", "contentVersion", "minimumAppVersion", "downloadSizeBytes",
         "references", "glossary", "assessmentCategories", "assessments", "guidelines",
-        "scoringTools", "bloodPanels", "medications", "prescribing",
+        "scoringTools", "bloodPanels", "medications", "prescribing", "sharedLearning",
     }
     preserved = {
         k: v for k, v in current.items()
@@ -239,7 +240,8 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "schemaVersion": 4,
         "contentVersion": previous_version,
         "minimumAppVersion": max_semver(
-            str(current.get("minimumAppVersion", "0.32.0")), "0.49.0"
+            str(current.get("minimumAppVersion", "0.32.0")),
+            "0.60.0" if generated_collections["sharedLearning"] else "0.49.0"
         ),
         # Bytes downloaded after manifest.json itself. The Flutter client adds
         # the actual manifest response length to this value for the full total.
@@ -269,6 +271,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "bloodPanels": generated_collections["bloodPanels"],
         "medications": generated_collections["medications"],
         "prescribing": generated_collections["prescribing"],
+        "sharedLearning": generated_collections["sharedLearning"],
     }
 
     current_semantic = {

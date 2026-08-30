@@ -1,3 +1,11 @@
+## 0.0.22 - 2026-08-30
+
+- Added optional `sharedLearning` manifest collection and `shared_learning/` repository directory.
+- Added Shared Learning schema with learning points, references, governed attachments and clinical validation.
+- Extended content/reference/reference-usage validation tooling for Shared Learning.
+- Added optional medication `bnfLookupName` for BNF source-name differences.
+- Retained manifest SHA-256 hashes as the authority for selective App download/reuse decisions.
+
 ## 0.0.17 - 2026-08-28
 
 ### Individual blood-test navigation metadata

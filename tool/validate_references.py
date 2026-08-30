@@ -132,7 +132,7 @@ def main() -> int:
 
     cited_ids = set()
     strict_cited_ids = set()
-    for folder in ("assessments", "guidelines", "scoring_tools", "blood_panels", "prescribing"):
+    for folder in ("assessments", "guidelines", "scoring_tools", "blood_panels", "prescribing", "shared_learning"):
         for content_path in sorted((ROOT / folder).glob("*.json")):
             document = load_json(content_path)
             item_ids = collect_reference_ids(document)

@@ -1,10 +1,10 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.21",
-  "updatedAt": "2026-08-29T20:38:38Z",
+  "contentVersion": "0.0.22",
+  "updatedAt": "2026-08-30T12:06:17Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4715545,
+  "downloadSizeBytes": 4715739,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -526,9 +526,9 @@
       "file": "medications/amoxicillin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "2e6031f2d6f805cf8b195c66125f489d3a6ded2478d8db1fb92c5c411d821488",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 5976,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -538,9 +538,9 @@
       "file": "medications/cefalexin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "f5e6d8d65a30d121f3aa83943027dd7fbadb07668ecd77f99632c65b0d9e935f",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 16119,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -550,9 +550,9 @@
       "file": "medications/chloramphenicol.json",
       "schema": "schema/medication-schema.json",
       "sha256": "23ffae3d2ded2693fda5d9f010ad4878f079d68b07a405a99aab59577eedd09c",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 7460,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -562,9 +562,9 @@
       "file": "medications/ciprofloxacin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "cbc8deff05be56e5e090db5a6d154823013e72d15ee98d38bfd48f730d80874b",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 28571,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -574,9 +574,9 @@
       "file": "medications/co-amoxiclav.json",
       "schema": "schema/medication-schema.json",
       "sha256": "14bb5273cc196e5760a2301cdc8a8fee7d6344e10cce120a7d97592cd249e863",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 7692,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -586,9 +586,9 @@
       "file": "medications/co-codamol.json",
       "schema": "schema/medication-schema.json",
       "sha256": "422e1b8d98f3889f7ed5a0197fd151a9ebfb08941e0b212fe2a4f0ce1dbb8b2c",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 1419,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -598,9 +598,9 @@
       "file": "medications/doxycycline.json",
       "schema": "schema/medication-schema.json",
       "sha256": "5bc56be1407cacd9151ba9558eb5572f6f37af3c2971ed2786cd482d685b57ec",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 24884,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -610,9 +610,9 @@
       "file": "medications/fusidic-acid.json",
       "schema": "schema/medication-schema.json",
       "sha256": "0784448776e0bcaf6456cc91ca7f1c5316e2298256db2afa15cdbe85bf40392b",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 5272,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -622,9 +622,9 @@
       "file": "medications/metronidazole.json",
       "schema": "schema/medication-schema.json",
       "sha256": "8ebe0c4582d1da0a1a513ea90b64821ba55f1a489d455c54b934fdf45bb0536c",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 16777,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -634,9 +634,9 @@
       "file": "medications/nitrofurantoin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "c6c11bff12572dd6e8924e9789b2f8338b4a3fa9f168e5a1b7779906caa969ac",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 2040,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -646,9 +646,9 @@
       "file": "medications/phenoxymethylpenicillin.json",
       "schema": "schema/medication-schema.json",
       "sha256": "a5e051455ef0a76dd658eb34baf4c3bdce617c27f231e22d9a17ad12413f6c7d",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 3632,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -658,9 +658,9 @@
       "file": "medications/pivmecillinam.json",
       "schema": "schema/medication-schema.json",
       "sha256": "5b7cb95b9696ee1d55b047d4352732887165ec7f5601581889e887a0cbfe8633",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 4522,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     },
     {
@@ -670,9 +670,9 @@
       "file": "medications/trimethoprim.json",
       "schema": "schema/medication-schema.json",
       "sha256": "f1142d03d4a4d1ad626879258f4af6893f080b6f29bd7f629b7e53271388b55c",
-      "schemaSha256": "6ac5bd224dc4c2e93c91f0e2a4165773ea7cabcc9212175547f31bbe7f85e8ff",
+      "schemaSha256": "82f9448594fbbae9c4e393129c03e01cdda930ddbbad8e8bb81b5e272ec436de",
       "sizeBytes": 42574,
-      "schemaSizeBytes": 12009,
+      "schemaSizeBytes": 12203,
       "attachmentsSizeBytes": 0
     }
   ],
@@ -785,5 +785,6 @@
       "schemaSizeBytes": 10673,
       "attachmentsSizeBytes": 266463
     }
-  ]
+  ],
+  "sharedLearning": []
 }

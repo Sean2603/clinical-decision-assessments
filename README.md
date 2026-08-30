@@ -1,4 +1,4 @@
-## CDA content version 0.0.17
+## CDA content version 0.0.22
 
 Scoring tools and blood panels are now native governed CDA content rather than shadow copies of Flutter clinical screens.
 
@@ -7,6 +7,11 @@ Scoring tools and blood panels are now native governed CDA content rather than s
 - Calculator evaluation and parity cases remain executable through the shared remote engine contract.
 - Blood calculations may declare explicit `inputs[]` IDs/labels for generic App rendering.
 - The Flutter App catalogue is derived from the manifest; adding or withdrawing supported CDA items no longer requires a Dart catalogue edit.
+
+
+### Shared Learning content contract
+
+CDA 0.0.22 adds an optional governed `sharedLearning` manifest collection backed by `shared_learning/` and `schema/shared-learning-schema.json`. Approved resources can contain learning points, references, governed attachments and embedded clinical-validation metadata. Quarantined App submissions remain in CDM and are not CDA content until they complete governance and repository publication. The medication schema also supports optional `bnfLookupName` for external BNF source-name differences.
 
 # Clinical Decision Assessments
 

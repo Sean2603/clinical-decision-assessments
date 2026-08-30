@@ -22,10 +22,11 @@ COLLECTIONS = {
     "blood-panel": {"directory":ROOT/"blood_panels","schema":ROOT/"schema"/"blood-panel-schema.json","versionField":"version","allowEmpty":True},
     "medication": {"directory":ROOT/"medications","schema":ROOT/"schema"/"medication-schema.json","versionField":"version","allowEmpty":True},
     "prescribing": {"directory":ROOT/"prescribing","schema":ROOT/"schema"/"prescribing-schema.json","versionField":"version","allowEmpty":True},
+    "shared-learning": {"directory":ROOT/"shared_learning","schema":ROOT/"schema"/"shared-learning-schema.json","versionField":"version","allowEmpty":True},
 }
 IMAGE_KIND_FOLDERS = {
     "assessment":"assessments","guideline":"guidelines","scoring-tool":"scoring_tools",
-    "blood-panel":"blood_panels","medication":"medications","prescribing":"prescribing",
+    "blood-panel":"blood_panels","medication":"medications","prescribing":"prescribing","shared-learning":"shared_learning",
     "clinical-notice":"clinical_notices",
 }
 
@@ -70,7 +71,7 @@ def assessment_reference_ids(value: dict) -> set[str]:
 def document_reference_ids(kind: str, value: dict) -> set[str]:
     if kind == "assessment":
         return assessment_reference_ids(value)
-    if kind in {"guideline","medication","prescribing"}:
+    if kind in {"guideline","medication","prescribing","shared-learning"}:
         return set(value.get("references",[]))
     return set(value.get("referenceIds",[]))
 
