@@ -5,12 +5,12 @@
     "UTI",
     "lower UTI"
   ],
-  "version": "0.3.0",
+  "version": "0.3.1",
   "status": "active",
   "system": "Genitourinary",
   "category": "Urinary tract infection",
   "summary": "",
-  "updatedOn": "2026-08-24",
+  "updatedOn": "2026-08-30",
   "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
@@ -57,21 +57,21 @@
     {
       "rank": 2,
       "label": "2nd choice if no improvement in lower UTI symptoms on first choice taken for at least 48 hours, or when first choice not suitable",
-      "components": [
-        {
-          "medicationId": null,
-          "displayName": "Pivmecillinam tablets",
-          "dose": "400mg stat then 200mg TDS",
-          "route": null,
-          "frequency": null,
-          "duration": "3 days"
-        }
-      ],
       "restrictions": [
         "(contraindicated in penicillin hypersensitivity)"
       ],
       "notes": [
         "In patients at higher risk of resistance use 400mg TID for full 3 days. A higher risk of resistance may be more likely with recent use, older people, people in residential facilities, recent foreign travel, recent hospitalisation, chronic or recurrent symptomatic bacteriuria."
+      ],
+      "components": [
+        {
+          "medicationId": "pivmecillinam",
+          "displayName": "Pivmecillinam",
+          "dose": "400mg stat then 200mg TDS",
+          "route": null,
+          "frequency": null,
+          "duration": "3 days"
+        }
       ]
     },
     {
@@ -98,9 +98,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-24",
+    "reviewedOn": "2026-08-30",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-24",
+    "nextReviewDue": "2028-08-30",
     "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [

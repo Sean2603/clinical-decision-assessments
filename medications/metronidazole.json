@@ -2,14 +2,14 @@
   "id": "metronidazole",
   "title": "Metronidazole",
   "aliases": [],
-  "version": "0.1.1",
+  "version": "0.1.2",
   "status": "active",
   "isPenicillin": false,
   "formularyGroup": "Other",
   "medicineType": "Other",
   "drugClass": "Other",
   "summary": "",
-  "updatedOn": "2026-08-29",
+  "updatedOn": "2026-08-30",
   "changeSummary": null,
   "effectiveFrom": null,
   "indications": [
@@ -51,6 +51,30 @@
           "frequency": "three times a day",
           "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
           "prescribingPathwayId": "bites-animal",
+          "prescribingChoiceLabel": "Child penicillin allergic / 2nd line-aged 12-17 years"
+        }
+      ]
+    },
+    {
+      "title": "Bites - Human",
+      "notes": [],
+      "regimens": [
+        {
+          "population": "Adult penicillin allergic / 2nd line",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-human",
+          "prescribingChoiceLabel": "Adult penicillin allergic / 2nd line"
+        },
+        {
+          "population": "Child penicillin allergic / 2nd line-aged 12-17 years",
+          "dose": "400mg",
+          "route": null,
+          "frequency": "three times a day",
+          "duration": "Treatment course: 5 days; Prophylaxis course: 3 days",
+          "prescribingPathwayId": "bites-human",
           "prescribingChoiceLabel": "Child penicillin allergic / 2nd line-aged 12-17 years"
         }
       ]
@@ -381,9 +405,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-29",
+    "reviewedOn": "2026-08-30",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-29",
+    "nextReviewDue": "2028-08-30",
     "reviewNotes": "Review completed. No additional review comments recorded."
   }
 }
