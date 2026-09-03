@@ -1,10 +1,10 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.23",
-  "updatedAt": "2026-08-30T17:51:35Z",
+  "contentVersion": "0.0.24",
+  "updatedAt": "2026-09-03T19:51:19Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4719322,
+  "downloadSizeBytes": 4720341,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -198,9 +198,9 @@
       "file": "scoring_tools/4at-delirium-screen.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "7db0d26c05d12c54b0a21d607f8f7d1a6e39c3e8bc2b347a4c3ee30ff0c835b1",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 6355,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -210,9 +210,9 @@
       "file": "scoring_tools/centor-criteria.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "e63f5d92fe08775c87be60414033bf101867de219bb65e73fa9183c04b9b2606",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 4015,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -222,9 +222,9 @@
       "file": "scoring_tools/curb-65.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "3f598a9b9d116989da3dfc9ce6064d53cad60ddc3bee3c096948ee9a475b28d4",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 4832,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -234,9 +234,9 @@
       "file": "scoring_tools/feverpain.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "a2062ffa525fff701bba8ecde93e7abaf8f24424a4b0189a05224b2c061e90cb",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 5154,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -246,9 +246,9 @@
       "file": "scoring_tools/glasgow-coma-scale.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "f62b690351c2317ffb2480b4109a48e2d6c809e9628661b009b4cf813aa8bbaa",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 4568,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -258,9 +258,9 @@
       "file": "scoring_tools/news2.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "8c483f835d119344808603efe45c6c2756607632cf6d072405b2a45564c5cf82",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 9643,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -270,9 +270,9 @@
       "file": "scoring_tools/ottawa-ankle-and-foot-rules.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "f9db8560953ec6b45f207805614db9e80959fb1ac6ceb5c5a0a986c7db7c2a05",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 6199,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -282,9 +282,9 @@
       "file": "scoring_tools/ottawa-knee-rule.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "f48e763e45611bcdc94a7fe0513bc3ef9786ade3cfc595d4e6815adf72e9267c",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 4463,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -294,9 +294,9 @@
       "file": "scoring_tools/pecarn.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "a8a8428ba11a2bbea0ae127b4014e6f0d104166314f518eae530ae515a2b51bb",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 1704,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -306,9 +306,9 @@
       "file": "scoring_tools/perc-rule.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "4e4d3d18fb74f51d016e3f94b2c65051baded27eadfc21f08390be1b5f99534e",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 7602,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -318,9 +318,9 @@
       "file": "scoring_tools/two-level-dvt-wells.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "7e7ed1e1cfd53921f076c386e274bfe325fb0073a0431cc7d793e7281cb11091",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 6300,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
     {
@@ -330,9 +330,9 @@
       "file": "scoring_tools/two-level-pe-wells.json",
       "schema": "schema/scoring-tool-schema.json",
       "sha256": "373ba37886e381f163400180f907047966daf472c018bc620b322be2a9c7d1d4",
-      "schemaSha256": "1056d262cc228dd1f0f3ec4247985bc2d8c1fdae6140650836c0f6a85169e28f",
+      "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
       "sizeBytes": 5057,
-      "schemaSizeBytes": 14019,
+      "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     }
   ],
