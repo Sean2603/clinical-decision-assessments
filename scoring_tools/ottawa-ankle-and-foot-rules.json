@@ -2,7 +2,7 @@
   "id": "ottawa-ankle-and-foot-rules",
   "title": "Ottawa ankle and foot rules",
   "subtitle": "Need for radiography after ankle or midfoot injury",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -101,7 +101,7 @@
     {
       "id": "xray-indicated",
       "minimumScore": 1,
-      "maximumScore": 2,
+      "maximumScore": 5,
       "label": "Radiograph indicated",
       "interpretation": [
         "An ankle X-ray and/or foot X-ray is indicated according to the zone-specific criteria."
@@ -118,19 +118,12 @@
   "calculationStrategy": "custom",
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-08",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-08",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "evaluation": {
     "kind": "group-count",
@@ -211,5 +204,6 @@
       "expectedResultId": "xray-indicated"
     }
   ],
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }

@@ -2,7 +2,7 @@
   "id": "glucose-ketones-and-lactate",
   "title": "Glucose, ketones and lactate",
   "subtitle": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
@@ -131,19 +131,13 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-08",
+    "reviewerRole": "tAPUC",
     "reviewNotes": null,
-    "nextReviewDue": null
+    "nextReviewDue": "2028-09-08"
   },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
-  },
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }

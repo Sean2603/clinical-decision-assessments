@@ -1,7 +1,7 @@
 {
   "id": "comprehensive-geriatric-assessment",
   "title": "Comprehensive Geriatric Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing framework for a multidimensional assessment of an older person living with frailty, integrating medical, functional, cognitive, psychological, social and environmental needs into a coordinated plan.",
   "sections": [
     {
@@ -283,16 +283,17 @@
     "BGS-CGA"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-08",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-08",
     "reviewNotes": null
   },
   "categoryIds": [
     "frailty"
   ],
   "status": "active",
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }
