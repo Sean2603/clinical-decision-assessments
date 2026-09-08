@@ -1,7 +1,7 @@
 {
   "id": "falls-in-older-adults",
   "title": "Falls in Older Adults",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing guide for assessing an older adult after a fall, identifying injury and acute illness, comparing current function with baseline, and determining whether safe supported management is possible.",
   "sections": [
     {
@@ -354,16 +354,17 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-08",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-08",
     "reviewNotes": null
   },
   "categoryIds": [
     "frailty"
   ],
   "status": "active",
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }

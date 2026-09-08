@@ -2,7 +2,7 @@
   "id": "curb-65",
   "title": "CURB-65",
   "subtitle": "Pneumonia severity with blood urea",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -31,7 +31,8 @@
       "unit": "",
       "scoreWhenTrue": 1,
       "rules": [],
-      "choices": []
+      "choices": [],
+      "required": false
     },
     {
       "id": "respiratory-rate",
@@ -107,19 +108,12 @@
     "NICE-NG250"
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-03",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-03",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "evaluation": {
     "kind": "sum",
@@ -184,5 +178,47 @@
       "expectedResultId": "high"
     }
   ],
-  "attachments": []
+  "attachments": [],
+  "prominentResources": [],
+  "alternateModes": [
+    {
+      "id": "alternate-360cd54f",
+      "label": "CRB-65",
+      "whenOmittedCriterionIds": [
+        "urea"
+      ],
+      "results": [
+        {
+          "id": "lower",
+          "minimumScore": 0,
+          "maximumScore": 1,
+          "label": "Lower mortality-risk category",
+          "interpretation": [
+            "Hypoxia, sepsis, inability to maintain oral intake, decompensated comorbidity or unsafe home circumstances may still require admission."
+          ],
+          "actions": []
+        },
+        {
+          "id": "intermediate",
+          "minimumScore": 2,
+          "maximumScore": 2,
+          "label": "Intermediate risk",
+          "interpretation": [
+            "Hospital assessment should be considered."
+          ],
+          "actions": []
+        },
+        {
+          "id": "high",
+          "minimumScore": 3,
+          "maximumScore": 4,
+          "label": "High risk",
+          "interpretation": [
+            "Urgent hospital assessment is generally required."
+          ],
+          "actions": []
+        }
+      ]
+    }
+  ]
 }

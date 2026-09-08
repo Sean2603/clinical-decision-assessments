@@ -1,7 +1,7 @@
 {
   "id": "dehydration-assessment",
   "title": "Dehydration Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing reduced fluid intake or fluid losses, distinguishing water deficit from circulatory volume depletion, identifying complications and fluid-overload risk, and selecting an appropriate oral, community or hospital pathway.",
   "sections": [
     {
@@ -561,13 +561,14 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-08",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-08",
     "reviewNotes": null
   },
   "status": "withdrawn",
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }

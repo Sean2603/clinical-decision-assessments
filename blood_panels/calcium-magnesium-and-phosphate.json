@@ -2,7 +2,7 @@
   "id": "calcium-magnesium-and-phosphate",
   "title": "Calcium, magnesium and phosphate",
   "subtitle": "Corrected calcium, arrhythmia risk and refeeding patterns",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Corrected calcium, arrhythmia risk and refeeding patterns",
@@ -141,7 +141,7 @@
           "id": "measuredCalcium",
           "label": "Measured calcium (mmol/L)",
           "min": 0.5,
-          "max": 5.0,
+          "max": 5,
           "decimalPlaces": 2,
           "unit": "mmol/L",
           "validationMessage": "Enter measured calcium between 0.5 and 5.0 mmol/L."
@@ -149,8 +149,8 @@
         {
           "id": "albumin",
           "label": "Albumin (g/L)",
-          "min": 5.0,
-          "max": 60.0,
+          "min": 5,
+          "max": 60,
           "decimalPlaces": 1,
           "unit": "g/L",
           "validationMessage": "Enter albumin between 5 and 60 g/L."
@@ -169,19 +169,13 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-08",
+    "reviewerRole": "tAPUC",
     "reviewNotes": null,
-    "nextReviewDue": null
+    "nextReviewDue": "2028-09-08"
   },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
-  },
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }
