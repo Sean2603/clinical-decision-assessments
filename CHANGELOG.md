@@ -1,3 +1,11 @@
+## 2026-09-09 – Inline assessment image token tooling
+
+- Added repository validation for assessment `{{image:attachment-id}}` and `{{image:attachment-id|Caption override}}` tokens.
+- Image tokens must resolve to an attachment on the same assessment and that attachment must have `type: "image"`.
+- Image tokens are currently rejected outside assessment content so unsupported content types cannot publish tokens the App does not render.
+- Manifest generation now raises `minimumAppVersion` to at least `0.63.5` whenever published assessments contain an inline image token, preventing older App builds from receiving unsupported token syntax.
+- The assessment JSON schema is unchanged because the token is embedded in existing governed string fields and resolves through the existing `attachments` model.
+
 ## 0.0.22 - 2026-08-30
 
 - Added optional `sharedLearning` manifest collection and `shared_learning/` repository directory.

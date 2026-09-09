@@ -23,6 +23,7 @@ COLLECTIONS = {
     "sharedLearning": {"directory": ROOT / "shared_learning", "schema": ROOT / "schema" / "shared-learning-schema.json", "versionField": "version", "allowEmpty": True},
 }
 SEMVER_PATTERN = re.compile(r"^\d+\.\d+\.\d+$")
+ASSESSMENT_INLINE_IMAGE_TOKEN_RE = re.compile(r"\{\{image:[^}]+\}\}")
 
 
 def load_json(path: Path) -> dict:
@@ -181,6 +182,17 @@ def build_entries(
     return entries
 
 
+def assessments_use_inline_images(entries: list[dict]) -> bool:
+    for entry in entries:
+        relative = entry.get("file")
+        if not isinstance(relative, str):
+            continue
+        document_path = ROOT / relative
+        if ASSESSMENT_INLINE_IMAGE_TOKEN_RE.search(document_path.read_text(encoding="utf-8")):
+            return True
+    return False
+
+
 def payload_paths(generated_collections: dict[str, list[dict]]) -> set[Path]:
     paths: set[Path] = {REFERENCES_PATH, GLOSSARY_PATH}
     for entries in generated_collections.values():
@@ -241,7 +253,8 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "contentVersion": previous_version,
         "minimumAppVersion": max_semver(
             str(current.get("minimumAppVersion", "0.32.0")),
-            "0.60.0" if generated_collections["sharedLearning"] else "0.49.0"
+            "0.60.0" if generated_collections["sharedLearning"] else "0.49.0",
+            "0.63.5" if assessments_use_inline_images(generated_collections["assessments"]) else "0.49.0",
         ),
         # Bytes downloaded after manifest.json itself. The Flutter client adds
         # the actual manifest response length to this value for the full total.
