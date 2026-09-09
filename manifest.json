@@ -1,10 +1,10 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.25",
-  "updatedAt": "2026-09-08T16:12:07Z",
+  "contentVersion": "0.0.26",
+  "updatedAt": "2026-09-09T17:34:37Z",
   "emergencyRevocations": [],
   "minimumAppVersion": "0.57.0",
-  "downloadSizeBytes": 4721159,
+  "downloadSizeBytes": 4731620,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -156,6 +156,21 @@
       "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
+      ]
+    },
+    {
+      "id": "lower-uti-assessment",
+      "title": "Lower Urinary Tract Infection Assessment",
+      "version": "0.1.0",
+      "file": "assessments/lower-uti-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "eb8812babefef8da927ae911515542328d6a2e3025815de606841a089037964b",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 10461,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
       ]
     },
     {

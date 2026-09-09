@@ -124,6 +124,11 @@
       "referenceId": "NICE-NG109",
       "usedBy": [
         {
+          "type": "assessment",
+          "id": "lower-uti-assessment",
+          "title": "Lower Urinary Tract Infection Assessment"
+        },
+        {
           "type": "prescribing",
           "id": "lower-uti-men-16-and-over",
           "title": "Lower UTI Men aged 16 years and over (i.e. no fever, rigors or flank pain)"
