@@ -1,0 +1,256 @@
+{
+  "id": "lower-uti-assessment",
+  "title": "Lower Urinary Tract Infection Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing suspected lower urinary tract infection, distinguishing uncomplicated cystitis from pyelonephritis and important alternatives, and supporting appropriate urine testing, treatment, referral and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Confirm that symptoms localise to the lower urinary tract, actively exclude pyelonephritis and sepsis, and identify factors that make the infection complicated or require culture.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Lower urinary tract infection.",
+            "Pyelonephritis or systemic urinary infection.",
+            "Sepsis or acute kidney injury.",
+            "Pregnancy.",
+            "Prostatitis in men.",
+            "Urinary retention, obstruction or significant structural urinary disease.",
+            "Asymptomatic bacteriuria or a non-urinary cause of symptoms.",
+            "Recurrent infection, catheter use or other factors requiring a different pathway."
+          ],
+          "importantLimitation": "Positive urine dipstick or bacteriuria does not by itself establish symptomatic UTI, particularly in older adults and catheterised patients. Interpret urine findings in the clinical context."
+        }
+      ]
+    },
+    {
+      "id": "focused-history",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Identify localising urinary symptoms and then screen for upper-tract, systemic and alternative causes.",
+      "items": [
+        {
+          "id": "lower-urinary-symptoms",
+          "title": "Lower urinary symptoms",
+          "mustConfirmOrExclude": [
+            "New dysuria.",
+            "Urinary frequency or urgency.",
+            "Suprapubic discomfort.",
+            "New nocturia or incontinence where clinically relevant.",
+            "Visible haematuria."
+          ]
+        },
+        {
+          "id": "upper-tract-systemic",
+          "title": "Upper-tract and systemic features",
+          "mustConfirmOrExclude": [
+            "Fever, rigors or marked systemic upset.",
+            "Flank or loin pain.",
+            "Nausea or vomiting.",
+            "Reduced urine output.",
+            "New confusion or functional deterioration in an older or frail patient."
+          ]
+        },
+        {
+          "id": "complicating-factors",
+          "title": "Complicating factors",
+          "mustConfirmOrExclude": [
+            "Pregnancy or possibility of pregnancy.",
+            "Male sex and symptoms of prostatitis or urinary obstruction.",
+            "Catheter or recent urinary instrumentation.",
+            "Known stones, structural urinary abnormality or recurrent UTI.",
+            "Immunosuppression, renal disease or diabetes.",
+            "Recent urine culture results and antibiotic exposure."
+          ]
+        },
+        {
+          "id": "alternative-diagnosis",
+          "title": "Alternative diagnosis features",
+          "mustConfirmOrExclude": [
+            "Vaginal discharge, irritation or symptoms suggesting vulvovaginal infection.",
+            "Urethral discharge or STI risk.",
+            "Pelvic pain or pregnancy-related symptoms.",
+            "Renal colic-type pain."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red-flags",
+      "title": "Red flags and complications",
+      "type": "prompt-list",
+      "intro": "Do not manage as uncomplicated lower UTI when upper-tract, systemic or obstructive features are present.",
+      "items": [
+        {
+          "id": "pyelonephritis",
+          "title": "Possible pyelonephritis",
+          "urgentFeatures": [
+            "Fever or rigors with flank/loin pain.",
+            "Costovertebral-angle tenderness with systemic symptoms.",
+            "Nausea or vomiting with suspected urinary infection."
+          ],
+          "implications": [
+            "Use the Acute Pyelonephritis Assessment and upper-UTI treatment pathway."
+          ]
+        },
+        {
+          "id": "sepsis-aki",
+          "title": "Sepsis or acute kidney injury",
+          "urgentFeatures": [
+            "Physiological instability, poor perfusion or altered mental state.",
+            "Markedly reduced urine output or concern for acute kidney injury."
+          ],
+          "implications": [
+            "Urgent acute assessment is required."
+          ]
+        },
+        {
+          "id": "obstruction-retention",
+          "title": "Obstruction or retention",
+          "urgentFeatures": [
+            "Inability to pass urine, painful bladder distension or significant new retention.",
+            "Suspected infected obstructed system or stone with systemic illness."
+          ],
+          "implications": [
+            "Urgent urological or hospital assessment may be required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examination should focus on systemic illness, hydration, abdominal findings and signs suggesting upper-tract or alternative pathology.",
+      "items": [
+        {
+          "id": "general-observations",
+          "title": "General assessment and observations",
+          "howToTest": [
+            "Assess overall appearance, hydration and mental state.",
+            "Record temperature, heart rate, blood pressure and other observations where clinically indicated."
+          ],
+          "normal": [
+            "Clinically well, hydrated and physiologically stable."
+          ],
+          "abnormal": [
+            "Fever, hypotension, tachycardia, dehydration or altered mental state."
+          ],
+          "implications": [
+            "Systemic abnormalities raise concern for upper-tract infection or another acute illness."
+          ]
+        },
+        {
+          "id": "abdominal-renal",
+          "title": "Abdominal and renal examination",
+          "howToTest": [
+            "Assess suprapubic tenderness where relevant.",
+            "Assess for flank or costovertebral-angle tenderness.",
+            "Look for abdominal distension or a palpable bladder when retention is suspected."
+          ],
+          "normal": [
+            "No significant flank tenderness, peritonism or bladder distension."
+          ],
+          "abnormal": [
+            "Flank/CVA tenderness, peritonism or evidence of retention."
+          ],
+          "implications": [
+            "Flank tenderness with systemic features supports pyelonephritis; retention or peritonism requires an alternative pathway."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "investigations",
+      "title": "Urine testing and investigations",
+      "type": "prompt-list",
+      "intro": "Testing strategy depends on age, sex, pregnancy, catheter status, recurrence and illness severity.",
+      "items": [
+        {
+          "id": "urine-testing",
+          "title": "Urine testing",
+          "mustConfirmOrExclude": [
+            "Use urine dipstick only in patient groups where it is clinically appropriate; do not use it as a stand-alone diagnosis.",
+            "Obtain urine culture when required by the relevant pathway, including pregnancy, men, recurrent or complicated infection, treatment failure and suspected pyelonephritis.",
+            "Obtain a urine sample before antibiotics when this is required and does not delay urgent treatment.",
+            "Review previous culture and susceptibility results where available."
+          ]
+        },
+        {
+          "id": "additional-investigations",
+          "title": "Additional investigations",
+          "mustConfirmOrExclude": [
+            "Consider renal function, blood tests or imaging when systemic illness, AKI, obstruction, stone or another complication is suspected."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Treatment should reflect patient group, complication risk and previous microbiology rather than a single generic UTI pathway.",
+      "items": [
+        {
+          "id": "treatment",
+          "title": "Treatment",
+          "mustConfirmOrExclude": [
+            "Use the appropriate lower-UTI prescribing pathway for the patient's sex and pregnancy status.",
+            "Take previous urine culture and antibiotic exposure into account.",
+            "Provide hydration, symptom-control and follow-up advice."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management may be appropriate when",
+          "mustConfirmOrExclude": [
+            "No pyelonephritis, sepsis, AKI or obstructive red flag is present.",
+            "The patient can maintain oral fluids and treatment.",
+            "Complicating factors have been addressed and appropriate urine testing arranged.",
+            "Reliable reassessment is available."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Safety-netting",
+      "type": "safety-netting",
+      "intro": "Advise prompt reassessment if symptoms evolve towards upper-tract or systemic infection.",
+      "items": [
+        {
+          "id": "reassessment",
+          "title": "Advise urgent reassessment if",
+          "safetyNetting": [
+            "Fever, rigors, flank pain, vomiting or marked systemic illness develops.",
+            "Urine output falls significantly.",
+            "Symptoms worsen rapidly or fail to improve after treatment starts.",
+            "The patient becomes unable to maintain fluids or oral medication.",
+            "New retention or severe pain develops."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG109"
+  ],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-09",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-09",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  },
+  "categoryIds": [
+    "uncategorised"
+  ],
+  "status": "active",
+  "attachments": [],
+  "prominentResources": []
+}
