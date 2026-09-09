@@ -12,6 +12,7 @@ from jsonschema import Draft202012Validator, FormatChecker
 ROOT = Path(__file__).resolve().parent.parent
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
 ATTACHMENT_TOKEN_RE = re.compile(r"\{\{attachment:([^}|]+)(?:\|([^}]+))?\}\}")
+IMAGE_TOKEN_RE = re.compile(r"\{\{image:([^}|]+)(?:\|([^}]+))?\}\}")
 NO_DEFINITION_RE = re.compile(r"\{\{no-definition:([^}]+)\}\}")
 STABLE_ID_RE = re.compile(r"(?<![A-Za-z0-9_])@([a-z0-9][a-z0-9_-]*)")
 
@@ -156,13 +157,24 @@ def _walk_strings(item, item_path="content"):
             if key not in {"attachments","images"}:
                 yield from _walk_strings(child,f"{item_path}.{key}")
 
-def _validate_inline_tokens(value: dict, source_path: Path, attachment_ids: set[str],
-                            stable_ids: set[str], glossary_terms: set[str], errors: list[str]) -> None:
+def _validate_inline_tokens(value: dict, source_path: Path, attachments_by_id: dict[str,dict],
+                            stable_ids: set[str], glossary_terms: set[str], errors: list[str],
+                            allow_image_tokens: bool = False) -> None:
     for item_path,text in _walk_strings(value):
         for match in ATTACHMENT_TOKEN_RE.finditer(text):
             attachment_id = match.group(1).strip()
-            if attachment_id not in attachment_ids:
+            if attachment_id not in attachments_by_id:
                 errors.append(f"{source_path}:{item_path}: attachment token '{attachment_id}' does not resolve to an attachment on this content item.")
+        for match in IMAGE_TOKEN_RE.finditer(text):
+            attachment_id = match.group(1).strip()
+            if not allow_image_tokens:
+                errors.append(f"{source_path}:{item_path}: image token '{attachment_id}' is currently supported only in assessment content.")
+                continue
+            attachment = attachments_by_id.get(attachment_id)
+            if attachment is None:
+                errors.append(f"{source_path}:{item_path}: image token '{attachment_id}' does not resolve to an attachment on this content item.")
+            elif attachment.get("type") != "image":
+                errors.append(f"{source_path}:{item_path}: image token '{attachment_id}' must reference an attachment with type 'image'.")
         for match in NO_DEFINITION_RE.finditer(text):
             token = match.group(1).strip().casefold()
             if token not in glossary_terms:
@@ -333,11 +345,11 @@ def main() -> int:
     for kind,documents in documents_by_kind.items():
         for item_id,value in documents.items():
             source_path = COLLECTIONS[kind]["directory"]/f"{item_id}.json"
-            attachment_ids = {
-                item.get("id") for item in value.get("attachments",[])
+            attachments_by_id = {
+                item.get("id"): item for item in value.get("attachments",[])
                 if isinstance(item,dict) and isinstance(item.get("id"),str)
             }
-            _validate_inline_tokens(value,source_path,attachment_ids,stable_ids,glossary_terms,errors)
+            _validate_inline_tokens(value,source_path,attachments_by_id,stable_ids,glossary_terms,errors,allow_image_tokens=(kind == "assessment"))
 
     validate_cross_links(documents_by_kind,errors)
 
@@ -355,11 +367,11 @@ def main() -> int:
             for notice in notices_document.get("notices",[]):
                 if isinstance(notice,dict):
                     _validate_attachments("clinical-notice",notice,notices_path,known_reference_ids,errors)
-                    attachment_ids = {
-                        item.get("id") for item in notice.get("attachments",[])
+                    attachments_by_id = {
+                        item.get("id"): item for item in notice.get("attachments",[])
                         if isinstance(item,dict) and isinstance(item.get("id"),str)
                     }
-                    _validate_inline_tokens(notice,notices_path,attachment_ids,stable_ids,glossary_terms,errors)
+                    _validate_inline_tokens(notice,notices_path,attachments_by_id,stable_ids,glossary_terms,errors)
 
     if args.base_ref:
         changed = changed_files(args.base_ref)

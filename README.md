@@ -194,6 +194,17 @@ The repository contains a governed shared clinical glossary under `glossary/`. T
 
 Governed files are stored under `attachments/`. Supported content can reference attachments using structured metadata including repository path and SHA-256 hash. Clinically meaningful replacements should use controlled replacement governance and return the parent content to the required review/validation state.
 
+### Inline assessment images
+
+Assessments may render an existing governed image attachment directly inside clinical text with:
+
+```text
+{{image:attachment-id}}
+{{image:attachment-id|Optional caption override}}
+```
+
+The token does not create a new image object. It resolves an entry from the assessment's existing `attachments` array, and the referenced attachment must have `type: "image"`. The optional caption applies only at that token occurrence; otherwise the governed attachment caption is used. Existing `{{attachment:id}}` and `{{attachment:id|Custom label}}` tokens remain inline attachment links. Repository validation rejects missing image IDs, non-image targets and image tokens outside assessment content. When any published assessment contains an inline image token, manifest generation enforces `minimumAppVersion >= 0.63.5` so older App builds cannot install unsupported content.
+
 ## Manifest
 
 `manifest.json` describes the publishable content pack and includes schema version, overall content-pack version, minimum supported app version, content entries, paths, schemas, hashes and safety controls.
