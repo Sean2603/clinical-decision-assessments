@@ -1,5 +1,41 @@
 # C-reactive protein — Publication history
 
+<!-- cdm-publication:1.0.0 -->
+## v1.0.0 — 2026-09-10
+
+- **Content ID:** `c-reactive-protein`
+- **Content type:** blood-panel
+- **Previous published version:** 0.2.0
+- **Published version:** 1.0.0
+- **Generated:** 2026-09-10T09:40:02.326Z
+
+## Change control
+
+- **Summary:** Calculation changed: calculations[calculation-f342890b].
+- **Risk:** structure-breaking
+- **Selected version increase:** patch
+- **Recommended version increase:** major
+- **Changed fields:** 7
+- **Override reason:** Minor
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-09-10T12:00:00.000Z
+- **Notes:** Review completed. No additional review comments recorded.
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:1.0.0 -->
+
+---
+
 <!-- cdm-publication:0.2.0 -->
 ## v0.2.0 — 2026-08-24
 

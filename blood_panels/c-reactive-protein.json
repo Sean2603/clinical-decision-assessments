@@ -2,7 +2,7 @@
   "id": "c-reactive-protein",
   "title": "C-reactive protein",
   "subtitle": "Inflammatory marker interpreted with timing and clinical context",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Inflammatory marker interpreted with timing and clinical context",
@@ -20,9 +20,7 @@
           "lowInterpretation": [
             "Makes a substantial systemic inflammatory response less likely at that moment."
           ],
-          "highInterpretation": [
-            "Not applicable."
-          ],
+          "highInterpretation": [],
           "notes": [],
           "unitless": true,
           "navigation": {
@@ -35,9 +33,7 @@
           "name": "Mild elevation",
           "unit": "",
           "referenceRange": "Approximately 5–40 mg/L",
-          "lowInterpretation": [
-            "Not applicable."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Can occur with mild inflammation, early infection, viral illness, tissue injury, obesity or chronic inflammatory disease."
           ],
@@ -53,9 +49,7 @@
           "name": "Moderate elevation",
           "unit": "",
           "referenceRange": "Approximately 40–100 mg/L",
-          "lowInterpretation": [
-            "Not applicable."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Supports clinically important inflammation or infection but is not diagnostic of bacterial infection."
           ],
@@ -71,9 +65,7 @@
           "name": "Marked elevation",
           "unit": "",
           "referenceRange": ">100 mg/L",
-          "lowInterpretation": [
-            "Not applicable."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Raises concern for substantial bacterial infection, major inflammation, tissue injury or other serious pathology; interpret with the patient rather than the number alone."
           ],
@@ -99,9 +91,7 @@
           "name": "Rising CRP",
           "unit": "",
           "referenceRange": "Compare serial results and time interval",
-          "lowInterpretation": [
-            "Not applicable."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "May indicate evolving inflammation, inadequate source control or expected delayed peak. A rising result is not automatically treatment failure without clinical context."
           ],
@@ -151,10 +141,10 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-24",
+    "reviewedOn": "2026-09-10",
     "reviewerRole": "tAPUC",
     "reviewNotes": "Review completed. No additional review comments recorded.",
-    "nextReviewDue": "2028-08-24"
+    "nextReviewDue": "2028-09-10"
   },
   "attachments": [
     {
