@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.25",
-  "updatedAt": "2026-09-10T08:35:50Z",
+  "contentVersion": "0.0.26",
+  "updatedAt": "2026-09-10T09:40:38Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.0",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1348
   },
   "minimumAppVersion": "0.63.6",
-  "downloadSizeBytes": 6206766,
+  "downloadSizeBytes": 6206561,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -403,12 +403,12 @@
     {
       "id": "c-reactive-protein",
       "title": "C-reactive protein",
-      "version": "0.2.0",
+      "version": "1.0.0",
       "file": "blood_panels/c-reactive-protein.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "9689018e35712a6bd3dd87c06eda4de6d21801de629629589551341c1fb590f6",
+      "sha256": "ad05013cb91443328a9687bb6d238c157d5636a9b50cec7fb88691247d97f4f8",
       "schemaSha256": "cbbe2ef7a272734241502f7a98f752ee0fae2ea34cd725fb6795e19aea4b78c2",
-      "sizeBytes": 6634,
+      "sizeBytes": 6429,
       "schemaSizeBytes": 15072,
       "attachmentsSizeBytes": 3100287
     },
