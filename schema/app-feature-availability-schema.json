@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://clinical-decision-assessments/schema/app-feature-availability-schema.json",
+  "title": "App Feature Availability",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "version",
+    "targetEnvironment",
+    "features"
+  ],
+  "properties": {
+    "id": {
+      "const": "prod-feature-availability"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "targetEnvironment": {
+      "const": "prod"
+    },
+    "features": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "state"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "assessments",
+              "bloods",
+              "scoring-tools",
+              "guidelines",
+              "medications",
+              "prescribing",
+              "cpd-hub",
+              "notes",
+              "todo"
+            ]
+          },
+          "state": {
+            "enum": [
+              "enabled",
+              "hidden"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

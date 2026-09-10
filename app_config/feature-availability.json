@@ -1,0 +1,44 @@
+{
+  "id": "prod-feature-availability",
+  "title": "App Feature Availability",
+  "version": "1.0.0",
+  "targetEnvironment": "prod",
+  "features": [
+    {
+      "id": "assessments",
+      "state": "enabled"
+    },
+    {
+      "id": "bloods",
+      "state": "enabled"
+    },
+    {
+      "id": "scoring-tools",
+      "state": "enabled"
+    },
+    {
+      "id": "guidelines",
+      "state": "hidden"
+    },
+    {
+      "id": "medications",
+      "state": "hidden"
+    },
+    {
+      "id": "prescribing",
+      "state": "hidden"
+    },
+    {
+      "id": "cpd-hub",
+      "state": "enabled"
+    },
+    {
+      "id": "notes",
+      "state": "enabled"
+    },
+    {
+      "id": "todo",
+      "state": "enabled"
+    }
+  ]
+}
