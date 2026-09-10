@@ -1,20 +1,20 @@
 {
   "id": "prod-feature-availability",
   "title": "App Feature Availability",
-  "version": "1.0.4",
+  "version": "1.0.1",
   "targetEnvironment": "prod",
   "features": [
     {
       "id": "assessments",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "bloods",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "scoring-tools",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "guidelines",
@@ -26,7 +26,7 @@
     },
     {
       "id": "prescribing",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "cpd-hub",
