@@ -195,6 +195,23 @@ def assessments_use_inline_images(entries: list[dict]) -> bool:
     return False
 
 
+def assessments_use_inline_only_media(entries: list[dict]) -> bool:
+    for entry in entries:
+        relative = entry.get("file")
+        if not isinstance(relative, str):
+            continue
+        document = load_json(ROOT / relative)
+        attachments = document.get("attachments", [])
+        if isinstance(attachments, list) and any(
+            isinstance(item, dict)
+            and item.get("type") == "image"
+            and item.get("label") == "__inline_only__"
+            for item in attachments
+        ):
+            return True
+    return False
+
+
 def payload_paths(generated_collections: dict[str, list[dict]]) -> set[Path]:
     paths: set[Path] = {REFERENCES_PATH, GLOSSARY_PATH, FEATURE_AVAILABILITY_PATH, FEATURE_AVAILABILITY_SCHEMA_PATH}
     for entries in generated_collections.values():
@@ -259,6 +276,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
             str(current.get("minimumAppVersion", "0.32.0")),
             "0.60.0" if generated_collections["sharedLearning"] else "0.49.0",
             "0.63.5" if assessments_use_inline_images(generated_collections["assessments"]) else "0.49.0",
+            "0.63.7" if assessments_use_inline_only_media(generated_collections["assessments"]) else "0.49.0",
             "0.63.6",
         ),
         "appFeatureAvailability": {

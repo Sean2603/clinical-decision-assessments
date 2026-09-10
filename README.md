@@ -351,3 +351,7 @@ Normal governed changes should progress through CDM and the controlled review br
 ## Nullable reference publication dates
 
 A reference with no discrete publication date may use `published: null`. This is intended for continuously updated online resources. `accessed` remains mandatory and `lastUpdated` should be used when a reliable source update date is available.
+
+### Inline-only assessment media
+
+Assessment images inserted directly from CDM can use the reserved attachment label `__inline_only__`. They remain normal governed attachment assets for hashing, offline download and `{{image:attachment-id}}` resolution, but App `0.63.7` and later omit them from the visible assessment Attachments card. CDA validation requires the asset to be an image on an assessment and to be referenced by an image token.

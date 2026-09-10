@@ -1,3 +1,9 @@
+## 2026-09-10 – Inline-only assessment media compatibility
+
+- Reserved attachment label `__inline_only__` for governed assessment image attachments inserted directly into clinical text by CDM.
+- Repository validation requires inline-only assets to be images, limits them to assessments, and requires each one to be referenced by an assessment `{{image:...}}` token.
+- Manifest generation raises `minimumAppVersion` to at least `0.63.7` when published assessment content contains inline-only media so older builds cannot expose those images again in the generic Attachments card.
+
 
 ## App feature availability
 

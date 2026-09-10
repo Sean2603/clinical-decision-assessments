@@ -167,6 +167,8 @@ def _validate_attachments(kind: str, value: dict, source_path: Path,
             expected_hash = attachment.get("sha256")
             if isinstance(expected_hash,str) and _binary_sha256(attachment_path) != expected_hash.lower():
                 errors.append(f"{prefix}: sha256 does not match {normalized}.")
+        if attachment.get("label") == "__inline_only__" and attachment.get("type") != "image":
+            errors.append(f"{prefix}: inline-only media must use attachment type 'image'.")
         reference_id = attachment.get("referenceId")
         if isinstance(reference_id,str) and reference_id and reference_id not in known_reference_ids:
             errors.append(f"{prefix}: unknown referenceId {reference_id}.")
@@ -203,6 +205,16 @@ def _walk_strings(item, item_path="content"):
 def _validate_inline_tokens(value: dict, source_path: Path, attachments_by_id: dict[str,dict],
                             stable_ids: set[str], glossary_terms: set[str], errors: list[str],
                             allow_image_tokens: bool = False) -> None:
+    inline_image_ids: set[str] = set()
+    for _, text in _walk_strings(value):
+        for match in IMAGE_TOKEN_RE.finditer(text):
+            inline_image_ids.add(match.group(1).strip())
+    for attachment_id, attachment in attachments_by_id.items():
+        if attachment.get("label") == "__inline_only__":
+            if not allow_image_tokens:
+                errors.append(f"{source_path}:attachments: inline-only media is currently supported only in assessment content.")
+            elif attachment_id not in inline_image_ids:
+                errors.append(f"{source_path}:attachments: inline-only image '{attachment_id}' must be referenced by an image token in the same assessment.")
     for item_path,text in _walk_strings(value):
         for match in ATTACHMENT_TOKEN_RE.finditer(text):
             attachment_id = match.group(1).strip()
