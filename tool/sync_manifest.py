@@ -12,6 +12,8 @@ REFERENCES_PATH = ROOT / "references" / "references.json"
 GLOSSARY_PATH = ROOT / "glossary" / "glossary.json"
 CATEGORIES_PATH = ROOT / "categories" / "assessment-categories.json"
 CATEGORIES_SCHEMA_PATH = ROOT / "schema" / "assessment-categories-schema.json"
+FEATURE_AVAILABILITY_PATH = ROOT / "app_config" / "feature-availability.json"
+FEATURE_AVAILABILITY_SCHEMA_PATH = ROOT / "schema" / "app-feature-availability-schema.json"
 
 COLLECTIONS = {
     "assessments": {"directory": ROOT / "assessments", "schema": ROOT / "schema" / "assessment-schema.json", "versionField": "version", "allowEmpty": True},
@@ -194,7 +196,7 @@ def assessments_use_inline_images(entries: list[dict]) -> bool:
 
 
 def payload_paths(generated_collections: dict[str, list[dict]]) -> set[Path]:
-    paths: set[Path] = {REFERENCES_PATH, GLOSSARY_PATH}
+    paths: set[Path] = {REFERENCES_PATH, GLOSSARY_PATH, FEATURE_AVAILABILITY_PATH, FEATURE_AVAILABILITY_SCHEMA_PATH}
     for entries in generated_collections.values():
         for entry in entries:
             paths.add(ROOT / entry["file"])
@@ -209,6 +211,8 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
     load_json(GLOSSARY_PATH)
     categories = load_json(CATEGORIES_PATH)
     load_json(CATEGORIES_SCHEMA_PATH)
+    feature_availability = load_json(FEATURE_AVAILABILITY_PATH)
+    load_json(FEATURE_AVAILABILITY_SCHEMA_PATH)
 
     generated_collections = {}
     for key, settings in COLLECTIONS.items():
@@ -255,7 +259,17 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
             str(current.get("minimumAppVersion", "0.32.0")),
             "0.60.0" if generated_collections["sharedLearning"] else "0.49.0",
             "0.63.5" if assessments_use_inline_images(generated_collections["assessments"]) else "0.49.0",
+            "0.63.6",
         ),
+        "appFeatureAvailability": {
+            "version": str(feature_availability.get("version", "1.0.0")),
+            "file": FEATURE_AVAILABILITY_PATH.relative_to(ROOT).as_posix(),
+            "schema": FEATURE_AVAILABILITY_SCHEMA_PATH.relative_to(ROOT).as_posix(),
+            "sha256": sha256(FEATURE_AVAILABILITY_PATH),
+            "schemaSha256": sha256(FEATURE_AVAILABILITY_SCHEMA_PATH),
+            "sizeBytes": text_size_bytes(FEATURE_AVAILABILITY_PATH),
+            "schemaSizeBytes": text_size_bytes(FEATURE_AVAILABILITY_SCHEMA_PATH),
+        },
         # Bytes downloaded after manifest.json itself. The Flutter client adds
         # the actual manifest response length to this value for the full total.
         "downloadSizeBytes": total_payload_bytes,
