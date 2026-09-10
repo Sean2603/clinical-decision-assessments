@@ -2,15 +2,13 @@
   "id": "glasgow-coma-scale",
   "title": "Glasgow Coma Scale",
   "subtitle": "Consciousness assessment and trending",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
   "typeLabel": "Consciousness assessment",
   "summary": "Records eye, verbal and motor responses and their total while emphasising component documentation and trend.",
-  "population": [
-    "People requiring structured consciousness assessment."
-  ],
+  "population": [],
   "exclusions": [],
   "criteria": [
     {
@@ -24,22 +22,22 @@
       "choices": [
         {
           "id": "spontaneous",
-          "label": "Spontaneous",
+          "label": "4 - Spontaneous",
           "score": 4
         },
         {
           "id": "to-sound",
-          "label": "To sound",
+          "label": "3 - To sound",
           "score": 3
         },
         {
           "id": "to-pressure",
-          "label": "To pressure",
+          "label": "2 - To pressure",
           "score": 2
         },
         {
           "id": "none",
-          "label": "None",
+          "label": "1 - None",
           "score": 1
         }
       ]
@@ -55,27 +53,27 @@
       "choices": [
         {
           "id": "orientated",
-          "label": "Orientated",
+          "label": "5 - Orientated",
           "score": 5
         },
         {
           "id": "confused",
-          "label": "Confused",
+          "label": "4 - Confused",
           "score": 4
         },
         {
           "id": "words",
-          "label": "Words",
+          "label": "3 - Words",
           "score": 3
         },
         {
           "id": "sounds",
-          "label": "Sounds",
+          "label": "2 - Sounds",
           "score": 2
         },
         {
           "id": "none",
-          "label": "None",
+          "label": "1 - None",
           "score": 1
         }
       ]
@@ -91,32 +89,32 @@
       "choices": [
         {
           "id": "obeys-commands",
-          "label": "Obeys commands",
+          "label": "6 - Obeys commands",
           "score": 6
         },
         {
           "id": "localises-pressure",
-          "label": "Localises pressure",
+          "label": "5 - Localises pressure",
           "score": 5
         },
         {
           "id": "normal-flexion",
-          "label": "Normal flexion",
+          "label": "4 - Normal flexion",
           "score": 4
         },
         {
           "id": "abnormal-flexion",
-          "label": "Abnormal flexion",
+          "label": "3 - Abnormal flexion",
           "score": 3
         },
         {
           "id": "extension",
-          "label": "Extension",
+          "label": "2 - Extension",
           "score": 2
         },
         {
           "id": "none",
-          "label": "None",
+          "label": "1 - None",
           "score": 1
         }
       ]
@@ -143,19 +141,12 @@
   "calculationStrategy": "sum",
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-08",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-08",
+    "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "evaluation": {
     "kind": "sum",
@@ -190,5 +181,6 @@
       "expectedResultId": "gcs"
     }
   ],
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }
