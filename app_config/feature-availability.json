@@ -1,7 +1,7 @@
 {
   "id": "prod-feature-availability",
   "title": "App Feature Availability",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "targetEnvironment": "prod",
   "features": [
     {
@@ -18,15 +18,15 @@
     },
     {
       "id": "guidelines",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "medications",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "prescribing",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "cpd-hub",
