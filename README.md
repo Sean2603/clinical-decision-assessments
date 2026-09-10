@@ -1,3 +1,8 @@
+
+## App feature availability
+
+Production/tester feature visibility is governed by `app_config/feature-availability.json` and `schema/app-feature-availability-schema.json`. The known feature IDs are assessments, bloods, scoring-tools, guidelines, medications, prescribing, cpd-hub, notes and todo. `enabled` and `hidden` are the currently valid states. CDM publication updates the manifest descriptor; malformed, duplicate or unknown feature definitions fail validation. Development builds continue to expose all features by default.
+
 ## CDA content version 0.0.22
 
 Scoring tools and blood panels are now native governed CDA content rather than shadow copies of Flutter clinical screens.

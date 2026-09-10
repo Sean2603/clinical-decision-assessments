@@ -25,6 +25,49 @@ COLLECTIONS = {
     "prescribing": {"directory":ROOT/"prescribing","schema":ROOT/"schema"/"prescribing-schema.json","versionField":"version","allowEmpty":True},
     "shared-learning": {"directory":ROOT/"shared_learning","schema":ROOT/"schema"/"shared-learning-schema.json","versionField":"version","allowEmpty":True},
 }
+
+FEATURE_AVAILABILITY_PATH = ROOT / "app_config" / "feature-availability.json"
+FEATURE_AVAILABILITY_SCHEMA_PATH = ROOT / "schema" / "app-feature-availability-schema.json"
+KNOWN_APP_FEATURE_IDS = {
+    "assessments", "bloods", "scoring-tools", "guidelines", "medications",
+    "prescribing", "cpd-hub", "notes", "todo",
+}
+APP_FEATURE_STATES = {"enabled", "hidden"}
+
+def validate_app_feature_availability(errors: list[str]) -> dict | None:
+    document = load_json(FEATURE_AVAILABILITY_PATH, errors)
+    schema = load_json(FEATURE_AVAILABILITY_SCHEMA_PATH, errors)
+    if document is None or schema is None:
+        return None
+    validator = Draft202012Validator(schema, format_checker=FormatChecker())
+    for error in sorted(validator.iter_errors(document), key=lambda item: list(item.absolute_path)):
+        location = ".".join(str(part) for part in error.absolute_path) or "document"
+        errors.append(f"{FEATURE_AVAILABILITY_PATH}:{location}: {error.message}")
+    features = document.get("features")
+    if not isinstance(features, list):
+        return document
+    seen: set[str] = set()
+    for index, feature in enumerate(features):
+        if not isinstance(feature, dict):
+            continue
+        feature_id = feature.get("id")
+        state = feature.get("state")
+        if isinstance(feature_id, str):
+            if feature_id in seen:
+                errors.append(f"{FEATURE_AVAILABILITY_PATH}:features[{index}]: duplicate feature id {feature_id}.")
+            seen.add(feature_id)
+            if feature_id not in KNOWN_APP_FEATURE_IDS:
+                errors.append(f"{FEATURE_AVAILABILITY_PATH}:features[{index}]: unknown feature id {feature_id}.")
+        if isinstance(state, str) and state not in APP_FEATURE_STATES:
+            errors.append(f"{FEATURE_AVAILABILITY_PATH}:features[{index}]: invalid state {state}.")
+    missing = sorted(KNOWN_APP_FEATURE_IDS - seen)
+    if missing:
+        errors.append(f"{FEATURE_AVAILABILITY_PATH}: missing required feature ids: {', '.join(missing)}.")
+    extra = sorted(seen - KNOWN_APP_FEATURE_IDS)
+    if extra:
+        errors.append(f"{FEATURE_AVAILABILITY_PATH}: unknown feature ids: {', '.join(extra)}.")
+    return document
+
 IMAGE_KIND_FOLDERS = {
     "assessment":"assessments","guideline":"guidelines","scoring-tool":"scoring_tools",
     "blood-panel":"blood_panels","medication":"medications","prescribing":"prescribing","shared-learning":"shared_learning",
@@ -325,6 +368,7 @@ def main() -> int:
         for error in errors:
             print(f"ERROR: {error}")
         return 1
+    feature_availability = validate_app_feature_availability(errors)
     reference_ids = [item.get("id") for item in references_document.get("references",[]) if isinstance(item,dict)]
     if any(not isinstance(item,str) or not item for item in reference_ids):
         errors.append("Every reference must have a non-empty string id.")
