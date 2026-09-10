@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.28",
-  "updatedAt": "2026-09-10T10:33:07Z",
+  "contentVersion": "0.0.29",
+  "updatedAt": "2026-09-10T13:00:03Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.4",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1348
   },
   "minimumAppVersion": "0.63.6",
-  "downloadSizeBytes": 6206555,
+  "downloadSizeBytes": 6206469,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -281,12 +281,12 @@
     {
       "id": "glasgow-coma-scale",
       "title": "Glasgow Coma Scale",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "file": "scoring_tools/glasgow-coma-scale.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "f62b690351c2317ffb2480b4109a48e2d6c809e9628661b009b4cf813aa8bbaa",
+      "sha256": "e43f106a253c5bef8ccbf044d68e7f20ea0d274c9ea84e815ae83b9f48443669",
       "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
-      "sizeBytes": 4568,
+      "sizeBytes": 4482,
       "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
