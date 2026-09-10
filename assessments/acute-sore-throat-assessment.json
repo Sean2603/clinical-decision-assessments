@@ -1,0 +1,416 @@
+{
+  "id": "acute-sore-throat-assessment",
+  "title": "Acute Sore Throat Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing acute sore throat, pharyngitis and tonsillitis; identifying airway-threatening and deep-neck complications, recognising important alternatives, and supporting proportionate treatment, referral and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Assess the acute sore throat rather than assuming tonsillitis from tonsillar appearance alone. Establish airway safety, illness severity, hydration, likely cause and whether complications or alternative diagnoses require a different pathway.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Airway compromise, supraglottitis or another cause of upper-airway obstruction.",
+            "Peritonsillar infection or abscess (quinsy).",
+            "Deep neck-space infection.",
+            "Severe systemic illness or sepsis.",
+            "Inability to swallow sufficient fluids or medication.",
+            "Uncomplicated acute pharyngitis or tonsillitis.",
+            "Important alternatives including infectious mononucleosis and scarlet fever.",
+            "Immunosuppression or another factor substantially increasing complication risk."
+          ],
+          "importantLimitation": "Tonsillar erythema, enlargement and exudate do not reliably distinguish viral from bacterial infection. Interpret the overall clinical pattern rather than tonsillar appearance alone."
+        }
+      ]
+    },
+    {
+      "id": "focused-history",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Define the pattern, severity and time course, then look for features that suggest a complication or alternative diagnosis.",
+      "items": [
+        {
+          "id": "presenting-illness",
+          "title": "Presenting illness",
+          "mustConfirmOrExclude": [
+            "Onset, duration and whether symptoms are improving, stable or worsening.",
+            "Unilateral or bilateral throat pain.",
+            "Fever, rigors or marked systemic upset.",
+            "Odynophagia and whether solids, liquids, medication and saliva can be swallowed.",
+            "Previous tonsillitis, quinsy or significant throat infection.",
+            "Recent assessment, antibiotics and clinical response."
+          ]
+        },
+        {
+          "id": "viral-respiratory-features",
+          "title": "Respiratory and viral features",
+          "mustConfirmOrExclude": [
+            "Cough.",
+            "Coryza, rhinorrhoea or nasal congestion.",
+            "Hoarseness.",
+            "Other upper-respiratory symptoms.",
+            "Relevant household, school, workplace or other close-contact illness."
+          ]
+        },
+        {
+          "id": "alternative-diagnosis-features",
+          "title": "Features suggesting an alternative diagnosis",
+          "mustConfirmOrExclude": [
+            "Marked fatigue with posterior or generalised lymphadenopathy — consider infectious mononucleosis.",
+            "Sandpaper-textured rash or strawberry tongue — consider scarlet fever.",
+            "Oral ulceration, candidiasis or another atypical mucosal lesion.",
+            "Persistent unilateral throat pain, referred otalgia, persistent tonsillar asymmetry, neck mass or unexplained weight loss."
+          ]
+        },
+        {
+          "id": "background-risk",
+          "title": "Background risk",
+          "mustConfirmOrExclude": [
+            "Immunosuppression or significant comorbidity.",
+            "Medicines associated with immunosuppression, neutropenia or agranulocytosis where relevant.",
+            "Known drug allergies and recent antimicrobial exposure.",
+            "Ability to obtain treatment and access reassessment."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red-flags-complications",
+      "title": "Red flags and complications",
+      "type": "prompt-list",
+      "intro": "Positive or evolving features should change disposition. Do not manage these presentations as uncomplicated tonsillitis.",
+      "items": [
+        {
+          "id": "airway-compromise",
+          "title": "Airway compromise / supraglottitis",
+          "urgentFeatures": [
+            "Stridor or respiratory distress.",
+            "Drooling or inability to manage secretions.",
+            "Rapidly progressive dysphagia.",
+            "Markedly altered or weak voice with significant illness.",
+            "Severe odynophagia with little obvious oropharyngeal abnormality.",
+            "Tripod positioning, cyanosis, exhaustion or altered consciousness."
+          ],
+          "implications": [
+            "Possible upper-airway obstruction or supraglottitis; follow the appropriate emergency and ENT pathway."
+          ],
+          "importantLimitation": "Do not repeatedly manipulate or aggressively examine the pharynx when significant supraglottic airway obstruction is suspected."
+        },
+        {
+          "id": "quinsy",
+          "title": "Quinsy / peritonsillar abscess",
+          "urgentFeatures": [
+            "Severe unilateral throat pain.",
+            "Trismus.",
+            "Muffled 'hot potato' voice.",
+            "Drooling or substantial dysphagia.",
+            "Unilateral peri-tonsillar or soft-palate swelling, with or without uvular displacement."
+          ],
+          "implications": [
+            "Suspected quinsy requires urgent same-day ENT or hospital assessment."
+          ],
+          "importantLimitation": "Uvular displacement supports the diagnosis when present but is not required."
+        },
+        {
+          "id": "deep-neck-space-infection",
+          "title": "Deep neck-space infection",
+          "urgentFeatures": [
+            "Severe throat or neck pain with neck swelling or stiffness.",
+            "Painful restriction of neck movement.",
+            "Trismus, drooling, dysphagia or muffled voice.",
+            "Stridor or toxic appearance.",
+            "Progression despite apparently appropriate treatment."
+          ],
+          "implications": [
+            "Possible retropharyngeal, parapharyngeal or other deep neck-space infection; urgent specialist assessment is required."
+          ]
+        },
+        {
+          "id": "systemic-illness",
+          "title": "Severe systemic illness",
+          "urgentFeatures": [
+            "Physiological instability or markedly abnormal observations.",
+            "Altered mental state, poor peripheral perfusion or rapidly worsening systemic symptoms.",
+            "Clinical concern for sepsis."
+          ],
+          "implications": [
+            "Follow the appropriate acute illness or sepsis pathway."
+          ]
+        },
+        {
+          "id": "hydration-failure",
+          "title": "Unable to maintain hydration or oral treatment",
+          "urgentFeatures": [
+            "Unable to swallow liquids or required medication.",
+            "Persistent vomiting or inability to retain fluids.",
+            "Markedly reduced urine output or clinical dehydration."
+          ],
+          "implications": [
+            "Community oral treatment may be unsafe; reassess hydration and disposition."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine the patient as a whole before concentrating on the tonsils. Establish physiological stability, airway safety, hydration and whether findings are symmetrical and uncomplicated.",
+      "items": [
+        {
+          "id": "general-observations",
+          "title": "General assessment and observations",
+          "howToTest": [
+            "Assess overall appearance, distress and ability to communicate normally.",
+            "Observe respiratory effort, voice and whether the patient is managing secretions.",
+            "Record temperature, heart rate, respiratory rate, blood pressure and oxygen saturation where clinically indicated.",
+            "Assess ability to drink."
+          ],
+          "normal": [
+            "Breathing comfortably without stridor.",
+            "Speaking normally and managing secretions.",
+            "Able to drink.",
+            "Physiologically stable."
+          ],
+          "abnormal": [
+            "Respiratory distress or stridor.",
+            "Drooling or markedly altered voice.",
+            "Unable to tolerate oral fluids.",
+            "Physiological instability."
+          ],
+          "implications": [
+            "Airway, swallowing or physiological abnormalities take priority over tonsillar findings or use of a sore-throat scoring tool."
+          ]
+        },
+        {
+          "id": "oropharynx",
+          "title": "Oral cavity and oropharynx",
+          "howToTest": [
+            "Inspect the oral cavity and pharynx with adequate illumination.",
+            "Assess tonsillar size, symmetry, erythema and exudate.",
+            "Inspect the soft palate and peri-tonsillar tissues and assess uvular position.",
+            "Look for ulceration, vesicles, petechiae, candidiasis or another atypical mucosal appearance."
+          ],
+          "normal": [
+            "Symmetrical tonsillar inflammation.",
+            "No focal peri-tonsillar bulge.",
+            "Midline uvula.",
+            "No significant trismus."
+          ],
+          "abnormal": [
+            "Marked unilateral tonsillar or soft-palate swelling.",
+            "Peri-tonsillar bulging or uvular displacement.",
+            "Extensive ulceration, necrosis or atypical membrane.",
+            "Significant asymmetry unexplained by an acute symmetrical infection."
+          ],
+          "implications": [
+            "Unilateral peri-tonsillar findings increase concern for quinsy.",
+            "Atypical mucosal findings should prompt consideration of another diagnosis."
+          ]
+        },
+        {
+          "id": "neck-and-nodes",
+          "title": "Neck and lymph nodes",
+          "howToTest": [
+            "Inspect and palpate for cervical lymphadenopathy, unilateral swelling and tenderness.",
+            "Assess anterior and posterior cervical nodes where relevant.",
+            "Assess neck movement when deep infection is a concern."
+          ],
+          "normal": [
+            "Mild tender cervical lymphadenopathy may accompany uncomplicated infection."
+          ],
+          "abnormal": [
+            "Marked unilateral neck swelling.",
+            "Significant posterior or generalised lymphadenopathy.",
+            "Painful restriction of neck movement.",
+            "Persistent or unexplained focal neck mass."
+          ],
+          "implications": [
+            "Posterior or generalised lymphadenopathy may support infectious mononucleosis in the appropriate context.",
+            "Neck swelling or stiffness with severe throat symptoms raises concern for deep infection."
+          ]
+        },
+        {
+          "id": "hydration",
+          "title": "Hydration",
+          "howToTest": [
+            "Assess oral intake, urine output and clinical hydration.",
+            "Assess peripheral perfusion and haemodynamic status where indicated."
+          ],
+          "normal": [
+            "Drinking adequately with normal or near-normal urine output."
+          ],
+          "abnormal": [
+            "Unable to drink, markedly reduced urine output or evidence of significant dehydration."
+          ],
+          "implications": [
+            "Hydration status may determine disposition even when the throat infection itself appears uncomplicated."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clinical-decision-support",
+      "title": "Clinical decision support",
+      "type": "prompt-list",
+      "intro": "Use an existing sore-throat scoring tool after serious pathology and important alternative diagnoses have been considered.",
+      "items": [
+        {
+          "id": "scoring-tools",
+          "title": "Antimicrobial decision support",
+          "mustConfirmOrExclude": [
+            "Use @feverpain or @centor-criteria where appropriate.",
+            "Interpret the result alongside illness severity, comorbidity and suitability for community management."
+          ],
+          "importantLimitation": "These tools support antimicrobial decision-making; they do not diagnose bacterial infection and do not determine disposition in an acutely unwell patient."
+        }
+      ]
+    },
+    {
+      "id": "differentials-investigations",
+      "title": "Differential diagnoses and investigations",
+      "type": "common-findings",
+      "intro": "Consider alternative diagnoses when the clinical pattern is atypical or the illness is not following the expected course.",
+      "items": [
+        {
+          "id": "differential-diagnoses",
+          "title": "Important alternatives",
+          "commonFindings": [
+            "Viral pharyngitis or tonsillitis.",
+            "Streptococcal pharyngitis or tonsillitis.",
+            "Infectious mononucleosis.",
+            "Scarlet fever.",
+            "Peritonsillar cellulitis or abscess.",
+            "Supraglottitis.",
+            "Deep neck-space infection.",
+            "Dental or odontogenic infection.",
+            "Oral candidiasis or ulcerative disease."
+          ]
+        },
+        {
+          "id": "investigations",
+          "title": "Investigations",
+          "mustConfirmOrExclude": [
+            "Routine investigations are not required for most uncomplicated acute sore throats.",
+            "Consider testing for infectious mononucleosis when the clinical picture is compatible and the result would change advice or management.",
+            "Do not routinely use throat swabs solely to decide whether an otherwise uncomplicated sore throat requires antibiotics unless a local or public-health pathway requires testing.",
+            "Consider blood tests where there is significant systemic illness, dehydration, immunosuppression, suspected complication or prolonged or atypical illness."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Management should reflect illness severity, likely benefit from antibiotics, ability to maintain hydration and treatment, and access to reassessment.",
+      "items": [
+        {
+          "id": "uncomplicated-management",
+          "title": "Uncomplicated acute sore throat",
+          "mustConfirmOrExclude": [
+            "Explain that most uncomplicated acute sore throats improve within about 1 week.",
+            "Encourage adequate oral fluids.",
+            "Treat pain and fever appropriately.",
+            "Use @feverpain or @centor-criteria to guide antimicrobial strategy where appropriate.",
+            "Avoid antibiotics when expected benefit is low.",
+            "If using a back-up antibiotic, give clear instructions for when to start it."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "Airway is safe and the patient is physiologically stable.",
+            "No red-flag complication or serious alternative diagnosis is suspected.",
+            "Oral fluids and medication can be tolerated.",
+            "Pain can be managed adequately.",
+            "The patient or carer understands the plan and can access reassessment."
+          ]
+        },
+        {
+          "id": "escalation",
+          "title": "Escalate or refer",
+          "urgentFeatures": [
+            "Any feature in the red flags and complications section.",
+            "Rapid or significant clinical deterioration.",
+            "Significant immunosuppression or comorbidity that makes community management unsafe."
+          ],
+          "implications": [
+            "Use the appropriate emergency, ENT, acute medical or local referral pathway according to the suspected diagnosis and severity."
+          ],
+          "importantLimitation": "{{image:quinsy}}\n{{attachment:quinsy}}"
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Safety-netting",
+      "type": "safety-netting",
+      "intro": "Give clear advice about expected recovery and when urgent reassessment is required.",
+      "items": [
+        {
+          "id": "reassessment-advice",
+          "title": "Advise urgent reassessment if",
+          "safetyNetting": [
+            "Breathing becomes difficult or noisy.",
+            "Swallowing deteriorates or the patient cannot swallow saliva or fluids.",
+            "Drooling, markedly altered voice or restricted mouth opening develops.",
+            "Throat pain becomes markedly unilateral or rapidly more severe.",
+            "Neck swelling or stiffness develops.",
+            "The patient becomes systemically very unwell.",
+            "Hydration or urine output deteriorates.",
+            "Symptoms worsen significantly or are not beginning to improve within about 1 week."
+          ]
+        },
+        {
+          "id": "backup-antibiotic-advice",
+          "title": "Back-up antibiotic advice",
+          "safetyNetting": [
+            "Where a back-up antibiotic has been provided, give clear instructions about when to start it and when further assessment is required."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-10",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-10",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  },
+  "categoryIds": [
+    "uncategorised"
+  ],
+  "status": "active",
+  "attachments": [
+    {
+      "id": "quinsy",
+      "title": "Quinsy",
+      "label": "Quincy",
+      "caption": "Tonsilitis",
+      "source": null,
+      "referenceId": null,
+      "replacementGovernance": null,
+      "path": "attachments/assessments/acute-sore-throat-assessment/quinsy-v1.0.0.png",
+      "type": "image",
+      "version": "1.0.0",
+      "sha256": "d80adc419eed351a6d05a3800c82b229ce351cfbf99f3a199121b7e9b5d02264",
+      "mediaType": "image/png",
+      "originalFileName": "quincy.png",
+      "fileSize": 1454370,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-09-09T17:56:59.266Z",
+      "uploadedBy": "Sean McGrory — tAPUC"
+    }
+  ],
+  "prominentResources": []
+}
