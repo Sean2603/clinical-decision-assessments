@@ -4,12 +4,12 @@
   "updatedAt": "2026-09-11T15:45:30Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "file": "app_config/feature-availability.json",
     "schema": "schema/app-feature-availability-schema.json",
-    "sha256": "3cb61de5fb0e7613f2dc9ec15c72e35e710c3f67d1adc79fafd2c9854fa746b6",
+    "sha256": "4beff3769842cd539363e6d892945eda0294f30d8518d9a44c82836f83b62702",
     "schemaSha256": "4ed794c959bec0d653858145ea291c879aad0008d5ab4d19476be0f6598320cb",
-    "sizeBytes": 711,
+    "sizeBytes": 715,
     "schemaSizeBytes": 1348
   },
   "minimumAppVersion": "0.63.7",
