@@ -444,6 +444,11 @@
       "referenceId": "NICE-NG91",
       "usedBy": [
         {
+          "type": "assessment",
+          "id": "acute-otitis-media-assessment",
+          "title": "Acute Otitis Media Assessment"
+        },
+        {
           "type": "prescribing",
           "id": "otitis-media-acute",
           "title": "Otitis Media (Acute)"
