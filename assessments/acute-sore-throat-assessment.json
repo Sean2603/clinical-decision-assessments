@@ -210,6 +210,9 @@
           "implications": [
             "Unilateral peri-tonsillar findings increase concern for quinsy.",
             "Atypical mucosal findings should prompt consideration of another diagnosis."
+          ],
+          "urgentFeatures": [
+            "{{image:quincy}}"
           ]
         },
         {
@@ -342,8 +345,7 @@
           ],
           "implications": [
             "Use the appropriate emergency, ENT, acute medical or local referral pathway according to the suspected diagnosis and severity."
-          ],
-          "importantLimitation": "{{image:quinsy}}\n{{attachment:quinsy}}"
+          ]
         }
       ]
     },
@@ -381,9 +383,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-09-10",
+    "reviewedOn": "2026-09-11",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-09-10",
+    "nextReviewDue": "2028-09-11",
     "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "categoryIds": [
@@ -392,14 +394,14 @@
   "status": "active",
   "attachments": [
     {
-      "id": "quinsy",
-      "title": "Quinsy",
-      "label": "Quincy",
-      "caption": "Tonsilitis",
+      "id": "quincy",
+      "title": "Tonsillitis",
+      "label": "__inline_only__",
+      "caption": null,
       "source": null,
       "referenceId": null,
       "replacementGovernance": null,
-      "path": "attachments/assessments/acute-sore-throat-assessment/quinsy-v1.0.0.png",
+      "path": "attachments/assessments/acute-sore-throat-assessment/quincy-v1.0.0.png",
       "type": "image",
       "version": "1.0.0",
       "sha256": "d80adc419eed351a6d05a3800c82b229ce351cfbf99f3a199121b7e9b5d02264",
@@ -408,7 +410,7 @@
       "fileSize": 1454370,
       "width": null,
       "height": null,
-      "uploadedOn": "2026-09-09T17:56:59.266Z",
+      "uploadedOn": "2026-09-11T15:37:03.137Z",
       "uploadedBy": "Sean McGrory — tAPUC"
     }
   ],

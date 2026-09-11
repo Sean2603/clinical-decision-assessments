@@ -1,0 +1,314 @@
+{
+  "id": "acute-otitis-media-assessment",
+  "title": "Acute Otitis Media Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing suspected acute otitis media, distinguishing uncomplicated middle-ear infection from important alternatives and complications, and supporting proportionate treatment, referral and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Confirm that symptoms and otoscopy are compatible with acute otitis media, assess pain and systemic illness, and actively exclude mastoid or intracranial complications.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Acute otitis media with compatible symptoms and middle-ear inflammation.",
+            "Mastoiditis or another spreading local complication.",
+            "Meningitis, intracranial infection or facial nerve involvement.",
+            "Otitis externa, referred otalgia or another alternative diagnosis.",
+            "Tympanic membrane perforation or otorrhoea.",
+            "Severe systemic illness, dehydration or inability to take oral treatment.",
+            "Age, comorbidity or immunosuppression that increases complication risk."
+          ],
+          "importantLimitation": "Ear pain alone does not diagnose acute otitis media. Diagnosis should be based on the clinical picture together with otoscopic evidence of middle-ear inflammation."
+        }
+      ]
+    },
+    {
+      "id": "focused-history",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Define the time course, severity and associated upper-respiratory symptoms, then identify features suggesting a complication or alternative cause.",
+      "items": [
+        {
+          "id": "presenting-illness",
+          "title": "Presenting illness",
+          "mustConfirmOrExclude": [
+            "Onset, duration and progression of ear pain.",
+            "Unilateral or bilateral symptoms.",
+            "Fever, irritability or systemic upset.",
+            "Hearing change, blocked sensation or tinnitus.",
+            "Otorrhoea or sudden change in pain suggesting perforation.",
+            "Recent upper-respiratory infection.",
+            "Previous recurrent otitis media, perforation, grommets or ear surgery."
+          ]
+        },
+        {
+          "id": "complication-features",
+          "title": "Features suggesting complication",
+          "mustConfirmOrExclude": [
+            "Post-auricular pain, swelling or redness.",
+            "Pinna protrusion or increasing mastoid tenderness.",
+            "Severe headache, neck stiffness, photophobia, vomiting or altered mental state.",
+            "New facial weakness.",
+            "Persistent or rapidly worsening symptoms despite treatment."
+          ]
+        },
+        {
+          "id": "background-risk",
+          "title": "Background risk",
+          "mustConfirmOrExclude": [
+            "Very young age or significant comorbidity.",
+            "Immunosuppression or craniofacial abnormality.",
+            "Cochlear implant or other relevant ear device.",
+            "Known drug allergies and recent antimicrobial exposure.",
+            "Ability to maintain fluids, analgesia and follow-up."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red-flags-complications",
+      "title": "Red flags and complications",
+      "type": "prompt-list",
+      "intro": "Escalate when findings suggest infection extending beyond uncomplicated middle-ear disease.",
+      "items": [
+        {
+          "id": "mastoiditis",
+          "title": "Mastoiditis",
+          "urgentFeatures": [
+            "Post-auricular swelling, erythema or marked mastoid tenderness.",
+            "Pinna displaced outwards or downwards.",
+            "Persistent fever or systemic illness with worsening otalgia."
+          ],
+          "implications": [
+            "Urgent same-day ENT or hospital assessment is required."
+          ]
+        },
+        {
+          "id": "intracranial-neurological",
+          "title": "Intracranial or neurological complication",
+          "urgentFeatures": [
+            "Severe headache, neck stiffness, photophobia or repeated vomiting.",
+            "Altered consciousness, seizure or focal neurological deficit.",
+            "New facial nerve weakness."
+          ],
+          "implications": [
+            "Urgent emergency assessment is required."
+          ]
+        },
+        {
+          "id": "systemic-illness",
+          "title": "Severe systemic illness",
+          "urgentFeatures": [
+            "Physiological instability, marked lethargy or clinical concern for sepsis.",
+            "Unable to maintain hydration or oral treatment."
+          ],
+          "implications": [
+            "Use the appropriate acute illness or paediatric emergency pathway."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine both ears and the surrounding structures. Otoscopy should be interpreted alongside symptoms and the overall clinical condition.",
+      "items": [
+        {
+          "id": "general-assessment",
+          "title": "General assessment",
+          "howToTest": [
+            "Assess overall appearance, hydration and systemic illness.",
+            "Record observations where clinically indicated.",
+            "Assess pain and ability to drink."
+          ],
+          "normal": [
+            "Clinically stable, hydrated and able to take oral treatment."
+          ],
+          "abnormal": [
+            "Marked systemic illness, dehydration or physiological instability."
+          ],
+          "implications": [
+            "Systemic condition may determine disposition even when local ear findings appear uncomplicated."
+          ]
+        },
+        {
+          "id": "otoscopy",
+          "title": "Otoscopy",
+          "howToTest": [
+            "Inspect the external canal and tympanic membrane with adequate illumination.",
+            "Assess membrane colour, position, translucency and integrity.",
+            "Look for bulging, loss of landmarks, middle-ear effusion, perforation or discharge.",
+            "Compare both ears."
+          ],
+          "normal": [
+            "Normal translucent tympanic membrane without bulging or middle-ear effusion.\n",
+            "{{image:normal-tm}} "
+          ],
+          "abnormal": [
+            "Bulging or inflamed tympanic membrane, loss of normal landmarks, middle-ear effusion, perforation or otorrhoea.",
+            "{{image:acute-otitis-media}}"
+          ],
+          "implications": [
+            "Compatible otoscopic abnormalities support acute otitis media; canal-predominant inflammation suggests otitis externa."
+          ]
+        },
+        {
+          "id": "mastoid-surrounding-ear",
+          "title": "Mastoid and surrounding ear",
+          "howToTest": [
+            "Inspect and palpate the mastoid and post-auricular area.",
+            "Assess pinna position and surrounding swelling."
+          ],
+          "normal": [
+            "No post-auricular swelling, erythema or marked mastoid tenderness."
+          ],
+          "abnormal": [
+            "Post-auricular swelling, erythema, marked tenderness or displaced pinna."
+          ],
+          "implications": [
+            "Consider mastoiditis and urgent ENT assessment."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "differentials",
+      "title": "Differential diagnoses",
+      "type": "common-findings",
+      "intro": "Consider alternatives when otoscopy or symptom pattern is not typical for middle-ear infection.",
+      "items": [
+        {
+          "id": "important-alternatives",
+          "title": "Important alternatives",
+          "commonFindings": [
+            "Otitis externa.",
+            "Otitis media with effusion without acute infection.",
+            "Viral upper-respiratory infection with referred ear discomfort.",
+            "Dental or temporomandibular pain.",
+            "Pharyngitis or tonsillitis with referred otalgia.",
+            "Foreign body or trauma."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Most uncomplicated acute otitis media improves without immediate antibiotics. Base treatment on age, severity, complication risk and ability to access reassessment.",
+      "items": [
+        {
+          "id": "uncomplicated-management",
+          "title": "Uncomplicated acute otitis media",
+          "mustConfirmOrExclude": [
+            "Provide appropriate analgesia and hydration advice.",
+            "Use the current antimicrobial prescribing pathway where antibiotics are indicated.",
+            "Give clear advice about expected improvement and when reassessment is required."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No mastoid, neurological or systemic red flags are present.",
+            "Pain and hydration can be managed.",
+            "The patient or carer understands the plan and can access reassessment."
+          ]
+        },
+        {
+          "id": "escalation",
+          "title": "Escalate or refer",
+          "urgentFeatures": [
+            "Any mastoid, intracranial, facial nerve or severe systemic feature.",
+            "Rapid deterioration or inability to maintain oral treatment."
+          ],
+          "implications": [
+            "Use the appropriate ENT, paediatric or emergency pathway."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Safety-netting",
+      "type": "safety-netting",
+      "intro": "Give clear deterioration advice and expected recovery guidance.",
+      "items": [
+        {
+          "id": "reassessment-advice",
+          "title": "Advise reassessment if",
+          "safetyNetting": [
+            "Symptoms worsen rapidly or significantly.",
+            "Post-auricular swelling, redness or increasing mastoid pain develops.",
+            "Severe headache, neck stiffness, vomiting, altered behaviour or facial weakness develops.",
+            "Hydration deteriorates or the patient becomes systemically very unwell.",
+            "Symptoms are not improving as expected."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG91"
+  ],
+  "clinicalValidation": {
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-11",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-11",
+    "reviewNotes": "Review completed. No additional review comments recorded."
+  },
+  "categoryIds": [
+    "uncategorised"
+  ],
+  "status": "active",
+  "attachments": [
+    {
+      "id": "normal-tm",
+      "title": "Normal TM",
+      "label": "__inline_only__",
+      "caption": "Normal TM",
+      "source": null,
+      "referenceId": null,
+      "replacementGovernance": null,
+      "path": "attachments/assessments/acute-otitis-media-assessment/normal-tm-v1.0.0.jpg",
+      "type": "image",
+      "version": "1.0.0",
+      "sha256": "e8448f16b196cc1b31d24a38138d19393032aed1742237b649730501565f1da3",
+      "mediaType": "image/jpeg",
+      "originalFileName": "Normal TM.jpg",
+      "fileSize": 214400,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-09-11T15:42:14.005Z",
+      "uploadedBy": "Sean McGrory — tAPUC"
+    },
+    {
+      "id": "acute-otitis-media",
+      "title": "Acute Otitis Media",
+      "label": "__inline_only__",
+      "caption": "Acute Otitis Media",
+      "source": null,
+      "referenceId": null,
+      "replacementGovernance": null,
+      "path": "attachments/assessments/acute-otitis-media-assessment/acute-otitis-media-v1.0.0.jpg",
+      "type": "image",
+      "version": "1.0.0",
+      "sha256": "f60aea5087543a7d488b152935be57f4ed3c2a33fd4671c845ff4b49dbc0fbae",
+      "mediaType": "image/jpeg",
+      "originalFileName": "Acute_Otitis_Media.jpg",
+      "fileSize": 259975,
+      "width": null,
+      "height": null,
+      "uploadedOn": "2026-09-11T15:42:25.275Z",
+      "uploadedBy": "Sean McGrory — tAPUC"
+    }
+  ],
+  "prominentResources": []
+}
