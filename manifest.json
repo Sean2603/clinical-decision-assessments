@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "contentVersion": "0.0.31",
-  "updatedAt": "2026-09-11T11:53:10Z",
+  "updatedAt": "2026-09-11T15:45:30Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.2",
@@ -12,8 +12,8 @@
     "sizeBytes": 715,
     "schemaSizeBytes": 1348
   },
-  "minimumAppVersion": "0.63.6",
-  "downloadSizeBytes": 6206477,
+  "minimumAppVersion": "0.63.7",
+  "downloadSizeBytes": 6693341,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -78,14 +78,29 @@
       ]
     },
     {
+      "id": "acute-otitis-media-assessment",
+      "title": "Acute Otitis Media Assessment",
+      "version": "0.1.0",
+      "file": "assessments/acute-otitis-media-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "6919d9e8b7e42adfff2de68a57712bb0f23ad03e07efc4d3ed0ad90003d550cd",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 12489,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 474375,
+      "categoryIds": [
+        "uncategorised"
+      ]
+    },
+    {
       "id": "acute-sore-throat-assessment",
       "title": "Acute Sore Throat Assessment",
       "version": "0.1.0",
       "file": "assessments/acute-sore-throat-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "86b3cd902cd3517eac9ec00c1ee172c59c5405b714b0143f32d1b2b7e1212353",
+      "sha256": "516d79a45d90b4e2225ea25fd72c392ae6f7453791ec71d1b1ecf1c3b44ff7b4",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 18715,
+      "sizeBytes": 18719,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 1454370,
       "categoryIds": [

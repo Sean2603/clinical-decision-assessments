@@ -1,18 +1,18 @@
-# Acute Sore Throat Assessment — Publication history
+# Acute Otitis Media Assessment — Publication history
 
 <!-- cdm-publication:0.1.0 -->
 ## v0.1.0 — 2026-09-11
 
-- **Content ID:** `acute-sore-throat-assessment`
+- **Content ID:** `acute-otitis-media-assessment`
 - **Content type:** assessment
 - **Previous published version:** None
 - **Published version:** 0.1.0
-- **Generated:** 2026-09-11T15:39:45.603Z
+- **Generated:** 2026-09-11T15:45:08.128Z
 
 ## Change control
 
-- **Summary:** Added: attachments[quincy]; Evidence reference changed: references item 0; Safety content changed: sections[focused-examination] › items[oropharynx] › urgent Features.
-- **Risk:** emergency-safety
+- **Summary:** Added: attachments[acute-otitis-media]; Added: attachments[normal-tm]; Added: sections[focused-examination] › items[otoscopy] › abnormal item 1; plus 2 other changes.
+- **Risk:** clinical-wording
 - **Selected version increase:** minor
 - **Recommended version increase:** minor
 - **Changed fields:** 10
