@@ -1,27 +1,33 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schema/prescribing-schema.json",
-  "title": "Remote condition-based prescribing pathway definition",
+  "$id": "https://clinical-decision-assessments/schema/procedure-schema.json",
+  "title": "Clinical skill / procedure",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "id",
     "title",
     "version",
+    "minimumAppVersion",
     "status",
-    "category",
     "summary",
-    "clinicalNotes",
-    "cautions",
-    "regimens",
-    "specialConsiderations",
+    "category",
+    "indications",
+    "contraindications",
+    "precautions",
+    "equipment",
+    "preparation",
+    "steps",
+    "complications",
+    "troubleshooting",
+    "aftercare",
+    "documentation",
+    "escalation",
+    "competency",
     "references",
-    "clinicalValidation",
-    "aliases",
-    "system",
-    "updatedOn",
-    "changeSummary",
-    "effectiveFrom"
+    "prominentResources",
+    "attachments",
+    "clinicalValidation"
   ],
   "properties": {
     "id": {
@@ -32,208 +38,173 @@
       "type": "string",
       "minLength": 1
     },
-    "aliases": {
-      "$ref": "#/$defs/stringList"
-    },
     "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "minimumAppVersion": {
       "type": "string",
       "pattern": "^\\d+\\.\\d+\\.\\d+$"
     },
     "status": {
       "enum": [
+        "draft",
         "active",
-        "withdrawn",
-        "superseded"
+        "withdrawn"
       ]
+    },
+    "summary": {
+      "type": "string"
     },
     "category": {
       "type": "string",
       "minLength": 1
     },
-    "system": {
-      "type": "string",
-      "minLength": 1
-    },
-    "summary": {
-      "type": "string"
-    },
-    "updatedOn": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "date"
-    },
-    "changeSummary": {
-      "type": [
-        "string",
-        "null"
-      ]
-    },
-    "effectiveFrom": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "format": "date"
-    },
-    "clinicalNotes": {
-      "$ref": "#/$defs/stringList"
-    },
-    "cautions": {
-      "$ref": "#/$defs/stringList"
-    },
-    "regimens": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "$ref": "#/$defs/regimen"
-      }
-    },
-    "specialConsiderations": {
-      "$ref": "#/$defs/sectionList"
-    },
-    "references": {
-      "allOf": [
-        {
-          "$ref": "#/$defs/stringList"
-        },
-        {
-          "uniqueItems": true
-        }
-      ]
-    },
-    "clinicalValidation": {
-      "$ref": "#/$defs/clinicalValidation"
-    },
-    "attachments": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/clinicalAttachment"
-      },
-      "default": []
-    },
-    "prominentResources": {
-      "type": "array",
-      "items": {
-        "$ref": "#/$defs/prominentResource"
-      },
-      "default": []
-    }
-  },
-  "$defs": {
-    "stringList": {
+    "indications": {
       "type": "array",
       "items": {
         "type": "string",
         "minLength": 1
       }
     },
-    "medicationComponent": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "medicationId",
-        "displayName",
-        "dose",
-        "route",
-        "frequency",
-        "duration"
-      ],
-      "properties": {
-        "medicationId": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "pattern": "^[a-z0-9_-]+$"
-        },
-        "displayName": {
-          "type": "string",
-          "minLength": 1
-        },
-        "dose": {
-          "type": "string",
-          "minLength": 1
-        },
-        "route": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "frequency": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "duration": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
-    },
-    "regimen": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "rank",
-        "label",
-        "components",
-        "restrictions",
-        "notes"
-      ],
-      "properties": {
-        "rank": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "label": {
-          "type": "string",
-          "minLength": 1
-        },
-        "relationship": {
-          "enum": [
-            "AND",
-            "OR"
-          ],
-          "default": "AND"
-        },
-        "components": {
-          "type": "array",
-          "minItems": 1,
-          "items": {
-            "$ref": "#/$defs/medicationComponent"
-          }
-        },
-        "restrictions": {
-          "$ref": "#/$defs/stringList"
-        },
-        "notes": {
-          "$ref": "#/$defs/stringList"
-        }
-      }
-    },
-    "sectionList": {
+    "contraindications": {
       "type": "array",
       "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "items"
-        ],
-        "properties": {
-          "title": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "precautions": {
+      "$ref": "#/$defs/stringList"
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "preparation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/step"
+      }
+    },
+    "complications": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "troubleshooting": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "aftercare": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "documentation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "escalation": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "competency": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "references": {
+      "allOf": [
+        {
+          "type": "array",
+          "items": {
             "type": "string",
             "minLength": 1
-          },
-          "items": {
-            "$ref": "#/$defs/stringList"
           }
+        },
+        {
+          "uniqueItems": true
+        }
+      ]
+    },
+    "prominentResources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/prominentResource"
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/clinicalAttachment"
+      }
+    },
+    "clinicalValidation": {
+      "$ref": "#/$defs/clinicalValidation"
+    }
+  },
+  "$defs": {
+    "step": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "instruction",
+        "cautions",
+        "tips",
+        "imageAttachmentId"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$"
+        },
+        "title": {
+          "type": "string"
+        },
+        "instruction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cautions": {
+          "$ref": "#/$defs/stringList"
+        },
+        "tips": {
+          "$ref": "#/$defs/stringList"
+        },
+        "imageAttachmentId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
         }
       }
     },
@@ -479,7 +450,6 @@
           "minLength": 1
         },
         "sourceType": {
-          "type": "string",
           "enum": [
             "url",
             "attachment"
