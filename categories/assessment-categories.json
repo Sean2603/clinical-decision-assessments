@@ -8,6 +8,12 @@
       "order": 10
     },
     {
+      "id": "ent",
+      "title": "ENT",
+      "description": "Ears, nose and throat",
+      "order": 20
+    },
+    {
       "id": "uncategorised",
       "title": "Uncategorised",
       "description": "Assessment guides not yet assigned to a clinical subsection.",
