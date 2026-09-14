@@ -19,6 +19,7 @@ STABLE_ID_RE = re.compile(r"(?<![A-Za-z0-9_])@([a-z0-9][a-z0-9_-]*)")
 COLLECTIONS = {
     "assessment": {"directory":ROOT/"assessments","schema":ROOT/"schema"/"assessment-schema.json","versionField":"version","allowEmpty":True},
     "guideline": {"directory":ROOT/"guidelines","schema":ROOT/"schema"/"guideline-schema.json","versionField":"contentVersion","allowEmpty":True},
+    "procedure": {"directory":ROOT/"procedures","schema":ROOT/"schema"/"procedure-schema.json","versionField":"version","allowEmpty":True},
     "scoring-tool": {"directory":ROOT/"scoring_tools","schema":ROOT/"schema"/"scoring-tool-schema.json","versionField":"version","allowEmpty":True},
     "blood-panel": {"directory":ROOT/"blood_panels","schema":ROOT/"schema"/"blood-panel-schema.json","versionField":"version","allowEmpty":True},
     "medication": {"directory":ROOT/"medications","schema":ROOT/"schema"/"medication-schema.json","versionField":"version","allowEmpty":True},
@@ -29,7 +30,7 @@ COLLECTIONS = {
 FEATURE_AVAILABILITY_PATH = ROOT / "app_config" / "feature-availability.json"
 FEATURE_AVAILABILITY_SCHEMA_PATH = ROOT / "schema" / "app-feature-availability-schema.json"
 KNOWN_APP_FEATURE_IDS = {
-    "assessments", "bloods", "scoring-tools", "guidelines", "medications",
+    "assessments", "bloods", "procedures", "scoring-tools", "guidelines", "medications",
     "prescribing", "cpd-hub", "notes", "todo",
 }
 APP_FEATURE_STATES = {"enabled", "hidden"}
@@ -61,7 +62,9 @@ def validate_app_feature_availability(errors: list[str]) -> dict | None:
         if isinstance(state, str) and state not in APP_FEATURE_STATES:
             errors.append(f"{FEATURE_AVAILABILITY_PATH}:features[{index}]: invalid state {state}.")
     missing = sorted(KNOWN_APP_FEATURE_IDS - seen)
-    if missing:
+    legacy_feature_set = KNOWN_APP_FEATURE_IDS - {"procedures"}
+    legacy_missing_procedures = missing == ["procedures"] and seen == legacy_feature_set
+    if missing and not legacy_missing_procedures:
         errors.append(f"{FEATURE_AVAILABILITY_PATH}: missing required feature ids: {', '.join(missing)}.")
     extra = sorted(seen - KNOWN_APP_FEATURE_IDS)
     if extra:
@@ -69,7 +72,7 @@ def validate_app_feature_availability(errors: list[str]) -> dict | None:
     return document
 
 IMAGE_KIND_FOLDERS = {
-    "assessment":"assessments","guideline":"guidelines","scoring-tool":"scoring_tools",
+    "assessment":"assessments","guideline":"guidelines","procedure":"procedures","scoring-tool":"scoring_tools",
     "blood-panel":"blood_panels","medication":"medications","prescribing":"prescribing","shared-learning":"shared_learning",
     "clinical-notice":"clinical_notices",
 }
@@ -432,7 +435,7 @@ def main() -> int:
     if args.base_ref:
         changed = changed_files(args.base_ref)
         folder_to_kind = {
-            "assessments":"assessment","guidelines":"guideline","scoring_tools":"scoring-tool",
+            "assessments":"assessment","guidelines":"guideline","procedures":"procedure","scoring_tools":"scoring-tool",
             "blood_panels":"blood-panel","medications":"medication","prescribing":"prescribing",
         }
         for relative_path in sorted(changed):
@@ -470,6 +473,7 @@ def main() -> int:
         "Clinical content validation passed: "
         f"{len(documents_by_kind['assessment'])} assessments, "
         f"{len(documents_by_kind['guideline'])} guidelines, "
+        f"{len(documents_by_kind['procedure'])} procedures, "
         f"{len(documents_by_kind['scoring-tool'])} scoring tools, "
         f"{len(documents_by_kind['blood-panel'])} blood panels, "
         f"{len(documents_by_kind['medication'])} medications, "

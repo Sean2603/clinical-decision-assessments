@@ -473,32 +473,28 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "container",
-        "lidColour",
-        "additive",
-        "sample",
+        "specimenTypeId",
         "quantity",
         "notes"
       ],
       "properties": {
-        "container": {
+        "specimenTypeId": {
           "type": "string",
           "enum": [
-            "vacutainer",
-            "syringe",
-            "capillary",
+            "purple",
+            "lilac",
+            "yellow",
+            "gold",
+            "blue",
+            "green",
+            "grey",
+            "pink",
+            "red",
+            "orange",
+            "black",
+            "white",
             "other"
           ]
-        },
-        "lidColour": {
-          "type": "string",
-          "minLength": 1
-        },
-        "additive": {
-          "type": "string"
-        },
-        "sample": {
-          "type": "string"
         },
         "quantity": {
           "type": "integer",

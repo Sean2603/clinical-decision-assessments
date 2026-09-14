@@ -29,7 +29,7 @@
     "features": {
       "type": "array",
       "minItems": 9,
-      "maxItems": 9,
+      "maxItems": 10,
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -42,6 +42,7 @@
             "enum": [
               "assessments",
               "bloods",
+              "procedures",
               "scoring-tools",
               "guidelines",
               "medications",
