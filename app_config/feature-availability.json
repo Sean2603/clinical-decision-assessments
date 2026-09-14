@@ -1,7 +1,7 @@
 {
   "id": "prod-feature-availability",
   "title": "App Feature Availability",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "targetEnvironment": "prod",
   "features": [
     {
@@ -13,12 +13,16 @@
       "state": "enabled"
     },
     {
+      "id": "procedures",
+      "state": "enabled"
+    },
+    {
       "id": "scoring-tools",
       "state": "enabled"
     },
     {
       "id": "guidelines",
-      "state": "hidden"
+      "state": "enabled"
     },
     {
       "id": "medications",

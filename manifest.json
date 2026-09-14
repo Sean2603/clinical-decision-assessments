@@ -1,19 +1,19 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.33",
-  "updatedAt": "2026-09-14T12:45:33Z",
+  "contentVersion": "0.0.34",
+  "updatedAt": "2026-09-14T12:54:41Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
-    "version": "1.0.2",
+    "version": "1.0.3",
     "file": "app_config/feature-availability.json",
     "schema": "schema/app-feature-availability-schema.json",
-    "sha256": "4beff3769842cd539363e6d892945eda0294f30d8518d9a44c82836f83b62702",
+    "sha256": "c06447423a9ded744ce0c1d47465afab6940e95c2ec3ca17e418499941108ed6",
     "schemaSha256": "463dc338dce337bc0e87ce6325c4be9001b92041304320cef1c07b39b94f5246",
-    "sizeBytes": 715,
+    "sizeBytes": 780,
     "schemaSizeBytes": 1377
   },
   "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6694424,
+  "downloadSizeBytes": 6694489,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
