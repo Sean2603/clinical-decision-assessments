@@ -1,5 +1,41 @@
 # Troponin — Publication history
 
+<!-- cdm-publication:0.2.2 -->
+## v0.2.2 — 2026-09-14
+
+- **Content ID:** `troponin`
+- **Content type:** blood-panel
+- **Previous published version:** 0.2.0
+- **Published version:** 0.2.2
+- **Generated:** 2026-09-14T15:50:19.290Z
+
+## Change control
+
+- **Summary:** Added: Specimens — Gold-top blood bottle.
+- **Risk:** clarification
+- **Selected version increase:** patch
+- **Recommended version increase:** patch
+- **Changed fields:** 3
+- **Override reason:** Not recorded
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-09-14T12:00:00.000Z
+- **Notes:** Review completed. No additional review comments recorded.
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.2.2 -->
+
+---
+
 <!-- cdm-publication:0.2.0 -->
 ## v0.2.0 — 2026-08-24
 

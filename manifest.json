@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.35",
-  "updatedAt": "2026-09-14T15:34:11Z",
+  "contentVersion": "0.0.36",
+  "updatedAt": "2026-09-14T15:50:37Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1377
   },
   "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6694588,
+  "downloadSizeBytes": 6694695,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -556,12 +556,12 @@
     {
       "id": "troponin",
       "title": "Troponin",
-      "version": "0.2.0",
+      "version": "0.2.2",
       "file": "blood_panels/troponin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "fd988b9469ebefef2f7156722cafc9058951cd02198ba7debc9b7b1185ea57d0",
+      "sha256": "f68a1cbdbfe4af90d5f02bf77ba5af4db78b957858e9781830832183111dd4b2",
       "schemaSha256": "490406cda900056b44218f58e5835145c3cc610dd5240287f8860d9bc66f24d0",
-      "sizeBytes": 4521,
+      "sizeBytes": 4628,
       "schemaSizeBytes": 15989,
       "attachmentsSizeBytes": 3100287
     },
