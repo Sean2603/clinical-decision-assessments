@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.34",
-  "updatedAt": "2026-09-14T12:54:41Z",
+  "contentVersion": "0.0.35",
+  "updatedAt": "2026-09-14T15:34:11Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1377
   },
   "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6694489,
+  "downloadSizeBytes": 6694588,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -27,9 +27,9 @@
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
-    "sha256": "43e11020d1f4934c14668493aa656fbdfcbb776ff4e6b1c20f87349882c9da5f",
+    "sha256": "540d1164e4084fcc27214c7b896ab5f441e7814e123fedfa42d0f0bd2927611b",
     "schemaSha256": "791d5893b2faffadefc2c5a6014d32552c3bb6f2d5cbffc378aa9ce72e9757c7",
-    "sizeBytes": 428,
+    "sizeBytes": 546,
     "schemaSizeBytes": 5212,
     "items": [
       {
@@ -37,6 +37,12 @@
         "title": "Frailty",
         "description": "Assessment of older adults with frailty syndromes, functional decline and medicines-related risk.",
         "order": 10
+      },
+      {
+        "id": "ent",
+        "title": "ENT",
+        "description": "Ears, nose and throat",
+        "order": 20
       },
       {
         "id": "uncategorised",
@@ -734,24 +740,24 @@
     {
       "id": "bites-animal",
       "title": "Bites - Animal",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "file": "prescribing/bites-animal.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "e847884379e2dad789019f1c24c9f7867d5c9042be12cccb78816c7307349710",
+      "sha256": "acc83227327589071ea41e8fc754a874c43843f1c1b5fa9fa93330c34175485e",
       "schemaSha256": "b853a711eb2e58b8c61cb043066c82cdbdabdecf15d051ef5a80fba25d2f204a",
-      "sizeBytes": 7307,
+      "sizeBytes": 7348,
       "schemaSizeBytes": 10806,
       "attachmentsSizeBytes": 226581
     },
     {
       "id": "bites-human",
       "title": "Bites - Human",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "file": "prescribing/bites-human.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "0f2c9f5ab50aa41c83a9f9e223a490c909a4254e9957d7981449eb4a54d1985b",
+      "sha256": "8ae689d7b2704b1d54644f590ae65b1b33335ecb67b5abc78f35e89dce07b60b",
       "schemaSha256": "b853a711eb2e58b8c61cb043066c82cdbdabdecf15d051ef5a80fba25d2f204a",
-      "sizeBytes": 6631,
+      "sizeBytes": 6689,
       "schemaSizeBytes": 10806,
       "attachmentsSizeBytes": 226581
     },
