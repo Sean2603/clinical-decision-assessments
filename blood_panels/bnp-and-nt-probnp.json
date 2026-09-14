@@ -2,7 +2,7 @@
   "id": "bnp-and-nt-probnp",
   "title": "BNP and NT-proBNP",
   "subtitle": "Heart-failure likelihood, confounders and referral thresholds",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Heart-failure likelihood, confounders and referral thresholds",
@@ -16,7 +16,7 @@
           "id": "400-ng-l",
           "name": "<400 ng/L",
           "unit": "",
-          "referenceRange": "Heart failure less likely in an untreated person",
+          "referenceRange": "NICE chronic-HF referral category remains <400 ng/L. RVH laboratory guidance separately states NT-proBNP <125 ng/L excludes heart failure as a cause of signs/symptoms.",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -114,6 +114,13 @@
       "label": "RVH Clinical Biochem",
       "sourceType": "attachment",
       "attachmentId": "rvh-clinical-biochemistry-manual"
+    }
+  ],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "NT-proBNP: plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
     }
   ]
 }

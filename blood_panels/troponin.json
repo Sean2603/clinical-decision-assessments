@@ -2,7 +2,7 @@
   "id": "troponin",
   "title": "Troponin",
   "subtitle": "Myocardial injury, serial change and assay limitations",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Myocardial injury, serial change and assay limitations",
@@ -16,7 +16,7 @@
           "id": "below-assay-cut-off",
           "name": "Below assay cut-off",
           "unit": "",
-          "referenceRange": "Assay and pathway dependent",
+          "referenceRange": "RVH hs-troponin T: female 99th centile ≤9 ng/L; male 99th centile ≤17 ng/L; lower reporting limit 5 ng/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -32,7 +32,7 @@
           "id": "above-99th-centile",
           "name": "Above 99th centile",
           "unit": "",
-          "referenceRange": "Myocardial injury",
+          "referenceRange": "RVH hs-troponin T above local 99th centile: female >9 ng/L; male >17 ng/L. Presentation result ≥52 ng/L is high risk in the local ACS guidance.",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -48,7 +48,7 @@
           "id": "rise-or-fall",
           "name": "Rise or fall",
           "unit": "",
-          "referenceRange": "Use the local assay’s absolute delta threshold",
+          "referenceRange": "RVH hs-troponin T delta: ≥5 ng/L at 1 hour is significant; 3–4 ng/L warrants observation/further sampling; >20% change at 3 hours with one value above the 99th centile is significant",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -118,9 +118,9 @@
   ],
   "specimens": [
     {
-      "specimenTypeId": "gold",
+      "specimenTypeId": "green",
       "quantity": 1,
-      "notes": null
+      "notes": "High-sensitivity troponin T: plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
     }
   ]
 }

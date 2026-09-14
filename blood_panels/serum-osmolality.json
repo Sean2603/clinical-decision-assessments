@@ -2,7 +2,7 @@
   "id": "serum-osmolality",
   "title": "Serum osmolality",
   "subtitle": "Calculated osmolality, tonicity and osmolal gap",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Calculated osmolality, tonicity and osmolal gap",
@@ -16,7 +16,7 @@
           "id": "typical-measured-range",
           "name": "Typical measured range",
           "unit": "",
-          "referenceRange": "Approx. 275–295 mOsm/kg",
+          "referenceRange": "RVH plasma osmolality reference: 275–295 mmol/kg",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -213,5 +213,12 @@
     "parityStatus": "matched",
     "migratedOn": "2026-08-28"
   },
-  "attachments": []
+  "attachments": [],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
+    }
+  ]
 }

@@ -2,7 +2,7 @@
   "id": "urea-and-electrolytes",
   "title": "Urea and electrolytes",
   "subtitle": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
@@ -16,7 +16,7 @@
           "id": "sodium",
           "name": "Sodium",
           "unit": "",
-          "referenceRange": "Approx. 133–146 mmol/L",
+          "referenceRange": "RVH adult reference: 135–146 mmol/L",
           "lowInterpretation": [
             "Hyponatraemia. Confirm chronicity and assess volume status, glucose, serum osmolality, medication, heart/liver/renal disease and SIADH causes."
           ],
@@ -34,7 +34,7 @@
           "id": "potassium",
           "name": "Potassium",
           "unit": "",
-          "referenceRange": "Approx. 3.5–5.3 mmol/L",
+          "referenceRange": "RVH adult reference: 3.5–4.6 mmol/L",
           "lowInterpretation": [
             "GI or renal losses, diuretics, insulin or intracellular shift. Can cause weakness and arrhythmia."
           ],
@@ -52,7 +52,7 @@
           "id": "bicarbonate",
           "name": "Bicarbonate",
           "unit": "",
-          "referenceRange": "Approx. 22–29 mmol/L",
+          "referenceRange": "RVH adult reference: 22–29 mmol/L",
           "lowInterpretation": [
             "Metabolic acidosis or respiratory alkalosis. Consider sepsis, renal failure, DKA, diarrhoea, lactate or toxins."
           ],
@@ -80,7 +80,7 @@
           "id": "urea",
           "name": "Urea",
           "unit": "",
-          "referenceRange": "Approx. 2.5–7.8 mmol/L",
+          "referenceRange": "RVH adult reference: 2.5–7.8 mmol/L",
           "lowInterpretation": [
             "Low protein intake, liver dysfunction, pregnancy or excess fluid."
           ],
@@ -98,7 +98,7 @@
           "id": "creatinine",
           "name": "Creatinine",
           "unit": "",
-          "referenceRange": "Depends on age, sex and muscle mass",
+          "referenceRange": "RVH adult reference: female 45–84 µmol/L; male 59–104 µmol/L",
           "lowInterpretation": [
             "Often low muscle mass; usually not kidney failure."
           ],
@@ -116,7 +116,7 @@
           "id": "egfr",
           "name": "eGFR",
           "unit": "",
-          "referenceRange": "≥90 mL/min/1.73 m² is G1 when no other kidney-damage marker exists",
+          "referenceRange": "RVH reporting convention: calculated with the electrolyte profile; results above the reporting threshold are shown as >60 mL/min",
           "lowInterpretation": [
             "May reflect CKD or AKI. CKD requires persistence for at least 3 months or another marker of kidney damage. Do not stage an acute change using eGFR alone."
           ],
@@ -363,5 +363,12 @@
     "parityStatus": "matched",
     "migratedOn": "2026-08-28"
   },
-  "attachments": []
+  "attachments": [],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
+    }
+  ]
 }

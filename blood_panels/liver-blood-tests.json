@@ -2,7 +2,7 @@
   "id": "liver-blood-tests",
   "title": "Liver blood tests",
   "subtitle": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
@@ -16,7 +16,7 @@
           "id": "alt",
           "name": "ALT",
           "unit": "",
-          "referenceRange": "Laboratory and sex dependent; often upper limit about 35–50 IU/L",
+          "referenceRange": "RVH adult reference: male <41 U/L; female <33 U/L",
           "lowInterpretation": [
             "Usually not clinically important."
           ],
@@ -34,7 +34,7 @@
           "id": "alp",
           "name": "ALP",
           "unit": "",
-          "referenceRange": "Laboratory dependent; often about 30–130 IU/L",
+          "referenceRange": "RVH adult reference: 30–130 U/L",
           "lowInterpretation": [
             "Can occur with malnutrition, zinc deficiency, hypothyroidism or rare metabolic disorders."
           ],
@@ -52,7 +52,7 @@
           "id": "ggt",
           "name": "GGT",
           "unit": "",
-          "referenceRange": "Laboratory and sex dependent",
+          "referenceRange": "RVH adult reference: male 10–71 U/L; female 6–42 U/L",
           "lowInterpretation": [
             "Usually not clinically important."
           ],
@@ -70,7 +70,7 @@
           "id": "bilirubin",
           "name": "Bilirubin",
           "unit": "",
-          "referenceRange": "Often <21 micromol/L",
+          "referenceRange": "RVH adult reference: <21 µmol/L",
           "lowInterpretation": [
             "Usually not clinically important."
           ],
@@ -88,7 +88,7 @@
           "id": "albumin",
           "name": "Albumin",
           "unit": "",
-          "referenceRange": "Approx. 35–50 g/L",
+          "referenceRange": "RVH adult reference: 35–50 g/L",
           "lowInterpretation": [
             "Chronic liver dysfunction, inflammation, malnutrition, renal or gastrointestinal protein loss, or dilution. It changes slowly and is not a sensitive marker of acute liver injury."
           ],
@@ -236,5 +236,12 @@
     "parityStatus": "matched",
     "migratedOn": "2026-08-28"
   },
-  "attachments": []
+  "attachments": [],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
+    }
+  ]
 }

@@ -2,7 +2,7 @@
   "id": "glucose-ketones-and-lactate",
   "title": "Glucose, ketones and lactate",
   "subtitle": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
@@ -16,7 +16,7 @@
           "id": "hypoglycaemia",
           "name": "Hypoglycaemia",
           "unit": "",
-          "referenceRange": "Usually glucose <4.0 mmol/L",
+          "referenceRange": "RVH fasting glucose reference: 4.1–6.1 mmol/L; the clinical hypoglycaemia threshold remains <4.0 mmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -58,7 +58,7 @@
           "id": "blood-ketones",
           "name": "Blood ketones",
           "unit": "",
-          "referenceRange": "<0.6 normal; 0.6–1.5 raised; 1.6–2.9 high; ≥3.0 mmol/L strongly concerning for DKA",
+          "referenceRange": "RVH fasting 3-hydroxybutyrate reference: 0.03–0.3 mmol/L; retain DKA decision thresholds separately",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -100,7 +100,7 @@
           "id": "raised-lactate",
           "name": "Raised lactate",
           "unit": "",
-          "referenceRange": "2.0–3.9 mmol/L is abnormal; ≥4.0 mmol/L is a major abnormality",
+          "referenceRange": "RVH lactate reference: 0.5–2.2 mmol/L; >4.0 mmol/L is a critical-result alert threshold",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -139,5 +139,12 @@
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [],
+  "specimens": [
+    {
+      "specimenTypeId": "grey",
+      "quantity": 1,
+      "notes": "Plasma — grey-top sodium-fluoride EDTA tube. RVH specifies 4 mL for glucose; lactate should reach the laboratory within 30 minutes."
+    }
+  ]
 }

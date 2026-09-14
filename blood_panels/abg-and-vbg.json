@@ -2,7 +2,7 @@
   "id": "abg-and-vbg",
   "title": "ABG and VBG",
   "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Acid–base status, ventilation, oxygenation and lactate ",
@@ -16,7 +16,7 @@
           "id": "ph",
           "name": "pH",
           "unit": "",
-          "referenceRange": "ABG 7.35–7.45",
+          "referenceRange": "RVH arterial blood-gas reference: 7.35–7.45",
           "lowInterpretation": [
             "Acidaemia."
           ],
@@ -36,7 +36,7 @@
           "id": "pco2",
           "name": "pCO₂",
           "unit": "kPa",
-          "referenceRange": "PaCO₂ approximately 4.7–6.0 kPa",
+          "referenceRange": "RVH arterial blood-gas reference: 4.5–6.0 kPa",
           "lowInterpretation": [
             "Supports respiratory alkalosis or respiratory compensation when interpreted with pH and bicarbonate."
           ],
@@ -72,7 +72,7 @@
           "id": "base-excess",
           "name": "Base excess",
           "unit": "mmol/L",
-          "referenceRange": "Approximately −2 to +2 mmol/L",
+          "referenceRange": "RVH arterial blood-gas reference: −2.5 to +2.5 mmol/L",
           "lowInterpretation": [
             "A negative value supports a metabolic acid load."
           ],
@@ -89,7 +89,7 @@
           "id": "po2",
           "name": "pO₂",
           "unit": "kPa",
-          "referenceRange": "Interpret with age, inspired oxygen and clinical context",
+          "referenceRange": "RVH arterial blood-gas reference: 11.0–14.0 kPa",
           "lowInterpretation": [
             "PaO₂ below 8.0 kPa suggests hypoxaemic respiratory failure; confirm inspired oxygen and SpO₂."
           ],
@@ -472,5 +472,12 @@
     "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [],
+  "specimens": [
+    {
+      "specimenTypeId": "other",
+      "quantity": 1,
+      "notes": "Heparinised blood-gas syringe. Fill to the correct volume (1 mL or 3 mL), exclude air, cap and send immediately. Analyse within 30 minutes; do not send via pneumatic chute or on ice."
+    }
+  ]
 }

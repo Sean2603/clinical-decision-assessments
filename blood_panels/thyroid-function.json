@@ -2,7 +2,7 @@
   "id": "thyroid-function",
   "title": "Thyroid function",
   "subtitle": "TSH and free T4 pattern recognition",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "TSH and free T4 pattern recognition",
@@ -16,7 +16,7 @@
           "id": "high-tsh-low-free-t4",
           "name": "High TSH + low free T4",
           "unit": "",
-          "referenceRange": "Primary hypothyroidism",
+          "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -32,7 +32,7 @@
           "id": "low-tsh-high-free-t4-t3",
           "name": "Low TSH + high free T4/T3",
           "unit": "",
-          "referenceRange": "Primary hyperthyroidism",
+          "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L; FT3 3.1–6.8 pmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -48,7 +48,7 @@
           "id": "high-tsh-normal-free-t4",
           "name": "High TSH + normal free T4",
           "unit": "",
-          "referenceRange": "Subclinical hypothyroidism",
+          "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -64,7 +64,7 @@
           "id": "low-tsh-normal-free-t4-t3",
           "name": "Low TSH + normal free T4/T3",
           "unit": "",
-          "referenceRange": "Subclinical hyperthyroidism or transient suppression",
+          "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L; FT3 3.1–6.8 pmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -80,7 +80,7 @@
           "id": "low-normal-tsh-low-free-t4",
           "name": "Low/normal TSH + low free T4",
           "unit": "",
-          "referenceRange": "Possible central hypothyroidism or non-thyroidal illness",
+          "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -124,5 +124,12 @@
     "parityStatus": "matched",
     "migratedOn": "2026-08-28"
   },
-  "attachments": []
+  "attachments": [],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL. Biotin can interfere; RVH advises sampling no sooner than 8 hours after biotin administration."
+    }
+  ]
 }

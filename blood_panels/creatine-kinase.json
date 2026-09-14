@@ -2,7 +2,7 @@
   "id": "creatine-kinase",
   "title": "Creatine kinase",
   "subtitle": "Muscle injury, rhabdomyolysis and renal-risk features",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Muscle injury, rhabdomyolysis and renal-risk features",
@@ -16,7 +16,7 @@
           "id": "raised-ck",
           "name": "Raised CK",
           "unit": "",
-          "referenceRange": "Rhabdomyolysis often defined as >5 × upper limit of normal or >1,000 U/L",
+          "referenceRange": "RVH adult CK reference: male 39–308 U/L; female 26–192 U/L. Retain clinical rhabdomyolysis thresholds separately.",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -96,6 +96,13 @@
       "label": "RVH Clinical Biochem",
       "sourceType": "attachment",
       "attachmentId": "rvh-clinical-biochemistry-manual"
+    }
+  ],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
     }
   ]
 }

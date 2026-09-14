@@ -2,7 +2,7 @@
   "id": "calcium-magnesium-and-phosphate",
   "title": "Calcium, magnesium and phosphate",
   "subtitle": "Corrected calcium, arrhythmia risk and refeeding patterns",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Corrected calcium, arrhythmia risk and refeeding patterns",
@@ -16,7 +16,7 @@
           "id": "hypocalcaemia",
           "name": "Hypocalcaemia",
           "unit": "",
-          "referenceRange": "Typical corrected calcium <2.20 mmol/L",
+          "referenceRange": "RVH adjusted-calcium adult reference: 2.20–2.60 mmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -32,7 +32,7 @@
           "id": "hypercalcaemia",
           "name": "Hypercalcaemia",
           "unit": "",
-          "referenceRange": "Typical corrected calcium >2.60 mmol/L; ≥3.0 mmol/L is marked",
+          "referenceRange": "RVH adjusted-calcium adult reference: 2.20–2.60 mmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -58,7 +58,7 @@
           "id": "magnesium",
           "name": "Magnesium",
           "unit": "",
-          "referenceRange": "Approx. 0.7–1.0 mmol/L",
+          "referenceRange": "RVH adult reference: 0.7–1.0 mmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -74,7 +74,7 @@
           "id": "phosphate",
           "name": "Phosphate",
           "unit": "",
-          "referenceRange": "Approx. 0.8–1.5 mmol/L",
+          "referenceRange": "RVH adult reference: 0.8–1.5 mmol/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -177,5 +177,12 @@
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
+    }
+  ]
 }

@@ -2,7 +2,7 @@
   "id": "haematinics",
   "title": "Haematinics",
   "subtitle": "Ferritin, transferrin saturation, B12 and folate",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Ferritin, transferrin saturation, B12 and folate",
@@ -16,7 +16,7 @@
           "id": "ferritin",
           "name": "Ferritin",
           "unit": "",
-          "referenceRange": "Low ferritin strongly supports iron deficiency; exact cut-off laboratory/context dependent",
+          "referenceRange": "RVH adult reference: men ≥19 y 30–400 µg/L; women 19–59 y 15–150 µg/L; women ≥60 y 15–330 µg/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -32,7 +32,7 @@
           "id": "transferrin-saturation",
           "name": "Transferrin saturation",
           "unit": "",
-          "referenceRange": "<20% commonly supports restricted iron availability",
+          "referenceRange": "RVH adult reference: female 16–40%; male 16–50%",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -58,7 +58,7 @@
           "id": "vitamin-b12",
           "name": "Vitamin B12",
           "unit": "",
-          "referenceRange": "Laboratory dependent",
+          "referenceRange": "RVH/NICE NG239 interpretation: <180 ng/L confirmed deficiency; 180–350 ng/L indeterminate/possible deficiency; >350 ng/L deficiency unlikely",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -74,7 +74,7 @@
           "id": "folate",
           "name": "Folate",
           "unit": "",
-          "referenceRange": "Laboratory dependent",
+          "referenceRange": "RVH adult reference: 3.0–26.8 µg/L",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -112,5 +112,12 @@
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL. Protect folate and vitamin B12 samples from light; fasting is preferred for vitamin B12."
+    }
+  ]
 }

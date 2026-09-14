@@ -2,7 +2,7 @@
   "id": "lipase-and-amylase",
   "title": "Lipase and amylase",
   "subtitle": "Pancreatitis interpretation and important alternative causes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Pancreatitis interpretation and important alternative causes",
@@ -16,7 +16,7 @@
           "id": "lipase",
           "name": "Lipase",
           "unit": "",
-          "referenceRange": "Laboratory dependent; ≥3 × upper limit strongly supports pancreatitis in the correct clinical setting",
+          "referenceRange": "RVH adult reference: 13–60 U/L; retain the ≥3 × upper-limit clinical pancreatitis threshold separately",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -32,7 +32,7 @@
           "id": "amylase",
           "name": "Amylase",
           "unit": "",
-          "referenceRange": "Laboratory dependent; ≥3 × upper limit supports pancreatitis in the correct setting",
+          "referenceRange": "RVH adult reference: 28–100 U/L; retain the ≥3 × upper-limit clinical pancreatitis threshold separately",
           "lowInterpretation": [],
           "highInterpretation": [],
           "notes": [
@@ -76,5 +76,12 @@
     "parityStatus": "matched",
     "migratedOn": "2026-08-28"
   },
-  "attachments": []
+  "attachments": [],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
+    }
+  ]
 }

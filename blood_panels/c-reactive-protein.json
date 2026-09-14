@@ -2,7 +2,7 @@
   "id": "c-reactive-protein",
   "title": "C-reactive protein",
   "subtitle": "Inflammatory marker interpreted with timing and clinical context",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Inflammatory marker interpreted with timing and clinical context",
@@ -16,7 +16,7 @@
           "id": "within-laboratory-range",
           "name": "Within laboratory range",
           "unit": "",
-          "referenceRange": "Often <5 mg/L, but use the reporting laboratory range",
+          "referenceRange": "RVH adult reference: <5 mg/L",
           "lowInterpretation": [
             "Makes a substantial systemic inflammatory response less likely at that moment."
           ],
@@ -173,6 +173,13 @@
       "label": "Clinical Biochem Manual",
       "sourceType": "attachment",
       "attachmentId": "rvh-clinical-biochemistry-manual"
+    }
+  ],
+  "specimens": [
+    {
+      "specimenTypeId": "green",
+      "quantity": 1,
+      "notes": "Plasma — green-top lithium-heparin tube with yellow insert, 3 mL."
     }
   ]
 }
