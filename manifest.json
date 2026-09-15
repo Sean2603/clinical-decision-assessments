@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.39",
-  "updatedAt": "2026-09-15T14:17:48Z",
+  "contentVersion": "0.0.40",
+  "updatedAt": "2026-09-15T15:21:21Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1377
   },
   "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6698463,
+  "downloadSizeBytes": 6698453,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -27,9 +27,9 @@
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
-    "sha256": "8b5c16c67e4889d1ab28050a85d8fb9fed68dff87f08d1e3861d5a11fc4cab68",
+    "sha256": "9deeabe7b6c1e01d17661591099ee4d1c1aa49d352b33cc6c2a85179aee9f6be",
     "schemaSha256": "617cd4fc43d9c7f94799eb2ff9c0015d43d0c98687eac7e562b1017f69206d85",
-    "sizeBytes": 635,
+    "sizeBytes": 1137,
     "schemaSizeBytes": 6095,
     "items": [
       {
@@ -98,22 +98,22 @@
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 474375,
       "categoryIds": [
-        "uncategorised"
+        "ent"
       ]
     },
     {
       "id": "acute-sore-throat-assessment",
       "title": "Acute Sore Throat Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/acute-sore-throat-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "516d79a45d90b4e2225ea25fd72c392ae6f7453791ec71d1b1ecf1c3b44ff7b4",
+      "sha256": "e5a88e3a04210fe8341f6888182d7343261e3764affb9521f9d3899f9fb7ac3a",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 18719,
+      "sizeBytes": 18709,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 1454370,
       "categoryIds": [
-        "uncategorised"
+        "ent"
       ]
     },
     {

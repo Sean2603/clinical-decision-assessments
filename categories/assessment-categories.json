@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "categories": [
     {
       "id": "frailty",
@@ -22,5 +22,31 @@
       "order": 9999,
       "iconKey": "general"
     }
-  ]
+  ],
+  "assignments": {
+    "acute-confusion-and-delirium": [
+      "frailty"
+    ],
+    "acute-otitis-media-assessment": [
+      "ent"
+    ],
+    "acute-sore-throat-assessment": [
+      "ent"
+    ],
+    "comprehensive-geriatric-assessment": [
+      "frailty"
+    ],
+    "falls-in-older-adults": [
+      "frailty"
+    ],
+    "frailty-assessment": [
+      "frailty"
+    ],
+    "lower-uti-assessment": [
+      "uncategorised"
+    ],
+    "polypharmacy-and-medicines-related-harm": [
+      "frailty"
+    ]
+  }
 }
