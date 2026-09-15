@@ -72,6 +72,22 @@
         "$ref": "#/$defs/clinicalAttachment"
       },
       "default": []
+    },
+    "assignments": {
+      "type": "object",
+      "propertyNames": {
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        }
+      },
+      "default": {}
     }
   },
   "$defs": {

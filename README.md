@@ -1,3 +1,9 @@
+## Governed assessment category assignments
+
+Assessment taxonomy schema version 3 can publish an `assignments` map alongside category definitions. The map is keyed by assessment stable ID and contains the governed category IDs for that assessment. When present, `tool/sync_manifest.py` uses this map as the authoritative source for each assessment manifest entry's `categoryIds`; older category documents without `assignments` continue to fall back to the `categoryIds` embedded in the assessment JSON.
+
+This keeps category-only CDM changes independent from clinical assessment versioning while still ensuring the app receives the governed taxonomy. Assignment IDs are validated against the category registry, and assignments to missing assessments fail manifest generation.
+
 ## Governed assessment category icons
 
 Assessment categories use a governed semantic `iconKey` so CDM and consuming apps can render the same clinical meaning without storing framework-specific icon names in CDA. Category document schema version 2 requires one of the supported semantic keys (for example `lungs`, `heart`, `older-person` or `general`). The generated manifest copies the category metadata into `assessmentCategories.items`; Flutter app 0.64.8+111 consumes `iconKey` and falls back safely for older packs.

@@ -1,3 +1,11 @@
+## 2026-09-15 – Governed assessment category assignments
+
+- Extended the assessment category document with an optional governed `assignments` map keyed by assessment stable ID.
+- `tool/sync_manifest.py` now uses taxonomy assignments for manifest assessment `categoryIds` when the map is present, with the existing assessment JSON field retained as the backwards-compatible fallback.
+- Manifest generation rejects unknown category IDs and assignment entries for assessments that do not exist.
+- Category-only publications can therefore update app grouping without rewriting or re-versioning otherwise unchanged clinical assessment JSON.
+- Coordinated with CDM 0.57.9. Existing app manifest structure is unchanged, so no new Flutter release is required for this fix.
+
 ## 2026-09-15 – Governed assessment category icons
 
 - Raised `categories/assessment-categories.json` to category document schema version 2.
