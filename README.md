@@ -1,3 +1,9 @@
+## Expanded assessment clinical-system icons
+
+The governed assessment taxonomy supports semantic icon keys for ENT (`ent`), ophthalmology (`eye`), genitourinary/urology (`genitourinary`), women's health/gynaecology (`womens-health`) and musculoskeletal (`musculoskeletal`) in addition to the existing icon contract. The legacy `bone` key remains valid for older content. Category IDs and icon keys are deliberately separate: for example, the `cardiology` category uses `heart` and the `neurology` category uses `brain`.
+
+Assessment categories already referenced by source JSON must remain present in the category registry even when schema-v3 `assignments` provides the authoritative app grouping. This keeps the backwards-compatible assessment `categoryIds` field resolvable without forcing clinical assessment re-versioning for taxonomy-only changes.
+
 ## Governed assessment category assignments
 
 Assessment taxonomy schema version 3 can publish an `assignments` map alongside category definitions. The map is keyed by assessment stable ID and contains the governed category IDs for that assessment. When present, `tool/sync_manifest.py` uses this map as the authoritative source for each assessment manifest entry's `categoryIds`; older category documents without `assignments` continue to fall back to the `categoryIds` embedded in the assessment JSON.

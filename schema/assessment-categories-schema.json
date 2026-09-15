@@ -60,7 +60,12 @@
               "mental-health",
               "digestive",
               "endocrine",
-              "emergency"
+              "emergency",
+              "ent",
+              "eye",
+              "genitourinary",
+              "womens-health",
+              "musculoskeletal"
             ]
           }
         }

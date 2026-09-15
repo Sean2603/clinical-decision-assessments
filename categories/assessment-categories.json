@@ -13,7 +13,28 @@
       "title": "ENT",
       "description": "Ears, nose and throat",
       "order": 20,
-      "iconKey": "general"
+      "iconKey": "ent"
+    },
+    {
+      "id": "cardiology",
+      "title": "Cardiology",
+      "description": "Cardiovascular presentations and related assessment guides.",
+      "order": 30,
+      "iconKey": "heart"
+    },
+    {
+      "id": "neurology",
+      "title": "Neurology",
+      "description": "Neurological presentations and related assessment guides.",
+      "order": 40,
+      "iconKey": "brain"
+    },
+    {
+      "id": "musculoskeletal",
+      "title": "Musculoskeletal",
+      "description": "Musculoskeletal presentations and related assessment guides.",
+      "order": 50,
+      "iconKey": "musculoskeletal"
     },
     {
       "id": "uncategorised",

@@ -1,3 +1,12 @@
+## 2026-09-15 – Expanded assessment clinical-system taxonomy icons
+
+- Added semantic icon keys for `ent`, `eye`, `genitourinary`, `womens-health` and `musculoskeletal` while retaining legacy `bone` compatibility.
+- ENT now publishes `iconKey: ent` instead of the generic fallback.
+- Added governed category definitions for `cardiology`, `neurology` and `musculoskeletal`, which are already referenced by assessment source metadata and therefore must remain resolvable during repository validation even when v3 taxonomy assignments override app grouping.
+- Empty future systems such as eye, genitourinary and women's health remain available as icon keys and can be created through CDM when first required; the app hides empty assessment categories.
+- Coordinated with CDM 0.57.11 and Flutter app 0.64.9+112.
+- `manifest.json` remains generated; from the current 0.0.40 pack these taxonomy/schema changes are expected to produce contentVersion 0.0.41 when CDM performs the controlled publication generation.
+
 ## 2026-09-15 – GitHub Actions validation and generation alignment
 
 - Expanded the main validation workflow trigger paths to cover all current governed CDA content/configuration families, attachments, generated artefacts and both workflow definitions.
