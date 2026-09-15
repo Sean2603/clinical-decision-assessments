@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.40",
-  "updatedAt": "2026-09-15T15:21:21Z",
+  "contentVersion": "0.0.41",
+  "updatedAt": "2026-09-15T16:01:38Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -27,10 +27,10 @@
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
-    "sha256": "9deeabe7b6c1e01d17661591099ee4d1c1aa49d352b33cc6c2a85179aee9f6be",
-    "schemaSha256": "617cd4fc43d9c7f94799eb2ff9c0015d43d0c98687eac7e562b1017f69206d85",
-    "sizeBytes": 1137,
-    "schemaSizeBytes": 6095,
+    "sha256": "fcdebe44c5ea7fbbc6ea369c22fa5882e21173493d1cd54d843d2401eebc069f",
+    "schemaSha256": "76c4f8c41cfc403b4dc8e0c811dc8c9e1a4f558341925abb8451575c4c68705c",
+    "sizeBytes": 1738,
+    "schemaSizeBytes": 6232,
     "items": [
       {
         "id": "frailty",
@@ -44,7 +44,28 @@
         "title": "ENT",
         "description": "Ears, nose and throat",
         "order": 20,
-        "iconKey": "general"
+        "iconKey": "ent"
+      },
+      {
+        "id": "cardiology",
+        "title": "Cardiology",
+        "description": "Cardiovascular presentations and related assessment guides.",
+        "order": 30,
+        "iconKey": "heart"
+      },
+      {
+        "id": "neurology",
+        "title": "Neurology",
+        "description": "Neurological presentations and related assessment guides.",
+        "order": 40,
+        "iconKey": "brain"
+      },
+      {
+        "id": "musculoskeletal",
+        "title": "Musculoskeletal",
+        "description": "Musculoskeletal presentations and related assessment guides.",
+        "order": 50,
+        "iconKey": "musculoskeletal"
       },
       {
         "id": "uncategorised",
