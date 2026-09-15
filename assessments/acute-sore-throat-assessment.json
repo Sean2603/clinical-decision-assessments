@@ -1,7 +1,7 @@
 {
   "id": "acute-sore-throat-assessment",
   "title": "Acute Sore Throat Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing acute sore throat, pharyngitis and tonsillitis; identifying airway-threatening and deep-neck complications, recognising important alternatives, and supporting proportionate treatment, referral and safety-netting.",
   "sections": [
     {
@@ -383,13 +383,13 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-09-11",
+    "reviewedOn": "2026-09-15",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-09-11",
+    "nextReviewDue": "2028-09-15",
     "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "categoryIds": [
-    "uncategorised"
+    "ent"
   ],
   "status": "active",
   "attachments": [
