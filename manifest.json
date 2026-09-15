@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.38",
-  "updatedAt": "2026-09-15T13:30:18Z",
+  "contentVersion": "0.0.39",
+  "updatedAt": "2026-09-15T14:17:48Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -28,9 +28,9 @@
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
     "sha256": "8b5c16c67e4889d1ab28050a85d8fb9fed68dff87f08d1e3861d5a11fc4cab68",
-    "schemaSha256": "4e5411976f454abd580ee8a66284e118a8f4ba2b58b0171bfca2c7b3be606721",
+    "schemaSha256": "617cd4fc43d9c7f94799eb2ff9c0015d43d0c98687eac7e562b1017f69206d85",
     "sizeBytes": 635,
-    "schemaSizeBytes": 5716,
+    "schemaSizeBytes": 6095,
     "items": [
       {
         "id": "frailty",
