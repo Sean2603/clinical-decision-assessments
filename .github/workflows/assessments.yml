@@ -9,18 +9,26 @@ name: Validate clinical content
     branches:
       - main
     paths:
+      - "app_config/**"
       - "assessments/**"
-      - "guidelines/**"
-      - "scoring_tools/**"
+      - "attachments/**"
       - "blood_panels/**"
-      - "prescribing/**"
-      - "references/**"
       - "categories/**"
+      - "clinical_notices/**"
+      - "glossary/**"
+      - "guidelines/**"
+      - "medications/**"
+      - "prescribing/**"
+      - "procedures/**"
+      - "references/**"
+      - "scoring_tools/**"
+      - "shared_learning/**"
       - "schema/**"
       - "tool/**"
       - "manifest.json"
       - "reference-usage.json"
       - ".github/workflows/assessments.yml"
+      - ".github/workflows/generate-manifest.yml"
 
   schedule:
     - cron: "17 6 * * 1"
@@ -71,6 +79,9 @@ jobs:
       - name: Validate reference structure
         run: python tool/validate_references.py
 
+      - name: Validate remote scoring and blood engines
+        run: python tool/validate_remote_engines.py
+
       - name: Validate manifest safety controls
         run: python tool/validate_manifest_safety.py
 
@@ -86,15 +97,16 @@ jobs:
         run: |
           python tool/generate_reference_usage.py
           if ! git diff --exit-code -- reference-usage.json; then
-            echo "reference-usage.json differs from the generated result. Publish through the CDM Content Manager."
+            echo "reference-usage.json differs from the generated result. Publish through the CDM Content Manager or the controlled manifest workflow."
             exit 1
           fi
 
-      - name: Confirm validation did not modify source-controlled content
+      - name: Confirm validation was read-only
         shell: bash
         run: |
-          if ! git diff --exit-code -- manifest.json assessments guidelines scoring_tools blood_panels prescribing references categories schema; then
-            echo "Validation changed source-controlled clinical content. GitHub Actions is read-only; publish through the CDM Content Manager."
+          if ! git diff --exit-code; then
+            echo "Validation modified source-controlled files. Ordinary GitHub validation must remain read-only."
+            git status --short
             exit 1
           fi
 

@@ -58,13 +58,13 @@ The repository has two distinct responsibilities:
 
 CDM owns the governance workflow. GitHub provides source control, review history, branch protection and the final repository-confirmed publication state.
 
-An item is not considered **Published** merely because CDM has created an internal publication snapshot. It becomes Published when the exact governed version is present on the protected `main` branch.
+An item is not considered **Published** merely because CDM has created an internal publication snapshot. It becomes Published when the exact governed version is present on `main`. Repository settings should protect `main` and require the clinical-content validation check before controlled merges.
 
 ## Branch model
 
 ### `main`
 
-`main` is the authoritative governed publication branch.
+`main` is the authoritative governed publication branch. Repository settings should protect it and require the CDA validation workflow before controlled merges.
 
 Normal clinical editing should not occur directly on `main`.
 
@@ -271,14 +271,22 @@ The virtual environment does not need to be activated if its Python executable i
 
 ### Local validation sequence
 
+For a controlled local publication/generation pass:
+
 ```bash
+.venv/bin/python tool/validate_content.py
+.venv/bin/python tool/validate_references.py
+.venv/bin/python tool/validate_references.py --strict
+.venv/bin/python tool/validate_remote_engines.py
 .venv/bin/python tool/generate_reference_usage.py
 .venv/bin/python tool/sync_manifest.py --write
-.venv/bin/python tool/validate_references.py
-.venv/bin/python tool/validate_content.py
 .venv/bin/python tool/validate_manifest_safety.py
 .venv/bin/python tool/sync_manifest.py --check
 ```
+
+Ordinary GitHub validation is read-only. It validates all governed content families and configuration, executes scoring/blood remote-engine parity cases, verifies `manifest.json`, regenerates `reference-usage.json` only to compare it with the committed file, and fails if validation leaves any working-tree changes.
+
+The manually dispatched controlled-artefact workflow is the repository's GitHub write path for generated metadata. It regenerates both `manifest.json` and `reference-usage.json`, stages only those two files, runs the complete validation set, commits locally, repeats validation against the committed state, and pushes only if that final state is clean and reproducible.
 
 For a review branch where version progression must be checked against the current published baseline:
 

@@ -1,6 +1,6 @@
 name: Generate manifest manually
 
-on:
+"on":
   workflow_dispatch:
 
 permissions:
@@ -11,8 +11,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  generate-manifest:
-    name: Generate and commit manifest
+  generate-artefacts:
+    name: Generate, validate and commit controlled artefacts
     runs-on: ubuntu-latest
 
     steps:
@@ -22,6 +22,12 @@ jobs:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
 
+      - name: Show source commit
+        shell: bash
+        run: |
+          echo "Preparing controlled artefacts from $(git rev-parse HEAD)"
+          echo "Branch/ref: $GITHUB_REF"
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -30,11 +36,26 @@ jobs:
       - name: Install validation dependencies
         run: python -m pip install --upgrade jsonschema
 
-      - name: Validate clinical content before manifest generation
+      - name: Validate clinical content before generation
         run: python tool/validate_content.py
+
+      - name: Validate reference structure
+        run: python tool/validate_references.py
+
+      - name: Enforce current cited references
+        run: python tool/validate_references.py --strict
+
+      - name: Validate remote scoring and blood engines
+        run: python tool/validate_remote_engines.py
+
+      - name: Generate reference usage
+        run: python tool/generate_reference_usage.py
 
       - name: Generate manifest
         run: python tool/sync_manifest.py --write
+
+      - name: Stage controlled generated artefacts
+        run: git add manifest.json reference-usage.json
 
       - name: Validate generated manifest safety controls
         run: python tool/validate_manifest_safety.py
@@ -42,17 +63,71 @@ jobs:
       - name: Confirm manifest is synchronised
         run: python tool/sync_manifest.py --check
 
-      - name: Commit generated manifest
+      - name: Confirm reference usage is deterministic
         shell: bash
         run: |
-          if git diff --quiet -- manifest.json; then
-            echo "manifest.json is already up to date; no commit required."
+          python tool/generate_reference_usage.py
+          if ! git diff --exit-code -- manifest.json reference-usage.json; then
+            echo "Generated artefacts changed after staging; generation is not deterministic."
+            exit 1
+          fi
+
+      - name: Confirm generation did not modify governed source
+        shell: bash
+        run: |
+          if ! git diff --exit-code; then
+            echo "Controlled generation modified governed source outside the staged generated artefacts."
+            git status --short
+            exit 1
+          fi
+
+          unexpected="$(git diff --cached --name-only | grep -Ev '^(manifest\.json|reference-usage\.json)$' || true)"
+          if [ -n "$unexpected" ]; then
+            echo "Unexpected staged files detected:"
+            printf '%s\n' "$unexpected"
+            exit 1
+          fi
+
+      - name: Commit generated artefacts locally
+        id: commit
+        shell: bash
+        run: |
+          if git diff --cached --quiet; then
+            echo "Controlled artefacts are already up to date; no commit required."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: regenerate controlled CDA artefacts"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
-          git add manifest.json
-          git commit -m "chore: regenerate clinical content manifest"
-          git push origin "HEAD:${{ github.ref_name }}"
+      - name: Revalidate committed clinical content
+        run: python tool/validate_content.py
+
+      - name: Revalidate current cited references
+        run: python tool/validate_references.py --strict
+
+      - name: Revalidate remote scoring and blood engines
+        run: python tool/validate_remote_engines.py
+
+      - name: Revalidate committed manifest safety controls
+        run: python tool/validate_manifest_safety.py
+
+      - name: Revalidate committed manifest synchronisation
+        run: python tool/sync_manifest.py --check
+
+      - name: Revalidate committed reference usage and clean tree
+        shell: bash
+        run: |
+          python tool/generate_reference_usage.py
+          if ! git diff --exit-code; then
+            echo "The locally committed generated state is not reproducible or left the tree dirty."
+            git status --short
+            exit 1
+          fi
+
+      - name: Push validated generated commit
+        if: steps.commit.outputs.changed == 'true'
+        run: git push origin "HEAD:${{ github.ref_name }}"

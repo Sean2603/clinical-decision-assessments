@@ -1,3 +1,12 @@
+## 2026-09-15 – GitHub Actions validation and generation alignment
+
+- Expanded the main validation workflow trigger paths to cover all current governed CDA content/configuration families, attachments, generated artefacts and both workflow definitions.
+- Added `tool/validate_remote_engines.py` to ordinary validation so scoring-tool and blood-calculation parity cases are enforced in CI.
+- Replaced the partial source-directory mutation check with a whole-working-tree read-only assertion after generated reference-usage verification.
+- Upgraded the manual generated-artefact workflow to regenerate both `manifest.json` and `reference-usage.json`, run strict references and remote-engine validation, stage only controlled generated artefacts, and reject unexpected source mutations.
+- The manual workflow now commits generated artefacts locally, reruns the complete validation set against that committed state, verifies a clean/reproducible tree, and only then pushes the generated commit.
+- No clinical content contract or Flutter compatibility change is introduced by this workflow-only update.
+
 ## 2026-09-15 – Governed assessment category assignments
 
 - Extended the assessment category document with an optional governed `assignments` map keyed by assessment stable ID.
