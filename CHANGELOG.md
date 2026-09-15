@@ -1,3 +1,12 @@
+## 2026-09-15 – Governed assessment category icons
+
+- Raised `categories/assessment-categories.json` to category document schema version 2.
+- Added required semantic `iconKey` metadata to assessment categories so CDM and the Flutter app can render the same governed category meaning without framework-specific icon names in CDA.
+- Added the supported semantic icon-key enum to `schema/assessment-categories-schema.json`.
+- Existing Frailty, ENT and Uncategorised categories retain their IDs/order/description; this is presentation metadata only and does not change assessment assignments or clinical content.
+- Coordinated with CDM 0.57.8 and Flutter app 0.64.8+111.
+- `manifest.json` remains generated; regenerate it through the normal controlled writer after applying these files.
+
 ## 2026-09-10 – Inline-only assessment media compatibility
 
 - Reserved attachment label `__inline_only__` for governed assessment image attachments inserted directly into clinical text by CDM.

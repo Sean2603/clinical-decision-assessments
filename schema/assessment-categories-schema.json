@@ -11,7 +11,7 @@
   "properties": {
     "schemaVersion": {
       "type": "integer",
-      "minimum": 1
+      "minimum": 2
     },
     "categories": {
       "type": "array",
@@ -23,7 +23,8 @@
           "id",
           "title",
           "description",
-          "order"
+          "order",
+          "iconKey"
         ],
         "properties": {
           "id": {
@@ -41,6 +42,26 @@
           "order": {
             "type": "integer",
             "minimum": 0
+          },
+          "iconKey": {
+            "type": "string",
+            "enum": [
+              "general",
+              "lungs",
+              "heart",
+              "brain",
+              "kidney",
+              "bone",
+              "skin",
+              "infection",
+              "medication",
+              "older-person",
+              "child",
+              "mental-health",
+              "digestive",
+              "endocrine",
+              "emergency"
+            ]
           }
         }
       }

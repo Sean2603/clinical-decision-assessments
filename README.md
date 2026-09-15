@@ -1,3 +1,9 @@
+## Governed assessment category icons
+
+Assessment categories use a governed semantic `iconKey` so CDM and consuming apps can render the same clinical meaning without storing framework-specific icon names in CDA. Category document schema version 2 requires one of the supported semantic keys (for example `lungs`, `heart`, `older-person` or `general`). The generated manifest copies the category metadata into `assessmentCategories.items`; Flutter app 0.64.8+111 consumes `iconKey` and falls back safely for older packs.
+
+After applying a category/schema change, regenerate the controlled manifest with `python tool/sync_manifest.py --write` (or through the normal CDM publication flow) before publication.
+
 
 ## App feature availability
 
