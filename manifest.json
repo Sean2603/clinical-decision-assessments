@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.41",
-  "updatedAt": "2026-09-15T16:01:38Z",
+  "contentVersion": "0.0.42",
+  "updatedAt": "2026-09-15T16:12:19Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1377
   },
   "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6698453,
+  "downloadSizeBytes": 6698840,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -27,9 +27,9 @@
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
-    "sha256": "fcdebe44c5ea7fbbc6ea369c22fa5882e21173493d1cd54d843d2401eebc069f",
+    "sha256": "4a9722dea85220c3dea7311a231ec54ef2739ecae3a309007d4d7346f86ce289",
     "schemaSha256": "76c4f8c41cfc403b4dc8e0c811dc8c9e1a4f558341925abb8451575c4c68705c",
-    "sizeBytes": 1738,
+    "sizeBytes": 1945,
     "schemaSizeBytes": 6232,
     "items": [
       {
@@ -44,28 +44,35 @@
         "title": "ENT",
         "description": "Ears, nose and throat",
         "order": 20,
-        "iconKey": "ent"
+        "iconKey": "general"
       },
       {
         "id": "cardiology",
         "title": "Cardiology",
-        "description": "Cardiovascular presentations and related assessment guides.",
+        "description": "Cardiology assessments.",
         "order": 30,
         "iconKey": "heart"
       },
       {
         "id": "neurology",
-        "title": "Neurology",
-        "description": "Neurological presentations and related assessment guides.",
+        "title": "Neuro",
+        "description": "Neuro assessments.",
         "order": 40,
         "iconKey": "brain"
       },
       {
         "id": "musculoskeletal",
-        "title": "Musculoskeletal",
-        "description": "Musculoskeletal presentations and related assessment guides.",
+        "title": "MSK",
+        "description": "MSK assessments.",
         "order": 50,
-        "iconKey": "musculoskeletal"
+        "iconKey": "bone"
+      },
+      {
+        "id": "renal",
+        "title": "Renal",
+        "description": "Renal assessments.",
+        "order": 60,
+        "iconKey": "kidney"
       },
       {
         "id": "uncategorised",
@@ -80,16 +87,17 @@
     {
       "id": "acute-confusion-and-delirium",
       "title": "Acute Confusion and Delirium",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "2af294394c9f49303c3d91b0e695399122903c97cf9bc4663d5ea12aabf9bb6d",
+      "sha256": "4a3b553a8d5cada2d732c735d2bd56d3fba7377ccadbf4e20f9d43eaefebf145",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 12159,
+      "sizeBytes": 12231,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
-        "frailty"
+        "frailty",
+        "neurology"
       ]
     },
     {
@@ -140,16 +148,16 @@
     {
       "id": "back-pain",
       "title": "Back Pain Assessment",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "cb6f323ffdab0171e6595840d73213cc2ad0128ed330596f64ab5b63a5e0a696",
+      "sha256": "a220e449f7369a301b5125f09aa978801abc03a053fba1c637fb0a13517cd5b0",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 38206,
+      "sizeBytes": 38307,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
-        "uncategorised"
+        "musculoskeletal"
       ]
     },
     {
@@ -185,16 +193,16 @@
     {
       "id": "dizziness-vertigo-assessment",
       "title": "Dizziness and Vertigo Assessment",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "c92e370268261ce49b4a9595897d780c138548e0b148b84b1e7fd8469e18497a",
+      "sha256": "58e262eda3aecc80068622e46be66e88eff1f06a78c6477323f701adbc10e817",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 30990,
+      "sizeBytes": 31085,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
-        "uncategorised"
+        "neurology"
       ]
     },
     {
@@ -239,7 +247,7 @@
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
-        "uncategorised"
+        "renal"
       ]
     },
     {
@@ -260,16 +268,17 @@
     {
       "id": "red-leg-assessment",
       "title": "Red or Swollen Leg Assessment",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "7a49fb930914bf6cedac8f0651ad12278a9230e3d4b33e57c4f42d4beff41b32",
+      "sha256": "affe686f6e1cd5c3b27d817df6c8b1ac74eb5bf8eda505119f418166f58d79da",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 50079,
+      "sizeBytes": 50198,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
-        "uncategorised"
+        "cardiology",
+        "musculoskeletal"
       ]
     }
   ],

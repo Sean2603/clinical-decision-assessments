@@ -13,28 +13,35 @@
       "title": "ENT",
       "description": "Ears, nose and throat",
       "order": 20,
-      "iconKey": "ent"
+      "iconKey": "general"
     },
     {
       "id": "cardiology",
       "title": "Cardiology",
-      "description": "Cardiovascular presentations and related assessment guides.",
+      "description": "Cardiology assessments.",
       "order": 30,
       "iconKey": "heart"
     },
     {
       "id": "neurology",
-      "title": "Neurology",
-      "description": "Neurological presentations and related assessment guides.",
+      "title": "Neuro",
+      "description": "Neuro assessments.",
       "order": 40,
       "iconKey": "brain"
     },
     {
       "id": "musculoskeletal",
-      "title": "Musculoskeletal",
-      "description": "Musculoskeletal presentations and related assessment guides.",
+      "title": "MSK",
+      "description": "MSK assessments.",
       "order": 50,
-      "iconKey": "musculoskeletal"
+      "iconKey": "bone"
+    },
+    {
+      "id": "renal",
+      "title": "Renal",
+      "description": "Renal assessments.",
+      "order": 60,
+      "iconKey": "kidney"
     },
     {
       "id": "uncategorised",
@@ -46,7 +53,8 @@
   ],
   "assignments": {
     "acute-confusion-and-delirium": [
-      "frailty"
+      "frailty",
+      "neurology"
     ],
     "acute-otitis-media-assessment": [
       "ent"
@@ -54,8 +62,14 @@
     "acute-sore-throat-assessment": [
       "ent"
     ],
+    "back-pain": [
+      "musculoskeletal"
+    ],
     "comprehensive-geriatric-assessment": [
       "frailty"
+    ],
+    "dizziness-vertigo-assessment": [
+      "neurology"
     ],
     "falls-in-older-adults": [
       "frailty"
@@ -64,10 +78,14 @@
       "frailty"
     ],
     "lower-uti-assessment": [
-      "uncategorised"
+      "renal"
     ],
     "polypharmacy-and-medicines-related-harm": [
       "frailty"
+    ],
+    "red-leg-assessment": [
+      "cardiology",
+      "musculoskeletal"
     ]
   }
 }
