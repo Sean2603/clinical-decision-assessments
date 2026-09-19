@@ -2,7 +2,7 @@
   "id": "4at-delirium-screen",
   "title": "4AT delirium screen",
   "subtitle": "Delirium and cognitive impairment screen",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -37,7 +37,7 @@
     {
       "id": "amt4",
       "label": "2. AMT4",
-      "description": "",
+      "description": "Ask the patient their age, date of birth, place (hospital/building), and the current year (0 for no mistakes, 1 for 1 mistake, 2 for 2+ mistakes or untestable)",
       "inputType": "choice",
       "unit": "",
       "scoreWhenTrue": 0,
@@ -63,7 +63,7 @@
     {
       "id": "attention",
       "label": "3. Attention: months backwards",
-      "description": "",
+      "description": " Ask the patient to list the months of the year in reverse order starting from December (0 for 7+ correct, 1 for <7 correct/refused, 2 for untestable)",
       "inputType": "choice",
       "unit": "",
       "scoreWhenTrue": 0,
@@ -89,7 +89,7 @@
     {
       "id": "acute-change",
       "label": "4. Acute change or fluctuating course",
-      "description": "",
+      "description": "Check medical notes or talk to staff/carers to see if there is a distinct mental status change or fluctuation over the past two weeks that persists in the last 24 hours",
       "inputType": "choice",
       "unit": "",
       "scoreWhenTrue": 0,
@@ -149,19 +149,12 @@
   "calculationStrategy": "sum",
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "reviewNotes": null,
-    "nextReviewDue": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-19",
+    "reviewerRole": "tAPUC",
+    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "nextReviewDue": "2028-09-19"
   },
   "evaluation": {
     "kind": "sum",
@@ -222,5 +215,6 @@
       "expectedResultId": "four-plus"
     }
   ],
-  "attachments": []
+  "attachments": [],
+  "prominentResources": []
 }
