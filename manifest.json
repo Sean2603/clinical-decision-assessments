@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.42",
-  "updatedAt": "2026-09-15T16:12:19Z",
+  "contentVersion": "0.0.43",
+  "updatedAt": "2026-09-20T14:04:22Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1377
   },
   "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6698840,
+  "downloadSizeBytes": 6699234,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -27,9 +27,9 @@
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
-    "sha256": "4a9722dea85220c3dea7311a231ec54ef2739ecae3a309007d4d7346f86ce289",
+    "sha256": "5d979294aa4642fd28c2ac987a94972f3e3077a99540695a7c19216930618ae4",
     "schemaSha256": "76c4f8c41cfc403b4dc8e0c811dc8c9e1a4f558341925abb8451575c4c68705c",
-    "sizeBytes": 1945,
+    "sizeBytes": 1958,
     "schemaSizeBytes": 6232,
     "items": [
       {
@@ -41,8 +41,8 @@
       },
       {
         "id": "ent",
-        "title": "ENT",
-        "description": "Ears, nose and throat",
+        "title": "HEENT",
+        "description": "Head, Ears Eyes, nose and throat",
         "order": 20,
         "iconKey": "general"
       },
@@ -287,12 +287,12 @@
     {
       "id": "4at-delirium-screen",
       "title": "4AT delirium screen",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "file": "scoring_tools/4at-delirium-screen.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "7db0d26c05d12c54b0a21d607f8f7d1a6e39c3e8bc2b347a4c3ee30ff0c835b1",
+      "sha256": "042de66d5fbc9061148a3bc7e1ad5975c9875188fb5028b33f6977e7a3d351a3",
       "schemaSha256": "d42e6dfafb516a2d0e09b4798e7d3d24a6b83e0963387848bb75f6ccfe4aa90e",
-      "sizeBytes": 6355,
+      "sizeBytes": 6749,
       "schemaSizeBytes": 15038,
       "attachmentsSizeBytes": 0
     },
