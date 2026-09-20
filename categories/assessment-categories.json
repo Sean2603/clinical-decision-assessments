@@ -10,8 +10,8 @@
     },
     {
       "id": "ent",
-      "title": "ENT",
-      "description": "Ears, nose and throat",
+      "title": "HEENT",
+      "description": "Head, Ears Eyes, nose and throat",
       "order": 20,
       "iconKey": "general"
     },
