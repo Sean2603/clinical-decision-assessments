@@ -2,7 +2,7 @@
   "id": "troponin",
   "title": "Troponin",
   "subtitle": "Myocardial injury, serial change and assay limitations",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Myocardial injury, serial change and assay limitations",
@@ -238,12 +238,12 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
+    "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-09-14",
+    "reviewedOn": "2026-09-24",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
-    "nextReviewDue": "2028-09-14"
+    "reviewNotes": null,
+    "nextReviewDue": "2028-09-24"
   },
   "attachments": [
     {

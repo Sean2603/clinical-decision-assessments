@@ -2,7 +2,7 @@
   "id": "calcium-magnesium-and-phosphate",
   "title": "Calcium, magnesium and phosphate",
   "subtitle": "Corrected calcium, arrhythmia risk and refeeding patterns",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Corrected calcium, arrhythmia risk and refeeding patterns",
@@ -303,12 +303,12 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
+    "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-09-08",
+    "reviewedOn": "2026-09-24",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
-    "nextReviewDue": "2028-09-08"
+    "reviewNotes": null,
+    "nextReviewDue": "2028-09-24"
   },
   "attachments": [],
   "prominentResources": [],
