@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.50",
-  "updatedAt": "2026-09-24T15:28:25Z",
+  "contentVersion": "0.0.51",
+  "updatedAt": "2026-09-24T15:31:21Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6810019,
+  "downloadSizeBytes": 6810081,
   "references": {
     "file": "references/references.json",
     "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
@@ -541,48 +541,48 @@
     {
       "id": "lipase-and-amylase",
       "title": "Lipase and amylase",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "file": "blood_panels/lipase-and-amylase.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "bb6db3d3b08c6ed2dbf9707c118ce5f2af42454bf43474d4b99bbfaad05eb437",
+      "sha256": "a055162962abcb1f4ae1fba91c75c95bb29df98b9291ba0bd0778bddac1e185a",
       "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
-      "sizeBytes": 8941,
+      "sizeBytes": 8969,
       "schemaSizeBytes": 17976,
       "attachmentsSizeBytes": 0
     },
     {
       "id": "liver-blood-tests",
       "title": "Liver blood tests",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "file": "blood_panels/liver-blood-tests.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "1c534f451ba636a417d38378b362198cc8968218bd2e38a39023b2ee9aac526f",
+      "sha256": "bb1c122f54d5c036edfa7be538bf5417e7d77c9c005480a1dc5b59c348929331",
       "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
-      "sizeBytes": 15240,
+      "sizeBytes": 15268,
       "schemaSizeBytes": 17976,
       "attachmentsSizeBytes": 0
     },
     {
       "id": "serum-osmolality",
       "title": "Serum osmolality",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "file": "blood_panels/serum-osmolality.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "b5ae4e4ee02e03da6c203ffcfcfcbcddcdebb846cec62ab7bd2580d313a7218d",
+      "sha256": "b4d7c3f76ad6201721d47631dcdea00dc8de89113c14acd2ddfd75ca5b717618",
       "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
-      "sizeBytes": 12613,
+      "sizeBytes": 12621,
       "schemaSizeBytes": 17976,
       "attachmentsSizeBytes": 0
     },
     {
       "id": "thyroid-function",
       "title": "Thyroid function",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "file": "blood_panels/thyroid-function.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "45c9a4b83a34140fb1c0c183f411af73676572b946e1979f29e865ceaf79d7e4",
+      "sha256": "fb4333bdbed0f52481618f5433dfb804e7c85847f88900e33518620291ab756c",
       "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
-      "sizeBytes": 12463,
+      "sizeBytes": 12491,
       "schemaSizeBytes": 17976,
       "attachmentsSizeBytes": 0
     },
@@ -601,12 +601,12 @@
     {
       "id": "urea-and-electrolytes",
       "title": "Urea and electrolytes",
-      "version": "0.4.0",
+      "version": "0.4.1",
       "file": "blood_panels/urea-and-electrolytes.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "f77e3b4387c0f288f7ed46e9198af1a2181cae8e37d1c232d670b9638597977f",
+      "sha256": "e16a1a1a09232f1e5009b8c11a4d50aca24ee5598fc46162b551251346fb6150",
       "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
-      "sizeBytes": 24239,
+      "sizeBytes": 24209,
       "schemaSizeBytes": 17976,
       "attachmentsSizeBytes": 0
     }
