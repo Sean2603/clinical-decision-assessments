@@ -2,7 +2,7 @@
   "id": "lipase-and-amylase",
   "title": "Lipase and amylase",
   "subtitle": "Pancreatitis interpretation and important alternative causes",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Pancreatitis interpretation and important alternative causes",
@@ -183,12 +183,12 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-24",
+    "reviewerRole": "tAPUC",
     "reviewNotes": null,
-    "nextReviewDue": null
+    "nextReviewDue": "2028-09-24"
   },
   "attachments": [],
   "specimens": [
