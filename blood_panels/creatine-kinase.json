@@ -2,7 +2,7 @@
   "id": "creatine-kinase",
   "title": "Creatine kinase",
   "subtitle": "Muscle injury, rhabdomyolysis and renal-risk features",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Muscle injury, rhabdomyolysis and renal-risk features",
@@ -196,12 +196,12 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
+    "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-24",
+    "reviewedOn": "2026-09-24",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
-    "nextReviewDue": "2028-08-24"
+    "reviewNotes": null,
+    "nextReviewDue": "2028-09-24"
   },
   "attachments": [
     {

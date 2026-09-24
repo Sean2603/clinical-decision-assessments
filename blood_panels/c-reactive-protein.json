@@ -2,7 +2,7 @@
   "id": "c-reactive-protein",
   "title": "C-reactive protein",
   "subtitle": "Inflammatory marker interpreted with timing and clinical context",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Inflammatory marker interpreted with timing and clinical context",
@@ -273,12 +273,12 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
+    "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-09-10",
+    "reviewedOn": "2026-09-24",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
-    "nextReviewDue": "2028-09-10"
+    "reviewNotes": null,
+    "nextReviewDue": "2028-09-24"
   },
   "attachments": [
     {

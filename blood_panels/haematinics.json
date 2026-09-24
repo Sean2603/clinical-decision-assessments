@@ -2,7 +2,7 @@
   "id": "haematinics",
   "title": "Haematinics",
   "subtitle": "Ferritin, transferrin saturation, B12 and folate",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Ferritin, transferrin saturation, B12 and folate",
@@ -258,12 +258,12 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
+    "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-09-08",
+    "reviewedOn": "2026-09-24",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
-    "nextReviewDue": "2028-09-08"
+    "reviewNotes": null,
+    "nextReviewDue": "2028-09-24"
   },
   "attachments": [],
   "prominentResources": [],
