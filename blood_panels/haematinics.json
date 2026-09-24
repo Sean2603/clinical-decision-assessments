@@ -2,7 +2,7 @@
   "id": "haematinics",
   "title": "Haematinics",
   "subtitle": "Ferritin, transferrin saturation, B12 and folate",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Ferritin, transferrin saturation, B12 and folate",
@@ -103,12 +103,166 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "absolute-iron-deficiency-picture",
+      "title": "Absolute iron deficiency picture",
+      "findings": [
+        "Ferritin low",
+        "Transferrin saturation low",
+        "No active infection or inflammation to explain a falsely normal ferritin"
+      ],
+      "interpretation": [
+        "Low ferritin with low transferrin saturation supports true (absolute) iron deficiency, most often from chronic blood loss or poor intake/absorption",
+        "This combination is more reliable than ferritin alone, which can be falsely normal in inflammation"
+      ],
+      "actions": [
+        "Ask about GI bleeding, menstrual/obstetric history, diet and any malabsorptive condition",
+        "Request FBC to assess for associated microcytic anaemia (see further testing)",
+        "Arrange medical review for further investigation of the bleeding source, particularly in patients over 50 or with new symptoms"
+      ]
+    },
+    {
+      "id": "functional-iron-deficiency-inflammation",
+      "title": "Functional iron deficiency with inflammation",
+      "findings": [
+        "Ferritin normal or raised",
+        "Transferrin saturation low",
+        "Known infection, chronic inflammatory disease, liver disease or malignancy"
+      ],
+      "interpretation": [
+        "Ferritin is an acute-phase protein and can be normal or raised despite true iron deficiency when inflammation is present, masking the deficiency on ferritin alone",
+        "Low transferrin saturation despite a normal/high ferritin suggests iron is not being made available for erythropoiesis, either from true co-existing deficiency or from inflammation itself"
+      ],
+      "actions": [
+        "Correlate with CRP and the activity of the underlying inflammatory condition (see further testing)",
+        "Consider that this pattern can reflect true iron deficiency being masked by inflammation, not just anaemia of chronic disease",
+        "Arrange medical review if the distinction affects treatment (e.g. considering iron replacement) or the cause of inflammation is unclear"
+      ]
+    },
+    {
+      "id": "confirmed-b12-deficiency-picture",
+      "title": "Confirmed B12 deficiency",
+      "findings": [
+        "Vitamin B12 <180 ng/L",
+        "Macrocytosis, glossitis, paraesthesia, gait disturbance or cognitive change may or may not be present"
+      ],
+      "interpretation": [
+        "Meets the threshold for confirmed deficiency; neurological B12 deficiency can occur without anaemia or macrocytosis, so a normal FBC does not exclude clinically important deficiency",
+        "New objective neurological signs (gait disturbance, sensory loss, weakness) represent a more urgent presentation than an isolated low result"
+      ],
+      "actions": [
+        "Examine for objective neurological signs (gait, vibration/proprioception, weakness) rather than relying on symptoms alone",
+        "Treat as time-critical if new gait disturbance, objective sensory loss, weakness, cognitive change or bladder/bowel symptoms are present (see urgent findings)",
+        "Arrange medical review for replacement and investigation of the underlying cause (e.g. pernicious anaemia, dietary, malabsorption)"
+      ]
+    },
+    {
+      "id": "indeterminate-b12-result",
+      "title": "Indeterminate B12 result",
+      "findings": [
+        "Vitamin B12 180–350 ng/L",
+        "Compatible symptoms present (fatigue, paraesthesia, macrocytosis)"
+      ],
+      "interpretation": [
+        "This range does not confirm or exclude deficiency; clinical correlation and, where available, further testing (e.g. active B12/MMA) or a trial of replacement guided by specialist/local pathway may be needed",
+        "Treating on symptoms alone despite an indeterminate result is a reasonable and common approach when clinical suspicion is high"
+      ],
+      "actions": [
+        "Correlate with symptoms, FBC/blood film and risk factors (poor diet, malabsorption, metformin use, older age)",
+        "Discuss with the requesting clinician or follow the local pathway for indeterminate results rather than dismissing symptoms",
+        "Arrange medical review if neurological or haematological features are present despite the indeterminate result"
+      ]
+    },
+    {
+      "id": "folate-deficiency-without-b12-check",
+      "title": "Low folate — confirm B12 status before treating",
+      "findings": [
+        "Folate low",
+        "B12 status not yet known or not checked"
+      ],
+      "interpretation": [
+        "Folate deficiency can cause macrocytic anaemia, but replacing folate without knowing B12 status risks masking or worsening B12 deficiency — folate can improve the anaemia while B12-related neurological injury continues to progress"
+      ],
+      "actions": [
+        "Confirm B12 has been checked (or is being checked) before folate replacement is started",
+        "Ask about diet, alcohol use and malabsorptive conditions as causes of folate deficiency",
+        "Arrange medical review if B12 deficiency cannot be excluded, or if there are any neurological features (see urgent findings)"
+      ]
+    },
+    {
+      "id": "combined-iron-b12-folate-deficiency",
+      "title": "Combined deficiency picture",
+      "findings": [
+        "More than one of iron, B12 or folate low or borderline",
+        "RDW raised or a mixed picture on FBC indices"
+      ],
+      "interpretation": [
+        "Combined deficiencies are common, particularly with poor overall dietary intake, malabsorption (e.g. coeliac disease, bariatric surgery, alcohol excess) or in frail older adults, and can partially mask each other on the FBC (e.g. normal MCV despite significant deficiency)"
+      ],
+      "actions": [
+        "Take a broad dietary, alcohol and gastrointestinal history rather than assuming a single isolated deficiency",
+        "Request coeliac serology or consider malabsorption work-up if no clear dietary cause is found (see further testing)",
+        "Arrange medical review for coordinated replacement, since correcting one deficiency can unmask or worsen another if not addressed together"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "fbc-haematinics",
+      "test": "Full blood count and blood film",
+      "rationale": [
+        "Provides the red-cell indices (MCV, RDW) and morphology that support and characterise a deficiency picture identified on haematinics"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "crp-haematinics",
+      "test": "C-reactive protein",
+      "rationale": [
+        "Helps determine whether a normal or raised ferritin reflects true iron sufficiency or is being masked by an acute-phase response"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "coeliac-serology",
+      "test": "Coeliac serology",
+      "rationale": [
+        "Malabsorption from undiagnosed coeliac disease is a recognised and treatable cause of iron, B12 and/or folate deficiency, particularly when combined or unexplained"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "u-and-e-lft-haematinics",
+      "test": "U&E and liver blood tests",
+      "rationale": [
+        "Identifies renal or hepatic disease that can contribute to anaemia and affects interpretation and safety of any replacement therapy"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "reticulocyte-haematinics",
+      "test": "Reticulocyte count",
+      "rationale": [
+        "Helps confirm a marrow response once deficiency replacement has started, and supports assessment for haemolysis as an alternative or additional cause of macrocytic anaemia"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-haematinics",
+      "test": "Repeat haematinics",
+      "rationale": [
+        "Confirms response to replacement therapy and helps distinguish an indeterminate or borderline result from true deficiency over time"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-09-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": null,
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],

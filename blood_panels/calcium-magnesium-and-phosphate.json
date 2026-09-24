@@ -2,7 +2,7 @@
   "id": "calcium-magnesium-and-phosphate",
   "title": "Calcium, magnesium and phosphate",
   "subtitle": "Corrected calcium, arrhythmia risk and refeeding patterns",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Corrected calcium, arrhythmia risk and refeeding patterns",
@@ -168,12 +168,146 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "hypocalcaemia-with-low-magnesium",
+      "title": "Hypocalcaemia driven by low magnesium",
+      "findings": [
+        "Calcium below the normal range",
+        "Magnesium also below the normal range",
+        "Hypocalcaemia not correcting despite calcium replacement"
+      ],
+      "interpretation": [
+        "Magnesium is required for parathyroid hormone release and action; hypomagnesaemia commonly causes or perpetuates hypocalcaemia that will not correct until magnesium is also replaced"
+      ],
+      "actions": [
+        "Request magnesium alongside calcium if not already done, and replace magnesium as part of the correction plan (see further testing)",
+        "Look for a cause of magnesium loss: diuretics, alcohol, malabsorption, poor intake or proton-pump inhibitor use",
+        "Treat as time-critical if tetany, seizure, stridor, prolonged QT or arrhythmia is present (see urgent findings)"
+      ]
+    },
+    {
+      "id": "malignancy-hypercalcaemia-picture",
+      "title": "Possible malignancy-related hypercalcaemia",
+      "findings": [
+        "Corrected calcium raised, particularly if markedly so",
+        "Weight loss, bone pain, known or suspected malignancy, or new confusion/dehydration"
+      ],
+      "interpretation": [
+        "Malignancy (via bony metastases or PTH-related peptide) is a common cause of significant hypercalcaemia, particularly when the rise is marked or rapid, and often carries a different urgency and work-up to primary hyperparathyroidism"
+      ],
+      "actions": [
+        "Assess hydration status, confusion, weakness and any known cancer history",
+        "Treat as time-critical if corrected calcium is around ≥3.0 mmol/L with symptoms or ECG change (see urgent findings)",
+        "Arrange medical review for further work-up, including PTH and consideration of the underlying malignancy (see further testing)"
+      ]
+    },
+    {
+      "id": "refeeding-syndrome-picture",
+      "title": "Refeeding syndrome picture",
+      "findings": [
+        "Phosphate falling rapidly, often with low potassium and low magnesium",
+        "Recent reintroduction of nutrition (oral, enteral or parenteral) after a period of malnutrition, prolonged fasting or minimal intake"
+      ],
+      "interpretation": [
+        "Reintroducing carbohydrate drives an insulin surge that shifts phosphate, potassium and magnesium intracellularly, producing this combined pattern — it is a recognised, preventable cause of cardiac and respiratory complications"
+      ],
+      "actions": [
+        "Identify at-risk patients before or as soon as feeding starts: prolonged poor intake, alcohol excess, significant weight loss, or unwell/malnourished older adults",
+        "Request potassium and magnesium alongside phosphate to confirm the combined pattern (see further testing)",
+        "Treat as time-critical if there is respiratory or generalised weakness, rhabdomyolysis, or the picture is severe (see urgent findings)"
+      ]
+    },
+    {
+      "id": "renal-failure-mineral-pattern",
+      "title": "Renal-failure mineral pattern",
+      "findings": [
+        "Phosphate raised",
+        "Calcium low or low-normal",
+        "Known or new renal impairment"
+      ],
+      "interpretation": [
+        "Reduced renal phosphate excretion raises phosphate, which in turn suppresses calcium and can drive secondary hyperparathyroidism over time — a different mechanism to the low-phosphate refeeding pattern above"
+      ],
+      "actions": [
+        "Correlate with U&E/eGFR to confirm the degree of renal impairment and whether it is acute or chronic",
+        "Request PTH if the derangement is persistent or the diagnosis is unclear (see further testing)",
+        "Arrange medical review for renal function assessment and management planning"
+      ]
+    },
+    {
+      "id": "symptomatic-electrolyte-arrhythmia-risk",
+      "title": "Symptomatic derangement with arrhythmia risk",
+      "findings": [
+        "Marked abnormality of calcium, magnesium or phosphate",
+        "Palpitations, syncope, seizure, tetany or generalised weakness"
+      ],
+      "interpretation": [
+        "Calcium and magnesium derangements directly affect cardiac conduction (QT prolongation/shortening, torsades) and neuromuscular excitability; symptoms should be taken seriously even before the precise cause is established"
+      ],
+      "actions": [
+        "Obtain a 12-lead ECG and look specifically for QT change or arrhythmia (see further testing)",
+        "Treat as time-critical per the relevant urgent finding and do not wait for the full biochemical picture before escalating a symptomatic patient (see urgent findings)",
+        "Check potassium alongside calcium/magnesium/phosphate, as combined electrolyte disturbances are common and compound arrhythmia risk"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "u-and-e-camgpo4",
+      "test": "U&E",
+      "rationale": [
+        "Renal function is central to interpreting calcium, magnesium and phosphate disturbances and to identifying a renal cause or contraindication to treatment"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "pth",
+      "test": "Parathyroid hormone (PTH)",
+      "rationale": [
+        "Distinguishes primary hyperparathyroidism from other causes of hypercalcaemia, and supports assessment of hypocalcaemia when hypoparathyroidism is suspected"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ecg-camgpo4",
+      "test": "12-lead ECG",
+      "rationale": [
+        "Identifies QT prolongation/shortening or arrhythmia associated with significant calcium or magnesium derangement, particularly in a symptomatic patient"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "vitamin-d",
+      "test": "Vitamin D",
+      "rationale": [
+        "Deficiency is a common and treatable contributor to hypocalcaemia, particularly alongside a low or low-normal phosphate"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "albumin-camgpo4",
+      "test": "Albumin",
+      "rationale": [
+        "Needed to calculate corrected calcium; also a reminder that the correction becomes unreliable in severe hypoalbuminaemia, critical illness or major acid–base disturbance, when ionised calcium is preferable"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "creatine-kinase-camgpo4",
+      "test": "Creatine kinase",
+      "rationale": [
+        "Relevant when severe hypophosphataemia raises concern for rhabdomyolysis or significant muscle weakness"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-09-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": null,
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],

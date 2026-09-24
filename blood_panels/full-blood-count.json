@@ -2,7 +2,7 @@
   "id": "full-blood-count",
   "title": "Full blood count",
   "subtitle": "Haemoglobin, indices, white cells, differential and platelets",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Haemoglobin, indices, white cells, differential and platelets",
@@ -213,14 +213,177 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "iron-deficiency-anaemia-picture",
+      "title": "Iron-deficiency anaemia picture",
+      "findings": [
+        "Haemoglobin below the normal range",
+        "MCV and MCH low (microcytic, hypochromic)",
+        "RDW often raised"
+      ],
+      "interpretation": [
+        "Suggests iron deficiency; consider chronic blood loss (GI, menstrual), poor dietary intake or malabsorption",
+        "Thalassaemia trait is a differential for microcytosis, particularly when RDW is not raised and the picture is longstanding or in a relevant ethnic background"
+      ],
+      "actions": [
+        "Ask specifically about GI bleeding (melaena, weight loss, change in bowel habit) and menstrual/obstetric history",
+        "Request ferritin and haematinics to confirm iron deficiency (see further testing)",
+        "Arrange medical review for further investigation of the bleeding source, particularly in patients over 50 or with new symptoms"
+      ]
+    },
+    {
+      "id": "macrocytic-anaemia-picture",
+      "title": "Macrocytic anaemia picture",
+      "findings": [
+        "Haemoglobin below the normal range",
+        "MCV raised"
+      ],
+      "interpretation": [
+        "Consider vitamin B12 or folate deficiency, alcohol excess, liver disease, hypothyroidism or a reticulocyte response to haemolysis/bleeding",
+        "Neurological symptoms (paraesthesia, ataxia, cognitive change) can occur with B12 deficiency and may precede the anaemia"
+      ],
+      "actions": [
+        "Ask about diet, alcohol use, medication and neurological symptoms",
+        "Request B12, folate and thyroid function alongside a blood film (see further testing)",
+        "Arrange medical review if neurological symptoms are present or the anaemia is marked or symptomatic"
+      ]
+    },
+    {
+      "id": "anaemia-of-chronic-disease-picture",
+      "title": "Anaemia of chronic disease / inflammation picture",
+      "findings": [
+        "Haemoglobin below the normal range",
+        "MCV normal or mildly low",
+        "Known chronic inflammatory, infective, renal or malignant condition"
+      ],
+      "interpretation": [
+        "A normocytic or mildly microcytic anaemia in the context of chronic disease is often multifactorial rather than a single deficiency",
+        "Can co-exist with true iron deficiency, which ferritin alone may not reliably distinguish during active inflammation"
+      ],
+      "actions": [
+        "Correlate with the underlying chronic condition and its current activity/control",
+        "Request CRP and haematinics if the cause is unclear (see further testing)",
+        "Arrange routine or same-day review depending on symptom burden and trajectory"
+      ]
+    },
+    {
+      "id": "reactive-neutrophilia-infection-picture",
+      "title": "Reactive neutrophilia / infection picture",
+      "findings": [
+        "Total WCC and neutrophils raised",
+        "Clinical signs or symptoms of infection or inflammation"
+      ],
+      "interpretation": [
+        "Common and usually reflects bacterial infection, inflammation, tissue injury or a physiological/steroid-driven response rather than primary haematological disease"
+      ],
+      "actions": [
+        "Correlate with clinical source, observations and CRP (see further testing)",
+        "Treat the underlying cause per local sepsis/infection pathway if clinically indicated",
+        "Reassess if the count remains markedly raised or rises further despite treatment"
+      ]
+    },
+    {
+      "id": "unexplained-thrombocytopenia-picture",
+      "title": "Unexplained thrombocytopenia picture",
+      "findings": [
+        "Platelet count below the normal range",
+        "No clear precipitant such as recent chemotherapy, known liver disease or sepsis"
+      ],
+      "interpretation": [
+        "Consider immune thrombocytopenia, medication effect, liver disease, hypersplenism, marrow infiltration or, if other cell lines are also affected, marrow failure",
+        "Bleeding risk depends on the count, trajectory and platelet function, not the count alone"
+      ],
+      "actions": [
+        "Review medication list for known causes of drug-induced thrombocytopenia",
+        "Examine for bleeding, bruising, petechiae, splenomegaly and lymphadenopathy",
+        "Arrange medical review for further work-up; treat as urgent if bleeding, a very low count, or other cell lines are also abnormal (see urgent findings)"
+      ]
+    },
+    {
+      "id": "possible-lymphoproliferative-picture",
+      "title": "Possible lymphoproliferative picture",
+      "findings": [
+        "Marked or persistent lymphocytosis",
+        "Abnormal differential or atypical cells flagged by the laboratory",
+        "Systemic features such as lymphadenopathy, weight loss, night sweats or fatigue"
+      ],
+      "interpretation": [
+        "Most lymphocytosis is reactive (viral illness), but persistence, a very high count, or systemic ('B') symptoms raise the possibility of a lymphoproliferative disorder",
+        "This distinction usually cannot be made on the FBC alone"
+      ],
+      "actions": [
+        "Examine for lymphadenopathy, hepatosplenomegaly and systemic symptoms",
+        "Arrange medical review for further investigation, including a blood film (see further testing)",
+        "Safety-net and arrange follow-up FBC if the picture is otherwise well and improving"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "blood-film",
+      "test": "Blood film",
+      "rationale": [
+        "Reviews red-cell morphology, white-cell differential and platelet appearance directly, which can identify a cause (e.g. iron deficiency, haemolysis, blasts, atypical lymphocytes) that the automated count alone cannot"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "haematinics-panel",
+      "test": "Haematinics (ferritin, B12, folate)",
+      "rationale": [
+        "Confirms and distinguishes iron, B12 and folate deficiency as causes of microcytic or macrocytic anaemia"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "reticulocyte-count",
+      "test": "Reticulocyte count",
+      "rationale": [
+        "Distinguishes a marrow response (e.g. haemolysis, acute bleeding) from marrow failure or a hypoproliferative anaemia"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "crp-fbc",
+      "test": "C-reactive protein",
+      "rationale": [
+        "Supports assessment of an infective or inflammatory driver of a raised white-cell count or anaemia of chronic disease"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "u-and-e-lft-fbc",
+      "test": "U&E and liver blood tests",
+      "rationale": [
+        "Identifies renal or hepatic disease that can contribute to anaemia, and provides baseline organ function before further investigation or treatment"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-fbc",
+      "test": "Repeat FBC",
+      "rationale": [
+        "A single result can be misleading — trend over serial results helps confirm whether an abnormality is improving, stable, evolving or an artefact before further escalation"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-09-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": null,
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [],
+  "specimens": [
+    {
+      "specimenTypeId": "purple",
+      "quantity": 1,
+      "notes": "Whole blood — purple/lilac-top EDTA tube, 3 mL. Do not use a heparinised tube — heparin can cause platelet clumping and affect the film."
+    }
+  ]
 }

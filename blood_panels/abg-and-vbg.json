@@ -2,7 +2,7 @@
   "id": "abg-and-vbg",
   "title": "ABG and VBG",
   "subtitle": "Acid–base status, ventilation, oxygenation and lactate",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Acid–base status, ventilation, oxygenation and lactate ",
@@ -463,13 +463,182 @@
     "Always review potassium, glucose, ketones, lactate, haemoglobin and carboxyhaemoglobin/methemoglobin when clinically relevant."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "acute-hypoventilation-respiratory-acidosis",
+      "title": "Acute hypoventilation / respiratory acidosis",
+      "findings": [
+        "Low pH with raised pCO₂",
+        "Bicarbonate normal or only mildly raised (little time for renal compensation)",
+        "Drowsiness, exhaustion, opioid/sedative exposure or severe airway obstruction"
+      ],
+      "interpretation": [
+        "Suggests acute hypoventilation from causes such as opioid/sedative effect, neuromuscular weakness, severe asthma/COPD exacerbation with fatigue, or upper airway obstruction",
+        "A normal-range bicarbonate with acidaemia suggests this is acute rather than an acute-on-chronic picture"
+      ],
+      "actions": [
+        "Treat as time-critical if pH is below 7.35 with drowsiness or exhaustion (see urgent findings)",
+        "Identify and treat the cause of hypoventilation (reverse sedation/opioid where appropriate, treat bronchospasm, support the airway)",
+        "Reassess ventilation and repeat gas after any intervention rather than relying on a single result"
+      ]
+    },
+    {
+      "id": "acute-on-chronic-respiratory-acidosis",
+      "title": "Acute-on-chronic respiratory acidosis",
+      "findings": [
+        "Low pH with raised pCO₂",
+        "Bicarbonate raised, reflecting renal compensation",
+        "Known COPD or chronic respiratory disease"
+      ],
+      "interpretation": [
+        "A raised bicarbonate indicates renal compensation has had time to develop, suggesting a chronic respiratory acidosis that has now acutely decompensated rather than a purely acute event",
+        "The patient's own baseline gas (if known) is valuable context — a pH within their usual compensated range may be less concerning than the same pH would be in someone without chronic disease"
+      ],
+      "actions": [
+        "Compare with any previous blood gas results to establish the patient's own baseline where available",
+        "Treat as time-critical if pH is below 7.35 with drowsiness/exhaustion, or if pH is below 7.25 regardless of chronicity (see urgent findings)",
+        "Record the oxygen device and flow/FiO₂ carefully — controlled oxygen therapy is often relevant in this group"
+      ]
+    },
+    {
+      "id": "high-anion-gap-metabolic-acidosis",
+      "title": "Likely high-anion-gap metabolic acidosis",
+      "findings": [
+        "Low pH with low bicarbonate",
+        "Low pCO₂ (respiratory compensation)",
+        "Raised lactate, ketones, or known renal failure/toxin exposure"
+      ],
+      "interpretation": [
+        "Consider the standard high-anion-gap causes: lactate (hypoperfusion, sepsis, seizure, metformin), ketones (DKA, starvation, alcoholic ketoacidosis), renal failure (uraemia), and toxins (salicylates, methanol, ethylene glycol)",
+        "The specific cause changes management significantly, so the pattern alone is only a starting point"
+      ],
+      "actions": [
+        "Check lactate and ketones as the two most common and rapidly actionable causes (see further testing)",
+        "Consider toxin ingestion and an osmolal gap if the cause is not clear from lactate/ketones/renal function",
+        "Treat as time-critical for pH <7.25, a falling pH, or a mixed acidosis pattern (see urgent findings)"
+      ]
+    },
+    {
+      "id": "mixed-acidosis-high-risk",
+      "title": "Mixed respiratory and metabolic acidosis",
+      "findings": [
+        "Low pH with raised pCO₂ and low bicarbonate"
+      ],
+      "interpretation": [
+        "Both respiratory and metabolic processes are driving the pH down simultaneously with no compensation evident — this is a high-risk pattern and often indicates a severely unwell patient (for example combined respiratory failure and shock/sepsis)"
+      ],
+      "actions": [
+        "Treat as time-critical regardless of the specific underlying cause (see urgent findings)",
+        "Request lactate, ketones, U&E and consider toxin screening to identify the metabolic component while addressing ventilation",
+        "Arrange urgent senior/medical review — this pattern usually needs simultaneous respiratory and circulatory support"
+      ]
+    },
+    {
+      "id": "respiratory-alkalosis-serious-cause",
+      "title": "Respiratory alkalosis — exclude a serious cause first",
+      "findings": [
+        "High pH with low pCO₂",
+        "Tachypnoea"
+      ],
+      "interpretation": [
+        "Pain and anxiety are common causes but are diagnoses of exclusion — hypoxia, PE, sepsis, pregnancy, liver disease and salicylate poisoning can all present with a respiratory alkalosis and must be actively considered first"
+      ],
+      "actions": [
+        "Check oxygenation directly (SpO₂, PaO₂ on an arterial sample if oxygenation assessment is needed) rather than assuming a benign cause",
+        "Consider PE risk factors, sepsis features, pregnancy status and salicylate exposure before attributing the picture to pain/anxiety",
+        "Request lactate and consider further targeted testing based on the differential being excluded (see further testing)"
+      ]
+    },
+    {
+      "id": "metabolic-alkalosis-gi-diuretic-picture",
+      "title": "Metabolic alkalosis — GI loss or diuretic picture",
+      "findings": [
+        "High pH with raised bicarbonate",
+        "Vomiting, gastric losses, diuretic use, or low potassium"
+      ],
+      "interpretation": [
+        "Vomiting/gastric losses and diuretics are the most common causes; hypokalaemia both results from and perpetuates this pattern, and mineralocorticoid excess or alkali administration are less common alternatives"
+      ],
+      "actions": [
+        "Request U&E to check potassium, which is often low and needs correction alongside the underlying cause (see further testing)",
+        "Review diuretic use and ask about vomiting/gastric losses (e.g. nasogastric drainage, pyloric stenosis)",
+        "Arrange medical review if the cause is not clear or the alkalosis is marked"
+      ]
+    },
+    {
+      "id": "raised-lactate-on-gas",
+      "title": "Raised lactate on the gas",
+      "findings": [
+        "Lactate ≥2.0 mmol/L, particularly ≥4.0 mmol/L",
+        "Hypotension, tachycardia, mottled skin or signs of infection"
+      ],
+      "interpretation": [
+        "Supports hypoperfusion or sepsis and is an important severity marker, but a normal lactate does not exclude sepsis or shock, and a raised lactate can also reflect seizure, severe work of breathing, beta-agonist use, liver dysfunction, metformin accumulation or toxins"
+      ],
+      "actions": [
+        "Treat as time-critical if lactate is ≥4.0 mmol/L or the patient shows signs of shock (see urgent findings)",
+        "Consider non-hypoperfusion causes if the clinical picture does not fit sepsis/shock",
+        "Repeat the gas to assess lactate trend and response to treatment"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "u-and-e-abg",
+      "test": "U&E",
+      "rationale": [
+        "Potassium is essential context for acid–base disturbance (both cause and consequence), and renal function helps identify uraemic or renal causes of metabolic acidosis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ketones-abg",
+      "test": "Blood ketones",
+      "rationale": [
+        "Identifies ketoacidosis (diabetic, alcoholic or starvation) as the cause of a high-anion-gap metabolic acidosis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "glucose-abg",
+      "test": "Capillary or laboratory glucose",
+      "rationale": [
+        "Needed alongside ketones and pH to identify and grade DKA/HHS when a metabolic acidosis or hyperosmolar picture is present"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "spo2-oxygenation-abg",
+      "test": "Pulse oximetry / arterial sample for oxygenation",
+      "rationale": [
+        "Venous pO₂ cannot be used to assess oxygenation; an arterial sample or reliable SpO₂ is needed whenever hypoxaemia is a concern"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "osmolality-abg",
+      "test": "Serum osmolality / osmolal gap",
+      "rationale": [
+        "Supports identification of toxic alcohol ingestion when a high-anion-gap metabolic acidosis is not explained by lactate, ketones or renal failure"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-gas",
+      "test": "Repeat blood gas",
+      "rationale": [
+        "Acid–base status can change rapidly with treatment or deterioration; trend is often more useful than a single value, particularly after an intervention"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-08-28",
     "reviewerRole": "tAPUC",
     "nextReviewDue": "2028-08-28",
-    "reviewNotes": "Review completed. No additional review comments recorded."
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review."
   },
   "attachments": [],
   "prominentResources": [],

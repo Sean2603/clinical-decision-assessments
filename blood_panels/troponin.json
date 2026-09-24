@@ -2,7 +2,7 @@
   "id": "troponin",
   "title": "Troponin",
   "subtitle": "Myocardial injury, serial change and assay limitations",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Myocardial injury, serial change and assay limitations",
@@ -79,12 +79,170 @@
   "referenceIds": [
     "NICE-NG185"
   ],
+  "commonPatterns": [
+    {
+      "id": "type-1-mi-picture",
+      "title": "Type 1 MI picture",
+      "findings": [
+        "Troponin above the 99th centile with a significant rise/fall on serial sampling",
+        "Ischaemic-type symptoms or ECG changes (ST elevation/depression, dynamic T-wave change)"
+      ],
+      "interpretation": [
+        "Supports acute plaque rupture/thrombosis (type 1 MI) rather than a chronic or non-coronary cause",
+        "The diagnosis of MI needs the biochemical rise/fall plus clinical evidence of ischaemia, not troponin alone"
+      ],
+      "actions": [
+        "Treat as time-critical per local ACS/chest pain pathway regardless of a single reassuring earlier result (see urgent findings)",
+        "Obtain serial ECGs and repeat troponin per the validated local pathway timing",
+        "Arrange urgent medical review; do not wait for a further result if ongoing ischaemic symptoms or ECG changes are present"
+      ]
+    },
+    {
+      "id": "type-2-mi-supply-demand-picture",
+      "title": "Type 2 MI / supply–demand mismatch picture",
+      "findings": [
+        "Troponin above the 99th centile, with or without a dynamic rise/fall",
+        "A precipitant such as tachyarrhythmia, severe hypotension, severe anaemia, hypoxia or sepsis rather than typical ischaemic chest pain"
+      ],
+      "interpretation": [
+        "Reflects myocardial oxygen supply–demand imbalance rather than primary coronary plaque rupture, though the two can co-exist and are not always easy to separate clinically",
+        "Still requires clinical correlation — a raised troponin should not be dismissed as 'just' type 2 without considering ACS"
+      ],
+      "actions": [
+        "Identify and treat the precipitant (rate control, resuscitation, correct anaemia/hypoxia, treat sepsis)",
+        "Request FBC and U&E to assess for anaemia and renal function as contributing factors (see further testing)",
+        "Arrange medical review, particularly if the precipitant is not readily identified or the patient remains symptomatic"
+      ]
+    },
+    {
+      "id": "chronic-stable-elevation-picture",
+      "title": "Chronic stable elevation picture",
+      "findings": [
+        "Troponin persistently above the 99th centile on repeat testing",
+        "No significant rise/fall between samples",
+        "Known CKD or structural heart disease"
+      ],
+      "interpretation": [
+        "Chronic stable elevation is common in CKD and structural heart disease and does not by itself indicate acute MI",
+        "A new rise/fall from this chronic baseline can still represent acute injury, so previous results are important context"
+      ],
+      "actions": [
+        "Compare with any previous troponin results where available to establish the patient's own baseline",
+        "Continue to assess symptoms and ECG on their own merits rather than dismissing a raised result as 'baseline' without comparison",
+        "Arrange medical review if there is a new symptomatic presentation or the result is higher than the patient's known baseline"
+      ]
+    },
+    {
+      "id": "possible-myocarditis-pericarditis-picture",
+      "title": "Possible myocarditis / pericarditis picture",
+      "findings": [
+        "Troponin above the 99th centile",
+        "Chest pain, often pleuritic or positional, sometimes preceded by a viral illness",
+        "Diffuse ECG changes rather than a single-territory pattern"
+      ],
+      "interpretation": [
+        "Myocarditis and pericarditis can raise troponin through direct myocardial inflammation rather than coronary thrombosis",
+        "Can be difficult to distinguish from ACS on troponin and ECG alone; both need urgent assessment"
+      ],
+      "actions": [
+        "Ask about preceding viral symptoms, pericarditic features (positional/pleuritic pain, relief sitting forward) and exercise history",
+        "Obtain a 12-lead ECG and treat as a time-critical presentation while ACS remains a differential (see urgent findings)",
+        "Arrange urgent medical review for further assessment, which may include echocardiography"
+      ]
+    },
+    {
+      "id": "pe-associated-troponin-rise",
+      "title": "PE-associated troponin rise",
+      "findings": [
+        "Troponin above the 99th centile",
+        "Hypoxia, tachycardia, pleuritic chest pain or risk factors for venous thromboembolism"
+      ],
+      "interpretation": [
+        "Right ventricular strain from a significant pulmonary embolism can raise troponin and is a marker of higher-risk PE, not just an incidental finding",
+        "Should not be assumed to be cardiac in origin without considering PE, particularly with hypoxia or risk factors"
+      ],
+      "actions": [
+        "Assess PE risk factors and consider a validated PE risk score as part of the wider assessment",
+        "Request D-dimer if clinically appropriate, and treat as time-critical if haemodynamically unstable (see further testing)",
+        "Arrange urgent medical review; escalate directly if there is haemodynamic compromise or severe hypoxia"
+      ]
+    },
+    {
+      "id": "too-early-non-diagnostic-sample",
+      "title": "Too-early / non-diagnostic sample",
+      "findings": [
+        "Troponin below the assay cut-off or the 99th centile",
+        "Symptom onset very recent relative to the sample, or sampling timing outside the validated pathway"
+      ],
+      "interpretation": [
+        "A single low troponin only excludes MI when the validated local pathway's timing rules are met — an early sample can be falsely reassuring",
+        "A low troponin does not exclude unstable angina, PE, aortic dissection or other causes of chest pain"
+      ],
+      "actions": [
+        "Check the time from symptom onset and confirm this fits the validated 0/1-hour, 0/2-hour or other local pathway before treating the result as reassuring",
+        "Arrange repeat troponin at the pathway-defined interval if the timing criteria are not yet met",
+        "Continue to manage ongoing symptoms on clinical grounds regardless of an early low troponin (see urgent findings)"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "serial-troponin",
+      "test": "Serial troponin",
+      "rationale": [
+        "A single value rarely confirms or excludes MI — the rise/fall pattern on the validated local pathway (0/1-hour, 0/2-hour or other) is central to interpretation"
+      ],
+      "referenceIds": [
+        "NICE-NG185"
+      ]
+    },
+    {
+      "id": "serial-ecg",
+      "test": "Serial 12-lead ECG",
+      "rationale": [
+        "Dynamic ECG change can appear after an initial normal ECG and is central to identifying ongoing ischaemia alongside troponin trend"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "fbc-troponin",
+      "test": "Full blood count",
+      "rationale": [
+        "Identifies significant anaemia as a contributor to a type 2 (supply–demand) troponin rise"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "u-and-e-troponin",
+      "test": "U&E",
+      "rationale": [
+        "Renal impairment is associated with chronic troponin elevation and is relevant context when interpreting an abnormal result"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "bnp-troponin",
+      "test": "BNP / NT-proBNP",
+      "rationale": [
+        "Supports assessment for heart failure when a raised troponin occurs alongside breathlessness or signs of fluid overload"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "d-dimer-troponin",
+      "test": "D-dimer",
+      "rationale": [
+        "Relevant when pulmonary embolism is a differential for a raised troponin with hypoxia, tachycardia or pleuritic chest pain"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-09-14",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-09-14"
   },
   "attachments": [

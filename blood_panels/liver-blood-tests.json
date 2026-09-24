@@ -2,7 +2,7 @@
   "id": "liver-blood-tests",
   "title": "Liver blood tests",
   "subtitle": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Bilirubin, ALT, ALP, GGT, albumin and synthetic function",
@@ -221,6 +221,143 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "acute-hepatocellular-injury-picture",
+      "title": "Acute hepatocellular injury picture",
+      "findings": [
+        "ALT markedly raised, predominating over ALP",
+        "Acute onset of symptoms (malaise, nausea, right-upper-quadrant discomfort) or a new medication/toxin exposure"
+      ],
+      "interpretation": [
+        "Suggests acute hepatocyte injury; consider viral hepatitis, drug-induced liver injury (including paracetamol overdose), ischaemic hepatitis, autoimmune hepatitis or alcohol-related injury",
+        "The degree of ALT rise and the trajectory (with INR and bilirubin) matter more than a single value for judging severity"
+      ],
+      "actions": [
+        "Take a focused history: medicines (including over-the-counter and herbal), alcohol, overdose risk, recent hypotensive episode and viral/travel exposure",
+        "Check INR and bilirubin alongside ALT to assess synthetic function and severity (see further testing)",
+        "Treat as time-critical if there is confusion, bleeding, rising INR or a very large ALT rise (see urgent findings)"
+      ]
+    },
+    {
+      "id": "cholestatic-obstructive-picture",
+      "title": "Cholestatic / obstructive picture",
+      "findings": [
+        "ALP raised, supported by a raised GGT",
+        "Bilirubin raised",
+        "Right-upper-quadrant pain, pale stool, dark urine or pruritus"
+      ],
+      "interpretation": [
+        "Suggests biliary obstruction or cholestasis; consider gallstones, biliary stricture, pancreatic/biliary malignancy or drug-induced cholestasis",
+        "Fever, right-upper-quadrant pain and jaundice together raise concern for ascending cholangitis, which is time-critical"
+      ],
+      "actions": [
+        "Assess for fever, rigors, hypotension or confusion suggesting cholangitis and treat as time-critical if present (see urgent findings)",
+        "Request FBC and CRP to support assessment of infection/inflammation, and consider imaging referral (see further testing)",
+        "Arrange prompt medical assessment for obstructive causes, particularly with pale stool, dark urine, pruritus, weight loss or a palpable gallbladder"
+      ]
+    },
+    {
+      "id": "mixed-pattern-liver-injury",
+      "title": "Mixed hepatocellular/cholestatic pattern",
+      "findings": [
+        "Both ALT and ALP substantially raised"
+      ],
+      "interpretation": [
+        "Consider drug-induced liver injury, infection, obstruction with secondary hepatocyte injury, or another mixed hepatic process — the mixed pattern is less specific than a pure hepatocellular or cholestatic picture"
+      ],
+      "actions": [
+        "Review medication history in detail, including recently started or changed drugs",
+        "Request further testing to help localise the process (see further testing)",
+        "Arrange medical review for further work-up, especially if the derangement is marked or the patient is symptomatic"
+      ]
+    },
+    {
+      "id": "possible-acute-liver-failure",
+      "title": "Possible acute liver failure",
+      "findings": [
+        "Markedly abnormal liver blood tests, often with a large ALT rise",
+        "Rising INR",
+        "Confusion, drowsiness, hypoglycaemia or bleeding"
+      ],
+      "interpretation": [
+        "This combination suggests acute liver failure, a time-critical presentation — a rising INR reflects failing synthetic function and is a key severity marker, more so than the ALT level alone",
+        "Albumin changes slowly and should not be relied on to assess acute severity"
+      ],
+      "actions": [
+        "Treat as time-critical and arrange urgent hospital assessment (see urgent findings)",
+        "Check glucose immediately — hypoglycaemia is a recognised and dangerous feature of acute liver failure",
+        "Establish overdose risk (particularly paracetamol) and timing, as this changes the urgency and specific treatment available"
+      ]
+    },
+    {
+      "id": "isolated-bilirubin-rise-picture",
+      "title": "Isolated bilirubin rise",
+      "findings": [
+        "Bilirubin raised",
+        "ALT, ALP and GGT normal or minimally changed"
+      ],
+      "interpretation": [
+        "Consider Gilbert syndrome (common and benign, often intermittent and stress/fasting related), haemolysis, or an early/partial obstructive process too soon to raise other enzymes",
+        "Distinguishing these usually needs the conjugated/unconjugated split, which is not always available acutely"
+      ],
+      "actions": [
+        "Ask about a known history of Gilbert syndrome, fasting, intercurrent illness and pattern of previous mild jaundice",
+        "Request FBC and consider haemolysis screen if there are features of anaemia, dark urine or fatigue (see further testing)",
+        "Arrange routine follow-up if the patient is well; escalate if pale stool, dark urine or other obstructive features develop"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "clotting-screen-lft",
+      "test": "Coagulation screen (INR/PT)",
+      "rationale": [
+        "INR is a key marker of hepatic synthetic function and severity in acute liver injury, and is followed serially to assess for evolving liver failure"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "fbc-lft",
+      "test": "Full blood count",
+      "rationale": [
+        "Helps identify haemolysis as a cause of isolated bilirubin rise, and infection/inflammation contributing to a cholestatic picture"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "crp-lft",
+      "test": "C-reactive protein",
+      "rationale": [
+        "Supports assessment of an infective or inflammatory driver when a cholestatic or mixed pattern is present, particularly if cholangitis is suspected"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "capillary-glucose-lft",
+      "test": "Capillary glucose",
+      "rationale": [
+        "Hypoglycaemia is a recognised and dangerous feature of acute liver failure and should be checked promptly when this is suspected"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "paracetamol-level",
+      "test": "Paracetamol (and salicylate) level",
+      "rationale": [
+        "Essential when acute liver injury could be drug-induced or overdose is a possibility, as this determines specific antidote treatment and urgency"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "abdominal-imaging-referral",
+      "test": "Abdominal ultrasound / imaging referral",
+      "rationale": [
+        "Needed to confirm or exclude biliary obstruction (gallstones, stricture, malignancy) in a cholestatic or mixed pattern"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,

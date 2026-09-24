@@ -2,7 +2,7 @@
   "id": "creatine-kinase",
   "title": "Creatine kinase",
   "subtitle": "Muscle injury, rhabdomyolysis and renal-risk features",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Muscle injury, rhabdomyolysis and renal-risk features",
@@ -61,12 +61,146 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "long-lie-rhabdomyolysis",
+      "title": "Long-lie / immobility rhabdomyolysis",
+      "findings": [
+        "CK markedly raised",
+        "History of a long lie, fall with inability to get up, or prolonged immobilisation"
+      ],
+      "interpretation": [
+        "Prolonged pressure on muscle causes breakdown and releases CK, potassium and myoglobin; this is easy to miss if a long lie is not specifically asked about, particularly in older adults found on the floor"
+      ],
+      "actions": [
+        "Actively ask about time spent on the floor/immobile, and examine for pressure areas and compartment-type pain",
+        "Request U&E to check potassium and renal function alongside CK (see further testing)",
+        "Encourage oral fluids where safe, and treat as time-critical if there is hyperkalaemia, AKI or systemic illness (see urgent findings)"
+      ]
+    },
+    {
+      "id": "exertional-rhabdomyolysis",
+      "title": "Exertional rhabdomyolysis",
+      "findings": [
+        "CK markedly raised",
+        "Recent extreme or unaccustomed exercise, heat exposure, or exercising while unwell"
+      ],
+      "interpretation": [
+        "Strenuous exercise, particularly in heat or in an unaccustomed or unfit individual, can cause significant muscle breakdown even without trauma or a long lie"
+      ],
+      "actions": [
+        "Ask specifically about recent exercise intensity, hydration during exercise and any heat exposure",
+        "Encourage oral rehydration where safe and appropriate, and request U&E to assess renal function and potassium (see further testing)",
+        "Treat as time-critical if there are features of AKI, hyperkalaemia or systemic illness (see urgent findings)"
+      ]
+    },
+    {
+      "id": "seizure-or-crush-injury-rhabdomyolysis",
+      "title": "Seizure or crush-injury rhabdomyolysis",
+      "findings": [
+        "CK markedly raised",
+        "Recent prolonged or repeated seizure activity, or a crush/entrapment injury"
+      ],
+      "interpretation": [
+        "Sustained muscle contraction (prolonged seizure) or direct muscle injury (crush) can cause severe rhabdomyolysis, sometimes with a delayed peak in CK after the initial event"
+      ],
+      "actions": [
+        "Establish the duration of seizure activity or the mechanism and duration of crush/entrapment",
+        "Request U&E and consider repeat CK, as levels can continue rising for hours after the injury (see further testing)",
+        "Treat as time-critical if there is dark urine, oliguria, hyperkalaemia or ECG change (see urgent findings)"
+      ]
+    },
+    {
+      "id": "medication-statin-related-ck-rise",
+      "title": "Medication/statin-related CK rise",
+      "findings": [
+        "CK raised, often mild to moderate",
+        "Current statin or other myotoxic medication, without a clear alternative precipitant"
+      ],
+      "interpretation": [
+        "Statins and some other medicines can cause a myopathy with raised CK ranging from asymptomatic elevation to severe rhabdomyolysis; muscle pain and weakness support a clinically significant reaction rather than an incidental finding"
+      ],
+      "actions": [
+        "Ask specifically about muscle pain, weakness and timing relative to starting or increasing the medication",
+        "Review the medication list for other interacting or myotoxic drugs",
+        "Arrange medical review for consideration of stopping/changing the medication if the rise is significant or symptomatic; treat as time-critical if severe (see urgent findings)"
+      ]
+    },
+    {
+      "id": "isolated-mild-ck-rise-low-risk",
+      "title": "Isolated mild CK rise, low apparent risk",
+      "findings": [
+        "CK mildly raised",
+        "No long lie, crush injury, seizure, extreme exertion or significant medication history",
+        "Well-appearing patient"
+      ],
+      "interpretation": [
+        "A mild rise without a clear precipitant and without renal, potassium or systemic derangement is lower risk, but the absence of a precipitant should still be actively checked for rather than assumed",
+        "5,000 U/L is a commonly cited marker of higher AKI risk, but AKI and dangerous hyperkalaemia can occur at lower levels, particularly with dehydration or baseline renal disease"
+      ],
+      "actions": [
+        "Confirm renal function and potassium are normal before treating the result as reassuring (see further testing)",
+        "Safety-net for dark urine, reduced urine output or worsening symptoms, and arrange repeat CK if the trend is unclear",
+        "Reassess if any precipitant (long lie, exertion, medication, seizure) is subsequently identified"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "u-and-e-ck",
+      "test": "U&E",
+      "rationale": [
+        "Assesses renal function and potassium, which drive the acute risk from rhabdomyolysis more than the CK level alone"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "calcium-magnesium-phosphate-ck",
+      "test": "Calcium, magnesium and phosphate",
+      "rationale": [
+        "Deranged calcium and phosphate are relevant in significant rhabdomyolysis and should be checked alongside U&E"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "venous-blood-gas-ck",
+      "test": "Venous blood gas",
+      "rationale": [
+        "Gives a rapid assessment of acidosis and lactate, which support severity assessment in significant rhabdomyolysis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "urinalysis-ck",
+      "test": "Urinalysis / urine dipstick",
+      "rationale": [
+        "A dipstick strongly positive for blood without red cells on microscopy supports myoglobinuria and is a quick bedside clue to significant muscle breakdown"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-ck",
+      "test": "Repeat CK",
+      "rationale": [
+        "CK can continue rising for hours after the precipitating injury, so a single early result may underestimate the peak — repeat testing helps confirm the trend"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ecg-ck",
+      "test": "12-lead ECG",
+      "rationale": [
+        "Identifies ECG changes of hyperkalaemia, which is a key time-critical complication of significant rhabdomyolysis"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-08-24",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-08-24"
   },
   "attachments": [

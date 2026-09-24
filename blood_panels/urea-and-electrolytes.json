@@ -2,11 +2,11 @@
   "id": "urea-and-electrolytes",
   "title": "Urea and electrolytes",
   "subtitle": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
-  "introduction": "Interpret electrolytes with symptoms, fluid status, medication, urine output and previous results. Creatinine and eGFR must be interpreted against baseline; eGFR is unreliable during rapidly changing kidney function.",
+  "introduction": "Reference ranges shown are RVH (local) adult ranges. Interpret electrolytes with symptoms, fluid status, medication, urine output and previous results. Creatinine and eGFR must be interpreted against baseline; eGFR is unreliable during rapidly changing kidney function.",
   "sections": [
     {
       "id": "electrolytes",
@@ -16,7 +16,7 @@
           "id": "sodium",
           "name": "Sodium",
           "unit": "",
-          "referenceRange": "RVH adult reference: 135–146 mmol/L",
+          "referenceRange": "135–146 mmol/L",
           "lowInterpretation": [
             "Hyponatraemia. Confirm chronicity and assess volume status, glucose, serum osmolality, medication, heart/liver/renal disease and SIADH causes."
           ],
@@ -34,7 +34,7 @@
           "id": "potassium",
           "name": "Potassium",
           "unit": "",
-          "referenceRange": "RVH adult reference: 3.5–4.6 mmol/L",
+          "referenceRange": "3.5–4.6 mmol/L",
           "lowInterpretation": [
             "GI or renal losses, diuretics, insulin or intracellular shift. Can cause weakness and arrhythmia."
           ],
@@ -52,7 +52,7 @@
           "id": "bicarbonate",
           "name": "Bicarbonate",
           "unit": "",
-          "referenceRange": "RVH adult reference: 22–29 mmol/L",
+          "referenceRange": "22–29 mmol/L",
           "lowInterpretation": [
             "Metabolic acidosis or respiratory alkalosis. Consider sepsis, renal failure, DKA, diarrhoea, lactate or toxins."
           ],
@@ -80,7 +80,7 @@
           "id": "urea",
           "name": "Urea",
           "unit": "",
-          "referenceRange": "RVH adult reference: 2.5–7.8 mmol/L",
+          "referenceRange": "2.5–7.8 mmol/L",
           "lowInterpretation": [
             "Low protein intake, liver dysfunction, pregnancy or excess fluid."
           ],
@@ -98,7 +98,7 @@
           "id": "creatinine",
           "name": "Creatinine",
           "unit": "",
-          "referenceRange": "RVH adult reference: female 45–84 µmol/L; male 59–104 µmol/L",
+          "referenceRange": "female 45–84 µmol/L; male 59–104 µmol/L",
           "lowInterpretation": [
             "Often low muscle mass; usually not kidney failure."
           ],
@@ -116,7 +116,7 @@
           "id": "egfr",
           "name": "eGFR",
           "unit": "",
-          "referenceRange": "RVH reporting convention: calculated with the electrolyte profile; results above the reporting threshold are shown as >60 mL/min",
+          "referenceRange": "calculated with the electrolyte profile; results above the reporting threshold are shown as >60 mL/min",
           "lowInterpretation": [
             "May reflect CKD or AKI. CKD requires persistence for at least 3 months or another marker of kidney damage. Do not stage an acute change using eGFR alone."
           ],
@@ -347,6 +347,236 @@
   ],
   "referenceIds": [
     "NICE-NG148"
+  ],
+  "commonPatterns": [
+    {
+      "id": "pre-renal-aki-picture",
+      "title": "Pre-renal AKI / volume-depletion picture",
+      "findings": [
+        "Urea raised proportionally more than creatinine (raised urea:creatinine ratio)",
+        "Creatinine rising but relatively preserved for the degree of illness",
+        "Clinical signs of dehydration or reduced oral intake"
+      ],
+      "interpretation": [
+        "Suggests renal hypoperfusion (pre-renal) rather than established intrinsic kidney injury",
+        "Often reversible with prompt correction of volume status"
+      ],
+      "actions": [
+        "Assess fluid status (skin turgor, mucous membranes, postural blood pressure, urine output)",
+        "Review for reversible causes: vomiting, diarrhoea, poor intake, diuretics, NSAIDs, ACE inhibitors/ARBs",
+        "Arrange same-day medical review if AKI staging criteria are met (see AKI detection section)"
+      ]
+    },
+    {
+      "id": "aki-with-hyperkalaemia",
+      "title": "AKI with hyperkalaemia",
+      "findings": [
+        "Creatinine meeting AKI staging criteria (see AKI detection section)",
+        "Potassium above the normal range, particularly ≥6.0 mmol/L"
+      ],
+      "interpretation": [
+        "Combined AKI and hyperkalaemia is a time-critical combination — cardiac risk rises with both the potassium level and its rate of rise",
+        "ECG changes can lag behind the potassium result and may be absent even at dangerous levels"
+      ],
+      "actions": [
+        "Obtain a 12-lead ECG and look specifically for tented T waves, widened QRS, flattened P waves or arrhythmia",
+        "Treat as a time-critical presentation per local urgent/emergency escalation pathway",
+        "Do not wait for symptoms — hyperkalaemia can be asymptomatic until arrhythmia occurs"
+      ]
+    },
+    {
+      "id": "sick-day-rules-trigger",
+      "title": "Sick-day-rules trigger picture",
+      "findings": [
+        "Rising urea and creatinine in a patient established on an ACE inhibitor, ARB, diuretic or NSAID",
+        "Intercurrent illness with vomiting, diarrhoea, fever or reduced oral intake"
+      ],
+      "interpretation": [
+        "Classic trigger for medicine-related AKI on a background of reduced renal reserve",
+        "Nephrotoxic or renally-cleared medicines can compound volume depletion from the acute illness"
+      ],
+      "actions": [
+        "Apply locally agreed sick-day-rules guidance: consider temporarily withholding relevant medicines during acute illness",
+        "Advise on oral rehydration where appropriate and safe",
+        "Safety-net for worsening symptoms and arrange follow-up U&E to confirm recovery"
+      ]
+    },
+    {
+      "id": "euvolaemic-hyponatraemia-siadh",
+      "title": "Euvolaemic hyponatraemia (possible SIADH)",
+      "findings": [
+        "Sodium below the normal range",
+        "Urea at the low end of or below the normal range",
+        "No clinical evidence of dehydration or fluid overload"
+      ],
+      "interpretation": [
+        "Raises the possibility of SIADH: consider medicines (e.g. SSRIs, carbamazepine, opioids), chest infection, CNS pathology and malignancy as causes",
+        "Distinguishing SIADH from other causes of hyponatraemia depends on accurate volume assessment, which can be difficult clinically"
+      ],
+      "actions": [
+        "Review the medication list for known causes of SIADH",
+        "Assess for chest and neurological symptoms/signs",
+        "Arrange same-day or urgent medical review for further work-up, particularly if sodium is <125 mmol/L or the patient is symptomatic (see urgent findings)"
+      ]
+    },
+    {
+      "id": "hypovolaemic-hyponatraemia",
+      "title": "Hypovolaemic hyponatraemia",
+      "findings": [
+        "Sodium below the normal range",
+        "Urea raised, often with a raised urea:creatinine ratio",
+        "Clinical signs of dehydration or volume loss (vomiting, diarrhoea, diuretic use, poor intake)"
+      ],
+      "interpretation": [
+        "Sodium and water are both lost, but relatively more water is retained, producing dilutional hyponatraemia on a background of true volume depletion"
+      ],
+      "actions": [
+        "Assess fluid status and identify the source of fluid loss",
+        "Correct volume depletion cautiously — rapid correction of longstanding hyponatraemia carries a risk of osmotic demyelination, which is a reason for medical/senior input rather than unsupervised community correction"
+      ]
+    },
+    {
+      "id": "possible-rhabdomyolysis",
+      "title": "Possible rhabdomyolysis picture",
+      "findings": [
+        "Potassium raised",
+        "Creatinine raised disproportionately quickly relative to the clinical picture",
+        "History of a long lie, crush injury, seizure, extreme exertion or prolonged immobility"
+      ],
+      "interpretation": [
+        "Muscle breakdown releases potassium, myoglobin and creatine kinase, and can cause AKI",
+        "This picture is easy to miss if a long lie or reduced mobility is not specifically asked about"
+      ],
+      "actions": [
+        "Actively ask about a long lie, falls with an inability to get up, seizure or prolonged immobility",
+        "Request creatine kinase to confirm and quantify muscle injury (see further testing)",
+        "Treat as time-critical if hyperkalaemia or AKI meeting staging criteria (see AKI detection section) is also present, and encourage oral fluids where safe and appropriate"
+      ]
+    },
+    {
+      "id": "hypokalaemia-with-hypomagnesaemia",
+      "title": "Hypokalaemia (consider co-existing hypomagnesaemia)",
+      "findings": [
+        "Potassium below the normal range",
+        "Diuretic use (particularly loop or thiazide), poor intake, vomiting or diarrhoea"
+      ],
+      "interpretation": [
+        "Magnesium deficiency commonly co-exists with, and can perpetuate, hypokalaemia — potassium may not correct until magnesium is also replaced",
+        "Can cause weakness and arrhythmia, particularly in patients on digoxin"
+      ],
+      "actions": [
+        "Review diuretic and other relevant medicines",
+        "Request magnesium alongside potassium replacement planning (see further testing)",
+        "Arrange ECG if the patient is symptomatic, or potassium is ≤3.0 mmol/L, or ≤2.5 mmol/L (RVH critical-result threshold)"
+      ]
+    },
+    {
+      "id": "thiazide-induced-hyponatraemia-hypokalaemia",
+      "title": "Thiazide-induced hyponatraemia and hypokalaemia",
+      "findings": [
+        "Sodium below the normal range",
+        "Potassium below the normal range",
+        "Current thiazide or thiazide-like diuretic (e.g. bendroflumethiazide, indapamide)"
+      ],
+      "interpretation": [
+        "A well-recognised combination, more common in older adults and often within days to weeks of starting or increasing the dose",
+        "Distinct from the SIADH and hypovolaemic hyponatraemia patterns above — medication is the primary driver here"
+      ],
+      "actions": [
+        "Review whether the thiazide is still indicated and discuss with the prescriber",
+        "Arrange medical review, particularly if sodium is <125 mmol/L or the patient is symptomatic (see urgent findings)"
+      ]
+    },
+    {
+      "id": "isolated-hyperkalaemia-consider-artefact",
+      "title": "Isolated hyperkalaemia with normal renal function",
+      "findings": [
+        "Potassium above the normal range",
+        "Urea, creatinine and eGFR within normal limits",
+        "No AKI-related history or examination findings"
+      ],
+      "interpretation": [
+        "Consider a haemolysed or delayed sample, difficult venepuncture, or a fist-clenching/tourniquet artefact before treating as a true result",
+        "Also consider drug causes (ACE inhibitor/ARB, potassium-sparing diuretic, trimethoprim, NSAIDs) and, rarely, adrenal insufficiency"
+      ],
+      "actions": [
+        "Correlate with the ECG — a normal ECG does not exclude true hyperkalaemia but supports reviewing the sample",
+        "Consider a repeat sample taken without a prolonged tourniquet time before escalating on the result alone",
+        "Do not dismiss a genuinely elevated result as artefact without a clear reason to suspect one"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "venous-blood-gas",
+      "test": "Venous blood gas (pH, bicarbonate, lactate)",
+      "rationale": [
+        "Gives a rapid bicarbonate, pH and lactate when the U&E bicarbonate is abnormal or the patient is unwell, without waiting for the full laboratory panel",
+        "Lactate helps identify hypoperfusion or sepsis as a driver of AKI"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "full-blood-count",
+      "test": "Full blood count",
+      "rationale": [
+        "Helps identify infection, bleeding or haemolysis as a contributing or causative factor in AKI or an electrolyte disturbance"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "crp",
+      "test": "C-reactive protein",
+      "rationale": [
+        "Supports assessment of an infective or inflammatory driver of AKI, particularly when sepsis is a differential"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "creatine-kinase",
+      "test": "Creatine kinase",
+      "rationale": [
+        "Confirms and quantifies muscle injury when rhabdomyolysis is suspected (e.g. long lie, seizure, crush injury, or hyperkalaemia with a disproportionate creatinine rise)"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "calcium-magnesium-phosphate",
+      "test": "Calcium, magnesium and phosphate",
+      "rationale": [
+        "Hypomagnesaemia can cause refractory hypokalaemia and should be considered when potassium is difficult to correct",
+        "Deranged calcium and phosphate are relevant in AKI meeting staging criteria and in rhabdomyolysis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-u-and-e",
+      "test": "Repeat U&E",
+      "rationale": [
+        "A single result can be misleading — the trend over serial results is often more clinically useful than one isolated value, particularly for borderline AKI staging or monitoring after a medicine change",
+        "Confirms whether an abnormal result is improving, stable or worsening before deciding on conveyance/escalation"
+      ],
+      "referenceIds": [
+        "NICE-NG148"
+      ]
+    },
+    {
+      "id": "urinalysis",
+      "test": "Urinalysis / urine dipstick",
+      "rationale": [
+        "Quick, immediately available in the community and can identify infection, haematuria or proteinuria as a contributing cause of AKI",
+        "Useful alongside urine output when assessing volume status and renal impairment"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "capillary-glucose",
+      "test": "Capillary glucose",
+      "rationale": [
+        "Quick to check on scene; relevant when bicarbonate is low, as DKA/HHS are differentials for a metabolic acidosis or dehydration picture, particularly in known diabetics"
+      ],
+      "referenceIds": []
+    }
   ],
   "clinicalValidation": {
     "validated": false,

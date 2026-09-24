@@ -2,7 +2,7 @@
   "id": "glucose-ketones-and-lactate",
   "title": "Glucose, ketones and lactate",
   "subtitle": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Hypoglycaemia, DKA/euglycaemic DKA, HHS and lactate patterns",
@@ -130,12 +130,151 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "classic-dka-picture",
+      "title": "Classic DKA picture",
+      "findings": [
+        "Glucose markedly raised (typically ≥11 mmol/L)",
+        "Ketones ≥3.0 mmol/L",
+        "Acidosis (venous pH <7.3 or bicarbonate <15 mmol/L)"
+      ],
+      "interpretation": [
+        "Meets the classic biochemical picture of DKA; severity and disposition depend on the degree of acidosis, conscious level, potassium and precipitating illness, not glucose alone"
+      ],
+      "actions": [
+        "Treat as time-critical per local DKA pathway (see urgent findings)",
+        "Request U&E urgently — potassium management is central to safe DKA treatment and can change rapidly with treatment",
+        "Identify and treat the precipitant (infection, missed insulin, new diagnosis, illness) alongside DKA management"
+      ]
+    },
+    {
+      "id": "euglycaemic-dka-picture",
+      "title": "Euglycaemic DKA picture",
+      "findings": [
+        "Ketones ≥3.0 mmol/L with acidosis",
+        "Glucose normal or only mildly raised (below the level usually expected for DKA)",
+        "SGLT2 inhibitor use, pregnancy, reduced food intake, or prolonged fasting/vomiting"
+      ],
+      "interpretation": [
+        "Euglycaemic DKA can be missed if glucose alone is used to screen for DKA — SGLT2 inhibitors in particular can produce significant ketoacidosis with a near-normal glucose",
+        "The ketone and acid-base picture, not the glucose, defines this presentation"
+      ],
+      "actions": [
+        "Do not dismiss DKA because glucose is below 11 mmol/L, particularly with SGLT2 inhibitor use, pregnancy or reduced food intake (see urgent findings)",
+        "Ask specifically about SGLT2 inhibitor use, recent reduced intake, vomiting or intercurrent illness",
+        "Treat as time-critical per local DKA pathway once identified, adjusting fluid/insulin approach for the near-normal glucose as per local protocol"
+      ]
+    },
+    {
+      "id": "possible-hhs-picture",
+      "title": "Possible HHS picture",
+      "findings": [
+        "Glucose often ≥30 mmol/L",
+        "Calculated osmolality often ≥320 mOsm/kg",
+        "Minimal ketonaemia",
+        "Profound dehydration, reduced cognition or focal neurology"
+      ],
+      "interpretation": [
+        "Suggests hyperosmolar hyperglycaemic state rather than DKA; HHS carries a high mortality and needs a different fluid/insulin approach to DKA, with much greater caution around the rate of osmolality correction",
+        "Mixed DKA/HHS can occur, so ketones and acid-base status should still be checked even when the picture looks like HHS"
+      ],
+      "actions": [
+        "Treat as time-critical and arrange urgent hospital assessment (see urgent findings)",
+        "Request U&E and osmolality (measured or calculated) to confirm the degree of hyperosmolarity and guide fluid management (see further testing)",
+        "Assess for seizures, focal neurology and hypotension, and monitor closely as osmolality corrects"
+      ]
+    },
+    {
+      "id": "hypoglycaemia-with-treatment-cause",
+      "title": "Hypoglycaemia with an identifiable cause",
+      "findings": [
+        "Glucose <4.0 mmol/L",
+        "Known insulin or sulfonylurea use, missed meal, alcohol, exercise or intercurrent illness"
+      ],
+      "interpretation": [
+        "Most hypoglycaemia in known diabetics has an identifiable precipitant (medication timing/dose, missed food, exercise, alcohol, renal impairment affecting drug clearance)",
+        "Sulfonylurea-induced hypoglycaemia can be prolonged and recurrent, unlike a single insulin-related episode, and needs longer observation"
+      ],
+      "actions": [
+        "Treat promptly per local hypoglycaemia protocol and recheck glucose after treatment (see urgent findings)",
+        "Identify the precipitant and address it (dose/timing review, food intake, alcohol) before discharge/handover",
+        "Extend observation or arrange medical review if a sulfonylurea or long-acting insulin is involved, given the risk of recurrence"
+      ]
+    },
+    {
+      "id": "raised-lactate-hypoperfusion-sepsis",
+      "title": "Raised lactate — hypoperfusion or sepsis",
+      "findings": [
+        "Lactate raised, particularly ≥4.0 mmol/L",
+        "Hypotension, tachycardia, mottled skin, reduced urine output or signs of infection"
+      ],
+      "interpretation": [
+        "Supports significant hypoperfusion or sepsis and is an important marker of illness severity, but a normal lactate does not exclude sepsis or shock, and a raised lactate can also occur with seizure, severe work of breathing, beta-agonist use, liver dysfunction, metformin accumulation or toxins"
+      ],
+      "actions": [
+        "Treat as time-critical if lactate is ≥4.0 mmol/L, rising, or accompanied by hypotension, mottled skin, reduced urine output or new confusion (see urgent findings)",
+        "Consider non-hypoperfusion causes (seizure, salbutamol, metformin, liver disease) if the clinical picture does not fit sepsis/shock",
+        "Repeat lactate to assess trend and response to treatment (see further testing)"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "venous-blood-gas-glucose",
+      "test": "Venous blood gas (pH, bicarbonate)",
+      "rationale": [
+        "Confirms and quantifies acidosis, which is central to diagnosing and grading the severity of DKA alongside ketones"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "u-and-e-glucose",
+      "test": "U&E",
+      "rationale": [
+        "Potassium management is a core part of safe DKA/HHS treatment, and renal function informs fluid resuscitation and drug clearance (e.g. metformin accumulation causing lactic acidosis)"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "osmolality-glucose",
+      "test": "Serum/plasma osmolality",
+      "rationale": [
+        "Confirms and quantifies hyperosmolarity in suspected HHS, guiding the safe rate of correction"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "fbc-crp-glucose",
+      "test": "Full blood count and CRP",
+      "rationale": [
+        "Helps identify infection as a precipitant of DKA, HHS or a raised lactate"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-lactate",
+      "test": "Repeat lactate",
+      "rationale": [
+        "Trend over serial results helps distinguish a transient or artefactual rise from ongoing hypoperfusion, and shows response to treatment"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ecg-glucose",
+      "test": "12-lead ECG",
+      "rationale": [
+        "Identifies ECG changes of hyperkalaemia or hypokalaemia, which are relevant both at presentation and during DKA/HHS treatment as potassium shifts"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-09-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": null,
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],

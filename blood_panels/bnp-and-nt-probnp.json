@@ -2,7 +2,7 @@
   "id": "bnp-and-nt-probnp",
   "title": "BNP and NT-proBNP",
   "subtitle": "Heart-failure likelihood, confounders and referral thresholds",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Heart-failure likelihood, confounders and referral thresholds",
@@ -79,12 +79,133 @@
   "referenceIds": [
     "NICE-NG106"
   ],
+  "commonPatterns": [
+    {
+      "id": "excluded-by-low-nt-probnp",
+      "title": "Heart failure effectively excluded by a low result",
+      "findings": [
+        "NT-proBNP <400 ng/L (or <125 ng/L per RVH laboratory guidance for excluding HF as the cause of current signs/symptoms)",
+        "Breathlessness or oedema present, prompting the test"
+      ],
+      "interpretation": [
+        "A low result makes heart failure an unlikely explanation for the current symptoms and should prompt review of alternative diagnoses (respiratory, renal, venous, deconditioning)",
+        "Obesity and several heart-failure medications (diuretics, ACE inhibitors/ARBs/ARNI, beta blockers, mineralocorticoid antagonists) can lower the result, so a low value in a treated patient needs cautious interpretation"
+      ],
+      "actions": [
+        "Review the medication list and body habitus before treating the result as fully reassuring",
+        "Investigate alternative causes of breathlessness or oedema (see further testing)",
+        "Safety-net and arrange follow-up if symptoms persist or worsen despite a low result"
+      ]
+    },
+    {
+      "id": "intermediate-nt-probnp-confounder-review",
+      "title": "Intermediate result — confounder review needed",
+      "findings": [
+        "NT-proBNP 400–2,000 ng/L",
+        "One or more of: renal impairment, atrial fibrillation, older age, possible PE, sepsis or pulmonary hypertension"
+      ],
+      "interpretation": [
+        "This range does not prove heart failure — several common confounders raise NT-proBNP independently of cardiac filling pressure",
+        "Still requires the NICE-recommended specialist assessment and echocardiography pathway even when a confounder is identified"
+      ],
+      "actions": [
+        "Check renal function and rhythm, and consider PE and sepsis as alternative or contributing explanations (see further testing)",
+        "Arrange specialist assessment and echocardiography within the NICE-recommended 6-week window",
+        "Manage current symptoms and physiology on their own merits rather than waiting for the echocardiogram if the patient is acutely unwell"
+      ]
+    },
+    {
+      "id": "high-nt-probnp-urgent-pathway",
+      "title": "High result — urgent heart-failure pathway",
+      "findings": [
+        "NT-proBNP >2,000 ng/L"
+      ],
+      "interpretation": [
+        "Associated with a higher likelihood of heart failure and worse prognosis, but the level itself does not determine whether the patient needs acute treatment today — that depends on current symptoms and physiology",
+        "A very high result in a patient who looks acutely unwell should not be treated as a routine referral"
+      ],
+      "actions": [
+        "Assess current symptoms and observations for acute decompensation and treat as time-critical if present (see urgent findings)",
+        "Arrange urgent specialist assessment and echocardiography within the NICE-recommended 2-week window if not acutely unwell",
+        "Compare with any previous NT-proBNP result to judge whether this represents a new rise or a known chronic elevation"
+      ]
+    },
+    {
+      "id": "chronic-elevation-vs-acute-decompensation",
+      "title": "Chronic elevation vs acute decompensation",
+      "findings": [
+        "NT-proBNP raised, but similar to a previous known result",
+        "No new breathlessness at rest, hypoxia, orthopnoea or examination change"
+      ],
+      "interpretation": [
+        "Chronically raised natriuretic peptides are expected in established heart failure, CKD and structural heart disease and do not by themselves indicate acute fluid overload",
+        "A rise from the patient's own known baseline is more informative than the absolute value in isolation"
+      ],
+      "actions": [
+        "Compare against previous results, current weight, examination and functional status rather than acting on the absolute value alone",
+        "Reassess urgently if there is any new breathlessness, hypoxia, inability to lie flat or examination change (see urgent findings)",
+        "Continue routine heart-failure management/follow-up if the patient is at their known baseline"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "echocardiography",
+      "test": "Echocardiography",
+      "rationale": [
+        "Required to confirm or refute heart failure and characterise the underlying structural/functional abnormality once NT-proBNP has flagged the need for specialist assessment"
+      ],
+      "referenceIds": [
+        "NICE-NG106"
+      ]
+    },
+    {
+      "id": "u-and-e-bnp",
+      "test": "U&E",
+      "rationale": [
+        "Renal impairment is a common confounder that raises NT-proBNP independently of cardiac filling pressure, and is also needed before starting/titrating heart-failure medication"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ecg-bnp",
+      "test": "12-lead ECG",
+      "rationale": [
+        "Identifies atrial fibrillation and other rhythm or ischaemic changes that can raise NT-proBNP or point to an alternative/contributing diagnosis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "troponin-bnp",
+      "test": "Troponin",
+      "rationale": [
+        "Supports assessment for an acute coronary or myocardial injury component when a raised natriuretic peptide occurs with chest pain or acute decompensation"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "chest-x-ray-bnp",
+      "test": "Chest X-ray",
+      "rationale": [
+        "Helps distinguish pulmonary oedema from a respiratory cause of breathlessness such as infection or effusion when the natriuretic peptide result is equivocal"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "d-dimer-bnp",
+      "test": "D-dimer",
+      "rationale": [
+        "Relevant when pulmonary embolism is a differential explanation for a raised NT-proBNP with breathlessness or hypoxia"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-08-24",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-08-24"
   },
   "attachments": [

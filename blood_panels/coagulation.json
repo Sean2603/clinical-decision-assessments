@@ -2,7 +2,7 @@
   "id": "coagulation",
   "title": "Coagulation",
   "subtitle": "INR, PT, APTT, fibrinogen and DIC patterns",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "INR, PT, APTT, fibrinogen and DIC patterns",
@@ -104,14 +104,179 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "warfarin-over-anticoagulation",
+      "title": "Warfarin over-anticoagulation",
+      "findings": [
+        "INR above the patient's target therapeutic range",
+        "Patient established on warfarin"
+      ],
+      "interpretation": [
+        "Bleeding risk rises with the degree of INR elevation, and further with intercurrent illness, interacting medicines, dietary vitamin K changes or missed monitoring",
+        "A markedly raised INR can occur without bleeding but still carries significant risk"
+      ],
+      "actions": [
+        "Ask about bleeding, recent dose changes, missed monitoring, antibiotics, diet and alcohol",
+        "Follow the local warfarin reversal pathway if INR is markedly raised, and treat any bleeding as time-critical (see urgent findings)",
+        "Arrange medical review for dose adjustment and a plan for repeat INR monitoring"
+      ]
+    },
+    {
+      "id": "possible-liver-synthetic-dysfunction",
+      "title": "Possible liver synthetic dysfunction",
+      "findings": [
+        "PT/INR prolonged",
+        "Not explained by warfarin or another anticoagulant",
+        "Known or suspected liver disease, or deranged liver blood tests"
+      ],
+      "interpretation": [
+        "The liver synthesises most clotting factors, so synthetic dysfunction (chronic liver disease or acute liver failure) can prolong PT/INR even without anticoagulant use",
+        "Unlike warfarin, this coagulopathy cannot be reliably reversed with vitamin K alone if synthetic failure is advanced"
+      ],
+      "actions": [
+        "Review medication history to exclude an anticoagulant or vitamin K antagonist effect",
+        "Request liver blood tests and correlate with jaundice, ascites, encephalopathy or known chronic liver disease (see further testing)",
+        "Arrange medical review; treat as urgent if there is bleeding, encephalopathy or acute liver failure is suspected"
+      ]
+    },
+    {
+      "id": "vitamin-k-deficiency-malabsorption",
+      "title": "Vitamin K deficiency / malabsorption picture",
+      "findings": [
+        "PT/INR prolonged",
+        "APTT usually normal or only mildly affected",
+        "Poor nutritional intake, malabsorption, prolonged antibiotic use, or obstructive jaundice"
+      ],
+      "interpretation": [
+        "Vitamin K is needed to synthesise several clotting factors; deficiency from malabsorption, malnutrition, biliary obstruction or broad-spectrum antibiotics can prolong PT/INR in a pattern similar to early warfarin effect"
+      ],
+      "actions": [
+        "Ask about diet, alcohol use, recent antibiotics, biliary symptoms and malabsorptive conditions",
+        "Request liver blood tests to help distinguish this from synthetic liver dysfunction (see further testing)",
+        "Arrange medical review for consideration of vitamin K replacement and investigation of the underlying cause"
+      ]
+    },
+    {
+      "id": "isolated-prolonged-aptt",
+      "title": "Isolated prolonged APTT",
+      "findings": [
+        "APTT prolonged",
+        "PT/INR normal",
+        "No clinical bleeding, or bleeding out of proportion to the result"
+      ],
+      "interpretation": [
+        "Consider unfractionated heparin effect, a factor VIII/IX/XI deficiency (including haemophilia), lupus anticoagulant, or a sample/collection artefact",
+        "An isolated prolonged APTT without bleeding is not automatically reassuring — lupus anticoagulant can prolong APTT while actually increasing thrombotic risk"
+      ],
+      "actions": [
+        "Check for heparin (including flushes/lines) and recent sample handling before assuming a true factor abnormality",
+        "Ask about personal or family bleeding history and any history of thrombosis",
+        "Arrange medical review for further specialist testing (mixing studies, factor assays) rather than acting on this result alone"
+      ]
+    },
+    {
+      "id": "possible-dic-composite-picture",
+      "title": "Possible DIC (composite picture)",
+      "findings": [
+        "PT and APTT both prolonged",
+        "Fibrinogen low",
+        "Platelets falling or low",
+        "A recognised trigger: sepsis, major trauma, malignancy or obstetric catastrophe"
+      ],
+      "interpretation": [
+        "This combination, especially with bleeding/oozing, purpura or organ dysfunction, supports disseminated intravascular coagulation rather than a single-factor problem",
+        "Fibrinogen can be normal or even raised early because it is also an acute-phase protein, so a 'normal' fibrinogen does not exclude evolving DIC"
+      ],
+      "actions": [
+        "Treat as time-critical if bleeding, shock, mottling or organ dysfunction is present (see urgent findings)",
+        "Request FBC and D-dimer to support the picture, and treat the underlying trigger urgently (see further testing)",
+        "Arrange urgent senior/medical review — DIC management depends on the driving cause"
+      ]
+    },
+    {
+      "id": "doac-unpredictable-effect",
+      "title": "DOAC effect on coagulation screen",
+      "findings": [
+        "Patient taking a direct oral anticoagulant (e.g. apixaban, rivaroxaban, dabigatran, edoxaban)",
+        "PT/APTT/INR normal, mildly abnormal, or unexpectedly abnormal"
+      ],
+      "interpretation": [
+        "DOACs affect PT/APTT/INR unpredictably depending on the specific drug and assay used locally — a normal screen does not exclude a clinically relevant anticoagulant effect, and an abnormal screen does not reliably quantify it"
+      ],
+      "actions": [
+        "Establish the specific DOAC, dose, timing of last dose and renal function, as these determine bleeding risk more than the coagulation screen",
+        "Do not delay emergency treatment for bleeding or suspected intracranial haemorrhage while awaiting a specific anticoagulant assay (see urgent findings)",
+        "Discuss with senior/specialist advice if a specific anti-Xa or drug level assay is needed (see further testing)"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "d-dimer",
+      "test": "D-dimer",
+      "rationale": [
+        "Supports identification of DIC when combined with a falling platelet count, prolonged PT/APTT and low fibrinogen",
+        "Also relevant to VTE risk assessment where clinically indicated, interpreted alongside pre-test probability"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "lft-coag",
+      "test": "Liver blood tests",
+      "rationale": [
+        "Helps distinguish liver synthetic dysfunction from vitamin K deficiency or an isolated anticoagulant effect as the cause of a prolonged PT/INR"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "fbc-coag",
+      "test": "Full blood count",
+      "rationale": [
+        "Platelet count is essential context for bleeding risk alongside PT/APTT, and a falling platelet count supports a DIC or consumptive picture"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "anti-xa-assay",
+      "test": "Anti-Xa assay or specific DOAC level",
+      "rationale": [
+        "Gives a more specific measure of anticoagulant effect than PT/APTT when heparin or a DOAC level needs to be quantified, for example before urgent surgery or when bleeding is disproportionate to the routine screen"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "mixing-studies-factor-assays",
+      "test": "Mixing studies / specific factor assays",
+      "rationale": [
+        "Specialist tests to distinguish a factor deficiency from an inhibitor (e.g. lupus anticoagulant) when PT or APTT is unexpectedly and persistently prolonged"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-coagulation-screen",
+      "test": "Repeat coagulation screen",
+      "rationale": [
+        "A single result can reflect sampling artefact (e.g. under-filled citrate tube, delayed processing); repeating confirms a genuine abnormality before escalating or reversing anticoagulation"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-09-08",
     "reviewerRole": "tAPUC",
-    "reviewNotes": null,
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-09-08"
   },
   "attachments": [],
-  "prominentResources": []
+  "prominentResources": [],
+  "specimens": [
+    {
+      "specimenTypeId": "blue",
+      "quantity": 1,
+      "notes": "Whole blood — blue-top sodium-citrate tube. Fill exactly to the tube's fill line — under- or overfilling changes the blood:citrate ratio and invalidates PT/APTT/INR."
+    }
+  ]
 }

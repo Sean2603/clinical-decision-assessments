@@ -18,6 +18,8 @@
     "urgentFindings",
     "overrides",
     "referenceIds",
+    "commonPatterns",
+    "furtherTesting",
     "clinicalValidation"
   ],
   "properties": {
@@ -97,6 +99,18 @@
         "minLength": 1
       },
       "uniqueItems": true
+    },
+    "commonPatterns": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/commonPattern"
+      }
+    },
+    "furtherTesting": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/furtherTest"
+      }
     },
     "clinicalValidation": {
       "type": "object",
@@ -201,6 +215,85 @@
     }
   },
   "$defs": {
+    "commonPattern": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "findings",
+        "interpretation",
+        "actions"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "findings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "interpretation": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "furtherTest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "test",
+        "rationale",
+        "referenceIds"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "test": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "referenceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
     "row": {
       "type": "object",
       "additionalProperties": false,

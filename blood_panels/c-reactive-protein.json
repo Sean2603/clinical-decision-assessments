@@ -2,7 +2,7 @@
   "id": "c-reactive-protein",
   "title": "C-reactive protein",
   "subtitle": "Inflammatory marker interpreted with timing and clinical context",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Inflammatory marker interpreted with timing and clinical context",
@@ -138,12 +138,146 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "early-normal-crp-serious-illness",
+      "title": "Early normal/mild CRP with a sick-looking patient",
+      "findings": [
+        "CRP normal or only mildly raised",
+        "Recent onset of symptoms (typically within a few hours)",
+        "Physiological derangement or high-risk features on examination"
+      ],
+      "interpretation": [
+        "CRP rises over hours and can peak around 48 hours, so an early result does not exclude serious infection, sepsis or another acute inflammatory process",
+        "Physiology and clinical assessment take priority over a reassuring-looking CRP this early"
+      ],
+      "actions": [
+        "Do not use a low or mildly raised early CRP to downgrade concern in a physiologically unwell patient (see urgent findings)",
+        "Treat and escalate on clinical findings and observations; consider repeating CRP later in the illness if the diagnosis remains unclear",
+        "Request FBC and consider blood cultures/further source-specific testing if sepsis is suspected (see further testing)"
+      ]
+    },
+    {
+      "id": "immunosuppressed-blunted-response",
+      "title": "Blunted CRP response in immunosuppression",
+      "findings": [
+        "CRP normal or lower than expected for the apparent severity of illness",
+        "Immunosuppression: chemotherapy, high-dose steroids, biologic therapy, transplant recipient or known immunodeficiency"
+      ],
+      "interpretation": [
+        "Immunosuppressed patients can mount a reduced inflammatory response despite serious or life-threatening infection, so a normal CRP is far less reassuring in this group"
+      ],
+      "actions": [
+        "Treat neutropenic sepsis or other suspected serious infection as time-critical regardless of a normal CRP (see urgent findings)",
+        "Request FBC to check neutrophil count alongside CRP (see further testing)",
+        "Have a lower threshold for escalation and senior/medical review in immunosuppressed patients"
+      ]
+    },
+    {
+      "id": "markedly-raised-crp-source-identification",
+      "title": "Markedly raised CRP — source identification needed",
+      "findings": [
+        "CRP >100 mg/L"
+      ],
+      "interpretation": [
+        "Raises concern for substantial bacterial infection, major inflammation or tissue injury, but is not itself a diagnosis and does not automatically mean antibiotics are required",
+        "The priority is identifying the source and assessing physiology, not treating the number in isolation"
+      ],
+      "actions": [
+        "Actively look for a source: examine systematically and consider urinalysis, chest assessment, abdominal examination and wound/line sites",
+        "Assess physiology (observations, mental state, urine output) and escalate per local sepsis pathway if criteria are met",
+        "Request further targeted testing based on the suspected source (see further testing)"
+      ]
+    },
+    {
+      "id": "rising-crp-despite-treatment",
+      "title": "Rising CRP despite treatment",
+      "findings": [
+        "CRP higher than a previous result",
+        "Patient already receiving treatment (e.g. antibiotics) for a presumed infective/inflammatory source"
+      ],
+      "interpretation": [
+        "Can reflect an expected delayed peak rather than treatment failure, but can also indicate inadequate source control, a resistant organism, or a wrong or missed diagnosis",
+        "The clinical trajectory matters as much as the CRP trend — a rising CRP in an improving patient is different from a rising CRP in a deteriorating one"
+      ],
+      "actions": [
+        "Reassess the patient clinically rather than reacting to the CRP number alone — check observations, symptoms and examination for improvement or deterioration",
+        "Consider whether the source has been adequately identified and controlled (e.g. drainage, line removal, correct antibiotic choice)",
+        "Arrange medical review if the patient is deteriorating or the CRP continues to rise beyond the expected timeframe"
+      ]
+    },
+    {
+      "id": "falling-crp-with-new-concern",
+      "title": "Falling CRP with a new clinical concern",
+      "findings": [
+        "CRP lower than a previous result",
+        "New hypoxia, hypotension, confusion, mottled skin or another new deterioration"
+      ],
+      "interpretation": [
+        "A falling CRP generally supports improvement but does not override a new, independent sign of deterioration — CRP lags clinical status and does not fall instantly even with effective treatment"
+      ],
+      "actions": [
+        "Do not use a falling CRP to reassure against a new, independently concerning clinical sign (see urgent findings)",
+        "Reassess the patient directly and escalate based on current physiology and symptoms, not the CRP trend alone"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "fbc-crp",
+      "test": "Full blood count",
+      "rationale": [
+        "White cell count and neutrophil differential add complementary information to CRP, particularly in immunosuppressed patients where CRP may be a less reliable marker"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "blood-cultures",
+      "test": "Blood cultures",
+      "rationale": [
+        "Identifies a causative organism and guides antibiotic choice when a significant bacterial infection or sepsis is suspected"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "urinalysis-crp",
+      "test": "Urinalysis / urine dipstick",
+      "rationale": [
+        "Quick, immediately available test to help identify a urinary source contributing to a raised CRP"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "u-and-e-crp",
+      "test": "U&E",
+      "rationale": [
+        "Assesses renal function and hydration status, which inform severity assessment and treatment (e.g. antibiotic dosing, fluid resuscitation) alongside a raised CRP"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "lactate-crp",
+      "test": "Venous blood gas (lactate)",
+      "rationale": [
+        "Lactate helps identify hypoperfusion or sepsis severity when CRP is markedly raised or the patient looks unwell"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-crp",
+      "test": "Repeat CRP",
+      "rationale": [
+        "A single value can be misleading given the delayed rise and peak; the trend over serial results, alongside clinical trajectory, is more useful than one isolated value"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
-    "validated": true,
+    "validated": false,
     "reviewedBy": "Sean McGrory",
     "reviewedOn": "2026-09-10",
     "reviewerRole": "tAPUC",
-    "reviewNotes": "Review completed. No additional review comments recorded.",
+    "reviewNotes": "Clinical content updated 2026-09-24 (commonPatterns/furtherTesting added) — pending re-review.",
     "nextReviewDue": "2028-09-10"
   },
   "attachments": [

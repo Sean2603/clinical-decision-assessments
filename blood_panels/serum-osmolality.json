@@ -2,7 +2,7 @@
   "id": "serum-osmolality",
   "title": "Serum osmolality",
   "subtitle": "Calculated osmolality, tonicity and osmolal gap",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Calculated osmolality, tonicity and osmolal gap",
@@ -198,6 +198,125 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "true-hypotonic-hyponatraemia",
+      "title": "True hypotonic hyponatraemia",
+      "findings": [
+        "Sodium low",
+        "Measured osmolality low"
+      ],
+      "interpretation": [
+        "Confirms genuine hypotonic hyponatraemia rather than an artefact or an osmotically-driven dilution — this is the pattern that needs the standard hyponatraemia work-up (volume status, SIADH causes, medication review)"
+      ],
+      "actions": [
+        "Assess volume status and review medication, as for standard hyponatraemia assessment",
+        "Treat as time-critical if seizure, reduced consciousness, severe confusion or persistent vomiting are present (see urgent findings)",
+        "Correct cautiously — rapid correction of longstanding hyponatraemia carries a risk of osmotic demyelination"
+      ]
+    },
+    {
+      "id": "pseudohyponatraemia-or-effective-osmole",
+      "title": "Pseudohyponatraemia or an effective osmole",
+      "findings": [
+        "Sodium low",
+        "Measured osmolality normal or high"
+      ],
+      "interpretation": [
+        "A low sodium with a normal or high measured osmolality suggests either pseudohyponatraemia (severe hyperlipidaemia or hyperproteinaemia affecting the sodium assay) or an additional effective osmole such as glucose or mannitol drawing water into the vascular space",
+        "This is not true hypotonic hyponatraemia and does not need — and could be harmed by — standard hyponatraemia fluid correction"
+      ],
+      "actions": [
+        "Check glucose, as marked hyperglycaemia is a common and important cause of this pattern (see further testing)",
+        "Consider recent mannitol administration and severe lipid/protein abnormalities as alternative explanations",
+        "Avoid treating this as standard hypotonic hyponatraemia; address the underlying osmole (e.g. treat hyperglycaemia) instead"
+      ]
+    },
+    {
+      "id": "raised-osmolal-gap-toxic-alcohol",
+      "title": "Raised osmolal gap — possible toxic alcohol",
+      "findings": [
+        "Osmolal gap raised (measured osmolality substantially exceeds calculated)",
+        "Visual symptoms, severe metabolic acidosis, renal injury, or a history of ingestion"
+      ],
+      "interpretation": [
+        "A raised osmolal gap can occur with toxic alcohols (methanol, ethylene glycol), ethanol, ketones, lactate, renal failure or formula/laboratory variation",
+        "A normal gap does not exclude late toxic alcohol poisoning — by the time acidosis develops, the parent alcohol has often been metabolised and the gap can have narrowed even as the patient deteriorates"
+      ],
+      "actions": [
+        "Treat as time-critical if there are visual symptoms, severe acidosis, renal injury or a history of suspected toxic alcohol ingestion (see urgent findings)",
+        "Request a venous blood gas and consider ethanol level to help interpret the gap (see further testing)",
+        "Do not be falsely reassured by a normal gap late in the course if the history strongly suggests toxic alcohol ingestion — discuss with poisons information/toxicology"
+      ]
+    },
+    {
+      "id": "hyperosmolar-hhs-picture",
+      "title": "Hyperosmolar picture suggesting HHS",
+      "findings": [
+        "Measured or calculated osmolality ≥320 mOsm/kg",
+        "Profound dehydration or altered cognition",
+        "Marked hyperglycaemia"
+      ],
+      "interpretation": [
+        "Supports hyperosmolar hyperglycaemic state; this carries a high mortality and needs a different fluid/insulin approach to DKA, with careful attention to the rate of osmolality correction"
+      ],
+      "actions": [
+        "Treat as time-critical and arrange urgent hospital assessment (see urgent findings)",
+        "Request glucose and ketones to distinguish HHS from DKA, noting that mixed pictures can occur (see further testing)",
+        "Assess for seizures, focal neurology and hypotension, and monitor closely as correction proceeds"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "u-and-e-osmolality",
+      "test": "U&E",
+      "rationale": [
+        "Sodium and urea are needed to calculate osmolality and interpret hyponatraemia patterns; renal function is also relevant to a raised osmolal gap"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "glucose-osmolality",
+      "test": "Capillary or laboratory glucose",
+      "rationale": [
+        "Marked hyperglycaemia can raise measured osmolality and cause a dilutional (pseudo-)hyponatraemia, and is essential to distinguish HHS from other causes of a hyperosmolar state"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "venous-blood-gas-osmolality",
+      "test": "Venous blood gas",
+      "rationale": [
+        "Identifies metabolic acidosis that supports toxic alcohol ingestion or ketoacidosis as a cause of a raised osmolal gap"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ketones-osmolality",
+      "test": "Blood ketones",
+      "rationale": [
+        "Ketones can raise the osmolal gap and help distinguish DKA/starvation ketosis from toxic alcohol ingestion as the cause of a raised gap"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ethanol-level",
+      "test": "Ethanol level",
+      "rationale": [
+        "Ethanol itself raises the osmolal gap; knowing the level helps determine whether it fully explains a raised gap or whether a toxic alcohol should still be considered"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "lipid-protein-panel",
+      "test": "Lipid profile / total protein",
+      "rationale": [
+        "Severe hyperlipidaemia or hyperproteinaemia can cause pseudohyponatraemia, which should be considered when sodium is low but measured osmolality is normal"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,

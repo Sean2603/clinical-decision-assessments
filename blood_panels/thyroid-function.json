@@ -2,7 +2,7 @@
   "id": "thyroid-function",
   "title": "Thyroid function",
   "subtitle": "TSH and free T4 pattern recognition",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "TSH and free T4 pattern recognition",
@@ -109,6 +109,160 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "overt-hypothyroidism-picture",
+      "title": "Overt primary hypothyroidism",
+      "findings": [
+        "TSH raised",
+        "Free T4 below the normal range",
+        "Fatigue, cold intolerance, weight gain, constipation or bradycardia"
+      ],
+      "interpretation": [
+        "Consistent with primary hypothyroidism, commonly autoimmune (Hashimoto's), post-treatment (post-thyroidectomy/radioiodine) or medication-related",
+        "Severity should be judged on symptoms and physiology, not TSH alone — marked bradycardia, hypothermia or reduced consciousness raises concern for myxoedema coma"
+      ],
+      "actions": [
+        "Assess for red-flag features of myxoedema coma: hypothermia, bradycardia, hypotension, hypoventilation or reduced consciousness (see urgent findings)",
+        "Review medication (e.g. amiodarone, lithium) and biotin timing before attributing the result purely to thyroid disease",
+        "Arrange medical review for treatment initiation/titration if not already established on replacement"
+      ]
+    },
+    {
+      "id": "overt-hyperthyroidism-picture",
+      "title": "Overt hyperthyroidism",
+      "findings": [
+        "TSH suppressed/low",
+        "Free T4 and/or free T3 above the normal range",
+        "Tremor, weight loss, heat intolerance, palpitations or agitation"
+      ],
+      "interpretation": [
+        "Consistent with hyperthyroidism, for example Graves disease, toxic nodular disease, thyroiditis or excessive levothyroxine replacement",
+        "New AF, chest pain, syncope or heart-failure features alongside biochemical hyperthyroidism are time-critical, as is possible thyroid storm"
+      ],
+      "actions": [
+        "Check pulse and rhythm, temperature and cardiovascular symptoms, and obtain an ECG if AF or arrhythmia is suspected (see further testing)",
+        "Treat as time-critical if features of thyroid storm or new cardiac decompensation are present (see urgent findings)",
+        "Arrange medical review for further work-up (thyroid antibodies, cause) and treatment planning"
+      ]
+    },
+    {
+      "id": "subclinical-hypothyroidism-picture",
+      "title": "Subclinical hypothyroidism picture",
+      "findings": [
+        "TSH raised",
+        "Free T4 within the normal range"
+      ],
+      "interpretation": [
+        "Represents a mild or early thyroid abnormality; management depends on the degree and persistence of TSH elevation, symptoms, thyroid antibody status and factors such as pregnancy planning, rather than a single result"
+      ],
+      "actions": [
+        "Repeat TSH/free T4 to confirm persistence before assuming this represents established disease",
+        "Consider thyroid antibodies where relevant to future risk (see further testing)",
+        "Arrange routine medical review rather than urgent escalation, unless there are symptoms warranting sooner assessment"
+      ]
+    },
+    {
+      "id": "subclinical-hyperthyroidism-picture",
+      "title": "Subclinical hyperthyroidism picture",
+      "findings": [
+        "TSH suppressed/low",
+        "Free T4 and free T3 within the normal range"
+      ],
+      "interpretation": [
+        "Consider early thyroid disease, medication effect or acute non-thyroidal illness; a low TSH is not always progressive thyrotoxicosis and often needs confirmation rather than immediate treatment"
+      ],
+      "actions": [
+        "Review medication list and recent acute illness as potential explanations before assuming underlying thyroid disease",
+        "Repeat testing to confirm persistence, particularly in older adults where subclinical hyperthyroidism carries AF and bone risk over time",
+        "Arrange routine medical review; escalate sooner if cardiac symptoms or AF are present (see urgent findings)"
+      ]
+    },
+    {
+      "id": "sick-euthyroid-non-thyroidal-illness",
+      "title": "Sick euthyroid / non-thyroidal illness pattern",
+      "findings": [
+        "Low or low-normal TSH with low-normal or normal free T4/T3",
+        "Significant acute illness (e.g. sepsis, critical illness, major surgery)"
+      ],
+      "interpretation": [
+        "Acute illness commonly alters thyroid function tests without true thyroid disease being present ('sick euthyroid syndrome'); interpretation during acute illness is unreliable and can mimic central hypothyroidism",
+        "This pattern usually resolves as the underlying illness improves"
+      ],
+      "actions": [
+        "Avoid making a new diagnosis of thyroid disease from thyroid function tests taken during significant acute illness where possible",
+        "Repeat thyroid function after recovery from the acute illness if a genuine abnormality is still suspected",
+        "Focus management on treating the acute illness rather than the thyroid result in isolation"
+      ]
+    },
+    {
+      "id": "possible-central-pituitary-cause",
+      "title": "Possible central (pituitary/hypothalamic) cause",
+      "findings": [
+        "Free T4 low",
+        "TSH low or inappropriately normal (not raised)"
+      ],
+      "interpretation": [
+        "A low free T4 without an appropriately raised TSH should not be labelled as primary hypothyroidism — it raises the possibility of pituitary or hypothalamic disease, severe non-thyroidal illness, or a medication effect",
+        "This distinction changes management and the need for wider pituitary assessment"
+      ],
+      "actions": [
+        "Review for other features of pituitary dysfunction (e.g. other hormone deficiencies, visual field change, headache) and recent severe illness or medication",
+        "Arrange medical review for further endocrine assessment rather than starting standard primary hypothyroidism treatment on this pattern alone",
+        "Do not delay treatment of an acutely unwell, hypotensive or hypoglycaemic patient while pursuing this distinction — consider adrenal insufficiency as a co-existing possibility"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "thyroid-antibodies",
+      "test": "Thyroid antibodies (anti-TPO, TSH-receptor antibodies)",
+      "rationale": [
+        "Supports confirmation of autoimmune thyroid disease (Hashimoto's or Graves) and helps predict progression in subclinical disease"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "ecg-thyroid",
+      "test": "12-lead ECG",
+      "rationale": [
+        "Identifies atrial fibrillation or other arrhythmia associated with hyperthyroidism, and bradycardia associated with severe hypothyroidism"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "u-and-e-thyroid",
+      "test": "U&E",
+      "rationale": [
+        "Hyponatraemia can occur with severe hypothyroidism/myxoedema coma and is part of the wider assessment of a systemically unwell patient with an abnormal thyroid picture"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "capillary-glucose-thyroid",
+      "test": "Capillary glucose",
+      "rationale": [
+        "Hypoglycaemia is a feature of myxoedema coma and should be checked when this is suspected"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "repeat-tft",
+      "test": "Repeat thyroid function tests",
+      "rationale": [
+        "Confirms whether a subclinical, sick-euthyroid or borderline pattern persists, improves or evolves before committing to a diagnosis or treatment"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "cortisol-thyroid",
+      "test": "Cortisol",
+      "rationale": [
+        "Adrenal insufficiency can co-exist with or mimic features of thyroid dysfunction in an acutely unwell patient and should be considered, particularly with hypotension or hypoglycaemia"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,

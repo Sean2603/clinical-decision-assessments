@@ -2,7 +2,7 @@
   "id": "lipase-and-amylase",
   "title": "Lipase and amylase",
   "subtitle": "Pancreatitis interpretation and important alternative causes",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Pancreatitis interpretation and important alternative causes",
@@ -61,6 +61,127 @@
     "Use the reporting laboratory’s reference ranges and compare with previous results, symptoms, observations, medication and fluid status."
   ],
   "referenceIds": [],
+  "commonPatterns": [
+    {
+      "id": "likely-acute-pancreatitis-picture",
+      "title": "Likely acute pancreatitis picture",
+      "findings": [
+        "Lipase (or amylase) ≥3 × the upper limit of normal",
+        "Severe, persistent epigastric pain, often radiating to the back",
+        "Vomiting present"
+      ],
+      "interpretation": [
+        "This combination is consistent with acute pancreatitis, but the diagnosis remains clinical — enzyme elevation supports rather than confirms it, and severity is not predicted by the enzyme level",
+        "Common causes include gallstones and alcohol; also consider hypertriglyceridaemia, medication and, rarely, ERCP-related or autoimmune causes"
+      ],
+      "actions": [
+        "Assess severity using local scoring/physiology (tachycardia, hypotension, fever, oxygenation) rather than the enzyme level alone",
+        "Treat as time-critical if there is shock, peritonism, GI bleeding or reduced consciousness (see urgent findings)",
+        "Request further testing to identify the cause and assess severity (see further testing)"
+      ]
+    },
+    {
+      "id": "raised-lipase-normal-amylase-delayed",
+      "title": "Raised lipase with normal/borderline amylase",
+      "findings": [
+        "Lipase raised",
+        "Amylase normal or only mildly raised",
+        "Presentation more than 24–48 hours after symptom onset, or chronic pancreatic disease"
+      ],
+      "interpretation": [
+        "Amylase can normalise faster than lipase and can be falsely reassuring in delayed presentation, hypertriglyceridaemia or chronic pancreatic disease — lipase is generally the more reliable and pancreas-specific test",
+        "A normal amylase does not exclude pancreatitis when lipase is raised and the clinical picture fits"
+      ],
+      "actions": [
+        "Do not use a normal amylase alone to exclude pancreatitis if lipase is raised and the history fits",
+        "Ask about symptom duration, alcohol use and known triglyceride/lipid problems",
+        "Arrange medical review for further assessment, including imaging if the diagnosis remains unclear (see further testing)"
+      ]
+    },
+    {
+      "id": "mildly-raised-non-pancreatic-cause",
+      "title": "Mild rise — consider a non-pancreatic cause",
+      "findings": [
+        "Lipase and/or amylase raised but below the ≥3× pancreatitis threshold",
+        "Renal impairment, bowel obstruction/ischaemia, cholecystitis, perforation, DKA, salivary disease or relevant medication"
+      ],
+      "interpretation": [
+        "Mild-to-moderate elevation is non-specific and can arise from several non-pancreatic sources; renal failure alone can raise both enzymes through reduced clearance",
+        "Macroamylasaemia is a benign cause of isolated raised amylase without pancreatic disease, though it cannot be distinguished from other causes by this test alone"
+      ],
+      "actions": [
+        "Correlate with renal function, abdominal examination and the wider clinical picture rather than treating a mild rise as pancreatitis",
+        "Request U&E and consider capillary glucose/ketones if DKA is a differential (see further testing)",
+        "Arrange medical review to investigate the alternative cause suggested by the clinical picture"
+      ]
+    },
+    {
+      "id": "biliary-obstruction-pancreatitis-overlap",
+      "title": "Biliary obstruction with possible pancreatitis overlap",
+      "findings": [
+        "Lipase/amylase raised",
+        "Jaundice, fever and right-upper-quadrant pain"
+      ],
+      "interpretation": [
+        "Gallstone disease can cause both biliary obstruction/cholangitis and gallstone pancreatitis together; this combination needs urgent assessment as ascending cholangitis is time-critical in its own right"
+      ],
+      "actions": [
+        "Treat as time-critical if jaundice, fever and right-upper-quadrant pain suggest cholangitis (see urgent findings)",
+        "Request liver blood tests and FBC/CRP to characterise the biliary and inflammatory picture (see further testing)",
+        "Arrange urgent hospital assessment for imaging and biliary intervention as well as pancreatitis management"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "u-and-e-lipase",
+      "test": "U&E",
+      "rationale": [
+        "Assesses renal function (a non-pancreatic cause of enzyme elevation) and hydration status, which are important for fluid resuscitation planning in pancreatitis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "lft-lipase",
+      "test": "Liver blood tests",
+      "rationale": [
+        "Deranged liver blood tests support a gallstone/biliary cause of pancreatitis and help identify co-existing biliary obstruction or cholangitis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "fbc-crp-lipase",
+      "test": "Full blood count and C-reactive protein",
+      "rationale": [
+        "Support assessment of the inflammatory response and are used alongside physiology in severity assessment of pancreatitis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "calcium-lipase",
+      "test": "Calcium",
+      "rationale": [
+        "Hypercalcaemia is a recognised cause of pancreatitis, and hypocalcaemia can occur as a complication of severe pancreatitis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "capillary-glucose-lipase",
+      "test": "Capillary glucose and ketones",
+      "rationale": [
+        "DKA can raise lipase/amylase and can also coexist with or mimic an acute abdomen, so should be considered when the picture is unclear"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "abdominal-imaging-lipase",
+      "test": "Abdominal ultrasound / imaging referral",
+      "rationale": [
+        "Needed to identify gallstones as a cause, assess complications, and support the diagnosis when the biochemical picture is equivocal"
+      ],
+      "referenceIds": []
+    }
+  ],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
