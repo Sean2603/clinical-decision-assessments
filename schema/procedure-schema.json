@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://clinical-decision-assessments/schema/procedure-schema.json",
+  "$id": "https://raw.githubusercontent.com/Sean2603/clinical-decision-assessments/main/schema/procedure-schema.json",
   "title": "Clinical skill / procedure",
   "type": "object",
   "additionalProperties": false,

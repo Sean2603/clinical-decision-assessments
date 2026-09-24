@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schema/prescribing-schema.json",
+  "$id": "https://raw.githubusercontent.com/Sean2603/clinical-decision-assessments/main/schema/prescribing-schema.json",
   "title": "Remote condition-based prescribing pathway definition",
   "type": "object",
   "additionalProperties": false,

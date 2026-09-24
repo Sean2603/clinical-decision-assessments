@@ -1,2 +1,7 @@
 __pycache__/
 *.pyc
+
+# Local AI/editor metadata not required to run the repository tooling
+/.claude/
+/.agents/
+/.windsurf/

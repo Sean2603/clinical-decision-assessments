@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schema/clinical-notices-schema.json",
+  "$id": "https://raw.githubusercontent.com/Sean2603/clinical-decision-assessments/main/schema/clinical-notices-schema.json",
   "title": "Clinical notices document",
   "type": "object",
   "additionalProperties": false,

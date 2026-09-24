@@ -27,12 +27,15 @@ def parse_date(value):
     return None if value is None else date.fromisoformat(value)
 
 
+REFERENCE_ID_LIST_KEYS = {"references", "referenceIds"}
+
+
 def collect_reference_ids(value):
     found = set()
 
     if isinstance(value, dict):
         for key, child in value.items():
-            if key == "references" and isinstance(child, list):
+            if key in REFERENCE_ID_LIST_KEYS and isinstance(child, list):
                 found.update(item for item in child if isinstance(item, str))
             else:
                 found.update(collect_reference_ids(child))
@@ -132,7 +135,7 @@ def main() -> int:
 
     cited_ids = set()
     strict_cited_ids = set()
-    for folder in ("assessments", "guidelines", "scoring_tools", "blood_panels", "prescribing", "shared_learning"):
+    for folder in ("assessments", "guidelines", "procedures", "scoring_tools", "blood_panels", "medications", "prescribing", "shared_learning"):
         for content_path in sorted((ROOT / folder).glob("*.json")):
             document = load_json(content_path)
             item_ids = collect_reference_ids(document)
