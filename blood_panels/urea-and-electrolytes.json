@@ -586,13 +586,6 @@
     "nextReviewDue": null,
     "reviewNotes": null
   },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
-  },
   "attachments": [],
   "specimens": [
     {
