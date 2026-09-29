@@ -58,6 +58,30 @@ CI (`assessments.yml`) runs this same sequence read-only and fails if validation
 
 **Governance model** (enforced by CDM, not this repo): Draft → Awaiting review → Awaiting clinical validation → Ready to publish → Repository-confirmed Published. `main` is the authoritative publication branch; `content-review/clinical-review` is CDM's reusable review branch. An item is only "Published" once its exact governed version is on `main` — internal CDM snapshots, local commits, or open PRs don't count.
 
+## Changelog and README maintenance
+
+**CHANGELOG.md** — Update with dated entries for significant changes:
+- Schema version changes (new versions, breaking changes)
+- New content collections or taxonomy changes (e.g., new category icon keys)
+- Major clinical content or reference registry changes
+- Validation workflow improvements
+- Tooling or CI/CD changes
+- Documentation updates coordinated with CDM and app
+
+Format: Add entry at top with date (YYYY-MM-DD), theme subheading, bullet points describing changes. Example: `## 2026-09-29 – Repository documentation and developer guidance`
+
+**README.md** — Update when:
+- Validation command sequence changes
+- Setup or environment requirements change
+- Significant workflow or governance changes
+- Schema/content contract changes affecting downstream repos
+
+### Cross-Repo Coordination
+When changes affect other repos (cdm-content-manager, clinical-decision-app):
+- Update CHANGELOG entries in all affected repos with same date
+- Reference the coordination in each changelog entry
+- Ensure README.md changes are reflected consistently across all repos
+
 ## Gotchas worth remembering
 
 - Windows checkouts show `warning: ... CRLF will be replaced by LF` on `manifest.json` — harmless; `sync_manifest.py` canonicalises line endings before hashing, so this doesn't affect determinism.
