@@ -1,0 +1,283 @@
+{
+  "id": "fever-adults-assessment",
+  "title": "Fever in Adults Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing fever, identifying serious infections, sepsis risk, and source of fever to guide investigation and safe management.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, sepsis protocols or urgent escalation when serious infection is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Sepsis or septic shock (fever with suspected infection source, systemic illness, hypotension).",
+            "Meningitis (fever, headache, neck stiffness, altered consciousness).",
+            "Pneumonia (fever, cough, focal chest signs, hypoxia).",
+            "Urinary tract infection or pyelonephritis (dysuria, fever, flank pain).",
+            "Endocarditis (fever, murmur, malaise, emboli signs).",
+            "Intra-abdominal infection (fever with abdominal tenderness, peritoneal signs).",
+            "Source of fever if high or prolonged (malignancy, TB, autoimmune).",
+            "Immunosuppression increasing infection risk or atypical presentation."
+          ],
+          "references": [
+            "NICE-NG51",
+            "NICE-NG180"
+          ],
+          "importantLimitation": "Absence of obvious source does not exclude serious infection. Some serious infections present with fever alone."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "fever-characteristics",
+          "title": "Fever pattern and characteristics",
+          "mustConfirmOrExclude": [
+            "Onset: sudden vs. gradual; duration.",
+            "Height: peak temperature; pattern (constant, intermittent, spiking)?",
+            "Associated: chills, rigors, night sweats, diaphoresis.",
+            "Preceding illness: URI, gastroenteritis, other infection.",
+            "Travel history or unusual exposures."
+          ]
+        },
+        {
+          "id": "localising-symptoms",
+          "title": "Symptoms suggesting source",
+          "mustConfirmOrExclude": [
+            "Respiratory: cough, sputum, dyspnoea, pleurisy.",
+            "Urinary: dysuria, frequency, urgency, flank pain.",
+            "GI: diarrhoea, vomiting, abdominal pain, rigidity.",
+            "CNS: headache, neck stiffness, altered consciousness.",
+            "Skin: rash, wound infection, cellulitis.",
+            "Cardiac: murmur history, prosthetic valve, recent procedure."
+          ]
+        },
+        {
+          "id": "systemic-features",
+          "title": "Systemic illness and red flags",
+          "mustConfirmOrExclude": [
+            "Malaise, fatigue, myalgia, headache.",
+            "Confusion or altered consciousness.",
+            "Tachycardia, hypotension, tachypnoea (sepsis signs).",
+            "Hypoxia or respiratory distress.",
+            "Rash: maculopapular, petechial, or purpuric?",
+            "Recent surgery, instrumentation, or procedural risk."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious infection screen",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "sepsis",
+          "title": "Sepsis or septic shock",
+          "urgentFeatures": [
+            "Fever with suspected infection and systemic illness.",
+            "Tachycardia (>90), tachypnoea (>20), altered mental status.",
+            "Hypotension, signs of hypoperfusion or oliguria.",
+            "Lactate >2 mmol/L."
+          ],
+          "implications": [
+            "Emergency assessment; sepsis protocol activation (antibiotics, fluids, lactate monitoring)."
+          ]
+        },
+        {
+          "id": "meningitis",
+          "title": "Meningitis",
+          "urgentFeatures": [
+            "Fever with headache and neck stiffness.",
+            "Altered consciousness, photophobia, petechial rash."
+          ],
+          "implications": [
+            "Emergency referral; empiric antibiotics if suspected."
+          ]
+        },
+        {
+          "id": "pneumonia",
+          "title": "Community-acquired pneumonia",
+          "urgentFeatures": [
+            "Fever with cough, dyspnoea, focal chest signs.",
+            "CRP >100 or focal infiltrate on imaging.",
+            "Hypoxia or respiratory distress."
+          ],
+          "implications": [
+            "Chest X-ray; antibiotics and hospital referral if severe."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "items": [
+        {
+          "id": "vital-signs",
+          "title": "Vital signs and general assessment",
+          "howToTest": [
+            "Temperature, heart rate, blood pressure, respiratory rate, oxygen saturation.",
+            "General appearance: well, unwell, toxic, confused.",
+            "Skin: colour, perfusion, rash type and distribution."
+          ],
+          "normal": [
+            "Fever with normal or minimally abnormal vital signs otherwise."
+          ],
+          "abnormal": [
+            "Tachycardia, hypotension, tachypnoea, hypoxia, altered appearance, purpuric/petechial rash."
+          ],
+          "implications": [
+            "Abnormal vital signs with fever suggest systemic infection."
+          ]
+        },
+        {
+          "id": "focused-exam",
+          "title": "Organ system examination",
+          "howToTest": [
+            "Respiratory: breath sounds, crackles, consolidation signs.",
+            "Abdominal: tenderness, guarding, hepatomegaly, splenomegaly.",
+            "Cardiac: murmurs, prosthetic sounds, signs of endocarditis.",
+            "Neuro: meningeal signs, focal deficits, consciousness.",
+            "Skin: wounds, cellulitis, purpura, splinter haemorrhages."
+          ],
+          "normal": [
+            "Normal findings on targeted examination."
+          ],
+          "abnormal": [
+            "Focal signs suggesting infection source (respiratory, abdominal, cardiac, CNS, skin)."
+          ],
+          "implications": [
+            "Focal findings guide investigation and antibiotic choice."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common fever sources",
+      "type": "common-findings",
+      "items": [
+        {
+          "id": "viral-illness",
+          "title": "Viral infection",
+          "commonFindings": [
+            "Fever with URI/flu symptoms, malaise, myalgia.",
+            "Self-limiting; resolves in 3-7 days.",
+            "No focal signs or mild findings."
+          ],
+          "implications": [
+            "Supportive care; no antibiotics for viral infection."
+          ]
+        },
+        {
+          "id": "UTI-PN",
+          "title": "UTI or pyelonephritis",
+          "commonFindings": [
+            "Dysuria, frequency, urgency with fever.",
+            "Flank pain or CVA tenderness in pyelonephritis.",
+            "Positive urine dipstick; pyuria on microscopy."
+          ],
+          "implications": [
+            "Antibiotics; imaging if pyelonephritis suspected."
+          ]
+        },
+        {
+          "id": "respiratory",
+          "title": "Respiratory tract infection",
+          "commonFindings": [
+            "Fever with cough, sputum, dyspnoea.",
+            "Focal chest signs or consolidation.",
+            "CRP/WCC elevated; infiltrate on X-ray."
+          ],
+          "implications": [
+            "Chest imaging; antibiotics if bacterial pneumonia suspected."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "investigation",
+          "title": "Investigation",
+          "mustConfirmOrExclude": [
+            "FBC, CRP, blood cultures if fever >38.5°C or high sepsis risk.",
+            "Urinalysis and urine culture if UTI suspected.",
+            "Chest X-ray if respiratory symptoms.",
+            "Consider LP if meningitis suspected (after CT if needed)."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management when",
+          "mustConfirmOrExclude": [
+            "Low-risk appearance and vital signs.",
+            "Fever <38.5°C or resolving trend.",
+            "Likely viral illness; no focal serious features."
+          ]
+        },
+        {
+          "id": "urgent-referral",
+          "title": "Urgent hospital referral",
+          "urgentFeatures": [
+            "Signs of sepsis (tachycardia, hypotension, altered mental status).",
+            "High fever (>39°C) with systemic illness.",
+            "Fever with meningeal signs, focal neurological signs, or petechial rash.",
+            "Fever with respiratory distress or hypoxia.",
+            "Fever in severely immunocompromised patient."
+          ],
+          "implications": [
+            "Same-day hospital assessment required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "fever-safety",
+          "title": "Fever in adults",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: fever with signs of sepsis (severe illness, confusion, difficulty breathing); fever with meningeal signs (headache, neck stiffness, rash); or fever with signs of shock.",
+            "Contact your GP or go to ED same-day for: high fever (>39°C) with severe systemic illness; fever with focal infection signs (dysuria, chest pain, abdominal tenderness); fever lasting >7 days without clear source; or worsening fever despite paracetamol.",
+            "Speak to your GP if: fever is resolving but you want antibiotic advice; you want investigation of prolonged fever; or you are concerned about underlying causes."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG51",
+    "NICE-NG180"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "general",
+    "infectious-disease"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}

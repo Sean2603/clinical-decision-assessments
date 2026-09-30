@@ -1,0 +1,345 @@
+{
+  "id": "joint-pain-assessment",
+  "title": "Joint Pain and Swelling Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing joint pain, distinguishing monoarticular from polyarticular presentations, identifying septic joint and other urgent causes.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, urgent investigation or escalation.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Septic arthritis (fever, acute joint swelling, inability to weight-bear, warmth, severe pain).",
+            "Gout (acute monoarticular, severe pain, podagra common, urate history).",
+            "Crystal arthropathy or pseudogout (acute swelling, crystals on microscopy).",
+            "Fracture or ligamentous injury (trauma history, severe pain, swelling, inability to function).",
+            "Rheumatoid arthritis or seronegative spondyloarthropathy (polyarticular, morning stiffness, symmetric).",
+            "Inflammatory bowel disease with arthropathy or reactive arthritis (extraarticular features).",
+            "Malignancy (weight loss, systemic illness, polyarticular)."
+          ],
+          "references": [
+            "NICE-NG99",
+            "NICE-CG79"
+          ],
+          "importantLimitation": "Septic joint can be missed with mild fever. Monoarticular presentation with fever requires joint aspiration to exclude infection."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "pain-onset",
+          "title": "Onset and characteristics",
+          "mustConfirmOrExclude": [
+            "Onset: sudden vs. gradual; triggered by specific event or spontaneous.",
+            "Duration: hours, days, weeks.",
+            "Course: acute onset vs. gradual progression over weeks/months.",
+            "Pain character: sharp, aching, throbbing or inflammatory.",
+            "Swelling: immediately vs. delayed; visible vs. palpable."
+          ]
+        },
+        {
+          "id": "monoarticular-vs-polyarticular",
+          "title": "Joint involvement pattern",
+          "mustConfirmOrExclude": [
+            "Number of affected joints: single vs. multiple.",
+            "Pattern if polyarticular: symmetric vs. asymmetric; small vs. large joints.",
+            "Morning stiffness: present, duration (inflammatory suggests >1hr).",
+            "Joint history: previous episodes in same joint (recurrent gout)."
+          ]
+        },
+        {
+          "id": "red-flags",
+          "title": "Red-flag features",
+          "mustConfirmOrExclude": [
+            "Fever with acute joint swelling (septic arthritis).",
+            "Trauma or fall preceding pain (fracture, ligament injury).",
+            "Recent injection or procedure (post-injection septic joint).",
+            "IV drug use (endocarditis + septic joint).",
+            "Immunosuppression or prosthetic joint (infection risk).",
+            "Severe systemic illness with joint pain (sepsis, malignancy).",
+            "Rash with joint pain (viral, SLE, rheumatic fever)."
+          ]
+        },
+        {
+          "id": "inflammatory-features",
+          "title": "Features suggesting inflammatory arthritis",
+          "mustConfirmOrExclude": [
+            "Morning stiffness >1 hour (rheumatoid arthritis).",
+            "Polyarticular symmetric involvement (RA typical).",
+            "Systemic symptoms: fatigue, malaise, weight loss.",
+            "Family history of autoimmune disease.",
+            "Preceding URI or GI symptoms (reactive arthritis).",
+            "Eye involvement, uveitis or oral ulcers."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "septic-arthritis",
+          "title": "Septic arthritis",
+          "urgentFeatures": [
+            "Fever with acute joint swelling and severe pain.",
+            "Inability to weight-bear or move joint passively.",
+            "Warmth and erythema over joint.",
+            "Often monoarticular; large joints (knee, hip) common.",
+            "Risk factors: immunosuppression, prosthetic joint, IV drug use."
+          ],
+          "implications": [
+            "Emergency hospital assessment; joint aspiration and culture mandatory."
+          ]
+        },
+        {
+          "id": "gout-crystal",
+          "title": "Gout or crystal arthropathy",
+          "urgentFeatures": [
+            "Acute severe monoarticular pain, often at night.",
+            "Podagra (big toe) classic but any joint can be affected.",
+            "Swelling appears rapidly.",
+            "History of gout or urate elevation.",
+            "Triggers: purine-rich food, alcohol, diuretics."
+          ],
+          "implications": [
+            "NSAID or colchicine for acute pain; uric acid management long-term."
+          ]
+        },
+        {
+          "id": "fracture-injury",
+          "title": "Fracture or significant ligament injury",
+          "urgentFeatures": [
+            "Trauma preceding pain; often severe pain with swelling.",
+            "Inability to weight-bear or function.",
+            "Deformity, crepitus or instability on examination.",
+            "Swelling appears immediately or rapidly."
+          ],
+          "implications": [
+            "X-ray or advanced imaging; orthopedic assessment if significant."
+          ]
+        },
+        {
+          "id": "polyarticular-inflammation",
+          "title": "Polyarticular inflammatory arthritis",
+          "urgentFeatures": [
+            "Multiple joints affected; often symmetric.",
+            "Morning stiffness >1 hour.",
+            "Systemic symptoms (fatigue, fever, weight loss).",
+            "Acute rheumatoid arthritis, SLE or viral arthritis."
+          ],
+          "implications": [
+            "Bloods (CRP, ESR, RF, anti-CCP, ANA); rheumatology referral."
+          ]
+        },
+        {
+          "id": "reactive-arthritis",
+          "title": "Reactive arthritis",
+          "urgentFeatures": [
+            "Polyarticular arthritis following URI or GI infection.",
+            "Often with urethritis or conjunctivitis (Reiter triad).",
+            "Non-erosive; self-limited."
+          ],
+          "implications": [
+            "NSAIDs; resolves with management of preceding infection."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "items": [
+        {
+          "id": "joint-assessment",
+          "title": "Joint examination",
+          "howToTest": [
+            "Inspect: swelling, erythema, deformity, skin changes.",
+            "Palpate: warmth, fluctuance, tenderness (joint line vs. periarticular).",
+            "Range of motion: active and passive; pain with movement.",
+            "Stability tests: Lachman, ACL, collateral (knee); Sulcus sign (shoulder).",
+            "Effusion: ballottement, bulge sign (knee)."
+          ],
+          "normal": [
+            "No swelling, no warmth, full pain-free range of motion, stable."
+          ],
+          "abnormal": [
+            "Swelling, warmth or erythema, restricted range, pain with passive movement, effusion, instability."
+          ],
+          "implications": [
+            "Warmth + swelling + fever → septic joint. Acute swelling + pain without warmth → gout or trauma. Polyarticular + morning stiffness → inflammatory."
+          ]
+        },
+        {
+          "id": "systemic-assessment",
+          "title": "Systemic assessment",
+          "howToTest": [
+            "Fever assessment; vital signs.",
+            "Look for rash, nodules, or other systemic features.",
+            "Assess other joints for polyarticular pattern.",
+            "Evaluate functional status and weight-bearing ability."
+          ],
+          "normal": [
+            "Afebrile or low-grade fever only; no systemic features; other joints normal."
+          ],
+          "abnormal": [
+            "Fever >38.5°C, rash, systemic illness, polyarticular involvement."
+          ],
+          "implications": [
+            "Fever + monoarticular swelling = septic until proven otherwise."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common presentations",
+      "type": "common-findings",
+      "items": [
+        {
+          "id": "gout-acute",
+          "title": "Acute gout attack",
+          "commonFindings": [
+            "Sudden severe pain in big toe or foot (podagra).",
+            "Rapid swelling and warmth.",
+            "Often triggered by alcohol, purine-rich food or diuretics.",
+            "History of previous gout.",
+            "Resolves in 1-2 weeks untreated."
+          ],
+          "implications": [
+            "NSAIDs or colchicine acutely; long-term urate lowering."
+          ]
+        },
+        {
+          "id": "osteoarthritis",
+          "title": "Osteoarthritis",
+          "commonFindings": [
+            "Gradual onset; chronic course.",
+            "Large weight-bearing joints (knee, hip).",
+            "Stiffness improves with activity (unlike inflammatory).",
+            "No warmth; crepitus often present.",
+            "Age and prior trauma common."
+          ],
+          "implications": [
+            "Analgesics, physiotherapy; joint imaging for severity."
+          ]
+        },
+        {
+          "id": "viral-arthritis",
+          "title": "Viral arthritis",
+          "commonFindings": [
+            "Polyarticular, often small joints.",
+            "Follows viral illness; associated URI symptoms.",
+            "Symmetric involvement.",
+            "Self-limiting; resolves in 1-3 weeks."
+          ],
+          "implications": [
+            "Supportive care; NSAIDs for pain."
+          ]
+        },
+        {
+          "id": "rheumatoid-arthritis",
+          "title": "Rheumatoid arthritis (early)",
+          "commonFindings": [
+            "Polyarticular symmetric onset.",
+            "Morning stiffness >1 hour.",
+            "Hand joints commonly affected (PIP, MCP).",
+            "Gradual onset over weeks.",
+            "Female predominance."
+          ],
+          "implications": [
+            "CRP, ESR, RF, anti-CCP; rheumatology referral for DMARD therapy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "items": [
+        {
+          "id": "investigation",
+          "title": "Investigation approach",
+          "mustConfirmOrExclude": [
+            "Joint aspiration with culture: essential if fever + acute monoarticular swelling (septic arthritis risk).",
+            "X-rays: for fracture, osteoarthritis or structural damage assessment.",
+            "Blood tests (CRP, ESR, RF, anti-CCP, ANA): if polyarticular or inflammatory features.",
+            "Uric acid level: if gout suspected."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management when",
+          "mustConfirmOrExclude": [
+            "No fever or low-grade fever only.",
+            "No trauma history or features of fracture.",
+            "Likely gout, osteoarthritis or viral arthritis.",
+            "Able to function with simple analgesia."
+          ]
+        },
+        {
+          "id": "urgent-assessment",
+          "title": "Urgent hospital assessment",
+          "urgentFeatures": [
+            "Fever with acute monoarticular swelling (septic arthritis until proven).",
+            "Severe pain with inability to weight-bear or move joint.",
+            "Trauma with suspected fracture or severe ligament injury.",
+            "Prosthetic joint with fever or swelling.",
+            "Polyarticular with systemic illness and high inflammatory markers."
+          ],
+          "implications": [
+            "Same-day hospital assessment or ED referral required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "joint-pain-safety",
+          "title": "Joint pain and swelling",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: fever with acute joint swelling and severe pain; inability to move or weight-bear; signs of shock; or trauma with severe pain and deformity.",
+            "Contact your GP or go to ED same-day for: fever with joint swelling (exclude septic arthritis); severe acute joint pain; rapid swelling after trauma; polyarticular pain with systemic illness; or joint swelling not improving after 1 week.",
+            "Speak to your GP if: recurrent joint pain episodes; joint pain with morning stiffness; pain improving with NSAIDs but recurring; or you want investigation of chronic arthritis."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG99",
+    "NICE-CG79"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "musculoskeletal",
+    "rheumatology",
+    "general"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}

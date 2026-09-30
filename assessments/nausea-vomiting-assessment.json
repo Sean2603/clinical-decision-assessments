@@ -1,0 +1,343 @@
+{
+  "id": "nausea-vomiting-assessment",
+  "title": "Nausea and Vomiting Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing nausea and vomiting, identifying serious underlying causes, assessing dehydration risk, and supporting safe management and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, imaging or urgent escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Dehydration and electrolyte imbalance (dry mucous membranes, reduced urine output, hypotension).",
+            "Acute abdomen or surgical emergency (severe pain, peritoneal signs, bowel obstruction).",
+            "Meningitis or other CNS infection (fever, neck stiffness, altered consciousness).",
+            "Increased intracranial pressure (progressive headache, papilloedema, focal neurological signs).",
+            "Myocardial infarction or acute coronary syndrome (chest pain, dyspnoea, ECG changes).",
+            "Metabolic emergencies (DKA, hypercalcaemia, renal failure).",
+            "Pregnancy or gynaecological emergency (last menstrual period, pelvic pain).",
+            "Medication toxicity or overdose (recent drug exposure, altered consciousness)."
+          ],
+          "references": [
+            "NICE-CG27"
+          ],
+          "importantLimitation": "Vomiting can mask serious pathology. Red-flag features warrant investigation even if vomiting is apparently benign."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Characterise onset, pattern and associated symptoms to guide diagnosis.",
+      "items": [
+        {
+          "id": "nausea-vomiting-characteristics",
+          "title": "Nausea and vomiting characteristics",
+          "mustConfirmOrExclude": [
+            "Onset: sudden vs. gradual; duration.",
+            "Pattern: morning vs. throughout day; relation to food or movement.",
+            "Content: clear, bilious, bloody, coffee-ground (haematemesis)?",
+            "Frequency: single episode vs. persistent vomiting.",
+            "Associated: abdominal pain, diarrhoea, headache, fever or dizziness?"
+          ]
+        },
+        {
+          "id": "systemic-features",
+          "title": "Systemic and constitutional features",
+          "mustConfirmOrExclude": [
+            "Fever, rigors or signs of infection.",
+            "Headache, photophobia or neck stiffness (meningitis).",
+            "Abdominal pain: location, severity, type (sharp, cramping, constant)?",
+            "Diarrhoea, constipation or change in bowel habit.",
+            "Dizziness, vertigo or balance problems.",
+            "Weakness, confusion or altered consciousness."
+          ]
+        },
+        {
+          "id": "red-flag-history",
+          "title": "Red-flag features in history",
+          "mustConfirmOrExclude": [
+            "Severe abdominal pain or peritoneal signs (acute abdomen).",
+            "Bilious or blood-stained vomitus (obstruction or upper GI bleed).",
+            "Fever with headache and neck stiffness (meningitis).",
+            "Severe persistent vomiting with inability to drink (dehydration risk).",
+            "Chest pain or shortness of breath (cardiac, pulmonary).",
+            "Vertigo with vomiting (vestibular, CNS).",
+            "Altered consciousness or focal neurological signs (CNS pathology).",
+            "Recent medication change or overdose history.",
+            "Pregnancy or possibility of pregnancy.",
+            "Sudden onset severe headache (SAH, meningitis)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive features should trigger urgent investigation or referral.",
+      "items": [
+        {
+          "id": "acute-abdomen",
+          "title": "Acute abdomen or surgical emergency",
+          "urgentFeatures": [
+            "Severe abdominal pain with peritoneal signs (guarding, rebound).",
+            "Bilious vomiting with abdominal distension (obstruction).",
+            "Bloody vomitus (upper GI bleed) or coffee-ground appearance.",
+            "Severe pain localised to right lower quadrant (appendicitis).",
+            "Recent surgery or abdominal trauma."
+          ],
+          "implications": [
+            "Urgent hospital assessment; abdominal imaging required."
+          ]
+        },
+        {
+          "id": "meningitis-sepsis",
+          "title": "Meningitis or sepsis",
+          "urgentFeatures": [
+            "Fever with headache, neck stiffness and vomiting.",
+            "Altered consciousness or rash.",
+            "Fever with severe systemic illness or signs of shock."
+          ],
+          "implications": [
+            "Emergency referral and empiric antibiotics if meningitis suspected."
+          ]
+        },
+        {
+          "id": "increased-icp",
+          "title": "Increased intracranial pressure",
+          "urgentFeatures": [
+            "Progressive headache with vomiting.",
+            "Projectile vomiting (without nausea).",
+            "Morning vomiting, drowsiness or cognitive changes.",
+            "Papilloedema or focal neurological signs."
+          ],
+          "implications": [
+            "Urgent hospital assessment; neuroimaging required."
+          ]
+        },
+        {
+          "id": "metabolic-emergency",
+          "title": "Metabolic emergency",
+          "urgentFeatures": [
+            "Known diabetes with vomiting and altered consciousness (DKA).",
+            "Severe vomiting with severe hypercalcaemia signs (weakness, confusion).",
+            "Renal failure with vomiting and electrolyte disturbance."
+          ],
+          "implications": [
+            "Hospital assessment; blood tests and IV fluids required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Assess for dehydration, peritoneal signs and systemic illness.",
+      "items": [
+        {
+          "id": "dehydration-assessment",
+          "title": "Dehydration assessment",
+          "howToTest": [
+            "Mucous membranes: moist, dry or very dry.",
+            "Skin turgor: normal or reduced.",
+            "Vital signs: heart rate, blood pressure (postural if possible).",
+            "Urine output: frequency and colour.",
+            "Ability to drink and retain fluids."
+          ],
+          "normal": [
+            "Moist mucous membranes, normal turgor, normal vital signs."
+          ],
+          "abnormal": [
+            "Dry mucous membranes, reduced turgor, tachycardia, hypotension, reduced urine."
+          ],
+          "implications": [
+            "Assess dehydration severity; IV fluids likely needed if moderate/severe."
+          ]
+        },
+        {
+          "id": "abdominal-examination",
+          "title": "Abdominal examination",
+          "howToTest": [
+            "Inspect: distension, visible peristalsis, scars.",
+            "Palpate: tenderness (diffuse vs. localised), guarding, rebound, masses.",
+            "Percuss: dullness or tympany.",
+            "Auscultate: bowel sounds (present, reduced, absent)."
+          ],
+          "normal": [
+            "Soft, non-tender, normal bowel sounds."
+          ],
+          "abnormal": [
+            "Peritoneal signs, distension, absent bowel sounds, focal tenderness."
+          ],
+          "implications": [
+            "Peritoneal signs suggest surgical pathology; absent sounds suggest obstruction."
+          ]
+        },
+        {
+          "id": "neurological-assessment",
+          "title": "Neurological and meningeal assessment",
+          "howToTest": [
+            "Consciousness and orientation.",
+            "Headache assessment: location, severity, pattern.",
+            "Meningeal signs: neck stiffness, Kernig and Brudzinski signs.",
+            "Focal neurological signs: pupils, eye movements, motor and sensory."
+          ],
+          "normal": [
+            "Alert, no neck stiffness, no focal signs."
+          ],
+          "abnormal": [
+            "Altered consciousness, neck stiffness, focal neurological signs."
+          ],
+          "implications": [
+            "Neurological signs suggest CNS pathology; meningeal signs require emergency referral."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Pattern recognition supports diagnosis and management decisions.",
+      "items": [
+        {
+          "id": "viral-gastroenteritis",
+          "title": "Viral gastroenteritis",
+          "commonFindings": [
+            "Sudden onset nausea and vomiting, often with diarrhoea.",
+            "Self-limiting; resolves within 24-48 hours.",
+            "Preceding viral illness or sick contact.",
+            "Mild dehydration without severe systemic illness."
+          ],
+          "implications": [
+            "Supportive care with oral rehydration; no antibiotics."
+          ]
+        },
+        {
+          "id": "medication-related",
+          "title": "Medication-related nausea and vomiting",
+          "commonFindings": [
+            "Temporal relationship to new medication or dose change.",
+            "Opioids, antibiotics, NSAIDs, chemotherapy most common.",
+            "No other symptoms; examination normal.",
+            "Improves with medication change or dose adjustment."
+          ],
+          "implications": [
+            "Review medications; consider alternatives or antiemetics."
+          ]
+        },
+        {
+          "id": "migraine",
+          "title": "Migraine-associated nausea and vomiting",
+          "commonFindings": [
+            "Headache with nausea and vomiting (often disabling).",
+            "Photophobia and phonophobia.",
+            "May have visual aura.",
+            "History of migraines."
+          ],
+          "implications": [
+            "Treat migraine; antiemetics and abortive therapy as needed."
+          ]
+        },
+        {
+          "id": "pregnancy",
+          "title": "Pregnancy-related nausea (hyperemesis)",
+          "commonFindings": [
+            "Morning sickness in first trimester (mild).",
+            "Hyperemesis gravidarum: severe persistent vomiting with weight loss and dehydration.",
+            "Positive pregnancy test; amenorrhoea.",
+            "Usually improves after first trimester."
+          ],
+          "implications": [
+            "Mild: reassurance and dietary advice. Severe: hospital admission for IV fluids and antiemetics."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Base decisions on serious pathology assessment and dehydration severity.",
+      "items": [
+        {
+          "id": "rehydration-approach",
+          "title": "Rehydration",
+          "mustConfirmOrExclude": [
+            "Mild dehydration: oral rehydration solution, small frequent amounts.",
+            "Moderate dehydration: IV fluids if unable to tolerate oral.",
+            "Severe dehydration: hospital admission for IV fluids and monitoring."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No red-flag features present.",
+            "No peritoneal signs.",
+            "Mild to moderate dehydration only.",
+            "Likely viral gastroenteritis or medication-related nausea.",
+            "Able to tolerate oral intake."
+          ]
+        },
+        {
+          "id": "urgent-referral",
+          "title": "Urgent hospital referral",
+          "urgentFeatures": [
+            "Severe abdominal pain with peritoneal signs.",
+            "Fever with headache and meningeal signs.",
+            "Bloody or coffee-ground vomitus.",
+            "Severe persistent vomiting with inability to drink.",
+            "Altered consciousness or focal neurological signs.",
+            "Signs of shock or severe dehydration."
+          ],
+          "implications": [
+            "Same-day hospital assessment required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "nausea-vomiting-safety-netting",
+          "title": "Nausea and vomiting",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: severe abdominal pain with vomiting; vomiting blood or coffee-ground material; fever with severe headache and neck stiffness; altered consciousness; severe dizziness; or signs of shock.",
+            "Contact your GP or go to ED same-day for: persistent vomiting preventing fluid intake; severe abdominal pain; blood in vomitus; high fever (>38.5°C); unable to keep fluids down for more than a few hours; or signs of dehydration (dark urine, extreme thirst).",
+            "Speak to your GP if: nausea and vomiting persist beyond 2-3 days; you are unable to tolerate food or fluids; you want antiemetic advice; or you want to discuss medication-related symptoms."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-CG27"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "gastrointestinal",
+    "general"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}
