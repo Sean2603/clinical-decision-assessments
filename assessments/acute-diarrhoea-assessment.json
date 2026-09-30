@@ -1,0 +1,367 @@
+{
+  "id": "acute-diarrhoea-assessment",
+  "title": "Acute Diarrhoea Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing acute diarrhoea, recognising serious causes and dehydration risk, distinguishing infectious from inflammatory causes, and supporting safe management and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, antimicrobial guidance or urgent escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Severe dehydration (dry mucous membranes, reduced skin turgor, weakness, hypotension, reduced urine output).",
+            "Bloody diarrhoea or signs of inflammatory bowel disease.",
+            "Severe systemic illness or sepsis (fever, shock, altered consciousness).",
+            "Toxin-mediated disease (Clostridium difficile, staphylococcal food poisoning, cholera-like).",
+            "Acute surgical abdomen (severe pain, peritonitis, obstruction).",
+            "Immunosuppression increasing infection risk or atypical presentation risk.",
+            "Medication-related (antibiotics, laxative misuse, NSAIDs).",
+            "Recent travel or unusual food exposures."
+          ],
+          "references": [
+            "NICE-CG84"
+          ],
+          "importantLimitation": "Absence of bloody stools does not exclude serious infection or IBD. Dehydration develops rapidly especially in elderly and young children."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Characterise diarrhoea onset, severity and associated symptoms to guide diagnosis.",
+      "items": [
+        {
+          "id": "diarrhoea-characteristics",
+          "title": "Diarrhoea characteristics",
+          "mustConfirmOrExclude": [
+            "Onset: sudden vs. gradual; duration (hours, days, weeks).",
+            "Frequency: number of stools per day; day and night involvement.",
+            "Consistency: watery, loose, bloody, mucoid, greasy.",
+            "Associated: abdominal pain, cramping, tenesmus, urgency.",
+            "Blood or mucus: visible blood, melena or occult blood?"
+          ]
+        },
+        {
+          "id": "systemic-features",
+          "title": "Systemic and constitutional features",
+          "mustConfirmOrExclude": [
+            "Fever, rigors or chills.",
+            "Nausea, vomiting or inability to drink.",
+            "Malaise, myalgia or headache.",
+            "Signs of dehydration: thirst, dry mouth, reduced urine output, dizziness.",
+            "Recent upper-respiratory or other infection."
+          ]
+        },
+        {
+          "id": "risk-factors",
+          "title": "Risk factors and triggers",
+          "mustConfirmOrExclude": [
+            "Recent antibiotic use (especially broad-spectrum; C. difficile risk).",
+            "Recent food intake or eating out (food poisoning risk).",
+            "Travel abroad or to high-risk areas.",
+            "Sick contacts or outbreak exposure.",
+            "Recent laxative or NSAID use.",
+            "Known inflammatory bowel disease.",
+            "Immunosuppression (HIV, chemotherapy, immunosuppressive drugs)."
+          ]
+        },
+        {
+          "id": "red-flag-history",
+          "title": "Red-flag features in history",
+          "mustConfirmOrExclude": [
+            "Bloody diarrhoea or diarrhoea with mucus.",
+            "Severe abdominal pain or peritoneal signs.",
+            "High fever (>38.5°C) with systemic illness.",
+            "Unable to drink or persistent vomiting (dehydration risk).",
+            "Diarrhoea lasting >2 weeks (chronic diarrhoea).",
+            "Weight loss or systemic symptoms.",
+            "Recent hospitalisation or antibiotic exposure (C. difficile)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive features should trigger urgent assessment or investigation.",
+      "items": [
+        {
+          "id": "severe-dehydration",
+          "title": "Severe dehydration",
+          "urgentFeatures": [
+            "Inability to drink or persistent vomiting preventing fluid intake.",
+            "Clinical signs: dry mucous membranes, reduced skin turgor, weakness.",
+            "Reduced urine output or dark urine.",
+            "Hypotension or tachycardia.",
+            "Altered consciousness or confusion."
+          ],
+          "implications": [
+            "Hospital assessment for intravenous fluid replacement."
+          ]
+        },
+        {
+          "id": "bloody-diarrhoea",
+          "title": "Bloody diarrhoea or inflammatory bowel disease",
+          "urgentFeatures": [
+            "Visible blood or mucus in stool.",
+            "Severe abdominal pain with bloody diarrhoea.",
+            "Fever with bloody diarrhoea.",
+            "History of IBD with acute exacerbation.",
+            "Tenesmus and urgency."
+          ],
+          "implications": [
+            "Stool culture and testing; hospital referral if severe or high fever."
+          ],
+          "references": [
+            "NICE-CG84"
+          ]
+        },
+        {
+          "id": "toxic-megacolon",
+          "title": "Toxic megacolon or fulminant colitis",
+          "urgentFeatures": [
+            "Severe abdominal pain, distension and tenderness.",
+            "Reduced bowel sounds.",
+            "Fever, tachycardia and signs of sepsis.",
+            "Often follows Clostridium difficile or severe IBD flare."
+          ],
+          "implications": [
+            "Emergency hospital assessment; abdominal imaging required."
+          ]
+        },
+        {
+          "id": "acute-surgical-abdomen",
+          "title": "Acute surgical abdomen",
+          "urgentFeatures": [
+            "Severe abdominal pain with peritoneal signs (rebound, guarding).",
+            "Abdominal distension or vomiting.",
+            "Fever with localised tenderness.",
+            "Signs of shock or sepsis."
+          ],
+          "implications": [
+            "Emergency hospital assessment; abdominal imaging required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine for dehydration, peritoneal signs and systemic illness.",
+      "items": [
+        {
+          "id": "dehydration-assessment",
+          "title": "Dehydration assessment",
+          "howToTest": [
+            "Assess mucous membranes: moist, dry or very dry.",
+            "Skin turgor: normal, reduced or significantly reduced (pinch skin, measure recoil time).",
+            "Thirst and ability to drink.",
+            "Urine output: frequency and colour (dark or concentrated suggests dehydration).",
+            "Vital signs: heart rate, blood pressure (postural if possible)."
+          ],
+          "normal": [
+            "Moist mucous membranes, normal skin turgor, normal urine output, normal vital signs."
+          ],
+          "abnormal": [
+            "Dry mucous membranes, reduced turgor, tachycardia, hypotension, reduced/dark urine."
+          ],
+          "implications": [
+            "Dehydration severity guides need for IV fluids vs. oral rehydration therapy."
+          ]
+        },
+        {
+          "id": "abdominal-examination",
+          "title": "Abdominal examination",
+          "howToTest": [
+            "Inspect: distension, visible peristalsis, rash.",
+            "Palpate: tenderness (diffuse vs. localised), guarding, rebound, masses.",
+            "Percuss: dullness or hyperresonance.",
+            "Auscultate: bowel sounds (present, reduced or absent)."
+          ],
+          "normal": [
+            "Soft, non-tender, normal bowel sounds."
+          ],
+          "abnormal": [
+            "Peritoneal signs (guarding, rebound, rigid), distension, absent bowel sounds, focal tenderness."
+          ],
+          "implications": [
+            "Peritoneal signs suggest serious pathology; reduced/absent bowel sounds suggest obstruction or ileus."
+          ]
+        },
+        {
+          "id": "systemic-assessment",
+          "title": "Systemic assessment",
+          "howToTest": [
+            "Record temperature, heart rate, blood pressure.",
+            "Assess general appearance: well, unwell, toxic, shocked.",
+            "Note rash (meningococcal), stigmata of liver disease or IBD (perianal tags, fistulae)."
+          ],
+          "normal": [
+            "Afebrile or low-grade fever, normal vital signs, well appearance."
+          ],
+          "abnormal": [
+            "High fever (>38.5°C), tachycardia, hypotension, signs of shock or sepsis."
+          ],
+          "implications": [
+            "Fever with bloody diarrhoea suggests infectious colitis; shock suggests severe infection or dehydration."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Pattern recognition supports diagnosis and management decisions.",
+      "items": [
+        {
+          "id": "viral-gastroenteritis",
+          "title": "Viral gastroenteritis",
+          "commonFindings": [
+            "Watery diarrhoea with or without vomiting.",
+            "Low-grade fever or no fever.",
+            "Self-limiting; usually resolves within 1-7 days.",
+            "Preceding viral illness or sick contact."
+          ],
+          "implications": [
+            "Supportive care with oral rehydration; no antibiotics needed."
+          ]
+        },
+        {
+          "id": "bacterial-gastroenteritis",
+          "title": "Bacterial gastroenteritis",
+          "commonFindings": [
+            "Often bloody diarrhoea or diarrhoea with mucus.",
+            "Fever and systemic illness.",
+            "Recent food intake or eating out.",
+            "Abdominal cramping and urgency."
+          ],
+          "implications": [
+            "Stool culture if indicated; antibiotics only if severe systemic illness or specific organisms."
+          ]
+        },
+        {
+          "id": "c-difficile",
+          "title": "Clostridium difficile infection",
+          "commonFindings": [
+            "Watery diarrhoea following antibiotic use (especially broad-spectrum).",
+            "Fever, abdominal pain and systemic illness.",
+            "Can progress to toxic megacolon.",
+            "Risk factors: recent hospitalisation, elderly, immunosuppression."
+          ],
+          "implications": [
+            "Stool toxin testing; stop causative antibiotic; specific anti-C. difficile therapy if moderate/severe."
+          ]
+        },
+        {
+          "id": "inflammatory-bowel-disease",
+          "title": "Inflammatory bowel disease exacerbation",
+          "commonFindings": [
+            "Bloody diarrhoea, mucus, tenesmus.",
+            "Known history of Crohn's disease or ulcerative colitis.",
+            "Fever, weight loss and systemic symptoms.",
+            "Abdominal pain and urgency."
+          ],
+          "implications": [
+            "Specialist assessment; imaging and labs (CRP, albumin); aminosalicylates or corticosteroids."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Base decisions on dehydration severity, red-flag assessment and investigation needs.",
+      "items": [
+        {
+          "id": "rehydration-strategy",
+          "title": "Rehydration approach",
+          "mustConfirmOrExclude": [
+            "Mild dehydration: oral rehydration solution with electrolytes; small frequent amounts.",
+            "Moderate dehydration: IV fluids if unable to tolerate oral; closely monitor output.",
+            "Severe dehydration: hospital admission for IV fluids and monitoring."
+          ]
+        },
+        {
+          "id": "investigation-guidance",
+          "title": "Investigation",
+          "mustConfirmOrExclude": [
+            "Stool culture: if bloody diarrhoea, fever or severe systemic illness.",
+            "C. difficile testing: if recent antibiotics or hospital exposure.",
+            "Blood tests: if fever >38.5°C or severe systemic illness (FBC, CRP, electrolytes).",
+            "Imaging: if acute surgical abdomen suspected (abdominal X-ray or CT)."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No signs of severe dehydration.",
+            "Able to tolerate oral intake.",
+            "No bloody diarrhoea or only minimal blood.",
+            "No fever or low-grade fever only.",
+            "No peritoneal signs.",
+            "Likely viral gastroenteritis or mild bacterial infection."
+          ]
+        },
+        {
+          "id": "hospital-referral",
+          "title": "Hospital referral or admission",
+          "urgentFeatures": [
+            "Severe dehydration with inability to drink.",
+            "Bloody diarrhoea with fever or severe systemic illness.",
+            "Peritoneal signs or suspected acute surgical abdomen.",
+            "Signs of shock or sepsis.",
+            "Severe immunosuppression (at risk for complications)."
+          ],
+          "implications": [
+            "Hospital assessment for fluid replacement and investigation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "diarrhoea-safety-netting",
+          "title": "Acute diarrhoea",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: signs of severe dehydration (extreme dizziness, confusion, no urine for 8+ hours); severe abdominal pain with peritoneal signs; blood in stool with fever and severe systemic illness; or signs of shock.",
+            "Contact your GP or go to ED same-day for: persistent vomiting preventing fluid intake; bloody diarrhoea; high fever (>38.5°C); severe abdominal pain; diarrhoea lasting >2 weeks; or signs of dehydration (dark urine, dry mouth).",
+            "Speak to your GP if: diarrhoea persists beyond 1 week; you are not improving with rehydration; you want antibiotic advice; or you are concerned about underlying causes."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-CG84"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "gastrointestinal",
+    "infectious-disease"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}

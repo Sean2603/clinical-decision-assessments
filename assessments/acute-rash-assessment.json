@@ -1,0 +1,331 @@
+{
+  "id": "acute-rash-assessment",
+  "title": "Acute Rash Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing acute rash, recognising life-threatening infectious and drug reactions, distinguishing serious causes from benign viral exanthems, and supporting safe triage and urgent referral.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, specialist assessment or urgent escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Meningococcal septicaemia (non-blanching petechial rash, fever, systemic illness, meningeal signs).",
+            "Stevens-Johnson syndrome or toxic epidermal necrolysis (mucosal involvement, blistering, skin necrosis).",
+            "Severe drug reaction or anaphylaxis (angioedema, breathing difficulty, hypotension, recent drug exposure).",
+            "Infectious exanthem requiring isolation (measles, chickenpox, scarlet fever, herpes zoster).",
+            "Cellulitis or other spreading soft-tissue infection (localised warmth, swelling, systemic illness).",
+            "Severe systemic illness with rash (sepsis, toxic shock syndrome).",
+            "Immunosuppression increasing infection risk or unusual presentation risk."
+          ],
+          "references": [
+            "NICE-NG51",
+            "NICE-NG127"
+          ],
+          "importantLimitation": "Absence of meningeal signs does not exclude meningococcal disease. Early rash may not be petechial or non-blanching."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Characterise rash onset, distribution and associated symptoms to guide diagnosis.",
+      "items": [
+        {
+          "id": "rash-characteristics",
+          "title": "Rash characteristics and distribution",
+          "mustConfirmOrExclude": [
+            "Onset: sudden vs. gradual; duration; progression pattern.",
+            "Distribution: localised vs. generalised; symmetrical or asymmetrical; areas of predilection.",
+            "Morphology: maculae, papules, vesicles, pustules, blisters, petechiae, purpura.",
+            "Blanching: does it blanch with pressure? (petechial rash that does NOT blanch is ominous).",
+            "Associated: itch, pain, fever, systemic symptoms."
+          ]
+        },
+        {
+          "id": "systemic-features",
+          "title": "Systemic and constitutional features",
+          "mustConfirmOrExclude": [
+            "Fever, rigors, chills or night sweats.",
+            "Malaise, fatigue, myalgia, headache or sore throat.",
+            "Nausea, vomiting, diarrhoea or abdominal pain.",
+            "Breathing difficulty, throat tightness or wheeze (anaphylaxis).",
+            "Recent upper-respiratory infection or sick contacts."
+          ]
+        },
+        {
+          "id": "red-flag-history",
+          "title": "Red-flag features in history",
+          "mustConfirmOrExclude": [
+            "Non-blanching petechial or purpuric rash with fever (meningococcal).",
+            "Mucosal involvement: mouth ulcers, lip swelling, eye involvement.",
+            "Blistering, skin peeling or necrosis (Stevens-Johnson, TEN).",
+            "Recent new drug (antibiotics, NSAIDs, anticonvulsants most common).",
+            "Signs of anaphylaxis: throat tightness, breathing difficulty, hypotension, angioedema.",
+            "Spreading localised redness (cellulitis).",
+            "Known immunosuppression or HIV."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive features should trigger urgent ED referral or same-day specialist assessment.",
+      "items": [
+        {
+          "id": "meningococcal-septicaemia",
+          "title": "Meningococcal septicaemia",
+          "urgentFeatures": [
+            "Non-blanching petechial or purpuric rash (often on trunk, lower limbs, pressure areas).",
+            "Fever with systemic illness, meningeal signs or altered consciousness.",
+            "Rapid progression; may develop shock.",
+            "Rash typically appears 12-24 hours after fever onset."
+          ],
+          "implications": [
+            "Immediate emergency referral and empiric antibiotics (do not delay for lumbar puncture)."
+          ],
+          "references": [
+            "NICE-NG51"
+          ]
+        },
+        {
+          "id": "stevens-johnson-ten",
+          "title": "Stevens-Johnson syndrome or toxic epidermal necrolysis",
+          "urgentFeatures": [
+            "Facial oedema, mucosal erosions (mouth, eyes, genitals).",
+            "Widespread blistering or skin necrosis.",
+            "Recent new drug (antibiotics, NSAIDs, anticonvulsants).",
+            "Fever, malaise and systemic involvement."
+          ],
+          "implications": [
+            "Immediate hospital referral for specialist dermatology and intensive care."
+          ]
+        },
+        {
+          "id": "anaphylaxis",
+          "title": "Anaphylaxis",
+          "urgentFeatures": [
+            "Urticarial rash with angioedema (face, lips, airway).",
+            "Throat tightness, breathing difficulty or stridor.",
+            "Hypotension, shock or reduced consciousness.",
+            "Recent drug exposure, food or insect sting."
+          ],
+          "implications": [
+            "Immediate intramuscular adrenaline and emergency assessment."
+          ]
+        },
+        {
+          "id": "serious-infectious-exanthem",
+          "title": "Serious infectious exanthem",
+          "urgentFeatures": [
+            "Measles, chickenpox or scarlet fever in vulnerable populations (pregnancy, immunosuppression).",
+            "Severe systemic illness with exanthem.",
+            "Complications: encephalitis, myocarditis, secondary infection."
+          ],
+          "implications": [
+            "Hospital assessment and infection control precautions."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine for rash characteristics, distribution and signs of systemic illness.",
+      "items": [
+        {
+          "id": "general-assessment",
+          "title": "General appearance and vital signs",
+          "howToTest": [
+            "Assess consciousness, orientation and signs of systemic illness.",
+            "Record temperature, heart rate, blood pressure and respiratory rate.",
+            "Note any signs of shock: pallor, cold extremities, delayed capillary refill."
+          ],
+          "normal": [
+            "Alert, haemodynamically stable, normal temperature or low-grade fever."
+          ],
+          "abnormal": [
+            "Altered consciousness, fever >38.5°C, tachycardia, hypotension or signs of shock."
+          ],
+          "implications": [
+            "Systemic illness with rash suggests serious infection or drug reaction."
+          ]
+        },
+        {
+          "id": "rash-examination",
+          "title": "Rash morphology and distribution",
+          "howToTest": [
+            "Document exact location, extent and spread pattern.",
+            "Describe morphology: macules, papules, vesicles, pustules, petechiae, purpura, blisters.",
+            "TEST FOR BLANCHING: press with glass tumbler; petechial rash that does NOT blanch is red flag.",
+            "Note any mucosal involvement (mouth, conjunctivae, genitals).",
+            "Assess for secondary infection or crusting."
+          ],
+          "normal": [
+            "Blanching erythema or papules; no vesicles or purpura; no mucosal involvement."
+          ],
+          "abnormal": [
+            "Non-blanching petechiae or purpura; vesicles or blisters; mucosal ulcers; necrosis."
+          ],
+          "implications": [
+            "Non-blanching purpura suggests meningococcaemia; vesicles suggest varicella or herpes; mucosal involvement suggests serious drug reaction."
+          ]
+        },
+        {
+          "id": "meningeal-examination",
+          "title": "Meningeal signs",
+          "howToTest": [
+            "Test neck stiffness, Kernig sign and Brudzinski sign (see Acute Headache assessment).",
+            "Note photophobia or phonophobia.",
+            "Assess for petechial rash distribution on trunk, legs and pressure areas."
+          ],
+          "normal": [
+            "No neck stiffness, negative Kernig and Brudzinski signs."
+          ],
+          "abnormal": [
+            "Neck stiffness, positive Kernig or Brudzinski sign, petechial rash with fever."
+          ],
+          "implications": [
+            "Meningeal signs with petechial rash = meningococcal septicaemia; emergency referral."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Pattern recognition supports diagnosis but does not replace serious pathology screening.",
+      "items": [
+        {
+          "id": "viral-exanthem",
+          "title": "Viral exanthem",
+          "commonFindings": [
+            "Maculopapular rash following viral prodrome (fever, cough, coryza).",
+            "Rash appears 3-5 days after fever onset.",
+            "Blanching erythema; no vesicles or purpura.",
+            "Self-limiting; resolves in 1-2 weeks."
+          ],
+          "implications": [
+            "Supportive care; no specific treatment needed."
+          ]
+        },
+        {
+          "id": "chickenpox-varicella",
+          "title": "Chickenpox (varicella zoster)",
+          "commonFindings": [
+            "Vesicular rash in crops; clear fluid then crusting.",
+            "Crops appear over 3-5 days; 'all stages' appearance.",
+            "Fever and itching.",
+            "Contact isolation needed; isolation until all vesicles crusted."
+          ],
+          "implications": [
+            "Supportive care; antivirals if immunocompromised or severe. Avoid contact with vulnerable groups."
+          ]
+        },
+        {
+          "id": "drug-reaction",
+          "title": "Drug reaction (maculopapular)",
+          "commonFindings": [
+            "Rash 3-7 days after new drug (antibiotics, NSAIDs most common).",
+            "Maculopapular, usually blanching.",
+            "Mild systemic symptoms or none.",
+            "Improves with drug withdrawal."
+          ],
+          "implications": [
+            "Discontinue causative drug; supportive care; antihistamines if itchy."
+          ]
+        },
+        {
+          "id": "cellulitis",
+          "title": "Cellulitis",
+          "commonFindings": [
+            "Localised warmth, swelling, erythema.",
+            "Often follows break in skin (wound, insect bite, athlete's foot).",
+            "Fever and systemic symptoms.",
+            "Spreads over 24-48 hours if untreated."
+          ],
+          "implications": [
+            "Antibiotic therapy indicated; monitor for spreading or systemic deterioration."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Base decisions on serious pathology assessment and urgency of referral.",
+      "items": [
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No red-flag features for serious pathology present.",
+            "Rash is blanching; no petechiae or purpura.",
+            "No mucosal involvement.",
+            "Likely diagnosis is viral exanthem, uncomplicated varicella or benign drug reaction.",
+            "Patient well with manageable fever."
+          ]
+        },
+        {
+          "id": "urgent-referral",
+          "title": "Urgent ED referral (same-day or emergency)",
+          "urgentFeatures": [
+            "Non-blanching petechial or purpuric rash with fever (meningococcal).",
+            "Blistering, skin necrosis or mucosal involvement (Stevens-Johnson/TEN).",
+            "Angioedema, breathing difficulty or signs of anaphylaxis.",
+            "Spreading cellulitis with systemic illness.",
+            "Severe systemic illness with rash (sepsis, shock)."
+          ],
+          "implications": [
+            "Emergency or same-day hospital assessment required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "rash-safety-netting",
+          "title": "Acute rash",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: non-blanching petechial rash with fever; difficulty breathing or throat tightness (anaphylaxis); blistering or skin peeling; spreading rash with severe systemic illness; or signs of shock.",
+            "Contact your GP or go to ED same-day for: widespread rash with fever; mucosal ulcers or eye involvement; rash with meningeal signs; localised rapidly spreading redness (cellulitis); or new rash after starting a medication.",
+            "Speak to your GP if: rash is not improving after 1 week; rash is spreading; you develop new symptoms; or you want advice about infection risk to others."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG51",
+    "NICE-NG127"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "dermatology",
+    "infectious-disease"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}

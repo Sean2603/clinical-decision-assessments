@@ -1,0 +1,354 @@
+{
+  "id": "constipation-assessment",
+  "title": "Constipation Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing constipation, recognising serious causes and complications, distinguishing functional constipation from organic pathology, and supporting safe management and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, urgent investigation or escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Acute bowel obstruction (absolute constipation, abdominal distension, vomiting, lack of flatus).",
+            "Faecal impaction (hard stool palpable on rectal examination, overflow diarrhoea, urinary retention).",
+            "Colonic pseudo-obstruction (Ogilvie syndrome) after surgery or severe illness.",
+            "Colorectal cancer or polyp (change in bowel habit, blood in stool, weight loss, age >50).",
+            "Inflammatory bowel disease or stricture.",
+            "Acute abdomen or perforation risk.",
+            "Neurological cause (spinal cord compression, Parkinson's, multiple sclerosis).",
+            "Medication-related (opioids, anticholinergics, iron supplements)."
+          ],
+          "references": [
+            "NICE-CG99"
+          ],
+          "importantLimitation": "Constipation can mask serious pathology. Red-flag features warrant investigation even in apparently low-risk patients."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Characterise constipation onset, severity and associated symptoms to guide diagnosis.",
+      "items": [
+        {
+          "id": "constipation-characteristics",
+          "title": "Constipation characteristics",
+          "mustConfirmOrExclude": [
+            "Onset: acute vs. chronic (gradual change vs. long-standing); duration and progression.",
+            "Frequency: days since last bowel movement; previously normal frequency.",
+            "Stool: hard, pellet-like, normal consistency but infrequent?",
+            "Effort: straining, difficulty passing stool, feeling of incomplete emptying.",
+            "Associated: abdominal bloating, distension, cramping or pain."
+          ]
+        },
+        {
+          "id": "bowel-habit-change",
+          "title": "Change in bowel habit",
+          "mustConfirmOrExclude": [
+            "Acute change from patient's usual pattern.",
+            "Narrowing of stool (pencil-thin stools suggest stricture or mass).",
+            "Alternate constipation and diarrhoea.",
+            "Blood in stool or rectal bleeding.",
+            "Mucus in stool."
+          ]
+        },
+        {
+          "id": "red-flag-features",
+          "title": "Red-flag features in history",
+          "mustConfirmOrExclude": [
+            "Absolute constipation (no stool or flatus for several days).",
+            "Abdominal pain, distension or vomiting.",
+            "Involuntary weight loss or loss of appetite.",
+            "Blood in stool or visible rectal bleeding.",
+            "Age >50 with new-onset constipation.",
+            "Family history of colorectal cancer.",
+            "Recent opioid use or medication change.",
+            "Recent surgery, spinal injury or neurological disease.",
+            "Urinary retention or neurological symptoms (weakness, numbness)."
+          ]
+        },
+        {
+          "id": "risk-factors",
+          "title": "Risk factors for constipation",
+          "mustConfirmOrExclude": [
+            "Medications: opioids, anticholinergics (antihistamines, antispasmodics), iron supplements, diuretics.",
+            "Low dietary fibre or inadequate fluid intake.",
+            "Immobility or sedentary lifestyle.",
+            "Neurological disease (Parkinson's, spinal cord disease, stroke).",
+            "Endocrine disease (hypothyroidism, hypercalcaemia, diabetes).",
+            "Recent surgery or hospitalisation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive features should trigger urgent investigation or referral.",
+      "items": [
+        {
+          "id": "acute-bowel-obstruction",
+          "title": "Acute bowel obstruction",
+          "urgentFeatures": [
+            "Absolute constipation (no stool or flatus for >12 hours).",
+            "Abdominal distension and pain.",
+            "Vomiting or bilious vomiting.",
+            "Abdominal tenderness or peritoneal signs."
+          ],
+          "implications": [
+            "Emergency hospital assessment; abdominal imaging (CT or AXR) required."
+          ]
+        },
+        {
+          "id": "faecal-impaction",
+          "title": "Faecal impaction",
+          "urgentFeatures": [
+            "Hard stool palpable on rectal examination.",
+            "Overflow diarrhoea or liquid stool around impacted mass.",
+            "Urinary retention or incontinence.",
+            "Confusion or delirium (in elderly; may be sole presenting symptom).",
+            "Often following immobility, opioid use or inadequate fibre."
+          ],
+          "implications": [
+            "Manual disimpaction (if necessary), stool softeners, enemas; hospital admission may be needed."
+          ]
+        },
+        {
+          "id": "colorectal-cancer",
+          "title": "Colorectal cancer",
+          "urgentFeatures": [
+            "Age >50 with new-onset constipation.",
+            "Pencil-thin stools or change in stool calibre.",
+            "Blood in stool or visible rectal bleeding.",
+            "Involuntary weight loss.",
+            "Abdominal mass or tenesmus."
+          ],
+          "implications": [
+            "Urgent referral for colonoscopy or CT colonography."
+          ]
+        },
+        {
+          "id": "colonic-perforation",
+          "title": "Colonic perforation or pseudo-obstruction",
+          "urgentFeatures": [
+            "Acute abdominal pain with distension.",
+            "Fever and signs of peritonitis.",
+            "Often after surgery, severe illness or opioid use.",
+            "Risk of toxic megacolon (see acute diarrhoea)."
+          ],
+          "implications": [
+            "Emergency hospital assessment; abdominal imaging and possible surgery."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine for complications, signs of serious pathology and stool impaction.",
+      "items": [
+        {
+          "id": "abdominal-examination",
+          "title": "Abdominal examination",
+          "howToTest": [
+            "Inspect: distension, visible peristalsis, scars from prior surgery.",
+            "Palpate: tenderness (diffuse vs. localised), masses, guarding or rebound.",
+            "Percuss: dullness, tympany, shifting dullness.",
+            "Auscultate: bowel sounds (present, reduced, absent, high-pitched)."
+          ],
+          "normal": [
+            "Soft, non-tender, normal bowel sounds, no distension."
+          ],
+          "abnormal": [
+            "Distension, tenderness, peritoneal signs, absent bowel sounds, palpable mass."
+          ],
+          "implications": [
+            "Distension + absent bowel sounds suggests obstruction; peritoneal signs suggest perforation."
+          ]
+        },
+        {
+          "id": "digital-rectal-examination",
+          "title": "Digital rectal examination",
+          "howToTest": [
+            "Inspect perianal area: fissures, haemorrhoids, fistulae, tags.",
+            "Palpate rectum: hard stool (impaction), masses, stricture, tenderness.",
+            "Note stool colour (blood, melena).",
+            "Assess anal sphincter tone and sensation."
+          ],
+          "normal": [
+            "Patent rectum, normal tone, no masses, no blood."
+          ],
+          "abnormal": [
+            "Hard stool impaction, palpable mass, stricture, blood, reduced sensation."
+          ],
+          "implications": [
+            "Impacted stool confirms impaction; palpable mass raises cancer concern; blood warrants investigation."
+          ]
+        },
+        {
+          "id": "neuromuscular-assessment",
+          "title": "Neuromuscular assessment",
+          "howToTest": [
+            "Lower-limb strength and sensation (spinal cord compression risk).",
+            "Assess gait and mobility.",
+            "Reflexes and perianal sensation (spinal cord syndrome).",
+            "Signs of Parkinson's or other neurological disease."
+          ],
+          "normal": [
+            "Normal strength, sensation, reflexes and gait."
+          ],
+          "abnormal": [
+            "Weakness, sensory loss, hyperreflexia or absent reflexes, gait disturbance."
+          ],
+          "implications": [
+            "Neurological signs suggest spinal cord compression or neurological disease requiring urgent investigation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Pattern recognition supports diagnosis and management decisions.",
+      "items": [
+        {
+          "id": "functional-constipation",
+          "title": "Functional constipation",
+          "commonFindings": [
+            "Gradual onset; chronic duration.",
+            "Hard, infrequent stools; straining.",
+            "No red-flag features; normal examination.",
+            "Associated with low fibre, low fluid intake or sedentary lifestyle.",
+            "Responds to dietary modification and laxatives."
+          ],
+          "implications": [
+            "Dietary advice, fluid intake, exercise, stool softeners; laxatives as needed."
+          ]
+        },
+        {
+          "id": "opioid-induced",
+          "title": "Opioid-induced constipation",
+          "commonFindings": [
+            "Follows opioid initiation or dose increase.",
+            "Hard, infrequent stools; marked straining.",
+            "Often severe and may not respond to simple measures.",
+            "Occurs even with adequate fibre and fluid."
+          ],
+          "implications": [
+            "Proactive laxative regimen required (stool softener + stimulant); consider opioid reduction if possible."
+          ]
+        },
+        {
+          "id": "medication-related",
+          "title": "Medication-related constipation (other)",
+          "commonFindings": [
+            "Follows anticholinergic drug (antihistamine, antispasmodic), iron supplement or diuretic.",
+            "Temporal relationship to medication change.",
+            "Improves with drug withdrawal or dose reduction."
+          ],
+          "implications": [
+            "Review medications; consider alternatives if possible; temporary laxative support."
+          ]
+        },
+        {
+          "id": "impaction",
+          "title": "Faecal impaction (elderly/immobile)",
+          "commonFindings": [
+            "Hard stool on rectal examination.",
+            "Often follows immobility, opioid use, dehydration or inadequate fibre.",
+            "May present with overflow diarrhoea, urinary retention or confusion.",
+            "Common in hospitalised elderly patients."
+          ],
+          "implications": [
+            "Manual disimpaction (with analgesia/sedation if needed); laxatives and prevention strategy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Base decisions on serious pathology assessment, severity and complications.",
+      "items": [
+        {
+          "id": "investigation-guidance",
+          "title": "Investigation",
+          "mustConfirmOrExclude": [
+            "Flexible sigmoidoscopy or colonoscopy: if age >50 or new-onset constipation or alarm features.",
+            "Abdominal imaging (X-ray or CT): if acute obstruction suspected.",
+            "Blood tests: if weight loss, anaemia suspected or systemic disease (TSH, calcium, glucose).",
+            "Digital rectal examination: always performed to assess for impaction and masses."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No red-flag features present.",
+            "No absolute constipation or signs of obstruction.",
+            "No palpable mass on rectal examination.",
+            "Likely functional constipation or medication-related.",
+            "Patient able to manage with lifestyle modification and laxatives."
+          ]
+        },
+        {
+          "id": "urgent-referral",
+          "title": "Urgent investigation or referral",
+          "urgentFeatures": [
+            "Absolute constipation with abdominal pain and distension (obstruction).",
+            "Red-flag features: age >50 with new constipation, blood in stool, weight loss.",
+            "Palpable abdominal mass or rectal mass.",
+            "Signs of spinal cord compression (weakness, sensory loss).",
+            "Faecal impaction requiring manual disimpaction."
+          ],
+          "implications": [
+            "Urgent colonoscopy or imaging; hospital assessment if acute obstruction suspected."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "constipation-safety-netting",
+          "title": "Constipation",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: severe abdominal pain with distension and vomiting (obstruction); abdominal pain with inability to pass stool or flatus; signs of peritonitis (severe tenderness); or signs of spinal cord compression (weakness or numbness in legs).",
+            "Contact your GP or go to ED same-day for: no bowel movement for more than 3 days with abdominal discomfort; blood in stool; involuntary weight loss; change in stool calibre; or severe straining causing pain or bleeding.",
+            "Speak to your GP if: constipation persists despite laxatives; you are having to use increasingly strong laxatives; or you want advice about medication-related constipation."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-CG99"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "gastrointestinal"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}
