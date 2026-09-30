@@ -801,8 +801,9 @@
           "id": "back-pain-safety-netting",
           "title": "Back pain",
           "safetyNetting": [
-            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
-            "Seek urgent reassessment for new difficulty passing urine, urinary retention or incontinence; loss of bowel control; saddle or genital numbness; new or worsening leg weakness; bilateral leg symptoms; inability to walk; fever or rigors; or rapidly worsening or uncontrolled pain."
+            "Call 999 or go to ED immediately for: difficulty breathing, chest pain, collapse, new focal neurological deficit, progressive leg weakness, saddle/genital numbness, loss of bowel/bladder control, or inability to walk.",
+            "Contact your GP or go to ED same-day for: new urinary retention or incontinence without complete loss of control; worsening leg weakness; fever with back pain; rapidly escalating pain; or inability to function despite analgesia.",
+            "Speak to your GP if: pain persists beyond 6 weeks despite physiotherapy; you develop new numbness or tingling; pain is affecting your mood or sleep; or you have concerns about underlying causes."
           ],
           "importantLimitation": "Safety-netting does not make discharge appropriate when serious pathology has not been adequately excluded."
         }

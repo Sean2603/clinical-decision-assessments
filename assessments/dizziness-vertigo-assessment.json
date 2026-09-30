@@ -606,9 +606,9 @@
           "id": "dizziness-vertigo-safety-netting",
           "title": "Dizziness or vertigo",
           "safetyNetting": [
-            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern. ",
-            "Seek urgent reassessment for new weakness or numbness; facial droop; speech, swallowing or vision change; a new severe headache or neck pain; inability to stand or walk; repeated vomiting or inability to drink; new hearing loss; fainting or palpitations; or symptoms that become continuous, markedly worse or different from the assessed pattern.",
-            "Avoid driving, working at height or operating machinery while symptoms could impair balance or concentration. Follow the agreed review and vestibular, falls, cardiac or stroke pathway."
+            "Call 999 or go to ED immediately for: new facial weakness, speech change, new severe headache with stiff neck, weakness on one side, loss of consciousness, severe uncontrolled vomiting, or fainting with palpitations.",
+            "Contact your GP or go to ED same-day for: new vision change, hearing loss or tinnitus; significant new weakness or numbness; rapidly worsening or continuous vertigo; unable to stand or walk safely; repeated vomiting or inability to drink; or symptoms very different from initial pattern.",
+            "Do not drive, work at height or operate machinery until symptoms resolve. Speak to your GP if: dizziness persists beyond 2 weeks; you have had multiple falls; balance is not improving with exercises; or you need a sick note for work."
           ],
           "importantLimitation": "Safety-netting does not make discharge appropriate when posterior circulation stroke, arrhythmia or unsafe mobility has not been adequately addressed."
         }

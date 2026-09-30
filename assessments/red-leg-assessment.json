@@ -954,10 +954,10 @@
           "id": "red-leg-safety-netting",
           "title": "Red or swollen leg",
           "safetyNetting": [
-            "Call 999 for significant deterioration in breathing, chest pain or collapse.",
-            "Seek urgent reassessment for rapidly spreading redness or swelling; severe or escalating pain; blistering, skin blackening or new numbness; a cold, pale or weak limb; new fever, rigors, confusion or marked general deterioration; inability to stand or walk; or a newly hot, severely painful and restricted joint.",
-            "When treated for cellulitis, seek reassessment if symptoms worsen at any time or do not start to improve within 2 to 3 days. Skin colour and swelling may take longer to return fully to normal.",
-            "Follow the arranged DVT, wound, diabetic-foot, vascular, tissue-viability or hospital-at-home review plan and seek help promptly if the expected contact or investigation does not occur."
+            "Call 999 or go to ED immediately for: difficulty breathing, chest pain, collapse, cold/pale/pulseless leg, severe uncontrolled pain, skin turning black, or signs of acute limb ischaemia.",
+            "Contact your GP or go to ED same-day for: rapidly spreading redness or swelling over hours; severe or escalating pain despite analgesia; blistering or skin breakdown; new numbness or tingling; fever rising above 38.5°C; new confusion or marked deterioration; inability to stand or walk; or a hot, severely painful, restricted joint.",
+            "Seek reassessment if treated for cellulitis but symptoms worsen at any time or do not start improving within 2-3 days. Minor colour changes can take weeks to resolve completely.",
+            "Attend your arranged DVT/imaging, vascular, diabetic-foot or tissue-viability review and contact that service promptly if the expected appointment or test does not occur."
           ],
           "references": [
             "NICE-NG141",

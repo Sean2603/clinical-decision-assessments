@@ -601,9 +601,9 @@
           "id": "frailty-safety-netting",
           "title": "Frailty and functional deterioration",
           "safetyNetting": [
-            "Any significant deterioration in breathing, chest pain or collapse – call 999.",
-            "Seek urgent reassessment for new or worsening confusion; inability to stand, walk, eat, drink, pass urine or take essential medicines; a further fall or injury; fever or rigors; uncontrolled pain; marked drowsiness; or any situation in which essential care can no longer be provided safely.",
-            "Follow the agreed review plan and contact the named service if function, intake or cognition has not returned towards baseline within the expected timeframe."
+            "Call 999 or go to ED immediately for: difficulty breathing, chest pain, collapse, loss of consciousness, or signs of acute illness that cannot be managed at home.",
+            "Contact your GP or go to ED same-day for: new or worsening confusion; new inability to walk, stand or transfer; new inability to eat or drink; unable to pass urine; unable to take essential medicines; fever with deterioration; uncontrolled pain; or breakdown of care arrangement.",
+            "Attend your scheduled appointments and follow the agreed review plan. Contact the named service if function or intake is not returning towards baseline as expected."
           ],
           "importantLimitation": "Safety-netting is ineffective unless the person or carer can recognise deterioration, contact the service and obtain a timely response."
         }

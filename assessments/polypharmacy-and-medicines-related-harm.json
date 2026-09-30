@@ -240,8 +240,9 @@
           "id": "medicine-safety",
           "title": "Medicines-related harm",
           "safetyNetting": [
-            "Any significant deterioration in breathing, chest pain or collapse – call 999.",
-            "Seek urgent reassessment for increasing drowsiness or confusion, a further fall, bleeding, black stools, repeated low glucose, inability to take essential medicines, markedly reduced urine output or vomiting that prevents medicines and fluids being retained."
+            "Call 999 or go to ED immediately for: severe dizziness with falls; internal bleeding (black stools, vomiting blood); collapse; severe confusion or altered consciousness; or signs of overdose/toxicity.",
+            "Contact your GP or go to ED same-day for: significant increase in drowsiness or confusion; another fall; bleeding or bruising appearing; repeated very low glucose readings; inability to take essential medicines; marked reduction in urine output; or vomiting preventing medicines/fluids.",
+            "Speak to your GP if: you are having side effects from medicines; you need help taking medicines; you want to discuss medications that can be stopped; or you are concerned about drug interactions."
           ]
         }
       ]

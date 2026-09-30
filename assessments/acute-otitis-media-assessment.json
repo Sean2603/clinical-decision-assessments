@@ -243,11 +243,9 @@
           "id": "reassessment-advice",
           "title": "Advise reassessment if",
           "safetyNetting": [
-            "Symptoms worsen rapidly or significantly.",
-            "Post-auricular swelling, redness or increasing mastoid pain develops.",
-            "Severe headache, neck stiffness, vomiting, altered behaviour or facial weakness develops.",
-            "Hydration deteriorates or the patient becomes systemically very unwell.",
-            "Symptoms are not improving as expected."
+            "Call 999 or go to ED immediately for: severe headache with neck stiffness, altered behaviour or confusion, facial weakness, signs of meningitis, or physiological instability.",
+            "Contact your GP or go to ED same-day for: post-auricular swelling, redness or increasing mastoid pain; fever above 38.5°C despite analgesia; inability to drink or maintain fluids; or symptoms worsening significantly.",
+            "Speak to your GP if: symptoms are not improving after 3 days despite analgesia; pain persists beyond 7 days; fever continues beyond 5 days; or hearing changes develop."
           ]
         }
       ]

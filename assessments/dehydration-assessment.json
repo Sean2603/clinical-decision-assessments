@@ -550,9 +550,9 @@
           "id": "dehydration-safety-netting",
           "title": "Dehydration or fluid deficit",
           "safetyNetting": [
-            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
-            "Seek urgent reassessment for passing very little or no urine; worsening dizziness or fainting; new confusion or severe drowsiness; inability to keep fluids down; ongoing large-volume diarrhoea, vomiting, stoma or fistula losses; blood in vomit or stool; or worsening breathlessness or swelling during fluid replacement.",
-            "Follow the agreed drinking or replacement plan and attend the arranged review or blood test. Confirm who will review the result and what to do if intake remains below target."
+            "Call 999 or go to ED immediately for: difficulty breathing, chest pain, collapse, severe confusion or altered consciousness, severe dizziness with falls, or signs of shock.",
+            "Contact your GP or go to ED same-day for: anuria (no urine for 8+ hours) or minimal urine output; persistent inability to drink despite antiemetics; ongoing high-volume losses (diarrhoea >5x daily, vomiting >2x hourly); blood in vomit or stool; worsening breathlessness or facial swelling; or signs of electrolyte disturbance.",
+            "Attend your scheduled review or blood test. Speak to your GP if: intake is not meeting target; symptoms are not improving after 24-48 hours of replacement; or you have concerns about the fluid plan."
           ],
           "importantLimitation": "Safety-netting cannot compensate for an unsafe swallow, unreliable care support, ongoing uncontrolled losses or absent clinical follow-up."
         }

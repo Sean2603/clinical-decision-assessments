@@ -344,8 +344,9 @@
           "id": "falls-safety-netting",
           "title": "Falls in older adults",
           "safetyNetting": [
-            "Any significant deterioration in breathing, chest pain or collapse – call 999.",
-            "Seek urgent reassessment for new confusion, facial asymmetry, speech disturbance or limb weakness; increasing headache, vomiting, drowsiness or altered behaviour after a head injury; increasing pain or inability to stand or use a limb; or another fall with deterioration in mobility."
+            "Call 999 or go to ED immediately for: difficulty breathing, chest pain, collapse, head injury with loss of consciousness, new weakness on one side, or signs of serious injury.",
+            "Contact your GP or go to ED same-day for: new confusion; facial weakness; speech change; significant head injury (hit head even without loss of consciousness); increasing headache, vomiting or drowsiness after a fall; new inability to stand, walk or use a limb; or another fall.",
+            "Speak to your GP if: you are falling repeatedly; you are afraid of falling; you need mobility aids or home modifications; or you want to discuss driving safety."
           ],
           "importantLimitation": "Safety-netting must be given to the patient and the person providing care, with a clear route and timescale for review."
         }

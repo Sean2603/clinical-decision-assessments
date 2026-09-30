@@ -623,9 +623,9 @@
           "id": "aki-safety-netting",
           "title": "Acute kidney injury",
           "safetyNetting": [
-            "Call 999 for any significant deterioration, including difficulty breathing, chest pain, collapse, reduced consciousness or any immediate concern.",
-            "Seek urgent reassessment for passing very little or no urine; worsening breathlessness, orthopnoea or rapidly increasing swelling; new confusion or marked drowsiness; persistent vomiting; severe weakness or palpitations; fever or rigors; flank pain with systemic illness; or inability to maintain fluid intake.",
-            "Attend the agreed repeat blood test and clinical review. Confirm who will check the result and what to do if the appointment or result review does not occur."
+            "Call 999 or go to ED immediately for: difficulty breathing, chest pain, collapse, severe confusion, palpitations or signs of shock.",
+            "Contact your GP or go to ED same-day for: anuria (no urine output for 8+ hours); worsening breathlessness or orthopnoea; rapidly increasing swelling; new confusion; persistent vomiting; fever with rigors; flank pain with systemic illness; or inability to maintain fluid or medication intake.",
+            "Attend your arranged blood test and review appointment. If creatinine is rising or not improving, or if you miss an appointment, contact your GP same-day. Speak to your GP if you have concerns about symptoms, fatigue, or if renal function does not recover as expected."
           ],
           "importantLimitation": "Safety-netting does not make discharge appropriate without a reliable monitoring, medication and result-review plan.",
           "references": [

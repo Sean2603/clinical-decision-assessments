@@ -226,11 +226,9 @@
           "id": "reassessment",
           "title": "Advise urgent reassessment if",
           "safetyNetting": [
-            "Fever, rigors, flank pain, vomiting or marked systemic illness develops.",
-            "Urine output falls significantly.",
-            "Symptoms worsen rapidly or fail to improve after treatment starts.",
-            "The patient becomes unable to maintain fluids or oral medication.",
-            "New retention or severe pain develops."
+            "Call 999 or go to ED immediately for: fever above 39°C with severe rigors; collapse; significant flank pain with back or abdominal tenderness; or inability to maintain consciousness.",
+            "Contact your GP or go to ED same-day for: fever with flank pain suggesting pyelonephritis; vomiting preventing fluids or antibiotics; unable to pass urine despite antibiotic; worsening pain despite analgesia; or symptoms worsening after 24-48 hours of treatment.",
+            "Speak to your GP if: symptoms are not improving after 3 days of antibiotics; you are having recurrent UTIs (more than 2 per year); pain or frequency persists after treatment; or you need follow-up urine testing."
           ]
         }
       ]

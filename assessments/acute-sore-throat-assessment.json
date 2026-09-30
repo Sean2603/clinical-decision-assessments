@@ -359,21 +359,16 @@
           "id": "reassessment-advice",
           "title": "Advise urgent reassessment if",
           "safetyNetting": [
-            "Breathing becomes difficult or noisy.",
-            "Swallowing deteriorates or the patient cannot swallow saliva or fluids.",
-            "Drooling, markedly altered voice or restricted mouth opening develops.",
-            "Throat pain becomes markedly unilateral or rapidly more severe.",
-            "Neck swelling or stiffness develops.",
-            "The patient becomes systemically very unwell.",
-            "Hydration or urine output deteriorates.",
-            "Symptoms worsen significantly or are not beginning to improve within about 1 week."
+            "Call 999 or go to ED immediately for: severe difficulty breathing, stridor or changed voice; drooling or inability to swallow saliva; severe neck swelling; neck stiffness with fever/headache; or signs of epiglottitis.",
+            "Contact your GP or go to ED same-day for: unilateral severe throat pain with asymmetrical swelling; rapidly worsening pain despite analgesia; fever above 39°C; severely restricted mouth opening; inability to drink; or severe systemic illness.",
+            "Speak to your GP if: pain and fever are not improving after 3 days; symptoms persist beyond 1 week; new symptoms like rash develop; or you need to start back-up antibiotics for worsening symptoms."
           ]
         },
         {
           "id": "backup-antibiotic-advice",
           "title": "Back-up antibiotic advice",
           "safetyNetting": [
-            "Where a back-up antibiotic has been provided, give clear instructions about when to start it and when further assessment is required."
+            "If given a back-up antibiotic, start it if symptoms worsen significantly or do not improve within 3 days. Seek same-day GP review before starting, or go to ED if unable to contact your GP."
           ]
         }
       ]
