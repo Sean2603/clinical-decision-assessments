@@ -1,0 +1,424 @@
+{
+  "id": "acute-eye-problems-assessment",
+  "title": "Acute Eye Problems Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing acute eye problems including red eye and eye pain, distinguishing vision-threatening conditions from benign causes, and supporting safe triage and urgent referral.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace ophthalmology examination or urgent referral when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Acute angle-closure glaucoma (severe pain, red eye, vision loss, halos, headache).",
+            "Corneal ulcer or keratitis (pain, photophobia, reduced vision, discharge).",
+            "Acute iritis or uveitis (pain, photophobia, red eye, visual symptoms).",
+            "Retinal detachment (floaters, flashing lights, visual field loss).",
+            "Chemical or thermal burn (history of exposure, pain, reduced vision).",
+            "Acute eye injury or hyphema (trauma, blood in anterior chamber).",
+            "Acute scleritis (severe pain, red patch, vision-threatening).",
+            "Giant-cell arteritis with vision loss (age >50, systemic symptoms)."
+          ],
+          "references": [
+            "NICE-CG73",
+            "NICE-NG127"
+          ],
+          "importantLimitation": "Red eye does not always mean infection; serious non-infectious causes can masquerade as conjunctivitis."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Characterise onset, symptoms and risk factors to guide diagnosis.",
+      "items": [
+        {
+          "id": "symptom-characteristics",
+          "title": "Symptom characteristics",
+          "mustConfirmOrExclude": [
+            "Onset: sudden vs. gradual; unilateral or bilateral.",
+            "Pain: severity (0-10), location (surface vs. deep), triggered by light or eye movement?",
+            "Vision: clear or blurred; any loss or floaters?",
+            "Red eye: where (generalised redness vs. localised patch)?",
+            "Discharge: colour, consistency; crusty on waking?",
+            "Photophobia, watering or foreign body sensation?"
+          ]
+        },
+        {
+          "id": "red-flag-history",
+          "title": "Red-flag features in history",
+          "mustConfirmOrExclude": [
+            "Sudden severe pain (suggests acute glaucoma, scleritis or keratitis).",
+            "Vision loss or visual blurring (suggests corneal, retinal or optic nerve pathology).",
+            "Floaters and flashing lights (suggests retinal detachment or posterior uveitis).",
+            "Recent trauma or chemical/thermal exposure.",
+            "Photophobia with pain (suggests uveitis, keratitis or acute glaucoma).",
+            "Recent eye surgery or contact lens use.",
+            "Known glaucoma, uveitis or autoimmune disease.",
+            "Age >50 with vision loss and systemic symptoms (GCA)."
+          ]
+        },
+        {
+          "id": "exposure-risk",
+          "title": "Exposure and risk factors",
+          "mustConfirmOrExclude": [
+            "Trauma: direct blow, scratch, contact lens trauma, foreign body.",
+            "Chemical or thermal exposure: acid splash, alkali exposure, UV exposure.",
+            "Recent eye surgery, steroid use or systemic disease (TB, syphilis, sarcoid).",
+            "Sexually transmitted infections (chlamydia, gonorrhoea).",
+            "Immunosuppression (increased risk of unusual infections or malignancy)."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Vision-threatening conditions screen",
+      "type": "prompt-list",
+      "intro": "Positive features should trigger urgent same-day ophthalmology referral.",
+      "items": [
+        {
+          "id": "acute-angle-closure-glaucoma",
+          "title": "Acute angle-closure glaucoma",
+          "urgentFeatures": [
+            "Sudden onset severe unilateral eye pain and redness.",
+            "Blurred vision with halos around lights.",
+            "Fixed mid-dilated pupil; hazy cornea.",
+            "Elevated intraocular pressure (>40 mmHg if measured).",
+            "Nausea and vomiting may accompany ocular symptoms."
+          ],
+          "implications": [
+            "Urgent same-day ophthalmology assessment to lower IOP and prevent blindness."
+          ]
+        },
+        {
+          "id": "corneal-ulcer-keratitis",
+          "title": "Corneal ulcer or keratitis",
+          "urgentFeatures": [
+            "Pain, photophobia and watering.",
+            "Vision blurring or reduced.",
+            "Discharge (purulent in bacterial infection).",
+            "White infiltrate or opacity on cornea.",
+            "Risk factors: contact lens use, recent eye trauma, corneal scarring, immunosuppression."
+          ],
+          "implications": [
+            "Urgent same-day ophthalmology referral; do not delay due to infection risk."
+          ]
+        },
+        {
+          "id": "acute-uveitis",
+          "title": "Acute anterior uveitis or iritis",
+          "urgentFeatures": [
+            "Unilateral eye pain and photophobia.",
+            "Ciliary redness (redness at corneal edge).",
+            "Anterior chamber reaction (white cell inflammation).",
+            "Small irregular pupil, posterior synechiae.",
+            "May follow trauma or be associated with systemic disease."
+          ],
+          "implications": [
+            "Urgent ophthalmology referral; treatment needed to prevent vision loss and glaucoma."
+          ]
+        },
+        {
+          "id": "retinal-detachment",
+          "title": "Retinal detachment",
+          "urgentFeatures": [
+            "Floaters and photopsia (flashing lights).",
+            "Progressive shadow or visual field defect.",
+            "Pain usually absent (suggests detachment rather than uveitis).",
+            "Risk factors: high myopia, prior eye surgery, family history, trauma."
+          ],
+          "implications": [
+            "Urgent same-day ophthalmology referral to prevent permanent vision loss."
+          ]
+        },
+        {
+          "id": "ocular-burn",
+          "title": "Chemical or thermal burn",
+          "urgentFeatures": [
+            "History of chemical splash, alkali, acid or thermal exposure.",
+            "Severe pain, redness and reduced vision.",
+            "Corneal opacification or eyelid burn.",
+            "Chemosis or subconjunctival haemorrhage."
+          ],
+          "implications": [
+            "Urgent same-day ophthalmology assessment; aggressive eye irrigation may have already been done."
+          ]
+        },
+        {
+          "id": "acute-scleritis",
+          "title": "Acute scleritis",
+          "urgentFeatures": [
+            "Severe deep eye pain (disproportionate to findings).",
+            "Localised area of scleral redness and swelling.",
+            "Vision may be affected.",
+            "Often associated with systemic disease (RA, vasculitis)."
+          ],
+          "implications": [
+            "Urgent ophthalmology referral; may indicate systemic disease requiring investigation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Assess visual acuity, pupil response and anterior eye structures.",
+      "items": [
+        {
+          "id": "visual-acuity",
+          "title": "Visual acuity",
+          "howToTest": [
+            "Test each eye separately using Snellen chart or near vision card.",
+            "Note if corrective lenses improve vision.",
+            "Assess ability to count fingers or detect light if vision severely reduced."
+          ],
+          "normal": [
+            "6/6 vision or baseline vision in affected eye."
+          ],
+          "abnormal": [
+            "Any reduction from baseline; inability to count fingers or see light suggests serious pathology."
+          ],
+          "implications": [
+            "Reduced vision suggests corneal, uveal, retinal or optic nerve pathology requiring urgent referral."
+          ]
+        },
+        {
+          "id": "pupil-examination",
+          "title": "Pupil and light response",
+          "howToTest": [
+            "Assess pupil size, equality and shape.",
+            "Test direct and consensual light reflex.",
+            "Assess for relative afferent pupillary defect (RAPD): swinging torch test."
+          ],
+          "normal": [
+            "Equal round pupils; brisk light response; no RAPD."
+          ],
+          "abnormal": [
+            "Irregular pupil, sluggish response, mid-dilated fixed pupil, RAPD."
+          ],
+          "implications": [
+            "Fixed mid-dilated pupil suggests acute glaucoma; RAPD suggests optic nerve pathology."
+          ]
+        },
+        {
+          "id": "corneal-assessment",
+          "title": "Cornea and anterior chamber",
+          "howToTest": [
+            "Use bright light and magnification to examine cornea.",
+            "Look for clarity, infiltrates, ulcers, opacification or scarring.",
+            "Assess anterior chamber depth and clarity.",
+            "Fluorescein staining to detect epithelial defects."
+          ],
+          "normal": [
+            "Clear cornea without infiltrate or ulcer; clear anterior chamber."
+          ],
+          "abnormal": [
+            "White infiltrate, ulceration, opacification, hyphema or shallow chamber."
+          ],
+          "implications": [
+            "Corneal infiltrate or ulcer requires urgent referral; hyphema suggests trauma; shallow chamber suggests angle-closure risk."
+          ]
+        },
+        {
+          "id": "conjunctiva-sclera",
+          "title": "Conjunctiva and sclera",
+          "howToTest": [
+            "Examine for redness pattern: diffuse vs. localised, ciliary vs. conjunctival.",
+            "Assess for discharge (type and amount).",
+            "Look for subconjunctival haemorrhage, chemosis or swelling.",
+            "Examine sclera for patches of redness or ischaemia."
+          ],
+          "normal": [
+            "Clear or minimally injected conjunctiva; white sclera."
+          ],
+          "abnormal": [
+            "Diffuse conjunctival redness (infection), ciliary redness (uveitis), subconjunctival haemorrhage, scleral patch (scleritis)."
+          ],
+          "implications": [
+            "Ciliary redness suggests uveitis; scleral patch suggests scleritis; subconjunctival haemorrhage may indicate trauma or bleeding disorder."
+          ]
+        },
+        {
+          "id": "fundus-examination",
+          "title": "Fundal examination",
+          "howToTest": [
+            "Dilate pupil if safe (after excluding narrow angles).",
+            "Examine optic disc: colour, cup, margins.",
+            "Examine macula: appearance, foveal reflex.",
+            "Examine periphery: look for retinal detachment, haemorrhage, exudates."
+          ],
+          "normal": [
+            "Pink optic disc with clear margins, normal cup-to-disc ratio; intact macula; attached retina."
+          ],
+          "abnormal": [
+            "Pallor or swelling of disc, retinal detachment, haemorrhage, exudates, pigmentation changes."
+          ],
+          "implications": [
+            "Retinal detachment requires urgent referral; optic disc swelling suggests raised ICP or optic neuritis."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Pattern recognition supports safe triage and appropriate referral.",
+      "items": [
+        {
+          "id": "viral-conjunctivitis",
+          "title": "Viral conjunctivitis",
+          "commonFindings": [
+            "Unilateral or bilateral redness and watering.",
+            "Follicular response in lower lid.",
+            "Minimal discharge (watery, not purulent).",
+            "Viral prodrome (upper respiratory symptoms).",
+            "Vision normal or minimally affected."
+          ],
+          "implications": [
+            "Self-limiting; supportive care. Avoid eye patch. Contagious; advise hand hygiene."
+          ]
+        },
+        {
+          "id": "bacterial-conjunctivitis",
+          "title": "Bacterial conjunctivitis",
+          "commonFindings": [
+            "Unilateral or bilateral redness.",
+            "Purulent discharge; eyes sticky on waking.",
+            "Papillary response in upper lid.",
+            "Vision normal.",
+            "Often follows viral infection."
+          ],
+          "implications": [
+            "Topical antibiotics indicated. If gonorrhoea or chlamydia suspected, systemic treatment needed."
+          ]
+        },
+        {
+          "id": "allergic-conjunctivitis",
+          "title": "Allergic conjunctivitis",
+          "commonFindings": [
+            "Bilateral itching and watering.",
+            "Seasonal pattern or identifiable allergen exposure.",
+            "Giant papillae on upper lid (in chronic cases).",
+            "No discharge or clear watery discharge.",
+            "Vision normal."
+          ],
+          "implications": [
+            "Allergen avoidance, topical antihistamines. Topical steroids for acute exacerbations."
+          ]
+        },
+        {
+          "id": "subconjunctival-haemorrhage",
+          "title": "Subconjunctival haemorrhage",
+          "commonFindings": [
+            "Painless bright red patch under conjunctiva.",
+            "Often follows minor trauma or coughing.",
+            "Vision normal.",
+            "Resolves spontaneously over 2-3 weeks."
+          ],
+          "implications": [
+            "Reassurance; self-limiting. Investigate if traumatic, recurrent or associated with anticoagulation."
+          ]
+        },
+        {
+          "id": "dry-eye",
+          "title": "Dry eye syndrome",
+          "commonFindings": [
+            "Bilateral itching, grittiness, watering paradoxically.",
+            "Worse in dry environments or with screen use.",
+            "Schirmer test reduced.",
+            "Vision normal or fluctuates."
+          ],
+          "implications": [
+            "Artificial tears, lid hygiene, environmental modifications. Refer if severe or refractory."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Base decisions on vision-threat assessment and urgent referral criteria.",
+      "items": [
+        {
+          "id": "investigation-guidance",
+          "title": "Investigation",
+          "mustConfirmOrExclude": [
+            "Tonometry: measure intraocular pressure if acute glaucoma suspected.",
+            "Fluorescein: stain cornea to identify epithelial defects, ulcers or abrasion.",
+            "Slit-lamp examination: refer for assessment if not available.",
+            "Gonioscopy: assess angle if narrow-angle glaucoma risk."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No vision-threatening condition identified.",
+            "Vision normal or at baseline.",
+            "Likely diagnosis is viral or allergic conjunctivitis, subconjunctival haemorrhage or dry eye.",
+            "Patient reliable for follow-up."
+          ]
+        },
+        {
+          "id": "urgent-referral",
+          "title": "Urgent same-day ophthalmology referral",
+          "urgentFeatures": [
+            "Reduced vision or vision loss.",
+            "Severe eye pain (suggests glaucoma, scleritis, keratitis, uveitis or burns).",
+            "Floaters with flashing lights (retinal detachment).",
+            "White infiltrate, ulcer or opacity on cornea.",
+            "Mid-dilated fixed pupil or hazy cornea.",
+            "Subconjunctival haemorrhage after significant trauma.",
+            "Chemical or thermal burn."
+          ],
+          "implications": [
+            "Same-day or emergency ophthalmology assessment required to preserve vision."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "eye-problems-safety-netting",
+          "title": "Acute eye problems",
+          "safetyNetting": [
+            "Go to ED or call 999 immediately for: chemical or thermal exposure to eye; severe eye trauma with vision loss; eye injury with blood in eye; or signs of globe rupture.",
+            "Contact eye services urgently (same-day) for: sudden vision loss; severe eye pain with redness; floaters and flashing lights suggesting retinal detachment; corneal ulcer or keratitis; or eye injury affecting vision.",
+            "Speak to your GP or eye service if: red eye or discharge is not improving after 5-7 days of treatment; you are having recurrent eye infections; or you have concerns about your vision."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-CG73",
+    "NICE-NG127"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "ophthalmology"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}

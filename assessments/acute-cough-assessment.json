@@ -1,0 +1,340 @@
+{
+  "id": "acute-cough-assessment",
+  "title": "Acute Cough Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing acute cough, distinguishing viral upper-respiratory infection from serious lower-respiratory pathology, and supporting diagnosis, investigation and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, local pathways or urgent escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Airway compromise, severe respiratory distress or hypoxia.",
+            "Pneumonia (fever, crackles, consolidation, raised inflammatory markers).",
+            "Pulmonary embolism risk and symptoms (unilateral leg swelling, chest pain, haemoptysis).",
+            "Acute asthma exacerbation or COPD decompensation.",
+            "Pertussis or other serious respiratory infection (immunisation status, whooping, paroxysms).",
+            "Foreign body or aspiration risk.",
+            "Acute cardiac cause (heart failure, acute coronary syndrome).",
+            "Immunosuppression or comorbidity increasing infection risk."
+          ],
+          "references": [
+            "NICE-NG12",
+            "NICE-NG180"
+          ],
+          "importantLimitation": "Absence of fever, focal signs or abnormal chest X-ray does not exclude pneumonia. Normal oxygen saturation does not exclude serious pathology."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Characterise the cough pattern, associated symptoms and risk factors for serious causes.",
+      "items": [
+        {
+          "id": "cough-characteristics",
+          "title": "Cough characteristics and pattern",
+          "mustConfirmOrExclude": [
+            "Onset: sudden, gradual or insidious; duration (hours, days, weeks).",
+            "Pattern: dry vs. productive; frequency and severity; worse at night or with activity.",
+            "Sputum: colour, blood-staining, volume, consistency.",
+            "Associated: shortness of breath, wheeze, stridor, hoarseness or voice change."
+          ]
+        },
+        {
+          "id": "systemic-symptoms",
+          "title": "Systemic and constitutional symptoms",
+          "mustConfirmOrExclude": [
+            "Fever, rigors, night sweats or chills.",
+            "Malaise, fatigue, myalgia or headache.",
+            "Nausea, vomiting, diarrhoea or abdominal pain.",
+            "Chest pain or pleuritic discomfort.",
+            "Recent upper-respiratory infection, sick contacts or relevant exposures."
+          ]
+        },
+        {
+          "id": "red-flag-history",
+          "title": "Red-flag features in history",
+          "mustConfirmOrExclude": [
+            "Significant dyspnoea, orthopnoea or paroxysmal nocturnal dyspnoea.",
+            "Haemoptysis (coughing up blood).",
+            "Unilateral leg swelling or recent immobility (DVT/PE risk).",
+            "Chest pain with exertion or at rest.",
+            "Weight loss, night sweats or prolonged cough (>3 weeks).",
+            "Immunosuppression, pregnancy or recent surgery.",
+            "Known asthma, COPD, heart failure or malignancy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive features should change disposition and trigger appropriate investigation or referral.",
+      "items": [
+        {
+          "id": "respiratory-emergency",
+          "title": "Respiratory emergency",
+          "urgentFeatures": [
+            "Severe respiratory distress, stridor, inability to speak in sentences, or SpO₂ <92%.",
+            "Sudden onset severe dyspnoea or acute deterioration in known lung disease.",
+            "Signs of airway obstruction or foreign body aspiration."
+          ],
+          "implications": [
+            "Immediate emergency assessment and possible hospital admission."
+          ]
+        },
+        {
+          "id": "pneumonia-risk",
+          "title": "Community-acquired pneumonia",
+          "urgentFeatures": [
+            "Fever with cough and focal chest signs (crackles, dullness, bronchial breathing).",
+            "CRP >100 mg/L, raised white-cell count or focal infiltrate on chest X-ray.",
+            "Severe systemic illness, confusion or significant functional decline.",
+            "Immunosuppression, age >65 or significant comorbidity."
+          ],
+          "implications": [
+            "Chest X-ray and same-day assessment; hospital referral likely."
+          ],
+          "references": [
+            "NICE-NG180"
+          ]
+        },
+        {
+          "id": "pulmonary-embolism",
+          "title": "Pulmonary embolism",
+          "urgentFeatures": [
+            "Acute dyspnoea with unilateral leg swelling or recent immobility.",
+            "Pleuritic chest pain or haemoptysis.",
+            "Tachycardia, hypotension or signs of shock.",
+            "Risk factors: recent surgery, malignancy, thrombophilia or oral contraceptives."
+          ],
+          "implications": [
+            "Urgent hospital assessment and imaging (CT pulmonary angiography)."
+          ]
+        },
+        {
+          "id": "asthma-exacerbation",
+          "title": "Acute asthma exacerbation",
+          "urgentFeatures": [
+            "Known asthma with acute onset wheeze and dyspnoea.",
+            "Inability to speak in sentences, peak flow <50% predicted, or SpO₂ <92%.",
+            "Silent chest, inability to cough or signs of respiratory fatigue."
+          ],
+          "implications": [
+            "Immediate bronchodilators and steroid therapy; hospital referral if severe."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine for respiratory distress, focal findings and signs of serious systemic illness.",
+      "items": [
+        {
+          "id": "general-assessment",
+          "title": "General appearance and vital signs",
+          "howToTest": [
+            "Assess overall appearance, distress and ability to speak.",
+            "Record temperature, heart rate, respiratory rate, blood pressure and oxygen saturation.",
+            "Note signs of cyanosis, pallor or respiratory difficulty."
+          ],
+          "normal": [
+            "Clinically well, speaking in full sentences, SpO₂ ≥95% on room air."
+          ],
+          "abnormal": [
+            "Respiratory distress, dyspnoea at rest, SpO₂ <92%, fever >38.5°C, tachycardia."
+          ],
+          "implications": [
+            "Abnormal vital signs or distress mandate further investigation and possible escalation."
+          ]
+        },
+        {
+          "id": "lung-examination",
+          "title": "Lung and chest examination",
+          "howToTest": [
+            "Inspect for symmetry, use of accessory muscles and signs of distress.",
+            "Palpate for tracheal deviation and fremitus.",
+            "Percuss both lung fields for dullness.",
+            "Auscultate: note breath sounds, crackles, wheeze, rhonchi."
+          ],
+          "normal": [
+            "Bilateral equal breath sounds, no added sounds, normal resonance."
+          ],
+          "abnormal": [
+            "Focal crackles (pneumonia), wheeze (asthma/COPD), reduced air entry, dullness (consolidation)."
+          ],
+          "implications": [
+            "Focal signs suggest lower-respiratory infection; diffuse wheeze suggests obstructive airway disease."
+          ]
+        },
+        {
+          "id": "cardiovascular-assessment",
+          "title": "Cardiovascular assessment",
+          "howToTest": [
+            "Auscultate heart rate and rhythm.",
+            "Assess JVP, peripheral perfusion and signs of heart failure (orthopnoea, oedema).",
+            "Examine legs for swelling, calf tenderness or signs of DVT."
+          ],
+          "normal": [
+            "Regular heart rate, no murmur, normal JVP, no peripheral oedema or leg swelling."
+          ],
+          "abnormal": [
+            "Tachycardia, new murmur, raised JVP, oedema, unilateral leg swelling."
+          ],
+          "implications": [
+            "Cardiac findings suggest heart failure or arrhythmia; leg swelling raises PE risk."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Pattern recognition supports diagnosis but does not replace systematic assessment.",
+      "items": [
+        {
+          "id": "viral-uri-pattern",
+          "title": "Viral upper-respiratory infection",
+          "commonFindings": [
+            "Gradual onset; dry or minimally productive cough.",
+            "Nasal congestion, sore throat, mild fever or no fever.",
+            "No focal chest signs; normal chest X-ray.",
+            "Symptoms improving within 1-2 weeks."
+          ],
+          "implications": [
+            "Self-limiting viral infection; supportive care only. Antibiotics not indicated."
+          ]
+        },
+        {
+          "id": "community-acquired-pneumonia",
+          "title": "Community-acquired pneumonia",
+          "commonFindings": [
+            "Fever, productive cough, shortness of breath.",
+            "Focal crackles or consolidation on examination.",
+            "CRP >50 mg/L or focal infiltrate on chest X-ray.",
+            "Often preceded by upper-respiratory symptoms."
+          ],
+          "implications": [
+            "Antibiotic therapy indicated; chest X-ray and severity assessment required."
+          ],
+          "references": [
+            "NICE-NG180"
+          ]
+        },
+        {
+          "id": "asthma-copd-exacerbation",
+          "title": "Asthma or COPD exacerbation",
+          "commonFindings": [
+            "Known asthma or COPD with acute onset dyspnoea and wheeze.",
+            "Bilateral wheeze on auscultation.",
+            "Peak flow reduced from baseline.",
+            "Improvement after bronchodilators."
+          ],
+          "implications": [
+            "Bronchodilators, corticosteroids and assessment of severity; hospital referral if severe."
+          ]
+        },
+        {
+          "id": "acute-bronchitis",
+          "title": "Acute bronchitis",
+          "commonFindings": [
+            "Cough with minimal systemic illness.",
+            "Sputum production without fever.",
+            "Normal chest examination and chest X-ray.",
+            "Symptoms resolve within 2-3 weeks."
+          ],
+          "implications": [
+            "Self-limiting; supportive care. Antibiotics not indicated unless superimposed infection."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Base decisions on severity, investigation findings and ability for community follow-up.",
+      "items": [
+        {
+          "id": "investigation-guidance",
+          "title": "Investigation",
+          "mustConfirmOrExclude": [
+            "Chest X-ray: indicated if pneumonia suspected, fever >38.5°C, focal signs or dyspnoea.",
+            "FBC/CRP: indicated if pneumonia suspected or severe systemic illness.",
+            "Peak flow: measure if asthma or COPD exacerbation suspected.",
+            "ECG or BNP: consider if heart failure or acute coronary syndrome suspected."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No red flags for serious pathology present.",
+            "SpO₂ ≥94% and respiratory rate normal.",
+            "Able to maintain fluids and oral treatment.",
+            "Reliable access to follow-up and escalation route."
+          ]
+        },
+        {
+          "id": "hospital-referral",
+          "title": "Refer or admit for hospital assessment",
+          "urgentFeatures": [
+            "Respiratory distress, SpO₂ <92%, stridor or signs of airway compromise.",
+            "Pneumonia with fever, systemic illness or comorbidity.",
+            "Severe asthma exacerbation not responding to initial treatment.",
+            "Suspected PE or other serious pathology.",
+            "Unable to maintain fluids or manage at home safely."
+          ],
+          "implications": [
+            "Same-day hospital assessment or admission required."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "cough-safety-netting",
+          "title": "Acute cough",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: severe difficulty breathing, stridor, inability to speak in sentences, SpO₂ <90%, severe chest pain, coughing up large amounts of blood, or signs of shock.",
+            "Contact your GP or go to ED same-day for: high fever (>38.5°C) with cough; focal chest signs or breathlessness; suspected pneumonia; suspected PE (leg swelling + dyspnoea); or worsening asthma/COPD despite treatment.",
+            "Speak to your GP if: cough persists beyond 3 weeks; cough is not improving after 1 week of treatment; you develop new symptoms; or you have concerns about underlying causes."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG12",
+    "NICE-NG180"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "respiratory"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}

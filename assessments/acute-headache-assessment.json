@@ -1,0 +1,401 @@
+{
+  "id": "acute-headache-assessment",
+  "title": "Acute Headache Assessment",
+  "version": "0.1.0",
+  "summary": "A clinician-facing prompt for assessing acute headache, recognising life-threatening causes, distinguishing common benign headaches from serious pathology, and supporting safe diagnosis and safety-netting.",
+  "sections": [
+    {
+      "id": "assessment-priorities",
+      "title": "Assessment priorities",
+      "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, neuroimaging or urgent escalation when serious pathology is suspected.",
+      "items": [
+        {
+          "id": "must-confirm-or-exclude",
+          "title": "Must confirm or exclude",
+          "mustConfirmOrExclude": [
+            "Meningitis or meningococcal septicaemia (fever, neck stiffness, petechial rash, altered consciousness).",
+            "Subarachnoid haemorrhage (thunderclap onset, worst headache of life, neck stiffness, vomiting).",
+            "Acute stroke or transient ischaemic attack (focal neurological deficit, speech change, facial droop).",
+            "Intracranial mass or space-occupying lesion (progressive headache, focal signs, vomiting, papilloedema).",
+            "Giant-cell arteritis or other vasculitis (age >50, jaw claudication, vision loss, systemic symptoms).",
+            "Acute glaucoma (eye pain, vision change, red eye, halos around lights).",
+            "Hypertensive emergency (severe hypertension with symptoms, end-organ damage).",
+            "Recent head injury or trauma risk."
+          ],
+          "references": [
+            "NICE-CG150",
+            "NICE-NG127"
+          ],
+          "importantLimitation": "Absence of classic features does not exclude serious pathology. Some serious conditions present with subtle findings."
+        }
+      ]
+    },
+    {
+      "id": "history-prompts",
+      "title": "Focused history",
+      "type": "prompt-list",
+      "intro": "Characterise onset, severity, pattern and associated features to guide diagnosis.",
+      "items": [
+        {
+          "id": "headache-characteristics",
+          "title": "Headache pattern and characteristics",
+          "mustConfirmOrExclude": [
+            "Onset: sudden vs. gradual; first ever headache vs. recurrent; time of onset and progression.",
+            "Severity: rate pain 0-10; worst headache of life?",
+            "Location: unilateral, bilateral, focal or generalised.",
+            "Quality: throbbing, pressure, sharp, dull, tightness.",
+            "Duration: minutes, hours, days; continuous or intermittent.",
+            "Triggers: trauma, stress, menstruation, foods, medication changes, recent infection."
+          ]
+        },
+        {
+          "id": "associated-features",
+          "title": "Associated symptoms",
+          "mustConfirmOrExclude": [
+            "Fever, neck stiffness, rash or signs of infection.",
+            "Vomiting, photophobia, phonophobia or visual aura.",
+            "Focal neurological symptoms: weakness, numbness, speech change, vision loss.",
+            "Altered consciousness, confusion or behaviour change.",
+            "Recent head injury, trauma or fall.",
+            "Recent lumbar puncture or epidural.",
+            "Eye pain, red eye, vision change or halos around lights."
+          ]
+        },
+        {
+          "id": "red-flag-history",
+          "title": "Red-flag features in history",
+          "mustConfirmOrExclude": [
+            "Age >50 with new-onset headache (consider giant-cell arteritis).",
+            "Thunderclap onset or worst headache of life (SAH).",
+            "Fever with neck stiffness or petechial rash (meningitis).",
+            "Progressive headache or change in headache pattern.",
+            "Headache with focal neurological signs (stroke).",
+            "Known malignancy with new headache or neurological symptoms.",
+            "Immunosuppression with new headache and fever.",
+            "Recent anticoagulation or bleeding disorder with head injury."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serious-pathology-screen",
+      "title": "Serious pathology screen",
+      "type": "prompt-list",
+      "intro": "Positive features should trigger urgent investigation or emergency referral.",
+      "items": [
+        {
+          "id": "meningitis-septicaemia",
+          "title": "Meningitis or meningococcal septicaemia",
+          "urgentFeatures": [
+            "Fever with acute headache and neck stiffness.",
+            "Petechial or purpuric rash (non-blanching).",
+            "Altered consciousness, confusion or seizure.",
+            "Positive Kernig or Brudzinski sign."
+          ],
+          "implications": [
+            "Immediate hospital referral; consider empiric antibiotics before transfer if delay expected."
+          ],
+          "references": [
+            "NICE-NG51"
+          ]
+        },
+        {
+          "id": "subarachnoid-haemorrhage",
+          "title": "Subarachnoid haemorrhage",
+          "urgentFeatures": [
+            "Sudden onset severe headache (thunderclap); described as worst headache of life.",
+            "Neck stiffness, photophobia or vomiting.",
+            "Focal neurological signs or altered consciousness.",
+            "Recent anticoagulation or bleeding disorder."
+          ],
+          "implications": [
+            "Immediate emergency referral for CT head and neurosurgical assessment."
+          ]
+        },
+        {
+          "id": "acute-stroke",
+          "title": "Acute stroke or TIA",
+          "urgentFeatures": [
+            "Acute onset focal neurological deficit with headache.",
+            "Speech change, facial droop, arm/leg weakness or sensory loss.",
+            "Vision loss or visual field defect.",
+            "Ataxia, diplopia or other cerebellar signs."
+          ],
+          "implications": [
+            "Immediate hospital referral for imaging and stroke assessment."
+          ]
+        },
+        {
+          "id": "giant-cell-arteritis",
+          "title": "Giant-cell arteritis (age >50)",
+          "urgentFeatures": [
+            "New-onset headache in person aged >50 with scalp tenderness.",
+            "Jaw claudication or tongue claudication.",
+            "Vision loss, amaurosis fugax or new visual symptoms.",
+            "Raised CRP/ESR or systemic symptoms (malaise, fever, weight loss)."
+          ],
+          "implications": [
+            "Urgent ESR/CRP; temporal artery biopsy may be indicated; consider empiric steroids if high suspicion."
+          ]
+        },
+        {
+          "id": "raised-intracranial-pressure",
+          "title": "Raised intracranial pressure or mass",
+          "urgentFeatures": [
+            "Progressive headache or change in headache character.",
+            "Vomiting without nausea, especially morning vomiting.",
+            "Papilloedema, focal neurological signs or cognitive change.",
+            "Seizure, gait disturbance or coordination problems."
+          ],
+          "implications": [
+            "Urgent CT or MRI head; possible neurosurgical referral."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "focused-examination",
+      "title": "Focused examination",
+      "type": "examination-guide",
+      "intro": "Examine for signs of serious pathology and focal neurological deficits.",
+      "items": [
+        {
+          "id": "general-assessment",
+          "title": "General appearance and vital signs",
+          "howToTest": [
+            "Assess consciousness, orientation and behaviour.",
+            "Record temperature, heart rate, blood pressure and respiratory rate.",
+            "Note rash, jaundice, signs of systemic illness."
+          ],
+          "normal": [
+            "Alert and oriented, normal vital signs, no rash."
+          ],
+          "abnormal": [
+            "Fever, altered consciousness, petechial/purpuric rash, hypertension."
+          ],
+          "implications": [
+            "Fever with headache raises infection risk; altered consciousness requires urgent assessment."
+          ]
+        },
+        {
+          "id": "meningeal-signs",
+          "title": "Meningeal signs",
+          "howToTest": [
+            "Test neck stiffness: passive flexion of the neck.",
+            "Kernig sign: flexion at hip and knee, then straighten knee (resistance = positive).",
+            "Brudzinski sign: passive neck flexion causes spontaneous hip flexion.",
+            "Note: absence of signs does not exclude meningitis."
+          ],
+          "normal": [
+            "No neck stiffness, negative Kernig and Brudzinski signs."
+          ],
+          "abnormal": [
+            "Neck stiffness, positive Kernig sign, positive Brudzinski sign."
+          ],
+          "implications": [
+            "Meningeal signs suggest meningitis; urgent hospital referral."
+          ]
+        },
+        {
+          "id": "neurological-examination",
+          "title": "Neurological examination",
+          "howToTest": [
+            "Assess cranial nerves (pupils, eye movements, facial symmetry).",
+            "Motor: strength in arms and legs bilaterally.",
+            "Sensory: light touch, pain and proprioception.",
+            "Coordination: finger-nose, heel-shin test.",
+            "Gait: assess ability to walk, balance and coordination.",
+            "Reflexes: assess symmetry."
+          ],
+          "normal": [
+            "No focal neurological deficit, symmetric strength and reflexes."
+          ],
+          "abnormal": [
+            "Focal weakness, speech change, ataxia, pupil asymmetry or other focal signs."
+          ],
+          "implications": [
+            "Focal deficit suggests stroke, mass or other serious pathology; urgent imaging needed."
+          ]
+        },
+        {
+          "id": "ophthalmological",
+          "title": "Ophthalmological examination",
+          "howToTest": [
+            "Visual acuity: test each eye.",
+            "Pupil response: size, equality, light reactivity.",
+            "Optic disc: examine for papilloedema.",
+            "Visual fields: confrontation testing.",
+            "Eye movements: smooth pursuit and saccades."
+          ],
+          "normal": [
+            "Equal pupils, normal disc, intact visual fields and eye movements."
+          ],
+          "abnormal": [
+            "Pupil asymmetry, papilloedema, visual field defect or eye movement restriction."
+          ],
+          "implications": [
+            "Papilloedema suggests raised ICP; visual loss suggests vascular event or posterior circulation stroke."
+          ]
+        },
+        {
+          "id": "vascular-examination",
+          "title": "Temporal artery examination (if age >50)",
+          "howToTest": [
+            "Palpate temporal arteries bilaterally for tenderness, prominence, pulsation.",
+            "Assess for jaw claudication (pain with chewing).",
+            "Consider ESR/CRP if clinical suspicion high."
+          ],
+          "normal": [
+            "Non-tender, palpable pulses, no jaw claudication."
+          ],
+          "abnormal": [
+            "Tender artery, prominent or beaded artery, or positive jaw claudication."
+          ],
+          "implications": [
+            "Temporal artery abnormalities suggest giant-cell arteritis; urgent ESR/CRP and consideration of biopsy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "common-patterns",
+      "title": "Common clinical patterns",
+      "type": "common-findings",
+      "intro": "Pattern recognition supports diagnosis but does not replace serious pathology screening.",
+      "items": [
+        {
+          "id": "migraine-pattern",
+          "title": "Migraine",
+          "commonFindings": [
+            "Recurrent attacks with predictable features.",
+            "Unilateral throbbing pain, photophobia, phonophobia.",
+            "Visual aura (flashes, scotoma) before headache.",
+            "Nausea or vomiting; relief with rest and darkness.",
+            "Prodromal symptoms: mood change, fatigue or cravings."
+          ],
+          "implications": [
+            "No urgent neuroimaging needed if typical history and normal examination."
+          ]
+        },
+        {
+          "id": "tension-type-pattern",
+          "title": "Tension-type headache",
+          "commonFindings": [
+            "Bilateral pressing or tightness.",
+            "No associated nausea, photophobia or phonophobia.",
+            "Triggered by stress, poor posture or muscle tension.",
+            "Responds to analgesia and rest."
+          ],
+          "implications": [
+            "Benign; reassurance, analgesia and stress management. No imaging needed if no red flags."
+          ]
+        },
+        {
+          "id": "post-infectious-pattern",
+          "title": "Post-infectious headache",
+          "commonFindings": [
+            "Follows recent viral or bacterial infection (URTI, flu, COVID).",
+            "Mild to moderate bilateral headache.",
+            "Associated with fever, cough or systemic symptoms.",
+            "Resolves as infection improves."
+          ],
+          "implications": [
+            "Self-limiting; supportive care. Investigate if symptoms persist or worsen."
+          ]
+        },
+        {
+          "id": "medication-related-pattern",
+          "title": "Medication-related headache",
+          "commonFindings": [
+            "Temporal relationship to new medication or dose increase.",
+            "Analgesia overuse headache: frequent analgesic use leading to rebound headache.",
+            "Nitrates, NSAIDs or hormonal contraception can trigger headache.",
+            "Improves with medication withdrawal or change."
+          ],
+          "implications": [
+            "Review medications; consider alternative treatment if possible."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "management-disposition",
+      "title": "Management and disposition",
+      "type": "prompt-list",
+      "intro": "Base decisions on red-flag assessment, examination findings and imaging where indicated.",
+      "items": [
+        {
+          "id": "investigation-guidance",
+          "title": "Investigation",
+          "mustConfirmOrExclude": [
+            "CT head: indicated if thunderclap onset, focal neurological signs, suspected SAH, raised ICP or recent head injury.",
+            "LP (lumbar puncture): if CT normal but high suspicion for meningitis (fever + neck stiffness).",
+            "ESR/CRP: if age >50 with new headache and constitutional symptoms (suspect GCA).",
+            "Consider MRI: if mass suspected, progressive headache or posterior circulation signs."
+          ]
+        },
+        {
+          "id": "community-management",
+          "title": "Community management is appropriate when",
+          "mustConfirmOrExclude": [
+            "No red-flag features present.",
+            "Normal neurological examination.",
+            "Likely diagnosis is migraine, tension-type or post-infectious headache.",
+            "Reliable access to follow-up and escalation."
+          ]
+        },
+        {
+          "id": "hospital-referral",
+          "title": "Refer or admit for hospital assessment",
+          "urgentFeatures": [
+            "Thunderclap onset or worst headache of life.",
+            "Fever with neck stiffness (meningitis).",
+            "Focal neurological signs (stroke).",
+            "Age >50 with new headache and systemic symptoms (GCA).",
+            "Progressive headache or suspected raised ICP.",
+            "Altered consciousness or seizure."
+          ],
+          "implications": [
+            "Same-day hospital assessment and urgent neuroimaging."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "safety-netting",
+      "title": "Focused safety-netting",
+      "type": "safety-netting",
+      "items": [
+        {
+          "id": "headache-safety-netting",
+          "title": "Acute headache",
+          "safetyNetting": [
+            "Call 999 or go to ED immediately for: sudden severe headache (worst of your life), headache with fever and neck stiffness, headache with rash (especially non-blanching), focal weakness or speech change, vision loss, altered consciousness or seizure.",
+            "Contact your GP or go to ED same-day for: headache with high fever (>38.5°C); new headache if age >50; progressive headache or change in pattern; headache with confusion or significant drowsiness; headache with facial droop or arm/leg weakness; or severe headache not responding to analgesia.",
+            "Speak to your GP if: you are having frequent headaches (more than 2 per week); headaches are interfering with daily life; you are using painkillers more than 2 days per week; or you want preventive advice."
+          ]
+        }
+      ]
+    }
+  ],
+  "references": [
+    "NICE-CG150",
+    "NICE-NG51",
+    "NICE-NG127"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft assessment - pending clinical validation"
+  },
+  "categoryIds": [
+    "neurology"
+  ],
+  "status": "draft",
+  "attachments": [],
+  "prominentResources": []
+}
