@@ -8,6 +8,7 @@
       "id": "assessment-priorities",
       "title": "Assessment priorities",
       "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace specialist medicines review or clinical judgement.",
       "items": [
         {
           "id": "must-confirm",

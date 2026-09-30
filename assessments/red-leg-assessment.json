@@ -45,26 +45,20 @@
           "id": "distribution-time-course",
           "title": "Distribution and time course",
           "mustConfirmOrExclude": [
-            "Exact onset and whether symptoms developed suddenly, gradually or on a background of chronic swelling or skin change.",
-            "Unilateral or bilateral involvement.",
-            "Exact starting point and whether redness or swelling is spreading.",
-            "Localised, linear, joint-centred, gaiter-region, foot-predominant or whole-leg involvement.",
-            "Whether swelling preceded redness or redness preceded swelling.",
-            "Previous similar episodes, previous diagnosis and response to antibiotics, elevation, compression or topical treatment.",
-            "Any marked change from the patient's usual leg appearance, size, mobility or function."
+            "Onset: sudden vs. gradual; on background of chronic swelling or skin change; exact starting point and progression pattern.",
+            "Distribution: unilateral or bilateral; localised, linear, joint-centred, gaiter-region, foot-predominant or whole-leg; whether swelling or redness led.",
+            "Sequence: whether symptoms developed on background of chronic disease; previous similar episodes and response to prior treatment.",
+            "Baseline change: any marked difference from patient's usual leg appearance, size, mobility or function."
           ]
         },
         {
           "id": "symptom-characteristics",
           "title": "Symptoms and functional effect",
           "mustConfirmOrExclude": [
-            "Pain, itch, burning, heaviness or tightness, including which symptom predominates.",
-            "Local warmth, tenderness, throbbing or pain with movement.",
-            "Fever, rigors, malaise, confusion, reduced intake or other systemic deterioration.",
-            "Pain at rest, pain on weight-bearing and ability to stand, transfer and walk.",
-            "Pain centred on a joint and restriction of active or passive movement.",
-            "Severe or rapidly escalating pain, particularly when disproportionate to visible skin changes.",
-            "Chest pain, new breathlessness, haemoptysis, syncope or collapse."
+            "Local: pain, itch, burning, heaviness or tightness; local warmth, tenderness, throbbing; severe or rapidly escalating pain disproportionate to visible changes.",
+            "Systemic: fever, rigors, malaise, confusion, reduced intake or other deterioration; chest pain, breathlessness, haemoptysis, syncope or collapse.",
+            "Functional: pain at rest vs. on weight-bearing; ability to stand, transfer and walk; joint pain with restricted movement.",
+            "Consider vascular emergency: any new chest or breathing symptoms; syncope or collapse; disproportionate severe pain."
           ],
           "references": [
             "NICE-NG141",

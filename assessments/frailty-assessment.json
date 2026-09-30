@@ -8,6 +8,7 @@
       "id": "assessment-priorities",
       "title": "Assessment priorities",
       "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement or individualised specialist assessment.",
       "items": [
         {
           "id": "must-confirm-or-exclude",

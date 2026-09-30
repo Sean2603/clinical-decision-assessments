@@ -435,7 +435,7 @@
       "id": "common-examination-patterns",
       "title": "Common clinical patterns",
       "type": "common-findings",
-      "intro": "Patterns support causal reasoning but do not independently prove the cause of acute kidney injury.",
+      "intro": "Match the clinical context to guide assessment. Patterns support causal reasoning but do not independently prove cause. Quick pattern guide: Low BP + losses = pre-renal | Fever + shock = sepsis | Recent NSAIDs = medication | Anuria + flank pain = obstruction | Rash + haematuria = intrinsic renal | Fluid overload = cardiorenal. Review all patterns; AKI often has multiple causes.",
       "items": [
         {
           "id": "volume-depletion-pattern",

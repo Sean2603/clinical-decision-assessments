@@ -8,6 +8,7 @@
       "id": "assessment-priorities",
       "title": "Assessment priorities",
       "type": "prompt-list",
+      "intro": "Use this guide as a prompt. It does not replace clinical judgement, local protocols or urgent escalation when serious pathology is suspected.",
       "items": [
         {
           "id": "must-confirm",

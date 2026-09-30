@@ -90,27 +90,27 @@
       "id": "serious-pathology-screen",
       "title": "Serious pathology screen",
       "type": "prompt-list",
-      "intro": "Positive or evolving features should change disposition and trigger the appropriate emergency or urgent pathway.",
+      "intro": "Positive or evolving features should change disposition and trigger the appropriate emergency or urgent pathway. If any red flag present: stop routine assessment and escalate.",
       "items": [
         {
-          "id": "cauda-equina-red-flags",
-          "title": "Cauda equina syndrome",
+          "id": "neurological-emergency",
+          "title": "Neurological emergency: Cauda equina or spinal cord compression",
           "urgentFeatures": [
-            "New bladder, bowel or sexual dysfunction.",
-            "New saddle or perineal numbness.",
-            "Progressive or bilateral lower-limb neurological deficit."
+            "New bladder, bowel or sexual dysfunction; new saddle/perineal numbness; progressive or bilateral neurological deficit.",
+            "Known cancer with gait disturbance, weakness, sensory loss or bladder/bowel dysfunction."
           ],
           "implications": [
-            "Immediate referral for emergency assessment and MRI pathway."
+            "Immediate referral for emergency assessment and MRI pathway for both cauda equina and metastatic cord compression."
           ],
           "references": [
-            "NICE-NG127"
+            "NICE-NG127",
+            "NICE-NG234"
           ],
           "importantLimitation": "No single normal symptom, examination finding, rectal examination or bladder scan safely excludes cauda equina syndrome."
         },
         {
           "id": "infection-red-flags",
-          "title": "Spinal infection",
+          "title": "Systemic infection or inflammatory cause",
           "urgentFeatures": [
             "Fever or systemic illness with new back pain.",
             "Recent bacteraemia, spinal procedure or surgery.",
@@ -122,36 +122,17 @@
           ]
         },
         {
-          "id": "fracture-red-flags",
-          "title": "Vertebral fracture",
+          "id": "structural-vascular-emergency",
+          "title": "Vertebral fracture or vascular emergency",
           "urgentFeatures": [
-            "Significant trauma or acute focal pain after minor trauma in a person at fragility-fracture risk.",
-            "Focal midline bony tenderness, deformity or neurological deficit."
+            "Fracture risk: significant trauma or acute focal pain after minor trauma in fragility-fracture risk; focal midline bony tenderness or deformity.",
+            "Vascular emergency: sudden severe pain with collapse, hypotension, pallor or diaphoresis; pulsatile mass, pulse deficit or cold painful limb."
+          ],
+          "implications": [
+            "Vertebral fracture: urgent imaging assessment. Vascular emergency: immediate escalation; do not pursue routine imaging."
           ],
           "references": [
             "NICE-NG41"
-          ]
-        },
-        {
-          "id": "malignancy-red-flags",
-          "title": "Malignancy and metastatic spinal cord compression",
-          "urgentFeatures": [
-            "Known cancer with new severe, progressive or night pain.",
-            "Gait disturbance, weakness, sensory loss or bladder or bowel dysfunction."
-          ],
-          "references": [
-            "NICE-NG234"
-          ]
-        },
-        {
-          "id": "vascular-abdominal-red-flags",
-          "title": "Abdominal or vascular emergency",
-          "urgentFeatures": [
-            "Sudden severe back or abdominal pain, collapse, hypotension, pallor or diaphoresis.",
-            "Pulsatile abdominal mass, pulse deficit or a cold pale painful limb."
-          ],
-          "implications": [
-            "Immediate emergency escalation; do not pursue routine spinal imaging."
           ]
         }
       ]
