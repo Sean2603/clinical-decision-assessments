@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.51",
-  "updatedAt": "2026-09-24T15:31:21Z",
+  "contentVersion": "0.0.52",
+  "updatedAt": "2026-10-01T20:09:44Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -12,12 +12,12 @@
     "sizeBytes": 780,
     "schemaSizeBytes": 1417
   },
-  "minimumAppVersion": "0.63.7",
-  "downloadSizeBytes": 6810081,
+  "minimumAppVersion": "0.64.3",
+  "downloadSizeBytes": 7017779,
   "references": {
     "file": "references/references.json",
-    "sha256": "6371d20f65f9425c6bc66484c5280b642d55189975e8da669790a05b8d558efd",
-    "sizeBytes": 41871
+    "sha256": "a2c46433ed800236db7e15c2ea13fb92d80d2eea0db6e9f8551eeb349702953b",
+    "sizeBytes": 45019
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -90,9 +90,9 @@
       "version": "0.1.2",
       "file": "assessments/acute-confusion-and-delirium.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "4a3b553a8d5cada2d732c735d2bd56d3fba7377ccadbf4e20f9d43eaefebf145",
+      "sha256": "94be58faf7add5e4945a33421a352c3d6f2760b389182d7f885bd68bcefa2a53",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 12231,
+      "sizeBytes": 12700,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -101,14 +101,74 @@
       ]
     },
     {
+      "id": "acute-cough-assessment",
+      "title": "Acute Cough Assessment",
+      "version": "0.1.0",
+      "file": "assessments/acute-cough-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "e5c215deae12139c45d6e2a777a137ec562d4b4a5e4796eefbdcc5f6a70f162d",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 14193,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
+      ]
+    },
+    {
+      "id": "acute-diarrhoea-assessment",
+      "title": "Acute Diarrhoea Assessment",
+      "version": "0.1.0",
+      "file": "assessments/acute-diarrhoea-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "1391a708c58dbbdd18d32b1106298494b0f16238e0743029b97ce348eb93d83c",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 15113,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
+      ]
+    },
+    {
+      "id": "acute-eye-problems-assessment",
+      "title": "Acute Eye Problems Assessment",
+      "version": "0.1.0",
+      "file": "assessments/acute-eye-problems-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "e88def887c1611f68f8cbaf0594da884a028f402e3e7ff83abade5e18f0f6a0a",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 17711,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
+      ]
+    },
+    {
+      "id": "acute-headache-assessment",
+      "title": "Acute Headache Assessment",
+      "version": "0.1.0",
+      "file": "assessments/acute-headache-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "46729c92caaad637a5574c6b6782e56d853b960c1ccb131f777e229610158e01",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 17069,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
+      ]
+    },
+    {
       "id": "acute-kidney-injury-assessment",
       "title": "Acute Kidney Injury Assessment",
       "version": "0.1.1",
       "file": "assessments/acute-kidney-injury-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "05add1efb8b8a479b1d95c09136814dd0ba6c1c4f3e38a99a462bdd6d8178fb1",
+      "sha256": "b1e10665d90c1cf7e90c9dade977e18529267eba75d4a790fd241fa163325d74",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 32212,
+      "sizeBytes": 32572,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -121,13 +181,28 @@
       "version": "0.1.0",
       "file": "assessments/acute-otitis-media-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "6919d9e8b7e42adfff2de68a57712bb0f23ad03e07efc4d3ed0ad90003d550cd",
+      "sha256": "bcf73cfcd0b454b7fbe3318d5797ad810e690cb68d7ccde3c9ba64ef98e54ecc",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 12489,
+      "sizeBytes": 12706,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 474375,
       "categoryIds": [
         "ent"
+      ]
+    },
+    {
+      "id": "acute-rash-assessment",
+      "title": "Acute Rash Assessment",
+      "version": "0.1.0",
+      "file": "assessments/acute-rash-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "bd801c2a90194c4ba2fc1fad33290ac66abc30d2a76358dd50ad74fe0ad55385",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 13964,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
       ]
     },
     {
@@ -136,9 +211,9 @@
       "version": "0.1.1",
       "file": "assessments/acute-sore-throat-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "e5a88e3a04210fe8341f6888182d7343261e3764affb9521f9d3899f9fb7ac3a",
+      "sha256": "c7263d4fa4d7d94bdc2cc3e696fbd5a119736800189eb1dfac563a9f046a0250",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 18709,
+      "sizeBytes": 18897,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 1454370,
       "categoryIds": [
@@ -151,9 +226,9 @@
       "version": "0.1.2",
       "file": "assessments/back-pain.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "a220e449f7369a301b5125f09aa978801abc03a053fba1c637fb0a13517cd5b0",
+      "sha256": "eb03322ffe748b5848058133c91dd238048a63fbdbc7da9ea0705d54efcb9924",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 38307,
+      "sizeBytes": 38268,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -166,13 +241,28 @@
       "version": "0.1.1",
       "file": "assessments/comprehensive-geriatric-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "284c854bd6b369caf9ca7cc74399466343493392822c44d7a3b5813b816dc518",
+      "sha256": "a47f3334e22cf5b1ab38ac01c413ab7ccae27f2b6aad3eeb9e2e2540db28efed",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 11799,
+      "sizeBytes": 12124,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
+      ]
+    },
+    {
+      "id": "constipation-assessment",
+      "title": "Constipation Assessment",
+      "version": "0.1.0",
+      "file": "assessments/constipation-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "98bf24da0319faf690cf83554f325b15453967f26922d8919c8589c317354d25",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 15047,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
       ]
     },
     {
@@ -181,9 +271,9 @@
       "version": "0.1.1",
       "file": "assessments/dehydration-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "4346fbbfdf27a7ff76f79ed78360d2a1dded92fd8fe2560629b774393f9af0aa",
+      "sha256": "b39d54a56ab7eb9e0ab496f4701b5688dff273955155472d6dee17e0ed3b3b55",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 27490,
+      "sizeBytes": 27548,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -196,9 +286,9 @@
       "version": "0.1.2",
       "file": "assessments/dizziness-vertigo-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "58e262eda3aecc80068622e46be66e88eff1f06a78c6477323f701adbc10e817",
+      "sha256": "c66760fbea02990d17b898cb9c7d228bc5142d8f5bbd2baf966387986009e55b",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 31085,
+      "sizeBytes": 31146,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -211,13 +301,43 @@
       "version": "0.1.1",
       "file": "assessments/falls-in-older-adults.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "c340f4bb02763799ff8c904b80a43f0b99ae19e99942598c121c35484a8515de",
+      "sha256": "218b0c98f33be44ad83d7e44631b7a03dda0285832ce9cb40b869a96edf74641",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 17214,
+      "sizeBytes": 17480,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
+      ]
+    },
+    {
+      "id": "fever-adults-assessment",
+      "title": "Fever in Adults Assessment",
+      "version": "0.1.0",
+      "file": "assessments/fever-adults-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "b02810086a7422e37e712ae44b1c0a6fa6462eea8301e6b85290758a4bf1dcf1",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 10585,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
+      ]
+    },
+    {
+      "id": "fever-children-assessment",
+      "title": "Fever in Children Assessment",
+      "version": "0.1.0",
+      "file": "assessments/fever-children-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "32bbdbdcd616781d99271bf5aa69562dbf4b3ca681d30590fea9704e99a36735",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 7181,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
       ]
     },
     {
@@ -226,13 +346,28 @@
       "version": "0.1.1",
       "file": "assessments/frailty-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "6b21ecaddfbae6a57b88397b006288a5d8dbb161ba53c157c0e8cdb87e011755",
+      "sha256": "a3628c9096f8ae802a43184b88270b5c894935db7fd3e544e433643cd87f4bd8",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 29847,
+      "sizeBytes": 30051,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
         "frailty"
+      ]
+    },
+    {
+      "id": "joint-pain-assessment",
+      "title": "Joint Pain and Swelling Assessment",
+      "version": "0.1.0",
+      "file": "assessments/joint-pain-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "c7f07966c54f1681524998c1ee69c055e047e65208f84ff46cf999303e494d1e",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 13549,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "musculoskeletal"
       ]
     },
     {
@@ -241,13 +376,28 @@
       "version": "0.1.0",
       "file": "assessments/lower-uti-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "eb8812babefef8da927ae911515542328d6a2e3025815de606841a089037964b",
+      "sha256": "fdb288d923c9ecb8dd9a3d355c8e1d2c9596419885aadb9fc543e13ec0b9264a",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 10461,
+      "sizeBytes": 10811,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
         "renal"
+      ]
+    },
+    {
+      "id": "nausea-vomiting-assessment",
+      "title": "Nausea and Vomiting Assessment",
+      "version": "0.1.0",
+      "file": "assessments/nausea-vomiting-assessment.json",
+      "schema": "schema/assessment-schema.json",
+      "sha256": "59f3245c6f64db1916e62f46c2b4f1b3f97e9c673c20f5d75bdb4fd02e2eac43",
+      "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
+      "sizeBytes": 13993,
+      "schemaSizeBytes": 11385,
+      "attachmentsSizeBytes": 0,
+      "categoryIds": [
+        "uncategorised"
       ]
     },
     {
@@ -256,9 +406,9 @@
       "version": "0.1.1",
       "file": "assessments/polypharmacy-and-medicines-related-harm.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "2a825f26fa5eb8bd754666836b5bc2127363ad4c1a893d7f42b44fc5c361c180",
+      "sha256": "8fbcc09f87652084d6c0241b773582e7bc2a6d259761dbcbe77713470bfae26c",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 10963,
+      "sizeBytes": 11439,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -271,9 +421,9 @@
       "version": "0.1.2",
       "file": "assessments/red-leg-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "affe686f6e1cd5c3b27d817df6c8b1ac74eb5bf8eda505119f418166f58d79da",
+      "sha256": "1f636aac0c9e1e636bb64b03e6672a2ffa64ac5abf426f0c1695d27b04b38ff6",
       "schemaSha256": "5d337ccf2b455dc47bbb745bd0e7a501e13c0985dd203b72179f0c1de9cfc2fa",
-      "sizeBytes": 50198,
+      "sizeBytes": 50144,
       "schemaSizeBytes": 11385,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -503,6 +653,30 @@
       "attachmentsSizeBytes": 3100287
     },
     {
+      "id": "d-dimer",
+      "title": "D-dimer",
+      "version": "1.0.0",
+      "file": "blood_panels/d-dimer.json",
+      "schema": "schema/blood-panel-schema.json",
+      "sha256": "7ad8518838bf754c3425a214abc4af487cc37e8de36ec5faaad7264774d2a392",
+      "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
+      "sizeBytes": 6264,
+      "schemaSizeBytes": 17976,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "erythrocyte-sedimentation-rate",
+      "title": "Erythrocyte sedimentation rate",
+      "version": "1.0.0",
+      "file": "blood_panels/erythrocyte-sedimentation-rate.json",
+      "schema": "schema/blood-panel-schema.json",
+      "sha256": "9419f332d8711f59a2e87a3f2942437da186606044804f27da7b0dd3f45ae29e",
+      "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
+      "sizeBytes": 6235,
+      "schemaSizeBytes": 17976,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "full-blood-count",
       "title": "Full blood count",
       "version": "0.3.1",
@@ -539,6 +713,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "iron-studies",
+      "title": "Iron studies",
+      "version": "1.0.0",
+      "file": "blood_panels/iron-studies.json",
+      "schema": "schema/blood-panel-schema.json",
+      "sha256": "e6b46ffcf397cc850916b2a833a16b15a89e776ead0a97b996f434344e846be0",
+      "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
+      "sizeBytes": 7644,
+      "schemaSizeBytes": 17976,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "lipase-and-amylase",
       "title": "Lipase and amylase",
       "version": "0.3.1",
@@ -551,6 +737,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "lipid-profile",
+      "title": "Lipid profile",
+      "version": "1.0.0",
+      "file": "blood_panels/lipid-profile.json",
+      "schema": "schema/blood-panel-schema.json",
+      "sha256": "62b797e85834645a341cd1079349d14be748804d9996a3cab051b9c62a19d57b",
+      "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
+      "sizeBytes": 8746,
+      "schemaSizeBytes": 17976,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "liver-blood-tests",
       "title": "Liver blood tests",
       "version": "0.3.1",
@@ -559,6 +757,18 @@
       "sha256": "bb1c122f54d5c036edfa7be538bf5417e7d77c9c005480a1dc5b59c348929331",
       "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
       "sizeBytes": 15268,
+      "schemaSizeBytes": 17976,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "procalcitonin",
+      "title": "Procalcitonin",
+      "version": "1.0.0",
+      "file": "blood_panels/procalcitonin.json",
+      "schema": "schema/blood-panel-schema.json",
+      "sha256": "0bb71cb5314ea120abd82ab809a4423f5042c4eab29cd821212df714ab0b5351",
+      "schemaSha256": "7978314fb2997c324ed10dded01b547989de78a512234b660b554c00b47c530f",
+      "sizeBytes": 6245,
       "schemaSizeBytes": 17976,
       "attachmentsSizeBytes": 0
     },
@@ -879,6 +1089,31 @@
       "attachmentsSizeBytes": 266463
     }
   ],
-  "procedures": [],
+  "procedures": [
+    {
+      "id": "blood-cultures",
+      "title": "Blood cultures",
+      "version": "1.0.0",
+      "file": "procedures/blood-cultures.json",
+      "schema": "schema/procedure-schema.json",
+      "sha256": "a76c9048a00da152ab4417507d6e1cef138175d0f7a7e28a072c30e4fe785dbe",
+      "schemaSha256": "1aafa01a5308a858b8bd85c499c149650c7723a20f811ff5392e9df703ed780e",
+      "sizeBytes": 10165,
+      "schemaSizeBytes": 10381,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "urinalysis",
+      "title": "Urinalysis",
+      "version": "1.0.0",
+      "file": "procedures/urinalysis.json",
+      "schema": "schema/procedure-schema.json",
+      "sha256": "48a869d824a8ed76e9a38e81db29ab8fdc1eaa937013603f98836a10643a10c3",
+      "schemaSha256": "1aafa01a5308a858b8bd85c499c149650c7723a20f811ff5392e9df703ed780e",
+      "sizeBytes": 7584,
+      "schemaSizeBytes": 10381,
+      "attachmentsSizeBytes": 0
+    }
+  ],
   "sharedLearning": []
 }

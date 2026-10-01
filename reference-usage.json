@@ -87,6 +87,10 @@
       ]
     },
     {
+      "referenceId": "NICE-CG27",
+      "usedBy": []
+    },
+    {
       "referenceId": "NICE-CKS-CONJUNCTIVITIS",
       "usedBy": []
     },
@@ -211,6 +215,10 @@
       ]
     },
     {
+      "referenceId": "NICE-NG143",
+      "usedBy": []
+    },
+    {
       "referenceId": "NICE-NG148",
       "usedBy": [
         {
@@ -259,6 +267,10 @@
           "title": "Two-level PE Wells"
         }
       ]
+    },
+    {
+      "referenceId": "NICE-NG180",
+      "usedBy": []
     },
     {
       "referenceId": "NICE-NG185",
@@ -384,6 +396,10 @@
           "title": "Polypharmacy and Medicines-Related Harm"
         }
       ]
+    },
+    {
+      "referenceId": "NICE-NG51",
+      "usedBy": []
     },
     {
       "referenceId": "NICE-NG56",
