@@ -3,5 +3,7 @@ __pycache__/
 
 # Local AI/editor metadata not required to run the repository tooling
 /.claude/
+CLAUDE.md
+CLAUDE.local.md
 /.agents/
 /.windsurf/
