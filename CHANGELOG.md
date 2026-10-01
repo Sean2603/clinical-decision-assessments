@@ -1,3 +1,10 @@
+## 2026-09-29 – Repository documentation and developer guidance
+
+- Added FILE_STRUCTURE.md documenting directory structure, file responsibilities, validation workflows, and publication governance.
+- Consolidated documentation patterns across the three-repo platform for consistency and clarity.
+- Enhanced developer onboarding materials with detailed entry points and architecture explanations.
+- No clinical content, validation, or schema changes in this documentation update.
+
 ## 2026-09-15 – Expanded assessment clinical-system taxonomy icons
 
 - Added semantic icon keys for `ent`, `eye`, `genitourinary`, `womens-health` and `musculoskeletal` while retaining legacy `bone` compatibility.
