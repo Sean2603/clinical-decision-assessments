@@ -1,0 +1,159 @@
+{
+  "id": "erythrocyte-sedimentation-rate",
+  "title": "Erythrocyte sedimentation rate",
+  "subtitle": "ESR for detection of acute and chronic inflammation",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "ESR measurement for assessment of systemic inflammation, infection, and autoimmune disease.",
+  "introduction": "The erythrocyte sedimentation rate (ESR) measures the rate at which red blood cells settle in plasma over 1 hour. It is an indirect measure of inflammation, correlating with acute-phase protein synthesis. ESR is non-specific but useful for detecting systemic inflammation and monitoring disease activity.",
+  "calculations": [],
+  "sections": [
+    {
+      "id": "esr-result",
+      "title": "Erythrocyte sedimentation rate",
+      "rows": [
+        {
+          "id": "esr-value",
+          "name": "ESR",
+          "unit": "mm/hour",
+          "referenceRange": "Adult female <20; Male <15 (age-adjusted: female (age+10)/2, male age/2)",
+          "lowInterpretation": [
+            "ESR <10 mm/h: normal. In absence of symptoms, inflammation unlikely.",
+            "Very low ESR (<1 mm/h): unusual; seen in polycythaemia, spherocytosis, hypofibrinogenaemia."
+          ],
+          "highInterpretation": [
+            "ESR 20–40 mm/h: mild elevation. Suggests inflammation, infection, or malignancy; wide differential.",
+            "ESR 40–100 mm/h: moderate-to-significant elevation. Usually indicates acute infection, acute inflammatory disease, or malignancy.",
+            "ESR >100 mm/h: marked elevation. Suggests severe infection (endocarditis, TB), malignancy, or vasculitis."
+          ],
+          "notes": [
+            "Non-specific: elevated in infection, autoimmune disease, malignancy, age, anaemia, renal failure, hyperglobulinaemia, pregnancy.",
+            "Rises more slowly than CRP in acute infection (peaks at 24–48 hours); useful for monitoring chronic disease.",
+            "Anaemia increases ESR artificially (RBCs settle faster); low Hb may elevate ESR despite minimal inflammation.",
+            "Age-adjusted normal ranges critical in older patients; normal may be 20–30 mm/h in elderly."
+          ],
+          "unitless": false,
+          "navigation": {
+            "showInJumpTo": true,
+            "label": "ESR"
+          }
+        }
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
+    }
+  ],
+  "urgentFindings": [
+    "ESR >100 mm/h: significant inflammation; investigate for endocarditis, TB, vasculitis, or malignancy.",
+    "ESR 20–40 mm/h + fever + localising symptoms: supports diagnosis of infection; proceed with imaging/cultures.",
+    "Markedly elevated ESR (>80) + anaemia (Hb <100): anaemia contributing to ESR elevation; assess response to anaemia treatment."
+  ],
+  "overrides": [
+    "Do not use ESR as sole marker of inflammation or infection; always correlate with CRP and clinical findings.",
+    "ESR may be normal early in acute infection (first 24 hours); repeat if clinically indicated.",
+    "High ESR with negative structural investigations requires investigation for occult infection, malignancy, or autoimmune disease."
+  ],
+  "commonPatterns": [
+    {
+      "id": "acute-bacterial-infection",
+      "title": "Acute bacterial infection",
+      "findings": [
+        "ESR moderately elevated (20–50 mm/h)",
+        "CRP significantly elevated (>50 mg/L)",
+        "Fever and localising symptoms",
+        "Elevated WCC"
+      ],
+      "interpretation": [
+        "Acute inflammatory response to infection",
+        "ESR lags CRP in acute infection",
+        "Supports acute infection diagnosis"
+      ],
+      "actions": [
+        "Obtain blood cultures and source investigation",
+        "Start antibiotics if systemic illness",
+        "Monitor CRP response to therapy (better short-term marker)"
+      ]
+    },
+    {
+      "id": "chronic-inflammation",
+      "title": "Chronic inflammation or autoimmune disease",
+      "findings": [
+        "Mildly elevated ESR (15–30 mm/h)",
+        "CRP normal-to-mildly elevated",
+        "Progressive systemic symptoms over weeks",
+        "Negative cultures"
+      ],
+      "interpretation": [
+        "Chronic inflammatory state",
+        "Suggests autoimmune condition",
+        "Normal imaging and negative cultures"
+      ],
+      "actions": [
+        "Check autoimmune serology (ANA, RF, anti-CCP)",
+        "Consider rheumatology referral if persistent",
+        "Investigate for chronic infection (TB, EBV)"
+      ]
+    },
+    {
+      "id": "malignancy-screening",
+      "title": "Unexplained elevated ESR (malignancy screening)",
+      "findings": [
+        "ESR >30 mm/h in elderly patient",
+        "CRP normal/mildly elevated",
+        "Weight loss and constitutional symptoms",
+        "Anaemia present"
+      ],
+      "interpretation": [
+        "Elevated ESR in absence of infection suggests malignancy",
+        "Anaemia may contribute to ESR elevation",
+        "Requires investigation for occult malignancy"
+      ],
+      "actions": [
+        "Imaging screen (CXR, CT abdomen)",
+        "Haematology assessment for anaemia",
+        "Specialist referral if malignancy suspected"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "crp-measurement",
+      "test": "C-reactive protein (CRP)",
+      "rationale": [
+        "Simultaneously with ESR",
+        "CRP rises faster in acute infection; informs timing of infection"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "blood-cultures",
+      "test": "Blood cultures",
+      "rationale": [
+        "ESR >40 mm/h + fever",
+        "Rule out endocarditis or bacteraemia"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "autoimmune-serology",
+      "test": "Autoimmune serology (ANA, RF, anti-CCP)",
+      "rationale": [
+        "ESR elevated with normal CRP/infection workup",
+        "Screen for autoimmune disease"
+      ],
+      "referenceIds": []
+    }
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft blood panel — pending clinical validation"
+  }
+}

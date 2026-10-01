@@ -1,0 +1,194 @@
+{
+  "id": "iron-studies",
+  "title": "Iron studies",
+  "subtitle": "Serum iron, ferritin, transferrin saturation and TIBC for iron status assessment",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Iron profile measurement for assessment of iron deficiency, iron overload, and anaemia diagnosis.",
+  "introduction": "Iron studies include serum iron, ferritin, transferrin saturation (TSAT), and total iron-binding capacity (TIBC). Ferritin is the most commonly used marker of iron stores. Used in combination with FBC to diagnose iron deficiency anaemia and assess iron overload.",
+  "calculations": [],
+  "sections": [
+    {
+      "id": "ferritin",
+      "title": "Serum ferritin",
+      "rows": [
+        {
+          "id": "ferritin-value",
+          "name": "Serum ferritin",
+          "unit": "ng/mL",
+          "referenceRange": "Male 20–300; Female 15–200 (laboratory dependent)",
+          "lowInterpretation": [
+            "Ferritin <15 ng/mL: iron deficiency (depleted iron stores). Confirms diagnosis if MCV is low (microcytic anaemia).",
+            "Ferritin 15–30 ng/mL: iron-depleted but not yet anaemic; risk of developing anaemia if losses continue."
+          ],
+          "highInterpretation": [
+            "Ferritin >200 ng/mL (female) or >300 ng/mL (male): iron overload or secondary elevation.",
+            "Primary iron overload: hereditary haemochromatosis (elevated TSAT >45%), secondary to transfusions or haemolysis.",
+            "Secondary elevation (common): acute inflammation/infection, liver disease, malignancy, renal failure. Ferritin is acute-phase reactant; always check CRP."
+          ],
+          "notes": [
+            "Ferritin is non-specific (elevated in inflammation, infection, malignancy, cirrhosis).",
+            "In anaemia of chronic disease: ferritin often normal-to-elevated despite iron deficiency; use TSAT (<20%) to confirm iron deficiency.",
+            "Optimal threshold varies by age, sex, and lab; use lab-specific ranges."
+          ],
+          "unitless": false,
+          "navigation": {
+            "showInJumpTo": true,
+            "label": "Ferritin"
+          }
+        }
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
+    },
+    {
+      "id": "iron-and-tibc",
+      "title": "Serum iron and TSAT",
+      "rows": [
+        {
+          "id": "tsat-value",
+          "name": "Transferrin saturation (TSAT)",
+          "unit": "%",
+          "referenceRange": "20–50% (laboratory dependent)",
+          "lowInterpretation": [
+            "TSAT <20%: iron deficiency (cannot saturate transferrin when iron depleted). Specific for iron deficiency in anaemia of chronic disease.",
+            "TSAT 20–30%: normal or mildly reduced; may indicate mild iron deficiency or resolving iron stores."
+          ],
+          "highInterpretation": [
+            "TSAT >45–50%: iron overload or haemochromatosis.",
+            "TSAT >55%: highly specific for hereditary haemochromatosis (combined with ferritin >200 ng/mL)."
+          ],
+          "notes": [
+            "TSAT = (serum iron / TIBC) × 100.",
+            "More specific for iron deficiency than ferritin; useful to confirm iron deficiency in inflammatory anaemia.",
+            "TSAT <20% supports iron deficiency even if ferritin is normal-to-high (as in chronic inflammation)."
+          ],
+          "unitless": false,
+          "navigation": {
+            "showInJumpTo": true,
+            "label": "TSAT"
+          }
+        }
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
+    }
+  ],
+  "urgentFindings": [
+    "Ferritin <15 ng/mL + MCV <80 fL + Hb <110 g/L (female): iron deficiency anaemia confirmed; investigate source (GI bleeding, menorrhagia).",
+    "TSAT >45% + ferritin >200 ng/mL + elevated transaminases: suspect haemochromatosis; refer for HFE genotyping and liver assessment.",
+    "Ferritin >500 ng/mL + fever + elevated inflammatory markers: acute phase response; repeat after infection resolves to assess true iron status."
+  ],
+  "overrides": [
+    "Never diagnose iron deficiency on ferritin alone if inflammation present; use TSAT <20% as supporting evidence.",
+    "Iron replacement therapy only after confirming iron deficiency AND identifying/addressing source of loss.",
+    "Elevated ferritin does not always mean iron overload; always check CRP and consider alternative diagnoses."
+  ],
+  "commonPatterns": [
+    {
+      "id": "iron-deficiency-anaemia",
+      "title": "Iron deficiency anaemia",
+      "findings": [
+        "Microcytic anaemia (MCV <80)",
+        "Low ferritin (<15 ng/mL)",
+        "Low serum iron and TSAT (<20%)",
+        "High TIBC (>70)"
+      ],
+      "interpretation": [
+        "Clear iron stores depletion",
+        "Anaemia due to iron deficiency",
+        "Likely source: GI bleeding or menorrhagia"
+      ],
+      "actions": [
+        "Identify source of iron loss (GI investigations, menstrual history)",
+        "Iron supplementation or transfusion if severe",
+        "Repeat iron studies after source control"
+      ]
+    },
+    {
+      "id": "anaemia-chronic-disease",
+      "title": "Anaemia of chronic disease",
+      "findings": [
+        "Normocytic or microcytic anaemia",
+        "Normal-to-high ferritin (acute phase response)",
+        "Low serum iron and TSAT (<20%)",
+        "Normal-to-low TIBC",
+        "Elevated CRP"
+      ],
+      "interpretation": [
+        "Iron deficiency coexists with chronic inflammation",
+        "Ferritin elevated from acute phase, not iron stores",
+        "Requires both iron and inflammation management"
+      ],
+      "actions": [
+        "Treat underlying chronic disease (infection, autoimmune, cancer)",
+        "Consider iron supplementation once inflammation controlled",
+        "Address iron loss source if present"
+      ]
+    },
+    {
+      "id": "hereditary-haemochromatosis",
+      "title": "Hereditary haemochromatosis",
+      "findings": [
+        "High ferritin (>200 ng/mL)",
+        "High serum iron (>25 μmol/L)",
+        "TSAT >55%",
+        "Elevated liver enzymes (ALT/AST)"
+      ],
+      "interpretation": [
+        "Iron overload confirmed",
+        "Likely hereditary haemochromatosis",
+        "Risk of liver cirrhosis and hepatocellular carcinoma"
+      ],
+      "actions": [
+        "HFE genotyping to confirm diagnosis",
+        "Liver ultrasound and assessment for cirrhosis",
+        "Phlebotomy or chelation therapy",
+        "Screen family members"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "hfe-genotyping",
+      "test": "HFE genotyping",
+      "rationale": [
+        "TSAT >45% + ferritin >200 ng/mL",
+        "Confirm hereditary haemochromatosis diagnosis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "source-investigation",
+      "test": "GI bleeding source investigation (if iron deficiency)",
+      "rationale": [
+        "Occult blood test, endoscopy if age >50 or alarm features",
+        "Screen for menorrhagia, coeliac serology, parasites"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "liver-assessment",
+      "test": "Liver ultrasound and function tests",
+      "rationale": [
+        "If haemochromatosis suspected",
+        "Assess for cirrhosis and hepatocellular carcinoma risk"
+      ],
+      "referenceIds": []
+    }
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft blood panel — pending clinical validation"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "id": "procalcitonin",
+  "title": "Procalcitonin",
+  "subtitle": "Bacterial infection marker and sepsis biomarker",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Procalcitonin (PCT) measurement for discrimination of bacterial from viral infection and assessment of sepsis severity.",
+  "introduction": "Procalcitonin is a precursor of calcitonin produced by neuroendocrine cells in response to bacterial or fungal infection. It rises rapidly in sepsis but remains low in viral infection, making it useful for antibiotic stewardship. Levels correlate with sepsis severity.",
+  "calculations": [],
+  "sections": [
+    {
+      "id": "procalcitonin-result",
+      "title": "Procalcitonin",
+      "rows": [
+        {
+          "id": "procalcitonin-value",
+          "name": "Procalcitonin",
+          "unit": "ng/mL",
+          "referenceRange": "Normal <0.05; Intermediate 0.05–0.5; Elevated >0.5",
+          "lowInterpretation": [
+            "PCT <0.05 ng/mL: Viral infection or non-infectious cause likely. Antibiotics may be withheld if clinical picture supports viral illness.",
+            "PCT 0.05–0.25 ng/mL: Low probability of bacterial infection; not typical of sepsis. Close monitoring without antibiotics may be appropriate."
+          ],
+          "highInterpretation": [
+            "PCT 0.25–0.5 ng/mL: Intermediate risk; bacterial infection or early sepsis possible. Clinical context and CRP inform antibiotic decision.",
+            "PCT >0.5 ng/mL: Bacterial infection or sepsis likely. Start antibiotics if clinical features support (fever, tachycardia, systemic illness).",
+            "PCT >2 ng/mL: Severe sepsis or septic shock likely. Immediate antibiotic therapy and intensive care assessment required."
+          ],
+          "notes": [
+            "Rises within 6–12 hours of bacterial infection; peaks at 24 hours.",
+            "Also elevated in fungal infections, severe viral infections (dengue, malaria), malignancy, trauma, surgery.",
+            "Serial measurements show decline during appropriate therapy (24–48 hours) or persistent elevation if inadequate source control.",
+            "Renal failure and transplantation can elevate PCT despite absence of infection."
+          ],
+          "unitless": false,
+          "navigation": {
+            "showInJumpTo": true,
+            "label": "Procalcitonin"
+          }
+        }
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
+    }
+  ],
+  "urgentFindings": [
+    "PCT >0.5 ng/mL + fever + systemic illness: suspected sepsis; start antibiotics and investigation for source.",
+    "PCT >2 ng/mL + signs of shock: severe sepsis/septic shock; immediate antibiotics, fluid resuscitation, ICU.",
+    "PCT <0.05 ng/mL + no systemic illness: viral illness likely; antibiotics not indicated.",
+    "Serial PCT decline + clinical improvement: supports antibiotic de-escalation after 48–72 hours."
+  ],
+  "overrides": [
+    "PCT should not delay antibiotics in acutely ill patients with suspected sepsis; use as adjunct to clinical judgement.",
+    "Elevated PCT does not indicate which antibiotic; culture and sensitivity drive specific choice.",
+    "Do not use PCT alone to diagnose infection; always integrate with fever, vital signs, WCC, CRP, and source findings."
+  ],
+  "commonPatterns": [
+    {
+      "id": "fever-respiratory-infection",
+      "title": "Fever with acute respiratory infection",
+      "findings": [
+        "Fever, cough, sore throat",
+        "No severe systemic features",
+        "Normal CXR appearance"
+      ],
+      "interpretation": [
+        "Likely viral URI or early infection",
+        "PCT helps discriminate viral from bacterial pneumonia",
+        "Low PCT suggests viral; high PCT suggests bacterial"
+      ],
+      "actions": [
+        "If PCT <0.1 ng/mL + normal CXR: viral illness, supportive care",
+        "If PCT >0.5 ng/mL + CXR infiltrate: bacterial pneumonia, antibiotics"
+      ]
+    },
+    {
+      "id": "fever-without-source-child",
+      "title": "Fever without source (young child)",
+      "findings": [
+        "Fever in 3–36 month old",
+        "No focal signs",
+        "High fever (>39°C)"
+      ],
+      "interpretation": [
+        "Risk of occult bacteraemia",
+        "PCT helps identify serious bacterial infection risk",
+        "Low PCT suggests lower bacteraemia risk"
+      ],
+      "actions": [
+        "If PCT <0.05 ng/mL: low bacteraemia risk, observation acceptable",
+        "If PCT >0.5 ng/mL + high fever: empiric antibiotics, investigation for UTI/bacteraemia"
+      ]
+    },
+    {
+      "id": "suspected-sepsis-mixed",
+      "title": "Suspected sepsis (mixed clinical picture)",
+      "findings": [
+        "Fever, tachycardia, altered mental status",
+        "Unclear if sepsis or other cause"
+      ],
+      "interpretation": [
+        "PCT helps confirm or exclude sepsis",
+        "High PCT supports sepsis diagnosis",
+        "Low PCT suggests non-infectious cause"
+      ],
+      "actions": [
+        "If PCT <0.1 ng/mL: sepsis unlikely, investigate other causes (stroke, hypoglycaemia)",
+        "If PCT >1 ng/mL: sepsis confirmed, start antibiotics and source control"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "blood-cultures",
+      "test": "Blood cultures",
+      "rationale": [
+        "PCT >0.5 ng/mL or fever with systemic illness",
+        "Mandatory before antibiotics"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "urine-culture",
+      "test": "Urine culture",
+      "rationale": [
+        "PCT elevated + fever without respiratory/abdominal source",
+        "Exclude UTI/pyelonephritis"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "serial-pct",
+      "test": "Serial PCT measurement (24–48 hours)",
+      "rationale": [
+        "Assess response to therapy",
+        "≥80% drop or fall below 0.5 ng/mL supports de-escalation"
+      ],
+      "referenceIds": []
+    }
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft blood panel — pending clinical validation"
+  }
+}

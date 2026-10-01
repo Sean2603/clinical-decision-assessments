@@ -1,0 +1,158 @@
+{
+  "id": "d-dimer",
+  "title": "D-dimer",
+  "subtitle": "Fibrin degradation product for thromboembolism screening",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "D-dimer measurement for assessment of thromboembolic risk and exclusion of venous thromboembolism in low-risk patients.",
+  "introduction": "D-dimer is a fibrin degradation product released when fibrin is broken down by plasmin. It is raised in thromboembolism but also in many other conditions (infection, inflammation, malignancy, trauma, DIC). Use as a rule-out test only in low-risk patients; never use to rule in thromboembolism.",
+  "calculations": [],
+  "sections": [
+    {
+      "id": "d-dimer-result",
+      "title": "D-dimer",
+      "rows": [
+        {
+          "id": "d-dimer-value",
+          "name": "D-dimer",
+          "unit": "ng/mL",
+          "referenceRange": "<500 ng/mL (laboratory dependent)",
+          "lowInterpretation": [
+            "Normal D-dimer: thromboembolism excluded in LOW-risk patients using validated clinical score (Wells score ≤2). No further investigation needed."
+          ],
+          "highInterpretation": [
+            "Elevated D-dimer (≥500 ng/mL): Non-specific finding. Seen in DVT/PE but also infection, inflammation, malignancy, trauma. Interpretation depends on clinical pretest probability.",
+            "LOW pretest probability (Wells ≤2): elevated D-dimer with high-sensitivity assay still excludes PE; if >500 ng/mL or lower-sensitivity assay, imaging (CTPA) required.",
+            "INTERMEDIATE/HIGH pretest probability: imaging (CT PE protocol or ultrasound for DVT) mandatory regardless of D-dimer; never rely on D-dimer alone.",
+            "Pregnancy: D-dimer often elevated physiologically; imaging preferred over D-dimer interpretation."
+          ],
+          "notes": [
+            "Age-adjusted thresholds (patient age × 10 ng/mL) may improve specificity in older adults but should be used cautiously.",
+            "Serial D-dimer testing not recommended; single measurement is sufficient.",
+            "Most useful in emergency department with validated clinical scoring systems."
+          ],
+          "unitless": false,
+          "navigation": {
+            "showInJumpTo": true,
+            "label": "D-dimer"
+          }
+        }
+      ],
+      "navigation": {
+        "showInJumpTo": true,
+        "label": null
+      }
+    }
+  ],
+  "urgentFindings": [
+    "D-dimer >500 ng/mL + high pretest probability of PE or DVT: urgent imaging (CTPA or compression ultrasound) required.",
+    "D-dimer normal + LOW pretest probability: PE/DVT excluded; safe discharge.",
+    "D-dimer elevated + pregnancy/cancer/recent surgery: always proceed to imaging regardless of D-dimer value."
+  ],
+  "overrides": [
+    "Never use D-dimer to confirm thromboembolism; use only to exclude in low-risk patients.",
+    "Do not order D-dimer in asymptomatic patients without clinical indication.",
+    "Age-adjusted thresholds may improve specificity but should not delay imaging in high-risk patients."
+  ],
+  "commonPatterns": [
+    {
+      "id": "suspected-pe-low-risk",
+      "title": "Suspected PE in low-risk patient",
+      "findings": [
+        "Chest pain or dyspnoea",
+        "Wells score ≤2 (minimal symptoms)",
+        "Normal vital signs",
+        "No risk factors for VTE"
+      ],
+      "interpretation": [
+        "Low pretest probability of PE",
+        "D-dimer negative excludes PE safely",
+        "D-dimer positive necessitates CTPA"
+      ],
+      "actions": [
+        "If D-dimer <500 ng/mL: PE excluded, safe discharge",
+        "If D-dimer ≥500 ng/mL: CT PE protocol required"
+      ]
+    },
+    {
+      "id": "suspected-dvt-leg-pain",
+      "title": "Suspected DVT (leg pain/swelling)",
+      "findings": [
+        "Unilateral leg swelling or pain",
+        "Wells score for DVT ≤1",
+        "No asymmetry on examination"
+      ],
+      "interpretation": [
+        "Low pretest probability of DVT",
+        "D-dimer negative excludes DVT",
+        "D-dimer positive necessitates ultrasound"
+      ],
+      "actions": [
+        "If D-dimer <500 ng/mL: DVT excluded",
+        "If D-dimer ≥500 ng/mL: compression ultrasound (both legs) required"
+      ]
+    },
+    {
+      "id": "incidental-elevated-d-dimer",
+      "title": "Incidental elevated D-dimer (no VTE symptoms)",
+      "findings": [
+        "D-dimer sent for other reasons (sepsis workup)",
+        "D-dimer elevated but no PE/DVT symptoms",
+        "No leg pain, dyspnoea, or chest pain"
+      ],
+      "interpretation": [
+        "Elevated D-dimer without VTE symptoms",
+        "Consider other causes: infection, inflammation, malignancy, trauma",
+        "No imaging for PE/DVT if asymptomatic"
+      ],
+      "actions": [
+        "No PE/DVT imaging if asymptomatic",
+        "Investigate other causes (CRP, infection, malignancy screen)",
+        "Reassure patient if no VTE symptoms"
+      ]
+    }
+  ],
+  "furtherTesting": [
+    {
+      "id": "ctpa",
+      "test": "CT Pulmonary Angiography (CTPA)",
+      "rationale": [
+        "D-dimer elevated",
+        "Intermediate-high pretest probability for PE",
+        "Persistent PE symptoms despite normal D-dimer in high-risk patient"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "compression-ultrasound-dvt",
+      "test": "Compression ultrasound (legs)",
+      "rationale": [
+        "D-dimer elevated",
+        "Intermediate-high pretest probability for DVT",
+        "Clinically suspected leg DVT"
+      ],
+      "referenceIds": []
+    },
+    {
+      "id": "other-investigations",
+      "test": "Blood cultures, CRP, imaging for malignancy",
+      "rationale": [
+        "If elevated D-dimer with no thromboembolism features",
+        "Investigate infection (blood cultures, CRP)",
+        "Consider malignancy screening (imaging/biopsy as indicated)",
+        "Consider DIC if severely elevated (PT, aPTT, fibrinogen, platelet count)"
+      ],
+      "referenceIds": []
+    }
+  ],
+  "referenceIds": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft blood panel — pending clinical validation"
+  }
+}
