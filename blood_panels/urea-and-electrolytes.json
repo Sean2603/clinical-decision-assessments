@@ -2,7 +2,7 @@
   "id": "urea-and-electrolytes",
   "title": "Urea and electrolytes",
   "subtitle": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Sodium, potassium, urea, creatinine, eGFR and bicarbonate",
@@ -223,11 +223,11 @@
         "precision": null,
         "parameters": {
           "stage1Ratio": 1.5,
-          "stage2Ratio": 2.0,
-          "stage3Ratio": 3.0,
-          "absoluteRise": 26.0,
-          "absoluteRiseWindowHours": 48.0,
-          "stage3Creatinine": 354.0
+          "stage2Ratio": 2,
+          "stage3Ratio": 3,
+          "absoluteRise": 26,
+          "absoluteRiseWindowHours": 48,
+          "stage3Creatinine": 354
         },
         "textResults": {
           "no-aki": "No creatinine-defined AKI warning stage identified from these two results",
@@ -241,9 +241,9 @@
           "id": "no-aki",
           "description": "Small creatinine change below absolute and ratio thresholds.",
           "inputs": {
-            "baselineCreatinine": 100.0,
-            "currentCreatinine": 120.0,
-            "intervalHours": 24.0
+            "baselineCreatinine": 100,
+            "currentCreatinine": 120,
+            "intervalHours": 24
           },
           "expectedNumber": null,
           "expectedText": "No creatinine-defined AKI warning stage identified from these two results"
@@ -252,9 +252,9 @@
           "id": "stage-1-absolute-rise",
           "description": "Rise of 26 µmol/L within 48 hours.",
           "inputs": {
-            "baselineCreatinine": 100.0,
-            "currentCreatinine": 126.0,
-            "intervalHours": 24.0
+            "baselineCreatinine": 100,
+            "currentCreatinine": 126,
+            "intervalHours": 24
           },
           "expectedNumber": null,
           "expectedText": "AKI warning stage 1"
@@ -263,9 +263,9 @@
           "id": "stage-1-ratio",
           "description": "Current creatinine is 1.5 to less than 2 times baseline.",
           "inputs": {
-            "baselineCreatinine": 100.0,
-            "currentCreatinine": 160.0,
-            "intervalHours": 72.0
+            "baselineCreatinine": 100,
+            "currentCreatinine": 160,
+            "intervalHours": 72
           },
           "expectedNumber": null,
           "expectedText": "AKI warning stage 1"
@@ -274,9 +274,9 @@
           "id": "stage-2-ratio",
           "description": "Current creatinine is 2 to less than 3 times baseline.",
           "inputs": {
-            "baselineCreatinine": 100.0,
-            "currentCreatinine": 220.0,
-            "intervalHours": 72.0
+            "baselineCreatinine": 100,
+            "currentCreatinine": 220,
+            "intervalHours": 72
           },
           "expectedNumber": null,
           "expectedText": "AKI warning stage 2"
@@ -285,9 +285,9 @@
           "id": "stage-3-ratio",
           "description": "Current creatinine is at least 3 times baseline.",
           "inputs": {
-            "baselineCreatinine": 100.0,
-            "currentCreatinine": 310.0,
-            "intervalHours": 72.0
+            "baselineCreatinine": 100,
+            "currentCreatinine": 310,
+            "intervalHours": 72
           },
           "expectedNumber": null,
           "expectedText": "AKI warning stage 3"
@@ -296,9 +296,9 @@
           "id": "stage-3-high-creatinine",
           "description": "Current creatinine is at least 354 µmol/L and at least 1.5 times baseline.",
           "inputs": {
-            "baselineCreatinine": 200.0,
-            "currentCreatinine": 360.0,
-            "intervalHours": 72.0
+            "baselineCreatinine": 200,
+            "currentCreatinine": 360,
+            "intervalHours": 72
           },
           "expectedNumber": null,
           "expectedText": "AKI warning stage 3"
@@ -308,8 +308,8 @@
         {
           "id": "baselineCreatinine",
           "label": "Baseline creatinine",
-          "min": 10.0,
-          "max": 3000.0,
+          "min": 10,
+          "max": 3000,
           "decimalPlaces": 0,
           "unit": "µmol/L",
           "validationMessage": "Enter baseline creatinine between 10 and 3000 µmol/L."
@@ -317,8 +317,8 @@
         {
           "id": "currentCreatinine",
           "label": "Current creatinine",
-          "min": 10.0,
-          "max": 3000.0,
+          "min": 10,
+          "max": 3000,
           "decimalPlaces": 0,
           "unit": "µmol/L",
           "validationMessage": "Enter current creatinine between 10 and 3000 µmol/L."
@@ -326,8 +326,8 @@
         {
           "id": "intervalHours",
           "label": "Time between results",
-          "min": 0.0,
-          "max": 168.0,
+          "min": 0,
+          "max": 168,
           "decimalPlaces": 1,
           "unit": "hours",
           "validationMessage": "Use a baseline result from within the previous 7 days (0–168 hours)."
@@ -579,11 +579,11 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-24",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-09-24",
     "reviewNotes": null
   },
   "attachments": [],

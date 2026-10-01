@@ -2,7 +2,7 @@
   "id": "serum-osmolality",
   "title": "Serum osmolality",
   "subtitle": "Calculated osmolality, tonicity and osmolal gap",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "minimumAppVersion": "0.57.0",
   "status": "active",
   "summary": "Calculated osmolality, tonicity and osmolal gap",
@@ -100,8 +100,8 @@
         {
           "id": "sodium",
           "label": "Sodium (mmol/L)",
-          "min": 80.0,
-          "max": 220.0,
+          "min": 80,
+          "max": 220,
           "decimalPlaces": 1,
           "unit": "mmol/L",
           "validationMessage": "Enter sodium between 80 and 220 mmol/L."
@@ -109,8 +109,8 @@
         {
           "id": "glucose",
           "label": "Glucose (mmol/L)",
-          "min": 0.0,
-          "max": 100.0,
+          "min": 0,
+          "max": 100,
           "decimalPlaces": 1,
           "unit": "mmol/L",
           "validationMessage": "Enter glucose between 0 and 100 mmol/L."
@@ -118,8 +118,8 @@
         {
           "id": "urea",
           "label": "Urea (mmol/L)",
-          "min": 0.0,
-          "max": 100.0,
+          "min": 0,
+          "max": 100,
           "decimalPlaces": 1,
           "unit": "mmol/L",
           "validationMessage": "Enter urea between 0 and 100 mmol/L."
@@ -171,8 +171,8 @@
         {
           "id": "measuredOsmolality",
           "label": "Measured osmolality (mOsm/kg)",
-          "min": 150.0,
-          "max": 500.0,
+          "min": 150,
+          "max": 500,
           "decimalPlaces": 1,
           "unit": "mOsm/kg",
           "validationMessage": "Enter measured osmolality between 150 and 500 mOsm/kg."
@@ -180,8 +180,8 @@
         {
           "id": "calculatedOsmolality",
           "label": "Calculated osmolality (mOsm/kg)",
-          "min": 150.0,
-          "max": 500.0,
+          "min": 150,
+          "max": 500,
           "decimalPlaces": 1,
           "unit": "mOsm/kg",
           "validationMessage": "Enter calculated osmolality between 150 and 500 mOsm/kg."
@@ -318,12 +318,12 @@
     }
   ],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-09-24",
+    "reviewerRole": "tAPUC",
     "reviewNotes": null,
-    "nextReviewDue": null
+    "nextReviewDue": "2028-09-24"
   },
   "attachments": [],
   "specimens": [
