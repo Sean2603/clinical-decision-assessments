@@ -23,10 +23,7 @@
             "Acute scleritis (severe pain, red patch, vision-threatening).",
             "Giant-cell arteritis with vision loss (age >50, systemic symptoms)."
           ],
-          "references": [
-            "NICE-CG73",
-            "NICE-NG127"
-          ],
+          "references": [],
           "importantLimitation": "Red eye does not always mean infection; serious non-infectious causes can masquerade as conjunctivitis."
         }
       ]
@@ -403,10 +400,7 @@
       ]
     }
   ],
-  "references": [
-    "NICE-CG73",
-    "NICE-NG127"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -416,9 +410,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "ophthalmology"
+    "uncategorised"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }

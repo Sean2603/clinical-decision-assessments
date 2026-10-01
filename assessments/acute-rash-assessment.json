@@ -22,10 +22,7 @@
             "Severe systemic illness with rash (sepsis, toxic shock syndrome).",
             "Immunosuppression increasing infection risk or unusual presentation risk."
           ],
-          "references": [
-            "NICE-NG51",
-            "NICE-NG127"
-          ],
+          "references": [],
           "importantLimitation": "Absence of meningeal signs does not exclude meningococcal disease. Early rash may not be petechial or non-blanching."
         }
       ]
@@ -91,9 +88,7 @@
           "implications": [
             "Immediate emergency referral and empiric antibiotics (do not delay for lumbar puncture)."
           ],
-          "references": [
-            "NICE-NG51"
-          ]
+          "references": []
         },
         {
           "id": "stevens-johnson-ten",
@@ -153,7 +148,7 @@
             "Alert, haemodynamically stable, normal temperature or low-grade fever."
           ],
           "abnormal": [
-            "Altered consciousness, fever >38.5°C, tachycardia, hypotension or signs of shock."
+            "Altered consciousness, fever >38.5\u00c2\u00b0C, tachycardia, hypotension or signs of shock."
           ],
           "implications": [
             "Systemic illness with rash suggests serious infection or drug reaction."
@@ -309,10 +304,7 @@
       ]
     }
   ],
-  "references": [
-    "NICE-NG51",
-    "NICE-NG127"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -322,10 +314,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "dermatology",
-    "infectious-disease"
+    "uncategorised"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }

@@ -23,9 +23,6 @@
             "Pregnancy or gynaecological emergency (last menstrual period, pelvic pain).",
             "Medication toxicity or overdose (recent drug exposure, altered consciousness)."
           ],
-          "references": [
-            "NICE-CG27"
-          ],
           "importantLimitation": "Vomiting can mask serious pathology. Red-flag features warrant investigation even if vomiting is apparently benign."
         }
       ]
@@ -322,9 +319,7 @@
       ]
     }
   ],
-  "references": [
-    "NICE-CG27"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -334,10 +329,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "gastrointestinal",
-    "general"
+    "uncategorised"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }

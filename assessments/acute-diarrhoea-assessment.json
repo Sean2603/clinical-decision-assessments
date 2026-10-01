@@ -23,9 +23,7 @@
             "Medication-related (antibiotics, laxative misuse, NSAIDs).",
             "Recent travel or unusual food exposures."
           ],
-          "references": [
-            "NICE-CG84"
-          ],
+          "references": [],
           "importantLimitation": "Absence of bloody stools does not exclude serious infection or IBD. Dehydration develops rapidly especially in elderly and young children."
         }
       ]
@@ -77,7 +75,7 @@
           "mustConfirmOrExclude": [
             "Bloody diarrhoea or diarrhoea with mucus.",
             "Severe abdominal pain or peritoneal signs.",
-            "High fever (>38.5°C) with systemic illness.",
+            "High fever (>38.5\u00c2\u00b0C) with systemic illness.",
             "Unable to drink or persistent vomiting (dehydration risk).",
             "Diarrhoea lasting >2 weeks (chronic diarrhoea).",
             "Weight loss or systemic symptoms.",
@@ -119,9 +117,7 @@
           "implications": [
             "Stool culture and testing; hospital referral if severe or high fever."
           ],
-          "references": [
-            "NICE-CG84"
-          ]
+          "references": []
         },
         {
           "id": "toxic-megacolon",
@@ -208,7 +204,7 @@
             "Afebrile or low-grade fever, normal vital signs, well appearance."
           ],
           "abnormal": [
-            "High fever (>38.5°C), tachycardia, hypotension, signs of shock or sepsis."
+            "High fever (>38.5\u00c2\u00b0C), tachycardia, hypotension, signs of shock or sepsis."
           ],
           "implications": [
             "Fever with bloody diarrhoea suggests infectious colitis; shock suggests severe infection or dehydration."
@@ -297,7 +293,7 @@
           "mustConfirmOrExclude": [
             "Stool culture: if bloody diarrhoea, fever or severe systemic illness.",
             "C. difficile testing: if recent antibiotics or hospital exposure.",
-            "Blood tests: if fever >38.5°C or severe systemic illness (FBC, CRP, electrolytes).",
+            "Blood tests: if fever >38.5\u00c2\u00b0C or severe systemic illness (FBC, CRP, electrolytes).",
             "Imaging: if acute surgical abdomen suspected (abdominal X-ray or CT)."
           ]
         },
@@ -339,16 +335,14 @@
           "title": "Acute diarrhoea",
           "safetyNetting": [
             "Call 999 or go to ED immediately for: signs of severe dehydration (extreme dizziness, confusion, no urine for 8+ hours); severe abdominal pain with peritoneal signs; blood in stool with fever and severe systemic illness; or signs of shock.",
-            "Contact your GP or go to ED same-day for: persistent vomiting preventing fluid intake; bloody diarrhoea; high fever (>38.5°C); severe abdominal pain; diarrhoea lasting >2 weeks; or signs of dehydration (dark urine, dry mouth).",
+            "Contact your GP or go to ED same-day for: persistent vomiting preventing fluid intake; bloody diarrhoea; high fever (>38.5\u00c2\u00b0C); severe abdominal pain; diarrhoea lasting >2 weeks; or signs of dehydration (dark urine, dry mouth).",
             "Speak to your GP if: diarrhoea persists beyond 1 week; you are not improving with rehydration; you want antibiotic advice; or you are concerned about underlying causes."
           ]
         }
       ]
     }
   ],
-  "references": [
-    "NICE-CG84"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -358,10 +352,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "gastrointestinal",
-    "infectious-disease"
+    "uncategorised"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }

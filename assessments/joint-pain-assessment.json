@@ -22,10 +22,6 @@
             "Inflammatory bowel disease with arthropathy or reactive arthritis (extraarticular features).",
             "Malignancy (weight loss, systemic illness, polyarticular)."
           ],
-          "references": [
-            "NICE-NG99",
-            "NICE-CG79"
-          ],
           "importantLimitation": "Septic joint can be missed with mild fever. Monoarticular presentation with fever requires joint aspiration to exclude infection."
         }
       ]
@@ -322,10 +318,7 @@
       ]
     }
   ],
-  "references": [
-    "NICE-NG99",
-    "NICE-CG79"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -335,11 +328,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "musculoskeletal",
-    "rheumatology",
-    "general"
+    "musculoskeletal"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }

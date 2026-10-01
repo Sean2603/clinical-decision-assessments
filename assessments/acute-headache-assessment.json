@@ -23,10 +23,7 @@
             "Hypertensive emergency (severe hypertension with symptoms, end-organ damage).",
             "Recent head injury or trauma risk."
           ],
-          "references": [
-            "NICE-CG150",
-            "NICE-NG127"
-          ],
+          "references": [],
           "importantLimitation": "Absence of classic features does not exclude serious pathology. Some serious conditions present with subtle findings."
         }
       ]
@@ -96,9 +93,7 @@
           "implications": [
             "Immediate hospital referral; consider empiric antibiotics before transfer if delay expected."
           ],
-          "references": [
-            "NICE-NG51"
-          ]
+          "references": []
         },
         {
           "id": "subarachnoid-haemorrhage",
@@ -372,18 +367,14 @@
           "title": "Acute headache",
           "safetyNetting": [
             "Call 999 or go to ED immediately for: sudden severe headache (worst of your life), headache with fever and neck stiffness, headache with rash (especially non-blanching), focal weakness or speech change, vision loss, altered consciousness or seizure.",
-            "Contact your GP or go to ED same-day for: headache with high fever (>38.5°C); new headache if age >50; progressive headache or change in pattern; headache with confusion or significant drowsiness; headache with facial droop or arm/leg weakness; or severe headache not responding to analgesia.",
+            "Contact your GP or go to ED same-day for: headache with high fever (>38.5\u00c2\u00b0C); new headache if age >50; progressive headache or change in pattern; headache with confusion or significant drowsiness; headache with facial droop or arm/leg weakness; or severe headache not responding to analgesia.",
             "Speak to your GP if: you are having frequent headaches (more than 2 per week); headaches are interfering with daily life; you are using painkillers more than 2 days per week; or you want preventive advice."
           ]
         }
       ]
     }
   ],
-  "references": [
-    "NICE-CG150",
-    "NICE-NG51",
-    "NICE-NG127"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -393,9 +384,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "neurology"
+    "uncategorised"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }

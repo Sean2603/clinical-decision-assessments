@@ -23,9 +23,7 @@
             "Neurological cause (spinal cord compression, Parkinson's, multiple sclerosis).",
             "Medication-related (opioids, anticholinergics, iron supplements)."
           ],
-          "references": [
-            "NICE-CG99"
-          ],
+          "references": [],
           "importantLimitation": "Constipation can mask serious pathology. Red-flag features warrant investigation even in apparently low-risk patients."
         }
       ]
@@ -334,9 +332,7 @@
       ]
     }
   ],
-  "references": [
-    "NICE-CG99"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -346,9 +342,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "gastrointestinal"
+    "uncategorised"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }

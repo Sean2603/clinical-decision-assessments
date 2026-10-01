@@ -23,10 +23,6 @@
             "Source of fever if high or prolonged (malignancy, TB, autoimmune).",
             "Immunosuppression increasing infection risk or atypical presentation."
           ],
-          "references": [
-            "NICE-NG51",
-            "NICE-NG180"
-          ],
           "importantLimitation": "Absence of obvious source does not exclude serious infection. Some serious infections present with fever alone."
         }
       ]
@@ -179,7 +175,7 @@
           ]
         },
         {
-          "id": "UTI-PN",
+          "id": "uti-pyelonephritis",
           "title": "UTI or pyelonephritis",
           "commonFindings": [
             "Dysuria, frequency, urgency with fever.",
@@ -261,10 +257,7 @@
       ]
     }
   ],
-  "references": [
-    "NICE-NG51",
-    "NICE-NG180"
-  ],
+  "references": [],
   "clinicalValidation": {
     "validated": false,
     "reviewedBy": null,
@@ -274,10 +267,9 @@
     "reviewNotes": "Draft assessment - pending clinical validation"
   },
   "categoryIds": [
-    "general",
-    "infectious-disease"
+    "uncategorised"
   ],
-  "status": "draft",
+  "status": "active",
   "attachments": [],
   "prominentResources": []
 }
