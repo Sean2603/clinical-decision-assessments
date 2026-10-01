@@ -171,6 +171,13 @@
     }
   },
   "$defs": {
+    "stringList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
     "step": {
       "type": "object",
       "additionalProperties": false,

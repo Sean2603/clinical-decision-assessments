@@ -1031,6 +1031,104 @@
       "supersededBy": null,
       "notes": null,
       "relevantTopics": []
+    },
+    {
+      "id": "NICE-NG51",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Sepsis: recognition, diagnosis and early management",
+      "referenceNumber": "NG51",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng51",
+      "published": "2016-07-13",
+      "lastUpdated": "2026-01-15",
+      "accessed": "2026-09-30",
+      "lastReviewed": "2026-09-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-09-30",
+      "supersededBy": null,
+      "notes": "Core sepsis guideline for fever/infection assessment",
+      "relevantTopics": [
+        "sepsis",
+        "infection",
+        "fever",
+        "antibiotic"
+      ]
+    },
+    {
+      "id": "NICE-NG143",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Fever in under 5s: assessment and initial management",
+      "referenceNumber": "NG143",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng143",
+      "published": "2019-05-01",
+      "lastUpdated": "2023-04-12",
+      "accessed": "2026-09-30",
+      "lastReviewed": "2026-09-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-09-30",
+      "supersededBy": null,
+      "notes": "Fever assessment in children <5 years",
+      "relevantTopics": [
+        "fever",
+        "children",
+        "paediatrics",
+        "infection"
+      ]
+    },
+    {
+      "id": "NICE-CG27",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Nausea and vomiting in pregnancy",
+      "referenceNumber": "CG27",
+      "type": "clinical guideline",
+      "url": "https://www.nice.org.uk/guidance/cg27",
+      "published": "2008-04-09",
+      "lastUpdated": "2023-02-14",
+      "accessed": "2026-09-30",
+      "lastReviewed": "2026-09-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-09-30",
+      "supersededBy": null,
+      "notes": "Nausea and vomiting assessment",
+      "relevantTopics": [
+        "nausea",
+        "vomiting",
+        "pregnancy"
+      ]
+    },
+    {
+      "id": "NICE-NG180",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Infection prevention and control",
+      "referenceNumber": "NG180",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng180",
+      "published": "2020-10-14",
+      "lastUpdated": "2024-09-30",
+      "accessed": "2026-09-30",
+      "lastReviewed": "2026-09-30",
+      "reviewStatus": "current",
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-09-30",
+      "supersededBy": null,
+      "notes": "Infection control and prevention measures",
+      "relevantTopics": [
+        "infection",
+        "prevention",
+        "control"
+      ]
     }
   ]
 }

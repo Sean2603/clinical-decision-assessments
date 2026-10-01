@@ -1,0 +1,183 @@
+{
+  "id": "blood-cultures",
+  "title": "Blood cultures",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Sterile collection of blood for bacterial culture in suspected sepsis, bacteraemia, endocarditis, and fever assessment.",
+  "category": "Laboratory procedures",
+  "indications": [
+    "Fever with systemic illness or signs of sepsis",
+    "Suspected bacteraemia or septicaemia",
+    "Fever with cardiac murmur or prosthetic valve (endocarditis risk)",
+    "Fever with intravenous line or recent invasive procedure",
+    "Fever in immunocompromised patient",
+    "Neonatal fever (universally performed)",
+    "Community-acquired pneumonia with severe systemic illness",
+    "Fever in patient with intra-abdominal infection"
+  ],
+  "contraindications": [
+    "None absolute; proceed even if bleeding tendency present (importance of culture outweighs bleeding risk)"
+  ],
+  "precautions": [
+    "Strict aseptic technique essential: contamination is leading cause of misinterpretation",
+    "Collect before antibiotics if possible; never delay antibiotics for culture in septic shock",
+    "Collect at least 2 sets from different sites to distinguish contamination from true bacteraemia",
+    "Use appropriate blood volume (10 mL per bottle for adults; 1–3 mL for children)",
+    "Do not touch needle or culture bottle sterile field after site preparation"
+  ],
+  "equipment": [
+    "Sterile blood culture bottles (aerobic and anaerobic sets; minimum 2 sets)",
+    "Sterile needles (18–20 gauge for adults)",
+    "Sterile syringes (10–20 mL for adults)",
+    "Sterile vacutainer system (if using vacuum collection)",
+    "Alcohol preparation swabs (70% isopropyl alcohol or chlorhexidine)",
+    "Sterile gauze or cotton pads",
+    "Sterile gloves",
+    "Patient identification labels",
+    "Biohazard sharps container"
+  ],
+  "preparation": [
+    "Explain procedure to patient: brief needle insertion for blood sample, important for diagnosing serious infection",
+    "Choose peripheral vein (arm preferred; femoral vein acceptable if necessary)",
+    "Position patient comfortably; have assistant available if needed",
+    "Gather all equipment before beginning (minimises need to interrupt sterile procedure)",
+    "Explain that results take 24–48 hours (or up to 5 days for fastidious organisms)"
+  ],
+  "steps": [
+    {
+      "id": "site-preparation",
+      "title": "Site preparation",
+      "instruction": "Don sterile gloves. Clean venipuncture site with 70% isopropyl alcohol or chlorhexidine swab using firm circular motion for 30 seconds. Allow to air dry completely (critical for disinfection). Do not re-palpate site after cleaning.",
+      "cautions": [
+        "Inadequate drying time reduces disinfection efficacy—allow full 30 seconds",
+        "Re-palpating site introduces bacteria; avoid this step"
+      ],
+      "tips": [
+        "Use chlorhexidine for better disinfection than alcohol alone",
+        "Let site air dry rather than wiping—faster and more effective"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "bottle-preparation",
+      "title": "Culture bottle preparation",
+      "instruction": "Clean rubber septum of culture bottles with alcohol swab and allow to dry. Have aerobic and anaerobic bottles ready. For each set, insert needle into aerobic bottle first (to avoid air in anaerobic bottle), then anaerobic bottle.",
+      "cautions": [
+        "Air in anaerobic bottle causes contamination—inoculate aerobic first",
+        "Do not touch bottle septum after cleaning"
+      ],
+      "tips": [
+        "Prepare bottles before venipuncture to minimise time between draw and inoculation",
+        "Label bottles immediately before puncturing—prevents mix-up"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "venepuncture",
+      "title": "Venepuncture",
+      "instruction": "Using sterile technique, insert needle into vein at 15–30° angle. Obtain 10 mL blood in adults (scalp vein in neonates: 0.5–1 mL, as tolerated). Withdraw needle and apply gentle pressure with sterile gauze.",
+      "cautions": [
+        "Deep vein puncture increases contamination risk—use appropriate angle",
+        "Multiple attempts increase contamination—consider ultrasound guidance if difficult"
+      ],
+      "tips": [
+        "Stabilise vein with non-dominant hand to prevent movement",
+        "Use butterfly needle or smaller gauge (25G) for difficult veins if needed"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "bottle-inoculation",
+      "title": "Inoculation of culture bottles",
+      "instruction": "Using same syringe and needle (or transfer needle), fill aerobic bottle first, then anaerobic bottle with 5–10 mL per bottle. Ensure needle penetrates rubber septum; do not introduce air into bottles. Mix gently by inversion 8–10 times.",
+      "cautions": [
+        "Do not introduce air into anaerobic bottle—defeats purpose of anaerobic culture",
+        "Wrong volume in bottles (too little) reduces culture sensitivity"
+      ],
+      "tips": [
+        "Change needle between venipuncture and bottle inoculation if equipment allows—reduces contamination",
+        "Fill bottles to appropriate line if marked; follow bottle instructions for volume"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "repeat-collection",
+      "title": "Repeat collection (second set)",
+      "instruction": "Repeat entire process (site re-preparation, venepuncture from different site) to obtain second set of bottles within 1 hour. This is critical to differentiate true bacteraemia from contamination (same organism in 2+ sets = bacteraemia; different organisms = contamination).",
+      "cautions": [
+        "Single set collection reduces diagnostic value—two sets mandatory for interpretation",
+        "Different sites reduce contamination risk—do not use same site twice"
+      ],
+      "tips": [
+        "Document site of each collection (e.g., 'left AC', 'right wrist') for interpretation",
+        "If unable to obtain two sets, document reason in medical record"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "labelling-transport",
+      "title": "Labelling and documentation",
+      "instruction": "Label each set immediately with patient name, date, time, and source site. Document in patient record. Record indication for culture and whether antibiotics given (and when). Send to microbiology lab immediately (within 2 hours at room temperature).",
+      "cautions": [
+        "Delay in transport reduces organism recovery—bacteria may die or contaminants overgrow",
+        "Do not refrigerate cultures—kills some organisms (Haemophilus, Neisseria)"
+      ],
+      "tips": [
+        "Transport at room temperature in dedicated culture carrier if available",
+        "Flag culture bottles if sepsis suspected—lab will prioritise processing"
+      ],
+      "imageAttachmentId": null
+    }
+  ],
+  "complications": [
+    "Needle-stick injury (occupational exposure)—standard precautions and post-exposure prophylaxis if required",
+    "Local infiltration or haematoma—rare if good technique; apply pressure if occurs",
+    "Vasovagal syncope—ask patient to lie flat if dizzy; rare with experienced operator",
+    "Contamination (most common)—distinguished from true growth by different organisms in different sets"
+  ],
+  "troubleshooting": [
+    "Difficult venipuncture: Use ultrasound guidance if available; consider central line sampling only if absolutely necessary",
+    "Single set only collected: Document reason; interpret cautiously; consider repeat collection if clinical suspicion remains",
+    "Bottles filled with insufficient blood: May reduce sensitivity; document for lab interpretation",
+    "Delay in transport (>2 hours): Organism may die (especially Haemophilus); bacterial overgrowth of contaminants may occur"
+  ],
+  "aftercare": [
+    "Apply pressure to puncture site with gauze for 2–3 minutes; advise patient to keep arm straight",
+    "Provide patient with result timeline (cultures typically read at 24 hours; negative results at 48 hours)",
+    "Once culture grows organism: review sensitivities and adjust antibiotics if needed (de-escalate if contaminant)",
+    "In negative cultures with high clinical suspicion: discuss with microbiology; consider repeat culture"
+  ],
+  "documentation": [
+    "Record date and time of collection",
+    "Document site(s) where blood drawn (essential for contamination assessment)",
+    "Record number of sets obtained (must be ≥2 for reliable interpretation)",
+    "Note whether antibiotics given before or after culture",
+    "Record indication for culture (fever, suspected endocarditis, etc.)",
+    "Document culture results: organism, antimicrobial sensitivities, interpretation (true bacteraemia vs contamination)"
+  ],
+  "escalation": [
+    "Fever with positive blood cultures (same organism in ≥2 sets): presumed bacteraemia/sepsis—continue antibiotics, review sensitivities, consider source control",
+    "Fever with negative blood cultures but high clinical suspicion: consider repeat cultures, specialist imaging, or other diagnoses",
+    "Contamination (different organisms): reassess clinical status; repeat culture if sepsis remains suspected",
+    "Slow-growing organisms: notify lab of clinical suspicion; extend incubation period"
+  ],
+  "competency": [
+    "Trained in aseptic venipuncture technique with minimal contamination",
+    "Understands importance of 2+ sets and different sites for contamination detection",
+    "Able to inoculate culture bottles without introducing air bubbles",
+    "Knows indications for blood culture and interpretation of positive vs contaminated results",
+    "Familiar with standard precautions and needle-stick management"
+  ],
+  "references": [],
+  "prominentResources": [],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft procedure — pending clinical validation"
+  }
+}

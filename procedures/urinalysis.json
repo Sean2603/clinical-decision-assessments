@@ -1,0 +1,159 @@
+{
+  "id": "urinalysis",
+  "title": "Urinalysis",
+  "version": "1.0.0",
+  "minimumAppVersion": "0.18.0",
+  "status": "active",
+  "summary": "Urine dipstick testing and microscopy for assessment of urinary findings in fever, dysuria, and acute kidney injury.",
+  "category": "Laboratory procedures",
+  "indications": [
+    "Fever in children or fever without source (UTI screening)",
+    "Dysuria or urinary frequency (UTI/pyelonephritis assessment)",
+    "Acute kidney injury or renal dysfunction assessment",
+    "Haematuria or proteinuria screening",
+    "Suspected urinary tract infection",
+    "Acute abdominal or flank pain",
+    "Diabetic ketoacidosis (ketonuria assessment)",
+    "Polyuria or polydipsia"
+  ],
+  "contraindications": [
+    "None absolute, but avoid in patients with severe phimosis or urethral trauma without appropriate expertise"
+  ],
+  "precautions": [
+    "Use clean-catch midstream technique to minimise contamination",
+    "Label specimen immediately with patient name, date, time",
+    "Process within 30 minutes or refrigerate to prevent bacterial overgrowth",
+    "In catheterised patients, sample from catheter (not drainage bag) for culture"
+  ],
+  "equipment": [
+    "Sterile or clean container for specimen",
+    "Urine dipstick with color chart",
+    "Microscope slide and coverslip (for microscopy)",
+    "Microscope (if performing microscopy)",
+    "Centrifuge (optional, for concentrated samples)",
+    "Patient labelling system"
+  ],
+  "preparation": [
+    "Explain procedure: clean-catch midstream urine collection",
+    "Provide patient with sterile or clean container",
+    "Advise to discard initial stream and collect mid-stream",
+    "For catheterised patients: clamp catheter, allow urine to collect, sample via needle/port",
+    "Document time of collection immediately"
+  ],
+  "steps": [
+    {
+      "id": "specimen-collection",
+      "title": "Specimen collection",
+      "instruction": "Patient provides clean-catch midstream urine sample (30–50 mL minimum). Ensure labelling with name, date, time immediately.",
+      "cautions": [
+        "Do not contaminate specimen with patient's hands or toilet water",
+        "For catheterised patients, never sample from drainage bag"
+      ],
+      "tips": [
+        "Instruct patient to discard first part of stream to reduce contamination"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "visual-inspection",
+      "title": "Visual inspection",
+      "instruction": "Observe colour (clear, pale, dark amber, orange, red, brown) and clarity (clear, cloudy, turbid). Record findings.",
+      "cautions": [
+        "Very dark urine may indicate myoglobin or haemoglobin—note for clinical correlation"
+      ],
+      "tips": [
+        "Use white background to assess colour accurately",
+        "Turbidity suggests infection, crystals, or other particles"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "dipstick-testing",
+      "title": "Dipstick testing",
+      "instruction": "Immerse dipstick completely in urine for 1–2 seconds, withdraw and place on absorbent paper. Read results at specified times (60 seconds for most parameters, 2 minutes for nitrites/leucocyte esterase).",
+      "cautions": [
+        "Do not read dipstick after 2 minutes—results become inaccurate",
+        "Store dipsticks in cool, dry place—expired or damp sticks give false results"
+      ],
+      "tips": [
+        "Use fresh sample—if >30 minutes old, results may be unreliable",
+        "Nitrites take 2 minutes to develop—do not read early"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "microscopy",
+      "title": "Microscopy (if indicated)",
+      "instruction": "Centrifuge fresh urine at 400–500 g for 5 minutes. Discard supernatant, resuspend pellet in 0.5 mL urine. Place drop on slide, cover, examine under low power (x10) for casts, crystals, bacteria. Count under high power (x40) for red blood cells, white blood cells, bacteria.",
+      "cautions": [
+        "Only perform if sample is fresh (<1 hour old)",
+        "Bacterial overgrowth occurs in old samples—may give false counts"
+      ],
+      "tips": [
+        "Use phase-contrast microscope for better visualization of casts and crystals",
+        "Count cells per low-power field (LPF) or high-power field (HPF) as appropriate"
+      ],
+      "imageAttachmentId": null
+    },
+    {
+      "id": "documentation",
+      "title": "Documentation and interpretation",
+      "instruction": "Record all findings (colour, clarity, dipstick results, microscopy). Correlate with clinical presentation. If UTI suspected, arrange urine culture from same specimen.",
+      "cautions": [
+        "Do not report leucocyte esterase without clinical context—may indicate contamination",
+        "Asymptomatic bacteriuria requires culture confirmation; not all positive cultures indicate infection"
+      ],
+      "tips": [
+        "Nitrites + leucocytes + symptoms = presumed UTI; send for culture",
+        "Negative dipstick in symptomatic patient does not rule out UTI—repeat or send for culture"
+      ],
+      "imageAttachmentId": null
+    }
+  ],
+  "complications": [
+    "Contaminated specimen—minimised by clean-catch technique",
+    "Asymptomatic bacteriuria—common in elderly; treat only in pregnancy",
+    "False-negative dipstick—can occur if specimen >30 minutes old; consider microscopy or culture"
+  ],
+  "troubleshooting": [
+    "Dipstick results inconsistent with microscopy: Check specimen freshness; repeat if needed",
+    "Leucocytes on dipstick but no pyuria: May indicate contamination; repeat clean-catch specimen",
+    "Blood on dipstick with no RBCs on microscopy: May indicate myoglobin; check urine colour and clinical context",
+    "Nitrites positive but no bacteriuria: Some bacteria don't reduce nitrite; clinical context and culture matter"
+  ],
+  "aftercare": [
+    "Discuss results with patient if abnormalities detected",
+    "If UTI suspected: arrange culture and consider empiric antibiotic therapy if symptoms warrant",
+    "If proteinuria or haematuria: consider repeat testing, renal function assessment, and specialist referral if persistent",
+    "Document results in patient record and arrange follow-up as indicated"
+  ],
+  "documentation": [
+    "Record date and time of specimen collection",
+    "Document colour, clarity, and all dipstick findings",
+    "Record microscopy findings (RBCs, WBCs, bacteria, casts, crystals) if performed",
+    "Note any clinical actions taken (culture sent, antibiotics started)"
+  ],
+  "escalation": [
+    "Fever + pyuria (WCC >5/mL or leucocyte esterase+) + nitrites: presumed UTI—start antibiotics if symptomatic",
+    "Acute kidney injury with casts, heavy proteinuria, or haematuria: urgent hospital assessment",
+    "Haematuria without infection (RBCs without WCCs): specialist urology referral if persistent",
+    "Positive culture in pregnancy: treat to prevent pyelonephritis"
+  ],
+  "competency": [
+    "Able to perform clean-catch midstream urine collection technique",
+    "Familiar with correct dipstick technique and interpretation",
+    "Able to recognise normal vs abnormal urinalysis findings",
+    "Knows when to escalate (fever + pyuria, AKI signs, persistent haematuria)"
+  ],
+  "references": [],
+  "prominentResources": [],
+  "attachments": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Draft procedure — pending clinical validation"
+  }
+}
