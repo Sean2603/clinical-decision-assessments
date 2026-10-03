@@ -17,9 +17,7 @@
           "name": "INR / PT",
           "unit": "",
           "referenceRange": "INR about 0.8–1.2 when not anticoagulated; warfarin target commonly 2.0–3.0 but indication-specific",
-          "lowInterpretation": [
-            "Not applicable — a low INR in a non-anticoagulated patient is generally reassuring and does not raise bleeding risk from coagulation."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Prolonged INR/PT. Consider warfarin over-anticoagulation, vitamin K deficiency, liver synthetic dysfunction, factor deficiency, DIC or a sample collection artefact. A normal INR does not exclude a clinically relevant direct oral anticoagulant effect."
           ],
@@ -37,9 +35,7 @@
           "name": "APTT",
           "unit": "",
           "referenceRange": "Laboratory dependent",
-          "lowInterpretation": [
-            "Not applicable — a short APTT is generally not clinically significant and does not raise bleeding risk."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Prolonged APTT. Consider unfractionated heparin effect, factor VIII/IX/XI deficiency (including haemophilia), lupus anticoagulant, DIC, or sample collection artefact. A normal APTT does not reliably exclude DOAC activity."
           ],
@@ -87,9 +83,7 @@
           "name": "Possible DIC",
           "unit": "",
           "referenceRange": "No single diagnostic value",
-          "lowInterpretation": [
-            "Not applicable — DIC is identified by a pattern of prolonged PT and APTT, low fibrinogen, falling platelets and raised D-dimer together with a trigger and clinical bleeding/organ dysfunction."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Pattern consistent with DIC: prolonged PT and APTT, low fibrinogen, falling platelets, raised D-dimer, in the context of a recognised trigger (sepsis, major trauma, malignancy, obstetric catastrophe) and clinical features (bleeding, oozing, purpura, mottling, organ dysfunction)."
           ],

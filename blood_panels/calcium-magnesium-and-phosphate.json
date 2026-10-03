@@ -20,9 +20,7 @@
           "lowInterpretation": [
             "Calcium below reference range. Consider vitamin D deficiency, hypoparathyroidism, renal failure, pancreatitis, sepsis, hypomagnesaemia or massive transfusion. Risk of perioral tingling, carpopedal spasm, tetany, seizure and prolonged QT with arrhythmia risk."
           ],
-          "highInterpretation": [
-            "Not applicable — this row describes hypocalcaemia."
-          ],
+          "highInterpretation": [],
           "notes": [
             "Consider vitamin D deficiency, hypoparathyroidism, renal failure, pancreatitis, sepsis, low magnesium or massive transfusion. Symptoms include perioral tingling, carpopedal spasm, tetany, seizure and prolonged QT."
           ],
@@ -37,9 +35,7 @@
           "name": "Hypercalcaemia",
           "unit": "",
           "referenceRange": "RVH adjusted-calcium adult reference: 2.20–2.60 mmol/L",
-          "lowInterpretation": [
-            "Not applicable — this row describes hypercalcaemia."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Calcium above reference range. Consider malignancy, primary hyperparathyroidism, medication (lithium, thiazides, vitamin A/D excess), granulomatous disease or immobility. Risk of dehydration, constipation, vomiting, polyuria, confusion, weakness and shortened QT with arrhythmia risk."
           ],

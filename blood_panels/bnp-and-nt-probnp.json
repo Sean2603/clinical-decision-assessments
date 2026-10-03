@@ -20,9 +20,7 @@
           "lowInterpretation": [
             "Heart failure is unlikely as the cause of current symptoms. Review alternative diagnoses for breathlessness or oedema, but account for obesity and heart-failure medications which suppress the result."
           ],
-          "highInterpretation": [
-            "Not applicable — this row represents a reassuring low result."
-          ],
+          "highInterpretation": [],
           "notes": [
             "Review alternative diagnoses, but levels can be lower with obesity or medications such as diuretics, ACE inhibitors/ARBs/ARNI, beta blockers or mineralocorticoid antagonists."
           ],
@@ -37,9 +35,7 @@
           "name": "400–2,000 ng/L",
           "unit": "",
           "referenceRange": "NICE: specialist assessment and echocardiography within 6 weeks",
-          "lowInterpretation": [
-            "Not applicable — this range is above the diagnostic threshold."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Possible heart failure. Does not prove heart failure — renal impairment, AF, age, PE, sepsis, pulmonary hypertension and other confounders can elevate the result. Arrange urgent specialist and echocardiography assessment."
           ],
@@ -57,9 +53,7 @@
           "name": ">2,000 ng/L",
           "unit": "",
           "referenceRange": "NICE: urgent specialist assessment and echocardiography within 2 weeks",
-          "lowInterpretation": [
-            "Not applicable — this is a substantially elevated result."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Significantly elevated. Probable heart failure or another serious cause (renal impairment, sepsis, PE, AF with rapid rate). Associated with worse prognosis but acute disposition depends on current symptoms, SpO₂, examination and physiology. Arrange urgent specialist and echocardiography assessment."
           ],

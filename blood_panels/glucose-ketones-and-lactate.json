@@ -20,9 +20,7 @@
           "lowInterpretation": [
             "Glucose below 4.0 mmol/L. Treat promptly. Symptoms include sweating, tremor, palpitations, hunger, behavioural change, confusion, seizure or reduced consciousness. Recheck after treatment and identify the cause (medication, missed meals, infection, prolonged exercise)."
           ],
-          "highInterpretation": [
-            "Not applicable — this row describes hypoglycaemia."
-          ],
+          "highInterpretation": [],
           "notes": [
             "Treat promptly when symptomatic or below 4.0 mmol/L. Examples include sweating, tremor, palpitations, hunger, behavioural change, confusion, seizure or reduced consciousness. Recheck after treatment and identify the cause."
           ],

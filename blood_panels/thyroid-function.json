@@ -17,9 +17,7 @@
           "name": "High TSH + low free T4",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
-          "lowInterpretation": [
-            "Not applicable — this pattern indicates hypothyroidism."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Primary hypothyroidism. Consider autoimmune thyroid disease (Hashimoto), post-treatment disease (thyroidectomy, radioiodine, antithyroid drugs), medication (lithium, amiodarone, iodine), iodine deficiency or pituitary disease. Assess for symptoms (fatigue, cold intolerance, weight gain, bradycardia) and start replacement if confirmed."
           ],
@@ -37,9 +35,7 @@
           "name": "Low TSH + high free T4/T3",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L; FT3 3.1–6.8 pmol/L",
-          "lowInterpretation": [
-            "Not applicable — this pattern indicates hyperthyroidism."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Primary hyperthyroidism or over-replacement. Consider Graves disease, toxic nodules, thyroiditis, excessive levothyroxine/liothyronine or an inappropriate TSH-suppressive strategy. Check for symptoms (palpitations, tremor, heat intolerance, weight loss), pulse/rhythm, atrial fibrillation risk and adjust treatment."
           ],
@@ -57,9 +53,7 @@
           "name": "High TSH + normal free T4",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
-          "lowInterpretation": [
-            "Not applicable — TSH elevation indicates thyroid stress."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Subclinical hypothyroidism. TSH is elevated but free T4 remains normal. Repeat to confirm persistence; interpret with symptoms, thyroid antibodies, pregnancy plans, lipids and cardiovascular risk. May progress to overt hypothyroidism; some guidelines recommend replacement with pregnancy planning or persistent symptomatic elevation."
           ],
@@ -77,9 +71,7 @@
           "name": "Low TSH + normal free T4/T3",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L; FT3 3.1–6.8 pmol/L",
-          "lowInterpretation": [
-            "Not applicable — TSH suppression is unusual without thyroid hormone elevation."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Subclinical hyperthyroidism or TSH suppression. Consider medication (levothyroxine over-replacement, beta-agonists, methadone, certain antidepressants), acute illness, pregnancy (especially first trimester), early Graves disease or a non-thyroidal illness. Repeat TSH to confirm. TSH suppression carries atrial fibrillation risk."
           ],

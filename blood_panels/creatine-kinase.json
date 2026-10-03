@@ -17,9 +17,7 @@
           "name": "Raised CK",
           "unit": "",
           "referenceRange": "RVH adult CK reference: male 39–308 U/L; female 26–192 U/L. Retain clinical rhabdomyolysis thresholds separately.",
-          "lowInterpretation": [
-            "Not applicable — this row describes an elevated CK."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Muscle injury. Consider prolonged immobilisation, crush injury, seizure, hyperthermia, extreme exertion, ischaemia, infection, inflammatory myopathy, statin effect or toxins. Risk of rhabdomyolysis-associated AKI depends on CK trend, creatinine, hyperkalaemia, phosphate, calcium, hydration and urine output."
           ],
@@ -37,9 +35,7 @@
           "name": "Marked elevation",
           "unit": "",
           "referenceRange": "CK >5,000 U/L often indicates higher AKI risk",
-          "lowInterpretation": [
-            "Not applicable — this row describes very elevated CK."
-          ],
+          "lowInterpretation": [],
           "highInterpretation": [
             "Substantial muscle injury, often indicating significant rhabdomyolysis risk. However, AKI and life-threatening hyperkalaemia can occur at lower CK values, particularly with dehydration, sepsis or baseline renal disease. Require urgent U&E, urgent potassium monitoring and fluid resuscitation."
           ],
