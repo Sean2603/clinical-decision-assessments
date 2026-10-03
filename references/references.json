@@ -1132,11 +1132,29 @@
     },
     {
       "id": "NICE-NG114",
-      "title": "NICE NG114: Constipation in adults",
-      "source": "https://www.nice.org.uk/guidance/ng114",
-      "publishedDate": "2022-04-27",
+      "organisation": "National Institute for Health and Care Excellence",
+      "shortOrganisation": "NICE",
+      "title": "Constipation in adults",
+      "referenceNumber": "NG114",
+      "type": "guideline",
+      "url": "https://www.nice.org.uk/guidance/ng114",
+      "published": "2022-04-27",
+      "lastUpdated": "2026-10-03",
+      "accessed": "2026-10-03",
+      "lastReviewed": "2026-10-03",
       "reviewStatus": "current",
-      "nextReviewDue": "2027-04-27"
+      "reviewedBy": "Sean McGrory",
+      "reviewerRole": "tAPUC",
+      "nextReviewDue": "2027-10-03",
+      "supersededBy": null,
+      "notes": "NICE guideline on constipation assessment and management in adults. First-line recommendations favour osmotic and bulk-forming laxatives over stimulant laxatives.",
+      "relevantTopics": [
+        "constipation",
+        "laxatives",
+        "osmotic agents",
+        "bulk-forming laxatives",
+        "treatment"
+      ]
     }
   ]
 }
