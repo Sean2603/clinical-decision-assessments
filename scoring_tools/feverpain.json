@@ -2,7 +2,7 @@
   "id": "feverpain",
   "title": "FeverPAIN",
   "subtitle": "Acute sore-throat antibiotic decision support",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",

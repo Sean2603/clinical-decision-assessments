@@ -2,7 +2,7 @@
   "id": "glasgow-coma-scale",
   "title": "Glasgow Coma Scale",
   "subtitle": "Consciousness assessment and trending",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",

@@ -2,7 +2,7 @@
   "id": "curb-65",
   "title": "CURB-65",
   "subtitle": "Pneumonia severity with blood urea",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",

@@ -2,7 +2,7 @@
   "id": "news2",
   "title": "NEWS2",
   "subtitle": "Select observation ranges; component scores calculated automatically",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",

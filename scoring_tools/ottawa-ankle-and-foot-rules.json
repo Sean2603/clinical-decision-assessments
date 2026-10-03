@@ -2,7 +2,7 @@
   "id": "ottawa-ankle-and-foot-rules",
   "title": "Ottawa ankle and foot rules",
   "subtitle": "Need for radiography after ankle or midfoot injury",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",

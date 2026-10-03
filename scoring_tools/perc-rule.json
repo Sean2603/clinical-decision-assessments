@@ -2,7 +2,7 @@
   "id": "perc-rule",
   "title": "PERC rule",
   "subtitle": "PE rule-out in selected very-low-risk adults",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",

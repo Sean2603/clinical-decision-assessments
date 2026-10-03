@@ -2,7 +2,7 @@
   "id": "two-level-pe-wells",
   "title": "Two-level PE Wells",
   "subtitle": "PE likelihood and investigation pathway",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",

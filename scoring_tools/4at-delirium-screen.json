@@ -2,7 +2,7 @@
   "id": "4at-delirium-screen",
   "title": "4AT delirium screen",
   "subtitle": "Delirium and cognitive impairment screen",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
