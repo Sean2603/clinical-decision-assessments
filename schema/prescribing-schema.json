@@ -16,7 +16,6 @@
     "regimens",
     "specialConsiderations",
     "references",
-    "clinicalValidation",
     "aliases",
     "system",
     "updatedOn",
@@ -241,12 +240,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "validated",
-        "reviewedBy",
-        "reviewedOn",
-        "reviewerRole",
-        "nextReviewDue",
-        "reviewNotes"
+        "validated"
       ],
       "properties": {
         "validated": {

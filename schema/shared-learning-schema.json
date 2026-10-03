@@ -13,8 +13,7 @@
     "summary",
     "learningPoints",
     "references",
-    "attachments",
-    "clinicalValidation"
+    "attachments"
   ],
   "properties": {
     "id": {
@@ -78,12 +77,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "validated",
-        "reviewedBy",
-        "reviewedOn",
-        "reviewerRole",
-        "nextReviewDue",
-        "reviewNotes"
+        "validated"
       ],
       "properties": {
         "validated": {

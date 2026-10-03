@@ -16,8 +16,7 @@
     "minimumAppVersion",
     "status",
     "sections",
-    "references",
-    "clinicalValidation"
+    "references"
   ],
   "properties": {
     "id": {
@@ -109,12 +108,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "validated",
-        "reviewedBy",
-        "reviewedOn",
-        "reviewerRole",
-        "nextReviewDue",
-        "reviewNotes"
+        "validated"
       ],
       "properties": {
         "validated": {

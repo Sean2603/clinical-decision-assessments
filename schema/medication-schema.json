@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.invalid/schema/medication-schema.json",
+  "$id": "https://raw.githubusercontent.com/Sean2603/clinical-decision-assessments/main/schema/medication-schema.json",
   "title": "Remote medication monograph definition",
   "type": "object",
   "additionalProperties": false,
@@ -23,7 +23,6 @@
     "pregnancyBreastfeeding",
     "practicalPoints",
     "references",
-    "clinicalValidation",
     "aliases",
     "updatedOn",
     "changeSummary",
@@ -304,12 +303,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "validated",
-        "reviewedBy",
-        "reviewedOn",
-        "reviewerRole",
-        "nextReviewDue",
-        "reviewNotes"
+        "validated"
       ],
       "properties": {
         "validated": {

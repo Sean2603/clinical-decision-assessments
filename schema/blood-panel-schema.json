@@ -19,8 +19,7 @@
     "overrides",
     "referenceIds",
     "commonPatterns",
-    "furtherTesting",
-    "clinicalValidation"
+    "furtherTesting"
   ],
   "properties": {
     "id": {
@@ -116,12 +115,7 @@
       "type": "object",
       "additionalProperties": false,
       "required": [
-        "validated",
-        "reviewedBy",
-        "reviewedOn",
-        "reviewerRole",
-        "nextReviewDue",
-        "reviewNotes"
+        "validated"
       ],
       "properties": {
         "validated": {
@@ -158,44 +152,6 @@
             "string",
             "null"
           ]
-        }
-      }
-    },
-    "migration": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "state",
-        "sourceFile",
-        "currentScreen",
-        "parityStatus",
-        "migratedOn"
-      ],
-      "properties": {
-        "state": {
-          "enum": [
-            "shadow",
-            "native"
-          ]
-        },
-        "sourceFile": {
-          "type": "string",
-          "minLength": 1
-        },
-        "currentScreen": {
-          "type": "string",
-          "minLength": 1
-        },
-        "parityStatus": {
-          "enum": [
-            "pending",
-            "matched",
-            "mismatch"
-          ]
-        },
-        "migratedOn": {
-          "type": "string",
-          "format": "date"
         }
       }
     },
@@ -324,6 +280,7 @@
         },
         "lowInterpretation": {
           "type": "array",
+          "minItems": 1,
           "items": {
             "type": "string",
             "minLength": 1
@@ -331,6 +288,7 @@
         },
         "highInterpretation": {
           "type": "array",
+          "minItems": 1,
           "items": {
             "type": "string",
             "minLength": 1
