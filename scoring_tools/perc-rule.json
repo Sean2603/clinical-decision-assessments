@@ -127,7 +127,9 @@
       "interpretation": [
         "Confirm that PE is already clinically very unlikely and that a credible alternative diagnosis is more likely."
       ],
-      "actions": []
+      "actions": [
+        "Confirm low pre-test probability and alternative diagnosis more likely"
+      ]
     },
     {
       "id": "negative",
@@ -137,7 +139,9 @@
       "interpretation": [
         "Within a correctly selected low-risk population, PE is sufficiently unlikely that further PE testing is generally not required. PE is not impossible, and overall disposition must consider other diagnoses."
       ],
-      "actions": []
+      "actions": [
+        "PE sufficiently unlikely; proceed with alternative diagnosis management"
+      ]
     },
     {
       "id": "positive",
@@ -147,7 +151,9 @@
       "interpretation": [
         "PE cannot be ruled out using PERC. This does not diagnose PE; continue through the appropriate PE assessment pathway."
       ],
-      "actions": []
+      "actions": [
+        "Continue appropriate PE assessment pathway; obtain imaging if indicated"
+      ]
     }
   ],
   "overrides": [
@@ -170,13 +176,6 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "required-sum",

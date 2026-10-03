@@ -73,7 +73,9 @@
       "interpretation": [
         "Antibiotics are generally not indicated."
       ],
-      "actions": []
+      "actions": [
+        "Manage symptoms with analgesia and fluids"
+      ]
     },
     {
       "id": "intermediate",
@@ -83,7 +85,9 @@
       "interpretation": [
         "Consider no antibiotic or a back-up prescription according to the clinical picture and local antimicrobial guidance."
       ],
-      "actions": []
+      "actions": [
+        "Reassess in 2-3 days if not improved"
+      ]
     },
     {
       "id": "high",
@@ -93,7 +97,9 @@
       "interpretation": [
         "Consider an immediate or back-up antibiotic according to the clinical picture and local antimicrobial guidance."
       ],
-      "actions": []
+      "actions": [
+        "Administer or prescribe antibiotic according to local guidance"
+      ]
     }
   ],
   "overrides": [
@@ -114,13 +120,6 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "sum",

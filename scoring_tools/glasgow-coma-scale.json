@@ -129,7 +129,9 @@
       "interpretation": [
         "Record the individual components and trend, not only the total."
       ],
-      "actions": []
+      "actions": [
+        "Document components and baseline; escalate any deterioration"
+      ]
     }
   ],
   "overrides": [

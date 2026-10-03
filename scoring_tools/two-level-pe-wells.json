@@ -93,7 +93,9 @@
       "interpretation": [
         "D-dimer is generally required unless PERC has already validly ruled out PE."
       ],
-      "actions": []
+      "actions": [
+        "Complete D-dimer pathway; assess for PERC applicability"
+      ]
     },
     {
       "id": "pe-likely",
@@ -103,7 +105,9 @@
       "interpretation": [
         "Arrange the immediate imaging pathway."
       ],
-      "actions": []
+      "actions": [
+        "Arrange immediate imaging pathway; initiate interim anticoagulation if imaging delayed"
+      ]
     }
   ],
   "overrides": [
@@ -123,13 +127,6 @@
     "reviewerRole": null,
     "reviewNotes": null,
     "nextReviewDue": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "sum",

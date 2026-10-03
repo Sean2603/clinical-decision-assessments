@@ -63,7 +63,10 @@
       "interpretation": [
         "Antibiotics are generally not indicated."
       ],
-      "actions": []
+      "actions": [
+        "Recommend supportive care and symptomatic treatment",
+        "Follow local guidance on antimicrobial stewardship"
+      ]
     },
     {
       "id": "higher",
@@ -73,7 +76,11 @@
       "interpretation": [
         "The patient is more likely to benefit from an immediate or back-up antibiotic, depending on clinical findings and local guidance."
       ],
-      "actions": []
+      "actions": [
+        "Consider immediate or back-up antibiotic prescription based on clinical assessment",
+        "Follow local antimicrobial guidance and prescribing recommendations",
+        "Assess for airway compromise, deep-neck infection, and hydration status separately"
+      ]
     }
   ],
   "overrides": [
@@ -94,13 +101,6 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "sum",

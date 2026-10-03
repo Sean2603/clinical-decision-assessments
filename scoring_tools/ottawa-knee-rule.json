@@ -73,7 +73,9 @@
       "interpretation": [
         "No knee X-ray indicated by the Ottawa knee rule."
       ],
-      "actions": []
+      "actions": [
+        "Clinical management without knee X-ray; document examination"
+      ]
     },
     {
       "id": "positive",
@@ -83,7 +85,9 @@
       "interpretation": [
         "Knee X-ray indicated: one or more criteria are present."
       ],
-      "actions": []
+      "actions": [
+        "Order knee X-ray; review imaging findings"
+      ]
     }
   ],
   "overrides": [
@@ -101,13 +105,6 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "sum",

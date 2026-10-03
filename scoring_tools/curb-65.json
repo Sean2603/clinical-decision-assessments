@@ -74,7 +74,9 @@
       "interpretation": [
         "Hypoxia, sepsis, inability to maintain oral intake, decompensated comorbidity or unsafe home circumstances may still require admission."
       ],
-      "actions": []
+      "actions": [
+        "Consider discharge with safety-netting and outpatient review"
+      ]
     },
     {
       "id": "intermediate",
@@ -84,7 +86,9 @@
       "interpretation": [
         "Hospital assessment should be considered."
       ],
-      "actions": []
+      "actions": [
+        "Admit for hospital assessment and monitoring"
+      ]
     },
     {
       "id": "high",
@@ -94,7 +98,9 @@
       "interpretation": [
         "Urgent hospital assessment is generally required."
       ],
-      "actions": []
+      "actions": [
+        "Admit for urgent hospital assessment and monitoring"
+      ]
     }
   ],
   "overrides": [
@@ -196,7 +202,9 @@
           "interpretation": [
             "Hypoxia, sepsis, inability to maintain oral intake, decompensated comorbidity or unsafe home circumstances may still require admission."
           ],
-          "actions": []
+          "actions": [
+            "Consider discharge with safety-netting and outpatient review"
+          ]
         },
         {
           "id": "intermediate",
@@ -206,7 +214,9 @@
           "interpretation": [
             "Hospital assessment should be considered."
           ],
-          "actions": []
+          "actions": [
+            "Admit for hospital assessment and monitoring"
+          ]
         },
         {
           "id": "high",
@@ -216,7 +226,9 @@
           "interpretation": [
             "Urgent hospital assessment is generally required."
           ],
-          "actions": []
+          "actions": [
+            "Admit for urgent hospital assessment and monitoring"
+          ]
         }
       ]
     }

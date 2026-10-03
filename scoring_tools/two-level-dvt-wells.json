@@ -123,7 +123,9 @@
       "interpretation": [
         "D-dimer is generally required; a negative score alone does not exclude DVT."
       ],
-      "actions": []
+      "actions": [
+        "Complete D-dimer pathway; proceed based on result"
+      ]
     },
     {
       "id": "dvt-likely",
@@ -133,7 +135,9 @@
       "interpretation": [
         "Arrange proximal leg-vein ultrasound pathway and follow local interim-anticoagulation guidance if imaging is delayed."
       ],
-      "actions": []
+      "actions": [
+        "Arrange proximal leg-vein ultrasound; initiate interim anticoagulation if imaging delayed"
+      ]
     }
   ],
   "overrides": [
@@ -153,13 +157,6 @@
     "reviewerRole": null,
     "reviewNotes": null,
     "nextReviewDue": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "sum",

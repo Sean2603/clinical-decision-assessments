@@ -278,7 +278,9 @@
       "interpretation": [
         "This does not exclude serious or time-critical disease."
       ],
-      "actions": []
+      "actions": [
+        "Continue monitoring; document baseline"
+      ]
     },
     {
       "id": "medium",
@@ -288,7 +290,9 @@
       "interpretation": [
         "Urgent clinical review is generally required."
       ],
-      "actions": []
+      "actions": [
+        "Escalate to senior review; increase observation frequency"
+      ]
     },
     {
       "id": "high",
@@ -298,7 +302,9 @@
       "interpretation": [
         "An emergency clinical response is generally required."
       ],
-      "actions": []
+      "actions": [
+        "Escalate to emergency clinical response; consider emergency interventions"
+      ]
     }
   ],
   "overrides": [
@@ -317,13 +323,6 @@
     "reviewerRole": null,
     "nextReviewDue": null,
     "reviewNotes": null
-  },
-  "migration": {
-    "state": "native",
-    "sourceFile": "CDA governed content",
-    "currentScreen": "Generic CDA renderer",
-    "parityStatus": "matched",
-    "migratedOn": "2026-08-28"
   },
   "evaluation": {
     "kind": "sum",

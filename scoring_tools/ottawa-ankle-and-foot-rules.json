@@ -96,7 +96,9 @@
       "interpretation": [
         "No ankle or foot X-ray is indicated by the rule when the relevant zone and tenderness/weight-bearing combinations are absent."
       ],
-      "actions": []
+      "actions": [
+        "Clinical management without radiography; document examination"
+      ]
     },
     {
       "id": "xray-indicated",
@@ -106,7 +108,9 @@
       "interpretation": [
         "An ankle X-ray and/or foot X-ray is indicated according to the zone-specific criteria."
       ],
-      "actions": []
+      "actions": [
+        "Order X-rays according to zone-specific criteria; review imaging"
+      ]
     }
   ],
   "overrides": [
