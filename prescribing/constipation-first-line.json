@@ -1,0 +1,235 @@
+{
+  "id": "constipation-first-line",
+  "title": "Constipation: first-line treatment",
+  "aliases": [
+    "constipation",
+    "bowel obstruction prevention",
+    "laxatives"
+  ],
+  "version": "1.0.0",
+  "status": "active",
+  "system": "Gastrointestinal",
+  "category": "Constipation",
+  "summary": "First-line management of constipation in adults using osmotic and stool-softening agents.",
+  "updatedOn": "2026-10-03",
+  "changeSummary": "Initial version based on NICE NG114 constipation guidance.",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Constipation is common and often managed in primary care. Reassure patients that most cases resolve with lifestyle measures and laxatives.",
+    "Assess for red-flag symptoms requiring referral: weight loss, anaemia, change in bowel habit >2 weeks in adults >40 years, abdominal/rectal masses, new onset in >60 years.",
+    "Assess for medication-related causes: opioids (most common in healthcare settings), anticholinergics, iron supplements, calcium channel blockers. Consider de-prescribing if appropriate.",
+    "Lifestyle measures first: increase dietary fibre gradually (20-30g daily), increase fluid intake to 6-8 glasses daily, increase physical activity, respond to urge to defaecate without delay, avoid suppressing bowel urges.",
+    "Start bulk-forming laxatives (high-fibre diet) or osmotic laxatives for first-line treatment. Do not use stimulant laxatives routinely as first-line except in opioid-induced constipation.",
+    "If inadequate response after 2-4 weeks, add or switch to alternative laxative. Consider combination therapy (e.g. osmotic + stool softener).",
+    "Avoid prolonged use of stimulant laxatives as routine treatment due to risk of dependence and impaired colonic motor function.",
+    "Counsel on expected timescale: osmotic laxatives take 2-3 days; bulk-forming take several days. Manage expectations and avoid escalation too quickly.",
+    "Refer to secondary care if no response to treatment after 2-4 weeks, red-flag symptoms, or suspected organic cause."
+  ],
+  "cautions": [
+    "Avoid high-fibre intake acutely if faecal impaction is suspected; risk of bowel obstruction.",
+    "Stimulant laxatives can cause abdominal cramping and should be used cautiously in functional bowel disorders.",
+    "Osmotic laxatives can cause bloating and flatulence; start low and titrate up gradually.",
+    "Warn about dehydration risk if inadequate fluid intake with osmotic or bulk-forming agents.",
+    "Avoid laxatives in acute abdominal pain, undiagnosed abdominal symptoms, or suspected bowel obstruction."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st choice: Osmotic laxative",
+      "relationship": "OR",
+      "components": [
+        {
+          "medicationId": "lactulose",
+          "displayName": "Lactulose solution",
+          "dose": "15-30 mL once daily, increased to BD if needed",
+          "route": "oral",
+          "frequency": "once daily initially, up to twice daily",
+          "duration": "review after 2-4 weeks; can be long-term if effective"
+        }
+      ],
+      "restrictions": [
+        "Avoid in galactosaemia.",
+        "Use with caution in diabetes (contains lactose-derived galactose)."
+      ],
+      "notes": [
+        "Gentle, takes 2-3 days to work.",
+        "May cause bloating and flatulence initially; reassure patient this often settles.",
+        "Increase fibre and fluid intake concurrently for best effect."
+      ]
+    },
+    {
+      "rank": 1,
+      "label": "1st choice: Alternative osmotic laxative — polyethylene glycol (macrogol)",
+      "relationship": "OR",
+      "components": [
+        {
+          "medicationId": "macrogol",
+          "displayName": "Macrogol 3350 (polyethylene glycol) oral powder",
+          "dose": "1 sachet (13.125g) once or twice daily",
+          "route": "oral",
+          "frequency": "once or twice daily",
+          "duration": "review after 2-4 weeks; can be long-term if effective"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Osmotic action; produces soft stools without stimulating peristalsis.",
+        "Generally well-tolerated; lower bloating risk than lactulose.",
+        "Effect may be seen within 24-48 hours but can take up to 72 hours.",
+        "Mix with water (typically 125 mL per sachet); can add to drinks for palatability."
+      ]
+    },
+    {
+      "rank": 1,
+      "label": "1st choice: Bulk-forming laxative (if patient prefers)",
+      "relationship": "OR",
+      "components": [
+        {
+          "medicationId": "ispaghula-husk",
+          "displayName": "Ispaghula husk granules",
+          "dose": "1 sachet or 2 teaspoons twice daily (morning and evening)",
+          "route": "oral",
+          "frequency": "twice daily",
+          "duration": "can be used long-term as dietary fibre supplement"
+        }
+      ],
+      "restrictions": [
+        "Contraindicated if faecal impaction or bowel obstruction suspected.",
+        "Use cautiously in irritable bowel syndrome or inflammatory bowel disease."
+      ],
+      "notes": [
+        "Works by increasing stool bulk and water content.",
+        "Takes several days to become effective (up to 2-3 weeks for full benefit).",
+        "Require adequate fluid intake (at least 6-8 glasses daily).",
+        "Patient must take with sufficient water (at least 150 mL per sachet) to avoid choking or intestinal obstruction.",
+        "Gradual introduction reduces bloating; start with half-dose and increase over 1-2 weeks."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "2nd choice: Add stool softener if osmotic/bulk-forming alone insufficient",
+      "relationship": "AND",
+      "components": [
+        {
+          "medicationId": "docusate",
+          "displayName": "Docusate sodium capsules",
+          "dose": "100 mg once to three times daily",
+          "route": "oral",
+          "frequency": "once to three times daily",
+          "duration": "review after 2-4 weeks"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Anionic surfactant; softens stool by increasing water penetration.",
+        "Often used in combination with osmotic laxatives.",
+        "Effect within 1-3 days.",
+        "Particularly useful when hard stools are the predominant problem."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "3rd choice: Stimulant laxative if other measures insufficient (short-term use only)",
+      "relationship": "OR",
+      "components": [
+        {
+          "medicationId": "senna",
+          "displayName": "Senna leaf tablets or liquid",
+          "dose": "7.5-15 mg once daily at bedtime; increase if necessary to max 30 mg daily",
+          "route": "oral",
+          "frequency": "once daily, typically at bedtime",
+          "duration": "short-term use only; review after 2-4 weeks and plan to discontinue"
+        }
+      ],
+      "restrictions": [
+        "Avoid long-term use due to risk of melanosis coli and colonic motor dysfunction.",
+        "Contraindicated in inflammatory bowel disease or acute inflammatory conditions.",
+        "Avoid in pregnancy unless essential."
+      ],
+      "notes": [
+        "Increases colonic motility; effect in 8-12 hours.",
+        "Abdominal cramping common; warn patient.",
+        "Not first-line for routine constipation but useful for opioid-induced constipation.",
+        "Tolerance can develop with long-term use."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "3rd choice: Alternative stimulant — bisacodyl",
+      "relationship": "OR",
+      "components": [
+        {
+          "medicationId": "bisacodyl",
+          "displayName": "Bisacodyl tablets or suppositories",
+          "dose": "Tablets: 5-10 mg once daily at bedtime. Suppository: 10 mg once daily (usually morning)",
+          "route": "oral or rectal",
+          "frequency": "once daily",
+          "duration": "short-term use only; review after 2-4 weeks and plan to discontinue"
+        }
+      ],
+      "restrictions": [
+        "Avoid long-term use due to risk of colonic motor dysfunction.",
+        "Contraindicated in inflammatory bowel disease.",
+        "Avoid in pregnancy unless essential."
+      ],
+      "notes": [
+        "Stimulant action; tablets work in 6-12 hours, suppository in 15-60 minutes.",
+        "Suppository route useful for rapid effect or if patient unable to take oral medication.",
+        "Can cause abdominal cramping."
+      ]
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Opioid-induced constipation",
+      "items": [
+        "Stimulant laxatives (e.g. senna) preferred as first-line over osmotic agents.",
+        "Consider co-prescribing a laxative when starting opioids; do not wait for constipation to develop.",
+        "May require higher doses or combination therapy due to opioid effect.",
+        "Ensure adequate fluid and fibre intake alongside laxatives."
+      ]
+    },
+    {
+      "title": "Older adults",
+      "items": [
+        "Constipation common in older age; reassure and manage expectation.",
+        "Review medications for constipating agents (opioids, anticholinergics, calcium antagonists).",
+        "Ensure adequate hydration and mobility if possible.",
+        "Osmotic laxatives (lactulose, macrogol) preferred as first-line.",
+        "Stimulant laxatives only if osmotic agents alone insufficient; avoid long-term use.",
+        "Monitor for faecal impaction risk, especially if immobile or receiving strong opioids."
+      ]
+    },
+    {
+      "title": "Pregnancy and breastfeeding",
+      "items": [
+        "Constipation common; reassure and manage with lifestyle measures first.",
+        "Osmotic laxatives (lactulose, macrogol) safe in pregnancy; preferred first-line.",
+        "Bulk-forming laxatives safe if adequate fluid intake.",
+        "Avoid stimulant laxatives in pregnancy unless essential (senna relatively safe if needed).",
+        "All laxatives pass minimal amounts into breast milk; safe during breastfeeding."
+      ]
+    },
+    {
+      "title": "Chronic or refractory constipation",
+      "items": [
+        "After 2-4 weeks with no improvement, refer to secondary care for further assessment.",
+        "Consider colorectal specialist assessment if red-flag symptoms or suspected organic cause.",
+        "Secondary care may offer specialist agents (e.g. prucalopride) or assessment for underlying motility disorder."
+      ]
+    }
+  ],
+  "references": [
+    "NICE-NG114"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": "2027-10-03",
+    "reviewNotes": null
+  },
+  "attachments": [],
+  "prominentResources": []
+}
