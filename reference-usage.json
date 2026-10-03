@@ -155,6 +155,21 @@
       ]
     },
     {
+      "referenceId": "NICE-NG114",
+      "usedBy": [
+        {
+          "type": "prescribing",
+          "id": "constipation-first-line",
+          "title": "Constipation: first-line treatment"
+        },
+        {
+          "type": "shared-learning",
+          "id": "laxative-mechanisms-and-rationale",
+          "title": "Laxative mechanisms and clinical rationale"
+        }
+      ]
+    },
+    {
       "referenceId": "NICE-NG127",
       "usedBy": [
         {
