@@ -17,8 +17,12 @@
           "name": "Hypocalcaemia",
           "unit": "",
           "referenceRange": "RVH adjusted-calcium adult reference: 2.20–2.60 mmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Calcium below reference range. Consider vitamin D deficiency, hypoparathyroidism, renal failure, pancreatitis, sepsis, hypomagnesaemia or massive transfusion. Risk of perioral tingling, carpopedal spasm, tetany, seizure and prolonged QT with arrhythmia risk."
+          ],
+          "highInterpretation": [
+            "Not applicable — this row describes hypocalcaemia."
+          ],
           "notes": [
             "Consider vitamin D deficiency, hypoparathyroidism, renal failure, pancreatitis, sepsis, low magnesium or massive transfusion. Symptoms include perioral tingling, carpopedal spasm, tetany, seizure and prolonged QT."
           ],
@@ -33,8 +37,12 @@
           "name": "Hypercalcaemia",
           "unit": "",
           "referenceRange": "RVH adjusted-calcium adult reference: 2.20–2.60 mmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — this row describes hypercalcaemia."
+          ],
+          "highInterpretation": [
+            "Calcium above reference range. Consider malignancy, primary hyperparathyroidism, medication (lithium, thiazides, vitamin A/D excess), granulomatous disease or immobility. Risk of dehydration, constipation, vomiting, polyuria, confusion, weakness and shortened QT with arrhythmia risk."
+          ],
           "notes": [
             "Consider malignancy, primary hyperparathyroidism, medication or granulomatous disease. Look for dehydration, constipation, vomiting, polyuria, confusion, weakness and shortened QT."
           ],
@@ -59,8 +67,12 @@
           "name": "Magnesium",
           "unit": "",
           "referenceRange": "RVH adult reference: 0.7–1.0 mmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Magnesium below reference range. Can cause tremor, weakness, seizures, refractory hypokalaemia and ventricular arrhythmias including torsades. Co-exists with hypokalaemia (difficult to correct without magnesium replacement)."
+          ],
+          "highInterpretation": [
+            "Magnesium above reference range. Usually occurs with renal failure. Can cause hyporeflexia, bradycardia, hypotension and respiratory depression."
+          ],
           "notes": [
             "Low magnesium can cause tremor, weakness, seizures, hypokalaemia that is difficult to correct and ventricular arrhythmias including torsades. High magnesium can cause hyporeflexia, bradycardia, hypotension and respiratory depression."
           ],
@@ -75,8 +87,12 @@
           "name": "Phosphate",
           "unit": "",
           "referenceRange": "RVH adult reference: 0.8–1.5 mmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Phosphate below reference range. Consider vitamin D deficiency, refeeding syndrome (particularly risky when combined with low calcium, magnesium and potassium), malnutrition, diarrhoea, diuretics or hyperparathyroidism. Risk of rhabdomyolysis and respiratory weakness with very low levels."
+          ],
+          "highInterpretation": [
+            "Phosphate above reference range. Usually occurs with renal failure and can contribute to secondary hyperparathyroidism. Can form precipitates with calcium causing tissue injury."
+          ],
           "notes": [
             "Low phosphate can cause weakness, respiratory muscle failure, rhabdomyolysis and haemolysis. A rapid fall after nutrition in a malnourished patient suggests refeeding syndrome, often with low potassium and magnesium."
           ],

@@ -17,8 +17,12 @@
           "name": "Typical measured range",
           "unit": "",
           "referenceRange": "RVH plasma osmolality reference: 275–295 mmol/kg",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Low osmolality with hyponatraemia confirms hypotonic hyponatraemia and supports SIADH, overhydration or primary polydipsia as differentials."
+          ],
+          "highInterpretation": [
+            "High osmolality. With hyponatraemia, suggests an effective osmole (glucose, mannitol, contrast) causing pseudohyponatraemia or a need for measured osmolality interpretation."
+          ],
           "notes": [
             "Low measured osmolality with hyponatraemia confirms hypotonic hyponatraemia. Normal/high osmolality suggests glucose, mannitol or another effective osmole, or pseudohyponatraemia."
           ],
@@ -33,8 +37,12 @@
           "name": "Osmolal gap",
           "unit": "",
           "referenceRange": "Usually <10 mOsm/kg, formula/laboratory dependent",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Normal osmolal gap rules out significant unaccounted osmoles like toxic alcohols (early stages) or major unmeasured ion/solute."
+          ],
+          "highInterpretation": [
+            "Elevated gap (>10 mOsm/kg). Suggests toxic alcohols (methanol, ethylene glycol), ethanol excess, elevated ketones, lactate, renal failure or lab/formula variation. Use for suspicion of toxic alcohol poisoning in high-anion-gap metabolic acidosis."
+          ],
           "notes": [
             "A raised gap can occur with toxic alcohols, ethanol, ketones, lactate, renal failure or laboratory/formula variation. A normal gap does not exclude late toxic alcohol poisoning."
           ],

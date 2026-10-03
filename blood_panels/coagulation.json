@@ -17,8 +17,12 @@
           "name": "INR / PT",
           "unit": "",
           "referenceRange": "INR about 0.8–1.2 when not anticoagulated; warfarin target commonly 2.0–3.0 but indication-specific",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — a low INR in a non-anticoagulated patient is generally reassuring and does not raise bleeding risk from coagulation."
+          ],
+          "highInterpretation": [
+            "Prolonged INR/PT. Consider warfarin over-anticoagulation, vitamin K deficiency, liver synthetic dysfunction, factor deficiency, DIC or a sample collection artefact. A normal INR does not exclude a clinically relevant direct oral anticoagulant effect."
+          ],
           "notes": [
             "Raised by warfarin, vitamin K deficiency, liver synthetic dysfunction, DIC or factor deficiency. Direct oral anticoagulants can alter PT/INR unpredictably; a normal INR does not exclude a clinically relevant DOAC effect."
           ],
@@ -33,8 +37,12 @@
           "name": "APTT",
           "unit": "",
           "referenceRange": "Laboratory dependent",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — a short APTT is generally not clinically significant and does not raise bleeding risk."
+          ],
+          "highInterpretation": [
+            "Prolonged APTT. Consider unfractionated heparin effect, factor VIII/IX/XI deficiency (including haemophilia), lupus anticoagulant, DIC, or sample collection artefact. A normal APTT does not reliably exclude DOAC activity."
+          ],
           "notes": [
             "Prolonged with unfractionated heparin, factor deficiencies/inhibitors, lupus anticoagulant or DIC. A normal APTT does not reliably exclude DOAC activity."
           ],
@@ -49,8 +57,12 @@
           "name": "Fibrinogen",
           "unit": "",
           "referenceRange": "Approx. 1.5–4.0 g/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Low fibrinogen with prolonged PT/APTT, falling platelets and bleeding/oozing supports consumption, most commonly DIC. Can occur with liver disease or snake venom (rare)."
+          ],
+          "highInterpretation": [
+            "Raised fibrinogen is common as an acute-phase reactant and does not necessarily indicate a clotting disorder; does not exclude evolving DIC, which can occur with normal or raised fibrinogen early."
+          ],
           "notes": [
             "Low fibrinogen with prolonged PT/APTT, thrombocytopenia and bleeding supports consumption such as DIC. It can be normal or raised early because it is also an acute-phase protein."
           ],
@@ -75,8 +87,12 @@
           "name": "Possible DIC",
           "unit": "",
           "referenceRange": "No single diagnostic value",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — DIC is identified by a pattern of prolonged PT and APTT, low fibrinogen, falling platelets and raised D-dimer together with a trigger and clinical bleeding/organ dysfunction."
+          ],
+          "highInterpretation": [
+            "Pattern consistent with DIC: prolonged PT and APTT, low fibrinogen, falling platelets, raised D-dimer, in the context of a recognised trigger (sepsis, major trauma, malignancy, obstetric catastrophe) and clinical features (bleeding, oozing, purpura, mottling, organ dysfunction)."
+          ],
           "notes": [
             "Look for falling platelets, prolonged PT and APTT, low fibrinogen, raised D-dimer, bleeding/oozing, purpura, organ dysfunction and a trigger such as sepsis, trauma, malignancy or obstetric catastrophe."
           ],

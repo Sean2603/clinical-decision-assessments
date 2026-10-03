@@ -17,8 +17,12 @@
           "name": "High TSH + low free T4",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — this pattern indicates hypothyroidism."
+          ],
+          "highInterpretation": [
+            "Primary hypothyroidism. Consider autoimmune thyroid disease (Hashimoto), post-treatment disease (thyroidectomy, radioiodine, antithyroid drugs), medication (lithium, amiodarone, iodine), iodine deficiency or pituitary disease. Assess for symptoms (fatigue, cold intolerance, weight gain, bradycardia) and start replacement if confirmed."
+          ],
           "notes": [
             "Consider autoimmune thyroid disease, post-treatment disease or medication effects. Assess severity and symptoms rather than TSH alone."
           ],
@@ -33,8 +37,12 @@
           "name": "Low TSH + high free T4/T3",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L; FT3 3.1–6.8 pmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — this pattern indicates hyperthyroidism."
+          ],
+          "highInterpretation": [
+            "Primary hyperthyroidism or over-replacement. Consider Graves disease, toxic nodules, thyroiditis, excessive levothyroxine/liothyronine or an inappropriate TSH-suppressive strategy. Check for symptoms (palpitations, tremor, heat intolerance, weight loss), pulse/rhythm, atrial fibrillation risk and adjust treatment."
+          ],
           "notes": [
             "Consider Graves disease, toxic nodules, thyroiditis or excessive replacement. Check pulse/rhythm, temperature, hydration and cardiovascular symptoms."
           ],
@@ -49,8 +57,12 @@
           "name": "High TSH + normal free T4",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — TSH elevation indicates thyroid stress."
+          ],
+          "highInterpretation": [
+            "Subclinical hypothyroidism. TSH is elevated but free T4 remains normal. Repeat to confirm persistence; interpret with symptoms, thyroid antibodies, pregnancy plans, lipids and cardiovascular risk. May progress to overt hypothyroidism; some guidelines recommend replacement with pregnancy planning or persistent symptomatic elevation."
+          ],
           "notes": [
             "Repeat and interpret with symptoms, thyroid antibodies, pregnancy plans and degree/persistence of TSH elevation."
           ],
@@ -65,8 +77,12 @@
           "name": "Low TSH + normal free T4/T3",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L; FT3 3.1–6.8 pmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — TSH suppression is unusual without thyroid hormone elevation."
+          ],
+          "highInterpretation": [
+            "Subclinical hyperthyroidism or TSH suppression. Consider medication (levothyroxine over-replacement, beta-agonists, methadone, certain antidepressants), acute illness, pregnancy (especially first trimester), early Graves disease or a non-thyroidal illness. Repeat TSH to confirm. TSH suppression carries atrial fibrillation risk."
+          ],
           "notes": [
             "Consider medication, acute illness, pregnancy and early thyroid disease."
           ],
@@ -81,8 +97,12 @@
           "name": "Low/normal TSH + low free T4",
           "unit": "",
           "referenceRange": "RVH adult ranges: TSH 0.27–4.2 mIU/L; FT4 12–22 pmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — low free T4 indicates inadequate thyroid hormone."
+          ],
+          "highInterpretation": [
+            "Central hypothyroidism (secondary/tertiary). TSH is inadequately elevated or normal with low free T4. Consider pituitary disease, severe acute illness, medications (dopamine, corticosteroids), post-pituitary surgery or trauma. Requires investigation for underlying pituitary pathology and treatment after excluding pituitary disease."
+          ],
           "notes": [
             "Do not label as primary hypothyroidism without considering pituitary disease, severe illness and medication effects."
           ],

@@ -17,8 +17,12 @@
           "name": "Below assay cut-off",
           "unit": "",
           "referenceRange": "RVH hs-troponin T: female 99th centile ≤9 ng/L; male 99th centile ≤17 ng/L; lower reporting limit 5 ng/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "A single low result only rules out MI when the validated 0/1-hour, 0/2-hour or other local pathway timing criteria are met. Does not exclude unstable angina, PE, aortic dissection or other causes of chest pain."
+          ],
+          "highInterpretation": [
+            "Not applicable — this row represents a reassuring low value."
+          ],
           "notes": [
             "A single low result only rules out MI when the validated pathway permits it, taking account of symptom onset and sampling time. It does not rule out unstable angina, PE, aortic disease or other causes of chest pain."
           ],
@@ -33,8 +37,12 @@
           "name": "Above 99th centile",
           "unit": "",
           "referenceRange": "RVH hs-troponin T above local 99th centile: female >9 ng/L; male >17 ng/L. Presentation result ≥52 ng/L is high risk in the local ACS guidance.",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — elevation above the 99th centile indicates myocardial injury."
+          ],
+          "highInterpretation": [
+            "Myocardial injury. Diagnose MI only with a dynamic rise/fall plus clinical evidence of ischaemia. Consider type 1 MI (coronary thrombosis), type 2 MI (supply–demand mismatch), myocarditis, heart failure, PE, sepsis, renal disease, stroke, trauma or strenuous exercise."
+          ],
           "notes": [
             "Possible causes include type 1 MI, supply–demand mismatch, tachyarrhythmia, heart failure, myocarditis, PE, sepsis, renal disease, stroke, trauma or strenuous exercise."
           ],
@@ -49,8 +57,12 @@
           "name": "Rise or fall",
           "unit": "",
           "referenceRange": "RVH hs-troponin T delta: ≥5 ng/L at 1 hour is significant; 3–4 ng/L warrants observation/further sampling; >20% change at 3 hours with one value above the 99th centile is significant",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Stable or falling troponin can reflect resolving myocardial injury, but does not exclude ongoing or recent acute MI depending on timing from symptom onset and the validated pathway."
+          ],
+          "highInterpretation": [
+            "Rising troponin with one value above the 99th centile supports acute myocardial injury and is compatible with acute MI, myocarditis or other acute cardiac causes. Must be interpreted alongside clinical symptoms, ECG and the validated timing pathway."
+          ],
           "notes": [
             "Dynamic change supports acute injury. Chronic stable elevation is common in CKD and structural heart disease, but a new rise/fall can still represent acute MI."
           ],

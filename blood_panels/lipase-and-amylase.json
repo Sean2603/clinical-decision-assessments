@@ -17,8 +17,12 @@
           "name": "Lipase",
           "unit": "",
           "referenceRange": "RVH adult reference: 13–60 U/L; retain the ≥3 × upper-limit clinical pancreatitis threshold separately",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Normal lipase. Pancreatitis is less likely if amylase is also normal, though early presentation, hypertriglyceridaemia or chronic disease can cause false reassurance."
+          ],
+          "highInterpretation": [
+            "Elevated lipase. Lipase ≥3 × upper limit with characteristic pain supports acute pancreatitis, but it also rises with renal failure, bowel ischaemia/obstruction, cholecystitis, perforation, DKA or medications. Lipase-specific and remains elevated longer than amylase."
+          ],
           "notes": [
             "Lipase is generally more pancreas-specific and remains raised longer than amylase. It may also rise with renal failure, bowel ischaemia/obstruction, cholecystitis, perforation, DKA or medications."
           ],
@@ -33,8 +37,12 @@
           "name": "Amylase",
           "unit": "",
           "referenceRange": "RVH adult reference: 28–100 U/L; retain the ≥3 × upper-limit clinical pancreatitis threshold separately",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Normal amylase. Pancreatitis can still be present in delayed presentations (>72 hours), hypertriglyceridaemia or chronic pancreatic disease."
+          ],
+          "highInterpretation": [
+            "Elevated amylase. Amylase ≥3 × upper limit with characteristic pain supports acute pancreatitis. Can also rise from salivary disease, renal failure, bowel ischaemia, peritonitis or macroamylasaemia. Falls faster than lipase (normal within days of pancreatitis onset)."
+          ],
           "notes": [
             "Can be normal in delayed presentation, hypertriglyceridaemia or chronic pancreatic disease. Salivary disease, renal failure, bowel pathology and macroamylasaemia can also raise it."
           ],

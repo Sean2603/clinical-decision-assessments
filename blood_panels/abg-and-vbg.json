@@ -93,7 +93,9 @@
           "lowInterpretation": [
             "PaO₂ below 8.0 kPa suggests hypoxaemic respiratory failure; confirm inspired oxygen and SpO₂."
           ],
-          "highInterpretation": [],
+          "highInterpretation": [
+            "High PaO₂ on supplemental oxygen is expected and reassuring. Very high levels (>30 kPa) with high FiO₂ suggest hyperoxia, which can be harmful with prolonged exposure but is often necessary for acute rescue."
+          ],
           "notes": [
             "Do not use venous pO₂ to assess arterial oxygenation."
           ],
@@ -107,9 +109,11 @@
           "name": "Lactate",
           "unit": "mmol/L",
           "referenceRange": "Below 2.0 mmol/L often considered normal",
-          "lowInterpretation": [],
+          "lowInterpretation": [
+            "Low lactate is expected and indicates adequate tissue perfusion and no significant lactic acidosis."
+          ],
           "highInterpretation": [
-            "2.0–3.9 mmol/L is abnormal; at least 4.0 mmol/L is a major abnormality requiring urgent assessment of the cause."
+            "2.0–3.9 mmol/L is abnormal; at least 4.0 mmol/L is a major abnormality requiring urgent assessment of the cause. Supports hypoperfusion or sepsis but can also reflect seizure, severe work of breathing, metformin effect or liver dysfunction."
           ],
           "notes": [
             "A normal lactate does not exclude sepsis, shock or another serious illness."
@@ -134,8 +138,12 @@
           "name": "Respiratory acidosis",
           "unit": "",
           "referenceRange": "Low pH with raised pCO₂",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — respiratory acidosis is defined by low pH and raised pCO₂."
+          ],
+          "highInterpretation": [
+            "Hypoventilation. Consider COPD/asthma exacerbation with fatigue, sedative/opioid effect, neuromuscular weakness, severe obesity hypoventilation, upper airway obstruction or a CNS cause. Raised bicarbonate may indicate chronic compensation or acute-on-chronic picture."
+          ],
           "notes": [
             "Consider hypoventilation, COPD/asthma fatigue, sedative/opioid effect, neuromuscular weakness or severe obesity hypoventilation. Raised bicarbonate may indicate chronic compensation or acute-on-chronic respiratory acidosis."
           ],
@@ -150,8 +158,12 @@
           "name": "Metabolic acidosis",
           "unit": "",
           "referenceRange": "Low pH with low bicarbonate",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — metabolic acidosis is defined by low pH and low bicarbonate."
+          ],
+          "highInterpretation": [
+            "Metabolic acidosis. Consider high-anion-gap causes (lactate, ketones, renal failure, toxins) or normal-anion-gap causes (diarrhoea, renal tubular acidosis, hyperalimentation). Low pCO₂ may indicate respiratory compensation; examine the anion gap to narrow the differential."
+          ],
           "notes": [
             "Consider lactate, ketones, renal failure, diarrhoea, toxins and the anion gap. Low pCO₂ may indicate respiratory compensation."
           ],
@@ -166,8 +178,12 @@
           "name": "Mixed respiratory and metabolic acidosis",
           "unit": "",
           "referenceRange": "Low pH with raised pCO₂ and low bicarbonate",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — mixed acidosis is identified by combined respiratory and metabolic components."
+          ],
+          "highInterpretation": [
+            "High-risk pattern. Both respiratory and metabolic processes are driving the pH down simultaneously with no compensation evident. Often indicates a severely unwell patient (e.g. combined respiratory failure and shock/sepsis) requiring urgent integrated management of ventilation and circulation."
+          ],
           "notes": [
             "High-risk pattern requiring urgent assessment."
           ],
@@ -182,8 +198,12 @@
           "name": "Respiratory alkalosis",
           "unit": "",
           "referenceRange": "High pH with low pCO₂",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — respiratory alkalosis is defined by high pH and low pCO₂."
+          ],
+          "highInterpretation": [
+            "Hyperventilation. Exclude serious causes first: hypoxia, PE, sepsis, pregnancy, liver disease, salicylate/methanol poisoning. Only then consider pain or anxiety as diagnoses of exclusion."
+          ],
           "notes": [
             "Consider pain/anxiety only after excluding hypoxia, PE, sepsis, pregnancy, liver disease and salicylates."
           ],
@@ -198,8 +218,12 @@
           "name": "Metabolic alkalosis",
           "unit": "",
           "referenceRange": "High pH with raised bicarbonate",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — metabolic alkalosis is defined by high pH and raised bicarbonate."
+          ],
+          "highInterpretation": [
+            "Metabolic alkalosis. Consider vomiting, gastric losses, diuretics (especially loop/thiazide), hypokalaemia perpetuating the alkalosis, mineralocorticoid excess, or alkali administration."
+          ],
           "notes": [
             "Consider vomiting, gastric losses, diuretics, hypokalaemia, mineralocorticoid excess or alkali administration."
           ],
@@ -214,8 +238,12 @@
           "name": "Mixed respiratory and metabolic alkalosis",
           "unit": "",
           "referenceRange": "High pH with low pCO₂ and raised bicarbonate",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — mixed alkalosis is identified by combined respiratory and metabolic components."
+          ],
+          "highInterpretation": [
+            "Both low pCO₂ (respiratory) and raised bicarbonate (metabolic) are driving the pH up simultaneously. Consider a combination of causes such as vomiting with hyperventilation from pain/anxiety, or diuretic-induced alkalosis with concurrent hyperventilation."
+          ],
           "notes": [
             "Both low pCO₂ and raised bicarbonate are driving the pH up."
           ],

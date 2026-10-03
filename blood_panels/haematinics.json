@@ -17,8 +17,12 @@
           "name": "Ferritin",
           "unit": "",
           "referenceRange": "RVH adult reference: men ≥19 y 30–400 µg/L; women 19–59 y 15–150 µg/L; women ≥60 y 15–330 µg/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Low ferritin with low MCV and iron deficiency anaemia picture suggests absolute iron deficiency. Review for bleeding source (GI, menstrual, other), malabsorption or poor intake."
+          ],
+          "highInterpretation": [
+            "Raised ferritin. As an acute-phase protein, it is often elevated during infection, inflammation, liver disease or malignancy even when iron stores are adequate. Do not interpret ferritin alone when CRP/inflammation is raised. Combination with raised transferrin saturation may suggest haemochromatosis or secondary iron overload."
+          ],
           "notes": [
             "Ferritin is an acute-phase protein and may be normal or raised despite iron deficiency during infection, inflammation, liver disease or malignancy."
           ],
@@ -33,8 +37,12 @@
           "name": "Transferrin saturation",
           "unit": "",
           "referenceRange": "RVH adult reference: female 16–40%; male 16–50%",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Low saturation with low ferritin supports absolute iron deficiency. Low saturation with normal/high ferritin may reflect inflammation, anaemia of chronic disease or renal disease."
+          ],
+          "highInterpretation": [
+            "Elevated saturation (>45%), especially with elevated ferritin, may suggest haemochromatosis or secondary iron overload. Screen for family history and consider HFE testing."
+          ],
           "notes": [
             "Low saturation with low ferritin supports absolute iron deficiency. Low saturation with normal/high ferritin may reflect inflammation, CKD or mixed deficiency."
           ],
@@ -59,8 +67,12 @@
           "name": "Vitamin B12",
           "unit": "",
           "referenceRange": "RVH/NICE NG239 interpretation: <180 ng/L confirmed deficiency; 180–350 ng/L indeterminate/possible deficiency; >350 ng/L deficiency unlikely",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Confirmed (<180 ng/L) or possible (180–350 ng/L) B12 deficiency. Ask about diet (veganism), pernicious anaemia symptoms, GI surgery history, terminal ileal disease and neurological symptoms (paraesthesia, ataxia, cognitive change). Neurological deficiency can occur without anaemia or macrocytosis."
+          ],
+          "highInterpretation": [
+            "B12 level >350 ng/L makes deficiency unlikely. But interpret with clinical symptoms and other causes of macrocytosis."
+          ],
           "notes": [
             "Deficiency can produce macrocytosis, glossitis, paraesthesia, impaired vibration/proprioception, gait disturbance, cognitive change or pancytopenia. Neurological deficiency can occur without anaemia or macrocytosis."
           ],
@@ -75,8 +87,12 @@
           "name": "Folate",
           "unit": "",
           "referenceRange": "RVH adult reference: 3.0–26.8 µg/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Folate deficiency can cause macrocytic anaemia. Ask about diet, alcohol use and medications (methotrexate, trimethoprim). If B12 is also low, replace B12 first or concurrently; folate alone can mask neurological B12 deficiency."
+          ],
+          "highInterpretation": [
+            "Folate levels >26.8 µg/L are above normal range but do not require intervention unless related to supplement/medication excess."
+          ],
           "notes": [
             "Low folate can cause macrocytic anaemia. Replace B12 deficiency first or concurrently; folate alone can improve anaemia while neurological B12 injury progresses."
           ],

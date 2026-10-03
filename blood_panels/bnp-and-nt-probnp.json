@@ -17,8 +17,12 @@
           "name": "<400 ng/L",
           "unit": "",
           "referenceRange": "NICE chronic-HF referral category remains <400 ng/L. RVH laboratory guidance separately states NT-proBNP <125 ng/L excludes heart failure as a cause of signs/symptoms.",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Heart failure is unlikely as the cause of current symptoms. Review alternative diagnoses for breathlessness or oedema, but account for obesity and heart-failure medications which suppress the result."
+          ],
+          "highInterpretation": [
+            "Not applicable — this row represents a reassuring low result."
+          ],
           "notes": [
             "Review alternative diagnoses, but levels can be lower with obesity or medications such as diuretics, ACE inhibitors/ARBs/ARNI, beta blockers or mineralocorticoid antagonists."
           ],
@@ -33,8 +37,12 @@
           "name": "400–2,000 ng/L",
           "unit": "",
           "referenceRange": "NICE: specialist assessment and echocardiography within 6 weeks",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — this range is above the diagnostic threshold."
+          ],
+          "highInterpretation": [
+            "Possible heart failure. Does not prove heart failure — renal impairment, AF, age, PE, sepsis, pulmonary hypertension and other confounders can elevate the result. Arrange urgent specialist and echocardiography assessment."
+          ],
           "notes": [
             "Does not prove heart failure. Renal impairment, AF, age, PE, sepsis and pulmonary hypertension can elevate the result."
           ],
@@ -49,8 +57,12 @@
           "name": ">2,000 ng/L",
           "unit": "",
           "referenceRange": "NICE: urgent specialist assessment and echocardiography within 2 weeks",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — this is a substantially elevated result."
+          ],
+          "highInterpretation": [
+            "Significantly elevated. Probable heart failure or another serious cause (renal impairment, sepsis, PE, AF with rapid rate). Associated with worse prognosis but acute disposition depends on current symptoms, SpO₂, examination and physiology. Arrange urgent specialist and echocardiography assessment."
+          ],
           "notes": [
             "Higher values are associated with worse prognosis, but acute disposition still depends on current symptoms and physiology."
           ],

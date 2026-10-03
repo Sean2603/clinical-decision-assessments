@@ -17,8 +17,12 @@
           "name": "Hypoglycaemia",
           "unit": "",
           "referenceRange": "RVH fasting glucose reference: 4.1–6.1 mmol/L; the clinical hypoglycaemia threshold remains <4.0 mmol/L",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Glucose below 4.0 mmol/L. Treat promptly. Symptoms include sweating, tremor, palpitations, hunger, behavioural change, confusion, seizure or reduced consciousness. Recheck after treatment and identify the cause (medication, missed meals, infection, prolonged exercise)."
+          ],
+          "highInterpretation": [
+            "Not applicable — this row describes hypoglycaemia."
+          ],
           "notes": [
             "Treat promptly when symptomatic or below 4.0 mmol/L. Examples include sweating, tremor, palpitations, hunger, behavioural change, confusion, seizure or reduced consciousness. Recheck after treatment and identify the cause."
           ],
@@ -33,8 +37,12 @@
           "name": "Marked hyperglycaemia",
           "unit": "",
           "referenceRange": "No single value diagnoses DKA or HHS",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — this row describes marked hyperglycaemia."
+          ],
+          "highInterpretation": [
+            "Marked elevation. Assess ketones, pH/bicarbonate, serum osmolality, hydration, mental state and precipitating illness urgently. Polyuria, polydipsia, vomiting, abdominal pain, rapid breathing, drowsiness or shock require emergency assessment for DKA or HHS."
+          ],
           "notes": [
             "Assess ketones, pH/bicarbonate, osmolality, hydration, cognition and precipitating illness. Polyuria, polydipsia, vomiting, abdominal pain, deep breathing, drowsiness or shock require urgent assessment."
           ],
@@ -59,8 +67,12 @@
           "name": "Blood ketones",
           "unit": "",
           "referenceRange": "RVH fasting 3-hydroxybutyrate reference: 0.03–0.3 mmol/L; retain DKA decision thresholds separately",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Low ketones. DKA is less likely if ketones are below 3.0 mmol/L, but do not exclude it without also checking pH and bicarbonate."
+          ],
+          "highInterpretation": [
+            "Elevated ketones. Ketonaemia ≥3.0 mmol/L with acidosis (venous pH <7.3 or bicarbonate <15 mmol/L) and diabetes/hyperglycaemia indicates DKA. Do not dismiss DKA because glucose is <11 mmol/L (euglycaemic DKA), particularly with SGLT2 inhibitor use, pregnancy or reduced food intake."
+          ],
           "notes": [
             "DKA is supported by ketonaemia ≥3.0 mmol/L with acidosis (venous pH <7.3 or bicarbonate <15 mmol/L) and diabetes/hyperglycaemia. Do not dismiss DKA because glucose is below 11 mmol/L, particularly with SGLT2 inhibitor use, pregnancy or reduced food intake."
           ],
@@ -75,8 +87,12 @@
           "name": "Possible HHS",
           "unit": "",
           "referenceRange": "Often glucose ≥30 mmol/L and calculated osmolality ≥320 mOsm/kg",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — HHS typically presents with very high glucose."
+          ],
+          "highInterpretation": [
+            "Hyperosmolar hyperglycaemic state. Often glucose ≥30 mmol/L with osmolality ≥320 mOsm/kg and minimal or absent ketosis. More common in type 2 diabetes, older adults and those with reduced access to water. Presents with polyuria, polydipsia, drowsiness or coma."
+          ],
           "notes": [
             "Look for profound dehydration, reduced cognition, focal neurology, seizures, hypotension and minimal ketonaemia. Mixed DKA/HHS can occur."
           ],
@@ -101,8 +117,12 @@
           "name": "Raised lactate",
           "unit": "",
           "referenceRange": "RVH lactate reference: 0.5–2.2 mmol/L; >4.0 mmol/L is a critical-result alert threshold",
-          "lowInterpretation": [],
-          "highInterpretation": [],
+          "lowInterpretation": [
+            "Not applicable — this row describes elevated lactate."
+          ],
+          "highInterpretation": [
+            "Elevated lactate ≥2.2 mmol/L is abnormal; ≥4.0 mmol/L is a major abnormality and a critical-result alert. Supports hypoperfusion, sepsis, major organ failure. Also consider seizure, severe work of breathing, beta-agonist use, liver dysfunction, metformin toxicity or toxins. A normal lactate does not exclude sepsis or shock."
+          ],
           "notes": [
             "Consider hypoperfusion, sepsis, seizure, severe work of breathing, beta-agonists, liver dysfunction, metformin accumulation, toxins or sampling delay. A normal lactate does not exclude sepsis or shock."
           ],
