@@ -1129,6 +1129,14 @@
         "prevention",
         "control"
       ]
+    },
+    {
+      "id": "NICE-NG114",
+      "title": "NICE NG114: Constipation in adults",
+      "source": "https://www.nice.org.uk/guidance/ng114",
+      "publishedDate": "2022-04-27",
+      "reviewStatus": "current",
+      "nextReviewDue": "2027-04-27"
     }
   ]
 }

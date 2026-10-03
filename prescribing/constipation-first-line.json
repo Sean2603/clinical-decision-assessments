@@ -39,7 +39,7 @@
       "relationship": "OR",
       "components": [
         {
-          "medicationId": "lactulose",
+          "medicationId": null,
           "displayName": "Lactulose solution",
           "dose": "15-30 mL once daily, increased to BD if needed",
           "route": "oral",
@@ -63,7 +63,7 @@
       "relationship": "OR",
       "components": [
         {
-          "medicationId": "macrogol",
+          "medicationId": null,
           "displayName": "Macrogol 3350 (polyethylene glycol) oral powder",
           "dose": "1 sachet (13.125g) once or twice daily",
           "route": "oral",
@@ -85,7 +85,7 @@
       "relationship": "OR",
       "components": [
         {
-          "medicationId": "ispaghula-husk",
+          "medicationId": null,
           "displayName": "Ispaghula husk granules",
           "dose": "1 sachet or 2 teaspoons twice daily (morning and evening)",
           "route": "oral",
@@ -111,7 +111,7 @@
       "relationship": "AND",
       "components": [
         {
-          "medicationId": "docusate",
+          "medicationId": null,
           "displayName": "Docusate sodium capsules",
           "dose": "100 mg once to three times daily",
           "route": "oral",
@@ -133,7 +133,7 @@
       "relationship": "OR",
       "components": [
         {
-          "medicationId": "senna",
+          "medicationId": null,
           "displayName": "Senna leaf tablets or liquid",
           "dose": "7.5-15 mg once daily at bedtime; increase if necessary to max 30 mg daily",
           "route": "oral",
@@ -159,7 +159,7 @@
       "relationship": "OR",
       "components": [
         {
-          "medicationId": "bisacodyl",
+          "medicationId": null,
           "displayName": "Bisacodyl tablets or suppositories",
           "dose": "Tablets: 5-10 mg once daily at bedtime. Suppository: 10 mg once daily (usually morning)",
           "route": "oral or rectal",
