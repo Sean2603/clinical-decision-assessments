@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.53",
-  "updatedAt": "2026-10-03T15:13:53Z",
+  "contentVersion": "0.0.54",
+  "updatedAt": "2026-10-03T16:19:34Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.64.3",
-  "downloadSizeBytes": 7038168,
+  "downloadSizeBytes": 7061544,
   "references": {
     "file": "references/references.json",
     "sha256": "a2c46433ed800236db7e15c2ea13fb92d80d2eea0db6e9f8551eeb349702953b",
@@ -1017,6 +1017,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "constipation-first-line",
+      "title": "Constipation: first-line treatment",
+      "version": "1.0.0",
+      "file": "prescribing/constipation-first-line.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "b6cf7a887ecee0552bf5aac19ddebc45a360025b205509b9d75911e0b1a9b6bb",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 10703,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "dental-abscess-urgent-treatment",
       "title": "Dental Abscess requiring urgent treatment",
       "version": "0.2.0",
@@ -1115,5 +1127,18 @@
       "attachmentsSizeBytes": 0
     }
   ],
-  "sharedLearning": []
+  "sharedLearning": [
+    {
+      "id": "laxative-mechanisms-and-rationale",
+      "title": "Laxative mechanisms and clinical rationale",
+      "version": "1.0.0",
+      "file": "shared_learning/laxative-mechanisms-and-rationale.json",
+      "schema": "schema/shared-learning-schema.json",
+      "sha256": "90ef1db039ebc55aa59e591b3501d1e8b4c7ec4e20dabcf3a51a8716d8268ef9",
+      "schemaSha256": "816a25aff5ff5005dc164a2df6b84720fc1b92e99d4a58cd659514b2388c23d5",
+      "sizeBytes": 6426,
+      "schemaSizeBytes": 6247,
+      "attachmentsSizeBytes": 0
+    }
+  ]
 }
