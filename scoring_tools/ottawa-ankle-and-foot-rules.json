@@ -97,7 +97,8 @@
         "No ankle or foot X-ray is indicated by the rule when the relevant zone and tenderness/weight-bearing combinations are absent."
       ],
       "actions": [
-        "Clinical management without radiography; document examination"
+        "Manage clinically without radiography; provide crutches if weight-bearing is painful; elevate and ice as tolerated",
+        "Arrange telephone follow-up in 48 hours to assess progress; document examination findings in medical record"
       ]
     },
     {
@@ -109,7 +110,9 @@
         "An ankle X-ray and/or foot X-ray is indicated according to the zone-specific criteria."
       ],
       "actions": [
-        "Order X-rays according to zone-specific criteria; review imaging"
+        "Order ankle and/or foot X-rays per zone (AP, lateral, and mortise views for ankle; AP and lateral for midfoot); document indication",
+        "If fracture identified: arrange orthopedic assessment; stabilize and provide analgesia; discuss follow-up and referral",
+        "If no fracture: discharge with supportive care (rest, ice, elevation, compression); provide crutches if needed; arrange follow-up in 7 days; document findings"
       ]
     }
   ],

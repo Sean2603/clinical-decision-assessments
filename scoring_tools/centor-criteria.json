@@ -64,8 +64,8 @@
         "Antibiotics are generally not indicated."
       ],
       "actions": [
-        "Recommend supportive care and symptomatic treatment",
-        "Follow local guidance on antimicrobial stewardship"
+        "Supportive care: paracetamol or ibuprofen for analgesia and fever; adequate fluids; throat lozenges if tolerated",
+        "Arrange GP or telephone review within 48 hours if symptoms do not improve or worsen"
       ]
     },
     {
@@ -77,9 +77,9 @@
         "The patient is more likely to benefit from an immediate or back-up antibiotic, depending on clinical findings and local guidance."
       ],
       "actions": [
-        "Consider immediate or back-up antibiotic prescription based on clinical assessment",
-        "Follow local antimicrobial guidance and prescribing recommendations",
-        "Assess for airway compromise, deep-neck infection, and hydration status separately"
+        "Prescribe antibiotic per local formulary guidance (e.g., penicillin V or amoxicillin-clavulanate); document choice and patient counseling",
+        "Alternatively, issue back-up antibiotic prescription with safety-netting for worsening or non-improvement within 48 hours",
+        "Assess separately for airway compromise, deep-neck infection (dysphagia, drooling, stridor), and hydration status; escalate if present"
       ]
     }
   ],

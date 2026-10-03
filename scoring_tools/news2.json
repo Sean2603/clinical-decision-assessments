@@ -279,7 +279,8 @@
         "This does not exclude serious or time-critical disease."
       ],
       "actions": [
-        "Continue monitoring; document baseline"
+        "Record observations; continue routine clinical assessment",
+        "Document baseline observations; schedule repeat observations per ward or protocol guidance (typically within 12 hours or as clinically indicated)"
       ]
     },
     {
@@ -291,7 +292,8 @@
         "Urgent clinical review is generally required."
       ],
       "actions": [
-        "Escalate to senior review; increase observation frequency"
+        "Escalate to ward doctor or senior clinician immediately for face-to-face review",
+        "Increase observation frequency to every 1-2 hours; prepare for escalation pathway (high-dependency or intensive care)"
       ]
     },
     {
@@ -303,7 +305,9 @@
         "An emergency clinical response is generally required."
       ],
       "actions": [
-        "Escalate to emergency clinical response; consider emergency interventions"
+        "Call emergency response team (critical-care outreach/code blue per institutional protocol) immediately",
+        "Initiate senior medical/nursing assessment; prepare for intensive-care-level interventions (supplemental oxygen, IV access, cardiac monitoring)",
+        "Consider imaging (chest X-ray, electrocardiogram) and specialist review per clinical context; arrange ICU bed"
       ]
     }
   ],

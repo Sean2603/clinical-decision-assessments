@@ -130,7 +130,10 @@
         "Record the individual components and trend, not only the total."
       ],
       "actions": [
-        "Document components and baseline; escalate any deterioration"
+        "Document E/V/M components and total score in the medical record immediately",
+        "Establish baseline and repeat at regular intervals (at least hourly if ICU/high-dependency, or per clinical deterioration)",
+        "Escalate immediately if score is <15 on admission, or if any downward trend of 2 or more points, or new focal neurological deficit",
+        "Initiate or continue neuro-observation chart if not already in place; consider intensive-care escalation if decline is rapid"
       ]
     }
   ],

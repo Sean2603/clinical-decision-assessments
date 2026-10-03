@@ -124,7 +124,9 @@
         "D-dimer is generally required; a negative score alone does not exclude DVT."
       ],
       "actions": [
-        "Complete D-dimer pathway; proceed based on result"
+        "Order D-dimer (high-sensitivity assay preferred, e.g., high-sensitivity ELISA or procalcitonin)",
+        "If D-dimer negative: discharge with DVT red-flag safety-netting (new or worsening leg swelling, calf pain, breathlessness); arrange follow-up if symptoms develop",
+        "If D-dimer positive: proceed to proximal leg ultrasound within 24 hours or same-day if possible"
       ]
     },
     {
@@ -136,7 +138,8 @@
         "Arrange proximal leg-vein ultrasound pathway and follow local interim-anticoagulation guidance if imaging is delayed."
       ],
       "actions": [
-        "Arrange proximal leg-vein ultrasound; initiate interim anticoagulation if imaging delayed"
+        "Arrange proximal leg ultrasound within 2 hours of assessment; do not delay for D-dimer",
+        "Initiate anticoagulation if ultrasound is delayed >4 hours (unfractionated heparin or low-molecular-weight heparin per local guidance); senior physician review"
       ]
     }
   ],

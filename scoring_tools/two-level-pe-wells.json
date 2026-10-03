@@ -94,7 +94,10 @@
         "D-dimer is generally required unless PERC has already validly ruled out PE."
       ],
       "actions": [
-        "Complete D-dimer pathway; assess for PERC applicability"
+        "Order D-dimer (high-sensitivity assay preferred, e.g., high-sensitivity ELISA); or assess PERC applicability (very low pre-test probability + credible alternative diagnosis)",
+        "If PERC criteria met and negative: discharge with PE red-flag counseling (sudden breathlessness, chest pain, syncope, leg swelling); arrange follow-up",
+        "If D-dimer negative: discharge with PE red-flag counseling and alternative diagnosis management plan",
+        "If D-dimer positive or PERC not applicable: proceed to CTPA or ventilation/perfusion imaging"
       ]
     },
     {
@@ -106,7 +109,8 @@
         "Arrange the immediate imaging pathway."
       ],
       "actions": [
-        "Arrange immediate imaging pathway; initiate interim anticoagulation if imaging delayed"
+        "Proceed directly to computed tomography pulmonary angiography (CTPA) or ventilation/perfusion imaging per institutional protocol; admit for imaging and monitoring",
+        "Initiate parenteral anticoagulation immediately if imaging is delayed (unfractionated heparin or low-molecular-weight heparin per local guidance); senior clinician review; arrange intensive-care bed if high-risk features (haemodynamic instability, right-ventricular strain)"
       ]
     }
   ],

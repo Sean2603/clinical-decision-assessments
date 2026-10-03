@@ -75,7 +75,7 @@
         "Hypoxia, sepsis, inability to maintain oral intake, decompensated comorbidity or unsafe home circumstances may still require admission."
       ],
       "actions": [
-        "Consider discharge with safety-netting and outpatient review"
+        "Manage in community; arrange GP review within 48 hours; safety-net for breathlessness, fever persistence, or clinical deterioration"
       ]
     },
     {
@@ -87,7 +87,7 @@
         "Hospital assessment should be considered."
       ],
       "actions": [
-        "Admit for hospital assessment and monitoring"
+        "Admit for hospital assessment; initiate antibiotic within 1 hour (amoxicillin-clavulanate or clarithromycin per local formulary); order chest X-ray, blood cultures, urea and electrolytes"
       ]
     },
     {
@@ -99,7 +99,7 @@
         "Urgent hospital assessment is generally required."
       ],
       "actions": [
-        "Admit for urgent hospital assessment and monitoring"
+        "Admit to high-dependency or intensive-care setting; senior clinician review on admission; initiate antibiotic within 1 hour; blood cultures, comprehensive metabolic panel, blood glucose; consider imaging per clinical context"
       ]
     }
   ],
@@ -203,7 +203,7 @@
             "Hypoxia, sepsis, inability to maintain oral intake, decompensated comorbidity or unsafe home circumstances may still require admission."
           ],
           "actions": [
-            "Consider discharge with safety-netting and outpatient review"
+            "Manage in community; arrange GP review within 48 hours; safety-net for breathlessness, fever persistence, or clinical deterioration"
           ]
         },
         {
@@ -215,7 +215,7 @@
             "Hospital assessment should be considered."
           ],
           "actions": [
-            "Admit for hospital assessment and monitoring"
+            "Admit for hospital assessment; initiate antibiotic within 1 hour (amoxicillin-clavulanate or clarithromycin per local formulary); order chest X-ray, blood cultures, urea and electrolytes"
           ]
         },
         {
@@ -227,7 +227,7 @@
             "Urgent hospital assessment is generally required."
           ],
           "actions": [
-            "Admit for urgent hospital assessment and monitoring"
+            "Admit to high-dependency or intensive-care setting; senior clinician review on admission; initiate antibiotic within 1 hour; blood cultures, comprehensive metabolic panel, blood glucose; consider imaging per clinical context"
           ]
         }
       ]

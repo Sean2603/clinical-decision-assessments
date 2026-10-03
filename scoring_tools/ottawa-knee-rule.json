@@ -74,7 +74,8 @@
         "No knee X-ray indicated by the Ottawa knee rule."
       ],
       "actions": [
-        "Clinical management without knee X-ray; document examination"
+        "Discharge without X-ray; apply ice, elevation, and compression; provide crutches if weight-bearing is painful",
+        "Document examination findings; arrange follow-up appointment in 7 days; safety-net for increased swelling, locking, or inability to mobilise"
       ]
     },
     {
@@ -86,7 +87,9 @@
         "Knee X-ray indicated: one or more criteria are present."
       ],
       "actions": [
-        "Order knee X-ray; review imaging findings"
+        "Order knee X-rays (AP, lateral, and skyline views); document clinical indication",
+        "If fracture identified: refer to orthopedics; immobilize as appropriate; arrange review appointment",
+        "If no fracture: discharge with analgesia (paracetamol, ibuprofen, or codeine if needed), rest, ice, elevation, compression; provide crutches if needed; arrange follow-up in 7 days"
       ]
     }
   ],

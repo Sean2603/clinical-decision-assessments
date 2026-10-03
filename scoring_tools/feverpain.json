@@ -74,7 +74,8 @@
         "Antibiotics are generally not indicated."
       ],
       "actions": [
-        "Manage symptoms with analgesia and fluids"
+        "Supportive care: paracetamol or ibuprofen for analgesia and fever; adequate fluids; throat lozenges",
+        "Arrange GP or telephone follow-up within 48 hours if not improving; safety-net for dysphagia, breathing difficulty, or high fever persistence"
       ]
     },
     {
@@ -86,7 +87,8 @@
         "Consider no antibiotic or a back-up prescription according to the clinical picture and local antimicrobial guidance."
       ],
       "actions": [
-        "Reassess in 2-3 days if not improved"
+        "Issue back-up antibiotic prescription (e.g., penicillin V or amoxicillin) with instructions: start if symptoms worsen or not improving after 48 hours",
+        "Reassess within 48 hours by phone; counsel on red flags (stridor, drooling, severe dysphagia, difficulty breathing)"
       ]
     },
     {
@@ -98,7 +100,8 @@
         "Consider an immediate or back-up antibiotic according to the clinical picture and local antimicrobial guidance."
       ],
       "actions": [
-        "Administer or prescribe antibiotic according to local guidance"
+        "Prescribe antibiotic immediately per local guidance (penicillin V or amoxicillin-clavulanate); document choice and counseling",
+        "Advise on completion of course, side effects, and red flags; arrange review if not improving within 3 days"
       ]
     }
   ],

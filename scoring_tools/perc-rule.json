@@ -128,7 +128,7 @@
         "Confirm that PE is already clinically very unlikely and that a credible alternative diagnosis is more likely."
       ],
       "actions": [
-        "Confirm low pre-test probability and alternative diagnosis more likely"
+        "Confirm low pre-test probability (PE probability <15% by clinical assessment); identify and confirm credible alternative diagnosis (e.g., musculoskeletal chest wall pain, gastroesophageal reflux)"
       ]
     },
     {
@@ -140,7 +140,8 @@
         "Within a correctly selected low-risk population, PE is sufficiently unlikely that further PE testing is generally not required. PE is not impossible, and overall disposition must consider other diagnoses."
       ],
       "actions": [
-        "PE sufficiently unlikely; proceed with alternative diagnosis management"
+        "Document PERC criteria met; D-dimer not needed",
+        "Discharge with alternative diagnosis management plan; counsel on red flags (sudden breathlessness, chest pain, syncope, leg swelling) and when to seek urgent review"
       ]
     },
     {
@@ -152,7 +153,8 @@
         "PE cannot be ruled out using PERC. This does not diagnose PE; continue through the appropriate PE assessment pathway."
       ],
       "actions": [
-        "Continue appropriate PE assessment pathway; obtain imaging if indicated"
+        "Proceed to computed tomography pulmonary angiography (CTPA) or ventilation/perfusion imaging per institutional protocol; admit for imaging and monitoring",
+        "Initiate anticoagulation if imaging is delayed >2 hours (unfractionated heparin or low-molecular-weight heparin per local guidance); senior review"
       ]
     }
   ],

@@ -118,7 +118,7 @@
         "Delirium or severe cognitive impairment is less likely, but not excluded."
       ],
       "actions": [
-        "Continue routine clinical assessment and management"
+        "Continue baseline clinical assessment; repeat 4AT if clinical change occurs"
       ]
     },
     {
@@ -130,9 +130,9 @@
         "Possible cognitive impairment; delirium is not excluded."
       ],
       "actions": [
-        "Consider further cognitive assessment",
-        "Review medication list for cognitive impacts",
-        "Assess for underlying causes of cognitive change"
+        "Administer formal cognitive assessment tool (Montreal Cognitive Assessment, Mini-Cog, or equivalent)",
+        "Review all medications for cognitive/CNS effects; document findings and discuss deprescribing where appropriate",
+        "Order initial investigations: blood glucose, oxygen saturation, temperature, vital signs; consider urea, electrolytes, full blood count, blood cultures if sepsis suspected"
       ]
     },
     {
@@ -144,10 +144,10 @@
         "Possible delirium, with or without cognitive impairment. Assess cause urgently."
       ],
       "actions": [
-        "Urgent assessment for underlying causes: hypoglycaemia, hypoxia, stroke, sepsis, head injury, drug toxicity, withdrawal",
-        "Initiate diagnostic workup including vital signs, blood glucose, oxygen saturation, blood tests",
-        "Consider early intervention based on identified cause",
-        "Monitor for fluctuations in mental status"
+        "Immediate investigation: blood glucose, oxygen saturation, temperature, vital signs, urea and electrolytes, full blood count, blood cultures",
+        "Assess specifically for hypoglycaemia, hypoxia, stroke (focal neuro signs), sepsis (temperature, white cell count, CRP), head injury, acute intoxication, drug toxicity, or withdrawal",
+        "Initiate specific management based on identified cause (e.g., glucose correction, oxygen delivery, antibiotics if septic, antiepileptic if seizures)",
+        "Continuous monitoring of mental status; document fluctuations and triggers"
       ]
     }
   ],
