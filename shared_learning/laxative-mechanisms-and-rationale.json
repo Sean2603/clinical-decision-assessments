@@ -1,0 +1,36 @@
+{
+  "id": "laxative-mechanisms-and-rationale",
+  "title": "Laxative mechanisms and clinical rationale",
+  "version": "1.0.0",
+  "status": "active",
+  "category": "Gastrointestinal pharmacology",
+  "summary": "Educational overview of laxative classes, mechanisms, and evidence-based rationale for treatment selection in constipation.",
+  "learningPoints": [
+    "Osmotic laxatives (lactulose, macrogol): Draw water into the bowel lumen by osmotic effect, softening stool and increasing motility without stimulating peristalsis directly. First-line per NICE NG114 because they are gentle, safe for long-term use, evidence-based, and suitable across all ages including pregnancy and breastfeeding. Take 2-3 days to work; require adequate fluid intake. Bloating and flatulence common initially but usually settle; reassure patients and titrate dose gradually. Lactulose is fermented by gut bacteria (hence bloating); macrogol has lower bloating risk. Effective in 70-80% of patients with functional constipation.",
+
+    "Bulk-forming laxatives (ispaghula husk, methylcellulose, bran): Increase stool bulk and water content by absorbing water in the colon, stimulating natural peristalsis. Preferred as non-pharmacological alternative if patient prefers; mimic dietary fibre. Take several days to weeks for full effect; require strict fluid intake (at least 150 mL water per sachet) or risk of bowel obstruction. Contraindicated if faecal impaction or obstruction suspected. Gradual introduction (start half-dose, increase over 1-2 weeks) reduces bloating. Effective long-term; can be used indefinitely as dietary fibre supplement. Most evidence for effectiveness when combined with increased dietary fibre and hydration.",
+
+    "Stool softeners (docusate): Anionic surfactant that increases water penetration into stool, making it softer without increasing motility. Rarely effective as monotherapy; used as adjunct to osmotic laxatives when hard stools are predominant problem. Works within 1-3 days. Particularly useful in combination with osmotic agents (osmotic + softener approach addresses both water content and stool hardness). Limited evidence as standalone agent; role is as combination therapy component. Safe across all ages.",
+
+    "Stimulant laxatives (senna, bisacodyl): Act directly on colonic myenteric plexus to increase peristalsis and colonic motility. NOT first-line for routine constipation per NICE NG114 due to concerns about long-term dependence, melanosis coli (benign pigmentation), and potential colonic motor dysfunction with chronic use. Reserved for opioid-induced constipation, acute impaction (suppository bisacodyl), or resistant cases after osmotic/bulk agents tried for 2-4 weeks. Time-limited use (short-term only, typically 2-4 weeks max); abdominal cramping common. Tolerance can develop; avoid prolonged use as routine therapy. Evidence supports short-term efficacy but not long-term safety profile.",
+
+    "Opioid-induced constipation: Different mechanism and treatment approach than functional constipation. Opioids inhibit colonic motility and increase water absorption; osmotic laxatives alone often insufficient because the problem is lack of motility, not water content. Stimulant laxatives preferred as first-line (senna, bisacodyl) because they directly stimulate colonic contraction against the opioid effect. Start laxative prophylactically when initiating opioids; do not wait for constipation to develop. Often requires higher doses or combination therapy (osmotic + stimulant). Lifestyle measures (fibre, fluid, mobility) less effective when opioid effect is strong. Consider de-prescribing opioid if possible; if essential, use lowest effective dose and combine with proactive laxative regimen.",
+
+    "Laxative selection algorithm: (1) Assess constipation type and cause. (2) Exclude red flags (weight loss, anaemia, age >40 with change in bowel habit, abdominal masses, new onset in >60 years) → refer if present. (3) Assess for medication causes (opioids, anticholinergics, calcium antagonists, iron) → consider de-prescribing if appropriate. (4) Start lifestyle measures: increase fibre to 20-30g daily gradually, fluid intake 6-8 glasses daily, physical activity, respond to urge without delay. (5) If inadequate response after 1-2 weeks, start first-line laxative: osmotic (lactulose or macrogol) OR bulk-forming (ispaghula) depending on patient preference and stool type. (6) If still inadequate after 2-4 weeks, add or switch: consider adding stool softener (docusate) to osmotic, or add stimulant (senna/bisacodyl) if opioid-induced or particularly resistant. (7) If no improvement after 4 weeks with two-agent therapy, or red flags present, refer to secondary care for further assessment. (8) Once effective, continue long-term osmotic/bulk therapy; avoid chronic stimulant laxatives except in opioid-induced constipation where ongoing use justified. (9) Review regularly and titrate to effect (goal: 1-3 soft stools per week without straining).",
+
+    "Common pitfalls and safety considerations: (1) Starting stimulant laxatives first-line — increases tolerance risk and potential for colonic dysfunction; reserve for opioid-induced or resistant cases. (2) Inadequate fluid intake with bulk-forming or osmotic agents — increases risk of bowel obstruction; always counsel on fluid requirements. (3) Escalating laxatives too quickly — osmotic agents take 2-3 days to work; patient anxiety may lead to premature escalation; reassure and allow adequate trial period. (4) Prolonged stimulant use — avoid >4 weeks continuous use outside opioid-induced constipation; risk of tolerance and colonic motor dysfunction. (5) Ignoring medication causes — opioids, anticholinergics, calcium antagonists are common culprits; review and consider de-prescribing before adding more laxatives. (6) Forgetting lifestyle measures — laxatives work better with fibre, fluid, and activity; counsel alongside pharmacotherapy. (7) Not referring when appropriate — if no improvement after 2-4 weeks or red flags present, refer; do not continue escalating laxatives in primary care indefinitely."
+  ],
+  "references": [
+    "NICE-NG114"
+  ],
+  "attachments": [],
+  "submittedBy": null,
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": "2027-10-03",
+    "reviewNotes": null
+  }
+}
