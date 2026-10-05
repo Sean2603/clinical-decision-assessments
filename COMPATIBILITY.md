@@ -1,0 +1,115 @@
+# Cross-Repo Compatibility Guide
+
+Three repos form the Clinical Decision Support platform. Changes to core contracts require updates across multiple repos.
+
+## Repo Responsibilities
+
+| Repo | Role | Source of Truth |
+|------|------|-----------------|
+| **clinical-decision-assessments (CDA)** | Schemas & published content | JSON schemas in `/schema` |
+| **cdm-content-manager (CDM)** | Authoring tool | Generates CDA-compliant content |
+| **clinical-decision-app** | Consumer | Parses & renders CDA content |
+
+## Change Impact Matrix
+
+### When CDA schemas change (e.g., scoring-tool-schema.json)
+
+**Required updates:**
+- [ ] **CDM**: Update content generation to produce valid data per new schema
+- [ ] **App**: Update fromJson parsers to handle new fields/structure
+- [ ] **Versioning**: Increment app `minimumAppVersion` in schema if app cannot handle old format
+- [ ] **All repos**: Update CHANGELOG with coordination note
+
+**Example:** Adding a new field to scoring tool evaluation
+```
+CDA schema/scoring-tool-schema.json: Add "newEvaluationMode" property
+CDM: Update tool editor to capture new field, generation templates
+App: Update RemoteScoringEvaluation.fromJson, evaluateScoring() logic
+```
+
+### When CDM output format changes
+
+**Required updates:**
+- [ ] **CDA**: Update schema if new fields/structure not already defined
+- [ ] **App**: Test pack validation with new CDM output
+- [ ] **All repos**: CHANGELOG coordination note
+
+### When App adds content-consumption feature
+
+**Required updates:**
+- [ ] **CDA schema**: Add or extend schema to support feature
+- [ ] **CDM**: Update content editor/generator for new schema fields
+- [ ] **App**: Implement feature + pack validation
+- [ ] **All repos**: CHANGELOG coordination note
+
+## Testing Cross-Repo Changes
+
+Before merging changes to core contracts:
+
+1. **App**: Run `flutter test` — verifies parsing with test fixtures
+2. **App**: Run parity validation — `RemoteClinicalDefinitionEngine.validateCatalog()` executes embedded test cases
+3. **Manual**: Generate sample content in CDM, validate against App using latest pack
+
+## Files Requiring Cross-Repo Review
+
+**If you modify these, check all 3 repos:**
+
+| File | Repo | Impact |
+|------|------|--------|
+| `schema/*.json` | CDA | App parsers + CDM generators |
+| `*_test.dart` (models) | App | Document contract expectations for CDM |
+| `remote_clinical_definitions.dart` | App | Core parsing — notify CDM |
+| `manifest.json` structure | CDA | CDM must generate compatible packs |
+| `RemoteScoringToolDefinition` | App | CDM output + CDA schema alignment |
+| `RemoteBloodPanelDefinition` | App | CDM output + CDA schema alignment |
+
+## Coordination Checklist for PRs
+
+Before merging a PR that changes core contracts:
+
+- [ ] Does this touch a schema file? → Update CDM and App
+- [ ] Does this add fields to a model? → Update schema to match
+- [ ] Does this change evaluation logic? → Verify parity cases still pass
+- [ ] Will this break existing content packs? → Add `minimumAppVersion` gate or migration
+- [ ] Have I updated all 3 repo CHANGELOGs with a coordination note?
+
+Example PR description footer:
+```
+### Cross-Repo Impact
+- **CDA**: Added `evaluationMode` field to scoring-tool-schema.json
+- **CDM**: Updated tool editor to capture mode, generation updated
+- **App**: RemoteScoringEvaluation now handles mode, logic in evaluateScoring()
+- **Tested**: Parity cases pass with new CDM output
+```
+
+## Version Pinning & Compatibility
+
+- App downloads content pack and calls `ClinicalContentPackLoader.load()` + `validateEngineParityCases()`
+- Pack validation fails if app cannot parse/execute it — pack is rejected
+- If schema requires new app code, raise `minimumAppVersion` in schema so old app versions refuse incompatible packs
+- Ensure backward compatibility when possible — make new fields optional with sensible defaults
+
+## Common Patterns
+
+### Adding an optional field
+1. Add to schema with `"default"` or `"type": ["string", "null"]`
+2. CDM: optional input, safe default on output
+3. App: handle null/missing gracefully in fromJson
+
+### Removing a field
+1. CDM: stop generating it (if optional in schema)
+2. App: parse still accepts it (no error on extra fields)
+3. Schema: mark as deprecated, plan sunset after N versions
+
+### Changing field type
+1. Schema: mark old field deprecated, add new field
+2. CDM: generate both for transition period, then switch
+3. App: parse both, prefer new, fall back to old
+
+## Questions Before Merging
+
+1. Is this change backward compatible? (Can old packs still load?)
+2. Will old app versions reject new packs? (By design or accident?)
+3. Do parity cases in test packs still pass?
+4. Are all 3 repos' CHANGELOGs updated?
+5. Should `minimumAppVersion` be incremented in schema?
