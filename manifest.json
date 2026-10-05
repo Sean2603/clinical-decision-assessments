@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.57",
-  "updatedAt": "2026-10-03T16:33:28Z",
+  "contentVersion": "0.0.59",
+  "updatedAt": "2026-10-05T14:49:42Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.64.3",
-  "downloadSizeBytes": 7061949,
+  "downloadSizeBytes": 7063053,
   "references": {
     "file": "references/references.json",
     "sha256": "2e3058eb945e58bb0a3807c4f687fbc96fa3c138446730221268596fbfc15b86",
@@ -500,9 +500,9 @@
       "version": "0.1.1",
       "file": "scoring_tools/news2.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "7298286c7588c0171996e7f78faae5e0a1006da550c1b2411075ac511b85b185",
+      "sha256": "60188d65b8f4877696c4b6b416fbef6efc9145efa19b1ca6286c46c10b606890",
       "schemaSha256": "c2c7136b1482343ad29d5e9b548e1331ec0096321961158e9464307aed6c361b",
-      "sizeBytes": 10303,
+      "sizeBytes": 11407,
       "schemaSizeBytes": 14209,
       "attachmentsSizeBytes": 0
     },

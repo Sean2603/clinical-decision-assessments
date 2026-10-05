@@ -16,38 +16,23 @@
   ],
   "criteria": [
     {
-      "id": "respiratory-rate",
-      "label": "Respiratory rate",
-      "description": "",
+      "id": "o2-scale-selector",
+      "label": "Oxygen saturation scale",
+      "description": "Select Scale 1 for standard patients; Scale 2 only if documented hypercapnic respiratory failure with target saturation 88–92%",
       "inputType": "choice",
-      "unit": "breaths/min",
+      "unit": "",
       "scoreWhenTrue": 0,
       "rules": [],
       "choices": [
         {
-          "id": "8",
-          "label": "≤8",
-          "score": 3
-        },
-        {
-          "id": "9-11",
-          "label": "9–11",
-          "score": 1
-        },
-        {
-          "id": "12-20",
-          "label": "12–20",
+          "id": "scale-1",
+          "label": "Scale 1 (Standard)",
           "score": 0
         },
         {
-          "id": "21-24",
-          "label": "21–24",
-          "score": 2
-        },
-        {
-          "id": "25",
-          "label": "≥25",
-          "score": 3
+          "id": "scale-2",
+          "label": "Scale 2 (Hypercapnic respiratory failure)",
+          "score": 0
         }
       ]
     },
@@ -110,6 +95,42 @@
           "id": "88-92-or-93-while-breathing-room-air",
           "label": "88–92%, or ≥93% while breathing room air",
           "score": 0
+        }
+      ]
+    },
+    {
+      "id": "respiratory-rate",
+      "label": "Respiratory rate",
+      "description": "",
+      "inputType": "choice",
+      "unit": "breaths/min",
+      "scoreWhenTrue": 0,
+      "rules": [],
+      "choices": [
+        {
+          "id": "8",
+          "label": "≤8",
+          "score": 3
+        },
+        {
+          "id": "9-11",
+          "label": "9–11",
+          "score": 1
+        },
+        {
+          "id": "12-20",
+          "label": "12–20",
+          "score": 0
+        },
+        {
+          "id": "21-24",
+          "label": "21–24",
+          "score": 2
+        },
+        {
+          "id": "25",
+          "label": "≥25",
+          "score": 3
         }
       ]
     },
@@ -335,13 +356,31 @@
     "failureScore": null,
     "failureResultId": null,
     "groups": [],
-    "decisionRules": []
+    "decisionRules": [
+      {
+        "condition": {
+          "criterionId": "o2-scale-selector",
+          "equals": "scale-1"
+        },
+        "action": "includeOnly",
+        "targets": ["spo2-scale-1"]
+      },
+      {
+        "condition": {
+          "criterionId": "o2-scale-selector",
+          "equals": "scale-2"
+        },
+        "action": "includeOnly",
+        "targets": ["spo2-scale-2"]
+      }
+    ]
   },
   "parityCases": [
     {
       "id": "result-low",
       "description": "Executable case for result band: Low aggregate score.",
       "inputs": {
+        "o2-scale-selector": "scale-1",
         "respiratory-rate": "12-20",
         "spo2-scale-1": "96",
         "spo2-scale-2": "88-92-or-93-while-breathing-room-air",
@@ -358,6 +397,7 @@
       "id": "result-medium",
       "description": "Executable case for result band: Medium aggregate score.",
       "inputs": {
+        "o2-scale-selector": "scale-1",
         "respiratory-rate": "8",
         "spo2-scale-1": "92-93",
         "spo2-scale-2": "88-92-or-93-while-breathing-room-air",
@@ -374,11 +414,12 @@
       "id": "result-high",
       "description": "Executable case for result band: High aggregate score.",
       "inputs": {
+        "o2-scale-selector": "scale-1",
         "respiratory-rate": "8",
         "spo2-scale-1": "91",
-        "spo2-scale-2": "86-87-or-93-94-while-receiving-supplemental-oxygen",
+        "spo2-scale-2": "88-92-or-93-while-breathing-room-air",
         "supplemental-oxygen": "breathing-room-air",
-        "temperature": "36-1-38-0",
+        "temperature": "35-1-36-0",
         "systolic-bp": "111-219",
         "pulse": "51-90",
         "consciousness": "alert-and-no-new-confusion"
