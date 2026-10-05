@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.59",
-  "updatedAt": "2026-10-05T14:49:42Z",
+  "contentVersion": "0.0.60",
+  "updatedAt": "2026-10-05T15:10:39Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.64.3",
-  "downloadSizeBytes": 7063053,
+  "downloadSizeBytes": 7062905,
   "references": {
     "file": "references/references.json",
     "sha256": "2e3058eb945e58bb0a3807c4f687fbc96fa3c138446730221268596fbfc15b86",
@@ -1135,9 +1135,9 @@
       "file": "shared_learning/laxative-mechanisms-and-rationale.json",
       "schema": "schema/shared-learning-schema.json",
       "sha256": "67026eed8794a3e3d78f165c2844130b0091dfa9ac76979a6e9178576bf10462",
-      "schemaSha256": "816a25aff5ff5005dc164a2df6b84720fc1b92e99d4a58cd659514b2388c23d5",
+      "schemaSha256": "53d851c5e5c11e1417273edf27ecf268267c4413c87c72a869ceae46edba9d3f",
       "sizeBytes": 5926,
-      "schemaSizeBytes": 6247,
+      "schemaSizeBytes": 6099,
       "attachmentsSizeBytes": 0
     }
   ]

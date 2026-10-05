@@ -181,19 +181,12 @@
         "title",
         "label",
         "path",
-        "caption",
-        "source",
-        "referenceId",
         "version",
         "sha256",
         "mediaType",
         "originalFileName",
-        "fileSize",
-        "width",
-        "height",
         "uploadedOn",
-        "uploadedBy",
-        "replacementGovernance"
+        "uploadedBy"
       ],
       "properties": {
         "id": {
