@@ -356,24 +356,7 @@
     "failureScore": null,
     "failureResultId": null,
     "groups": [],
-    "decisionRules": [
-      {
-        "condition": {
-          "criterionId": "o2-scale-selector",
-          "equals": "scale-1"
-        },
-        "action": "includeOnly",
-        "targets": ["spo2-scale-1"]
-      },
-      {
-        "condition": {
-          "criterionId": "o2-scale-selector",
-          "equals": "scale-2"
-        },
-        "action": "includeOnly",
-        "targets": ["spo2-scale-2"]
-      }
-    ]
+    "decisionRules": []
   },
   "parityCases": [
     {
