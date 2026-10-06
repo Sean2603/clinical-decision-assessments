@@ -79,8 +79,9 @@ def matches_numeric_rule(value: float, rule: dict[str, Any]) -> bool:
 def result_for_score(
     definition: dict[str, Any],
     score: float,
+    bands: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    for result in definition["results"]:
+    for result in definition["results"] if bands is None else bands:
         if (
             float(result["minimumScore"])
             <= score
@@ -89,6 +90,70 @@ def result_for_score(
             return result
     raise ValueError(
         f"No result band in {definition['id']} contains score {score}."
+    )
+
+
+def active_alternate_mode(
+    definition: dict[str, Any],
+    inputs: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Mirror the app: the first mode whose criteria are all optional and omitted."""
+    omitted = {
+        criterion["id"]
+        for criterion in definition["criteria"]
+        if criterion.get("required", True) is False
+        and criterion["id"] not in inputs
+    }
+    for mode in definition.get("alternateModes", []):
+        trigger = mode["whenOmittedCriterionIds"]
+        if trigger and all(criterion_id in omitted for criterion_id in trigger):
+            return mode
+    return None
+
+
+def filter_by_scale_selector(
+    criterion_ids: list[str],
+    inputs: dict[str, Any],
+) -> list[str]:
+    """Mirror the app's NEWS2 rule: only the selected SpO2 scale is scored."""
+    selected = inputs.get("o2-scale-selector")
+    excluded = {"scale-1": "spo2-scale-2", "scale-2": "spo2-scale-1"}.get(selected)
+    return [criterion_id for criterion_id in criterion_ids if criterion_id != excluded]
+
+
+def matching_escalation(
+    definition: dict[str, Any],
+    selected_result_id: str,
+    highest_criterion_score: float,
+) -> dict[str, Any] | None:
+    """Mirror the app: the first escalation (array order) that applies.
+
+    An escalation applies when the band selected by score is one of its
+    ``fromResultIds`` and any single scored criterion contributed at least
+    ``whenAnyCriterionScoresAtLeast``.
+    """
+    for escalation in definition.get("escalations", []):
+        if selected_result_id in escalation["fromResultIds"] and (
+            highest_criterion_score
+            >= float(escalation["whenAnyCriterionScoresAtLeast"])
+        ):
+            return escalation
+    return None
+
+
+def escalation_target_id(
+    definition: dict[str, Any],
+    bands: list[dict[str, Any]] | None,
+    escalation: dict[str, Any],
+) -> str:
+    """Resolve toResultId within the active bands first, then the results."""
+    target = escalation["toResultId"]
+    for result in [*(bands or []), *definition["results"]]:
+        if result["id"] == target:
+            return target
+    raise ValueError(
+        f"{definition['id']}: escalation {escalation['id']!r} refers to "
+        f"unknown result {target!r}."
     )
 
 
@@ -101,6 +166,17 @@ def evaluate_scoring(
     }
     evaluation = definition["evaluation"]
     kind = evaluation["kind"]
+    alternate_mode = active_alternate_mode(definition, inputs)
+    bands = alternate_mode["results"] if alternate_mode else None
+
+    def result_id_for(result_id: str, score: float) -> str:
+        if alternate_mode is None:
+            if not any(result["id"] == result_id for result in definition["results"]):
+                raise ValueError(
+                    f"{definition['id']} refers to unknown result {result_id!r}."
+                )
+            return result_id
+        return result_for_score(definition, score, bands)["id"]
 
     if kind == "none":
         raise ValueError(
@@ -116,15 +192,40 @@ def evaluate_scoring(
                 raise ValueError(
                     f"{definition['id']} has incomplete required-sum failure metadata."
                 )
-            return float(failure_score), str(failure_result)
+            return float(failure_score), result_id_for(
+                str(failure_result), float(failure_score)
+            )
 
     if kind in {"sum", "required-sum"}:
-        criterion_ids = evaluation["scoreCriteria"] or list(criteria)
-        score = sum(
-            criterion_score(criteria[criterion_id], inputs.get(criterion_id))
-            for criterion_id in criterion_ids
+        criterion_ids = filter_by_scale_selector(
+            evaluation["scoreCriteria"] or list(criteria), inputs
         )
-        return score, result_for_score(definition, score)["id"]
+        score = 0.0
+        highest_criterion_score = -math.inf
+        for criterion_id in criterion_ids:
+            if criterion_id not in criteria:
+                raise ValueError(
+                    f"{definition['id']} evaluation refers to unknown "
+                    f"criterion {criterion_id!r}."
+                )
+            criterion = criteria[criterion_id]
+            if criterion_id not in inputs:
+                # The app refuses to score a missing required answer.
+                if criterion.get("required", True) is False:
+                    continue
+                raise ValueError(
+                    f"{criterion_id} requires an answer before scoring."
+                )
+            contribution = criterion_score(criterion, inputs[criterion_id])
+            score += contribution
+            highest_criterion_score = max(highest_criterion_score, contribution)
+        result_id = result_for_score(definition, score, bands)["id"]
+        escalation = matching_escalation(
+            definition, result_id, highest_criterion_score
+        )
+        if escalation is not None:
+            result_id = escalation_target_id(definition, bands, escalation)
+        return score, result_id
 
     if kind == "group-count":
         score = 0.0
@@ -142,12 +243,18 @@ def evaluate_scoring(
             )
             if all_true and any_true:
                 score += 1.0
-        return score, result_for_score(definition, score)["id"]
+        return score, result_for_score(definition, score, bands)["id"]
 
     if kind == "decision":
         for rule in evaluation["decisionRules"]:
             if decision_rule_matches(rule, inputs):
-                return float(rule["score"]), str(rule["resultId"])
+                if rule["resultId"] is None:
+                    raise ValueError(
+                        f"{definition['id']}: decision rule {rule['id']} has no result ID."
+                    )
+                return float(rule["score"]), result_id_for(
+                    str(rule["resultId"]), float(rule["score"])
+                )
         raise ValueError(
             f"No decision rule matched for scoring tool {definition['id']}."
         )
@@ -179,14 +286,25 @@ def decision_rule_matches(
     return True
 
 
-_TOKEN = re.compile(
-    r"\s*(?:(\d+(?:\.\d+)?)|([A-Za-z][A-Za-z0-9]*)|(.))"
+# Mirror the app tokenizer: skip every character Dart's String.trim() treats
+# as whitespace (anywhere in the expression), and only accept ASCII digits.
+_WHITESPACE = (
+    "\u0009\u000a\u000b\u000c\u000d\u0020\u0085\u00a0\u1680"
+    "\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a"
+    "\u2028\u2029\u202f\u205f\u3000\ufeff"
 )
+_TOKEN = re.compile(
+    r"[" + re.escape(_WHITESPACE) + r"]*"
+    r"(?:([0-9]+(?:\.[0-9]+)?)|([A-Za-z][A-Za-z0-9]*)|(.))",
+    re.DOTALL,
+)
+_TRAILING_WHITESPACE = re.compile(r"[" + re.escape(_WHITESPACE) + r"]+\Z")
 
 
 class ExpressionParser:
     def __init__(self, expression: str, inputs: dict[str, float]) -> None:
         self.tokens: list[tuple[str, str]] = []
+        expression = _TRAILING_WHITESPACE.sub("", expression)
         for number, identifier, symbol in _TOKEN.findall(expression):
             if number:
                 self.tokens.append(("number", number))
@@ -322,6 +440,22 @@ def acid_base_pattern(
     return "mixed-or-indeterminate"
 
 
+def round_like_dart(value: float, precision: int) -> float:
+    """Mirror the app: (value * 10^p).roundToDouble() / 10^p.
+
+    Dart's roundToDouble() rounds half away from zero on the scaled value,
+    unlike Python's round(), which is round-half-even on the exact binary value.
+    """
+    factor = float(10**precision)
+    scaled = value * factor
+    if not math.isfinite(scaled):
+        return scaled / factor
+    rounded = math.floor(abs(scaled))
+    if abs(scaled) - rounded >= 0.5:
+        rounded += 1
+    return math.copysign(rounded, scaled) / factor
+
+
 def evaluate_calculation(
     calculation: dict[str, Any],
     inputs: dict[str, Any],
@@ -340,7 +474,7 @@ def evaluate_calculation(
         value = ExpressionParser(expression, numeric_inputs).parse()
         precision = engine["precision"]
         if precision is not None:
-            value = round(value, int(precision))
+            value = round_like_dart(value, int(precision))
         return value, None
     if kind == "acid-base-basic":
         code = acid_base_pattern(
@@ -451,7 +585,13 @@ def main() -> None:
                     definition,
                     case["inputs"],
                 )
-            except (KeyError, TypeError, ValueError, ZeroDivisionError) as exc:
+            except (
+                KeyError,
+                RecursionError,
+                TypeError,
+                ValueError,
+                ZeroDivisionError,
+            ) as exc:
                 errors.append(f"{path} case {case_id}: {exc}")
                 continue
 
@@ -532,6 +672,7 @@ def main() -> None:
                     )
                 except (
                     KeyError,
+                    RecursionError,
                     TypeError,
                     ValueError,
                     ZeroDivisionError,

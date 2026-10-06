@@ -11,6 +11,7 @@ MANIFEST_PATH = ROOT / "manifest.json"
 REFERENCES_PATH = ROOT / "references" / "references.json"
 GLOSSARY_PATH = ROOT / "glossary" / "glossary.json"
 CATEGORIES_PATH = ROOT / "categories" / "assessment-categories.json"
+CLINICAL_NOTICES_PATH = ROOT / "clinical_notices" / "clinical-notices.json"
 CATEGORIES_SCHEMA_PATH = ROOT / "schema" / "assessment-categories-schema.json"
 FEATURE_AVAILABILITY_PATH = ROOT / "app_config" / "feature-availability.json"
 FEATURE_AVAILABILITY_SCHEMA_PATH = ROOT / "schema" / "app-feature-availability-schema.json"
@@ -313,6 +314,31 @@ def assessments_use_inline_only_media(entries: list[dict]) -> bool:
     return False
 
 
+def scoring_tools_use_escalations(entries: list[dict]) -> bool:
+    """Older apps ignore `escalations` and would under-triage, so gate them."""
+    for entry in entries:
+        if not isinstance(entry.get("file"), str):
+            continue
+        escalations = load_json(ROOT / entry["file"]).get("escalations")
+        if isinstance(escalations, list) and escalations:
+            return True
+    return False
+
+
+def clinical_notices() -> list[dict]:
+    """Governed notices the app reads from `manifest.clinicalNotices`.
+
+    validate_content.py checks the source file against
+    schema/clinical-notices-schema.json; with no file there are no notices.
+    """
+    if not CLINICAL_NOTICES_PATH.exists():
+        return []
+    notices = load_json(CLINICAL_NOTICES_PATH).get("notices", [])
+    if not isinstance(notices, list):
+        raise SystemExit(f"{CLINICAL_NOTICES_PATH} notices must be an array")
+    return notices
+
+
 def payload_paths(generated_collections: dict[str, list[dict]]) -> set[Path]:
     paths = {
         REFERENCES_PATH,
@@ -383,6 +409,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "prescribing",
         "procedures",
         "sharedLearning",
+        "clinicalNotices",
     }
     preserved = {
         k: v
@@ -407,6 +434,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
             "0.63.5" if assessments_use_inline_images(generated_collections["assessments"]) else "0.49.0",
             "0.63.7" if assessments_use_inline_only_media(generated_collections["assessments"]) else "0.49.0",
             "0.64.3" if generated_collections["procedures"] else "0.49.0",
+            "0.76.3" if scoring_tools_use_escalations(generated_collections["scoringTools"]) else "0.49.0",
             "0.63.6",
         ),
         "appFeatureAvailability": {
@@ -446,6 +474,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
         "prescribing": generated_collections["prescribing"],
         "procedures": generated_collections["procedures"],
         "sharedLearning": generated_collections["sharedLearning"],
+        "clinicalNotices": clinical_notices(),
     }
 
     current_semantic = {

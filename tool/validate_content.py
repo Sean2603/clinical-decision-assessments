@@ -254,6 +254,51 @@ def _validate_prominent_resources(value: dict, source_path: Path, errors: list[s
             attachment_id = resource.get("attachmentId")
             if attachment_id not in attachment_ids:
                 errors.append(f"{source_path}:prominentResources[{index}]: attachmentId {attachment_id!r} does not resolve to an attachment on this content item.")
+        elif resource.get("sourceType") == "url":
+            # The app rejects the whole pack for a non-web URL resource.
+            url = resource.get("url")
+            if not isinstance(url,str) or not re.match(r"^https?://[^/\s]+",url):
+                errors.append(f"{source_path}:prominentResources[{index}]: url {url!r} must be an absolute http(s) URL.")
+
+def _validate_procedure_step_images(value: dict, source_path: Path, errors: list[str]) -> None:
+    image_ids = {
+        item.get("id") for item in value.get("attachments",[])
+        if isinstance(item,dict) and item.get("type") == "image"
+    }
+    for index, step in enumerate(value.get("steps",[])):
+        if not isinstance(step,dict):
+            continue
+        image_id = step.get("imageAttachmentId")
+        if image_id is not None and image_id not in image_ids:
+            errors.append(f"{source_path}:steps[{index}]: imageAttachmentId {image_id!r} does not resolve to an image attachment on this procedure.")
+
+def _validate_scoring_escalations(value: dict, source_path: Path, errors: list[str]) -> None:
+    # Mirrors ClinicalContentValidator.validateScoringTool in the app, which
+    # rejects the whole pack for an escalation it could not apply safely.
+    escalations = value.get("escalations",[])
+    if not isinstance(escalations,list) or not escalations:
+        return
+    evaluation = value.get("evaluation")
+    kind = evaluation.get("kind") if isinstance(evaluation,dict) else None
+    if kind not in {"sum","required-sum"}:
+        errors.append(f"{source_path}:escalations: evaluation kind {kind!r} does not support escalations (only 'sum' and 'required-sum').")
+    known_result_ids = {
+        result.get("id") for result in value.get("results",[])
+        if isinstance(result,dict)
+    }
+    for mode in value.get("alternateModes",[]):
+        if isinstance(mode,dict):
+            known_result_ids.update(
+                result.get("id") for result in mode.get("results",[])
+                if isinstance(result,dict)
+            )
+    for index, escalation in enumerate(escalations):
+        if not isinstance(escalation,dict):
+            continue
+        referenced = [escalation.get("toResultId"),*escalation.get("fromResultIds",[])]
+        unknown = sorted({str(item) for item in referenced if item not in known_result_ids})
+        if unknown:
+            errors.append(f"{source_path}:escalations[{index}]: result IDs {', '.join(unknown)} do not resolve to a result on this scoring tool.")
 
 def validate_collection(kind: str, settings: dict, known_reference_ids: set[str],
                         known_category_ids: set[str], errors: list[str]) -> dict[str,dict]:
@@ -290,6 +335,10 @@ def validate_collection(kind: str, settings: dict, known_reference_ids: set[str]
                 errors.append(f"{path}: unknown category IDs: {', '.join(unknown)}.")
         _validate_attachments(kind,value,path,known_reference_ids,errors)
         _validate_prominent_resources(value,path,errors)
+        if kind == "procedure":
+            _validate_procedure_step_images(value,path,errors)
+        if kind == "scoring-tool":
+            _validate_scoring_escalations(value,path,errors)
         missing = sorted(document_reference_ids(kind,value)-known_reference_ids)
         if missing:
             errors.append(f"{path}: unknown reference IDs: {', '.join(missing)}.")
@@ -365,6 +414,10 @@ def validate_cross_links(documents_by_kind: dict[str,dict[str,dict]], errors: li
                 if pathway is None:
                     errors.append(f"medications/{medication_id}: prescribingPathwayId {pathway_id!r} does not resolve.")
                     continue
+                if pathway.get("status") == "withdrawn":
+                    # The app rejects the whole pack for a link to a withdrawn pathway.
+                    errors.append(f"medications/{medication_id}: prescribingPathwayId {pathway_id!r} is withdrawn.")
+                    continue
                 matches = [choice for choice in pathway.get("regimens",[]) if choice.get("label") == choice_label]
                 if not matches:
                     errors.append(f"medications/{medication_id}: prescribingChoiceLabel {choice_label!r} does not exist in {pathway_id}.")
@@ -372,11 +425,24 @@ def validate_cross_links(documents_by_kind: dict[str,dict[str,dict]], errors: li
                 if not any(any(component.get("medicationId") == medication_id for component in choice.get("components",[])) for choice in matches):
                     errors.append(f"medications/{medication_id}: {pathway_id} choice {choice_label!r} does not link back to this medication.")
 
+LINE_ENDING_EXCLUDED_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__", ".claude", ".agents", ".windsurf"}
+
+def validate_line_endings(errors: list[str]) -> None:
+    # The app hashes raw downloaded bytes, while sync_manifest.py hashes
+    # LF-normalised text, so a CR byte would make every manifest hash mismatch.
+    for path in sorted(ROOT.rglob("*.json")):
+        relative = path.relative_to(ROOT)
+        if any(part in LINE_ENDING_EXCLUDED_DIRS for part in relative.parts[:-1]) or not path.is_file():
+            continue
+        if b"\r" in path.read_bytes():
+            errors.append(f"{relative.as_posix()}: contains a carriage return (CR) byte; JSON files must use LF line endings only.")
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-ref",help="Base Git ref used to enforce content version increases.")
     args = parser.parse_args()
     errors = []
+    validate_line_endings(errors)
     known_category_ids = validate_assessment_categories(errors)
     references_document = load_json(ROOT/"references"/"references.json",errors)
     if references_document is None:
@@ -437,6 +503,7 @@ def main() -> int:
         folder_to_kind = {
             "assessments":"assessment","guidelines":"guideline","procedures":"procedure","scoring_tools":"scoring-tool",
             "blood_panels":"blood-panel","medications":"medication","prescribing":"prescribing",
+            "shared_learning":"shared-learning",
         }
         for relative_path in sorted(changed):
             folder = relative_path.split("/",1)[0]

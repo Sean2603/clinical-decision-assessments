@@ -167,7 +167,7 @@
       }
     },
     "evaluation": {
-      "type": "object"
+      "$ref": "#/$defs/evaluation"
     },
     "parityCases": {
       "type": "array",
@@ -256,6 +256,46 @@
           }
         }
       }
+    },
+    "escalations": {
+      "description": "Governed single-criterion escalations for sum and required-sum evaluations (e.g. the NEWS2 single-parameter 'red score'). After the result band is selected by score, the first escalation in array order whose fromResultIds contains that band, and whose threshold is reached by any single scored criterion, replaces the result with toResultId. The score is unchanged. Never applied to a required-sum prerequisite-failure result. Content using escalations requires app 0.76.3 or later.",
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "whenAnyCriterionScoresAtLeast",
+          "fromResultIds",
+          "toResultId"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "whenAnyCriterionScoresAtLeast": {
+            "description": "Triggers when any single scored criterion (after the NEWS2 SpO2-scale filter, skipping omitted optional criteria) contributes at least this score.",
+            "type": "number"
+          },
+          "fromResultIds": {
+            "description": "The escalation applies only when the band selected by score is one of these result IDs.",
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z0-9-]+$"
+            }
+          },
+          "toResultId": {
+            "description": "Result shown instead. Resolved within the active alternate mode's results first, then the tool's results.",
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        }
+      }
     }
   },
   "allOf": [
@@ -332,6 +372,23 @@
         },
         "score": {
           "type": "number"
+        }
+      },
+      "if": {
+        "properties": {
+          "operator": {
+            "const": "between"
+          }
+        },
+        "required": [
+          "operator"
+        ]
+      },
+      "then": {
+        "properties": {
+          "upperValue": {
+            "type": "number"
+          }
         }
       }
     },
@@ -698,6 +755,182 @@
             "required": [
               "attachmentId"
             ]
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "scoreCriteria",
+        "requiredTrue",
+        "failureResultId",
+        "failureScore",
+        "groups",
+        "decisionRules"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "none",
+            "sum",
+            "required-sum",
+            "group-count",
+            "decision"
+          ]
+        },
+        "scoreCriteria": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9-]+$"
+              }
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "requiredTrue": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          }
+        },
+        "failureResultId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "failureScore": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "allTrue",
+              "anyTrue"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "allTrue": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]+$"
+                }
+              },
+              "anyTrue": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]+$"
+                }
+              }
+            }
+          }
+        },
+        "decisionRules": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "resultId",
+              "score",
+              "anyTrue",
+              "allTrue",
+              "noneTrue",
+              "falseCriterion",
+              "always"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "resultId": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "score": {
+                "type": "number"
+              },
+              "anyTrue": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]+$"
+                }
+              },
+              "allTrue": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]+$"
+                }
+              },
+              "noneTrue": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9-]+$"
+                }
+              },
+              "falseCriterion": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "always": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "required-sum"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "failureResultId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "failureScore": {
+                "type": "number"
+              }
+            }
           }
         }
       ]

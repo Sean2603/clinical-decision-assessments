@@ -1,3 +1,43 @@
+## 2026-10-06 – Governed single-criterion escalation for scoring tools
+
+- `schema/scoring-tool-schema.json`: new optional top-level `escalations` array (default `[]`). Each item (`additionalProperties: false`) requires `id`, `whenAnyCriterionScoresAtLeast` (number), `fromResultIds` (unique result IDs, at least one) and `toResultId`. It expresses rules that score bands cannot, such as the NEWS2 single-parameter "red score": an aggregate of 1–4 is low, but any single parameter scoring 3 needs an urgent ward-based (low–medium) response.
+- Semantics, identical in `tool/validate_remote_engines.py` (`evaluate_scoring`) and the app engine:
+  - Applies only to `sum` and `required-sum` evaluations, never to a required-sum prerequisite-failure result.
+  - Triggers when any single scored criterion contributes at least the threshold. Scored criteria are taken after the NEWS2 SpO2-scale filter, and omitted optional criteria are skipped.
+  - Applies only when the band selected by score is in `fromResultIds`. The first matching escalation in array order wins.
+  - The score is unchanged; only the result changes. `toResultId` is resolved within the active alternate mode's results first, then the tool's `results`.
+  - Bands are still chosen first-match in array order, so an escalation-only band (e.g. NEWS2 `low-medium`) can carry a score range shadowed by an earlier band.
+- `tool/validate_content.py` rejects an escalation whose `toResultId` or `fromResultIds` does not resolve to a result on the tool or one of its alternate modes. It also rejects escalations on an evaluation kind that ignores them (anything but `sum`/`required-sum`). This mirrors the app's `ClinicalContentValidator.validateScoringTool`. The parity engine also fails an unresolved escalation target.
+- `tool/sync_manifest.py`: any scoring tool with a non-empty `escalations` array raises the pack `minimumAppVersion` to at least 0.76.3. Older builds ignore the field and would under-triage. No current content uses escalations, so the manifest `minimumAppVersion` is unchanged (0.64.3); `manifest.json` was regenerated only for the new schema hash.
+- `tool/sync_manifest.py` again publishes clinical notices. The 2026-08-12 entry says notices in `clinical_notices/clinical-notices.json` are included in the generated manifest, but the generator had stopped emitting them, so authored notices could never reach the app (which reads `manifest.clinicalNotices`). `clinicalNotices` is now a generated key: the file's `notices` array, or `[]` when there is no file. The current manifest gains an empty `clinicalNotices`, which bumps `contentVersion` to 0.0.66.
+- No content changed. `scoring_tools/news2.json` is deliberately untouched: the NEWS2 low–medium band and red-score escalation are to be authored and clinically validated through CDM.
+- Coordinated with Flutter app 0.76.3. That release parses and applies `escalations`, shows the escalated band in the scoring panel and copied summary, and validates escalation result IDs on pack load. In the same release the app reports the true maximum score (e.g. PE Wells 12.5, not 20) and shows a required-sum prerequisite failure (PERC "not yet applicable") in a neutral tone without its sentinel score. Those app-only fixes need no CDA change.
+
+## 2026-10-06 – Scoring/blood engine schema contract and app-parity validation
+
+- Differential-fuzzing follow-up (2026-10-06): closed gaps where CDA validation diverged from, or was looser than, the Flutter app:
+  - `tool/validate_remote_engines.py`: calculation `precision` rounding now mirrors the app's `(value * 10^p).roundToDouble() / 10^p` (half away from zero after scaling) instead of Python's `round()`, which disagreed on values such as corrected calcium 4.0/14.75 (app 4.51), osmolality 131/15.15/63 (app 340.2) and osmolal gap 208.95/464.2 (app -255.3). The expression tokenizer now skips whitespace anywhere (trailing whitespace was wrongly rejected), accepts only ASCII digits (non-ASCII digits such as `٣` were accepted), and pathologically deep nesting fails as a validation error instead of crashing.
+  - `schema/scoring-tool-schema.json`: a `between` rule must have a numeric `upperValue` (the app cannot evaluate it otherwise). `schema/blood-panel-schema.json`: calculation `precision` is capped at 6.
+  - `tool/validate_manifest_safety.py` now type-checks `updatePolicy` and `emergencyRevocations` against the app's hard casts: string fields, boolean `blockClinicalContentUntilUpdated`, `X.Y.Z` string or null `affectedVersions.minimum`/`maximum`, and Dart-parseable ISO-8601 or null `effectiveFrom`. A revocation `contentType` must be one the app uses (`assessment`, `guideline`, `procedure`, `scoring-tool`, `blood-panel`, `medication`, `prescribing`). `contentId` is not required to exist, so an item already removed from CDA can still be revoked on devices.
+  - `tool/validate_content.py` fails if any repository `*.json` file contains a carriage return byte. The app hashes the raw bytes, but `sync_manifest.py` hashes LF-normalised text.
+  - No content changed. `manifest.json` was regenerated for the new schema hashes.
+- Coordinated with Flutter app 0.76.1+133, which adds a contract test that loads this repository through the app's own parsers, validators and engines.
+- `schema/scoring-tool-schema.json`: `evaluation` is now a defined `$defs/evaluation` object instead of an unconstrained `object`. It requires `kind` (`none`, `sum`, `required-sum`, `group-count`, `decision`), `scoreCriteria`, `requiredTrue`, `failureResultId`, `failureScore`, `groups` and `decisionRules`, and `required-sum` must carry a failure result and score. Previously `"evaluation": {}` was schema-valid but would have made the app reject the whole pack.
+- `schema/blood-panel-schema.json`: calculation `engine` is now a defined `$defs/calculationEngine` object. It requires `kind` (`expression`, `acid-base-basic`, `aki-creatinine-stage`), `expression`, `precision` and numeric `parameters`, with optional string `textResults`. An `expression` engine must have an expression.
+- All existing content already conforms; no content file changed. `manifest.json` was regenerated for the new schema hashes.
+- `tool/validate_content.py` now rejects conditions that previously passed CDA validation but would make the app reject the pack or drop content:
+  - a medication regimen linking to a `withdrawn` prescribing pathway;
+  - a `url` prominent resource that is not an absolute http(s) URL;
+  - a procedure step `imageAttachmentId` that does not resolve to an image attachment on the same procedure.
+- `tool/validate_content.py --base-ref` now also enforces version increases for `shared_learning/`.
+- `tool/validate_remote_engines.py` now mirrors the app scoring engine so parity cases test the same semantics:
+  - `alternateModes` (e.g. CRB-65 when urea is omitted);
+  - optional (`required: false`) criteria;
+  - rejection of a missing answer to a required criterion, where it previously scored 0;
+  - NEWS2 `o2-scale-selector` scoring only the selected SpO2 scale;
+  - unknown result IDs.
+- Updated `COMPATIBILITY.md`: specimens are rendered by the app, and the app contract test is documented.
+
 ## 2026-09-29 – Repository documentation and developer guidance
 
 - Added FILE_STRUCTURE.md documenting directory structure, file responsibilities, validation workflows, and publication governance.
