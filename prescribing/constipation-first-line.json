@@ -160,9 +160,17 @@
       "components": [
         {
           "medicationId": null,
-          "displayName": "Bisacodyl tablets or suppositories",
-          "dose": "Tablets: 5-10 mg once daily at bedtime. Suppository: 10 mg once daily (usually morning)",
-          "route": "oral or rectal",
+          "displayName": "Bisacodyl tablets",
+          "dose": "5-10 mg once daily at bedtime",
+          "route": "PO",
+          "frequency": "once daily",
+          "duration": "short-term use only; review after 2-4 weeks and plan to discontinue"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Bisacodyl suppository",
+          "dose": "10 mg once daily (usually morning)",
+          "route": "PR",
           "frequency": "once daily",
           "duration": "short-term use only; review after 2-4 weeks and plan to discontinue"
         }

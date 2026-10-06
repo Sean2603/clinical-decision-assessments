@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.61",
-  "updatedAt": "2026-10-05T15:15:26Z",
+  "contentVersion": "0.0.62",
+  "updatedAt": "2026-10-06T14:23:25Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.64.3",
-  "downloadSizeBytes": 7062509,
+  "downloadSizeBytes": 7062735,
   "references": {
     "file": "references/references.json",
     "sha256": "2e3058eb945e58bb0a3807c4f687fbc96fa3c138446730221268596fbfc15b86",
@@ -1022,9 +1022,9 @@
       "version": "1.0.0",
       "file": "prescribing/constipation-first-line.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "75ec6d31ddbe9306c8e74436c5e9ac6c88dd4356d0c948221a145a9428662d84",
+      "sha256": "ca44c053e6a727f64fc9b2158aaa83a39c3400e46917660eac1e5dc252c6af8f",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
-      "sizeBytes": 10661,
+      "sizeBytes": 10887,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
