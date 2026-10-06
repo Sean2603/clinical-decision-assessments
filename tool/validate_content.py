@@ -254,6 +254,23 @@ def _validate_prominent_resources(value: dict, source_path: Path, errors: list[s
             attachment_id = resource.get("attachmentId")
             if attachment_id not in attachment_ids:
                 errors.append(f"{source_path}:prominentResources[{index}]: attachmentId {attachment_id!r} does not resolve to an attachment on this content item.")
+        elif resource.get("sourceType") == "url":
+            # The app rejects the whole pack for a non-web URL resource.
+            url = resource.get("url")
+            if not isinstance(url,str) or not re.match(r"^https?://[^/\s]+",url):
+                errors.append(f"{source_path}:prominentResources[{index}]: url {url!r} must be an absolute http(s) URL.")
+
+def _validate_procedure_step_images(value: dict, source_path: Path, errors: list[str]) -> None:
+    image_ids = {
+        item.get("id") for item in value.get("attachments",[])
+        if isinstance(item,dict) and item.get("type") == "image"
+    }
+    for index, step in enumerate(value.get("steps",[])):
+        if not isinstance(step,dict):
+            continue
+        image_id = step.get("imageAttachmentId")
+        if image_id is not None and image_id not in image_ids:
+            errors.append(f"{source_path}:steps[{index}]: imageAttachmentId {image_id!r} does not resolve to an image attachment on this procedure.")
 
 def validate_collection(kind: str, settings: dict, known_reference_ids: set[str],
                         known_category_ids: set[str], errors: list[str]) -> dict[str,dict]:
@@ -290,6 +307,8 @@ def validate_collection(kind: str, settings: dict, known_reference_ids: set[str]
                 errors.append(f"{path}: unknown category IDs: {', '.join(unknown)}.")
         _validate_attachments(kind,value,path,known_reference_ids,errors)
         _validate_prominent_resources(value,path,errors)
+        if kind == "procedure":
+            _validate_procedure_step_images(value,path,errors)
         missing = sorted(document_reference_ids(kind,value)-known_reference_ids)
         if missing:
             errors.append(f"{path}: unknown reference IDs: {', '.join(missing)}.")
@@ -365,6 +384,10 @@ def validate_cross_links(documents_by_kind: dict[str,dict[str,dict]], errors: li
                 if pathway is None:
                     errors.append(f"medications/{medication_id}: prescribingPathwayId {pathway_id!r} does not resolve.")
                     continue
+                if pathway.get("status") == "withdrawn":
+                    # The app rejects the whole pack for a link to a withdrawn pathway.
+                    errors.append(f"medications/{medication_id}: prescribingPathwayId {pathway_id!r} is withdrawn.")
+                    continue
                 matches = [choice for choice in pathway.get("regimens",[]) if choice.get("label") == choice_label]
                 if not matches:
                     errors.append(f"medications/{medication_id}: prescribingChoiceLabel {choice_label!r} does not exist in {pathway_id}.")
@@ -437,6 +460,7 @@ def main() -> int:
         folder_to_kind = {
             "assessments":"assessment","guidelines":"guideline","procedures":"procedure","scoring_tools":"scoring-tool",
             "blood_panels":"blood-panel","medications":"medication","prescribing":"prescribing",
+            "shared_learning":"shared-learning",
         }
         for relative_path in sorted(changed):
             folder = relative_path.split("/",1)[0]

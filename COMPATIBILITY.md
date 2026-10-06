@@ -47,6 +47,7 @@ App: Update RemoteScoringEvaluation.fromJson, evaluateScoring() logic
 Before merging changes to core contracts:
 
 1. **App**: Run `flutter test` — verifies parsing with test fixtures
+   - `test/cda_contract_test.dart` loads a real CDA checkout (`CDA_REPO_PATH` or sibling `../clinical-decision-assessments`) through the app's pack loader. It also re-parses every document stripped to its schema-required fields and with every nullable field set to null. Run it with your CDA branch checked out before merging a schema change.
 2. **App**: Run parity validation — `RemoteClinicalDefinitionEngine.validateCatalog()` executes embedded test cases
 3. **Manual**: Generate sample content in CDM, validate against App using latest pack
 
@@ -119,10 +120,7 @@ Example PR description footer:
 **Compatibility audit completed 2026-10-05.** 5 medium/high-severity issues fixed. 3 low-severity issues deferred:
 
 ### 1. RemoteBloodPanelDefinition Specimens Field
-- **Status:** Ignored in parser (optional in schema, default `[]`)
-- **Impact:** Specimen-type metadata (tube colors, volume) not rendered
-- **Why deferred:** Optional field; UI doesn't yet display specimens; can add later without schema changes
-- **Action:** When specimen guidance is added to UI, parser just needs to start reading the field
+- **Status (updated 2026-10-06):** Resolved. `RemoteBloodPanelDefinition` does not hold specimens, but the app reads them through `BloodSpecimenService` and renders tube colours for every `specimenTypeId`. The app contract test checks every schema specimen type.
 
 ### 2. Medication Summary Empty String Default
 - **Status:** Defaults to `''` when missing (schema marks required)

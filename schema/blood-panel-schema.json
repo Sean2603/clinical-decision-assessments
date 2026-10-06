@@ -418,7 +418,7 @@
           }
         },
         "engine": {
-          "type": "object"
+          "$ref": "#/$defs/calculationEngine"
         },
         "parityCases": {
           "type": "array",
@@ -801,6 +801,73 @@
             "required": [
               "attachmentId"
             ]
+          }
+        }
+      ]
+    },
+    "calculationEngine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "expression",
+        "precision",
+        "parameters"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "expression",
+            "acid-base-basic",
+            "aki-creatinine-stage"
+          ]
+        },
+        "expression": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "precision": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "textResults": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {}
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "expression"
+              }
+            },
+            "required": [
+              "kind"
+            ]
+          },
+          "then": {
+            "properties": {
+              "expression": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
           }
         }
       ]

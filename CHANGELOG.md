@@ -1,3 +1,22 @@
+## 2026-10-06 – Scoring/blood engine schema contract and app-parity validation
+
+- Coordinated with Flutter app 0.76.1+133, which adds a contract test that loads this repository through the app's own parsers, validators and engines.
+- `schema/scoring-tool-schema.json`: `evaluation` is now a defined `$defs/evaluation` object instead of an unconstrained `object`. It requires `kind` (`none`, `sum`, `required-sum`, `group-count`, `decision`), `scoreCriteria`, `requiredTrue`, `failureResultId`, `failureScore`, `groups` and `decisionRules`, and `required-sum` must carry a failure result and score. Previously `"evaluation": {}` was schema-valid but would have made the app reject the whole pack.
+- `schema/blood-panel-schema.json`: calculation `engine` is now a defined `$defs/calculationEngine` object. It requires `kind` (`expression`, `acid-base-basic`, `aki-creatinine-stage`), `expression`, `precision` and numeric `parameters`, with optional string `textResults`. An `expression` engine must have an expression.
+- All existing content already conforms; no content file changed. `manifest.json` was regenerated for the new schema hashes.
+- `tool/validate_content.py` now rejects conditions that previously passed CDA validation but would make the app reject the pack or drop content:
+  - a medication regimen linking to a `withdrawn` prescribing pathway;
+  - a `url` prominent resource that is not an absolute http(s) URL;
+  - a procedure step `imageAttachmentId` that does not resolve to an image attachment on the same procedure.
+- `tool/validate_content.py --base-ref` now also enforces version increases for `shared_learning/`.
+- `tool/validate_remote_engines.py` now mirrors the app scoring engine so parity cases test the same semantics:
+  - `alternateModes` (e.g. CRB-65 when urea is omitted);
+  - optional (`required: false`) criteria;
+  - rejection of a missing answer to a required criterion, where it previously scored 0;
+  - NEWS2 `o2-scale-selector` scoring only the selected SpO2 scale;
+  - unknown result IDs.
+- Updated `COMPATIBILITY.md`: specimens are rendered by the app, and the app contract test is documented.
+
 ## 2026-09-29 – Repository documentation and developer guidance
 
 - Added FILE_STRUCTURE.md documenting directory structure, file responsibilities, validation workflows, and publication governance.

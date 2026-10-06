@@ -79,8 +79,9 @@ def matches_numeric_rule(value: float, rule: dict[str, Any]) -> bool:
 def result_for_score(
     definition: dict[str, Any],
     score: float,
+    bands: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    for result in definition["results"]:
+    for result in definition["results"] if bands is None else bands:
         if (
             float(result["minimumScore"])
             <= score
@@ -92,6 +93,34 @@ def result_for_score(
     )
 
 
+def active_alternate_mode(
+    definition: dict[str, Any],
+    inputs: dict[str, Any],
+) -> dict[str, Any] | None:
+    """Mirror the app: the first mode whose criteria are all optional and omitted."""
+    omitted = {
+        criterion["id"]
+        for criterion in definition["criteria"]
+        if criterion.get("required", True) is False
+        and criterion["id"] not in inputs
+    }
+    for mode in definition.get("alternateModes", []):
+        trigger = mode["whenOmittedCriterionIds"]
+        if trigger and all(criterion_id in omitted for criterion_id in trigger):
+            return mode
+    return None
+
+
+def filter_by_scale_selector(
+    criterion_ids: list[str],
+    inputs: dict[str, Any],
+) -> list[str]:
+    """Mirror the app's NEWS2 rule: only the selected SpO2 scale is scored."""
+    selected = inputs.get("o2-scale-selector")
+    excluded = {"scale-1": "spo2-scale-2", "scale-2": "spo2-scale-1"}.get(selected)
+    return [criterion_id for criterion_id in criterion_ids if criterion_id != excluded]
+
+
 def evaluate_scoring(
     definition: dict[str, Any],
     inputs: dict[str, Any],
@@ -101,6 +130,17 @@ def evaluate_scoring(
     }
     evaluation = definition["evaluation"]
     kind = evaluation["kind"]
+    alternate_mode = active_alternate_mode(definition, inputs)
+    bands = alternate_mode["results"] if alternate_mode else None
+
+    def result_id_for(result_id: str, score: float) -> str:
+        if alternate_mode is None:
+            if not any(result["id"] == result_id for result in definition["results"]):
+                raise ValueError(
+                    f"{definition['id']} refers to unknown result {result_id!r}."
+                )
+            return result_id
+        return result_for_score(definition, score, bands)["id"]
 
     if kind == "none":
         raise ValueError(
@@ -116,15 +156,31 @@ def evaluate_scoring(
                 raise ValueError(
                     f"{definition['id']} has incomplete required-sum failure metadata."
                 )
-            return float(failure_score), str(failure_result)
+            return float(failure_score), result_id_for(
+                str(failure_result), float(failure_score)
+            )
 
     if kind in {"sum", "required-sum"}:
-        criterion_ids = evaluation["scoreCriteria"] or list(criteria)
-        score = sum(
-            criterion_score(criteria[criterion_id], inputs.get(criterion_id))
-            for criterion_id in criterion_ids
+        criterion_ids = filter_by_scale_selector(
+            evaluation["scoreCriteria"] or list(criteria), inputs
         )
-        return score, result_for_score(definition, score)["id"]
+        score = 0.0
+        for criterion_id in criterion_ids:
+            if criterion_id not in criteria:
+                raise ValueError(
+                    f"{definition['id']} evaluation refers to unknown "
+                    f"criterion {criterion_id!r}."
+                )
+            criterion = criteria[criterion_id]
+            if criterion_id not in inputs:
+                # The app refuses to score a missing required answer.
+                if criterion.get("required", True) is False:
+                    continue
+                raise ValueError(
+                    f"{criterion_id} requires an answer before scoring."
+                )
+            score += criterion_score(criterion, inputs[criterion_id])
+        return score, result_for_score(definition, score, bands)["id"]
 
     if kind == "group-count":
         score = 0.0
@@ -142,12 +198,18 @@ def evaluate_scoring(
             )
             if all_true and any_true:
                 score += 1.0
-        return score, result_for_score(definition, score)["id"]
+        return score, result_for_score(definition, score, bands)["id"]
 
     if kind == "decision":
         for rule in evaluation["decisionRules"]:
             if decision_rule_matches(rule, inputs):
-                return float(rule["score"]), str(rule["resultId"])
+                if rule["resultId"] is None:
+                    raise ValueError(
+                        f"{definition['id']}: decision rule {rule['id']} has no result ID."
+                    )
+                return float(rule["score"]), result_id_for(
+                    str(rule["resultId"]), float(rule["score"])
+                )
         raise ValueError(
             f"No decision rule matched for scoring tool {definition['id']}."
         )
