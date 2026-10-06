@@ -833,7 +833,8 @@
             "integer",
             "null"
           ],
-          "minimum": 0
+          "minimum": 0,
+          "maximum": 6
         },
         "parameters": {
           "type": "object",

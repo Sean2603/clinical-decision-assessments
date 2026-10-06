@@ -395,11 +395,24 @@ def validate_cross_links(documents_by_kind: dict[str,dict[str,dict]], errors: li
                 if not any(any(component.get("medicationId") == medication_id for component in choice.get("components",[])) for choice in matches):
                     errors.append(f"medications/{medication_id}: {pathway_id} choice {choice_label!r} does not link back to this medication.")
 
+LINE_ENDING_EXCLUDED_DIRS = {".git", ".venv", "venv", "node_modules", "__pycache__", ".claude", ".agents", ".windsurf"}
+
+def validate_line_endings(errors: list[str]) -> None:
+    # The app hashes raw downloaded bytes, while sync_manifest.py hashes
+    # LF-normalised text, so a CR byte would make every manifest hash mismatch.
+    for path in sorted(ROOT.rglob("*.json")):
+        relative = path.relative_to(ROOT)
+        if any(part in LINE_ENDING_EXCLUDED_DIRS for part in relative.parts[:-1]) or not path.is_file():
+            continue
+        if b"\r" in path.read_bytes():
+            errors.append(f"{relative.as_posix()}: contains a carriage return (CR) byte; JSON files must use LF line endings only.")
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--base-ref",help="Base Git ref used to enforce content version increases.")
     args = parser.parse_args()
     errors = []
+    validate_line_endings(errors)
     known_category_ids = validate_assessment_categories(errors)
     references_document = load_json(ROOT/"references"/"references.json",errors)
     if references_document is None:

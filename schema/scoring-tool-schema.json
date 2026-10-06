@@ -333,6 +333,23 @@
         "score": {
           "type": "number"
         }
+      },
+      "if": {
+        "properties": {
+          "operator": {
+            "const": "between"
+          }
+        },
+        "required": [
+          "operator"
+        ]
+      },
+      "then": {
+        "properties": {
+          "upperValue": {
+            "type": "number"
+          }
+        }
       }
     },
     "choice": {

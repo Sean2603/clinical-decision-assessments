@@ -241,14 +241,25 @@ def decision_rule_matches(
     return True
 
 
-_TOKEN = re.compile(
-    r"\s*(?:(\d+(?:\.\d+)?)|([A-Za-z][A-Za-z0-9]*)|(.))"
+# Mirror the app tokenizer: skip every character Dart's String.trim() treats
+# as whitespace (anywhere in the expression), and only accept ASCII digits.
+_WHITESPACE = (
+    "\u0009\u000a\u000b\u000c\u000d\u0020\u0085\u00a0\u1680"
+    "\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a"
+    "\u2028\u2029\u202f\u205f\u3000\ufeff"
 )
+_TOKEN = re.compile(
+    r"[" + re.escape(_WHITESPACE) + r"]*"
+    r"(?:([0-9]+(?:\.[0-9]+)?)|([A-Za-z][A-Za-z0-9]*)|(.))",
+    re.DOTALL,
+)
+_TRAILING_WHITESPACE = re.compile(r"[" + re.escape(_WHITESPACE) + r"]+\Z")
 
 
 class ExpressionParser:
     def __init__(self, expression: str, inputs: dict[str, float]) -> None:
         self.tokens: list[tuple[str, str]] = []
+        expression = _TRAILING_WHITESPACE.sub("", expression)
         for number, identifier, symbol in _TOKEN.findall(expression):
             if number:
                 self.tokens.append(("number", number))
@@ -384,6 +395,22 @@ def acid_base_pattern(
     return "mixed-or-indeterminate"
 
 
+def round_like_dart(value: float, precision: int) -> float:
+    """Mirror the app: (value * 10^p).roundToDouble() / 10^p.
+
+    Dart's roundToDouble() rounds half away from zero on the scaled value,
+    unlike Python's round(), which is round-half-even on the exact binary value.
+    """
+    factor = float(10**precision)
+    scaled = value * factor
+    if not math.isfinite(scaled):
+        return scaled / factor
+    rounded = math.floor(abs(scaled))
+    if abs(scaled) - rounded >= 0.5:
+        rounded += 1
+    return math.copysign(rounded, scaled) / factor
+
+
 def evaluate_calculation(
     calculation: dict[str, Any],
     inputs: dict[str, Any],
@@ -402,7 +429,7 @@ def evaluate_calculation(
         value = ExpressionParser(expression, numeric_inputs).parse()
         precision = engine["precision"]
         if precision is not None:
-            value = round(value, int(precision))
+            value = round_like_dart(value, int(precision))
         return value, None
     if kind == "acid-base-basic":
         code = acid_base_pattern(
@@ -513,7 +540,13 @@ def main() -> None:
                     definition,
                     case["inputs"],
                 )
-            except (KeyError, TypeError, ValueError, ZeroDivisionError) as exc:
+            except (
+                KeyError,
+                RecursionError,
+                TypeError,
+                ValueError,
+                ZeroDivisionError,
+            ) as exc:
                 errors.append(f"{path} case {case_id}: {exc}")
                 continue
 
@@ -594,6 +627,7 @@ def main() -> None:
                     )
                 except (
                     KeyError,
+                    RecursionError,
                     TypeError,
                     ValueError,
                     ZeroDivisionError,
