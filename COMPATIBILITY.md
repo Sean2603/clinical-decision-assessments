@@ -90,6 +90,21 @@ Example PR description footer:
 - If schema requires new app code, raise `minimumAppVersion` in schema so old app versions refuse incompatible packs
 - Ensure backward compatibility when possible — make new fields optional with sensible defaults
 
+## Content Features Gated by App Version
+
+`tool/sync_manifest.py` raises the pack `minimumAppVersion` automatically when content uses a feature that older app builds would mishandle:
+
+| Content feature | Minimum app version |
+|-----------------|---------------------|
+| Every pack (baseline floor) | 0.63.6 |
+| Shared learning items | 0.60.0 |
+| Inline assessment images (`{{image:...}}`) | 0.63.5 |
+| `__inline_only__` image attachments | 0.63.7 |
+| Procedures | 0.64.3 |
+| Scoring-tool `escalations` (single-criterion escalation, e.g. NEWS2 red score) | 0.76.3 |
+
+When adding a schema feature that older apps would silently ignore (rather than reject), add a rule here and in `sync_manifest.py`.
+
 ## Common Patterns
 
 ### Adding an optional field

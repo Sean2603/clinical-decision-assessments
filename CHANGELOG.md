@@ -1,3 +1,18 @@
+## 2026-10-06 – Governed single-criterion escalation for scoring tools
+
+- `schema/scoring-tool-schema.json`: new optional top-level `escalations` array (default `[]`). Each item (`additionalProperties: false`) requires `id`, `whenAnyCriterionScoresAtLeast` (number), `fromResultIds` (unique result IDs, at least one) and `toResultId`. It expresses rules that score bands cannot, such as the NEWS2 single-parameter "red score": an aggregate of 1–4 is low, but any single parameter scoring 3 needs an urgent ward-based (low–medium) response.
+- Semantics, identical in `tool/validate_remote_engines.py` (`evaluate_scoring`) and the app engine:
+  - Applies only to `sum` and `required-sum` evaluations, never to a required-sum prerequisite-failure result.
+  - Triggers when any single scored criterion contributes at least the threshold. Scored criteria are taken after the NEWS2 SpO2-scale filter, and omitted optional criteria are skipped.
+  - Applies only when the band selected by score is in `fromResultIds`. The first matching escalation in array order wins.
+  - The score is unchanged; only the result changes. `toResultId` is resolved within the active alternate mode's results first, then the tool's `results`.
+  - Bands are still chosen first-match in array order, so an escalation-only band (e.g. NEWS2 `low-medium`) can carry a score range shadowed by an earlier band.
+- `tool/validate_content.py` rejects an escalation whose `toResultId` or `fromResultIds` does not resolve to a result on the tool or one of its alternate modes. It also rejects escalations on an evaluation kind that ignores them (anything but `sum`/`required-sum`). This mirrors the app's `ClinicalContentValidator.validateScoringTool`. The parity engine also fails an unresolved escalation target.
+- `tool/sync_manifest.py`: any scoring tool with a non-empty `escalations` array raises the pack `minimumAppVersion` to at least 0.76.3. Older builds ignore the field and would under-triage. No current content uses escalations, so the manifest `minimumAppVersion` is unchanged (0.64.3); `manifest.json` was regenerated only for the new schema hash.
+- `tool/sync_manifest.py` again publishes clinical notices. The 2026-08-12 entry says notices in `clinical_notices/clinical-notices.json` are included in the generated manifest, but the generator had stopped emitting them, so authored notices could never reach the app (which reads `manifest.clinicalNotices`). `clinicalNotices` is now a generated key: the file's `notices` array, or `[]` when there is no file. The current manifest gains an empty `clinicalNotices`, which bumps `contentVersion` to 0.0.66.
+- No content changed. `scoring_tools/news2.json` is deliberately untouched: the NEWS2 low–medium band and red-score escalation are to be authored and clinically validated through CDM.
+- Coordinated with Flutter app 0.76.3. That release parses and applies `escalations`, shows the escalated band in the scoring panel and copied summary, and validates escalation result IDs on pack load. In the same release the app reports the true maximum score (e.g. PE Wells 12.5, not 20) and shows a required-sum prerequisite failure (PERC "not yet applicable") in a neutral tone without its sentinel score. Those app-only fixes need no CDA change.
+
 ## 2026-10-06 – Scoring/blood engine schema contract and app-parity validation
 
 - Differential-fuzzing follow-up (2026-10-06): closed gaps where CDA validation diverged from, or was looser than, the Flutter app:

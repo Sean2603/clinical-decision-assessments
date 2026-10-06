@@ -121,6 +121,42 @@ def filter_by_scale_selector(
     return [criterion_id for criterion_id in criterion_ids if criterion_id != excluded]
 
 
+def matching_escalation(
+    definition: dict[str, Any],
+    selected_result_id: str,
+    highest_criterion_score: float,
+) -> dict[str, Any] | None:
+    """Mirror the app: the first escalation (array order) that applies.
+
+    An escalation applies when the band selected by score is one of its
+    ``fromResultIds`` and any single scored criterion contributed at least
+    ``whenAnyCriterionScoresAtLeast``.
+    """
+    for escalation in definition.get("escalations", []):
+        if selected_result_id in escalation["fromResultIds"] and (
+            highest_criterion_score
+            >= float(escalation["whenAnyCriterionScoresAtLeast"])
+        ):
+            return escalation
+    return None
+
+
+def escalation_target_id(
+    definition: dict[str, Any],
+    bands: list[dict[str, Any]] | None,
+    escalation: dict[str, Any],
+) -> str:
+    """Resolve toResultId within the active bands first, then the results."""
+    target = escalation["toResultId"]
+    for result in [*(bands or []), *definition["results"]]:
+        if result["id"] == target:
+            return target
+    raise ValueError(
+        f"{definition['id']}: escalation {escalation['id']!r} refers to "
+        f"unknown result {target!r}."
+    )
+
+
 def evaluate_scoring(
     definition: dict[str, Any],
     inputs: dict[str, Any],
@@ -165,6 +201,7 @@ def evaluate_scoring(
             evaluation["scoreCriteria"] or list(criteria), inputs
         )
         score = 0.0
+        highest_criterion_score = -math.inf
         for criterion_id in criterion_ids:
             if criterion_id not in criteria:
                 raise ValueError(
@@ -179,8 +216,16 @@ def evaluate_scoring(
                 raise ValueError(
                     f"{criterion_id} requires an answer before scoring."
                 )
-            score += criterion_score(criterion, inputs[criterion_id])
-        return score, result_for_score(definition, score, bands)["id"]
+            contribution = criterion_score(criterion, inputs[criterion_id])
+            score += contribution
+            highest_criterion_score = max(highest_criterion_score, contribution)
+        result_id = result_for_score(definition, score, bands)["id"]
+        escalation = matching_escalation(
+            definition, result_id, highest_criterion_score
+        )
+        if escalation is not None:
+            result_id = escalation_target_id(definition, bands, escalation)
+        return score, result_id
 
     if kind == "group-count":
         score = 0.0

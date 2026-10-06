@@ -272,6 +272,34 @@ def _validate_procedure_step_images(value: dict, source_path: Path, errors: list
         if image_id is not None and image_id not in image_ids:
             errors.append(f"{source_path}:steps[{index}]: imageAttachmentId {image_id!r} does not resolve to an image attachment on this procedure.")
 
+def _validate_scoring_escalations(value: dict, source_path: Path, errors: list[str]) -> None:
+    # Mirrors ClinicalContentValidator.validateScoringTool in the app, which
+    # rejects the whole pack for an escalation it could not apply safely.
+    escalations = value.get("escalations",[])
+    if not isinstance(escalations,list) or not escalations:
+        return
+    evaluation = value.get("evaluation")
+    kind = evaluation.get("kind") if isinstance(evaluation,dict) else None
+    if kind not in {"sum","required-sum"}:
+        errors.append(f"{source_path}:escalations: evaluation kind {kind!r} does not support escalations (only 'sum' and 'required-sum').")
+    known_result_ids = {
+        result.get("id") for result in value.get("results",[])
+        if isinstance(result,dict)
+    }
+    for mode in value.get("alternateModes",[]):
+        if isinstance(mode,dict):
+            known_result_ids.update(
+                result.get("id") for result in mode.get("results",[])
+                if isinstance(result,dict)
+            )
+    for index, escalation in enumerate(escalations):
+        if not isinstance(escalation,dict):
+            continue
+        referenced = [escalation.get("toResultId"),*escalation.get("fromResultIds",[])]
+        unknown = sorted({str(item) for item in referenced if item not in known_result_ids})
+        if unknown:
+            errors.append(f"{source_path}:escalations[{index}]: result IDs {', '.join(unknown)} do not resolve to a result on this scoring tool.")
+
 def validate_collection(kind: str, settings: dict, known_reference_ids: set[str],
                         known_category_ids: set[str], errors: list[str]) -> dict[str,dict]:
     schema = load_json(settings["schema"],errors)
@@ -309,6 +337,8 @@ def validate_collection(kind: str, settings: dict, known_reference_ids: set[str]
         _validate_prominent_resources(value,path,errors)
         if kind == "procedure":
             _validate_procedure_step_images(value,path,errors)
+        if kind == "scoring-tool":
+            _validate_scoring_escalations(value,path,errors)
         missing = sorted(document_reference_ids(kind,value)-known_reference_ids)
         if missing:
             errors.append(f"{path}: unknown reference IDs: {', '.join(missing)}.")
