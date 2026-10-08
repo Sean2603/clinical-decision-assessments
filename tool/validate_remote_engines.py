@@ -111,14 +111,34 @@ def active_alternate_mode(
     return None
 
 
-def filter_by_scale_selector(
+def criterion_is_active(
+    criterion: dict[str, Any],
+    inputs: dict[str, Any],
+) -> bool:
+    """Whether a conditional criterion's `activeWhen` currently holds.
+
+    Declared in the content rather than hardcoded here, so a second tool with
+    mutually exclusive criteria needs no tooling or app change. NEWS2's SpO2
+    Scale 1/Scale 2 rows are the first user.
+    """
+    active_when = criterion.get("activeWhen")
+    if not isinstance(active_when, dict):
+        return True
+    return inputs.get(active_when["criterionId"]) == active_when["equalsChoiceId"]
+
+
+def filter_by_active_when(
     criterion_ids: list[str],
+    criteria: dict[str, Any],
     inputs: dict[str, Any],
 ) -> list[str]:
-    """Mirror the app's NEWS2 rule: only the selected SpO2 scale is scored."""
-    selected = inputs.get("o2-scale-selector")
-    excluded = {"scale-1": "spo2-scale-2", "scale-2": "spo2-scale-1"}.get(selected)
-    return [criterion_id for criterion_id in criterion_ids if criterion_id != excluded]
+    """Drop criteria whose `activeWhen` does not hold for these inputs."""
+    return [
+        criterion_id
+        for criterion_id in criterion_ids
+        if criterion_id not in criteria
+        or criterion_is_active(criteria[criterion_id], inputs)
+    ]
 
 
 def matching_escalation(
@@ -197,8 +217,8 @@ def evaluate_scoring(
             )
 
     if kind in {"sum", "required-sum"}:
-        criterion_ids = filter_by_scale_selector(
-            evaluation["scoreCriteria"] or list(criteria), inputs
+        criterion_ids = filter_by_active_when(
+            evaluation["scoreCriteria"] or list(criteria), criteria, inputs
         )
         score = 0.0
         highest_criterion_score = -math.inf

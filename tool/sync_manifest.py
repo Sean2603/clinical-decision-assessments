@@ -327,6 +327,17 @@ def scoring_tools_use_escalations(entries: list[dict]) -> bool:
     )
 
 
+def scoring_tools_use_conditional_criteria(entries: list[dict]) -> bool:
+    """Older apps ignore `activeWhen` and would score an inactive criterion."""
+    return any(
+        any(
+            isinstance(criterion, dict) and isinstance(criterion.get("activeWhen"), dict)
+            for criterion in document.get("criteria", [])
+        )
+        for document in gate_documents(entries)
+    )
+
+
 def clinical_notices() -> list[dict]:
     """Governed notices the app reads from `manifest.clinicalNotices`.
 
@@ -437,6 +448,7 @@ def build_manifest(current: dict) -> tuple[dict, bool]:
             "0.63.7" if assessments_use_inline_only_media(generated_collections["assessments"]) else "0.49.0",
             "0.64.3" if generated_collections["procedures"] else "0.49.0",
             "0.76.3" if scoring_tools_use_escalations(generated_collections["scoringTools"]) else "0.49.0",
+            "0.76.4" if scoring_tools_use_conditional_criteria(generated_collections["scoringTools"]) else "0.49.0",
             "0.63.6",
         ),
         "appFeatureAvailability": {

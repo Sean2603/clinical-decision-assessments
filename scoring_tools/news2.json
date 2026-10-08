@@ -2,7 +2,7 @@
   "id": "news2",
   "title": "NEWS2",
   "subtitle": "Select observation ranges; component scores calculated automatically",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -65,7 +65,11 @@
           "label": "≥96%",
           "score": 0
         }
-      ]
+      ],
+      "activeWhen": {
+        "criterionId": "o2-scale-selector",
+        "equalsChoiceId": "scale-1"
+      }
     },
     {
       "id": "spo2-scale-2",
@@ -96,7 +100,11 @@
           "label": "88–92%, or ≥93% while breathing room air",
           "score": 0
         }
-      ]
+      ],
+      "activeWhen": {
+        "criterionId": "o2-scale-selector",
+        "equalsChoiceId": "scale-2"
+      }
     },
     {
       "id": "respiratory-rate",
@@ -409,6 +417,23 @@
       },
       "expectedScore": 7,
       "expectedResultId": "high"
+    },
+    {
+      "id": "unselected-spo2-scale-is-not-scored",
+      "description": "Scale 1 is selected while a Scale 2 row scoring 3 is also answered. Only the selected scale is scored, so the aggregate stays 5; without the conditional-criterion rule it would be 8.",
+      "inputs": {
+        "o2-scale-selector": "scale-1",
+        "respiratory-rate": "8",
+        "spo2-scale-1": "92-93",
+        "spo2-scale-2": "83-or-97-while-receiving-supplemental-oxygen",
+        "supplemental-oxygen": "breathing-room-air",
+        "temperature": "36-1-38-0",
+        "systolic-bp": "111-219",
+        "pulse": "51-90",
+        "consciousness": "alert-and-no-new-confusion"
+      },
+      "expectedScore": 5,
+      "expectedResultId": "medium"
     }
   ],
   "attachments": []
