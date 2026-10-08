@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import re
+from collections.abc import Iterator
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -298,31 +299,32 @@ def assessments_use_inline_images(entries: list[dict]) -> bool:
     )
 
 
-def assessments_use_inline_only_media(entries: list[dict]) -> bool:
+def gate_documents(entries: list[dict]) -> Iterator[dict]:
+    """Parsed documents behind manifest entries, for the feature gates below."""
     for entry in entries:
-        if not isinstance(entry.get("file"), str):
-            continue
-        document = load_json(ROOT / entry["file"])
-        attachments = document.get("attachments", [])
-        if isinstance(attachments, list) and any(
+        if isinstance(entry.get("file"), str):
+            yield load_json(ROOT / entry["file"])
+
+
+def assessments_use_inline_only_media(entries: list[dict]) -> bool:
+    return any(
+        isinstance(document.get("attachments"), list)
+        and any(
             isinstance(item, dict)
             and item.get("type") == "image"
             and item.get("label") == "__inline_only__"
-            for item in attachments
-        ):
-            return True
-    return False
+            for item in document["attachments"]
+        )
+        for document in gate_documents(entries)
+    )
 
 
 def scoring_tools_use_escalations(entries: list[dict]) -> bool:
     """Older apps ignore `escalations` and would under-triage, so gate them."""
-    for entry in entries:
-        if not isinstance(entry.get("file"), str):
-            continue
-        escalations = load_json(ROOT / entry["file"]).get("escalations")
-        if isinstance(escalations, list) and escalations:
-            return True
-    return False
+    return any(
+        isinstance(document.get("escalations"), list) and document["escalations"]
+        for document in gate_documents(entries)
+    )
 
 
 def clinical_notices() -> list[dict]:

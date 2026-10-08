@@ -242,11 +242,14 @@ def _validate_inline_tokens(value: dict, source_path: Path, attachments_by_id: d
             if stable_id not in stable_ids:
                 errors.append(f"{source_path}:{item_path}: stable link '@{stable_id}' does not resolve to governed app content.")
 
-def _validate_prominent_resources(value: dict, source_path: Path, errors: list[str]) -> None:
-    attachment_ids = {
-        item.get("id") for item in value.get("attachments",[])
+def _attachments_by_id(value: dict) -> dict[str,dict]:
+    return {
+        item.get("id"): item for item in value.get("attachments",[])
         if isinstance(item,dict) and isinstance(item.get("id"),str)
     }
+
+def _validate_prominent_resources(value: dict, source_path: Path, errors: list[str]) -> None:
+    attachment_ids = _attachments_by_id(value).keys()
     for index, resource in enumerate(value.get("prominentResources",[])):
         if not isinstance(resource,dict):
             continue
@@ -470,10 +473,7 @@ def main() -> int:
     for kind,documents in documents_by_kind.items():
         for item_id,value in documents.items():
             source_path = COLLECTIONS[kind]["directory"]/f"{item_id}.json"
-            attachments_by_id = {
-                item.get("id"): item for item in value.get("attachments",[])
-                if isinstance(item,dict) and isinstance(item.get("id"),str)
-            }
+            attachments_by_id = _attachments_by_id(value)
             _validate_inline_tokens(value,source_path,attachments_by_id,stable_ids,glossary_terms,errors,allow_image_tokens=(kind == "assessment"))
 
     validate_cross_links(documents_by_kind,errors)
@@ -492,10 +492,7 @@ def main() -> int:
             for notice in notices_document.get("notices",[]):
                 if isinstance(notice,dict):
                     _validate_attachments("clinical-notice",notice,notices_path,known_reference_ids,errors)
-                    attachments_by_id = {
-                        item.get("id"): item for item in notice.get("attachments",[])
-                        if isinstance(item,dict) and isinstance(item.get("id"),str)
-                    }
+                    attachments_by_id = _attachments_by_id(notice)
                     _validate_inline_tokens(notice,notices_path,attachments_by_id,stable_ids,glossary_terms,errors)
 
     if args.base_ref:

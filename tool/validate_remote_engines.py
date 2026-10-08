@@ -79,9 +79,9 @@ def matches_numeric_rule(value: float, rule: dict[str, Any]) -> bool:
 def result_for_score(
     definition: dict[str, Any],
     score: float,
-    bands: list[dict[str, Any]] | None = None,
+    bands: list[dict[str, Any]],
 ) -> dict[str, Any]:
-    for result in definition["results"] if bands is None else bands:
+    for result in bands:
         if (
             float(result["minimumScore"])
             <= score
@@ -143,18 +143,18 @@ def matching_escalation(
 
 def escalation_target_id(
     definition: dict[str, Any],
-    bands: list[dict[str, Any]] | None,
+    bands: list[dict[str, Any]],
     escalation: dict[str, Any],
 ) -> str:
-    """Resolve toResultId within the active bands first, then the results."""
+    """Check toResultId names one of the active bands or the tool's results."""
     target = escalation["toResultId"]
-    for result in [*(bands or []), *definition["results"]]:
-        if result["id"] == target:
-            return target
-    raise ValueError(
-        f"{definition['id']}: escalation {escalation['id']!r} refers to "
-        f"unknown result {target!r}."
-    )
+    known = [*bands, *definition["results"]]
+    if not any(result["id"] == target for result in known):
+        raise ValueError(
+            f"{definition['id']}: escalation {escalation['id']!r} refers to "
+            f"unknown result {target!r}."
+        )
+    return target
 
 
 def evaluate_scoring(
@@ -167,7 +167,7 @@ def evaluate_scoring(
     evaluation = definition["evaluation"]
     kind = evaluation["kind"]
     alternate_mode = active_alternate_mode(definition, inputs)
-    bands = alternate_mode["results"] if alternate_mode else None
+    bands = alternate_mode["results"] if alternate_mode else definition["results"]
 
     def result_id_for(result_id: str, score: float) -> str:
         if alternate_mode is None:

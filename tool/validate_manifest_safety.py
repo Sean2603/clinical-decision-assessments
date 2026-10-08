@@ -14,22 +14,23 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Revocation contentType values the app passes to revocationFor(), mapped to the
-# collection folder that holds that content type. contentId is deliberately not
-# required to exist: an emergency revocation may target an item already removed
-# from this repository but still installed on devices.
-CONTENT_TYPE_FOLDERS = {
-    "assessment": "assessments",
-    "guideline": "guidelines",
-    "procedure": "procedures",
-    "scoring-tool": "scoring_tools",
-    "blood-panel": "blood_panels",
-    "medication": "medications",
-    "prescribing": "prescribing",
-}
+# Revocation contentType values the app passes to revocationFor(); these mirror
+# ClinicalDestinationType.supported in the app, which is the vocabulary it can
+# actually revoke. contentId is deliberately not required to exist: an emergency
+# revocation may target an item already removed from this repository but still
+# installed on devices.
+CONTENT_TYPES = frozenset({
+    "assessment",
+    "guideline",
+    "procedure",
+    "scoring-tool",
+    "blood-panel",
+    "medication",
+    "prescribing",
+})
 ACTIONS = {"block", "disable", "warn"}
 MODES = {"optional", "required", "revocation-only"}
-VERSION = re.compile(r"[0-9]+\.[0-9]+\.[0-9]+\Z")
+VERSION = re.compile(r"^\d+\.\d+\.\d+$")
 # Dart DateTime.parse grammar (ASCII digits only); ranges checked separately.
 DART_DATE_TIME = re.compile(
     r"([+-]?[0-9]{4,6})-?([0-9]{2})-?([0-9]{2})"
@@ -38,15 +39,11 @@ DART_DATE_TIME = re.compile(
 )
 
 
-def is_string(value):
-    return isinstance(value, str)
-
-
 def check_date_time(value, label, errors):
     """Dart: json[key] == null ? null : DateTime.parse(json[key] as String)."""
     if value is None:
         return
-    if not is_string(value):
+    if not isinstance(value, str):
         errors.append(f"{label} must be an ISO-8601 string or null")
         return
     match = DART_DATE_TIME.match(value)
@@ -66,33 +63,31 @@ manifest = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
 errors = []
 
 policy = manifest.get("updatePolicy")
-mode = "optional"
-if policy is not None and not isinstance(policy, dict):
-    errors.append("updatePolicy must be an object or null")
+if not isinstance(policy, dict):
+    if policy is not None:
+        errors.append("updatePolicy must be an object or null")
     policy = {}
-policy = policy or {}
 for key in ("mode", "severity", "message"):
-    if key in policy and not is_string(policy[key]):
+    if key in policy and not isinstance(policy[key], str):
         errors.append(f"updatePolicy.{key} must be a string")
-if is_string(policy.get("mode", "optional")):
-    mode = policy.get("mode", "optional")
-    if mode not in MODES:
-        errors.append(f"updatePolicy.mode is invalid: {mode}")
+mode = policy.get("mode", "optional")
+if isinstance(mode, str) and mode not in MODES:
+    errors.append(f"updatePolicy.mode is invalid: {mode}")
 block = policy.get("blockClinicalContentUntilUpdated")
 if block is not None and not isinstance(block, bool):
     errors.append("updatePolicy.blockClinicalContentUntilUpdated must be a boolean")
 if block is True and mode != "required":
     errors.append("blockClinicalContentUntilUpdated may only be true when mode is required")
 message = policy.get("message", "")
-if mode == "required" and not (is_string(message) and message.strip()):
+if mode == "required" and not (isinstance(message, str) and message.strip()):
     errors.append("required update policy must include a message")
 check_date_time(policy.get("effectiveFrom"), "updatePolicy.effectiveFrom", errors)
 
 revocations = manifest.get("emergencyRevocations")
-if revocations is not None and not isinstance(revocations, list):
-    errors.append("emergencyRevocations must be an array")
+if not isinstance(revocations, list):
+    if revocations is not None:
+        errors.append("emergencyRevocations must be an array")
     revocations = []
-revocations = revocations or []
 for i, item in enumerate(revocations):
     prefix = f"emergencyRevocations[{i}]"
     if not isinstance(item, dict):
@@ -100,25 +95,24 @@ for i, item in enumerate(revocations):
         continue
     for key in ("contentType", "contentId", "action", "reason"):
         value = item.get(key)
-        if not is_string(value) or not value.strip():
+        if not isinstance(value, str) or not value.strip():
             errors.append(f"{prefix}.{key} must be a non-empty string")
     content_type = item.get("contentType")
-    if is_string(content_type) and content_type.strip():
-        folder = CONTENT_TYPE_FOLDERS.get(content_type)
-        if folder is None:
+    if isinstance(content_type, str) and content_type.strip():
+        if content_type not in CONTENT_TYPES:
             errors.append(
                 f"{prefix}.contentType is invalid: {content_type!r} "
-                f"(expected one of {', '.join(sorted(CONTENT_TYPE_FOLDERS))})"
+                f"(expected one of {', '.join(sorted(CONTENT_TYPES))})"
             )
-    if is_string(item.get("action")) and item["action"] not in ACTIONS:
+    if isinstance(item.get("action"), str) and item["action"] not in ACTIONS:
         errors.append(f"{prefix}.action is invalid")
     versions = item.get("affectedVersions")
     if versions is not None and not isinstance(versions, dict):
         errors.append(f"{prefix}.affectedVersions must be an object")
-    elif isinstance(versions, dict):
+    elif versions is not None:
         for key in ("minimum", "maximum"):
             value = versions.get(key)
-            if value is not None and not (is_string(value) and VERSION.match(value)):
+            if value is not None and not (isinstance(value, str) and VERSION.fullmatch(value)):
                 errors.append(
                     f"{prefix}.affectedVersions.{key} must be an X.Y.Z string or null"
                 )
