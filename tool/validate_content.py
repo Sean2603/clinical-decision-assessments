@@ -242,11 +242,14 @@ def _validate_inline_tokens(value: dict, source_path: Path, attachments_by_id: d
             if stable_id not in stable_ids:
                 errors.append(f"{source_path}:{item_path}: stable link '@{stable_id}' does not resolve to governed app content.")
 
-def _validate_prominent_resources(value: dict, source_path: Path, errors: list[str]) -> None:
-    attachment_ids = {
-        item.get("id") for item in value.get("attachments",[])
+def _attachments_by_id(value: dict) -> dict[str,dict]:
+    return {
+        item.get("id"): item for item in value.get("attachments",[])
         if isinstance(item,dict) and isinstance(item.get("id"),str)
     }
+
+def _validate_prominent_resources(value: dict, source_path: Path, errors: list[str]) -> None:
+    attachment_ids = _attachments_by_id(value).keys()
     for index, resource in enumerate(value.get("prominentResources",[])):
         if not isinstance(resource,dict):
             continue
@@ -271,6 +274,43 @@ def _validate_procedure_step_images(value: dict, source_path: Path, errors: list
         image_id = step.get("imageAttachmentId")
         if image_id is not None and image_id not in image_ids:
             errors.append(f"{source_path}:steps[{index}]: imageAttachmentId {image_id!r} does not resolve to an image attachment on this procedure.")
+
+def _validate_scoring_active_when(value: dict, source_path: Path, errors: list[str]) -> None:
+    # Mirrors the app's and the parity engine's handling of conditional criteria:
+    # a criterion whose activeWhen does not resolve would be silently dropped
+    # from scoring, so the pack must not ship it.
+    criteria = [item for item in value.get("criteria",[]) if isinstance(item,dict)]
+    choices_by_criterion = {
+        item.get("id"): {
+            choice.get("id") for choice in item.get("choices",[])
+            if isinstance(choice,dict)
+        }
+        for item in criteria
+    }
+    controllers = {
+        item["activeWhen"]["criterionId"] for item in criteria
+        if isinstance(item.get("activeWhen"),dict)
+        and isinstance(item["activeWhen"].get("criterionId"),str)
+    }
+    for item in criteria:
+        active_when = item.get("activeWhen")
+        if not isinstance(active_when,dict):
+            continue
+        label = f"{source_path}:criteria[{item.get('id')!r}].activeWhen"
+        controller_id = active_when.get("criterionId")
+        choice_id = active_when.get("equalsChoiceId")
+        if controller_id == item.get("id"):
+            errors.append(f"{label}: a criterion cannot depend on itself.")
+            continue
+        if controller_id not in choices_by_criterion:
+            errors.append(f"{label}: criterionId {controller_id!r} does not resolve to a criterion on this tool.")
+            continue
+        if choice_id not in choices_by_criterion[controller_id]:
+            errors.append(f"{label}: equalsChoiceId {choice_id!r} is not a choice of criterion {controller_id!r}.")
+        # A controller that is itself conditional would need resolving in order,
+        # which neither engine does.
+        if item.get("id") in controllers:
+            errors.append(f"{label}: criterion {item.get('id')!r} is itself a controller, so it must not be conditional.")
 
 def _validate_scoring_escalations(value: dict, source_path: Path, errors: list[str]) -> None:
     # Mirrors ClinicalContentValidator.validateScoringTool in the app, which
@@ -339,6 +379,7 @@ def validate_collection(kind: str, settings: dict, known_reference_ids: set[str]
             _validate_procedure_step_images(value,path,errors)
         if kind == "scoring-tool":
             _validate_scoring_escalations(value,path,errors)
+            _validate_scoring_active_when(value,path,errors)
         missing = sorted(document_reference_ids(kind,value)-known_reference_ids)
         if missing:
             errors.append(f"{path}: unknown reference IDs: {', '.join(missing)}.")
@@ -470,10 +511,7 @@ def main() -> int:
     for kind,documents in documents_by_kind.items():
         for item_id,value in documents.items():
             source_path = COLLECTIONS[kind]["directory"]/f"{item_id}.json"
-            attachments_by_id = {
-                item.get("id"): item for item in value.get("attachments",[])
-                if isinstance(item,dict) and isinstance(item.get("id"),str)
-            }
+            attachments_by_id = _attachments_by_id(value)
             _validate_inline_tokens(value,source_path,attachments_by_id,stable_ids,glossary_terms,errors,allow_image_tokens=(kind == "assessment"))
 
     validate_cross_links(documents_by_kind,errors)
@@ -492,10 +530,7 @@ def main() -> int:
             for notice in notices_document.get("notices",[]):
                 if isinstance(notice,dict):
                     _validate_attachments("clinical-notice",notice,notices_path,known_reference_ids,errors)
-                    attachments_by_id = {
-                        item.get("id"): item for item in notice.get("attachments",[])
-                        if isinstance(item,dict) and isinstance(item.get("id"),str)
-                    }
+                    attachments_by_id = _attachments_by_id(notice)
                     _validate_inline_tokens(notice,notices_path,attachments_by_id,stable_ids,glossary_terms,errors)
 
     if args.base_ref:
