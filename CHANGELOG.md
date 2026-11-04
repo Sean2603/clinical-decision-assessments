@@ -1,3 +1,11 @@
+## 2026-11-04 – NEWS2 single-parameter score-3 escalation (draft, unreviewed)
+
+- `scoring_tools/news2.json` 0.1.1 → 0.1.2: adds result `low-medium` (escalation-only; its 0–4 range is shadowed by `low`, so it is reached only via escalation), and escalation `single-parameter-score-3` (any single parameter scoring ≥3 with band `low` → `low-medium`). Score is unchanged.
+- Adds parity case `result-low-single-parameter-3` (respiratory rate 8, aggregate 3 → `low-medium`).
+- Draft wording of the `low-medium` interpretation and actions is pending clinical review; `clinicalValidation.validated` remains `false`.
+- Requires app 0.76.3 or later (enforced by `sync_manifest.py`).
+- `manifest.json` regenerated (contentVersion 0.0.67).
+
 ## 2026-10-06 – Governed single-criterion escalation for scoring tools
 
 - `schema/scoring-tool-schema.json`: new optional top-level `escalations` array (default `[]`). Each item (`additionalProperties: false`) requires `id`, `whenAnyCriterionScoresAtLeast` (number), `fromResultIds` (unique result IDs, at least one) and `toResultId`. It expresses rules that score bands cannot, such as the NEWS2 single-parameter "red score": an aggregate of 1–4 is low, but any single parameter scoring 3 needs an urgent ward-based (low–medium) response.

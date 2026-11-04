@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.66",
-  "updatedAt": "2026-10-06T19:24:48Z",
+  "contentVersion": "0.0.67",
+  "updatedAt": "2026-11-04T15:37:24Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -12,8 +12,8 @@
     "sizeBytes": 780,
     "schemaSizeBytes": 1417
   },
-  "minimumAppVersion": "0.64.3",
-  "downloadSizeBytes": 7070415,
+  "minimumAppVersion": "0.76.3",
+  "downloadSizeBytes": 7071916,
   "references": {
     "file": "references/references.json",
     "sha256": "2e3058eb945e58bb0a3807c4f687fbc96fa3c138446730221268596fbfc15b86",
@@ -497,12 +497,12 @@
     {
       "id": "news2",
       "title": "NEWS2",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "file": "scoring_tools/news2.json",
       "schema": "schema/scoring-tool-schema.json",
-      "sha256": "36d629767cd11c273291ddf65dd535c16e1a26d6e73a6923258728363fffae2e",
+      "sha256": "e5d397028d7db36f11080ecab60b97cd00ca6bbdf407e04be947c639854ad6ab",
       "schemaSha256": "8e9e731e1f9de73548bfd018f022c0bfed62d81b838e541b1e830e6b24042628",
-      "sizeBytes": 11011,
+      "sizeBytes": 12512,
       "schemaSizeBytes": 20470,
       "attachmentsSizeBytes": 0
     },

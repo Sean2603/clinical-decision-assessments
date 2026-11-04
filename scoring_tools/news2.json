@@ -2,7 +2,7 @@
   "id": "news2",
   "title": "NEWS2",
   "subtitle": "Select observation ranges; component scores calculated automatically",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "mode": "calculator",
@@ -330,6 +330,27 @@
         "Initiate senior medical/nursing assessment; prepare for intensive-care-level interventions (supplemental oxygen, IV access, cardiac monitoring)",
         "Consider imaging (chest X-ray, electrocardiogram) and specialist review per clinical context; arrange ICU bed"
       ]
+    },
+    {
+      "id": "low-medium",
+      "minimumScore": 0,
+      "maximumScore": 4,
+      "label": "Low aggregate score with a single parameter scoring 3",
+      "interpretation": [
+        "A single parameter scoring 3 generally requires urgent ward-based clinical review, even though the aggregate score is low."
+      ],
+      "actions": [
+        "Urgent ward-based clinical review by a clinician competent in NEWS2, focused on the parameter scoring 3",
+        "Increase observation frequency while review is awaited, per ward or protocol guidance; escalate if the aggregate score rises or the parameter does not improve"
+      ]
+    }
+  ],
+  "escalations": [
+    {
+      "id": "single-parameter-score-3",
+      "whenAnyCriterionScoresAtLeast": 3,
+      "fromResultIds": ["low"],
+      "toResultId": "low-medium"
     }
   ],
   "overrides": [
@@ -409,6 +430,23 @@
       },
       "expectedScore": 7,
       "expectedResultId": "high"
+    },
+    {
+      "id": "result-low-single-parameter-3",
+      "description": "Executable case for escalation: aggregate 3 (low band) with one parameter scoring 3 (respiratory rate 8) shows the low-medium result.",
+      "inputs": {
+        "o2-scale-selector": "scale-1",
+        "respiratory-rate": "8",
+        "spo2-scale-1": "96",
+        "spo2-scale-2": "88-92-or-93-while-breathing-room-air",
+        "supplemental-oxygen": "breathing-room-air",
+        "temperature": "36-1-38-0",
+        "systolic-bp": "111-219",
+        "pulse": "51-90",
+        "consciousness": "alert-and-no-new-confusion"
+      },
+      "expectedScore": 3,
+      "expectedResultId": "low-medium"
     }
   ],
   "attachments": []
