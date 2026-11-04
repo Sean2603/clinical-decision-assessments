@@ -56,8 +56,26 @@
       "frailty",
       "neurology"
     ],
+    "acute-cough-assessment": [
+      "uncategorised"
+    ],
+    "acute-diarrhoea-assessment": [
+      "uncategorised"
+    ],
+    "acute-eye-problems-assessment": [
+      "uncategorised"
+    ],
+    "acute-headache-assessment": [
+      "uncategorised"
+    ],
+    "acute-kidney-injury-assessment": [
+      "uncategorised"
+    ],
     "acute-otitis-media-assessment": [
       "ent"
+    ],
+    "acute-rash-assessment": [
+      "uncategorised"
     ],
     "acute-sore-throat-assessment": [
       "ent"
@@ -68,17 +86,35 @@
     "comprehensive-geriatric-assessment": [
       "frailty"
     ],
+    "constipation-assessment": [
+      "uncategorised"
+    ],
+    "dehydration-assessment": [
+      "uncategorised"
+    ],
     "dizziness-vertigo-assessment": [
       "neurology"
     ],
     "falls-in-older-adults": [
       "frailty"
     ],
+    "fever-adults-assessment": [
+      "uncategorised"
+    ],
+    "fever-children-assessment": [
+      "uncategorised"
+    ],
     "frailty-assessment": [
       "frailty"
     ],
+    "joint-pain-assessment": [
+      "musculoskeletal"
+    ],
     "lower-uti-assessment": [
       "renal"
+    ],
+    "nausea-vomiting-assessment": [
+      "uncategorised"
     ],
     "polypharmacy-and-medicines-related-harm": [
       "frailty"

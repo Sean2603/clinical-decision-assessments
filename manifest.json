@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.67",
-  "updatedAt": "2026-11-04T15:37:24Z",
+  "contentVersion": "0.0.68",
+  "updatedAt": "2026-11-04T16:15:34Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.76.3",
-  "downloadSizeBytes": 7071916,
+  "downloadSizeBytes": 7071807,
   "references": {
     "file": "references/references.json",
     "sha256": "2e3058eb945e58bb0a3807c4f687fbc96fa3c138446730221268596fbfc15b86",
@@ -27,9 +27,9 @@
   "assessmentCategories": {
     "file": "categories/assessment-categories.json",
     "schema": "schema/assessment-categories-schema.json",
-    "sha256": "5d979294aa4642fd28c2ac987a94972f3e3077a99540695a7c19216930618ae4",
+    "sha256": "b1dbaf278d44dd1d6a3a73c0a160cc323196172becdeb3cc7c0401863b0c1852",
     "schemaSha256": "76c4f8c41cfc403b4dc8e0c811dc8c9e1a4f558341925abb8451575c4c68705c",
-    "sizeBytes": 1958,
+    "sizeBytes": 2721,
     "schemaSizeBytes": 6232,
     "items": [
       {
@@ -1031,12 +1031,12 @@
     {
       "id": "dental-abscess-urgent-treatment",
       "title": "Dental Abscess requiring urgent treatment",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "file": "prescribing/dental-abscess-urgent-treatment.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "68a075aef9b9f74ccde7d2917d0c79e1b5000099c4ebcee8c9065d58f4b88755",
+      "sha256": "d04a3b80e9d3767e7c7eced5b151d37a2b7bb1ab9f3d548e042a78dd5bc3551d",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
-      "sizeBytes": 3140,
+      "sizeBytes": 3031,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
