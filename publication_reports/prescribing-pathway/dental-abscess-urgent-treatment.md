@@ -1,5 +1,41 @@
 # Dental Abscess requiring urgent treatment — Publication history
 
+<!-- cdm-publication:0.3.0 -->
+## v0.3.0 — 2026-11-04
+
+- **Content ID:** `dental-abscess-urgent-treatment`
+- **Content type:** prescribing-pathway
+- **Previous published version:** 0.2.0
+- **Published version:** 0.3.0
+- **Generated:** 2026-11-04T16:05:09.649Z
+
+## Change control
+
+- **Summary:** Added: Regimens — Amoxicillin Capsules; Added: Regimens — OR; Changed: regimens item 2 › components item 1 › display Name; plus 5 other changes.
+- **Risk:** clinical-wording
+- **Selected version increase:** minor
+- **Recommended version increase:** minor
+- **Changed fields:** 11
+- **Override reason:** Not recorded
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-11-04T12:00:00.000Z
+- **Notes:** Review completed. No additional review comments recorded.
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.3.0 -->
+
+---
+
 <!-- cdm-publication:0.2.0 -->
 ## v0.2.0 — 2026-08-29
 
