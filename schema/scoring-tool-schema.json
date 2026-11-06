@@ -467,6 +467,27 @@
         "required": {
           "type": "boolean",
           "default": true
+        },
+        "activeWhen": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "criterionId",
+            "equalsChoiceId"
+          ],
+          "description": "Makes this criterion conditional: it is scored, counted towards the maximum and shown only while the named choice criterion holds the named choice. Expresses mutually exclusive criteria, such as the NEWS2 SpO2 Scale 1 and Scale 2 rows selected by o2-scale-selector. Both IDs must resolve on this tool; a criterion carrying activeWhen must not itself be the controller of another.",
+          "properties": {
+            "criterionId": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The id of a choice criterion on this tool."
+            },
+            "equalsChoiceId": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The id of one of that criterion's choices."
+            }
+          }
         }
       }
     },

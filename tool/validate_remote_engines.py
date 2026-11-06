@@ -79,9 +79,9 @@ def matches_numeric_rule(value: float, rule: dict[str, Any]) -> bool:
 def result_for_score(
     definition: dict[str, Any],
     score: float,
-    bands: list[dict[str, Any]] | None = None,
+    bands: list[dict[str, Any]],
 ) -> dict[str, Any]:
-    for result in definition["results"] if bands is None else bands:
+    for result in bands:
         if (
             float(result["minimumScore"])
             <= score
@@ -111,14 +111,34 @@ def active_alternate_mode(
     return None
 
 
-def filter_by_scale_selector(
+def criterion_is_active(
+    criterion: dict[str, Any],
+    inputs: dict[str, Any],
+) -> bool:
+    """Whether a conditional criterion's `activeWhen` currently holds.
+
+    Declared in the content rather than hardcoded here, so a second tool with
+    mutually exclusive criteria needs no tooling or app change. NEWS2's SpO2
+    Scale 1/Scale 2 rows are the first user.
+    """
+    active_when = criterion.get("activeWhen")
+    if not isinstance(active_when, dict):
+        return True
+    return inputs.get(active_when["criterionId"]) == active_when["equalsChoiceId"]
+
+
+def filter_by_active_when(
     criterion_ids: list[str],
+    criteria: dict[str, Any],
     inputs: dict[str, Any],
 ) -> list[str]:
-    """Mirror the app's NEWS2 rule: only the selected SpO2 scale is scored."""
-    selected = inputs.get("o2-scale-selector")
-    excluded = {"scale-1": "spo2-scale-2", "scale-2": "spo2-scale-1"}.get(selected)
-    return [criterion_id for criterion_id in criterion_ids if criterion_id != excluded]
+    """Drop criteria whose `activeWhen` does not hold for these inputs."""
+    return [
+        criterion_id
+        for criterion_id in criterion_ids
+        if criterion_id not in criteria
+        or criterion_is_active(criteria[criterion_id], inputs)
+    ]
 
 
 def matching_escalation(
@@ -143,18 +163,18 @@ def matching_escalation(
 
 def escalation_target_id(
     definition: dict[str, Any],
-    bands: list[dict[str, Any]] | None,
+    bands: list[dict[str, Any]],
     escalation: dict[str, Any],
 ) -> str:
-    """Resolve toResultId within the active bands first, then the results."""
+    """Check toResultId names one of the active bands or the tool's results."""
     target = escalation["toResultId"]
-    for result in [*(bands or []), *definition["results"]]:
-        if result["id"] == target:
-            return target
-    raise ValueError(
-        f"{definition['id']}: escalation {escalation['id']!r} refers to "
-        f"unknown result {target!r}."
-    )
+    known = [*bands, *definition["results"]]
+    if not any(result["id"] == target for result in known):
+        raise ValueError(
+            f"{definition['id']}: escalation {escalation['id']!r} refers to "
+            f"unknown result {target!r}."
+        )
+    return target
 
 
 def evaluate_scoring(
@@ -167,7 +187,7 @@ def evaluate_scoring(
     evaluation = definition["evaluation"]
     kind = evaluation["kind"]
     alternate_mode = active_alternate_mode(definition, inputs)
-    bands = alternate_mode["results"] if alternate_mode else None
+    bands = alternate_mode["results"] if alternate_mode else definition["results"]
 
     def result_id_for(result_id: str, score: float) -> str:
         if alternate_mode is None:
@@ -197,8 +217,8 @@ def evaluate_scoring(
             )
 
     if kind in {"sum", "required-sum"}:
-        criterion_ids = filter_by_scale_selector(
-            evaluation["scoreCriteria"] or list(criteria), inputs
+        criterion_ids = filter_by_active_when(
+            evaluation["scoreCriteria"] or list(criteria), criteria, inputs
         )
         score = 0.0
         highest_criterion_score = -math.inf
