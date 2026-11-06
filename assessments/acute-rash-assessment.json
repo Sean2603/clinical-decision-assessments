@@ -1,7 +1,7 @@
 {
   "id": "acute-rash-assessment",
   "title": "Acute Rash Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing acute rash, recognising life-threatening infectious and drug reactions, distinguishing serious causes from benign viral exanthems, and supporting safe triage and urgent referral.",
   "sections": [
     {
@@ -148,7 +148,7 @@
             "Alert, haemodynamically stable, normal temperature or low-grade fever."
           ],
           "abnormal": [
-            "Altered consciousness, fever >38.5\u00c2\u00b0C, tachycardia, hypotension or signs of shock."
+            "Altered consciousness, fever >38.5Â°C, tachycardia, hypotension or signs of shock."
           ],
           "implications": [
             "Systemic illness with rash suggests serious infection or drug reaction."
@@ -306,12 +306,12 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Draft assessment - pending clinical validation"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-11-06",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-11-06",
+    "reviewNotes": null
   },
   "categoryIds": [
     "uncategorised"

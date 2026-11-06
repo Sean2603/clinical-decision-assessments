@@ -2,7 +2,7 @@
   "id": "erythrocyte-sedimentation-rate",
   "title": "Erythrocyte sedimentation rate",
   "subtitle": "ESR for detection of acute and chronic inflammation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "ESR measurement for assessment of systemic inflammation, infection, and autoimmune disease.",
@@ -149,11 +149,14 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Draft blood panel — pending clinical validation"
-  }
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-11-06",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-11-06",
+    "reviewNotes": null
+  },
+  "specimens": [],
+  "attachments": [],
+  "prominentResources": []
 }

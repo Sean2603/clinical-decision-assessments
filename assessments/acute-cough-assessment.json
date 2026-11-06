@@ -1,7 +1,7 @@
 {
   "id": "acute-cough-assessment",
   "title": "Acute Cough Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing acute cough, distinguishing viral upper-respiratory infection from serious lower-respiratory pathology, and supporting diagnosis, investigation and safety-netting.",
   "sections": [
     {
@@ -80,7 +80,7 @@
           "id": "respiratory-emergency",
           "title": "Respiratory emergency",
           "urgentFeatures": [
-            "Severe respiratory distress, stridor, inability to speak in sentences, or SpO\u00e2\u201a\u201a <92%.",
+            "Severe respiratory distress, stridor, inability to speak in sentences, or SpOâ‚‚ <92%.",
             "Sudden onset severe dyspnoea or acute deterioration in known lung disease.",
             "Signs of airway obstruction or foreign body aspiration."
           ],
@@ -120,7 +120,7 @@
           "title": "Acute asthma exacerbation",
           "urgentFeatures": [
             "Known asthma with acute onset wheeze and dyspnoea.",
-            "Inability to speak in sentences, peak flow <50% predicted, or SpO\u00e2\u201a\u201a <92%.",
+            "Inability to speak in sentences, peak flow <50% predicted, or SpOâ‚‚ <92%.",
             "Silent chest, inability to cough or signs of respiratory fatigue."
           ],
           "implications": [
@@ -144,10 +144,10 @@
             "Note signs of cyanosis, pallor or respiratory difficulty."
           ],
           "normal": [
-            "Clinically well, speaking in full sentences, SpO\u00e2\u201a\u201a \u00e2\u2030\u00a595% on room air."
+            "Clinically well, speaking in full sentences, SpOâ‚‚ â‰¥95% on room air."
           ],
           "abnormal": [
-            "Respiratory distress, dyspnoea at rest, SpO\u00e2\u201a\u201a <92%, fever >38.5\u00c2\u00b0C, tachycardia."
+            "Respiratory distress, dyspnoea at rest, SpOâ‚‚ <92%, fever >38.5Â°C, tachycardia."
           ],
           "implications": [
             "Abnormal vital signs or distress mandate further investigation and possible escalation."
@@ -263,7 +263,7 @@
           "id": "investigation-guidance",
           "title": "Investigation",
           "mustConfirmOrExclude": [
-            "Chest X-ray: indicated if pneumonia suspected, fever >38.5\u00c2\u00b0C, focal signs or dyspnoea.",
+            "Chest X-ray: indicated if pneumonia suspected, fever >38.5Â°C, focal signs or dyspnoea.",
             "FBC/CRP: indicated if pneumonia suspected or severe systemic illness.",
             "Peak flow: measure if asthma or COPD exacerbation suspected.",
             "ECG or BNP: consider if heart failure or acute coronary syndrome suspected."
@@ -274,7 +274,7 @@
           "title": "Community management is appropriate when",
           "mustConfirmOrExclude": [
             "No red flags for serious pathology present.",
-            "SpO\u00e2\u201a\u201a \u00e2\u2030\u00a594% and respiratory rate normal.",
+            "SpOâ‚‚ â‰¥94% and respiratory rate normal.",
             "Able to maintain fluids and oral treatment.",
             "Reliable access to follow-up and escalation route."
           ]
@@ -283,7 +283,7 @@
           "id": "hospital-referral",
           "title": "Refer or admit for hospital assessment",
           "urgentFeatures": [
-            "Respiratory distress, SpO\u00e2\u201a\u201a <92%, stridor or signs of airway compromise.",
+            "Respiratory distress, SpOâ‚‚ <92%, stridor or signs of airway compromise.",
             "Pneumonia with fever, systemic illness or comorbidity.",
             "Severe asthma exacerbation not responding to initial treatment.",
             "Suspected PE or other serious pathology.",
@@ -304,8 +304,8 @@
           "id": "cough-safety-netting",
           "title": "Acute cough",
           "safetyNetting": [
-            "Call 999 or go to ED immediately for: severe difficulty breathing, stridor, inability to speak in sentences, SpO\u00e2\u201a\u201a <90%, severe chest pain, coughing up large amounts of blood, or signs of shock.",
-            "Contact your GP or go to ED same-day for: high fever (>38.5\u00c2\u00b0C) with cough; focal chest signs or breathlessness; suspected pneumonia; suspected PE (leg swelling + dyspnoea); or worsening asthma/COPD despite treatment.",
+            "Call 999 or go to ED immediately for: severe difficulty breathing, stridor, inability to speak in sentences, SpOâ‚‚ <90%, severe chest pain, coughing up large amounts of blood, or signs of shock.",
+            "Contact your GP or go to ED same-day for: high fever (>38.5Â°C) with cough; focal chest signs or breathlessness; suspected pneumonia; suspected PE (leg swelling + dyspnoea); or worsening asthma/COPD despite treatment.",
             "Speak to your GP if: cough persists beyond 3 weeks; cough is not improving after 1 week of treatment; you develop new symptoms; or you have concerns about underlying causes."
           ]
         }
@@ -314,12 +314,12 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Draft assessment - pending clinical validation"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-11-06",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-11-06",
+    "reviewNotes": null
   },
   "categoryIds": [
     "uncategorised"

@@ -1,5 +1,45 @@
 # Shared reference registry — Publication history
 
+<!-- cdm-publication:0.1.1 -->
+## v0.1.1 — 2026-11-06
+
+- **Content ID:** `references`
+- **Content type:** reference-registry
+- **Previous published version:** 0.1.0
+- **Published version:** 0.1.1
+- **Generated:** 2026-11-06T18:23:28.482Z
+
+## Change control
+
+- **Summary:** Added 5 reference(s) from the clinical repository references.json. Unverified until a reviewer verifies them.
+- **Risk:** reference-update
+- **Selected version increase:** patch
+- **Recommended version increase:** patch
+- **Changed fields:** 6
+- **Override reason:** Not recorded
+
+## Clinical review
+
+- **Status:** clinically-validated
+- **Reviewer:** Sean McGrory
+- **Reviewer role:** tAPUC
+- **Reviewed at:** 2026-11-06T12:00:00.000Z
+- **Notes:** Added reference: NICE-CG27 — Nausea and vomiting in pregnancy
+Added reference: NICE-NG114 — Constipation in adults
+Added reference: NICE-NG143 — Fever in under 5s: assessment and initial management
+Added reference: NICE-NG180 — Infection prevention and control
+Added reference: NICE-NG51 — Sepsis: recognition, diagnosis and early management
+
+## Validation
+
+- **Publication ready:** Yes
+- **Errors:** 0
+- **Warnings:** 0
+
+<!-- /cdm-publication:0.1.1 -->
+
+---
+
 <!-- cdm-publication:0.2.0 -->
 ## v0.2.0 — 2026-08-29
 

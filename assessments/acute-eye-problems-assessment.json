@@ -1,7 +1,7 @@
 {
   "id": "acute-eye-problems-assessment",
   "title": "Acute Eye Problems Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing acute eye problems including red eye and eye pain, distinguishing vision-threatening conditions from benign causes, and supporting safe triage and urgent referral.",
   "sections": [
     {
@@ -402,12 +402,12 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Draft assessment - pending clinical validation"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-11-06",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-11-06",
+    "reviewNotes": null
   },
   "categoryIds": [
     "uncategorised"
