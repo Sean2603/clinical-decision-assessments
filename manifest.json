@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.68",
-  "updatedAt": "2026-11-04T16:15:34Z",
+  "contentVersion": "0.0.69",
+  "updatedAt": "2026-11-06T18:40:36Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,11 +13,11 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.76.3",
-  "downloadSizeBytes": 7071807,
+  "downloadSizeBytes": 7074602,
   "references": {
     "file": "references/references.json",
-    "sha256": "2e3058eb945e58bb0a3807c4f687fbc96fa3c138446730221268596fbfc15b86",
-    "sizeBytes": 45966
+    "sha256": "32ed6ce4af5fe1abe6c06cd149fb4ea03b6edeeacfc322dce83b1e08d068ec34",
+    "sizeBytes": 45967
   },
   "glossary": {
     "file": "glossary/glossary.json",
@@ -103,12 +103,12 @@
     {
       "id": "acute-cough-assessment",
       "title": "Acute Cough Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/acute-cough-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "e5c215deae12139c45d6e2a777a137ec562d4b4a5e4796eefbdcc5f6a70f162d",
+      "sha256": "6c7e66fa488de2743577f067d77788e7c7831d46539f28159e9dcf561e24e486",
       "schemaSha256": "9123ec4a54f9135b82803289d3ec98aa0ecb993f7a93ead9301bb91b7d4d4543",
-      "sizeBytes": 14193,
+      "sizeBytes": 14062,
       "schemaSizeBytes": 11243,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -118,12 +118,12 @@
     {
       "id": "acute-diarrhoea-assessment",
       "title": "Acute Diarrhoea Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/acute-diarrhoea-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "1391a708c58dbbdd18d32b1106298494b0f16238e0743029b97ce348eb93d83c",
+      "sha256": "6b669e580e16dfe81ac3cc53c355428f7054fd86e353cdd7fcdb8ad82c675b6c",
       "schemaSha256": "9123ec4a54f9135b82803289d3ec98aa0ecb993f7a93ead9301bb91b7d4d4543",
-      "sizeBytes": 15113,
+      "sizeBytes": 15066,
       "schemaSizeBytes": 11243,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -133,12 +133,12 @@
     {
       "id": "acute-eye-problems-assessment",
       "title": "Acute Eye Problems Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/acute-eye-problems-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "e88def887c1611f68f8cbaf0594da884a028f402e3e7ff83abade5e18f0f6a0a",
+      "sha256": "b3569f3fe6d9e54e3da0780dbc7f780a55013692916d70e074f1fdcf6bbe73cf",
       "schemaSha256": "9123ec4a54f9135b82803289d3ec98aa0ecb993f7a93ead9301bb91b7d4d4543",
-      "sizeBytes": 17711,
+      "sizeBytes": 17696,
       "schemaSizeBytes": 11243,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -193,12 +193,12 @@
     {
       "id": "acute-rash-assessment",
       "title": "Acute Rash Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/acute-rash-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "bd801c2a90194c4ba2fc1fad33290ac66abc30d2a76358dd50ad74fe0ad55385",
+      "sha256": "bd64541c78afb97742c2bbeab9c5a3ae68513d211c4227aa6f45e32998fd9b3a",
       "schemaSha256": "9123ec4a54f9135b82803289d3ec98aa0ecb993f7a93ead9301bb91b7d4d4543",
-      "sizeBytes": 13964,
+      "sizeBytes": 13941,
       "schemaSizeBytes": 11243,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -328,12 +328,12 @@
     {
       "id": "fever-children-assessment",
       "title": "Fever in Children Assessment",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "file": "assessments/fever-children-assessment.json",
       "schema": "schema/assessment-schema.json",
-      "sha256": "32bbdbdcd616781d99271bf5aa69562dbf4b3ca681d30590fea9704e99a36735",
+      "sha256": "e7a2175ead1cbd1fcce6d003f8277b2022bdff6ffa7e87244eeb4fcb204e224a",
       "schemaSha256": "9123ec4a54f9135b82803289d3ec98aa0ecb993f7a93ead9301bb91b7d4d4543",
-      "sizeBytes": 7181,
+      "sizeBytes": 9946,
       "schemaSizeBytes": 11243,
       "attachmentsSizeBytes": 0,
       "categoryIds": [
@@ -655,24 +655,24 @@
     {
       "id": "d-dimer",
       "title": "D-dimer",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/d-dimer.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "7ad8518838bf754c3425a214abc4af487cc37e8de36ec5faaad7264774d2a392",
+      "sha256": "1ae4a91ec5f3f0445e1e93646f36953d4168934e12b87adf7389dcc7c651facb",
       "schemaSha256": "54daa461f1ef70661afabd69bd0549bb339ceda0e9af099daedf41b5be0b8278",
-      "sizeBytes": 6264,
+      "sizeBytes": 6313,
       "schemaSizeBytes": 18537,
       "attachmentsSizeBytes": 0
     },
     {
       "id": "erythrocyte-sedimentation-rate",
       "title": "Erythrocyte sedimentation rate",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/erythrocyte-sedimentation-rate.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "9419f332d8711f59a2e87a3f2942437da186606044804f27da7b0dd3f45ae29e",
+      "sha256": "16f7b9e8f800638d54bfee9e1a25ccf3de9b0e5c8c869ea880ee7ffc64e0898a",
       "schemaSha256": "54daa461f1ef70661afabd69bd0549bb339ceda0e9af099daedf41b5be0b8278",
-      "sizeBytes": 6235,
+      "sizeBytes": 6284,
       "schemaSizeBytes": 18537,
       "attachmentsSizeBytes": 0
     },
@@ -715,12 +715,12 @@
     {
       "id": "iron-studies",
       "title": "Iron studies",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/iron-studies.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "e6b46ffcf397cc850916b2a833a16b15a89e776ead0a97b996f434344e846be0",
+      "sha256": "52a0dbf8402f0000fe9c721ff1b780d94770d0af50cdb39ea32e29863cbe88e1",
       "schemaSha256": "54daa461f1ef70661afabd69bd0549bb339ceda0e9af099daedf41b5be0b8278",
-      "sizeBytes": 7644,
+      "sizeBytes": 7693,
       "schemaSizeBytes": 18537,
       "attachmentsSizeBytes": 0
     },
@@ -739,12 +739,12 @@
     {
       "id": "lipid-profile",
       "title": "Lipid profile",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/lipid-profile.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "62b797e85834645a341cd1079349d14be748804d9996a3cab051b9c62a19d57b",
+      "sha256": "cd5f352a61ab77995eeec77d57d35413f3e4e4cad7a83b2854cb4a79644810a6",
       "schemaSha256": "54daa461f1ef70661afabd69bd0549bb339ceda0e9af099daedf41b5be0b8278",
-      "sizeBytes": 8746,
+      "sizeBytes": 8795,
       "schemaSizeBytes": 18537,
       "attachmentsSizeBytes": 0
     },
@@ -763,12 +763,12 @@
     {
       "id": "procalcitonin",
       "title": "Procalcitonin",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "file": "blood_panels/procalcitonin.json",
       "schema": "schema/blood-panel-schema.json",
-      "sha256": "0bb71cb5314ea120abd82ab809a4423f5042c4eab29cd821212df714ab0b5351",
+      "sha256": "6e4ec6cd356afb95c72c1a96b4fd2e194d33edfb29cad28111507f8d97855896",
       "schemaSha256": "54daa461f1ef70661afabd69bd0549bb339ceda0e9af099daedf41b5be0b8278",
-      "sizeBytes": 6245,
+      "sizeBytes": 6294,
       "schemaSizeBytes": 18537,
       "attachmentsSizeBytes": 0
     },
