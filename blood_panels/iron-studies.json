@@ -2,7 +2,7 @@
   "id": "iron-studies",
   "title": "Iron studies",
   "subtitle": "Serum iron, ferritin, transferrin saturation and TIBC for iron status assessment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Iron profile measurement for assessment of iron deficiency, iron overload, and anaemia diagnosis.",
@@ -184,11 +184,14 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Draft blood panel — pending clinical validation"
-  }
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-11-06",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-11-06",
+    "reviewNotes": null
+  },
+  "specimens": [],
+  "attachments": [],
+  "prominentResources": []
 }
