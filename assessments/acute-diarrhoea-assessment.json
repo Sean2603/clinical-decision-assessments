@@ -1,7 +1,7 @@
 {
   "id": "acute-diarrhoea-assessment",
   "title": "Acute Diarrhoea Assessment",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A clinician-facing prompt for assessing acute diarrhoea, recognising serious causes and dehydration risk, distinguishing infectious from inflammatory causes, and supporting safe management and safety-netting.",
   "sections": [
     {
@@ -75,7 +75,7 @@
           "mustConfirmOrExclude": [
             "Bloody diarrhoea or diarrhoea with mucus.",
             "Severe abdominal pain or peritoneal signs.",
-            "High fever (>38.5\u00c2\u00b0C) with systemic illness.",
+            "High fever (>38.5Â°C) with systemic illness.",
             "Unable to drink or persistent vomiting (dehydration risk).",
             "Diarrhoea lasting >2 weeks (chronic diarrhoea).",
             "Weight loss or systemic symptoms.",
@@ -204,7 +204,7 @@
             "Afebrile or low-grade fever, normal vital signs, well appearance."
           ],
           "abnormal": [
-            "High fever (>38.5\u00c2\u00b0C), tachycardia, hypotension, signs of shock or sepsis."
+            "High fever (>38.5Â°C), tachycardia, hypotension, signs of shock or sepsis."
           ],
           "implications": [
             "Fever with bloody diarrhoea suggests infectious colitis; shock suggests severe infection or dehydration."
@@ -293,7 +293,7 @@
           "mustConfirmOrExclude": [
             "Stool culture: if bloody diarrhoea, fever or severe systemic illness.",
             "C. difficile testing: if recent antibiotics or hospital exposure.",
-            "Blood tests: if fever >38.5\u00c2\u00b0C or severe systemic illness (FBC, CRP, electrolytes).",
+            "Blood tests: if fever >38.5Â°C or severe systemic illness (FBC, CRP, electrolytes).",
             "Imaging: if acute surgical abdomen suspected (abdominal X-ray or CT)."
           ]
         },
@@ -335,7 +335,7 @@
           "title": "Acute diarrhoea",
           "safetyNetting": [
             "Call 999 or go to ED immediately for: signs of severe dehydration (extreme dizziness, confusion, no urine for 8+ hours); severe abdominal pain with peritoneal signs; blood in stool with fever and severe systemic illness; or signs of shock.",
-            "Contact your GP or go to ED same-day for: persistent vomiting preventing fluid intake; bloody diarrhoea; high fever (>38.5\u00c2\u00b0C); severe abdominal pain; diarrhoea lasting >2 weeks; or signs of dehydration (dark urine, dry mouth).",
+            "Contact your GP or go to ED same-day for: persistent vomiting preventing fluid intake; bloody diarrhoea; high fever (>38.5Â°C); severe abdominal pain; diarrhoea lasting >2 weeks; or signs of dehydration (dark urine, dry mouth).",
             "Speak to your GP if: diarrhoea persists beyond 1 week; you are not improving with rehydration; you want antibiotic advice; or you are concerned about underlying causes."
           ]
         }
@@ -344,12 +344,12 @@
   ],
   "references": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Draft assessment - pending clinical validation"
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-11-06",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-11-06",
+    "reviewNotes": null
   },
   "categoryIds": [
     "uncategorised"

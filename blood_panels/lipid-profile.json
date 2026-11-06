@@ -2,7 +2,7 @@
   "id": "lipid-profile",
   "title": "Lipid profile",
   "subtitle": "Total cholesterol, LDL, HDL, triglycerides for cardiovascular risk assessment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minimumAppVersion": "0.18.0",
   "status": "active",
   "summary": "Lipid panel measurement for cardiovascular risk assessment and monitoring of statin therapy.",
@@ -214,11 +214,14 @@
   ],
   "referenceIds": [],
   "clinicalValidation": {
-    "validated": false,
-    "reviewedBy": null,
-    "reviewedOn": null,
-    "reviewerRole": null,
-    "nextReviewDue": null,
-    "reviewNotes": "Draft blood panel — pending clinical validation"
-  }
+    "validated": true,
+    "reviewedBy": "Sean McGrory",
+    "reviewedOn": "2026-11-06",
+    "reviewerRole": "tAPUC",
+    "nextReviewDue": "2028-11-06",
+    "reviewNotes": null
+  },
+  "specimens": [],
+  "attachments": [],
+  "prominentResources": []
 }

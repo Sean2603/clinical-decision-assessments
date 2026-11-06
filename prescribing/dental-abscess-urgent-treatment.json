@@ -4,12 +4,12 @@
   "aliases": [
     "dental abscess"
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "status": "active",
   "system": "Dental",
   "category": "Dental infections in general practice",
   "summary": "",
-  "updatedOn": "2026-08-29",
+  "updatedOn": "2026-11-04",
   "changeSummary": "Migrated to component-based prescribing regimens; clinical content unchanged.",
   "effectiveFrom": null,
   "clinicalNotes": [
@@ -30,27 +30,20 @@
           "route": null,
           "frequency": "four times a day",
           "duration": "5 days (review after 3 days)"
-        }
-      ]
-    },
-    {
-      "rank": 1,
-      "label": "Adult 1st line",
-      "components": [
+        },
         {
           "medicationId": "amoxicillin",
-          "displayName": "Amoxicillin capsules",
+          "displayName": "Amoxicillin Capsules",
           "dose": "500mg to 1000mg",
           "route": null,
           "frequency": "three times a day",
           "duration": "5 days (review after 3 days)"
         }
       ],
-      "restrictions": [],
-      "notes": []
+      "relationship": "OR"
     },
     {
-      "rank": 1,
+      "rank": 2,
       "label": "Adult 1st line Penicillin Allergy",
       "restrictions": [],
       "notes": [],
@@ -73,9 +66,9 @@
   "clinicalValidation": {
     "validated": true,
     "reviewedBy": "Sean McGrory",
-    "reviewedOn": "2026-08-29",
+    "reviewedOn": "2026-11-04",
     "reviewerRole": "tAPUC",
-    "nextReviewDue": "2028-08-29",
+    "nextReviewDue": "2028-11-04",
     "reviewNotes": "Review completed. No additional review comments recorded."
   },
   "attachments": [],

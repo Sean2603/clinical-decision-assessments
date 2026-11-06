@@ -1,3 +1,10 @@
+## 2026-11-04 – NEWS2 single-parameter score-3 escalation (draft, unreviewed)
+
+- `scoring_tools/news2.json` 0.1.2 → 0.1.3 (merged on top of the 2026-10-08 conditional-criteria change, which took it 0.1.1 → 0.1.2): adds result `low-medium` (escalation-only; its 0–4 range is shadowed by `low`, so it is reached only via escalation), and escalation `single-parameter-score-3` (any single parameter scoring ≥3 with band `low` → `low-medium`). Score is unchanged.
+- Adds parity case `result-low-single-parameter-3` (respiratory rate 8, aggregate 3 → `low-medium`).
+- Draft wording of the `low-medium` interpretation and actions is pending clinical review; `clinicalValidation.validated` remains `false`.
+- Requires app 0.76.3 or later (enforced by `sync_manifest.py`).
+- `manifest.json` regenerated.
 ## 2026-10-08 – Conditional scoring criteria replace the hardcoded NEWS2 SpO2 rule
 
 - **`schema/scoring-tool-schema.json`**: criteria gain an optional `activeWhen` (`{criterionId, equalsChoiceId}`, `additionalProperties: false`). A criterion carrying it is scored, counted towards the maximum and shown only while the named choice criterion holds the named choice. This expresses mutually exclusive criteria declaratively, where the NEWS2 SpO2 Scale 1 / Scale 2 rule was previously hardcoded in four places across two repositories.
