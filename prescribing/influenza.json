@@ -1,0 +1,266 @@
+{
+  "id": "influenza",
+  "title": "Influenza",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Lower Respiratory Tract Infections",
+  "category": "Influenza",
+  "summary": "Refer to UKHSA guidance for further details. The Chief Medical Officer at the Department of Health will inform GP practices when national surveillance systems indicate that influenza is circulating in the community. In this situation it is appropriate for primary care to prescribe antiviral medication for the treatment or prophylaxis of influenza. Treat patients in at risk groups that present with an influenza-like illness, in order to prevent severe influenza-related morbidity and mortality. For otherwise healthy individuals, antivirals are not recommended (except in pregnant women). All treatment recommendations assume there is no confirmed antiviral resistance. Treatment should be started as soon as possible to achieve the greatest benefit.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "At-risk patients include those with: chronic neurological, hepatic, renal, respiratory and cardiovascular diseases; diabetes mellitus; (potential) immunosuppression; morbid obesity (BMI ≥40); age over 65 years; current pregnancy (including up to 2 weeks post-partum); children under 6 months of age.",
+    "Non-severe influenza: sudden onset cough, sore throat, rhinorrhoea, fever, headache, muscle and joint pain, severe malaise. Occasionally gastrointestinal and, less commonly, ocular symptoms have also been described.",
+    "Severe influenza: evidence of clinical complications such as pneumonia, sepsis, multi-organ failure, encephalopathy or exacerbation of chronic disease, which require management in hospital. ('Complicated' and 'uncomplicated' were previously used to describe the severity of influenza infections.)",
+    "Inform all patients of the symptoms of severe influenza and to seek medical help should their condition worsen.",
+    "If a prescriber believes that the patient is at risk of developing serious complications from influenza, then manage as per at risk population. Treatment may also be considered in order to reduce transmission to severely immunosuppressed household contacts.",
+    "Post-exposure prophylaxis is recommended for people in at-risk groups if: they have been exposed to an influenza-like illness; they are able to begin prophylaxis within the recommended time scale for individual drugs in relation to contact with the index case; and they have not been protected by vaccination (including those not vaccinated within the same influenza season, where the vaccination is not well matched to the circulating strain, or less than 14 days between vaccination and date of contact). Exposure is defined as close contact with a person in the same household or residential setting with influenza-like illness, when influenza is circulating in the community.",
+    "Suspected or confirmed outbreaks in settings with people at risk (e.g. special schools and nursing and residential care homes) should be reported to the Public Health Agency Health Protection Duty Room (0300 555 0119) for guidance on management. Treat symptomatic patients in at risk groups as per the treatment section. People in at-risk groups exposed within this setting should be given antiviral post-exposure prophylaxis regardless of vaccination status; exposure may continue due to new-onset cases, which may support initiation of prophylaxis beyond 48 or 36 hours of exposure to the initial primary case."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Non-severe influenza, previously healthy patient (excluding pregnant women)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "No antiviral treatment. Patient self-care information is available (see source)."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Non-severe influenza, at risk population – adult 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Oseltamivir PO",
+          "dose": "Adults (13 years and over): 75 mg (41 kg and above) twice daily for 5 days (extend up to 10 days in immunosuppressed patients); 60 mg if up to 41 kg",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5 days (up to 10 days in immunosuppressed patients)"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Commence treatment within 48 hours of symptom onset (within 36 hours for zanamivir use in children), or later at clinical discretion."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Non-severe influenza, at risk population – adult 2nd line (where oseltamivir cannot be given)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Zanamivir INH",
+          "dose": "10 mg twice daily",
+          "route": "Inhaled",
+          "frequency": "Twice daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Consider inhaled zanamivir instead of PO/NG oseltamivir if: poor clinical response to oseltamivir; confirmed strain with potential for oseltamivir resistance; evidence of gastrointestinal dysfunction requiring discontinuation; oseltamivir cannot be given for other reasons.",
+        "Inhaled zanamivir is not licensed for children aged under 5 years and is unlikely to be an effective delivery route in these patients. Patients with severe underlying respiratory disease or impaired cognition may also be unable to use the Diskhaler effectively.",
+        "If oseltamivir and inhaled zanamivir are unsuitable, discuss treatment options with a specialist."
+      ]
+    },
+    {
+      "rank": 4,
+      "label": "Non-severe influenza, at risk population – child 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Oseltamivir PO",
+          "dose": "Infants under 12 months: 3 mg/kg/dose; children 1 to 12 years: 10–15 kg 30 mg; more than 15 kg to 23 kg 45 mg; more than 23 kg to 40 kg 60 mg; over 40 kg 75 mg",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5 days (up to 10 days in immunosuppressed patients)"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 5,
+      "label": "Non-severe influenza, at risk population – child 2nd line (where oseltamivir cannot be given)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Zanamivir INH",
+          "dose": "Children 5 to 17 years: 10 mg twice daily (under 5 years: not licensed)",
+          "route": "Inhaled",
+          "frequency": "Twice daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "See the inhaled zanamivir notes above. For children aged less than 5 years and those who cannot use zanamivir INH (e.g. severe underlying respiratory disease, impaired cognition), discuss with specialist."
+      ]
+    },
+    {
+      "rank": 6,
+      "label": "Severe influenza",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (refer)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Severe influenza should be referred to secondary care for advice and or management."
+      ]
+    },
+    {
+      "rank": 7,
+      "label": "Post-exposure prophylaxis – previously healthy patient (excluding pregnant women)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "No prophylaxis",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 8,
+      "label": "Post-exposure prophylaxis – at risk population – adult 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Oseltamivir PO",
+          "dose": "Adults (13 years and over): 75 mg once daily for 10 days (60 mg if up to 41 kg)",
+          "route": "Oral",
+          "frequency": "Once daily",
+          "duration": "10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Start oseltamivir within 48 hours of last contact, and zanamivir within 36 hours. After these times is off-label use and should be on specialist advice only.",
+        "Use oseltamivir or zanamivir in line with the treatment dosing for the relevant age group (see doses below)."
+      ]
+    },
+    {
+      "rank": 9,
+      "label": "Post-exposure prophylaxis – at risk population – adult 2nd line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Zanamivir INH",
+          "dose": "10 mg once daily for 5 days",
+          "route": "Inhaled",
+          "frequency": "Once daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 10,
+      "label": "Post-exposure prophylaxis – at risk population – child 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Oseltamivir PO",
+          "dose": "Once daily for 10 days, weight-banded as per the dosing table below",
+          "route": "Oral",
+          "frequency": "Once daily",
+          "duration": "10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 11,
+      "label": "Post-exposure prophylaxis – at risk population – child 2nd line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Zanamivir INH",
+          "dose": "Children 5 to 17 years: 10 mg once daily for 5 days (under 5 years: not licensed)",
+          "route": "Inhaled",
+          "frequency": "Once daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "For children aged less than 5 years and those who cannot use zanamivir INH, discuss with specialist."
+      ]
+    },
+    {
+      "rank": 12,
+      "label": "Post-exposure prophylaxis – at risk population – where exposure is confirmed to oseltamivir-resistant influenza",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Zanamivir INH",
+          "dose": "Adults: 10 mg once daily for 10 days; children 5 to 17 years: 10 mg once daily (see table below)",
+          "route": "Inhaled",
+          "frequency": "Once daily",
+          "duration": "10 days (adults); see dosing table for children"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Child 1st line for this situation is zanamivir INH (for children aged less than 5 years and those who cannot use zanamivir INH, discuss with specialist)."
+      ]
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Oseltamivir and zanamivir doses – treatment (Eolas table)",
+      "items": [
+        "Oseltamivir treatment, adults (13 years and over): 41 kg and above 75 mg twice daily for 5 days (extend up to 10 days in immunosuppressed patients); up to 41 kg 60 mg twice daily for 5 days.",
+        "Oseltamivir treatment, children: infants under 12 months 3 mg/kg/dose twice daily for 5 days; 1 to 12 years 10 to 15 kg 30 mg; more than 15 kg to 23 kg 45 mg; more than 23 kg to 40 kg 60 mg; over 40 kg 75 mg (each twice daily for 5 days).",
+        "Oseltamivir prophylaxis, adults 75 mg (41 kg and above) or 60 mg (up to 41 kg) once daily for 10 days; children weight-banded as above, once daily for 10 days.",
+        "Zanamivir treatment: adults 10 mg twice daily for 5 days; children under 5 years not licensed; children 5 to 17 years 10 mg twice daily for 5 days.",
+        "Zanamivir prophylaxis: adults 10 mg once daily for 5 days; children 5 to 17 years 10 mg once daily for 5 days; children under 5 years not licensed.",
+        "Refer to BNF or UKHSA guidance for dosing in renal and hepatic impairment, premature infants. Refer also to relevant SPC for prescribing antivirals in pregnancy."
+      ]
+    },
+    {
+      "title": "Referral",
+      "items": [
+        "Refer to UKHSA guidance and NICE TA168 (www.nice.org.uk/Guidance/TA168) for further information. For post-exposure prophylaxis, see NICE TA158 (www.nice.org.uk/Guidance/TA158)."
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

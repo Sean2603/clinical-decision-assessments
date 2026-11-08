@@ -1,0 +1,94 @@
+{
+  "id": "pertussis",
+  "title": "Pertussis",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Lower Respiratory Tract Infections",
+  "category": "Pertussis",
+  "summary": "UKHSA guidance on the management of cases of pertussis during the re-emergence of pertussis in 2024, including testing in primary care. The risk of severe outcomes from pertussis is greatest among infants less than 2 months of age who have not yet received their primary pertussis dose, and especially in those whose mothers were not vaccinated within the recommended window in pregnancy (16 to 32 weeks' gestation).",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Pertussis cases are considered infectious from onset of respiratory symptoms until 48 hours after commencement of appropriate antibiotic treatment, or 21 days from onset of respiratory symptoms if not receiving treatment. Pertussis is most infectious during the early catarrhal stage, e.g. the first 1–2 weeks, when symptoms may be unspecific (e.g. mild cough and coryza) rather than during the later stage (e.g. with the typical paroxysmal cough). However cases are infectious until three weeks after the onset of typical paroxysms.",
+    "The clinical decision to offer antibiotics for pertussis cases, and the choice of treatment, relies on a combination of clinical assessment and laboratory testing. The benefit of antibiotics on the clinical course of the illness is limited to the early catarrhal phase and certainly within 14 days from onset of respiratory symptoms. Beyond the first 14 days, the main benefit of antibiotic therapy is to reduce transmission to close contacts. Given the current level of pertussis activity in the population and the extent of asymptomatic infection, the use of antibiotics in cases beyond 14 days to prevent ongoing transmission is unlikely to have a significant impact at a population level.",
+    "Antibiotic therapy can be considered for clinical indications within 14 days of onset of symptoms; however, where the case has a household or other close contact who falls into priority Group 1 for public health action or is a pregnant woman, antibiotic therapy is recommended for all cases commencing within 21 days of onset of symptoms. This applies for example to cases who are healthcare workers providing close personal care to infants or pregnant women, or nursery workers providing close personal care to infants in a baby room that includes children under 3 months of age."
+  ],
+  "cautions": [
+    "Co-trimoxazole should not be used in pregnancy, particularly in first trimester, unless no other antibiotic option available.",
+    "Co-trimoxazole not licensed for infants below 6 weeks."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adults",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "500 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternatives: azithromycin tablets 500 mg once a day for 3 days; erythromycin tablets 500 mg every 6 hours for 7 days.",
+        "If macrolides contra-indicated or not tolerated: co-trimoxazole tablets 960 mg twice a day for 7 days."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Pregnant women",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Erythromycin tablets",
+          "dose": "500 mg every 6 hours",
+          "route": "Oral",
+          "frequency": "Every 6 hours",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternatives: azithromycin tablets 500 mg once a day for 3 days; clarithromycin tablets 500 mg twice a day for 7 days.",
+        "If macrolides contra-indicated or not tolerated: seek advice from Microbiology."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Child",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension (or tablets in older children)",
+          "dose": "Under 1 month: 7.5 mg/kg twice a day; 1 month to 11 years: under 8 kg 7.5 mg/kg twice a day, 8–11 kg 62.5 mg twice a day, 12–19 kg 125 mg twice a day, 20–29 kg 187.5 mg twice a day, 30–40 kg 250 mg twice a day; 12–17 years: 500 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternatives: azithromycin oral suspension (or tablets in older children): under 1 month 10 mg/kg once a day; 1–6 months 10 mg/kg once a day; over 6 months 10 mg/kg once a day (max 500 mg) for 3 days. Erythromycin oral suspension (or tablets in older children): under 1 month 10 to 15 mg/kg every 6 hours; 1 to 23 months 125 mg every 6 hours; 2 to 7 years 250 mg every 6 hours; 8 to 17 years 250 to 500 mg every 6 hours (7 days).",
+        "If macrolides contra-indicated or not tolerated: co-trimoxazole oral suspension (or tablets in older children): 6 weeks to 5 months 120 mg twice a day; 6 months to 5 years 240 mg twice a day; 6 to 11 years 480 mg twice a day; 12 to 17 years 960 mg twice a day (7 days).",
+        "Doses for treatment and prophylaxis are the same; doses can be doubled in severe infections."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

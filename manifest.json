@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.69",
-  "updatedAt": "2026-11-08T18:39:43Z",
+  "contentVersion": "0.0.70",
+  "updatedAt": "2026-11-08T18:46:00Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.76.4",
-  "downloadSizeBytes": 7094622,
+  "downloadSizeBytes": 7151518,
   "references": {
     "file": "references/references.json",
     "sha256": "32ed6ce4af5fe1abe6c06cd149fb4ea03b6edeeacfc322dce83b1e08d068ec34",
@@ -1005,6 +1005,66 @@
       "attachmentsSizeBytes": 226581
     },
     {
+      "id": "cdi-appropriate-use-prevention",
+      "title": "CDI – Appropriate Use of Antibiotics and Prevention",
+      "version": "0.1.0",
+      "file": "prescribing/cdi-appropriate-use-prevention.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "cf537f433d0e4d6d412e3f37230cf74ba66a803bf7200a7db71ddd8e8d913d57",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3005,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "cdi-diagnosis-treatment",
+      "title": "CDI – Diagnosis and Treatment Options",
+      "version": "0.1.0",
+      "file": "prescribing/cdi-diagnosis-treatment.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "96208c53140959fa64de375a6c4055dbed86f1c69252f8eebdff6d1a1b176ee0",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 4531,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "cdi-lab-result-interpretation",
+      "title": "CDI – Interpretation of Lab Results",
+      "version": "0.1.0",
+      "file": "prescribing/cdi-lab-result-interpretation.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "fcf3555d8c472332a5815e7f8f421b8f776780a8dbaf5294fbdcd63a8709b267",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2269,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "cdi-treatment-primary-care",
+      "title": "Accessing Treatment of Clostridioides difficile Infection (CDI) in Primary Care",
+      "version": "0.1.0",
+      "file": "prescribing/cdi-treatment-primary-care.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "7fa180a1e8b8f0591e80d308ddf45215616d6386c9b40ccd31ea4bcbd8bd7393",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 4941,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "community-acquired-pneumonia",
+      "title": "Community Acquired Pneumonia",
+      "version": "0.1.0",
+      "file": "prescribing/community-acquired-pneumonia.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "c851d62209987d0476b65944e94bd5348f55dea0c1f945855c670b4b96f54b5c",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 9474,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "conjunctivitis",
       "title": "Conjunctivitis",
       "version": "0.3.0",
@@ -1029,6 +1089,30 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "copd-acute-exacerbation",
+      "title": "COPD Acute Exacerbation",
+      "version": "0.1.0",
+      "file": "prescribing/copd-acute-exacerbation.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "10c0689940388b273150235ee2baf930fbba22ea6bc340674c65d9c916fb3211",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 4530,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "cough-acute",
+      "title": "Cough (acute)",
+      "version": "0.1.0",
+      "file": "prescribing/cough-acute.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "f6a3263ed587f2ceab6946ddcf789bf77294e4c1c2c411a6dc7d7299d6a7ae00",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 4826,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "croup",
       "title": "Croup",
       "version": "0.1.0",
@@ -1049,6 +1133,18 @@
       "sha256": "d04a3b80e9d3767e7c7eced5b151d37a2b7bb1ab9f3d548e042a78dd5bc3551d",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 3031,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "influenza",
+      "title": "Influenza",
+      "version": "0.1.0",
+      "file": "prescribing/influenza.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "56b40670ea84322e2974f97ccf8435f73014d7fdaef43afbcdf8824ebe55ef03",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 13184,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
@@ -1089,6 +1185,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "lower-uti-pregnancy-symptomatic",
+      "title": "Lower UTI in Pregnancy – Symptomatic UTI",
+      "version": "0.1.0",
+      "file": "prescribing/lower-uti-pregnancy-symptomatic.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "b7c00718fbb57b88210df66d07c16be506bd7ef8b937e352561b2832706cf23b",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 4202,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "otitis-media-acute",
       "title": "Otitis Media (Acute)",
       "version": "0.2.1",
@@ -1109,6 +1217,18 @@
       "sha256": "998f6e946d007adb05f2fdec8eccc1ec46231cd128860bfd27a890889a2a18cb",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 1471,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "pertussis",
+      "title": "Pertussis",
+      "version": "0.1.0",
+      "file": "prescribing/pertussis.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "cb3f8d1c0f37b49d7a9b740b6a4cd31a03412da15cfa159f2e5fccf4e55333fb",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 5934,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },

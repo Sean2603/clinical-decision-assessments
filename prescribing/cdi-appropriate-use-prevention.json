@@ -1,0 +1,54 @@
+{
+  "id": "cdi-appropriate-use-prevention",
+  "title": "CDI – Appropriate Use of Antibiotics and Prevention",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Clostridium Difficile Infection",
+  "category": "Clostridioides difficile infection",
+  "summary": "The use of broad-spectrum antibiotics such as cephalosporins, quinolones, co-amoxiclav and clindamycin has been associated with the rise in Clostridium difficile infection (CDI) observed in both primary and secondary care. CDI is one of the key unintended consequences of unnecessary and inappropriate antibiotic prescribing. It leads to a significant increase in morbidity, mortality and use of health-care resources.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "To help prevent patients developing CDI, prescribers should: do not prescribe unnecessary and/or inappropriate antibiotics; follow the NI Management of Infection Guidelines when prescribing antibiotics empirically; always review empirical antibiotic treatment when the causative pathogen is identified.",
+    "Avoid prescribing the broad-spectrum antibiotics listed above, especially in patients at increased risk of developing CDI (including all patients aged 65 years and over, patients with co-morbidities, patients with illnesses affecting their GI system).",
+    "Avoid prescribing repeated courses of antibiotics to individual patients unless there is a clear and evidenced requirement.",
+    "There is increasing evidence that acid-suppressing medications, in particular proton pump inhibitors (PPIs), may be a risk factor for CDI; consideration should be given to stopping/reviewing the need for PPIs in patients with or at high risk of CDI.",
+    "Patients diagnosed with CDI: discontinue any unnecessary antibiotic, PPI treatment and any antimotility agents or laxatives.",
+    "Patients with previous history of CDI: prescribers MUST ensure that any antibiotic treatment is appropriate and absolutely necessary."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Prevention – no antibiotic regimen in this section",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "See the notes above for appropriate antibiotic prescribing and prevention."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

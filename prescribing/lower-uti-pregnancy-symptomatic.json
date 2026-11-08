@@ -1,0 +1,108 @@
+{
+  "id": "lower-uti-pregnancy-symptomatic",
+  "title": "Lower UTI in Pregnancy – Symptomatic UTI",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available (see source). Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis).",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Send pre-treatment MSU for culture and sensitivity testing – indicate on laboratory request form that sample is from pregnant patient.",
+    "Commence empirical treatment, then adjust treatment if appropriate when laboratory results are available.",
+    "Given the risks of asymptomatic bacteriuria in pregnancy, a urine culture should be performed seven days after completion of antibiotic treatment as a test of cure.",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions."
+  ],
+  "cautions": [
+    "Nitrofurantoin – do not use at term / use with caution in third trimester.",
+    "Trimethoprim – avoid in first trimester or if patient has low folate status or is on folate antagonist e.g. antiepileptic medication.",
+    "Pivmecillinam – the intake of pivmecillinam shortly before delivery may cause a false positive test for isovaleric acidemia in the newborn as part of neonatal screening. It is not an empiric recommendation but it may be indicated by sensitivities. If prescribing is necessary in later pregnancy, advise the patient of the possibility of false positives in newborn bloodspot screening results."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st choice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Nitrofurantoin capsules (avoid at term)",
+          "dose": "100 mg M/R BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [
+        "Normally avoid if eGFR < 45 ml/min.",
+        "If eGFR is 30–44 ml/min use nitrofurantoin only if resistance and no alternative; otherwise it is contraindicated in this group."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "2nd choice (where sensitivities known)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules",
+          "dose": "500 mg TDS",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "2nd choice (alternative)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Cefalexin capsules",
+          "dose": "500 mg BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Confirmed penicillin allergy in patients at term",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Trimethoprim",
+          "dose": "200 mg BD x 7 days",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "May be considered in true penicillin allergy at term. This is off-label – manufacturers advise avoid during pregnancy.",
+        "Final decision is the clinician's with agreement of the patient."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}
