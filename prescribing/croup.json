@@ -1,0 +1,49 @@
+{
+  "id": "croup",
+  "title": "Croup",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Upper Respiratory Tract Infections",
+  "category": "Croup",
+  "summary": "No antibiotic required.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Mild cases can be managed in community. More severe croup requires hospital admission and possibly steroids before transfer. See BNF."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "No antibiotic required",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "No antibiotic required."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

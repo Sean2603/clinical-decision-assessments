@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.68",
-  "updatedAt": "2026-11-06T21:16:31Z",
+  "contentVersion": "0.0.69",
+  "updatedAt": "2026-11-08T18:39:43Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.76.4",
-  "downloadSizeBytes": 7076569,
+  "downloadSizeBytes": 7094622,
   "references": {
     "file": "references/references.json",
     "sha256": "32ed6ce4af5fe1abe6c06cd149fb4ea03b6edeeacfc322dce83b1e08d068ec34",
@@ -1029,6 +1029,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "croup",
+      "title": "Croup",
+      "version": "0.1.0",
+      "file": "prescribing/croup.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "60fa5b20bf3094e4b430aa06e4251e9846c448366da661be577397ab76a86b15",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1341,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "dental-abscess-urgent-treatment",
       "title": "Dental Abscess requiring urgent treatment",
       "version": "0.3.0",
@@ -1089,6 +1101,18 @@
       "attachmentsSizeBytes": 269081
     },
     {
+      "id": "peritonsillar-abscess",
+      "title": "Peritonsillar Abscess",
+      "version": "0.1.0",
+      "file": "prescribing/peritonsillar-abscess.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "998f6e946d007adb05f2fdec8eccc1ec46231cd128860bfd27a890889a2a18cb",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1471,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "pyelonephritis-adults",
       "title": "Pyelonephritis – Adults",
       "version": "0.3.0",
@@ -1099,6 +1123,30 @@
       "sizeBytes": 4806,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 266463
+    },
+    {
+      "id": "sinusitis",
+      "title": "Sinusitis",
+      "version": "0.1.0",
+      "file": "prescribing/sinusitis.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "54a0ab65a1c33aa0b0e1382b7416ed8cdf5b73f3a3be0de11715f9ea85c94b13",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 9404,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "sore-throat-acute",
+      "title": "Sore Throat (acute)",
+      "version": "0.1.0",
+      "file": "prescribing/sore-throat-acute.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "39e6e3ab91e6a1d8235817c967394fc170d25d083ad838f476cb1f40c1a2e59c",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 5837,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
     }
   ],
   "procedures": [

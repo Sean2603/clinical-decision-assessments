@@ -1,0 +1,49 @@
+{
+  "id": "peritonsillar-abscess",
+  "title": "Peritonsillar Abscess",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Upper Respiratory Tract Infections",
+  "category": "Throat",
+  "summary": "Peritonsillar abscess (quinsy) is managed as per the Eolas Medical entry below. No antibiotic regimen is specified in the source text.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "May require referral to secondary care for drainage."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Referral for drainage",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "May require referral to secondary care for drainage."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated. Source contains no antibiotic regimen."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

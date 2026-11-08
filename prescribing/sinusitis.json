@@ -1,0 +1,266 @@
+{
+  "id": "sinusitis",
+  "title": "Sinusitis",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Upper Respiratory Tract Infections",
+  "category": "Nose and sinuses",
+  "summary": "Only prescribe an antibiotic immediately if patient is systemically very unwell, or has symptoms and signs of a more serious illness or condition, or has high risk of complications.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Non-serious symptoms <10 days: No antibiotic, as most cases resolve in 14 days without.",
+    "For symptoms > 10 days: No antibiotic or delayed antibiotic depending on likelihood of bacterial cause. Consider high-dose nasal corticosteroid for 14 days (off-label use) if symptomatic for 10 days+ and aged 12 years+ (NICE NG79).",
+    "Systemically very unwell, or more serious signs and symptoms, or high risk of complications: Immediate antibiotic."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Non-serious symptoms <10 days – non-antibiotic management",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "No antibiotic, as most cases resolve in 14 days without.",
+        "Self-care: advise paracetamol/ibuprofen for pain/fever."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "For symptoms >10 days – no antibiotic or delayed antibiotic",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "No antibiotic or delayed antibiotic depending on likelihood of bacterial cause.",
+        "Consider high-dose nasal corticosteroid for 14 days (off-label use) if symptomatic for 10 days+ and aged 12 years+ (NICE NG79)."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Adults 18 years and over – first choice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Phenoxymethylpenicillin tablets",
+          "dose": "500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "First choice, after antibiotic alternatives considered."
+      ]
+    },
+    {
+      "rank": 4,
+      "label": "Adults 18 years and over – very unwell, signs of a more serious illness, high risk of complications, or worsening symptoms on first choice for 2 to 3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav tablets",
+          "dose": "500/125 mg three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 5,
+      "label": "Adults 18 years and over – penicillin allergy",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day, then 100 mg once a day",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "4 days (5-day course in total)"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 6,
+      "label": "Adults 18 years and over – penicillin allergy (alternative)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "500 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Or in pregnancy: erythromycin e/c tablets 250 mg – 500 mg four times a day or 500 mg – 1000 mg twice a day."
+      ]
+    },
+    {
+      "rank": 7,
+      "label": "Adults 18 years and over – pregnancy (erythromycin)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Erythromycin e/c tablets",
+          "dose": "250 mg – 500 mg four times a day or 500 mg – 1000 mg twice a day",
+          "route": "Oral",
+          "frequency": "Four times a day or twice a day",
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Duration not stated in source."
+      ]
+    },
+    {
+      "rank": 8,
+      "label": "Children and young people under 18 years – first choice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Phenoxymethylpenicillin oral solution (or tablets in older children)",
+          "dose": "1 to 11 months: 62.5 mg four times a day; 1 to 5 years: 125 mg four times a day; 6 to 11 years: 250 mg four times a day; 12 to 17 years: 500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 9,
+      "label": "Children and young people under 18 years – very unwell, signs of a more serious illness, high risk of complications, or worsening symptoms on first choice for 2–3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav oral suspension",
+          "dose": "1 to 11 months: 0.25 ml/kg of 125/31 suspension three times a day; 1 to 5 years: 5 ml of 125/31 suspension three times a day or 0.25 ml/kg of 125/31 suspension three times a day; 6 to 11 years: 5 ml of 250/62 suspension three times a day or 0.15 ml/kg of 250/62 suspension three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 10,
+      "label": "Children and young people 12 to 17 years – very unwell, signs of a more serious illness, high risk of complications, or worsening symptoms on first choice for 2–3 days",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav tablets",
+          "dose": "250/125 mg three times a day or 500/125 mg three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 11,
+      "label": "Children and young people under 18 years – alternative first choice for penicillin allergy or intolerance",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension",
+          "dose": "Under 8 kg: 7.5 mg/kg twice a day; 8 to 11 kg: 62.5 mg twice a day; 12 to 19 kg: 125 mg twice a day; 20 to 29 kg: 187.5 mg twice a day; 30 to 40 kg: 250 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 12,
+      "label": "Children and young people 12 to 17 years – alternative first choice for penicillin allergy or intolerance",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "250 mg twice a day or 500 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 13,
+      "label": "Children and young people 12 to 17 years – alternative first choice for penicillin allergy or intolerance",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day, then 100 mg once a day",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "4 days (5-day course in total)"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Second-line and allergy",
+      "items": [
+        "Consult local microbiologist for alternative second choice in penicillin allergy, or worsening symptoms on second choice taken for at least 2 to 3 days."
+      ]
+    },
+    {
+      "title": "Referral",
+      "items": [
+        "Refer 'red flags' to secondary care, including: unilateral signs (e.g. unilateral polyps or mass); bleeding; diplopia or proptosis; orbital swelling or erythema; suspicion of intracranial complication; immunocompromised patient."
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}
