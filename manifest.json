@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.71",
-  "updatedAt": "2026-11-08T19:23:48Z",
+  "contentVersion": "0.0.72",
+  "updatedAt": "2026-11-08T19:37:41Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.76.4",
-  "downloadSizeBytes": 7208338,
+  "downloadSizeBytes": 7247654,
   "references": {
     "file": "references/references.json",
     "sha256": "32ed6ce4af5fe1abe6c06cd149fb4ea03b6edeeacfc322dce83b1e08d068ec34",
@@ -981,6 +981,30 @@
   ],
   "prescribing": [
     {
+      "id": "abscesses-boils",
+      "title": "Abscesses / Boils",
+      "version": "0.1.0",
+      "file": "prescribing/abscesses-boils.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "783b6828e0959b2a58b968cc01964274fa8042da0e9221847c3ad1b98210161c",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 4172,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "acne-folliculitis",
+      "title": "Acne & Folliculitis",
+      "version": "0.1.0",
+      "file": "prescribing/acne-folliculitis.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "da4447026ff0d37af642681e2808d725e60b4ff7ad10095eefcfa84572004e90",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1551,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "acute-otitis-externa",
       "title": "Acute Otitis Externa",
       "version": "0.1.0",
@@ -1013,6 +1037,18 @@
       "sha256": "d056609640f3d67f3a759e0b186e75ad1a1055caf0d1e1969ec374647fbdf979",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 1845,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "athletes-foot-tinea-pedis",
+      "title": "Athlete's Foot (Tinea Pedis)",
+      "version": "0.1.0",
+      "file": "prescribing/athletes-foot-tinea-pedis.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "a4988ca1099a85ed83e88ea0443ead8a03fe3acbed1096e963e825a2038c8d66",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1858,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
@@ -1051,6 +1087,18 @@
       "sizeBytes": 6689,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 226581
+    },
+    {
+      "id": "breast-abscess-lactating-women",
+      "title": "Breast Abscess (Lactating Women)",
+      "version": "0.1.0",
+      "file": "prescribing/breast-abscess-lactating-women.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "6f42be0b9018a0fb7414f4d4ac5c00d5cc2251916f8e819f323c04f45d5d8fe2",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2411,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "candidiasis-vulvovaginal",
@@ -1121,6 +1169,18 @@
       "sha256": "7fa180a1e8b8f0591e80d308ddf45215616d6386c9b40ccd31ea4bcbd8bd7393",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 4941,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "cellulitis-erysipelas",
+      "title": "Cellulitis & Erysipelas",
+      "version": "0.1.0",
+      "file": "prescribing/cellulitis-erysipelas.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "32baf7b5352bfe7d684e5f1812dd185043f150d305fa8adef9148bddc7ac0ef0",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 8689,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
@@ -1233,6 +1293,30 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "fungal-nail-infection-onychomycosis",
+      "title": "Fungal Nail Infections (Onychomycosis)",
+      "version": "0.1.0",
+      "file": "prescribing/fungal-nail-infection-onychomycosis.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "82effd4dc52f05996406da4d5056eabb5daf3103c240c6926bb692a91a7dbd5e",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3231,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "fungal-skin-infections",
+      "title": "Fungal Skin Infections",
+      "version": "0.1.0",
+      "file": "prescribing/fungal-skin-infections.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "6142a8eb2e6ffc3657ea670b7800952059cb13345d2a6ba941114d17ea37a7e0",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2851,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "gonorrhoea",
       "title": "Gonorrhoea",
       "version": "0.1.0",
@@ -1241,6 +1325,18 @@
       "sha256": "0dac56733030b954509558a80c20c82642877f5c0b7bb3c89744fdcb88b6cab6",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 1471,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "impetigo",
+      "title": "Impetigo",
+      "version": "0.1.0",
+      "file": "prescribing/impetigo.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "8542a3e9b1956dbf9cdf8d9428fc55c51aff385e757552453848e97452f01ac7",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 8853,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
@@ -1313,6 +1409,30 @@
       "sha256": "b7c00718fbb57b88210df66d07c16be506bd7ef8b937e352561b2832706cf23b",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 4202,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "mastitis-lactating-women",
+      "title": "Mastitis: Lactating Women",
+      "version": "0.1.0",
+      "file": "prescribing/mastitis-lactating-women.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "74cf6a5a1c002327cdcc76cda88a0bcc8144bb980edeca41c041253e81ed4ec7",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3136,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "mastitis-non-lactating-women",
+      "title": "Mastitis: Non-Lactating Women",
+      "version": "0.1.0",
+      "file": "prescribing/mastitis-non-lactating-women.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "e6e567680cd17dcfe3fffd1aa9c8a54c53a85beccee6c482d84368c7d30361b0",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2564,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },

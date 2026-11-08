@@ -1,0 +1,65 @@
+{
+  "id": "mastitis-non-lactating-women",
+  "title": "Mastitis: Non-Lactating Women",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Breast infections",
+  "summary": "See CKS Mastitis and breast abscess for full guidance. Arrange hospital admission if there are signs of sepsis (such as tachycardia, fever, and chills), the infection progresses rapidly, or the woman is haemodynamically unstable or immunocompromised. Arrange urgent referral if there is suspicion of a breast abscess, an underlying mass or breast cancer. Prescribe an oral antibiotic for all women with non-lactational mastitis.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Provide advice on simple analgesia and appropriate self-care measures, e.g. cold compresses, and manage any pre-disposing factors for mastitis, e.g. nipple damage.",
+    "Advise the woman to seek immediate medical advice if symptoms worsen or fail to settle after 48 hours of antibiotic treatment.",
+    "Erythromycin is preferred in pregnancy."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Line 1",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav tablets",
+          "dose": "500/125 mg three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "10 to 14 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Penicillin allergy – dual therapy",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets OR erythromycin tablets, PLUS metronidazole tablets",
+          "dose": "Clarithromycin 500 mg twice daily OR erythromycin 250–500 mg four times a day; PLUS metronidazole 400 mg three times a day",
+          "route": "Oral",
+          "frequency": "As above",
+          "duration": "10 to 14 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

@@ -1,0 +1,71 @@
+{
+  "id": "fungal-nail-infection-onychomycosis",
+  "title": "Fungal Nail Infections (Onychomycosis)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Skin",
+  "summary": "Send nail clippings to laboratory for testing: start therapy only if infection is confirmed by laboratory. Use terbinafine first line, but if candida or non-dermatophyte infection confirmed, use oral itraconazole.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Self-care alone may be appropriate for people who are not concerned by the infected nail or who wish to avoid the possible adverse effects of drug treatment. Consider drug treatment if the patient has diabetes, vascular disease or a connective tissue disorder (because of a higher risk for secondary bacterial infections and cellulitis), or is severely immunocompromised.",
+    "Topical treatment is inferior to systemic therapy and should only be considered for mild or superficial infection of nails or where systemic therapy is contraindicated (e.g. liver or renal impairment). Topical treatments such as medicated nail paint or lacquers are available to purchase over the counter.",
+    "For children, seek specialist advice."
+  ],
+  "cautions": [
+    "Itraconazole should be used with caution in those at increased risk of heart failure (including risk due to other medication); it should not be used for treating fungal nail infections in patients with ventricular dysfunction or a history of heart failure. See current BNF for full details."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Terbinafine tablets",
+          "dose": "250 mg daily",
+          "route": "Oral",
+          "frequency": "Once daily",
+          "duration": "6–12 weeks (finger nails); 3–6 months (toe nails)"
+        }
+      ],
+      "restrictions": [
+        "Only if infection confirmed by laboratory testing."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult 2nd line (if candida or non-dermatophyte infection confirmed)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Itraconazole capsules",
+          "dose": "200 mg BD (7-day pulse; subsequent courses repeated after 21 days)",
+          "route": "Oral",
+          "frequency": "Twice daily (pulse)",
+          "duration": "2 courses (finger nails); 3 courses (toe nails)"
+        }
+      ],
+      "restrictions": [
+        "Caution in increased risk of heart failure; not for patients with ventricular dysfunction or history of heart failure."
+      ],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

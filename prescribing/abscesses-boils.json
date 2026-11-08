@@ -1,0 +1,100 @@
+{
+  "id": "abscesses-boils",
+  "title": "Abscesses / Boils",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Skin",
+  "summary": "See NICE CKS (Boils, carbuncles, and staphylococcal carriage). This guidance only covers management of boils. Urgent incision and drainage should be arranged for all large and/or fluctuant boils. Small boils will usually drain spontaneously after application of moist heat. Oral antibiotics are not usually necessary but may be indicated if the person has a fever, has cellulitis (refer to Cellulitis & Erysipelas), the lesion is on the face, is in pain or severe discomfort, or has other comorbidities (e.g. diabetes, immunosuppression). Consider admission for intravenous antibiotics if the person is systemically unwell or at high risk of complications. Seek specialist advice if there is a possibility of MRSA or PVL-SA infection.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Skin takes time to return to normal, and full resolution upon completion of the antibiotic course is not expected.",
+    "Erythromycin is preferred in pregnancy and young women who are pregnant; erythromycin suspension may also be used as an alternative to clarithromycin suspension, as its taste may be more acceptable to children."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin capsules",
+          "dose": "250–500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult penicillin allergic",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "250–500 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternative: erythromycin tablets 250–500 mg four times a day for 5–7 days (preferred in pregnancy)."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Child",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin oral suspension (or capsules in older children)",
+          "dose": "1 month–1 year: 62.5–125 mg four times a day; 2–9 years: 125–250 mg four times a day; 10–17 years: 250–500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Child penicillin allergic",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension (or tablets in older children)",
+          "dose": "1 month–11 years: under 8 kg 7.5 mg/kg twice daily; 8–11 kg 62.5 mg twice daily; 12–19 kg 125 mg twice daily; 20–29 kg 187.5 mg twice daily; 30–40 kg 250 mg twice daily. 12–17 years: 250–500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternative: erythromycin oral suspension (or tablets in older children): 1–23 months 125 mg four times daily; 2–7 years 250 mg four times daily; 8–17 years 250–500 mg four times daily (5–7 days)."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

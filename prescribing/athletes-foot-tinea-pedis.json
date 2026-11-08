@@ -1,0 +1,61 @@
+{
+  "id": "athletes-foot-tinea-pedis",
+  "title": "Athlete's Foot (Tinea Pedis)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Skin",
+  "summary": "Advise patient to consider self-referral to the community pharmacy Pharmacy First scheme should they experience this condition in the future.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult and child – clotrimazole 1% cream",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clotrimazole 1% cream",
+          "dose": "Twice to three times daily (BD–TID)",
+          "route": "Topical",
+          "frequency": "Twice to three times daily",
+          "duration": "Use for 2 weeks after area has healed"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult and child – miconazole 2% cream",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Miconazole 2% cream",
+          "dose": "Not stated in source",
+          "route": "Topical",
+          "frequency": null,
+          "duration": "Continue for 10 days after area has healed"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

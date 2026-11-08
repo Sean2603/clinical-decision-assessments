@@ -1,0 +1,95 @@
+{
+  "id": "fungal-skin-infections",
+  "title": "Fungal Skin Infections",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Skin",
+  "summary": "Patients with fungal skin infections in the groin area may obtain advice and treatment via the community pharmacy Pharmacy First scheme. Advise patient to consider self-referral to the scheme should they experience this condition in the future.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adults – terbinafine cream",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Terbinafine 1% cream",
+          "dose": "Not stated in source",
+          "route": "Topical",
+          "frequency": null,
+          "duration": "1–2 weeks"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adults – if candida possible",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Miconazole 2% cream",
+          "dose": "Not stated in source",
+          "route": "Topical",
+          "frequency": null,
+          "duration": "2 weeks (continue for 1–2 weeks after area has healed)"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "Adults – systemic treatment for intractable conditions only (skin scrapings sent to laboratory and infection confirmed)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Terbinafine tablets",
+          "dose": "250 mg daily",
+          "route": "Oral",
+          "frequency": "Once daily",
+          "duration": "4 weeks"
+        }
+      ],
+      "restrictions": [
+        "Only for intractable conditions with laboratory-confirmed infection."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Children",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Miconazole 2% cream",
+          "dose": "Not stated in source",
+          "route": "Topical",
+          "frequency": null,
+          "duration": "2 weeks (continue for 1–2 weeks after area has healed)"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}
