@@ -1,0 +1,65 @@
+{
+  "id": "acute-prostatitis",
+  "title": "Acute Prostatitis",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available (see source). Refer to hospital if there are any symptoms or signs of a more serious illness or condition (for example, sepsis, acute urinary retention or prostatic abscess), or symptoms are not improving 48 hours after starting the antibiotic. Refer to NICE NG110 (Prostatitis (acute): antimicrobial prescribing).",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "If satisfied with diagnosis of acute prostatitis start antibiotics and send MSU for culture. A four week course may prevent chronic prostatitis. Quinolones (e.g. ciprofloxacin) are better at reaching therapeutic levels in the prostate.",
+    "Patient information sheet should be given to all patients who receive a fluoroquinolone. MHRA: fluoroquinolone antibiotics must now only be prescribed when other commonly recommended antibiotics are inappropriate.",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st choice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Ciprofloxacin tablets",
+          "dose": "500 mg BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "14 days then review and either stop, or continue for a further 14 days if needed (based on history, symptoms, clinical examination, urine and blood tests)"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Alternative 1 – adults unable to take a fluoroquinolone (guided by susceptibilities when available)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Trimethoprim tablets",
+          "dose": "200 mg BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "14 days then review, and either stop, or continue for a further 14 days if needed (based on history, symptoms, clinical examination, urine and blood tests)"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

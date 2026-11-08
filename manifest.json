@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.70",
-  "updatedAt": "2026-11-08T18:46:00Z",
+  "contentVersion": "0.0.71",
+  "updatedAt": "2026-11-08T19:23:48Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.76.4",
-  "downloadSizeBytes": 7151518,
+  "downloadSizeBytes": 7208338,
   "references": {
     "file": "references/references.json",
     "sha256": "32ed6ce4af5fe1abe6c06cd149fb4ea03b6edeeacfc322dce83b1e08d068ec34",
@@ -981,6 +981,54 @@
   ],
   "prescribing": [
     {
+      "id": "acute-otitis-externa",
+      "title": "Acute Otitis Externa",
+      "version": "0.1.0",
+      "file": "prescribing/acute-otitis-externa.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "18cc9de518670cbd15b71b3b56b915f267ef11778e6474503ecb57d286ddd4d3",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3423,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "acute-prostatitis",
+      "title": "Acute Prostatitis",
+      "version": "0.1.0",
+      "file": "prescribing/acute-prostatitis.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "c2b9329ba78289001eceeaef4154a26a2b01574ba4ca66f0e90f3c9f729f746b",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2889,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "asymptomatic-bacteriuria-catheter",
+      "title": "Asymptomatic Bacteriuria in Patients with a Urinary Catheter",
+      "version": "0.1.0",
+      "file": "prescribing/asymptomatic-bacteriuria-catheter.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "d056609640f3d67f3a759e0b186e75ad1a1055caf0d1e1969ec374647fbdf979",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1845,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "bacterial-vaginosis",
+      "title": "Bacterial Vaginosis",
+      "version": "0.1.0",
+      "file": "prescribing/bacterial-vaginosis.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "5a26e29cee02b76d482d9b49ef442b9ee08ed5815d4d03bdadd5f98840e9e32b",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3130,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "bites-animal",
       "title": "Bites - Animal",
       "version": "0.1.3",
@@ -1003,6 +1051,30 @@
       "sizeBytes": 6689,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 226581
+    },
+    {
+      "id": "candidiasis-vulvovaginal",
+      "title": "Candidiasis (vulvo-vaginal infection)",
+      "version": "0.1.0",
+      "file": "prescribing/candidiasis-vulvovaginal.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "f187a8bbc1889f2b7fd2c2813dd3b0fd89943d3e30297bfdec0e1aecb5489f53",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3465,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "catheter-associated-uti",
+      "title": "Catheter Associated UTI (non-pregnant women and men aged 16 years and over)",
+      "version": "0.1.0",
+      "file": "prescribing/catheter-associated-uti.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "08d686a93566577a365636d67bff3132db04e7ad0b324c7e7242b90fff603c06",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 7963,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "cdi-appropriate-use-prevention",
@@ -1049,6 +1121,18 @@
       "sha256": "7fa180a1e8b8f0591e80d308ddf45215616d6386c9b40ccd31ea4bcbd8bd7393",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 4941,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "chlamydia",
+      "title": "Chlamydia",
+      "version": "0.1.0",
+      "file": "prescribing/chlamydia.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "26e488d6f22d67bffbf5eda5f3bf0a89da7983d0fd5b0d3a641df9e16659803f",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2272,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
@@ -1137,14 +1221,50 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "fungal-infection-otitis-externa",
+      "title": "Fungal Infection in Otitis Externa",
+      "version": "0.1.0",
+      "file": "prescribing/fungal-infection-otitis-externa.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "ddb4a4cf8bf692b9b318ef0f124b09e4e233147db34b224ef4235eb7d9f55a27",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1327,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "gonorrhoea",
+      "title": "Gonorrhoea",
+      "version": "0.1.0",
+      "file": "prescribing/gonorrhoea.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "0dac56733030b954509558a80c20c82642877f5c0b7bb3c89744fdcb88b6cab6",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1471,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "influenza",
       "title": "Influenza",
       "version": "0.1.0",
       "file": "prescribing/influenza.json",
       "schema": "schema/prescribing-schema.json",
-      "sha256": "56b40670ea84322e2974f97ccf8435f73014d7fdaef43afbcdf8824ebe55ef03",
+      "sha256": "e8cc0670a1c617b4e3546789753da63c897e28ea62137caca78ccf6d5ab825e7",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
-      "sizeBytes": 13184,
+      "sizeBytes": 16205,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "lower-uti-children",
+      "title": "Lower UTI Children and Young People Under 16 Years",
+      "version": "0.1.0",
+      "file": "prescribing/lower-uti-children.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "8b15dc176a910a96a294dd3a9d7d94f89c68174259af83c7baa2d6b513d3130c",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 6113,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
@@ -1209,6 +1329,18 @@
       "attachmentsSizeBytes": 269081
     },
     {
+      "id": "pelvic-inflammatory-disease",
+      "title": "Pelvic Inflammatory Disease",
+      "version": "0.1.0",
+      "file": "prescribing/pelvic-inflammatory-disease.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "c196dc11ffc2d6cadbeaef9e4d492669658c423edde63f3107c24309fb2d64e9",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 4304,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "peritonsillar-abscess",
       "title": "Peritonsillar Abscess",
       "version": "0.1.0",
@@ -1243,6 +1375,42 @@
       "sizeBytes": 4806,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 266463
+    },
+    {
+      "id": "pyelonephritis-children",
+      "title": "Pyelonephritis – Children",
+      "version": "0.1.0",
+      "file": "prescribing/pyelonephritis-children.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "18977ff28cec52d6222286ea9081ed9b6e3a901075cf89ea197e8fefc302832f",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3510,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "recurrent-uti-adults",
+      "title": "Recurrent UTIs – Adults",
+      "version": "0.1.0",
+      "file": "prescribing/recurrent-uti-adults.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "d5129e75c818b81a6c5ba559f33868a3704ca3e8af2ffe61cd82e1000d30cae6",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 10643,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "sexually-transmitted-infections",
+      "title": "Sexually Transmitted Infections (STIs)",
+      "version": "0.1.0",
+      "file": "prescribing/sexually-transmitted-infections.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "fc73d804168f8c08c6289750fbe3b7e01137afd94f088e61afd5aa2b713b88da",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1444,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
     },
     {
       "id": "sinusitis",

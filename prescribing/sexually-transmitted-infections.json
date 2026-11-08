@@ -1,0 +1,47 @@
+{
+  "id": "sexually-transmitted-infections",
+  "title": "Sexually Transmitted Infections (STIs)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Sexually transmitted infections",
+  "summary": "For suspected STIs, refer patients to local genitourinary clinic. Further information on STIs available at www.bashh.org/guidelines.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "For suspected STIs, refer patients to local genitourinary clinic."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Refer to local genitourinary clinic",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (refer)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

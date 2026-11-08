@@ -1,0 +1,103 @@
+{
+  "id": "bacterial-vaginosis",
+  "title": "Bacterial Vaginosis",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Vaginal infections",
+  "summary": "See NICE CKS (full guidance) and BASHH guideline.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "High-dose metronidazole regimens (single oral dose of 2 g) are not recommended during pregnancy.",
+    "Off-label for women aged younger than 18 years.",
+    "Second and third trimester only for clindamycin.",
+    "Clindamycin cream damages latex condoms and diaphragms – counselling required."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult female 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Metronidazole tablets",
+          "dose": "400 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5 to 7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult female – adherence to treatment is an issue",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Metronidazole tablets",
+          "dose": "2 g as a single oral dose",
+          "route": "Oral",
+          "frequency": "Single dose",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [
+        "Not recommended during pregnancy."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "Adult female – prefers topical treatment or cannot tolerate oral metronidazole",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Metronidazole intravaginal gel 0.75%",
+          "dose": "5 g applicatorful once daily at night",
+          "route": "Intravaginal",
+          "frequency": "Once daily at night",
+          "duration": "5 nights"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Adult female – topical alternative (see note 3,4)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clindamycin intravaginal cream 2%",
+          "dose": "5 g applicatorful once daily at night",
+          "route": "Intravaginal",
+          "frequency": "Once daily at night",
+          "duration": "7 nights"
+        }
+      ],
+      "restrictions": [
+        "Second and third trimester only.",
+        "Clindamycin cream damages latex condoms and diaphragms – counselling required."
+      ],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

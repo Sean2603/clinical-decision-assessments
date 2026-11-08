@@ -1,0 +1,184 @@
+{
+  "id": "catheter-associated-uti",
+  "title": "Catheter Associated UTI (non-pregnant women and men aged 16 years and over)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available (see source). A catheter-associated UTI is a symptomatic infection of the bladder or kidneys in a person with a urinary catheter. Refer to hospital if a person has any symptoms or signs suggesting a more serious illness or condition (for example, sepsis). Only treat if patient is systemically unwell or pyelonephritis is likely. Asymptomatic bacteriuria in patients with a urinary catheter is normal and does NOT require antibiotic therapy routinely; it should not be referred to as a UTI (see the separate Asymptomatic Bacteriuria pathway).",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "For diagnosis tools to differentiate between asymptomatic bacteriuria, genuine catheter associated infection, upper UTI and red flags for more serious conditions see www.gov.uk/government/publications/urinary-tract-infection-diagnosis and www.nice.org.uk/guidance/ng113.",
+    "A patient information sheet should be given to all patients who receive a fluoroquinolone. MHRA: fluoroquinolone antibiotics must now only be prescribed when other commonly recommended antibiotics are inappropriate.",
+    "Continuing antibiotic therapy for UTI should be based on reported culture and sensitivity results from MSU.",
+    "Catheter changes: catheter should normally be changed before/when starting antibiotic treatment, but do not allow catheter removal or change to delay antibiotic treatment. If removal cannot be done, change the catheter as soon as possible in people with a catheter-associated UTI if it has been in place for more than 7 days. Allow patient to remain without catheter for as long as possible between removal and insertion of new catheter.",
+    "Do not offer prophylactic antibiotics routinely when changing catheters in patients with long-term indwelling urinary catheters. Consider antibiotic prophylaxis for patients who have a history of symptomatic UTI after catheter change or patients who experience trauma during catheterisation.",
+    "Always: exclude other sources of infection; check that the catheter drains correctly and is not blocked; consider need for continued catheterisation (there should always be an appropriate indication and catheters should only be in place for as long as needed).",
+    "For catheter associated UTI in pregnant women aged 12 years and over, and in children aged 3 months to under 16 years, see NICE guidance on UTI (catheter associated): antimicrobial prescribing.",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions."
+  ],
+  "cautions": [
+    "Nitrofurantoin: normally avoid if eGFR < 45 ml/min. If eGFR is 30–44 ml/min use only if resistance and no alternative; otherwise contraindicated in this group."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "(i) Symptomatic catheter associated UTI – without upper UTI symptoms – 1st choice: nitrofurantoin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Nitrofurantoin capsules",
+          "dose": "100 mg M/R BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [
+        "Normally avoid if eGFR < 45 ml/min."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "(i) Symptomatic catheter associated UTI – without upper UTI symptoms – 1st choice: trimethoprim",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Trimethoprim tablets",
+          "dose": "200 mg BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [
+        "Only if previous culture and sensitivities sensitive."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "(i) Symptomatic catheter associated UTI – without upper UTI symptoms – 1st choice: amoxicillin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules",
+          "dose": "500 mg TDS",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [
+        "Only if culture results available and sensitive."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "(i) Symptomatic catheter associated UTI – without upper UTI symptoms – 2nd choice: pivmecillinam",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Pivmecillinam tablets",
+          "dose": "400 mg initial dose then 200 mg TDS",
+          "route": "Oral",
+          "frequency": "Three times a day (after initial dose)",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [
+        "Avoid in penicillin allergy."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 5,
+      "label": "(ii) Symptomatic catheter associated UTI – upper UTI symptoms – 1st choice: cefalexin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Cefalexin capsules",
+          "dose": "500 mg BD or TDS (up to 1 to 1.5 g TDS to QDS for severe infections)",
+          "route": "Oral",
+          "frequency": "Twice or three times daily",
+          "duration": "7–10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Consider referral to secondary care for upper UTI symptoms, especially for male patients."
+      ]
+    },
+    {
+      "rank": 6,
+      "label": "(ii) Symptomatic catheter associated UTI – upper UTI symptoms – 1st choice: co-amoxiclav",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav tablets",
+          "dose": "500 mg/125 mg TDS",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "7–10 days"
+        }
+      ],
+      "restrictions": [
+        "Only if culture results available and susceptible."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 7,
+      "label": "(ii) Symptomatic catheter associated UTI – upper UTI symptoms – 1st choice: trimethoprim",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Trimethoprim tablets",
+          "dose": "200 mg BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "14 days"
+        }
+      ],
+      "restrictions": [
+        "Only if culture results available and susceptible."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 8,
+      "label": "(ii) Symptomatic catheter associated UTI – upper UTI symptoms – 1st choice: ciprofloxacin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Ciprofloxacin tablets",
+          "dose": "500 mg BD",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [
+        "Fluoroquinolone – MHRA: must now only be prescribed when other commonly recommended antibiotics are inappropriate."
+      ],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

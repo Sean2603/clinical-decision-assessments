@@ -1,0 +1,119 @@
+{
+  "id": "lower-uti-children",
+  "title": "Lower UTI Children and Young People Under 16 Years",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Urinary tract infection",
+  "summary": "NICE Visual Summary available (see source). Refer immediately if any symptoms or signs suggest a more serious illness or condition (for example, sepsis) OR child is less than 3 months old. Child 3 months or older: use positive nitrite to start antibiotics. Imaging: refer only if child under 6 months, recurrent or atypical UTI.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Atypical UTI includes: seriously ill (for more information refer to Feverish illness in children, NICE NG143); poor urine flow; abdominal or bladder mass; raised creatinine; septicaemia; failure to respond to treatment with suitable antibiotics within 48 hours; infection with non-E. coli organisms.",
+    "Recurrent UTI: two or more episodes of UTI with acute pyelonephritis/upper urinary tract infection, or one episode with acute pyelonephritis plus one or more episode of UTI with cystitis, or three or more episodes of UTI with cystitis. See NICE NG224.",
+    "Where infection suspected, prompt antibacterial treatment minimises renal scarring. Treat initially with trimethoprim then on basis of sensitivity and response to initial treatment.",
+    "Trimethoprim is the preferred choice if there is a lower risk of resistance (not used in the past 3 months, previous urine culture suggests susceptibility, in younger people in areas where data suggest resistance is low). Risk of resistance may be higher with recent use and in complicated UTIs.",
+    "Due to growing population resistance nitrofurantoin can also be considered first line for older children who can take tablets. Suspension may not be immediately available so is still considered a second choice for children in primary care.",
+    "Nitrofurantoin suspension may not be immediately available and is high cost.",
+    "See BNFC for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st choice – trimethoprim",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Trimethoprim",
+          "dose": "Child 3 months–11 years: 4 mg/kg (maximum 200 mg) twice daily; child 12–15 years: 200 mg twice daily. Unknown weight: 3–5 months 25 mg twice daily; 6 months–5 years 50 mg twice daily; 6–11 years 100 mg twice daily; 12–15 years 200 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "3 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "1st choice (older child 12+ years, eGFR ≥45 ml/min) – nitrofurantoin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Nitrofurantoin tablets",
+          "dose": "Child 12–15 years: 50 mg four times a day or 100 mg MR twice a day",
+          "route": "Oral",
+          "frequency": "Four times a day or twice daily (MR)",
+          "duration": "3 days"
+        }
+      ],
+      "restrictions": [
+        "Older child 12+ years with eGFR ≥45 ml/min only."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "2nd choice (worsening lower UTI symptoms on first choice taken for at least 48 hours, or first choice not suitable) – cefalexin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Cefalexin oral suspension",
+          "dose": "Child 3–11 months: 12.5 mg/kg BD, alternatively 125 mg twice daily; 1–4 years: 12.5 mg/kg BD, alternatively 125 mg three times a day; 5–11 years: 12.5 mg/kg BD, alternatively 250 mg three times a day; 12–15 years: 500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily or three times a day (see dose)",
+          "duration": "3 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "2nd choice – nitrofurantoin (if eGFR ≥45 ml/min and not used as first choice)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Nitrofurantoin tablets or oral suspension",
+          "dose": "Child 3 months–11 years: 750 micrograms/kg four times a day; child 12–15 years: 50 mg four times a day or 100 mg MR twice a day",
+          "route": "Oral",
+          "frequency": "Four times a day or twice daily (MR)",
+          "duration": "3 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 5,
+      "label": "2nd choice (if sensitive) – amoxicillin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin oral suspension",
+          "dose": "Child 3–11 months: 125 mg three times a day, increased if necessary up to 30 mg/kg three times a day; 1–4 years: 250 mg three times a day, increased if necessary up to 30 mg/kg three times a day; 5–11 years: 500 mg three times a day, increased if necessary up to 30 mg/kg three times a day (max per dose 1 g); 12–17 years: 500 mg three times a day, increased if necessary up to 1 g three times a day (use increased dose in severe infections)",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "3 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

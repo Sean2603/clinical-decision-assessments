@@ -1,0 +1,49 @@
+{
+  "id": "gonorrhoea",
+  "title": "Gonorrhoea",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Sexually transmitted infections",
+  "summary": "Gonorrhoea is managed within GUM as IM treatment is needed. If a primary care STI screen is positive for gonorrhoea, refer to local GUM.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "If a primary care STI screen is positive for gonorrhoea, refer to local GUM."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Refer to GUM",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (refer to GUM)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Gonorrhoea is managed within GUM as IM treatment is needed."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}
