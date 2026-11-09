@@ -221,7 +221,8 @@ def build_entries(
     allow_empty: bool = False,
     assessment_assignments: dict[str, list[str]] | None = None,
 ) -> list[dict]:
-    paths = sorted(directory.glob("*.json"), key=lambda item: item.name.casefold())
+    globber = directory.rglob("*.json") if directory.name == "prescribing" else directory.glob("*.json")
+    paths = sorted(globber, key=lambda item: item.relative_to(directory).as_posix().casefold())
     if not paths:
         if allow_empty:
             return []

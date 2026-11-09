@@ -40,7 +40,8 @@ for folder, content_type in (("scoring_tools","scoring-tool"),("blood_panels","b
             add_usage(reference_id,content_type,document["id"],document["title"])
 
 for folder, content_type in (("medications","medication"),("prescribing","prescribing"),("shared_learning","shared-learning")):
-    for path in sorted((ROOT / folder).glob("*.json")):
+    scan = (ROOT / folder).rglob("*.json") if folder == "prescribing" else (ROOT / folder).glob("*.json")
+    for path in sorted(scan):
         document = load(path)
         for reference_id in document.get("references", []):
             add_usage(reference_id,content_type,document["id"],document["title"])

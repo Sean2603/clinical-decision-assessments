@@ -45,6 +45,22 @@
         "superseded"
       ]
     },
+    "careSetting": {
+      "description": "Where this pathway is used. Optional for existing content; absent means primary-care.",
+      "enum": [
+        "primary-care",
+        "bhsct",
+        "nhsct",
+        "sehsct",
+        "shsct",
+        "whsct"
+      ]
+    },
+    "conditionId": {
+      "description": "Shared stable ID for the same condition across care settings. Optional; absent means the pathway's own id.",
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
     "category": {
       "type": "string",
       "minLength": 1
