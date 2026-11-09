@@ -1,0 +1,71 @@
+{
+  "id": "meningitis-immediate-treatment",
+  "title": "Meningitis – Immediate Treatment",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Meningitis and Sepsis",
+  "category": "Meningitis",
+  "summary": "ARRANGE TRANSFER OF ALL PATIENTS TO HOSPITAL IMMEDIATELY. Urgent transfer to hospital should not be delayed in order to give the parenteral antibiotics. For strongly suspected meningococcal disease, give antibiotics as soon as possible outside of hospital, unless this will delay transfer (i.e. arrange transfer and give antibiotics while awaiting ambulance). For strongly suspected bacterial meningitis, give antibiotics if there is likely to be a clinically significant delay in transfer to hospital. Tell the hospital that a person with suspected bacterial meningitis or meningococcal disease is being transferred.",
+  "updatedOn": "2026-11-09",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Do not give antibiotics outside of hospital if the person has severe antibiotic allergy to either ceftriaxone or benzylpenicillin. If their reaction was not severe allergy, consider ceftriaxone.",
+    "Note: there is no option readily available to GPs for use in patients with true history of penicillin anaphylaxis (IV chloramphenicol is recommended by BNF but is not available at time of publication in primary care). Urgent transfer to hospital is the key priority, and this applies regardless of whether an antibiotic can be administered or not.",
+    "Ceftriaxone weight-based dosing: use in conjunction with physical assessment of child and only if the child's actual weight is unavailable. For mean weights when calculating ceftriaxone dosing, see BNF."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Benzylpenicillin single dose – IV or IM (first choice)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Benzylpenicillin",
+          "dose": "Adults and children over 10 years: 1200 mg; children 1–9 years: 600 mg; children 1–11 months: 300 mg",
+          "route": "Intravenous or intramuscular",
+          "frequency": "Single dose",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [
+        "Not if severe antibiotic allergy to benzylpenicillin."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Ceftriaxone single dose – alternative in non-severe penicillin allergy",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Ceftriaxone",
+          "dose": "Children 1 month–11 years weighing up to 25 kg: 80 mg/kg IM only; weighing 25–50 kg: 2000 mg IM only; weighing over 50 kg and children aged 9 years and over: 2000 mg IV or IM; children aged 12 years and over: 2000 mg IV or IM; adults: 2000 mg IV or IM",
+          "route": "Intravenous or intramuscular",
+          "frequency": "Single dose",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [
+        "Not if severe antibiotic allergy to ceftriaxone."
+      ],
+      "notes": [
+        "Ref: NICE CKS dosing info."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

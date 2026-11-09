@@ -1,0 +1,50 @@
+{
+  "id": "dental-infections-presenting-gp",
+  "title": "Dental Infections Presenting in General Practice",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Dental Infections in General Practice",
+  "category": "Dental infections in general practice",
+  "summary": "GPs should not routinely be involved in dental treatment. Dental infections should be assessed by a qualified dental practitioner as soon as possible. An antibiotic prescription is a temporary measure which should only be provided when clinically indicated and by someone who feels competent to assess the problem.",
+  "updatedOn": "2026-11-09",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Out-of-hours dental treatment is appropriate in the following situations: dental swelling (spreading infection); trauma to teeth arising from an external force; uncontrolled bleeding following extraction; severe dental pain not controlled by over-the-counter medications.",
+    "Patients can contact their own dentist if currently registered with a practice for out-of-hours arrangements. Emergency dental clinics can be contacted on weekends and bank holidays: telephone (028) 2566 3510, opening times 8:00am–12:00 noon. Further information on accessing emergency dental treatment is available on HSC online."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Refer to dental practitioner – no drug regimen on this page",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (refer to dental practitioner)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "For dental abscess requiring urgent treatment, see the Dental Abscess pathway."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated. Source has no drug regimen."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

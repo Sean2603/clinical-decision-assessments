@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
-  "contentVersion": "0.0.72",
-  "updatedAt": "2026-11-08T19:37:41Z",
+  "contentVersion": "0.0.73",
+  "updatedAt": "2026-11-09T15:35:39Z",
   "emergencyRevocations": [],
   "appFeatureAvailability": {
     "version": "1.0.3",
@@ -13,7 +13,7 @@
     "schemaSizeBytes": 1417
   },
   "minimumAppVersion": "0.76.4",
-  "downloadSizeBytes": 7247654,
+  "downloadSizeBytes": 7267020,
   "references": {
     "file": "references/references.json",
     "sha256": "32ed6ce4af5fe1abe6c06cd149fb4ea03b6edeeacfc322dce83b1e08d068ec34",
@@ -1281,6 +1281,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "dental-infections-presenting-gp",
+      "title": "Dental Infections Presenting in General Practice",
+      "version": "0.1.0",
+      "file": "prescribing/dental-infections-presenting-gp.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "8915c78f11b5cfaa9b00b6cebce403efddb47e1f1d2ad3e680386a1343bf3004",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2367,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "fungal-infection-otitis-externa",
       "title": "Fungal Infection in Otitis Externa",
       "version": "0.1.0",
@@ -1437,6 +1449,42 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "meningitis-immediate-treatment",
+      "title": "Meningitis – Immediate Treatment",
+      "version": "0.1.0",
+      "file": "prescribing/meningitis-immediate-treatment.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "3500ea7dde750105081bd049277db8ccd3216991ddf1eddf698d21496e70ea93",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3607,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "meningitis-prevention-secondary-cases",
+      "title": "Meningitis – Prevention of Secondary Cases",
+      "version": "0.1.0",
+      "file": "prescribing/meningitis-prevention-secondary-cases.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "f5085991b8c7f55bb6c1e0243ebb959cbe43bf5c0ef028a7a737d6b3a180800b",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3986,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "other-dental-conditions",
+      "title": "Other Dental Conditions",
+      "version": "0.1.0",
+      "file": "prescribing/other-dental-conditions.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "8f1e8382978ea0cae222b01b0efc6d47b8b1652b0c3116b16308728b05148ec8",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2027,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "otitis-media-acute",
       "title": "Otitis Media (Acute)",
       "version": "0.2.1",
@@ -1521,6 +1569,18 @@
       "attachmentsSizeBytes": 0
     },
     {
+      "id": "sepsis-red-flags",
+      "title": "Sepsis",
+      "version": "0.1.0",
+      "file": "prescribing/sepsis-red-flags.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "0c5bc18509c510a8ea89066297899a2d4dd3d4f12382381f6012338e0850ac02",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 2287,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
       "id": "sexually-transmitted-infections",
       "title": "Sexually Transmitted Infections (STIs)",
       "version": "0.1.0",
@@ -1529,6 +1589,18 @@
       "sha256": "fc73d804168f8c08c6289750fbe3b7e01137afd94f088e61afd5aa2b713b88da",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 1444,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "shingles",
+      "title": "Shingles",
+      "version": "0.1.0",
+      "file": "prescribing/shingles.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "32892f32dab9892cc4442b3bc43f9e8f5401d0acb8b505a5e70c946d754dc00a",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 3271,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     },
@@ -1553,6 +1625,18 @@
       "sha256": "39e6e3ab91e6a1d8235817c967394fc170d25d083ad838f476cb1f40c1a2e59c",
       "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
       "sizeBytes": 5837,
+      "schemaSizeBytes": 10718,
+      "attachmentsSizeBytes": 0
+    },
+    {
+      "id": "varicella-zoster-pep-gp-information",
+      "title": "Varicella-zoster Post-Exposure Prophylaxis (PEP) Information for GPs",
+      "version": "0.1.0",
+      "file": "prescribing/varicella-zoster-pep-gp-information.json",
+      "schema": "schema/prescribing-schema.json",
+      "sha256": "af8156daa6737bb3105659182e450e4fb4d55c07f46152a216d7113de23d5d07",
+      "schemaSha256": "e12dabb873f0ad1c6ad6a1a9a7a408e88dc9d326ea51e7b66398cf9a126f6653",
+      "sizeBytes": 1821,
       "schemaSizeBytes": 10718,
       "attachmentsSizeBytes": 0
     }
