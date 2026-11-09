@@ -468,6 +468,11 @@
           "type": "scoring-tool",
           "id": "feverpain",
           "title": "FeverPAIN"
+        },
+        {
+          "type": "prescribing",
+          "id": "sore-throat-acute",
+          "title": "Sore Throat (acute)"
         }
       ]
     },

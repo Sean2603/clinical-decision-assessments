@@ -1,0 +1,240 @@
+{
+  "id": "impetigo",
+  "title": "Impetigo",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Skin",
+  "summary": "Impetigo is highly infectious, and treatment is important to limit the spread of infection and the worsening of symptoms. Advise patient and carer(s) about hygiene measures to prevent the spread of impetigo. Impetigo can be classified as localised non-bullous, widespread non-bullous or bullous impetigo. Refer those with widespread impetigo who are immunocompromised or with any symptoms or signs suggesting a more serious illness or condition, such as cellulitis. Consider seeking specialist advice for infection near the eyes and nose. Do not offer a combination treatment with a topical and oral antibiotic.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "If symptoms are not improving or impetigo recurs, consider sending a skin swab for microbiological testing.",
+    "Consider giving oral doxycycline as an option for MRSA provided the sensitivity results confirm sensitivity to doxycycline.",
+    "Risk factors for MRSA impetigo: previous MRSA infection or colonisation, frequent admissions to healthcare facilities, recent inpatient/resident at hospital or care facility with known or likely high MRSA prevalence.",
+    "A 5-day course is appropriate for most people with impetigo but can be increased to 7 days based on clinical judgement, depending on the severity and number of lesions."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line – localised non-bullous impetigo",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Hydrogen peroxide 1% (topical)",
+          "dose": "Apply two to three times daily",
+          "route": "Topical",
+          "frequency": "Two to three times daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [
+        "Not suitable for use around the eyes."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult 2nd line – localised non-bullous impetigo",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fusidic acid 2% (topical)",
+          "dose": "Apply three times a day",
+          "route": "Topical",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [
+        "If fusidic acid resistance suspected or confirmed, use mupirocin instead."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "Adult 2nd line – localised non-bullous impetigo (alternative)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Mupirocin 2% (topical)",
+          "dose": "Apply three times a day",
+          "route": "Topical",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Adult 1st line – widespread non-bullous impetigo",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fusidic acid 2% (topical)",
+          "dose": "Apply three times a day",
+          "route": "Topical",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [
+        "Topical treatment as effective as oral; consider oral treatment if large area of skin affected or previous use of topical antibiotic."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 5,
+      "label": "Adult 1st line – widespread non-bullous impetigo (oral alternative)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin capsules",
+          "dose": "500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 6,
+      "label": "Adult 1st line – bullous impetigo, or non-bullous impetigo and systemically unwell or high risk of complications",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin capsules",
+          "dose": "500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternative oral antibiotic if penicillin allergic or flucloxacillin unsuitable: clarithromycin tablets 250–500 mg twice daily (in pregnancy: erythromycin tablets 250–500 mg four times a day), 5 days."
+      ]
+    },
+    {
+      "rank": 7,
+      "label": "Adult – alternative oral antibiotic for MRSA risk factors",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day, then 100 mg once a day",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 8,
+      "label": "Child 1st line – localised non-bullous impetigo",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Hydrogen peroxide 1% (topical)",
+          "dose": "Apply two to three times daily",
+          "route": "Topical",
+          "frequency": "Two to three times daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [
+        "Not suitable for use around the eyes."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 9,
+      "label": "Child 2nd line – localised non-bullous impetigo",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fusidic acid 2% or mupirocin 2% (topical)",
+          "dose": "Apply three times a day (fusidic acid; mupirocin if fusidic acid resistance suspected or confirmed)",
+          "route": "Topical",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 10,
+      "label": "Child 1st line – widespread non-bullous impetigo",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fusidic acid 2% (topical)",
+          "dose": "Apply three times a day",
+          "route": "Topical",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [
+        "Topical treatment as effective as oral; consider oral treatment if large area of skin affected or previous use of topical antibiotic."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 11,
+      "label": "Child 1st line – widespread non-bullous impetigo (oral alternative)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin oral suspension (or capsules in older children)",
+          "dose": "1 month–1 year: 62.5–125 mg four times a day; 2–9 years: 125–250 mg four times a day; 10–17 years: 250–500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 12,
+      "label": "Child 1st line – bullous impetigo, or non-bullous impetigo and systemically unwell or high risk of complications",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin oral suspension (or capsules in older children)",
+          "dose": "1 month–1 year: refer; 2–9 years: 125–250 mg four times a day; 10–17 years: 250–500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternative if penicillin allergic or flucloxacillin unsuitable: clarithromycin oral suspension (or tablets in older children): under 8 kg refer; 8–11 kg 62.5 mg twice daily; 12–19 kg 125 mg twice daily; 20–29 kg 187.5 mg twice daily; 30–40 kg 250 mg twice daily; 12–17 years 250–500 mg twice daily; 5 days."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

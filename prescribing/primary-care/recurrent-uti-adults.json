@@ -1,0 +1,181 @@
+{
+  "id": "recurrent-uti-adults",
+  "title": "Recurrent UTIs – Adults",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Urinary tract infection",
+  "summary": "Recurrent Lower UTI – Adults (non-pregnant females only). This guidance applies to women (and to trans men or non-binary people with a female urinary system) aged 16 years and over who are not pregnant. Seek specialist advice or refer in pregnancy, under 16s, men, trans women and non-binary people with a male genitourinary system. Definition: 2 or more UTIs in the past 6 months, or 3 or more UTIs in the past 12 months. This is a general pathway based on NICE NG112; some treatments may be offered in a different order, or may be combined.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Diagnosis of recurrent UTI should be based on detection of a urinary pathogen on culture of the urine and on clinical judgement – the number of recurrences regarded as clinically significant depends on the risks of infection and the impact on the patient.",
+    "Relapse is recurrent UTI with the same strain of organism, likely if infection recurs within a short period (for example within 2 weeks) after treatment. Reinfection is recurrent UTI with a different strain or species, likely if UTI recurs more than 2 weeks after treatment.",
+    "Pre-treatment: any active UTI should be treated before starting prevention strategies. Self-care and hygiene measures should be followed alongside medical treatments.",
+    "Treatment pathway order: consider vaginal oestrogen (if perimenopausal or postmenopausal, if hygiene and behavioural measures alone are ineffective; review at 12 months); then consider single-dose antibiotics for triggers (if vaginal oestrogen not effective or appropriate); then consider methenamine hippurate (if previous treatments ineffective; review within 6 months, then every 12 months or sooner if agreed with the person); then consider daily antibiotics if previous treatments fail (review at least every 6 months: assess effectiveness and risk of resistance; discuss stopping, continuing or changing; ensure rapid access to treatment if UTI recurs after stopping antibiotics).",
+    "Self-care: antibiotics may not be necessary in first instance. Advise simple measures including hydration and analgesia (see TARGET patient information leaflet). Advise that when they think they have finished passing urine, try squeezing out the last remaining 20 ml or so. Cranberry products work for some but good evidence is lacking. They are available to purchase and should not be prescribed. Avoid in patients taking warfarin.",
+    "Vaginal oestrogen: for individuals experiencing perimenopause or menopause, or who have already experienced menopause, consider vaginal oestrogen if behavioural and personal hygiene measures alone are not effective or not appropriate. See NI Formulary Chapter 7.1.2.",
+    "Over-the-counter sachets that make urine more alkaline (such as sachets containing potassium citrate or sodium citrate) should not be used while taking methenamine hippurate because these can make the medicine less effective.",
+    "Medical help should be sought for acute UTI symptoms.",
+    "Single-dose antibiotics: maximum treatment 6 months, then review. Consider a trial of single-dose antibiotic (one-off dose) when exposed to an identifiable trigger (for example, sexual intercourse), depending on sensitivities, allergies and co-morbidities.",
+    "Daily antibiotics: maximum treatment 6 months, then review. If there has been no improvement after vaginal oestrogen, single-dose antibiotic prophylaxis or methenamine hippurate, ensure any current UTI is adequately treated, then consider a trial of daily antibiotic prophylaxis. Choose antibiotics according to recent culture and susceptibility results where possible, with rotational use based on local policies. Select a different antibiotic for prophylaxis if treating an acute UTI, and consider recent antibiotic use.",
+    "Counsel patient early: antibiotic prophylaxis is not usually lifelong; it allows a period of bladder healing; there is no evidence of additional benefit beyond 6–12 months, so treatment should ideally be discontinued after 6 months; antibiotic resistance may develop; seek medical advice if symptoms of acute UTI; take antibiotics before going to bed, after emptying bladder.",
+    "Review: at 6 months, a clinical decision should be made to continue, stop or change antibiotic prophylaxis. Assess prophylaxis success and provide reminders on behavioural and personal hygiene measures and self-care.",
+    "Refer to specialist care: men, and trans women and non-binary people with a male genitourinary system, aged 16 and over; people with recurrent upper UTI; people with recurrent lower UTI when the underlying cause is unknown; pregnant women and pregnant trans men and non-binary people; children and young people aged under 16 years; people with suspected cancer; anyone who has had gender reassignment surgery that involved structural alteration of the urethra. For post-menopausal women with no obvious risk factors, consider referral to urology, particularly if recurrent UTI is a recent problem.",
+    "Also refer to: NICE NG112 Urinary tract infection (recurrent): antimicrobial prescribing; Scottish Antimicrobial Prescribing Group guidance on recurrent lower UTI in non-pregnant women.",
+    "See BNF for appropriate use and dosing in specific populations, for example, hepatic impairment and renal impairment, or for drug interactions."
+  ],
+  "cautions": [
+    "Nitrofurantoin: risk of pulmonary toxicity. Use with caution in patients with pulmonary disease. Close monitoring of pulmonary conditions of patients receiving long-term therapy is warranted (especially in the elderly)."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Methenamine hippurate (non-antibiotic antiseptic prophylaxis; consider if previous treatments ineffective)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Methenamine hippurate",
+          "dose": "1 g twice a day (off-label)",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "6 months, then review. Thereafter review every 12 months, or earlier if agreed with the person"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Single-dose antibiotic on trigger – 1st choice (off-label)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Nitrofurantoin tablets (only if eGFR ≥45 ml/min)",
+          "dose": "100 mg stat when exposed to a trigger",
+          "route": "Oral",
+          "frequency": "Single dose when exposed to trigger",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "Single-dose antibiotic on trigger – 1st choice (off-label)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Trimethoprim tablets (only when sensitivities are available)",
+          "dose": "200 mg stat when exposed to a trigger",
+          "route": "Oral",
+          "frequency": "Single dose when exposed to trigger",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Single-dose antibiotic on trigger – 2nd choice (off-label, only when sensitivities are available)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules",
+          "dose": "500 mg stat when exposed to a trigger",
+          "route": "Oral",
+          "frequency": "Single dose when exposed to trigger",
+          "duration": "Single dose"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Cefalexin tablets or capsules",
+          "dose": "500 mg stat when exposed to a trigger",
+          "route": "Oral",
+          "frequency": "Single dose when exposed to trigger",
+          "duration": "Single dose"
+        }
+      ],
+      "relationship": "OR",
+      "restrictions": [],
+      "notes": [
+        "Maximum treatment 6 months, then review."
+      ]
+    },
+    {
+      "rank": 5,
+      "label": "Daily antibiotic prophylaxis – 1st choice (maximum 6 months, then review)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Nitrofurantoin tablets (if eGFR ≥45 ml/min)",
+          "dose": "50 to 100 mg nocte",
+          "route": "Oral",
+          "frequency": "Once nightly",
+          "duration": "Maximum 6 months, then review"
+        }
+      ],
+      "restrictions": [
+        "Pulmonary toxicity risk – see cautions."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 6,
+      "label": "Daily antibiotic prophylaxis – 1st choice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Trimethoprim tablets (only when sensitivities are available)",
+          "dose": "100 mg nocte",
+          "route": "Oral",
+          "frequency": "Once nightly",
+          "duration": "Maximum 6 months, then review"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 7,
+      "label": "Daily antibiotic prophylaxis – 2nd choice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules (only when sensitivities are available)",
+          "dose": "250 mg nocte",
+          "route": "Oral",
+          "frequency": "Once nightly",
+          "duration": "Maximum 6 months, then review"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Cefalexin tablets (only when sensitivities are available)",
+          "dose": "125 mg (half a tablet) nocte",
+          "route": "Oral",
+          "frequency": "Once nightly",
+          "duration": "Maximum 6 months, then review"
+        }
+      ],
+      "relationship": "OR",
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

@@ -1,0 +1,74 @@
+{
+  "id": "cdi-diagnosis-treatment",
+  "title": "CDI – Diagnosis and Treatment Options",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Clostridium Difficile Infection",
+  "category": "Clostridioides difficile infection",
+  "summary": "NICE visual summary and full guidance. Patients with diarrhoea (profuse +/- blood), particularly patients aged over 65 years who are currently on antibiotic treatment or recent antibiotic treatment in the preceding 3 months, should have a stool sample sent to laboratory for Clostridium difficile testing. See also the section on Accessing treatment of Clostridioides difficile (CDI) in Primary Care.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Patients diagnosed with CDI: review the need for any currently prescribed antibiotic and discontinue if possible; stop any PPI treatment if possible; review the need to continue any treatment with medicines that may cause problems if people are dehydrated, such as NSAIDs, ACE inhibitors, angiotensin-2 receptor antagonists and diuretics; do not prescribe antimotility agents or laxatives. Prescribers MUST ensure that any future antibiotic treatment is appropriate and absolutely necessary.",
+    "See the Interpretation of Results table for differentiation between active infection, colonisation/carriage and unlikely CDI cases. Only active infection or symptomatic colonisation/carriage should be considered for treatment with antibiotics.",
+    "Use clinical judgement to determine whether antibiotic treatment for C. difficile infection is effective. This is not usually possible to determine until day 7 because diarrhoea may take 1 to 2 weeks to resolve.",
+    "Adult severe disease: signs of severe disease include temperature > 38.5 °C, WCC > 15 x 10⁹/l, rising serum creatinine, pain/tenderness and signs of severe colitis. Any patient severely unwell with CDI – discuss case with local Consultant Microbiologist / Infectious Diseases and consider urgent referral to hospital.",
+    "Adult mild disease: patient is symptomatic but does not meet any of the criteria for severe CDI and may be managed at home depending on co-morbidity and social circumstances."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult – first episode of mild, moderate or severe C. difficile infection (first-line)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Vancomycin capsules",
+          "dose": "125 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "For second-line options or for a further episode of C. difficile infection within 12 weeks of symptom resolution (relapse): consult local Microbiology."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Patients with swallowing difficulties",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Vancomycin oral liquid (unlicensed special)",
+          "dose": "Not specified in source",
+          "route": "Oral",
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Vancomycin capsules are gel formed and therefore unsuitable for opening. If a liquid preparation is required, an unlicensed special may be ordered. This will not be immediately available in community.",
+        "If a delay of more than 24 hours is anticipated for the delivery of this product, the prescriber must be informed, as contact with Microbiology for advice will be required.",
+        "The licensed injectable solution is licensed to be given orally, but this should only be carried out with appropriate education and training. It should not be considered an option for patients with an immediate acute need in primary care.",
+        "See 'Choosing between oral vancomycin options' in the Specialist Pharmacy Service website."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

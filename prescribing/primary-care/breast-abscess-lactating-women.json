@@ -1,0 +1,51 @@
+{
+  "id": "breast-abscess-lactating-women",
+  "title": "Breast Abscess (Lactating Women)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Breast infections",
+  "summary": "See NICE CKS Mastitis and breast abscess for full guidance. Refer the woman urgently to a general surgeon for ultrasound to confirm diagnosis and drainage. Culture of fluid from the abscess should be used to guide the choice of antibiotic following drainage.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "If the woman is lactating, advise continuation of breastfeeding as normal, including from the affected breast if possible. This prevents further milk stasis and is considered safe, even in the presence of infection. If feeding is too painful or the infant refuses the affected breast, express the milk (by hand or with a breast pump) until breastfeeding can resume from that breast.",
+    "Arrange urgent referral if there is an underlying mass or breast cancer is suspected. See the CKS topic on breast cancer – recognition and referral.",
+    "Urgent hospital admission is also required if there are signs of sepsis (such as tachycardia, fever, and chills), infection progressing rapidly, or the woman is haemodynamically unstable or immunocompromised."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Surgical referral – no antibiotic regimen specified in source",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (urgent surgical referral)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Antibiotic choice guided by culture of abscess fluid following drainage."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated. Source has no antibiotic regimen."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

@@ -1,0 +1,49 @@
+{
+  "id": "varicella-zoster-pep-gp-information",
+  "title": "Varicella-zoster Post-Exposure Prophylaxis (PEP) Information for GPs",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Viral infections presenting with rash",
+  "category": "Viral skin infections",
+  "summary": "Report suspected cases of exposure to varicella-zoster virus to the Public Health Agency (PHA) duty room, telephone 0300 555 0119. Refer to UKHSA guidelines on post-exposure prophylaxis (PEP) for varicella or shingles, and Green Book Chapter 34 (external content). The Regional Virus Laboratory website has referral forms (external content).",
+  "updatedOn": "2026-11-09",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "No drug regimen is given on the Eolas page; PEP decisions are made with the PHA duty room."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Refer / report to PHA – no drug regimen on Eolas page",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (report to PHA duty room)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "PHA duty room: 0300 555 0119."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated. Source has no drug regimen."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

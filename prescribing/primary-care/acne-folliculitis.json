@@ -1,0 +1,49 @@
+{
+  "id": "acne-folliculitis",
+  "title": "Acne & Folliculitis",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Skin",
+  "summary": "Prescribing notes are in the Northern Ireland Formulary Chapter 13.6 (Acne & Rosacea). No regimen is given on the Eolas page.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "For detailed prescribing notes see Northern Ireland Formulary Chapter 13.6 Acne & Rosacea."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "See NI Formulary Chapter 13.6",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (see NI Formulary 13.6)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Eolas gives no drug regimen for this condition; refer to NI Formulary Chapter 13.6 Acne & Rosacea."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated. Source has no regimen."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

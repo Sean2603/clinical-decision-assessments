@@ -1,0 +1,100 @@
+{
+  "id": "meningitis-prevention-secondary-cases",
+  "title": "Meningitis – Prevention of Secondary Cases",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Meningitis and Sepsis",
+  "category": "Meningitis",
+  "summary": "Only prescribe on advice from Public Health Doctor (Public Health Duty Room tel: 03005550119). Start prophylaxis ideally within 24 hours of diagnosis of index case. Chemoprophylaxis should be offered to close contacts of cases, irrespective of vaccination status, in the following categories: (a) those who have had prolonged close contact with the case in a household type setting during the seven days before onset of illness; (b) those who have had transient close contact with a case only if they have been directly exposed to large particle droplets/secretions from the respiratory tract of a case around the time of admission to hospital.",
+  "updatedOn": "2026-11-09",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Patient information sheet should be given to all patients who receive a fluoroquinolone. MHRA: fluoroquinolone antibiotics must now only be prescribed when other commonly recommended antibiotics are inappropriate.",
+    "Rifampicin syrup contains 100 mg/5 ml. Suitable doses of rifampicin in children based on average weight for age: 0–2 months 20 mg (1 ml); 3–11 months 40 mg (2 ml); 1–2 years 100 mg (5 ml); 3–4 years 150 mg (7.5 ml); 5–6 years 200 mg (10 ml); 7–12 years 300 mg (as capsule or syrup)."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult (preferred option, including pregnancy)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Ciprofloxacin tablets",
+          "dose": "500 mg",
+          "route": "Oral",
+          "frequency": "Single dose",
+          "duration": "STAT (single dose)"
+        }
+      ],
+      "restrictions": [
+        "Fluoroquinolone – see note above."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult (if ciprofloxacin contraindicated)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Rifampicin capsules",
+          "dose": "600 mg",
+          "route": "Oral",
+          "frequency": "Twice daily (course)",
+          "duration": "2 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "Child (preferred option) – ciprofloxacin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Ciprofloxacin 250 mg/5 ml oral suspension (or tablets in older children)",
+          "dose": "Infants under 1 year: 30 mg/kg (maximum 125 mg) STAT [off-label]; 1–4 years: 125 mg STAT; 5–11 years: 250 mg STAT; 12 years and over: 500 mg STAT",
+          "route": "Oral",
+          "frequency": "Single dose",
+          "duration": "STAT (single dose)"
+        }
+      ],
+      "restrictions": [
+        "Fluoroquinolone – see note above."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Child (if ciprofloxacin contraindicated) – rifampicin syrup",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Rifampicin syrup (100 mg/5 ml)",
+          "dose": "1–12 years: 10 mg/kg; infants under 12 months: 5 mg/kg",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "2 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

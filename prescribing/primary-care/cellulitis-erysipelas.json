@@ -1,0 +1,188 @@
+{
+  "id": "cellulitis-erysipelas",
+  "title": "Cellulitis & Erysipelas",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Skin",
+  "summary": "Serious or deteriorating cellulitis is an emergency and will need referral for IV antibiotics. Offer an antibiotic for cellulitis and erysipelas. When selecting an antibiotic, consider the severity of symptoms and infection site, as well as the risk of uncommon pathogens and MRSA infection, and previous microbiological results from a swab. Refer to hospital if there are symptoms or signs of a more serious illness or condition suspected, such as orbital cellulitis, osteomyelitis, septic arthritis, necrotising fasciitis or sepsis.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Consider a swab for microbiological testing only if skin broken AND there is a penetrating injury, exposure to water-borne organisms, or infection was acquired outside of UK.",
+    "Advise the patient to seek medical help if symptoms worsen rapidly or significantly or do not appear to improve after 2–3 days of treatment.",
+    "Consider referral if patient is severely unwell or has lymphangitis, infection is near the eyes or nose, uncommon pathogens are suspected or patient cannot take oral antibiotics.",
+    "Risk factors for MRSA skin and soft tissue infection: previous MRSA infection or colonisation, frequent admissions to healthcare facilities, recent inpatient/resident at hospital or care facility with known or likely high MRSA prevalence.",
+    "Bilateral cellulitis is rare: in patients who present with this, consideration should be given to varicose eczema.",
+    "Bacteria are always present in leg ulcers; antibiotics do not improve healing.",
+    "In recurrent or persistent cellulitis assess patient for tinea pedis and treat as per Athlete's Foot if necessary.",
+    "Infection around the eyes or the nose (the triangle from the bridge of the nose to the corners of the mouth, or immediately around the eyes including periorbital cellulitis) is more of a concern because of the risk of a serious intracranial complication."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line (not near eyes or nose)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin capsules",
+          "dose": "500 mg–1 g four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult penicillin allergic / 2nd line (not near eyes or nose)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "Initial course 5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternative: doxycycline capsules 200 mg on first day then 100 mg once a day. In pregnancy: erythromycin tablets 500 mg four times a day."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Adult with MRSA risk factors and mild infection",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day, then 100 mg once a day",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Adult with infection near the eyes or nose (consider seeking specialist advice)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav tablets",
+          "dose": "500/125 mg three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 5,
+      "label": "Adult with infection near the eyes or nose – penicillin allergy or co-amoxiclav unsuitable (consider seeking specialist advice)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets WITH metronidazole tablets",
+          "dose": "Clarithromycin 500 mg twice daily WITH metronidazole 400 mg three times a day",
+          "route": "Oral",
+          "frequency": "Twice daily (clarithromycin) and three times a day (metronidazole)",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 6,
+      "label": "Child 1st line (not near eyes or nose) – under 1 month refer for specialist advice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin oral suspension (or capsules in older children)",
+          "dose": "1 month–1 year: 62.5–125 mg four times a day; 2–9 years: 125–250 mg four times a day; 10–17 years: 250–500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 7,
+      "label": "Child penicillin allergic / 2nd line (not near eyes or nose) – under 1 month refer for specialist advice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension (or tablets in older children)",
+          "dose": "Under 8 kg 7.5 mg/kg twice daily; 8–11 kg 62.5 mg twice daily; 12–19 kg 125 mg twice daily; 20–29 kg 187.5 mg twice daily; 30–40 kg 250 mg twice daily; 12–17 years 250–500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5–7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Full resolution is not expected as skin takes time to return to normal. Course can be extended (up to 14 days in total) if necessary, based on clinical assessment."
+      ]
+    },
+    {
+      "rank": 8,
+      "label": "Child with infection near the eyes or nose (consider seeking specialist advice) – under 1 month refer for specialist advice",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Co-amoxiclav oral suspension (125/31 or 250/62)",
+          "dose": "1–11 months: 0.25 ml/kg of 125/31 three times a day (can be doubled in severe infection); 1–5 years: 0.25 ml/kg or 5 ml of 125/31 three times a day; 6–11 years: 0.15 ml/kg or 5 ml of 250/62 three times a day; 12–17 years: 250/125 mg or 500/125 mg three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "Not stated in source"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 9,
+      "label": "Child with infection near the eyes or nose – penicillin allergy or co-amoxiclav unsuitable (consider seeking specialist advice)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension (or tablets in older children) WITH metronidazole (if anaerobes suspected)",
+          "dose": "Clarithromycin: under 8 kg 7.5 mg/kg twice daily; 8–11 kg 62.5 mg twice daily; 12–19 kg 125 mg twice daily; 20–29 kg 187.5 mg twice daily; 30–40 kg 250 mg twice daily; 12–17 years 250–500 mg twice daily. Metronidazole: 1 month 7.5 mg/kg twice daily; 2 months–11 years 7.5 mg/kg three times a day (max 400 mg per dose); 12–17 years 400 mg three times a day",
+          "route": "Oral",
+          "frequency": "Twice daily (clarithromycin) and as above (metronidazole)",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Full resolution is not expected as skin takes time to return to normal. Course can be extended (up to 14 days in total) if necessary, based on clinical assessment."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

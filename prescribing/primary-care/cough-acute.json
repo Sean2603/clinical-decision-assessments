@@ -1,0 +1,111 @@
+{
+  "id": "cough-acute",
+  "title": "Cough (acute)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Lower Respiratory Tract Infections",
+  "category": "Cough",
+  "summary": "NICE visual summary and full guidance. Do not issue a prescription for an antimicrobial to a patient who is likely to have a self-limiting condition. Acute cough usually falls under self-limiting, i.e. when caused by a viral upper respiratory tract infection or acute bronchitis. Symptoms can last up to 4 weeks, with most people getting better within 3 to 4 weeks without antibiotics.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Consider a back-up prescription, or an immediate prescription in those who are identified at a face-to-face clinical examination as at a higher risk of complications (see NICE point 1.1.5).",
+    "Only offer an immediate antibiotic to those identified at a face-to-face clinical examination as systemically very unwell.",
+    "Refer to hospital or seek specialist advice if they have symptoms suggesting a more serious condition such as sepsis, a pulmonary embolism or lung cancer.",
+    "Do not offer an oral or inhaled bronchodilator/corticosteroid (unless underlying airways disease) or a mucolytic."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line (back up or immediate prescription)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day, then 100 mg once a day for 4 days",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "5 days in total"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult 2nd line (back up or immediate prescription)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules",
+          "dose": "500 mg three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternatives: clarithromycin tablets 250 mg–500 mg twice a day for 5 days; erythromycin tablets 250 mg–500 mg four times a day or 500 mg to 1000 mg twice a day for 5 days.",
+        "Use amoxicillin or erythromycin in women who are pregnant."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Child 1st line (back up or immediate prescription)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin oral suspension (or capsules in older children)",
+          "dose": "1 month–11 months: 125 mg three times a day; 1–4 years: 250 mg three times a day; 5–17 years: 500 mg three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Child penicillin allergic / 2nd line (back up or immediate prescription)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension (or tablets in older children)",
+          "dose": "1 month–11 years: under 8 kg 7.5 mg/kg twice daily; 8–11 kg 62.5 mg twice daily; 12–19 kg 125 mg twice daily; 20–29 kg 187.5 mg twice daily; 30–40 kg 250 mg twice daily. 12–17 years: 250–500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternatives: erythromycin oral suspension (or tablets in older children): 1 month–1 year 125 mg four times a day or 250 mg twice daily; 2–7 years 250 mg four times a day or 500 mg twice daily; 8–17 years 250–500 mg four times a day or 500–1000 mg twice daily (5 days). Doxycycline capsules 12–17 years: 200 mg on first day, then 100 mg once a day for 4 days (5 days in total).",
+        "Use amoxicillin or erythromycin in women who are pregnant."
+      ]
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Information",
+      "items": [
+        "'Caring for children with cough' information and leaflet is available (link in source)."
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

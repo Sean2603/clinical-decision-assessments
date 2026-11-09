@@ -1,0 +1,89 @@
+{
+  "id": "candidiasis-vulvovaginal",
+  "title": "Candidiasis (vulvo-vaginal infection)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Vaginal infections",
+  "summary": "See NICE CKS and BASHH national guideline for the management of vulvovaginal candidiasis. Advise patient to consider self-referral to the community pharmacy Pharmacy First Service should they experience this condition in the future (see BSO website). For severe or recurrent infection refer to NICE CKS or BASHH.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Fluconazole capsules should not be used in pregnancy or risk of pregnancy.",
+    "Clotrimazole damages latex condoms and diaphragms – counselling required.",
+    "For other alternative treatment regimens refer to NICE CKS."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult acute infection – oral fluconazole",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fluconazole capsules",
+          "dose": "150 mg as a single dose",
+          "route": "Oral",
+          "frequency": "Single dose",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [
+        "Not to be used in pregnancy or risk of pregnancy."
+      ],
+      "notes": [
+        "If there are signs of severe infection repeat after 72 hours, i.e. fluconazole 150 mg oral capsule on day 1 and day 4.",
+        "If there are vulval symptoms consider clotrimazole 1% or 2% cream applied 2–3 times a day for up to 14 days."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Adult acute infection – if oral therapy is contraindicated (intravaginal pessary)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clotrimazole 500 mg intravaginal pessary (marked *)",
+          "dose": "500 mg as a single dose at night",
+          "route": "Intravaginal",
+          "frequency": "Single dose at night",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "If there are signs of severe infection repeat after 72 hours, i.e. clotrimazole 500 mg pessary (2 pessaries) – insert 1 pessary intravaginally on day 1 and day 4.",
+        "If there are vulval symptoms consider clotrimazole 1% or 2% cream applied 2–3 times a day for up to 14 days."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Adult – alternative if oral fluconazole or clotrimazole 500 mg pessary contraindicated or not tolerated",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clotrimazole 10% intravaginal cream",
+          "dose": "5 g intravaginally as a single dose at night",
+          "route": "Intravaginal",
+          "frequency": "Single dose at night",
+          "duration": "Single dose"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

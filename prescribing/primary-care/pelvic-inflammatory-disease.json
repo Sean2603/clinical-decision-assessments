@@ -1,0 +1,129 @@
+{
+  "id": "pelvic-inflammatory-disease",
+  "title": "Pelvic Inflammatory Disease",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Sexually transmitted infections",
+  "summary": "Provide initial treatment as below and refer woman and contacts to GUM service. Always test for gonorrhoea and chlamydia. Appropriate analgesia should be provided. If the risk of gonococcal PID is high (e.g. when the patient's partner has gonorrhoea, in clinically severe disease, following sexual contact abroad), refer such cases directly to GUM for appropriate susceptibility testing, resistance monitoring and treatment.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "If the risk of gonococcal infection is low, use the regimens below.",
+    "Note: systemic fluoroquinolones must now only be prescribed when other commonly recommended antibiotics are inappropriate (MHRA review). Provide the patient information found in the MHRA Drug Safety Update on fluoroquinolone antibiotics."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Ceftriaxone intramuscular injection",
+          "dose": "1 g as a single dose, followed by:",
+          "route": "Intramuscular",
+          "frequency": "Single dose",
+          "duration": "Single dose"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules (with metronidazole)",
+          "dose": "100 mg twice daily, plus metronidazole tablets 400 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "14 days"
+        }
+      ],
+      "relationship": "AND",
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult 2nd line (when 1st line unsuitable) – metronidazole plus ofloxacin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Metronidazole tablets",
+          "dose": "400 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "14 days"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Ofloxacin tablets",
+          "dose": "400 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "14 days"
+        }
+      ],
+      "relationship": "AND",
+      "restrictions": [
+        "Fluoroquinolone – see note above."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "Adult 2nd line (alternative) – metronidazole plus levofloxacin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Metronidazole tablets",
+          "dose": "400 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "14 days"
+        },
+        {
+          "medicationId": null,
+          "displayName": "Levofloxacin tablets",
+          "dose": "500 mg once daily",
+          "route": "Oral",
+          "frequency": "Once daily",
+          "duration": "14 days"
+        }
+      ],
+      "relationship": "AND",
+      "restrictions": [
+        "Fluoroquinolone – see note above."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Adult 2nd line (alternative) – moxifloxacin",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Moxifloxacin tablets",
+          "dose": "400 mg once daily",
+          "route": "Oral",
+          "frequency": "Once daily",
+          "duration": "14 days"
+        }
+      ],
+      "restrictions": [
+        "Fluoroquinolone – see note above."
+      ],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

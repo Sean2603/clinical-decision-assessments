@@ -340,13 +340,39 @@ def _validate_scoring_escalations(value: dict, source_path: Path, errors: list[s
         if unknown:
             errors.append(f"{source_path}:escalations[{index}]: result IDs {', '.join(unknown)} do not resolve to a result on this scoring tool.")
 
+CARE_SETTING_FOLDERS = {"primary-care", "bhsct", "nhsct", "sehsct", "shsct", "whsct"}
+CARE_SETTING_DEFAULT = "primary-care"
+CONDITION_ID_PATTERN = re.compile(r"^[a-z0-9_-]+$")
+
+
+def prescribing_folder_errors(path: Path, value: dict, directory: Path, errors: list[str]) -> None:
+    """Prescribing pathways live in prescribing/<care-setting>/ and must match their careSetting."""
+    relative = path.relative_to(directory).parts
+    label = path.relative_to(ROOT).as_posix()
+    if len(relative) != 2:
+        errors.append(f"{label}: prescribing pathways must sit in a care-setting folder (prescribing/<setting>/).")
+        return
+    folder = relative[0]
+    if folder not in CARE_SETTING_FOLDERS:
+        errors.append(f"{label}: unknown care-setting folder {folder!r}.")
+    setting = value.get("careSetting", CARE_SETTING_DEFAULT)
+    if setting != folder:
+        errors.append(f"{label}: careSetting {setting!r} does not match folder {folder!r}.")
+    condition_id = value.get("conditionId")
+    if condition_id is not None and (not isinstance(condition_id, str) or not CONDITION_ID_PATTERN.match(condition_id)):
+        errors.append(f"{label}: conditionId must be a lowercase stable ID.")
+
+
 def validate_collection(kind: str, settings: dict, known_reference_ids: set[str],
                         known_category_ids: set[str], errors: list[str]) -> dict[str,dict]:
     schema = load_json(settings["schema"],errors)
     if schema is None:
         return {}
     validator = Draft202012Validator(schema,format_checker=FormatChecker())
-    paths = sorted(settings["directory"].glob("*.json"))
+    directory = settings["directory"]
+    recursive = directory.name == "prescribing"
+    globber = directory.rglob("*.json") if recursive else directory.glob("*.json")
+    paths = sorted(globber, key=lambda item: item.as_posix().casefold())
     if not paths:
         if settings.get("allowEmpty",False):
             return {}
@@ -357,6 +383,8 @@ def validate_collection(kind: str, settings: dict, known_reference_ids: set[str]
         value = load_json(path,errors)
         if value is None:
             continue
+        if recursive and isinstance(value, dict):
+            prescribing_folder_errors(path, value, directory, errors)
         item_id = value.get("id")
         if not isinstance(item_id,str) or not item_id:
             errors.append(f"{path}: missing valid id.")

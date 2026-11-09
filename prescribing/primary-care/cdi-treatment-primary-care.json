@@ -1,0 +1,68 @@
+{
+  "id": "cdi-treatment-primary-care",
+  "title": "Accessing Treatment of Clostridioides difficile Infection (CDI) in Primary Care",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Clostridium Difficile Infection",
+  "category": "Clostridioides difficile infection",
+  "summary": "This information is to outline the appropriate routes for obtaining antimicrobials for the treatment of CDI when presenting in primary care. In line with NI Microguide, primary care use will usually be restricted to mild disease cases unless otherwise advised by specialist care. NICE recommends vancomycin 125 mg orally four times a day for 10 days as the first-line antibiotic for treatment of C. difficile infection, or fidaxomicin 200 mg orally twice a day for 10 days as a second line option. It is important that treatment for CDI is started without delay, ideally the same day or within 24 hours.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "For patients unable to manage solid dose formulations, oral liquid vancomycin or fidaxomicin granules for oral suspension may be prescribed. There are no readily available licensed formulations of oral liquid vancomycin; fidaxomicin granules for oral suspension are licensed. See SPS 'Choosing between oral vancomycin options' and 'Choosing between oral fidaxomicin options'.",
+    "Within normal hours: vancomycin and fidaxomicin may not routinely be available in community pharmacy, but with advance warning the pharmacy may be able to obtain necessary supply on the same day. GPs should contact the community pharmacy as soon as indicated and advise them a prescription is on the way. Community pharmacies should order CDI antimicrobials (vancomycin or fidaxomicin) through their usual pharmaceutical wholesalers; if not available for same day delivery the pharmacist should contact the prescriber to agree how best to assist patients gain timely access.",
+    "Fidaxomicin is currently only available from one wholesaler in NI (Alliance), correct as of 01/07/2024.",
+    "Out of hours: GP OOH should confirm the stock situation with community pharmacies in the area in advance of issuing a prescription, particularly for patients unable to manage solid dose formulations, as the pharmacy may not be able to supply on the same day. If the prescription is urgent, endorse it with 'URGENT' and discuss options for obtaining stock with the community pharmacy. Southern OOH have local arrangements in place with Southern Health and Social Care Trust pharmacy.",
+    "Community pharmacies out of hours: first option is ordering from usual wholesalers; where a patient will not be supplied on the same day this should be discussed with the prescriber as soon as possible. If not in a position to supply and other pharmacies do not have sufficient stock, consider accessing a wholesaler out-of-hours or on-call service per their emergency contact arrangements (the pharmacist may be required to collect and a fee may be charged). If all options are exhausted in-hours or out-of-hours, consider contacting the local Trust pharmacy via the hospital switchboard. Under no circumstances should a patient or their representative be directed to the Trust.",
+    "Call out charges: if charges are incurred from a wholesaler call-out or from a Trust pharmacy, a claim for out of pocket expenses may be made. If BSO is satisfied that the claim is reasonable the pharmacist will be reimbursed. It would usually be expected that the prescriber has endorsed the prescription 'Urgent' in such circumstances."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "First-line (NICE)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Vancomycin oral (capsules or liquid, see notes)",
+          "dose": "125 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Second-line option (NICE)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Fidaxomicin oral (tablets or granules for oral suspension)",
+          "dose": "200 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

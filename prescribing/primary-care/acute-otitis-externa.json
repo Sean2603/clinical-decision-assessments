@@ -1,0 +1,70 @@
+{
+  "id": "acute-otitis-externa",
+  "title": "Acute Otitis Externa",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Upper Respiratory Tract Infections",
+  "category": "Ears",
+  "summary": "Systemic antibiotics are not usually required unless there are signs of associated lymphadenitis or perichondritis.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "An acetic acid 2% solution spray acts as an antibacterial and antifungal in the external ear canal and is available as the proprietary preparation (Earcalm) for patients to purchase as a self-treatment. It may be of use in mild otitis externa particularly where itch is a symptom, but in severe cases an anti-inflammatory with or without an anti-infective is required.",
+    "Debris in ear must be removed to allow topical medication to be absorbed effectively; this may require referral for suction removal.",
+    "Advise patient to keep ears dry and not to insert any implements into the ears. Prescribe analgesia as this may be a painful condition.",
+    "In recurrent infection, cotton wool and Vaseline plugs may be used to keep ears dry when washing or swimming as a preventative measure. Dispose after use.",
+    "Swab patient's ear and refer to an emergency ENT clinic if: persistent discharge or pain; diagnostic doubt as to condition of tympanic membrane; immunocompromised patient; poorly controlled diabetic patient; risk of malignant/necrotising otitis externa; patient does not respond to second-line treatment option.",
+    "NEVER use any forms of drops, including consecutive courses from any source, for more than 14 days as ototoxicity is cumulative and can be very rapid."
+  ],
+  "cautions": [
+    "Never use any forms of drops, including consecutive courses from any source, for more than 14 days (ototoxicity is cumulative and can be very rapid)."
+  ],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st line – adults and children over 2 years",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Dexamethasone / neomycin sulfate / acetic acid ear spray",
+          "dose": "One spray three times a day (dexamethasone / neomycin sulfate / acetic acid 0.1% w/w / 0.5% w/w / 2% w/w)",
+          "route": "Auricular (ear)",
+          "frequency": "Three times a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "2nd line – if no response within 72 hours to 1st line therapy – adults and children over 2 years",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Gentamicin 0.3% and hydrocortisone 1% ear drops",
+          "dose": "2–4 drops",
+          "route": "Auricular (ear)",
+          "frequency": "3–4 times daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

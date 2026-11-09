@@ -1,0 +1,45 @@
+{
+  "id": "fungal-infection-otitis-externa",
+  "title": "Fungal Infection in Otitis Externa",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Upper Respiratory Tract Infections",
+  "category": "Ears",
+  "summary": "Fungal infection in otitis externa, adults and children.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adults and children",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clotrimazole 1% solution",
+          "dose": "2–3 drops",
+          "route": "Auricular (ear)",
+          "frequency": "2–3 times daily",
+          "duration": "For at least 14 days after disappearance of infection"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

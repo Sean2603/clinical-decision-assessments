@@ -1,0 +1,69 @@
+{
+  "id": "mastitis-lactating-women",
+  "title": "Mastitis: Lactating Women",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Skin and Soft Tissue Infections",
+  "category": "Breast infections",
+  "summary": "See CKS Mastitis and breast abscess for full guidance. Arrange hospital admission if there are signs of sepsis (such as tachycardia, fever, and chills), the infection progresses rapidly, or the woman is haemodynamically unstable or immunocompromised. Arrange urgent referral if there is suspicion of a breast abscess, an underlying mass or breast cancer.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Prompt conservative management for 24 hours is often sufficient to resolve symptoms: advise the woman to continue breastfeeding as normal, including from the affected breast if possible (this prevents further milk stasis and is considered safe even in the presence of infection). If breastfeeding is too painful or the infant refuses the affected breast, express milk by hand until breastfeeding can resume from that breast.",
+    "Provide advice on simple analgesia (ibuprofen or paracetamol) and self-care measures, e.g. cold compresses, supportive bra, and rest.",
+    "Prescribe an oral antibiotic if there are signs of infectious mastitis: symptoms have not improved (or are worsening) after 24 hours despite effective milk removal; woman has an infected nipple fissure; breast milk culture is positive.",
+    "Breast milk culture is not routinely required but may be tested if unusual presentation, worsening symptoms or recurrent infection.",
+    "Advise the woman to seek immediate medical advice if symptoms fail to settle after 48 hours of antibiotic treatment."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Flucloxacillin capsules",
+          "dose": "500 mg four times a day",
+          "route": "Oral",
+          "frequency": "Four times a day",
+          "duration": "10 to 14 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Penicillin allergy",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "10 to 14 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternative: erythromycin tablets 250–500 mg four times a day for 10 to 14 days."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

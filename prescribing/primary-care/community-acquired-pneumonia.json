@@ -1,0 +1,162 @@
+{
+  "id": "community-acquired-pneumonia",
+  "title": "Community Acquired Pneumonia",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Lower Respiratory Tract Infections",
+  "category": "Pneumonia",
+  "summary": "See NICE guideline NG250. Start antibiotic treatment as soon as possible after establishing a diagnosis. Refer adults to hospital if they have any symptoms suggesting a more serious condition, such as cardiorespiratory failure or suspected sepsis and meet any high-risk criteria (see NG253). Consider referring children and young people or seek specialist advice on management, using clinical judgement and based on the severity of symptoms or signs. For infants under one month presenting with symptoms and signs of pneumonia, urgent referral for paediatric specialist assessment is required.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "For adults in primary care, if a clinical diagnosis of community acquired pneumonia has been made, carry out a risk assessment using the CRB65 score.",
+    "CRB65 score (1 point each): Confusion (abbreviated Mental Test score 8 or less, or new disorientation in person, place or time); Respiration rate 30 breaths per minute or more; Blood pressure systolic less than 90 mmHg or diastolic less than 60 mmHg; Age 65 years or more.",
+    "CRB65 score 0 = low risk: consider home based care. Use clinical judgement and make a shared decision about most appropriate place of care, e.g. supported home based care.",
+    "CRB65 score 1–2 = intermediate risk: consider hospital assessment.",
+    "CRB65 score 3 or 4 = high risk: hospital assessment.",
+    "Do not routinely offer microbiological tests for low severity CAP. Take sputum sample for microbiological testing for a person with moderate severity CAP being managed in the community. See NICE NG250 for further advice on when microbiological tests should be considered, including collection of sputum samples.",
+    "If a sample has been sent for microbiological testing: review the choice of antibiotic(s) when results are available; consider changing the antibiotic(s) according to results, using a narrower spectrum antibiotic, if appropriate; consider referring patients whose microbiological samples have identified bacteria that are resistant to oral antibiotics.",
+    "Reassess patients if they have symptoms that are not improving as expected following antibiotic treatment. A sample should be sent for microbiological testing if this has not been done already. Review the need for hospital admission or seek specialist advice.",
+    "Be aware of the expected time periods of symptom resolution, although rate of improvement will vary with the severity, e.g. 1 week for fever, 4 weeks for chest pain/sputum, 6 weeks for cough/breathlessness. Full recovery may take up to 6 months. In children, fever and difficulty breathing should resolve within 3 to 4 days and cough may persist up to 4 weeks.",
+    "Advise the patient or carer to seek medical advice if symptoms worsen rapidly or significantly, they do not start to improve within 3 days or they become systemically very unwell."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult low risk severity (CRB65 0)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules",
+          "dose": "500 mg three times a day (higher doses can be used; see the BNF)",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Stop antibiotic treatment after 5 days unless microbiological results suggest a longer course is needed or the person is not clinically stable."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Adult low risk severity (CRB65 0): penicillin allergy or atypical pathogens suspected",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day, then 100 mg once a day for 4 days",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "5 days in total"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternatives: clarithromycin tablets 500 mg twice a day for 5 days, or in pregnancy erythromycin tablets 500 mg four times a day for 5 days.",
+        "Stop antibiotic treatment after 5 days unless microbiological results suggest a longer course is needed or the person is not clinically stable."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Adult moderate risk severity (CRB65 1–2)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules",
+          "dose": "500 mg three times a day (higher doses can be used; see the BNF)",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "If atypical pathogens suspected, use as dual therapy with clarithromycin tablets 500 mg twice a day for 5 days (or in pregnancy erythromycin tablets 500 mg four times a day for 5 days).",
+        "Stop antibiotic treatment after 5 days unless microbiological results suggest a longer course is needed or the person is not clinically stable."
+      ]
+    },
+    {
+      "rank": 4,
+      "label": "Adult moderate risk severity (CRB65 1–2): penicillin allergy",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day, then 100 mg once a day for 4 days",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "5 days in total"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternative: clarithromycin tablets 500 mg twice a day for 5 days.",
+        "Stop antibiotic treatment after 5 days unless microbiological results suggest a longer course is needed or the person is not clinically stable."
+      ]
+    },
+    {
+      "rank": 5,
+      "label": "Child non-severe symptoms",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin oral suspension (or capsules in older children)",
+          "dose": "1 month to 2 months: 125 mg three times a day for 5 days; 3 months to 11 months: 125 mg three times a day for 3 days; 1 year to 4 years: 250 mg three times a day for 3 days; 5 years to 11 years: 500 mg three times a day for 3 days; 12 to 17 years: 500 mg three times a day for 5 days",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "3 or 5 days (see dose)"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Higher doses can be used for all ages, see BNF for Children.",
+        "Consider extending duration beyond 3 days if not clinically stable. Stop antibiotic treatment after 5 days unless microbiological results suggest a longer course is needed or the person remains clinically unstable."
+      ]
+    },
+    {
+      "rank": 6,
+      "label": "Child non-severe symptoms: penicillin allergy or atypical pathogens suspected",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension (or tablets in older children)",
+          "dose": "1 month to 2 months: under 8 kg 7.5 mg/kg twice a day for 5 days; 3 months to 11 years: under 8 kg 7.5 mg/kg twice a day, 8–11 kg 62.5 mg twice a day, 12–19 kg 125 mg twice a day, 20–29 kg 187.5 mg twice a day, 30–40 kg 250 mg twice a day (each for 3 days); 12 to 17 years: 250 mg to 500 mg twice a day for 5 days",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "3 or 5 days (see dose)"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Alternatives: doxycycline capsules 200 mg on first day, then 100 mg once a day for 4 days (5-day course in total) for 12 to 17 years (in pregnancy: see note); erythromycin tablets 250 mg to 500 mg four times a day for 3 days (8 to 11 years) or for 5 days (12 to 17 years).",
+        "Consider extending duration beyond 3 days if not clinically stable. Stop antibiotic treatment after 5 days unless microbiological results suggest a longer course is needed or the person remains clinically unstable."
+      ]
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Treatment notes",
+      "items": [
+        "If the patient cannot take oral medicines, explore locally available options for IV antibiotics at home/in the community, or refer to hospital. Review within 48 hours to consider switching to oral antibiotics if possible.",
+        "Mycoplasma pneumoniae infection occurs in outbreaks approximately every 4 years and is more common in school-aged children.",
+        "See also: Pneumonia in adults: diagnosis and management."
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

@@ -1,0 +1,56 @@
+{
+  "id": "other-dental-conditions",
+  "title": "Other Dental Conditions",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Dental Infections in General Practice",
+  "category": "Dental infections in general practice",
+  "summary": "Advise dental consultation for treatment of other dental infections including acute necrotising gingivitis, pericoronitis and inflammation/ulceration of the oral mucosa. See BNF for treatment information if necessary. Referral to hospital is required if patient has severe symptoms, such as significant trismus, floor-of-mouth swelling or difficulty breathing.",
+  "updatedOn": "2026-11-09",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Consider signposting to Pharmacy First: Everyday Health Conditions for management of mouth ulcers."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Advise dental consultation – no drug regimen on this page",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (dental consultation)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "See BNF for treatment information if necessary."
+      ]
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Hospital referral",
+      "items": [
+        "Refer to hospital if severe symptoms, such as significant trismus, floor-of-mouth swelling or difficulty breathing."
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated. Source has no drug regimen."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

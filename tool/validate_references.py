@@ -136,7 +136,8 @@ def main() -> int:
     cited_ids = set()
     strict_cited_ids = set()
     for folder in ("assessments", "guidelines", "procedures", "scoring_tools", "blood_panels", "medications", "prescribing", "shared_learning"):
-        for content_path in sorted((ROOT / folder).glob("*.json")):
+        scan = (ROOT / folder).rglob("*.json") if folder == "prescribing" else (ROOT / folder).glob("*.json")
+        for content_path in sorted(scan):
             document = load_json(content_path)
             item_ids = collect_reference_ids(document)
             cited_ids.update(item_ids)

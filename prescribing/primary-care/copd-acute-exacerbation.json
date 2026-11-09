@@ -1,0 +1,105 @@
+{
+  "id": "copd-acute-exacerbation",
+  "title": "COPD Acute Exacerbation",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Lower Respiratory Tract Infections",
+  "category": "COPD",
+  "summary": "COPD (acute exacerbation). Many exacerbations, including some severe, are not caused by bacterial infections so will not respond to antibiotics. Refer people to hospital if they have any symptoms or signs suggesting a more serious condition, such as cardiorespiratory failure or sepsis. See NICE NG115 for other recommendations in managing COPD exacerbations.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Take into account before considering an antibiotic: severity of symptoms, particularly sputum colour and increases in volume or thickness beyond the person's day-to-day variation; whether they need to go into hospital for treatment; previous exacerbations, hospital admissions and risk of developing complications; previous sputum culture and susceptibility results; the risk of antimicrobial resistance with repeated courses of antibiotics; if the person has antibiotics at home as part of their exacerbation plan; if the person is taking prophylactic antibiotics (antibiotic treatment should be one from a different class).",
+    "As per NICE, sputum culture is not recommended routinely in primary care, only send a sample if symptoms have not improved following empiric antibiotic treatment. On receipt of results, if patient still not improving under empirical treatment, adjust the antibiotic according to results; use a narrower-spectrum antibiotic if appropriate."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line (or guided by most recent sputum culture and susceptibilities)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Amoxicillin capsules",
+          "dose": "500 mg three times a day (1000 mg three times a day in severe infection)",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult 1st line (or guided by most recent sputum culture and susceptibilities): alternative",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "200 mg on first day and then 100 mg once a day for 4 days (increased if necessary to 200 mg once daily in severe infection)",
+          "route": "Oral",
+          "frequency": "Once a day after first day",
+          "duration": "5 days in total"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "If amoxicillin or doxycycline unsuitable (WHO 2019 AWaRe Classification)."
+      ]
+    },
+    {
+      "rank": 3,
+      "label": "Adult 1st line (or guided by most recent sputum culture and susceptibilities): if amoxicillin or doxycycline unsuitable",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "500 mg twice a day",
+          "route": "Oral",
+          "frequency": "Twice a day",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 4,
+      "label": "Adult 2nd line (no improvement in symptoms after 2–3 days)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Use alternative first choice from a different class (see above)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [
+    {
+      "title": "Treatment notes",
+      "items": [
+        "If the patient cannot take oral medicines explore locally available options for IV antibiotics at home/in the community. Review within 48 hours to consider switching to oral antibiotics if possible."
+      ]
+    }
+  ],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

@@ -1,0 +1,51 @@
+{
+  "id": "sepsis-red-flags",
+  "title": "Sepsis",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Meningitis and Sepsis",
+  "category": "Sepsis",
+  "summary": "Sepsis is a condition of life-threatening organ dysfunction due to a dysregulated host response to infection. Any patient with presumed sepsis who has one or more Red Flag Sepsis criteria should be assumed to have sepsis or septic shock, and immediately transferred to hospital by blue light. The Sepsis Trust has created decision support tools reflecting NICE guidelines NG253, NG254 and NG255 (see UK Sepsis Trust for NICE approved tools and resources).",
+  "updatedOn": "2026-11-09",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Immediate actions: dial 999; arrange blue light transfer; administer oxygen to maintain saturations above 94% if available.",
+    "Communication: write a brief clear handover including observations and antibiotic allergies where present; ensure paramedics pre-alert as 'Red Flag Sepsis'.",
+    "External links are selected and reviewed when the Eolas App is published; the clinician should verify the guidance is correct and appropriate to the individual situation at time of accessing."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Red flag sepsis – immediate hospital transfer (no drug regimen on Eolas page)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication (blue light transfer)",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Immediate transfer by blue light; the Eolas page gives no antibiotic regimen."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated. Source has no drug regimen."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

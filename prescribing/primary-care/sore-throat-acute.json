@@ -1,0 +1,140 @@
+{
+  "id": "sore-throat-acute",
+  "title": "Sore Throat (acute)",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Upper Respiratory Tract Infections",
+  "category": "Throat",
+  "summary": "NICE visual summary and full guidance. Guidance issued in December 2022 due to increased cases of Scarlet Fever and iGAS in children has now been stepped down. The guidance below applies to all age groups (15/3/23). Do not issue a prescription for an antimicrobial to a patient who is likely to have a self-limiting condition. Acute sore throats (including pharyngitis and tonsillitis) fall under self-limiting and are also mostly viral. Symptoms last for around 1 week, however most people will get better within this time without antibiotics, regardless of cause (bacteria or virus).",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "To identify the likelihood of benefit from an antibiotic, examine the patient face to face and use the FeverPAIN Clinical Score: Fever (last 24 hours); Purulence; Attends rapidly (within 3 days of symptom onset); Inflamed tonsils; No cough or coryza.",
+    "FeverPAIN score 0–1: do not offer an antibiotic.",
+    "FeverPAIN score 2–3: no antibiotic or consider a back-up antibiotic prescription.",
+    "FeverPAIN score ≥4: consider a back-up antibiotic prescription or an immediate antibiotic."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Phenoxymethylpenicillin tablets",
+          "dose": "500 mg four times a day or 1000 mg twice daily",
+          "route": "Oral",
+          "frequency": "Four times a day or twice daily",
+          "duration": "5–10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "A shorter course is likely to be symptomatically effective and minimises the risk of resistance and adverse effects. In the case of recurrent infection, a 10 day course may increase the chance of microbiological cure."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Adult penicillin allergic / 2nd line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin tablets",
+          "dose": "250 mg – 500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 3,
+      "label": "Adult penicillin allergic / 2nd line (alternative)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Erythromycin tablets",
+          "dose": "250 mg – 500 mg four times a day or 500 mg – 1000 mg twice daily",
+          "route": "Oral",
+          "frequency": "Four times a day or twice daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Erythromycin preferred in women who are pregnant."
+      ]
+    },
+    {
+      "rank": 4,
+      "label": "Child 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Phenoxymethylpenicillin oral solution (or tablets in older children)",
+          "dose": "1 month–11 months: 62.5 mg four times a day or 125 mg twice daily; 1–5 years: 125 mg four times a day or 250 mg twice daily; 6–11 years: 250 mg four times a day or 500 mg twice daily; 12 to 17 years: 500 mg four times a day or 1,000 mg twice a day",
+          "route": "Oral",
+          "frequency": "Four times a day or twice daily",
+          "duration": "5–10 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "A shorter course is likely to be symptomatically effective and minimises the risk of resistance and adverse effects. In the case of recurrent infection, a 10 day course may increase the chance of microbiological cure."
+      ]
+    },
+    {
+      "rank": 5,
+      "label": "Child penicillin allergic / 2nd line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Clarithromycin oral suspension (or tablets in older children)",
+          "dose": "1 month–11 years: under 8 kg 7.5 mg/kg twice daily; 8–11 kg 62.5 mg twice daily; 12–19 kg 125 mg twice daily; 20–29 kg 187.5 mg twice daily; 30–40 kg 250 mg twice daily. 12–17 years: 250 mg–500 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    },
+    {
+      "rank": 6,
+      "label": "Child penicillin allergic / 2nd line (alternative)",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Erythromycin oral suspension (or tablets in older children)",
+          "dose": "1 month–1 year: 125 mg four times a day or 250 mg twice daily; 2–7 years: 250 mg four times a day or 500 mg twice daily; 8–17 years: 250 mg–500 mg four times a day or 500 mg–1,000 mg twice daily",
+          "route": "Oral",
+          "frequency": "Four times a day or twice daily",
+          "duration": "5 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Erythromycin preferred in young women who are pregnant."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [
+    "NICE-NG84"
+  ],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

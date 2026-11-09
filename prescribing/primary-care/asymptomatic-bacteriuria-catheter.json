@@ -1,0 +1,49 @@
+{
+  "id": "asymptomatic-bacteriuria-catheter",
+  "title": "Asymptomatic Bacteriuria in Patients with a Urinary Catheter",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Urinary tract infection",
+  "summary": "Asymptomatic bacteriuria is normal with indwelling catheters. All patients with a long-term indwelling catheter are bacteriuric, often with two or more organisms. It does NOT require antibiotic therapy routinely. It will NOT be eradicated by using antibiotics. It should not be referred to as a UTI.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Asymptomatic bacteriuria in patients with a urinary catheter is normal and does NOT require antibiotic therapy routinely. See the Catheter Associated UTI pathway for symptomatic infection."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Asymptomatic bacteriuria – no antibiotic",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "Do not treat as a UTI. See the Catheter Associated UTI pathway if symptomatic."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

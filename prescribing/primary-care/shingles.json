@@ -1,0 +1,70 @@
+{
+  "id": "shingles",
+  "title": "Shingles",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Viral infections presenting with rash",
+  "category": "Viral skin infections",
+  "summary": "See NICE CKS Shingles for full details. Consider the need for oral antiviral treatment. If not indicated, offer appropriate analgesia, local skincare advice to prevent secondary bacterial infection, and advice to minimise potential transmission of infection to others. Offer treatment within 72 hours of rash onset to: people who are immunocompromised (based on clinical judgement, refer if severe); people aged 50 years and over; people with non-truncal involvement (excluding the head and neck); people with moderate or severe pain or moderate or severe rash; people with predisposing skin conditions. If the person is at higher risk of severe shingles or complication, antiviral treatment can be started up to one week after rash onset.",
+  "updatedOn": "2026-11-09",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Refer to hospital or seek immediate advice if serious complications are suspected, there is head, neck or ophthalmic involvement, signs of visceral or central nervous system involvement (including vasculitis), rash is severe or widespread or there is multiple dermatomal involvement. Refer if the person is severely immunocompromised or is an immunocompromised child.",
+    "Seek urgent specialist advice for management of high-risk patients following significant exposure to shingles or chicken pox, e.g. immunocompromised patients, pregnant women, neonates.",
+    "For further information on varicella vaccination and post-exposure management, refer to the Green Book.",
+    "Advise patient to maintain adequate hydration while taking aciclovir or valaciclovir."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Aciclovir tablets",
+          "dose": "800 mg five times a day",
+          "route": "Oral",
+          "frequency": "Five times a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "If immunocompromised, continue treatment for 2 days after crusting of lesions."
+      ]
+    },
+    {
+      "rank": 2,
+      "label": "Adult 2nd line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Valaciclovir tablets",
+          "dose": "1 g three times a day",
+          "route": "Oral",
+          "frequency": "Three times a day",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "If immunocompromised, continue treatment for 2 days after crusting of lesions."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

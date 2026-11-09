@@ -1,0 +1,65 @@
+{
+  "id": "chlamydia",
+  "title": "Chlamydia",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Genito Urinary Tract Infections",
+  "category": "Sexually transmitted infections",
+  "summary": "See NICE CKS and BASHH guideline. If chlamydia infection is suspected or confirmed, strongly recommend referral to a genito-urinary medicine (GUM) clinic for management. Testing for asymptomatic chlamydia is also available via the online STI testing service (sh24.org.uk). If the person declines, or is unable to attend a GUM clinic, manage uncomplicated genital chlamydia infection in primary care.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "Azithromycin is effective in pregnancy but off-label (doxycycline is contraindicated in pregnancy/breast feeding)."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Adult 1st line",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Doxycycline capsules",
+          "dose": "100 mg twice daily",
+          "route": "Oral",
+          "frequency": "Twice daily",
+          "duration": "7 days"
+        }
+      ],
+      "restrictions": [
+        "Contraindicated in pregnancy and breastfeeding."
+      ],
+      "notes": []
+    },
+    {
+      "rank": 2,
+      "label": "Adult – if doxycycline is contraindicated or not tolerated",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Azithromycin tablets",
+          "dose": "1 g as a single dose for 1 day, followed by 500 mg once daily for 2 days",
+          "route": "Oral",
+          "frequency": "Single 1 g dose then 500 mg once daily",
+          "duration": "3 days"
+        }
+      ],
+      "restrictions": [],
+      "notes": []
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

@@ -1,0 +1,51 @@
+{
+  "id": "cdi-lab-result-interpretation",
+  "title": "CDI – Interpretation of Lab Results",
+  "aliases": [],
+  "version": "0.1.0",
+  "status": "active",
+  "system": "Clostridium Difficile Infection",
+  "category": "Clostridioides difficile infection",
+  "summary": "CDI is a toxin mediated disease. Not all patients with Clostridium difficile have toxin detected in their stool samples, therefore the testing process for Clostridium difficile is now a two/three stage test to increase sensitivity of detection. GDH test: detects antigen of both toxigenic and non-toxigenic C. difficile. PCR test: detects presence of toxin gene. Toxin test: detects presence of toxin.",
+  "updatedOn": "2026-11-08",
+  "changeSummary": "Initial transcription from Eolas Medical, Northern Ireland Primary Care Antimicrobial Guidelines (v5.119.0).",
+  "effectiveFrom": null,
+  "clinicalNotes": [
+    "GDH positive and/or PCR positive, and toxin positive (PPV 91.4%): C. difficile infection most likely to be present and may require treatment.",
+    "GDH positive and/or PCR positive, and toxin negative: C. difficile could be present (confirmed present if PCR positive). Potential for C. difficile excretion and transmission. Clinical assessment required to diagnose infection and treatment.",
+    "GDH negative and toxin negative (NPV 98.9%): C. difficile infection very unlikely. Patient could have other potential pathogens."
+  ],
+  "cautions": [],
+  "regimens": [
+    {
+      "rank": 1,
+      "label": "Interpretation only – no antibiotic regimen in this section",
+      "components": [
+        {
+          "medicationId": null,
+          "displayName": "Non-medication",
+          "dose": "Not applicable",
+          "route": null,
+          "frequency": null,
+          "duration": null
+        }
+      ],
+      "restrictions": [],
+      "notes": [
+        "For treatment, see CDI – Diagnosis and Treatment Options."
+      ]
+    }
+  ],
+  "specialConsiderations": [],
+  "references": [],
+  "clinicalValidation": {
+    "validated": false,
+    "reviewedBy": null,
+    "reviewedOn": null,
+    "reviewerRole": null,
+    "nextReviewDue": null,
+    "reviewNotes": "Transcribed from Eolas Medical; not yet clinically validated."
+  },
+  "attachments": [],
+  "prominentResources": []
+}

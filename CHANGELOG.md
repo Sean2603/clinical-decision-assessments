@@ -1,3 +1,11 @@
+## 2026-11-09 – Prescribing pathways split into care-setting folders
+
+- Moved the 55 existing pathways from `prescribing/` to `prescribing/primary-care/`. No clinical content changed; their IDs are unchanged.
+- `schema/prescribing-schema.json` adds two optional fields: `careSetting` (`primary-care`, `bhsct`, `nhsct`, `sehsct`, `shsct`, `whsct`) and `conditionId`, a shared ID that links the same condition across trusts. Absent `careSetting` means `primary-care`; absent `conditionId` means the pathway's own `id`.
+- Validators (`validate_content.py`, `sync_manifest.py`, `validate_references.py`, `generate_reference_usage.py`) read `prescribing/<setting>/` and require each pathway's `careSetting` to match its folder.
+- `manifest.json` regenerated for the new paths (contentVersion `0.0.74`).
+- Paired with CDM Content Manager 0.71.7, which adds the care-setting switcher, the Condition ID field, and the migration for stored draft paths.
+
 ## 2026-11-04 – NEWS2 single-parameter score-3 escalation (draft, unreviewed)
 
 - `scoring_tools/news2.json` 0.1.2 → 0.1.3 (merged on top of the 2026-10-08 conditional-criteria change, which took it 0.1.1 → 0.1.2): adds result `low-medium` (escalation-only; its 0–4 range is shadowed by `low`, so it is reached only via escalation), and escalation `single-parameter-score-3` (any single parameter scoring ≥3 with band `low` → `low-medium`). Score is unchanged.
